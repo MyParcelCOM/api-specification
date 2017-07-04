@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  bundler:
+    build:
+      context: ./docker/json-bundler
+      dockerfile: Dockerfile
+    image: myparcel.com/json-bundler
+    working_dir: /spec
+    volumes:
+    - .:/spec
+
+  validator:
+    image: swaggerapi/swagger-validator
+    working_dir: /spec
+    ports:
+    - $PORT_VALIDATOR:8080
+    volumes:
+    - ./dist:/spec

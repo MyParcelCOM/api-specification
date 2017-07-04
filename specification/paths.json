@@ -1,0 +1,8 @@
+{
+  "/carriers": {
+    "$ref": "./paths/Carriers.json"
+  },
+  "/carriers/{carrier_id}": {
+    "$ref": "./paths/Carriers-carrier_id.json"
+  }
+}

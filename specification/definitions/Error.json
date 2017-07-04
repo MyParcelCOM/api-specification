@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "httpCode": {
+      "type": "integer",
+      "example": "422"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": [
+    "code"
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "example": "NLD",
+      "default": "NLD",
+      "minLength": 3,
+      "maxLength": 3
+    }
+  }
+}

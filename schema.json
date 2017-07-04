@@ -1,0 +1,32 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "$ref": "./specification/info.json"
+  },
+  "host": "sandbox.myparcel.com",
+  "basePath": "/v1",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "$ref": "./specification/paths.json"
+  },
+  "definitions": {
+    "$ref": "./specification/definitions.json"
+  },
+  "responses": {
+    "$ref": "./specification/responses.json"
+  },
+  "securityDefinitions": {
+  },
+  "security": [],
+  "tags": {
+    "$ref": "./specification/tags.json"
+  }
+}

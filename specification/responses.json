@@ -1,0 +1,8 @@
+{
+  "422": {
+    "description": "Unprocessable Entity",
+    "schema": {
+      "$ref": "#/definitions/Error"
+    }
+  }
+}

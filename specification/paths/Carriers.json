@@ -1,0 +1,39 @@
+{
+  "post": {
+    "tags": [
+      "Carriers"
+    ],
+    "summary": "Create a new carrier",
+    "description": "Create a new carrier. Afterwards, throw a **rad** party.",
+    "parameters": [
+      {
+        "name": "carrier",
+        "in": "body",
+        "description": "The carrier object to be created.",
+        "required": true,
+        "schema": {
+          "$ref": "#/definitions/Carrier"
+        }
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "The carrier was created successfully.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Carrier"
+            }
+          }
+        }
+      },
+      "422": {
+        "description": "Request not properly formatted.",
+        "schema": {
+          "$ref": "#/definitions/Error"
+        }
+      }
+    }
+  }
+}
