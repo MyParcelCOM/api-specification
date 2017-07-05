@@ -30,16 +30,28 @@ if [ $# -gt 0 ]; then
 
   # Bundle the json spec into a single file.
   elif [ "$1" == "bundle" ]; then
-    ${COMPOSE} run bundler ash -c \
+    echo "Bundling spec into a single file..."
+
+    ${COMPOSE} run --rm bundler ash -c \
     "mkdir -p dist && json-refs resolve schema.json -f > dist/swagger.json"
 
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then
-    ./mp.sh bundle \
-    && ${COMPOSE} ${DO} validator \
+    ./mp.sh bundle
+
+    echo "Validating spec..."
+
+    MESSAGES=$(${COMPOSE} ${DO} validator \
     curl -X POST -d @swagger.json \
     -H 'Content-Type:application/json' \
-    http://localhost:8080/debug
+    http://localhost:8080/debug)
+
+    if [ "${MESSAGES}" == "{}" ]; then
+        echo -e "\033[0;32mValid!\033[0m"
+    else
+        echo -e "\033[0;31mInvalid!\033[0m"
+        echo -e ${MESSAGES}
+    fi
 
   else
     ${COMPOSE} "$@"

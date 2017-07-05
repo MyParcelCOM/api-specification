@@ -37,7 +37,6 @@ To validate the spec you can run the command:
 ```
 ./mp.sh validate
 ```
-An output of `{}` means the spec is valid.
 
 ### Tinkering in Swagger Editor
 Coming Soon.
