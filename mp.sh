@@ -11,6 +11,10 @@ if [ ! -f ${ROOT_DIR}/.env ]; then
   fi
 
   cp ${ROOT_DIR}/docker/.env.dist ${ROOT_DIR}/.env
+
+  # Add current user and group to .env file, with root as fallback.
+  echo "USER_ID=${UID-0}" >> ${ROOT_DIR}/.env
+  echo "GROUP_ID=${GROUPS-0}" >> ${ROOT_DIR}/.env
 fi
 export $(cat ${ROOT_DIR}/.env | xargs)
 
@@ -33,7 +37,12 @@ if [ $# -gt 0 ]; then
     echo "Bundling spec into a single file..."
 
     ${COMPOSE} run --rm bundler ash -c \
-    "mkdir -p dist && json-refs resolve schema.json -f > dist/swagger.json"
+    "mkdir -p /opt/dist && json-refs resolve schema.json -f > /opt/spec/dist/swagger.json"
+
+    # On Linux fix permissions for the dist folder.
+    if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+      ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
+    fi
 
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then

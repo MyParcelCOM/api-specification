@@ -6,14 +6,14 @@ services:
       context: ./docker/json-bundler
       dockerfile: Dockerfile
     image: myparcel.com/json-bundler
-    working_dir: /spec
+    working_dir: /opt/spec
     volumes:
-    - .:/spec
+    - .:/opt/spec
 
   validator:
     image: swaggerapi/swagger-validator
-    working_dir: /spec
+    working_dir: /opt/spec
     ports:
     - $PORT_VALIDATOR:8080
     volumes:
-    - ./dist:/spec
+    - ./dist:/opt/spec
