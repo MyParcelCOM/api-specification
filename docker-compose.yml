@@ -13,7 +13,5 @@ services:
   validator:
     image: swaggerapi/swagger-validator
     working_dir: /opt/spec
-    ports:
-    - $PORT_VALIDATOR:8080
     volumes:
     - ./dist:/opt/spec

@@ -27,8 +27,6 @@ chmod +x /usr/local/bin/docker-compose
 ```
 
 ### Setting up the environment
-Variables defined in `.env` are used when running the Docker containers. An example can be found in `docker/.env.dist`. You can copy this file to the root of the project and adjust the variables to your liking.
-
 For validation to work the Docker containers must be running. To start the containers, run:
 ```
 ./mp.sh up
