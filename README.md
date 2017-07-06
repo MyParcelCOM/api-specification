@@ -1,6 +1,12 @@
 # MyParcel.com API specification
 This repository describes the API specification used by MyParcel.com. The specification adheres to the [Swagger Specification](https://swagger.io/specification/) v2.
 
+## TODO:
+- [x] Test Docker setup on Linux.
+- [ ] Test Docker setup on Windows.
+- [ ] Implement Swagger Editor.
+- [ ] Set contributors guidelines.
+
 ## Content
 - [Installation](#installation)
 - [Validating the Spec](#validating-the-spec)
