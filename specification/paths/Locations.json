@@ -1,0 +1,56 @@
+{
+  "get": {
+    "tags": [
+      "Locations"
+    ],
+    "summary": "Get pickup locations.",
+    "description": "Get all the pickup locations, grouped by carrier_id.",
+    "responses": {
+      "200": {
+        "description": "ALL the locations.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "pickup": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "carrier_id": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/definitions/Location"
+                            }
+                          },
+                          "errors": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "example": "There was an error while requesting data from this carrier"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "422": {
+        "description": "Request not properly formatted.",
+        "schema": {
+          "$ref": "#/definitions/Error"
+        }
+      }
+    }
+  }
+}

@@ -4,5 +4,8 @@
   },
   "/carriers/{carrier_id}": {
     "$ref": "./paths/Carriers-carrier_id.json"
+  },
+  "/locations": {
+    "$ref": "./paths/Locations.json"
   }
 }

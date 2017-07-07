@@ -3,10 +3,10 @@
   "info": {
     "$ref": "./specification/info.json"
   },
-  "host": "sandbox.myparcel.com",
+  "host": "$SANDBOX_HOST",
   "basePath": "/v1",
   "schemes": [
-    "https"
+    "$SANDBOX_SCHEMA"
   ],
   "consumes": [
     "application/json"

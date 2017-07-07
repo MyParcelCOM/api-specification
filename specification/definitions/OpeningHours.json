@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "day",
+    "open",
+    "closed"
+  ],
+  "properties": {
+    "day": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 7,
+      "exclusiveMaximum": false,
+      "example": 7
+    },
+    "open": {
+      "$ref": "#/definitions/Time"
+    },
+    "closed": {
+      "$ref": "#/definitions/Time"
+    }
+  }
+}
