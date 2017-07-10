@@ -55,6 +55,8 @@ To validate the spec you can run the command:
 ./mp.sh validate
 ```
 
+> **NOTE:** The validator only works when the containers are already running. Don't forget to start them.
+
 ### Tinkering in Swagger Editor
 Coming Soon.
 
