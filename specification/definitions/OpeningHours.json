@@ -14,10 +14,10 @@
       "example": 7
     },
     "open": {
-      "$ref": "#/definitions/Time"
+      "$ref": "../definitions/Time.json"
     },
     "closed": {
-      "$ref": "#/definitions/Time"
+      "$ref": "../definitions/Time.json"
     }
   }
 }

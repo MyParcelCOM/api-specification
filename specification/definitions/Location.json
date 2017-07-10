@@ -11,7 +11,7 @@
   ],
   "properties": {
     "carrier": {
-      "$ref": "#/definitions/Uuid"
+      "$ref": "../definitions/Uuid.json"
     },
     "code": {
       "type": "string",

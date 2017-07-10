@@ -44,7 +44,7 @@ if [ $# -gt 0 ]; then
       ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
     fi
 
-    # Replace $SANDBOX_HOST and $SANDBOX_SCHAM with values from environment variables.
+    # Replace $SANDBOX_HOST and $SANDBOX_SCHEMA with values from environment variables.
     sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
     sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
 

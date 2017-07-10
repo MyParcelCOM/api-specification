@@ -1,10 +1,4 @@
 {
-  "Uuid": {
-    "$ref": "./definitions/Uuid.json"
-  },
-  "Time": {
-    "$ref": "./definitions/Time.json"
-  },
   "Address": {
     "$ref": "./definitions/Address.json"
   },
