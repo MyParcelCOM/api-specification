@@ -31,21 +31,27 @@ Install Docker by running the following command:
 ```bash
 curl -sSL https://get.docker.com/ | sh
 ```
+
 Then install Docker Compose by following the instructions [here](https://github.com/docker/compose/releases).
+
+Finally assign yourself to the Docker group:
+```bash
+sudo usermod -aG docker $(whoami)
+```
 
 ### Setting up the environment
 For validation to work the Docker containers must be running. To start the containers, run:
-```
+```bash
 ./mp.sh up
 ```
 To stop the containers when you are done working, run:
-```
+```bash
 ./mp.sh down
 ```
 
 ## Validating the spec
 To validate the spec you can run the command:
-```
+```bash
 ./mp.sh validate
 ```
 
