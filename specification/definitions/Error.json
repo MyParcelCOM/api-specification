@@ -1,9 +1,45 @@
 {
   "type": "object",
   "properties": {
-    "httpCode": {
-      "type": "integer",
-      "example": "422"
+    "id": {
+      "type": "string"
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "about": {
+          "type": "string"
+        }
+      }
+    },
+    "status": {
+      "type": "number",
+      "minimum": 300,
+      "maximum": 599
+    },
+    "code": {
+      "type": "string",
+      "example": "1234"
+    },
+    "title": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "pointer": {
+          "type": "string"
+        },
+        "parameter": {
+          "type": "string"
+        }
+      }
+    },
+    "meta": {
+      "type": "object"
     }
   }
 }

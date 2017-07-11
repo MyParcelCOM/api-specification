@@ -24,8 +24,8 @@
       "type": "string",
       "example": "Hoofddorp"
     },
-    "cc": {
-      "$ref": "#/definitions/CountryCode"
+    "country_code": {
+      "type": "string"
     }
   }
 }

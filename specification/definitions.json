@@ -1,21 +1,6 @@
 {
-  "Address": {
-    "$ref": "./definitions/Address.json"
-  },
-  "Position": {
-    "$ref": "./definitions/Position.json"
-  },
-  "OpeningHours": {
-    "$ref": "./definitions/OpeningHours.json"
-  },
   "Location": {
     "$ref": "./definitions/Location.json"
-  },
-  "Carrier": {
-    "$ref": "./definitions/Carrier.json"
-  },
-  "CountryCode": {
-    "$ref": "./definitions/CountryCode.json"
   },
   "Error": {
     "$ref": "./definitions/Error.json"

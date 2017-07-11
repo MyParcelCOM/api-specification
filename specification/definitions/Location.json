@@ -1,43 +1,49 @@
 {
   "type": "object",
   "required": [
-    "carrier",
-    "code",
-    "name",
-    "address",
-    "phone_number",
-    "opening_hours",
-    "position"
+    "id",
+    "type",
+    "attributes",
+    "relationships"
   ],
   "properties": {
-    "carrier": {
+    "id": {
       "$ref": "../definitions/Uuid.json"
     },
-    "code": {
+    "type": {
       "type": "string",
-      "example": "176227"
+      "example": "locations"
     },
-    "name": {
-      "type": "string",
-      "example": "MyParcel.com"
-    },
-    "address": {
-      "$ref": "#/definitions/Address"
-    },
-    "phone_number": {
-      "type": "string",
-      "example": "+31 85 208 5997"
-    },
-    "opening_hours": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/OpeningHours"
-      },
-      "minItems": 7,
-      "maxItems": 7
-    },
-    "position": {
-      "$ref": "#/definitions/Position"
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "176227"
+        },
+        "name": {
+          "type": "string",
+          "example": "MyParcel.com"
+        },
+        "address": {
+          "$ref": "../definitions/Address.json"
+        },
+        "phone_number": {
+          "type": "string",
+          "example": "+31 85 208 5997"
+        },
+        "opening_hours": {
+          "type": "array",
+          "items": {
+            "$ref": "../definitions/OpeningHours.json"
+          },
+          "minItems": 7,
+          "maxItems": 7
+        },
+        "position": {
+          "$ref": "../definitions/Position.json"
+        }
+      }
     }
   }
 }

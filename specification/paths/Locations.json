@@ -3,8 +3,8 @@
     "tags": [
       "Locations"
     ],
-    "summary": "Get pickup locations.",
-    "description": "Get all the pickup locations, grouped by carrier_id.",
+    "summary": "Get locations.",
+    "description": "Get all the locations, grouped by carrier.",
     "responses": {
       "200": {
         "description": "ALL the locations.",
@@ -12,28 +12,36 @@
           "type": "object",
           "properties": {
             "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Location"
+              }
+            },
+            "meta": {
               "type": "object",
               "properties": {
-                "pickup": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "carrier_id": {
-                        "type": "object",
-                        "properties": {
-                          "data": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/definitions/Location"
-                            }
-                          },
-                          "errors": {
-                            "type": "array",
-                            "items": {
-                              "type": "string",
-                              "example": "There was an error while requesting data from this carrier"
-                            }
+                "errors": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": "1234"
+                    },
+                    "title": {
+                      "type": "string",
+                      "example": "cannot retrieve carrier locations"
+                    },
+                    "detail": {
+                      "type": "string",
+                      "example": "An error occured while retrieving locations."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "example": {
+                        "carriers": {
+                          "links": {
+                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+                            "locations": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/locations"
                           }
                         }
                       }
@@ -43,12 +51,6 @@
               }
             }
           }
-        }
-      },
-      "422": {
-        "description": "Request not properly formatted.",
-        "schema": {
-          "$ref": "#/definitions/Error"
         }
       }
     }
