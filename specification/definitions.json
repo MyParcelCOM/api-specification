@@ -2,6 +2,9 @@
   "Location": {
     "$ref": "./definitions/Location.json"
   },
+  "ShipmentStatus": {
+    "$ref": "./definitions/ShipmentStatus.json"
+  },
   "Error": {
     "$ref": "./definitions/Error.json"
   }
