@@ -44,6 +44,10 @@ if [ $# -gt 0 ]; then
       ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
     fi
 
+    # Replace $SANDBOX_HOST and $SANDBOX_SCHEMA with values from environment variables.
+    sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
+    sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
+
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then
     ./mp.sh bundle
@@ -59,7 +63,12 @@ if [ $# -gt 0 ]; then
         echo -e "\033[0;32mValid!\033[0m"
     else
         echo -e "\033[0;31mInvalid!\033[0m"
-        echo -e ${MESSAGES}
+
+        if hash jq 2>/dev/null; then
+          echo -e ${MESSAGES} | jq '.'
+        else
+          echo -e ${MESSAGES}
+        fi
     fi
 
   else

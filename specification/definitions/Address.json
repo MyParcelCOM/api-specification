@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "street",
+    "number",
+    "postal_code",
+    "city",
+    "cc"
+  ],
+  "properties": {
+    "street": {
+      "type": "string",
+      "example": "Hoofdweg"
+    },
+    "number": {
+      "type": "string",
+      "example": "679"
+    },
+    "postal_code": {
+      "type": "string",
+      "example": "2131BC"
+    },
+    "city": {
+      "type": "string",
+      "example": "Hoofddorp"
+    },
+    "country_code": {
+      "type": "string"
+    }
+  }
+}

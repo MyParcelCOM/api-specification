@@ -1,9 +1,9 @@
 {
-  "Carrier": {
-    "$ref": "./definitions/Carrier.json"
+  "Location": {
+    "$ref": "./definitions/Location.json"
   },
-  "CountryCode": {
-    "$ref": "./definitions/CountryCode.json"
+  "ShipmentStatus": {
+    "$ref": "./definitions/ShipmentStatus.json"
   },
   "Error": {
     "$ref": "./definitions/Error.json"

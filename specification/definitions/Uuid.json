@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "[a-zA-Z0-9]{8}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{4}-[a-zA-Z0-9]{12}",
+  "example": "c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+}
