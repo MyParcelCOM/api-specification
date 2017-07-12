@@ -3,7 +3,8 @@
   "required": [
     "id",
     "type",
-    "attributes"
+    "attributes",
+    "relationships"
   ],
   "properties": {
     "id": {
