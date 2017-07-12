@@ -38,10 +38,9 @@
                     "meta": {
                       "type": "object",
                       "example": {
-                        "carriers": {
+                        "locations": {
                           "links": {
-                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
-                            "locations": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/locations"
+                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/locations"
                           }
                         }
                       }
