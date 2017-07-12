@@ -18,30 +18,44 @@ This repository describes the API specification used by MyParcel.com. The specif
 The repository provides docker containers to validate and preview the spec before committing changes. This is also used when validating pull requests.
 
 ### Installing Docker
-- [Mac](https://docs.docker.com/docker-for-mac/install/)
-- [Windows](https://docs.docker.com/docker-for-windows/install/)
-- Linux:
-```
+To install Docker, follow the steps below for your preferred OS.
+
+#### Mac
+Install Docker for Mac from [https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/).
+
+#### Windows
+Install Docker for Windows from [https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/).
+
+#### Linux
+Install Docker by running the following command:
+```bash
 curl -sSL https://get.docker.com/ | sh
-curl -L https://github.com/docker/compose/releases/download/1.14.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+```
+
+Then install Docker Compose by following the instructions [here](https://github.com/docker/compose/releases).
+
+Finally assign yourself to the Docker group:
+```bash
+sudo usermod -aG docker $(whoami)
 ```
 
 ### Setting up the environment
 For validation to work the Docker containers must be running. To start the containers, run:
-```
+```bash
 ./mp.sh up
 ```
 To stop the containers when you are done working, run:
-```
+```bash
 ./mp.sh down
 ```
 
 ## Validating the spec
 To validate the spec you can run the command:
-```
+```bash
 ./mp.sh validate
 ```
+
+> **NOTE:** The validator only works when the containers are already running. Don't forget to start them.
 
 ### Tinkering in Swagger Editor
 Coming Soon.
