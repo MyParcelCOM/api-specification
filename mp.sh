@@ -45,8 +45,8 @@ if [ $# -gt 0 ]; then
     fi
 
     # Replace $SANDBOX_HOST and $SANDBOX_SCHEMA with values from environment variables.
-    sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
-    sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
+    sed -i '' "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
+    sed -i '' "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
 
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then
