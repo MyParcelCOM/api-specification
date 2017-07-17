@@ -1,8 +1,4 @@
 {
-  "/locations": {
-    "$ref": "./paths/Locations.json"
-  },
-
   "/carriers": {
     "$ref": "./paths/Carriers.json"
   },
@@ -23,6 +19,14 @@
   },
   "/services/{service_id}": {
     "$ref": "./paths/Services-service_id.json"
+  },
+
+  "/shipments/{shipment_id}": {
+    "$ref": "./paths/Shipments-shipment_id.json"
+  },
+
+  "/locations": {
+    "$ref": "./paths/Locations.json"
   }
 
 }

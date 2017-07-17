@@ -52,7 +52,6 @@ if [ $# -gt 0 ]; then
       sed -i '' "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
     fi
 
-
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then
     ./mp.sh bundle

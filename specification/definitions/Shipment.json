@@ -1,0 +1,279 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "shipments"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "recipient": {
+          "$ref": "#/definitions/Address"
+        },
+        "sender": {
+          "$ref": "#/definitions/Address"
+        },
+        "price": {
+          "type": "number",
+          "example": 10
+        },
+        "currency": {
+          "$ref": "../definitions/Currency.json"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Concept",
+            "Pending/Registered",
+            "Handed to carrier",
+            "Sorting",
+            "Distribution",
+            "Delivered at duane",
+            "Delivered",
+            "Inactive",
+            "Deleted",
+            "Picked up"
+          ]
+        },
+        "created": {
+          "type": "string",
+          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
+          "example": "2015-02-14 17:12:48"
+        },
+        "modified": {
+          "type": "string",
+          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
+          "example": "2015-02-14 17:12:48"
+        },
+        "insurance_amount": {
+          "type": "number",
+          "example": 10
+        },
+        "weight": {
+          "type": "number",
+          "example": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "status_last_synced": {
+          "type": "string",
+          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
+          "example": "2015-02-14 17:12:48"
+        },
+        "options": {
+          "type": "object"
+        },
+        "general_settings": {
+          "type": "object",
+          "properties": {
+            "delivery_notification": {
+              "type": "boolean"
+            },
+            "delivery_notification_email": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "pickup": {
+          "$ref": "#/definitions/Address"
+        },
+        "customs_declaration": {
+          "type": "object",
+          "properties": {
+            "contents": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "invoice": {
+              "type": "string"
+            },
+            "weight": {
+              "type": "number"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "maxLength": 50
+                  },
+                  "amount": {
+                    "type": "number",
+                    "minimum": 1
+                  },
+                  "weight": {
+                    "type": "number"
+                  },
+                  "item_value": {
+                    "type": "object",
+                    "properties": {
+                      "amount": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "currency": {
+                        "$ref": "../definitions/Currency.json"
+                      }
+                    }
+                  },
+                  "classification": {
+                    "type": "string"
+                  },
+                  "region_code": {
+                    "type": "string",
+                    "pattern": "[A-Z]{3}"
+                  },
+                  "country_code": {
+                    "type": "string",
+                    "pattern": "[A-Z]{2}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "parent": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "shipments"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "account": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "accounts"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "/accounts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "shop": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "shops"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "service": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "services"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
+    }
+  }
+}
