@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "name",
+    "price"
+  ],
+  "properties": {
+    "name": {
+      "type": "number",
+      "example": "10"
+    },
+    "price": {
+      "type": "number",
+      "example": "500"
+    }
+  }
+}

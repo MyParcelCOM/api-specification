@@ -1,20 +1,20 @@
 {
   "get": {
     "tags": [
-      "ShipmentStatus"
+      "Countries"
     ],
-    "summary": "Retrieve the status of shipments.",
-    "description": "Retrieve the status of shipments.",
+    "summary": "Get all the countries.",
+    "description": "Get all the countries.",
     "responses": {
       "200": {
-        "description": "Status of shipments",
+        "description": "ALL the countries.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ShipmentStatus"
+                "$ref": "#/definitions/Country"
               }
             }
           }

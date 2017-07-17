@@ -1,20 +1,20 @@
 {
   "get": {
     "tags": [
-      "ShipmentStatus"
+      "Carriers"
     ],
-    "summary": "Retrieve the status of shipments.",
-    "description": "Retrieve the status of shipments.",
+    "summary": "Get all the carriers.",
+    "description": "Get all the carriers.",
     "responses": {
       "200": {
-        "description": "Status of shipments",
+        "description": "ALL the carriers.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ShipmentStatus"
+                "$ref": "#/definitions/Carrier"
               }
             }
           }

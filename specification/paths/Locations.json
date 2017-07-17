@@ -1,9 +1,30 @@
 {
   "get": {
+    "parameters": [
+      {
+        "in": "query",
+        "name": "filters[country_code]",
+        "required": true,
+        "type": "string",
+        "description": "The from country code."
+      },
+      {
+        "in": "query",
+        "name": "filters[region_code]",
+        "type": "string",
+        "description": "The region code."
+      },
+      {
+        "in": "query",
+        "name": "filters[carrier_id]",
+        "type": "string",
+        "description": "The carrier id."
+      },
+    ],
     "tags": [
       "Locations"
     ],
-    "summary": "Get locations.",
+    "summary": "Get all the locations, grouped by carrier.",
     "description": "Get all the locations, grouped by carrier.",
     "responses": {
       "200": {

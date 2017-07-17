@@ -1,0 +1,51 @@
+{
+  "get": {
+    "parameters": [
+      {
+        "in": "query",
+        "name": "filters[from][country_code]",
+        "type": "string",
+        "description": "The from country code."
+      },
+      {
+        "in": "query",
+        "name": "filters[from][region_code]",
+        "type": "string",
+        "description": "The from region code."
+      },
+      {
+        "in": "query",
+        "name": "filters[to][country_code]",
+        "type": "string",
+        "description": "The to country code."
+      },
+      {
+        "in": "query",
+        "name": "filters[to][region_code]",
+        "type": "string",
+        "description": "The to region code."
+      }
+    ],
+    "tags": [
+      "Services"
+    ],
+    "summary": "Get all the services.",
+    "description": "Get all the services.",
+    "responses": {
+      "200": {
+        "description": "ALL the services.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Service"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

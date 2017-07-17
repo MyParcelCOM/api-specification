@@ -1,11 +1,29 @@
 {
-  "Location": {
-    "$ref": "./definitions/Location.json"
+  "Carrier": {
+    "$ref": "./definitions/Carrier.json"
   },
-  "ShipmentStatus": {
-    "$ref": "./definitions/ShipmentStatus.json"
+  "Country": {
+    "$ref": "./definitions/Country.json"
   },
   "Error": {
     "$ref": "./definitions/Error.json"
+  },
+  "Location": {
+    "$ref": "./definitions/Location.json"
+  },
+  "Service": {
+    "$ref": "./definitions/Service.json"
+  },
+  "ServiceGroup": {
+    "$ref": "./definitions/ServiceGroup.json"
+  },
+  "ServiceOption": {
+    "$ref": "./definitions/ServiceOption.json"
+  },
+  "ServiceInsurance": {
+    "$ref": "./definitions/ServiceInsurance.json"
+  },
+  "ShipmentStatus": {
+    "$ref": "./definitions/ShipmentStatus.json"
   }
 }

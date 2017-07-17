@@ -1,5 +1,28 @@
 {
   "/locations": {
     "$ref": "./paths/Locations.json"
+  },
+
+  "/carriers": {
+    "$ref": "./paths/Carriers.json"
+  },
+  "/carriers/{carrier_id}": {
+    "$ref": "./paths/Carriers-carrier_id.json"
+  },
+
+  "/countries": {
+    "$ref": "./paths/Countries.json"
+  },
+  "/countries/{country_id}": {
+    "$ref": "./paths/Countries-country_id.json"
+  },
+
+
+  "/services": {
+    "$ref": "./paths/Services.json"
+  },
+  "/services/{service_id}": {
+    "$ref": "./paths/Services-service_id.json"
   }
+
 }

@@ -1,0 +1,34 @@
+{
+  "get": {    
+    "parameters": [
+      {
+        "in": "path",
+        "name": "country_id",
+        "required": true,
+        "type": "string",
+        "description": "The country ID."
+      }
+    ],
+    "tags": [
+      "Countries"
+    ],
+    "summary": "Get one country with the id country_id.",
+    "description": "Get one country with the id country_id.",
+    "responses": {
+      "200": {
+        "description": "One country.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Country"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

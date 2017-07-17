@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes",
+    "relationships"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "locations"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "country_code": {
+          "type": "string",
+          "example": "NL"
+        },
+        "region_code": {
+          "type": "string",
+          "example": "ABC"
+        },
+        "currency": {
+          "type": "string",
+          "example": "EUR"
+        },
+        "name": {
+          "type": "string",
+          "example": "Netherlands"
+        },
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": [
+    "price"
+  ],
+  "properties": {
+    "weight_min": {
+      "type": "number",
+      "example": "10"
+    },
+    "weight_max": {
+      "type": "number",
+      "example": "20"
+    },
+    "price": {
+      "type": "number",
+      "example": "500"
+    },
+    "step_price": {
+      "type": "number",
+      "example": "0"
+    }
+  }
+}
