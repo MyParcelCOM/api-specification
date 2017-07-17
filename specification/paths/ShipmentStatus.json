@@ -3,8 +3,8 @@
     "tags": [
       "ShipmentStatus"
     ],
-    "summary": "Retrieve shipment status",
-    "description": "Retrieve the status of shipments",
+    "summary": "Retrieve the status of shipments.",
+    "description": "Retrieve the status of shipments.",
     "responses": {
       "200": {
         "description": "Status of shipments",

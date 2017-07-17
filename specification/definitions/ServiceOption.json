@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes",
+    "relationships"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "options"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "number",
+          "example": "10"
+        },
+        "price": {
+          "type": "number",
+          "example": "500"
+        },
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes",
+    "relationships"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "carriers"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "MyParcel.com"
+        },
+      }
+    }
+  }
+}

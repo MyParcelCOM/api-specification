@@ -1,41 +1,20 @@
 {
   "get": {
-    "parameters": [
-      {
-        "in": "query",
-        "name": "filters[country_code]",
-        "required": true,
-        "type": "string",
-        "description": "The from country code."
-      },
-      {
-        "in": "query",
-        "name": "filters[region_code]",
-        "type": "string",
-        "description": "The region code."
-      },
-      {
-        "in": "query",
-        "name": "filters[carrier_id]",
-        "type": "string",
-        "description": "The carrier id."
-      },
-    ],
     "tags": [
-      "Locations"
+      "Carriers"
     ],
-    "summary": "Get all the locations, grouped by carrier.",
-    "description": "Get all the locations, grouped by carrier.",
+    "summary": "Get all the carriers.",
+    "description": "Get all the carriers.",
     "responses": {
       "200": {
-        "description": "ALL the locations.",
+        "description": "ALL the carriers.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Location"
+                "$ref": "#/definitions/Carrier"
               }
             },
             "meta": {
@@ -50,18 +29,18 @@
                     },
                     "title": {
                       "type": "string",
-                      "example": "cannot retrieve carrier locations"
+                      "example": "cannot retrieve carrier"
                     },
                     "detail": {
                       "type": "string",
-                      "example": "An error occured while retrieving locations."
+                      "example": "An error occured while retrieving carrier."
                     },
                     "meta": {
                       "type": "object",
                       "example": {
                         "locations": {
                           "links": {
-                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/locations"
+                            "self": "/carriers"
                           }
                         }
                       }

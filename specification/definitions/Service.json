@@ -1,0 +1,114 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes",
+    "relationships"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "services"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Unstamped"
+        },
+        "type": {
+          "type": "string",
+          "example": "Unstamped"
+        },
+        "step_size": {
+          "type": "string",
+          "example": "1"
+        },
+        "insured_amount": {
+          "type": "string",
+          "example": "10000"
+        },
+        "groups": {
+          "type": "array",
+          "items":{
+            "$ref": "#/definitions/ServiceGroup"
+          }
+        },
+        "options": {
+          "type": "array",
+          "items":{
+            "$ref": "#/definitions/ServiceOption"
+          }
+        },
+        "insurances": {
+          "type": "array",
+          "items":{
+            "$ref": "#/definitions/ServiceInsurance"
+          }
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "carrier": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                   "type": "string",
+                   "example": "/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                },
+              }
+            },
+            "data":{
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "carriers"
+                }
+              }
+            }
+          }
+        },
+        "country": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                   "type": "string",
+                   "example": "/countries/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                },
+              }
+            },
+            "data":{
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "countries"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

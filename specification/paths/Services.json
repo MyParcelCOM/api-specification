@@ -3,39 +3,44 @@
     "parameters": [
       {
         "in": "query",
-        "name": "filters[country_code]",
-        "required": true,
+        "name": "filters[from][country_code]",
         "type": "string",
         "description": "The from country code."
       },
       {
         "in": "query",
-        "name": "filters[region_code]",
+        "name": "filters[from][region_code]",
         "type": "string",
-        "description": "The region code."
+        "description": "The from region code."
       },
       {
         "in": "query",
-        "name": "filters[carrier_id]",
+        "name": "filters[to][country_code]",
         "type": "string",
-        "description": "The carrier id."
+        "description": "The to country code."
       },
+      {
+        "in": "query",
+        "name": "filters[to][region_code]",
+        "type": "string",
+        "description": "The to region code."
+      }
     ],
     "tags": [
-      "Locations"
+      "Services"
     ],
-    "summary": "Get all the locations, grouped by carrier.",
-    "description": "Get all the locations, grouped by carrier.",
+    "summary": "Get all the services.",
+    "description": "Get all the services.",
     "responses": {
       "200": {
-        "description": "ALL the locations.",
+        "description": "ALL the services.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Location"
+                "$ref": "#/definitions/Service"
               }
             },
             "meta": {
@@ -50,18 +55,18 @@
                     },
                     "title": {
                       "type": "string",
-                      "example": "cannot retrieve carrier locations"
+                      "example": "cannot retrieve carrier services"
                     },
                     "detail": {
                       "type": "string",
-                      "example": "An error occured while retrieving locations."
+                      "example": "An error occured while retrieving services."
                     },
                     "meta": {
                       "type": "object",
                       "example": {
-                        "locations": {
+                        "services": {
                           "links": {
-                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/locations"
+                            "self": "/services"
                           }
                         }
                       }

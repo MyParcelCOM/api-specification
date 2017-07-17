@@ -2,5 +2,17 @@
   {
     "name": "Locations",
     "description": "Find pickup and drop-off locations"
+  },
+  {
+    "name": "Carriers",
+    "description": "Find Carriers"
+  },
+  {
+    "name": "Countries",
+    "description": "Find Countries"
+  },
+  {
+    "name": "Services",
+    "description": "Find Services"
   }
 ]

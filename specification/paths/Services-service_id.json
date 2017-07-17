@@ -2,40 +2,28 @@
   "get": {
     "parameters": [
       {
-        "in": "query",
-        "name": "filters[country_code]",
+        "in": "path",
+        "name": "service_id",
         "required": true,
         "type": "string",
-        "description": "The from country code."
-      },
-      {
-        "in": "query",
-        "name": "filters[region_code]",
-        "type": "string",
-        "description": "The region code."
-      },
-      {
-        "in": "query",
-        "name": "filters[carrier_id]",
-        "type": "string",
-        "description": "The carrier id."
-      },
+        "description": "The service ID."
+      }
     ],
     "tags": [
-      "Locations"
+      "Services"
     ],
-    "summary": "Get all the locations, grouped by carrier.",
-    "description": "Get all the locations, grouped by carrier.",
+    "summary": "Get one service with the id service_id.",
+    "description": "Get one service with the id service_id.",
     "responses": {
       "200": {
-        "description": "ALL the locations.",
+        "description": "Get the service.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Location"
+                "$ref": "#/definitions/Service"
               }
             },
             "meta": {
@@ -50,18 +38,18 @@
                     },
                     "title": {
                       "type": "string",
-                      "example": "cannot retrieve carrier locations"
+                      "example": "cannot retrieve service"
                     },
                     "detail": {
                       "type": "string",
-                      "example": "An error occured while retrieving locations."
+                      "example": "An error occured while retrieving service."
                     },
                     "meta": {
                       "type": "object",
                       "example": {
-                        "locations": {
+                        "services": {
                           "links": {
-                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/locations"
+                            "self": "/services/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
                           }
                         }
                       }

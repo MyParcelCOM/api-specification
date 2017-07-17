@@ -1,41 +1,29 @@
 {
-  "get": {
+  "get": {    
     "parameters": [
       {
-        "in": "query",
-        "name": "filters[country_code]",
+        "in": "path",
+        "name": "country_id",
         "required": true,
         "type": "string",
-        "description": "The from country code."
-      },
-      {
-        "in": "query",
-        "name": "filters[region_code]",
-        "type": "string",
-        "description": "The region code."
-      },
-      {
-        "in": "query",
-        "name": "filters[carrier_id]",
-        "type": "string",
-        "description": "The carrier id."
-      },
+        "description": "The country ID."
+      }
     ],
     "tags": [
-      "Locations"
+      "Countries"
     ],
-    "summary": "Get all the locations, grouped by carrier.",
-    "description": "Get all the locations, grouped by carrier.",
+    "summary": "Get one country with the id country_id.",
+    "description": "Get one country with the id country_id.",
     "responses": {
       "200": {
-        "description": "ALL the locations.",
+        "description": "One country.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Location"
+                "$ref": "#/definitions/Country"
               }
             },
             "meta": {
@@ -50,18 +38,18 @@
                     },
                     "title": {
                       "type": "string",
-                      "example": "cannot retrieve carrier locations"
+                      "example": "cannot retrieve country"
                     },
                     "detail": {
                       "type": "string",
-                      "example": "An error occured while retrieving locations."
+                      "example": "An error occured while retrieving the country."
                     },
                     "meta": {
                       "type": "object",
                       "example": {
-                        "locations": {
+                        "countries": {
                           "links": {
-                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee/locations"
+                            "self": "/countries/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
                           }
                         }
                       }

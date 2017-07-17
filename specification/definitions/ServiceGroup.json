@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes",
+    "relationships"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "groups"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "weight_min": {
+          "type": "number",
+          "example": "10"
+        },
+        "weight_max": {
+          "type": "number",
+          "example": "20"
+        },
+        "price": {
+          "type": "number",
+          "example": "500"
+        },
+        "step_price": {
+          "type": "number",
+          "example": "0"
+        },
+      }
+    }
+  }
+}

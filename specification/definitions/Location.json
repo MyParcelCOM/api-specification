@@ -44,6 +44,28 @@
           "$ref": "../definitions/Position.json"
         }
       }
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "carrier": {
+          "type": "object",
+          "properties": {
+            "data":{
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "carriers"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
