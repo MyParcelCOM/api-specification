@@ -16,38 +16,6 @@
               "items": {
                 "$ref": "#/definitions/Country"
               }
-            },
-            "meta": {
-              "type": "object",
-              "properties": {
-                "errors": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string",
-                      "example": "1234"
-                    },
-                    "title": {
-                      "type": "string",
-                      "example": "cannot retrieve country"
-                    },
-                    "detail": {
-                      "type": "string",
-                      "example": "An error occured while retrieving the country."
-                    },
-                    "meta": {
-                      "type": "object",
-                      "example": {
-                        "countries": {
-                          "links": {
-                            "self": "/countries"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
         }

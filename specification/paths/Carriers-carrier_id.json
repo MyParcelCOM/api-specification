@@ -25,38 +25,6 @@
               "items": {
                 "$ref": "#/definitions/Carrier"
               }
-            },
-            "meta": {
-              "type": "object",
-              "properties": {
-                "errors": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string",
-                      "example": "1234"
-                    },
-                    "title": {
-                      "type": "string",
-                      "example": "cannot retrieve carriers"
-                    },
-                    "detail": {
-                      "type": "string",
-                      "example": "An error occured while retrieving carriers."
-                    },
-                    "meta": {
-                      "type": "object",
-                      "example": {
-                        "carriers": {
-                          "links": {
-                            "self": "/carriers/aaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
         }
