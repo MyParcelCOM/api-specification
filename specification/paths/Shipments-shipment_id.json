@@ -3,7 +3,7 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "🚧 Get shipments by id.",
+    "summary": "🚧 Retrieve shipments by id.",
     "description": "This endpoint retrieves the shipment with supplied id. A comma separated list of ids can be supplied to retrieve multiple shipments.",
     "parameters": [
       {
@@ -16,7 +16,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Get the shipment.",
+        "description": "Retrieved the shipment(s).",
         "schema": {
           "type": "object",
           "properties": {
