@@ -40,13 +40,18 @@ if [ $# -gt 0 ]; then
     "mkdir -p /opt/dist && json-refs resolve schema.json -f > /opt/spec/dist/swagger.json"
 
     # On Linux fix permissions for the dist folder.
-    if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    if [ "$(uname -s)" == "Linux" ]; then
       ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
+
+      # Replace $SANDBOX_HOST and $SANDBOX_SCHEMA with values from environment variables.
+      sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
+      sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
+    else
+      # Different sed syntax for Mac.
+      sed -i '' "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
+      sed -i '' "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
     fi
 
-    # Replace $SANDBOX_HOST and $SANDBOX_SCHEMA with values from environment variables.
-    sed -i '' "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
-    sed -i '' "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
 
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then
