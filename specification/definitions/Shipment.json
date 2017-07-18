@@ -74,86 +74,13 @@
           "type": "object"
         },
         "general_settings": {
-          "type": "object",
-          "properties": {
-            "delivery_notification": {
-              "type": "boolean"
-            },
-            "delivery_notification_email": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
+          "type": "object"
         },
         "pickup": {
           "$ref": "#/definitions/Address"
         },
         "customs_declaration": {
-          "type": "object",
-          "properties": {
-            "contents": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5
-              ]
-            },
-            "invoice": {
-              "type": "string"
-            },
-            "weight": {
-              "type": "number"
-            },
-            "items": {
-              "type": "array",
-              "minItems": 1,
-              "maxItems": 5,
-              "items": {
-                "type": "object",
-                "properties": {
-                  "description": {
-                    "type": "string",
-                    "maxLength": 50
-                  },
-                  "amount": {
-                    "type": "number",
-                    "minimum": 1
-                  },
-                  "weight": {
-                    "type": "number"
-                  },
-                  "item_value": {
-                    "type": "object",
-                    "properties": {
-                      "amount": {
-                        "type": "number",
-                        "minimum": 0
-                      },
-                      "currency": {
-                        "$ref": "../definitions/Currency.json"
-                      }
-                    }
-                  },
-                  "classification": {
-                    "type": "string"
-                  },
-                  "region_code": {
-                    "type": "string",
-                    "pattern": "[A-Z]{3}"
-                  },
-                  "country_code": {
-                    "type": "string",
-                    "pattern": "[A-Z]{2}"
-                  }
-                }
-              }
-            }
-          }
+          "type": "object"
         }
       }
     },
