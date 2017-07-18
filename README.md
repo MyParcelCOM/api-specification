@@ -3,6 +3,7 @@ This repository describes the API specification used by MyParcel.com. The specif
 
 ## TODO:
 - [x] Test Docker setup on Linux.
+- [x] Test Docker setup on Mac.
 - [ ] Test Docker setup on Windows.
 - [ ] Actually increment version numbers when building.
 - [ ] Implement Swagger Editor.
