@@ -82,7 +82,7 @@
             }
           }
         },
-        "country": {
+        "region": {
           "type": "object",
           "properties": {
             "links": {
@@ -90,7 +90,7 @@
               "properties": {
                 "self": {
                    "type": "string",
-                   "example": "/countries/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                   "example": "/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 },
               }
             },
@@ -102,7 +102,7 @@
                 },
                 "type": {
                   "type": "string",
-                  "example": "countries"
+                  "example": "regions"
                 }
               }
             }

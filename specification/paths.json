@@ -10,11 +10,11 @@
     "$ref": "./paths/Carriers-carrier_id.json"
   },
 
-  "/countries": {
-    "$ref": "./paths/Countries.json"
+  "/regions": {
+    "$ref": "./paths/Regions.json"
   },
-  "/countries/{country_id}": {
-    "$ref": "./paths/Countries-country_id.json"
+  "/regions/{region_id}": {
+    "$ref": "./paths/Regions-region_id.json"
   },
 
 
