@@ -2,8 +2,8 @@
   "Carrier": {
     "$ref": "./definitions/Carrier.json"
   },
-  "Country": {
-    "$ref": "./definitions/Country.json"
+  "Region": {
+    "$ref": "./definitions/Region.json"
   },
   "Error": {
     "$ref": "./definitions/Error.json"

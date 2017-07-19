@@ -1,20 +1,20 @@
 {
   "get": {
     "tags": [
-      "Countries"
+      "Regions"
     ],
-    "summary": "Get all the countries.",
-    "description": "Get all the countries.",
+    "summary": "Get all the regions.",
+    "description": "Get all the regions.",
     "responses": {
       "200": {
-        "description": "ALL the countries.",
+        "description": "ALL the regions.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Country"
+                "$ref": "#/definitions/Region"
               }
             }
           }
