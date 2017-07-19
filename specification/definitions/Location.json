@@ -26,7 +26,7 @@
           "example": "MyParcel.com"
         },
         "address": {
-          "$ref": "../definitions/Address.json"
+          "$ref": "#/definitions/Address"
         },
         "phone_number": {
           "type": "string",

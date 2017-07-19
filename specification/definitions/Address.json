@@ -1,20 +1,17 @@
 {
   "type": "object",
   "required": [
-    "street",
-    "number",
-    "postal_code",
+    "addressline_1",
     "city",
-    "cc"
+    "country_code"
   ],
   "properties": {
-    "street": {
+    "addressline_1": {
       "type": "string",
-      "example": "Hoofdweg"
+      "example": "Hoofdweg 679"
     },
-    "number": {
-      "type": "string",
-      "example": "679"
+    "addressline_2": {
+      "type": "string"
     },
     "postal_code": {
       "type": "string",
@@ -24,8 +21,18 @@
       "type": "string",
       "example": "Hoofddorp"
     },
+    "region_code": {
+      "type": "string",
+      "pattern": "[A-Z]{3}"
+    },
     "country_code": {
-      "type": "string"
+      "type": "string",
+      "pattern": "[A-Z]{2}",
+      "example": "NL"
+    },
+    "person": {
+      "type": "string",
+      "example": "John Doe"
     }
   }
 }

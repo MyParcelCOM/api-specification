@@ -14,5 +14,9 @@
   {
     "name": "Services",
     "description": "Find Services"
+  },
+  {
+    "name": "Shipments",
+    "description": "🚧"
   }
 ]

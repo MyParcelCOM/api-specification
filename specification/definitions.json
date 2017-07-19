@@ -1,4 +1,7 @@
 {
+  "Address": {
+    "$ref": "./definitions/Address.json"
+  },
   "Carrier": {
     "$ref": "./definitions/Carrier.json"
   },
@@ -22,6 +25,9 @@
   },
   "ServiceInsurance": {
     "$ref": "./definitions/ServiceInsurance.json"
+  },
+  "Shipment": {
+    "$ref": "./definitions/Shipment.json"
   },
   "ShipmentStatus": {
     "$ref": "./definitions/ShipmentStatus.json"
