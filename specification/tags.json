@@ -1,11 +1,11 @@
 [
   {
-    "name": "Locations",
-    "description": "Find pickup and drop-off locations"
-  },
-  {
     "name": "Carriers",
     "description": "Find Carriers"
+  },
+  {
+    "name": "PickupDropoffLocations",
+    "description": "Find pickup and drop-off locations"
   },
   {
     "name": "Regions",
