@@ -6,13 +6,13 @@
     "$ref": "./paths/Carriers-carrier_id.json"
   },
 
+  "/pickup-dropoff-locations/{country_code}/{postal_code}": {
+    "$ref": "./paths/PickupDropoffLocations-country_code-postal_code.json"
+  },
+
   "/regions": {
     "$ref": "./paths/Regions.json"
   },
-  "/regions/{region_id}": {
-    "$ref": "./paths/Regions-region_id.json"
-  },
-
 
   "/services": {
     "$ref": "./paths/Services.json"
@@ -23,10 +23,5 @@
 
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
-  },
-
-  "/locations": {
-    "$ref": "./paths/Locations.json"
   }
-
 }

@@ -11,7 +11,16 @@
       "example": "Hoofdweg 679"
     },
     "addressline_2": {
-      "type": "string"
+      "type": "string",
+      "example": "Apartment 3"
+    },
+    "street": {
+      "type": "string",
+      "example": "Hoofdweg"
+    },
+    "number": {
+      "type": "string",
+      "example": "679"
     },
     "postal_code": {
       "type": "string",

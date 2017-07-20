@@ -2,40 +2,59 @@
   "get": {
     "parameters": [
       {
-        "in": "query",
-        "name": "filters[country_code]",
+        "in": "path",
+        "name": "country_code",
         "required": true,
         "type": "string",
-        "description": "The from country code."
+        "description": "The country code."
+      },
+      {
+        "in": "path",
+        "name": "postal_code",
+        "required": true,
+        "type": "string",
+        "description": "The postal code."
       },
       {
         "in": "query",
-        "name": "filters[region_code]",
+        "name": "filter[region_code]",
         "type": "string",
         "description": "The region code."
       },
       {
         "in": "query",
-        "name": "filters[carrier_id]",
+        "name": "filter[carriers]",
         "type": "string",
-        "description": "The carrier id."
+        "description": "The carrier id(s)."
       },
+      {
+        "in": "query",
+        "name": "filter[street]",
+        "type": "string",
+        "description": "The street name."
+      },
+      {
+        "in": "query",
+        "name": "filter[number]",
+        "type": "string",
+        "description": "The address number."
+      }
     ],
     "tags": [
-      "Locations"
+      "PickupDropoffLocations"
     ],
-    "summary": "Get all the locations, grouped by carrier.",
-    "description": "Get all the locations, grouped by carrier.",
+    "summary": "Get all the pickup and dropoff locations.",
+    "description": "",
     "responses": {
       "200": {
-        "description": "ALL the locations.",
+        "description": "All the pudo locations.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Location"
+                "$ref": "#/definitions/PickupDropoffLocation"
               }
             },
             "meta": {
@@ -59,9 +78,9 @@
                     "meta": {
                       "type": "object",
                       "example": {
-                        "locations": {
+                        "pickup-dropoff-locations": {
                           "links": {
-                            "self": "/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/locations"
+                            "self": "/pickup-dropoff-locations/NL/2131BC?filter[carriers]=c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                           }
                         }
                       }
