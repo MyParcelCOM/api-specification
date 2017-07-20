@@ -1,0 +1,28 @@
+{
+  "get": {
+    "produces": [
+      "application/json"
+    ],
+    "tags": [
+      "Files"
+    ],
+    "summary": "🚧 Get all your files",
+    "description": "",
+    "responses": {
+      "200": {
+        "description": "All the files.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/File"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

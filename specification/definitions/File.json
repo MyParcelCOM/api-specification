@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "pattern": "files",
+      "default": "files",
+      "example": "files"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "resource_type": {
+          "type": "string",
+          "enum": [
+            "label",
+            "barcode",
+            "invoice"
+          ],
+          "example": "label"
+        },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "extension": {
+                "type": "string",
+                "example": "png"
+              },
+              "mime_type": {
+                "type": "string",
+                "example": "image/png"
+              }
+            },
+            "description": "This array holds objects describing the type of formats this file is available in."
+          },
+          "example": [
+            {
+              "extension": "pdf",
+              "mime_type": "application/pdf"
+            }
+          ]
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
+    }
+  }
+}

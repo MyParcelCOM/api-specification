@@ -4,6 +4,10 @@
     "description": "Find Carriers"
   },
   {
+    "name": "Files",
+    "description": "🚧 Get files"
+  },
+  {
     "name": "PickupDropoffLocations",
     "description": "Find pickup and drop-off locations"
   },

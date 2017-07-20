@@ -1,0 +1,75 @@
+{
+  "get": {
+    "parameters": [
+      {
+        "in": "path",
+        "name": "filed_id",
+        "required": true,
+        "type": "string",
+        "description": "The file id, or a comma separated list of file ids."
+      },
+      {
+        "in": "header",
+        "name": "Accept",
+        "required": true,
+        "type": "string",
+        "enum": [
+          "application/json",
+          "application/pdf",
+          "image/png"
+        ],
+        "description": "You can set the file header to either receive a json response, or the physical files in given format. Possible options are: application/json, application/pdf, image/png"
+      },
+      {
+        "in": "query",
+        "name": "filter[page_size]",
+        "type": "string",
+        "default": "A4",
+        "enum": [
+          "A4",
+          "A6"
+        ],
+        "description": "When requesting multiple files with the Accept header set to \"application/pdf\" this filter determines the page size in the pdf. A page with size A4 will hold 4 files, while an A6 page will only hold 1."
+      },
+      {
+        "in": "query",
+        "name": "filter[start_position]",
+        "type": "string",
+        "default": "top-left",
+        "enum": [
+          "top-left",
+          "top-right",
+          "bottom-left",
+          "bottom-right"
+        ],
+        "description": "This filter only applies when requesting mulitple files with the Accept header set to \"application/pdf\" and the page size set to A4. It determines the position of the file on the first page."
+      }
+    ],
+    "produces": [
+      "application/json",
+      "application/pdf",
+      "image/png"
+    ],
+    "tags": [
+      "Files"
+    ],
+    "summary": "🚧",
+    "description": "",
+    "responses": {
+      "200": {
+        "description": "All the files.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/File"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
