@@ -1,22 +1,22 @@
 {
   "get": {
+    "tags": [
+      "Services"
+    ],
+    "summary": "Retrieve services by id.",
+    "description": "This endpoint retrieves the service with supplied id. A comma separated list of ids can be supplied to retrieve multiple services.",
     "parameters": [
       {
         "in": "path",
         "name": "service_id",
-        "required": true,
         "type": "string",
-        "description": "The service ID."
+        "required": true,
+        "description": "Id or comma separated list of id's of the service(s)."
       }
     ],
-    "tags": [
-      "Services"
-    ],
-    "summary": "Get one service with the id service_id.",
-    "description": "Get one service with the id service_id.",
     "responses": {
       "200": {
-        "description": "Get the service.",
+        "description": "Retrieved the service(s).",
         "schema": {
           "type": "object",
           "properties": {

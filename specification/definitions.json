@@ -31,5 +31,11 @@
   },
   "ShipmentStatus": {
     "$ref": "./definitions/ShipmentStatus.json"
+  },
+  "Webhook": {
+    "$ref": "./definitions/Webhook.json"
+  },
+  "Shop": {
+    "$ref": "./definitions/Shop.json"
   }
 }

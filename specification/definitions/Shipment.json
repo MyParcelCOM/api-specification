@@ -1,13 +1,12 @@
 {
   "type": "object",
   "required": [
-    "id",
     "type",
     "attributes"
   ],
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
@@ -22,14 +21,22 @@
         "sender": {
           "$ref": "#/definitions/Address"
         },
+        "pickup": {
+          "$ref": "#/definitions/Address"
+        },
         "price": {
+          "readOnly": true,
           "type": "number",
           "example": 10
+        },
+        "description": {
+          "type": "string"
         },
         "currency": {
           "$ref": "../definitions/Currency.json"
         },
         "status": {
+          "readOnly": true,
           "type": "string",
           "enum": [
             "Concept",
@@ -45,11 +52,13 @@
           ]
         },
         "created": {
+          "readOnly": true,
           "type": "string",
           "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
           "example": "2015-02-14 17:12:48"
         },
         "modified": {
+          "readOnly": true,
           "type": "string",
           "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
           "example": "2015-02-14 17:12:48"
@@ -60,27 +69,51 @@
         },
         "weight": {
           "type": "number",
-          "example": 1
-        },
-        "description": {
-          "type": "string"
+          "example": 24
         },
         "status_last_synced": {
+          "readOnly": true,
           "type": "string",
           "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
           "example": "2015-02-14 17:12:48"
         },
         "options": {
-          "type": "object"
-        },
-        "general_settings": {
-          "type": "object"
-        },
-        "pickup": {
-          "$ref": "#/definitions/Address"
+          "type": "array",
+          "items": {
+            "$ref": "../definitions/ServiceOption.json"
+          }
         },
         "customs_declaration": {
-          "type": "object"
+          "type": "array",
+          "items": {
+            "$ref": "../definitions/CustomsItem.json"
+          }
+        },
+        "physical_properties": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "number",
+              "example": 24
+            },
+            "width": {
+              "type": "number",
+              "example": 50
+            },
+            "length": {
+              "type": "number",
+              "example": 50
+            },
+            "volume": {
+              "type": "number",
+              "example": 50
+            },
+            "weight": {
+              "type": "number",
+              "example": 24
+            },
+          }
         }
       }
     },
@@ -88,6 +121,7 @@
       "type": "object",
       "properties": {
         "parent": {
+          "readOnly": true,
           "type": "object",
           "properties": {
             "data": {
@@ -103,37 +137,12 @@
               }
             },
             "links": {
+              "readOnly": true,
               "type": "object",
               "properties": {
                 "self": {
                   "type": "string",
                   "example": "/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                }
-              }
-            }
-          }
-        },
-        "account": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "accounts"
-                },
-                "id": {
-                  "$ref": "../definitions/Uuid.json"
-                }
-              }
-            },
-            "links": {
-              "type": "object",
-              "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "/accounts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -155,6 +164,7 @@
               }
             },
             "links": {
+              "readOnly": true,
               "type": "object",
               "properties": {
                 "self": {
@@ -181,6 +191,7 @@
               }
             },
             "links": {
+              "readOnly": true,
               "type": "object",
               "properties": {
                 "self": {
@@ -194,6 +205,7 @@
       }
     },
     "links": {
+      "readOnly": true,
       "type": "object",
       "properties": {
         "self": {

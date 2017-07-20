@@ -17,6 +17,14 @@
   },
   {
     "name": "Shipments",
-    "description": "🚧"
+    "description": "Find Shipments"
+  },
+  {
+    "name": "Webhooks",
+    "description": "Find Webhooks"
+  },
+  {
+    "name": "Shops",
+    "description": "Find Shops"
   }
 ]
