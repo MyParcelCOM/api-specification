@@ -1,0 +1,64 @@
+{
+  "get": {
+    "tags": [
+      "Shipments"
+    ],
+    "summary": "🚧 Get all the shipments.",
+    "description": "Get all the shipments.",
+    "responses": {
+      "200": {
+        "description": "ALL the shipments.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Shipment"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Shipments"
+    ],
+    "parameters": [
+      {
+        "name": "shipments",
+        "in": "body",
+        "description": "The shipment object to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Shipment"
+            }
+          }
+        }
+      }
+    ],
+    "summary": "🚧 Create a new shipment.",
+    "description": "Create a new shipment with the posted data.",
+    "responses": {
+      "200": {
+        "description": "Create a new shipment.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Shipment"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

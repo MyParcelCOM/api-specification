@@ -19,11 +19,11 @@
       "properties": {
         "name": {
           "type": "string",
-          "example": "Unstamped"
+          "example": "Pakket PUDO"
         },
-        "type": {
+        "parcel_type": {
           "type": "string",
-          "example": "Unstamped"
+          "example": "parcel"
         },
         "step_size": {
           "type": "string",

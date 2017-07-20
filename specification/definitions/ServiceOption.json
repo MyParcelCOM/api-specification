@@ -1,15 +1,15 @@
 {
   "type": "object",
   "required": [
-    "name",
-    "price"
+    "name"
   ],
   "properties": {
     "name": {
-      "type": "number",
-      "example": "10"
+      "type": "string",
+      "example": "signiture"
     },
     "price": {
+      "readOnly": true,
       "type": "number",
       "example": "500"
     }

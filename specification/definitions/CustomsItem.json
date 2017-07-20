@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "contents": {
+      "type": "string",
+      "example": "gift"
+    },
+    "invoice": {
+      "type": "string",
+      "example": "1231232"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "example": "vase"
+          },
+          "amount": {
+            "type": "number",
+            "example": 1
+          },
+          "weight": {
+            "type": "number",
+            "example": 3000
+          },
+          "value": {
+            "type": "number",
+            "example": 20000
+          }
+        }
+      }
+    }
+  }
+}

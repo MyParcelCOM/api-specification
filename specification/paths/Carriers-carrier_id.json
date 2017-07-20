@@ -1,22 +1,22 @@
 {
-  "get": {    
+  "get": {
+    "tags": [
+      "Carriers"
+    ],
+    "summary": "Retrieve carriers by id.",
+    "description": "This endpoint retrieves the carrier with supplied id. A comma separated list of ids can be supplied to retrieve multiple carriers.",
     "parameters": [
       {
         "in": "path",
         "name": "carrier_id",
-        "required": true,
         "type": "string",
-        "description": "The carrier ID."
+        "required": true,
+        "description": "Id or comma separated list of id's of the carrier(s)."
       }
     ],
-    "tags": [
-      "Carriers"
-    ],
-    "summary": "Get one carrier with the id carrier_id.",
-    "description": "Get one carrier with the id carrier_id.",
     "responses": {
       "200": {
-        "description": "One carrier.",
+        "description": "Retrieved the carrier(s).",
         "schema": {
           "type": "object",
           "properties": {

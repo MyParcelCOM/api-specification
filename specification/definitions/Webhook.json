@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "webhooks"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "hook": {
+          "type": "string",
+          "example": "shipment_status_change"
+        },
+        "url": {
+          "type": "string",
+          "example": "https://seoshop.nl/notifications"
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "shop": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "shops"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

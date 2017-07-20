@@ -1,0 +1,34 @@
+{
+  "get": {
+    "tags": [
+      "Regions"
+    ],
+    "summary": "Retrieve regions by id.",
+    "description": "This endpoint retrieves the region with supplied id. A comma separated list of ids can be supplied to retrieve multiple regions.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "region_id",
+        "type": "string",
+        "required": true,
+        "description": "Id or comma separated list of id's of the region(s)."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the region(s).",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Region"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

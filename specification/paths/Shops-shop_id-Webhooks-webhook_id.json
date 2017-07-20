@@ -1,0 +1,55 @@
+{
+  "get": {
+    "tags": [
+      "Webhooks"
+    ],
+    "summary": "🚧 Get webhooks from a shop by id.",
+    "description": "This endpoint retrieves the webhook with supplied id. A comma separated list of ids can be supplied to retrieves multiple webhooks.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "webhook_id",
+        "type": "string",
+        "required": true,
+        "description": "Id or comma separated list of id's of the webhook(s)."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieve the webhook(s).",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Webhook"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Webhooks"
+    ],
+    "summary": "🚧 Delete webhooks by id.",
+    "description": "This endpoint deletes the webhook with supplied id. A comma separated list of ids can be supplied to delete multiple webhooks.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "webhook_id",
+        "type": "string",
+        "required": true,
+        "description": "Id or comma separated list of id's of the webhook(s)."
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "Delete the webhook(s)."
+      }
+    }
+  }
+}
