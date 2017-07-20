@@ -3,11 +3,11 @@
   "properties": {
     "contents": {
       "type": "string",
-      "example": "gift"
+      "example": "gifts"
     },
     "invoice": {
       "type": "string",
-      "example": "1231232"
+      "example": "123456789"
     },
     "items": {
       "type": "array",
@@ -16,7 +16,7 @@
         "properties": {
           "description": {
             "type": "string",
-            "example": "vase"
+            "example": "Vase"
           },
           "amount": {
             "type": "number",

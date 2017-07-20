@@ -5,36 +5,24 @@
   "/carriers/{carrier_id}": {
     "$ref": "./paths/Carriers-carrier_id.json"
   },
-
   "/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/PickupDropoffLocations-country_code-postal_code.json"
   },
-
   "/regions": {
     "$ref": "./paths/Regions.json"
   },
-
   "/services": {
     "$ref": "./paths/Services.json"
   },
   "/services/{service_id}": {
     "$ref": "./paths/Services-service_id.json"
   },
-
   "/shipments": {
     "$ref": "./paths/Shipments.json"
   },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
   },
-
-  "/webhooks": {
-    "$ref": "./paths/Webhooks.json"
-  },
-  "/webhooks/{webhook_id}": {
-    "$ref": "./paths/Webhooks-webhook_id.json"
-  },
-
   "/shops": {
     "$ref": "./paths/Shops.json"
   },
@@ -46,5 +34,11 @@
   },
   "/shops/{shop_id}/webhooks/{webhook_id}": {
     "$ref": "./paths/Shops-shop_id-Webhooks-webhook_id.json"
+  },
+  "/webhooks": {
+    "$ref": "./paths/Webhooks.json"
+  },
+  "/webhooks/{webhook_id}": {
+    "$ref": "./paths/Webhooks-webhook_id.json"
   }
 }

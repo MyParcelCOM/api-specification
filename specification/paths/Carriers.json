@@ -7,7 +7,7 @@
     "description": "Get all the carriers.",
     "responses": {
       "200": {
-        "description": "ALL the carriers.",
+        "description": "All the carriers.",
         "schema": {
           "type": "object",
           "properties": {

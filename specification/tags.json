@@ -20,11 +20,11 @@
     "description": "Find Shipments"
   },
   {
-    "name": "Webhooks",
-    "description": "Find Webhooks"
-  },
-  {
     "name": "Shops",
     "description": "Find Shops"
+  },
+  {
+    "name": "Webhooks",
+    "description": "Find Webhooks"
   }
 ]
