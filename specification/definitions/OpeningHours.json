@@ -8,7 +8,7 @@
   "properties": {
     "day": {
       "type": "string",
-      "enumerate": [
+      "enum": [
         "Monday",
         "Tuesday",
         "Wednesday",

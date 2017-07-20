@@ -21,16 +21,11 @@
     "$ref": "./paths/Services-service_id.json"
   },
 
-
   "/shipments": {
     "$ref": "./paths/Shipments.json"
   },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
-  },
-
-  "/locations": {
-    "$ref": "./paths/Locations.json"
   },
 
   "/webhooks": {
