@@ -8,6 +8,13 @@
     "parameters": [
       {
         "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
+      {
+        "in": "path",
         "name": "webhook_id",
         "type": "string",
         "required": true,
@@ -38,6 +45,13 @@
     "summary": "🚧 Delete webhooks by id.",
     "description": "This endpoint deletes the webhook with supplied id. A comma separated list of ids can be supplied to delete multiple webhooks.",
     "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
       {
         "in": "path",
         "name": "webhook_id",
