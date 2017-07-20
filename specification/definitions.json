@@ -11,8 +11,8 @@
   "Error": {
     "$ref": "./definitions/Error.json"
   },
-  "Location": {
-    "$ref": "./definitions/Location.json"
+  "PickupDropoffLocation": {
+    "$ref": "./definitions/PickupDropoffLocation.json"
   },
   "Service": {
     "$ref": "./definitions/Service.json"
