@@ -1,0 +1,64 @@
+{
+  "get": {
+    "tags": [
+      "Webhooks"
+    ],
+    "summary": "🚧 Get all the webhooks from a shop.",
+    "description": "Get all the webhooks from a shop.",
+    "responses": {
+      "200": {
+        "description": "ALL the webhooks from a shop.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Webhook"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Webhooks"
+    ],
+    "parameters": [
+      {
+        "name": "webhooks",
+        "in": "body",
+        "description": "The webhook object to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Webhook"
+            }
+          }
+        }
+      }
+    ],
+    "summary": "🚧 Create a new webhook.",
+    "description": "Create a new webhook with the posted data.",
+    "responses": {
+      "200": {
+        "description": "Create a new webhook.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Webhook"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

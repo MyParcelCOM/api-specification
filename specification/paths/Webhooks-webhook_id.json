@@ -1,0 +1,34 @@
+{
+  "get": {
+    "tags": [
+      "Webhooks"
+    ],
+    "summary": "🚧 Get webhooks by id.",
+    "description": "This endpoint retrieves the webhook with supplied id. A comma separated list of ids can be supplied to retrieves multiple webhooks.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "webhook_id",
+        "type": "string",
+        "required": true,
+        "description": "Id or comma separated list of id's of the webhook(s)."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieve the webhook(s).",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Webhook"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
