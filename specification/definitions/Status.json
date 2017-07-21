@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "statuses"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "example": 1
+        },
+        "name": {
+          "type": "string",
+          "example": "pending"
+        },
+        "description": {
+          "type": "string",
+          "example": "The shipment is created"
+        }
+      }
+    }
+  }
+}

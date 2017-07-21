@@ -1,0 +1,34 @@
+{
+  "get": {
+    "tags": [
+      "Statuses"
+    ],
+    "summary": "🚧 Retrieve statuses by id.",
+    "description": "This endpoint retrieves the status with supplied id. A comma separated list of ids can be supplied to retrieve multiple statuses.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "status_id",
+        "type": "string",
+        "required": true,
+        "description": "Id or comma separated list of id's of the status(es)."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the status(es).",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Status"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

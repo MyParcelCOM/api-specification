@@ -35,22 +35,6 @@
         "currency": {
           "$ref": "../definitions/Currency.json"
         },
-        "status": {
-          "readOnly": true,
-          "type": "string",
-          "enum": [
-            "Concept",
-            "Pending/Registered",
-            "Handed to carrier",
-            "Sorting",
-            "Distribution",
-            "Delivered at customs",
-            "Delivered",
-            "Inactive",
-            "Deleted",
-            "Picked up"
-          ]
-        },
         "created": {
           "readOnly": true,
           "type": "string",
@@ -170,6 +154,34 @@
                 "self": {
                   "type": "string",
                   "example": "/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "status": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "status"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }

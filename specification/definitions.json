@@ -37,5 +37,8 @@
   },
   "Webhook": {
     "$ref": "./definitions/Webhook.json"
+  },
+  "Status": {
+    "$ref": "./definitions/Status.json"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "get": {
+    "tags": [
+      "Statuses"
+    ],
+    "summary": "🚧 Get all the Statuses.",
+    "description": "Get all the Statuses.",
+    "responses": {
+      "200": {
+        "description": "ALL the Statuses.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Status"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
