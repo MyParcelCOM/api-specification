@@ -23,7 +23,7 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Webhook"
+                "$ref": "#/definitions/WebhookSubscription"
               }
             }
           }
@@ -52,7 +52,7 @@
           "type": "object",
           "properties": {
             "data": {
-              "$ref": "#/definitions/Webhook"
+              "$ref": "#/definitions/WebhookSubscription"
             }
           }
         }
@@ -69,7 +69,7 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Webhook"
+                "$ref": "#/definitions/WebhookSubscription"
               }
             }
           }

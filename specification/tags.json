@@ -1,7 +1,7 @@
 [
   {
     "name": "Carriers",
-    "description": "Find Carriers"
+    "description": "Get Carriers"
   },
   {
     "name": "Files",
@@ -9,26 +9,30 @@
   },
   {
     "name": "PickupDropoffLocations",
-    "description": "Find pickup and drop-off locations"
+    "description": "Get pickup and drop-off locations"
   },
   {
     "name": "Regions",
-    "description": "Find Regions"
+    "description": "Get Regions"
   },
   {
     "name": "Services",
-    "description": "Find Services"
+    "description": "Get Services"
   },
   {
     "name": "Shipments",
-    "description": "Find Shipments"
-  },
-  {
-    "name": "Shops",
-    "description": "Find Shops"
+    "description": "Get Shipments"
   },
   {
     "name": "Webhooks",
-    "description": "Find Webhooks"
+    "description": "Get Webhooks"
+  },
+  {
+    "name": "Shops",
+    "description": "Get Shops"
+  },
+  {
+    "name": "Statuses",
+    "description": "Get Statuses"
   }
 ]

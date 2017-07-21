@@ -1,27 +1,32 @@
 {
   "type": "object",
   "required": [
+    "id",
     "type",
     "attributes"
   ],
   "properties": {
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../definitions/Uuid.json"
     },
     "type": {
       "type": "string",
-      "example": "webhooks"
+      "example": "statuses"
     },
     "attributes": {
       "type": "object",
       "properties": {
+        "code": {
+          "type": "string",
+          "example": "11213"
+        },
         "name": {
           "type": "string",
-          "example": "shipment_status_change"
+          "example": "pending"
         },
         "description": {
           "type": "string",
-          "example": "Whenever a shipment has a status change, this webhook is called."
+          "example": "The shipment is created"
         }
       }
     }
