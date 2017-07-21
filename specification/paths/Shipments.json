@@ -7,7 +7,7 @@
     "description": "Get all the shipments.",
     "responses": {
       "200": {
-        "description": "ALL the shipments.",
+        "description": "All the shipments.",
         "schema": {
           "type": "object",
           "properties": {

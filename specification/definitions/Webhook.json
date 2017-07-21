@@ -21,7 +21,7 @@
         },
         "url": {
           "type": "string",
-          "example": "https://seoshop.nl/notifications"
+          "example": "https://magento.com/notifications"
         }
       }
     },

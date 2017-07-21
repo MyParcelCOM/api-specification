@@ -5,9 +5,18 @@
     ],
     "summary": "🚧 Get all the webhooks from a shop.",
     "description": "Get all the webhooks from a shop.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      }
+    ],
     "responses": {
       "200": {
-        "description": "ALL the webhooks from a shop.",
+        "description": "All the webhooks from a shop.",
         "schema": {
           "type": "object",
           "properties": {
@@ -27,6 +36,13 @@
       "Webhooks"
     ],
     "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
       {
         "name": "webhooks",
         "in": "body",

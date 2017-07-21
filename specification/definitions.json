@@ -5,14 +5,14 @@
   "Carrier": {
     "$ref": "./definitions/Carrier.json"
   },
-  "Region": {
-    "$ref": "./definitions/Region.json"
-  },
   "Error": {
     "$ref": "./definitions/Error.json"
   },
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
+  },
+  "Region": {
+    "$ref": "./definitions/Region.json"
   },
   "Service": {
     "$ref": "./definitions/Service.json"
@@ -20,11 +20,11 @@
   "ServiceGroup": {
     "$ref": "./definitions/ServiceGroup.json"
   },
-  "ServiceOption": {
-    "$ref": "./definitions/ServiceOption.json"
-  },
   "ServiceInsurance": {
     "$ref": "./definitions/ServiceInsurance.json"
+  },
+  "ServiceOption": {
+    "$ref": "./definitions/ServiceOption.json"
   },
   "Shipment": {
     "$ref": "./definitions/Shipment.json"
@@ -32,10 +32,10 @@
   "ShipmentStatus": {
     "$ref": "./definitions/ShipmentStatus.json"
   },
-  "Webhook": {
-    "$ref": "./definitions/Webhook.json"
-  },
   "Shop": {
     "$ref": "./definitions/Shop.json"
+  },
+  "Webhook": {
+    "$ref": "./definitions/Webhook.json"
   }
 }

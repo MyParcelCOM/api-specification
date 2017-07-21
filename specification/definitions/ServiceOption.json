@@ -6,7 +6,7 @@
   "properties": {
     "name": {
       "type": "string",
-      "example": "signiture"
+      "example": "signature"
     },
     "price": {
       "readOnly": true,

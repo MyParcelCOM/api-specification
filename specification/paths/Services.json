@@ -33,7 +33,7 @@
     "description": "Get all the services.",
     "responses": {
       "200": {
-        "description": "ALL the services.",
+        "description": "All the services.",
         "schema": {
           "type": "object",
           "properties": {

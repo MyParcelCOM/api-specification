@@ -7,7 +7,7 @@
     "description": "Get all the regions.",
     "responses": {
       "200": {
-        "description": "ALL the regions.",
+        "description": "All the regions.",
         "schema": {
           "type": "object",
           "properties": {

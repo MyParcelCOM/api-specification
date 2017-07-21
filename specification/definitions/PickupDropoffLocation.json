@@ -19,7 +19,7 @@
       "properties": {
         "code": {
           "type": "string",
-          "example": "176227"
+          "example": "123456"
         },
         "name": {
           "type": "string",
