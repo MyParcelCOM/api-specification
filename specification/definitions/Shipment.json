@@ -168,7 +168,7 @@
               "properties": {
                 "type": {
                   "type": "string",
-                  "example": "status"
+                  "example": "statuses"
                 },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
