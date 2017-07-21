@@ -8,6 +8,9 @@
   "Error": {
     "$ref": "./definitions/Error.json"
   },
+  "File": {
+    "$ref": "./definitions/File.json"
+  },
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
   },

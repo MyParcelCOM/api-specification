@@ -112,7 +112,7 @@
             "weight": {
               "type": "number",
               "example": 24
-            },
+            }
           }
         }
       }
@@ -197,6 +197,36 @@
                 "self": {
                   "type": "string",
                   "example": "/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "files": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "example": "files"
+                  },
+                  "id": {
+                    "$ref": "../definitions/Uuid.json"
+                  }
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
