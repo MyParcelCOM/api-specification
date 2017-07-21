@@ -38,6 +38,9 @@
   "Webhook": {
     "$ref": "./definitions/Webhook.json"
   },
+  "WebhookSubscription": {
+    "$ref": "./definitions/WebhookSubscription.json"
+  },
   "Status": {
     "$ref": "./definitions/Status.json"
   }

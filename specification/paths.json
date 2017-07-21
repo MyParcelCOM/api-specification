@@ -33,18 +33,19 @@
   "/shops/{shop_id}": {
     "$ref": "./paths/Shops-shop_id.json"
   },
-  "/shops/{shop_id}/webhooks": {
-    "$ref": "./paths/Shops-shop_id-Webhooks.json"
-  },
-  "/shops/{shop_id}/webhooks/{webhook_id}": {
-    "$ref": "./paths/Shops-shop_id-Webhooks-webhook_id.json"
-  },
 
   "/webhooks": {
     "$ref": "./paths/Webhooks.json"
   },
   "/webhooks/{webhook_id}": {
     "$ref": "./paths/Webhooks-webhook_id.json"
+  },
+
+  "/shops/{shop_id}/webhook-subscriptions": {
+    "$ref": "./paths/Shops-shop_id-WebhookSubscriptions.json"
+  },
+  "/shops/{shop_id}/webhook-subscriptions/{webhook_subscription_id}": {
+    "$ref": "./paths/Shops-shop_id-WebhookSubscriptions-webhook_subscription_id.json"
   },
 
   "/statuses": {
@@ -54,6 +55,6 @@
     "$ref": "./paths/Statuses-status_id.json"
   },
   "/shipments/{shipment_id}/statuses": {
-    "$ref": "./paths/Shipments-shipment_id-statuses.json"
+    "$ref": "./paths/Shipments-shipment_id-Statuses.json"
   }
 }
