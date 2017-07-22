@@ -3,7 +3,7 @@
     "parameters": [
       {
         "in": "path",
-        "name": "filed_id",
+        "name": "file_id",
         "required": true,
         "type": "string",
         "description": "The file id, or a comma separated list of file ids."
