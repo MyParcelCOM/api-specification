@@ -5,6 +5,15 @@
     ],
     "summary": "🚧 Get all the Statuses.",
     "description": "Get all the Statuses.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shipment_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shipment."
+      }
+    ],
     "responses": {
       "200": {
         "description": "ALL the Statuses.",
