@@ -6,19 +6,19 @@
     "country_code"
   ],
   "properties": {
-    "street": {
+    "street_1": {
       "type": "string",
       "example": "Hoofdweg"
     },
-    "addition": {
+    "street_2": {
       "type": "string",
       "example": "Apartment 3"
     },
-    "number": {
+    "street_number": {
       "type": "number",
       "example": 679
     },
-    "number_suffix": {
+    "street_number_suffix": {
       "type": "string",
       "example": "b"
     },
