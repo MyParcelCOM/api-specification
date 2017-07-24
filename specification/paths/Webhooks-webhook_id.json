@@ -25,8 +25,7 @@
               "items": {
                 "$ref": "#/definitions/Webhook"
               }
-            }
-          },
+            },
             "meta": {
               "type": "object",
               "properties": {
@@ -61,6 +60,7 @@
                 }
               }
             }
+          }
         }
       }
     }
