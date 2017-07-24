@@ -6,21 +6,21 @@
     "country_code"
   ],
   "properties": {
-    "addressline_1": {
-      "type": "string",
-      "example": "Hoofdweg 679"
-    },
-    "addressline_2": {
-      "type": "string",
-      "example": "Apartment 3"
-    },
     "street": {
       "type": "string",
       "example": "Hoofdweg"
     },
-    "number": {
+    "addition": {
       "type": "string",
-      "example": "679"
+      "example": "Apartment 3"
+    },
+    "number": {
+      "type": "number",
+      "example": 679
+    },
+    "number_suffix": {
+      "type": "string",
+      "example": "b"
     },
     "postal_code": {
       "type": "string",

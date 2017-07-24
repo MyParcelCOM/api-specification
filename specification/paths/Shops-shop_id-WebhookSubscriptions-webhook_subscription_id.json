@@ -32,6 +32,40 @@
               "items": {
                 "$ref": "#/definitions/WebhookSubscription"
               }
+            },
+            "meta": {
+              "type": "object",
+              "properties": {
+                "total-pages": {
+                  "type": "number",
+                  "example": 13
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=13&page[size]=30"
+                }
+              }
             }
           }
         }
@@ -40,7 +74,7 @@
   },
   "delete": {
     "tags": [
-      "Webhooks"
+      "Shops"
     ],
     "summary": "🚧 Delete webhooks by id.",
     "description": "This endpoint deletes the webhook with supplied id. A comma separated list of ids can be supplied to delete multiple webhooks.",
@@ -62,7 +96,10 @@
     ],
     "responses": {
       "202": {
-        "description": "Delete the webhook(s)."
+        "description": "The webhook subscription(s) will be deleted."
+      },
+      "204": {
+        "description": "The webhook subscription(s) are deleted."
       }
     }
   }
