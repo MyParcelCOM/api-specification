@@ -46,10 +46,15 @@ if [ $# -gt 0 ]; then
       # Replace $SANDBOX_HOST and $SANDBOX_SCHEMA with values from environment variables.
       sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
       sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
+
+      # Replace the base url variable with the actual base url
+      sed -i "s/\\\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/" ./dist/swagger.json
     else
       # Different sed syntax for Mac.
       sed -i '' "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
       sed -i '' "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
+
+      sed -i '' "s/\\\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/" ./dist/swagger.json
     fi
 
   # Rebuild the spec and validate it.
