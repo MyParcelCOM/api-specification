@@ -21,6 +21,19 @@
           "example": "MyParcel.com"
         }
       }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        },
+        "services": {
+          "type": "string",
+          "example": "/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
     }
   }
 }

@@ -48,7 +48,7 @@
     ],
     "responses": {
       "202": {
-        "description": "Delete the shipment(s)."
+        "description": "The shipment(s) are deleted."
       }
     }
   }

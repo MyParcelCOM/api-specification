@@ -1,10 +1,10 @@
 {
   "get": {
-    "produces": [
-      "application/json"
-    ],
     "tags": [
       "Files"
+    ],
+    "produces": [
+      "application/json"
     ],
     "summary": "🚧 Get all your files",
     "description": "",

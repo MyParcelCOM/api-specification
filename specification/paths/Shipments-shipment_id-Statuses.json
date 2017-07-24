@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "Statuses","Shipments"
+      "Shipments"
     ],
     "summary": "🚧 Get all the Statuses.",
     "description": "Get all the Statuses.",

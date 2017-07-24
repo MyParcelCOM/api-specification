@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "Webhooks"
+      "Shops"
     ],
     "summary": "🚧 Get all the webhooks from a shop.",
     "description": "Get all the webhooks from a shop.",

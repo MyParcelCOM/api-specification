@@ -1,5 +1,8 @@
 {
   "get": {
+    "tags": [
+      "PickupDropoffLocations"
+    ],
     "parameters": [
       {
         "in": "path",
@@ -39,9 +42,6 @@
         "type": "string",
         "description": "The address number."
       }
-    ],
-    "tags": [
-      "PickupDropoffLocations"
     ],
     "summary": "Get all the pickup and dropoff locations.",
     "description": "",

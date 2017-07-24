@@ -1,5 +1,8 @@
 {
   "get": {
+    "tags": [
+      "Files"
+    ],
     "parameters": [
       {
         "in": "path",
@@ -49,9 +52,6 @@
       "application/json",
       "application/pdf",
       "image/png"
-    ],
-    "tags": [
-      "Files"
     ],
     "summary": "🚧",
     "description": "",

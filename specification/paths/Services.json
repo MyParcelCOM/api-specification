@@ -1,5 +1,8 @@
 {
   "get": {
+    "tags": [
+      "Services"
+    ],
     "parameters": [
       {
         "in": "query",
@@ -25,9 +28,6 @@
         "type": "string",
         "description": "The to region code."
       }
-    ],
-    "tags": [
-      "Services"
     ],
     "summary": "Get all the services.",
     "description": "Get all the services.",
