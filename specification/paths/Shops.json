@@ -3,7 +3,7 @@
     "tags": [
       "Shops"
     ],
-    "summary": "🚧 Get all the shops.",
+    "summary": "Get all the shops.",
     "description": "Get all the shops.",
     "responses": {
       "200": {

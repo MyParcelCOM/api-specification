@@ -3,7 +3,7 @@
     "tags": [
       "Shops"
     ],
-    "summary": "🚧 Retrieve shops by id.",
+    "summary": "Retrieve shops by id.",
     "description": "This endpoint retrieves the shops with supplied id. A comma separated list of ids can be supplied to retrieve multiple shops.",
     "parameters": [
       {

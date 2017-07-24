@@ -3,7 +3,7 @@
     "tags": [
       "Webhooks"
     ],
-    "summary": "🚧 Get webhooks by id.",
+    "summary": "Get webhooks by id.",
     "description": "This endpoint retrieves the webhook with supplied id. A comma separated list of ids can be supplied to retrieves multiple webhooks.",
     "parameters": [
       {

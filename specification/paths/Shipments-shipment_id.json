@@ -3,7 +3,7 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "🚧 Retrieve shipments by id.",
+    "summary": "Retrieve shipments by id.",
     "description": "This endpoint retrieves the shipment with supplied id. A comma separated list of ids can be supplied to retrieve multiple shipments.",
     "parameters": [
       {
@@ -69,7 +69,7 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "🚧 Delete a shipment by id.",
+    "summary": "Delete a shipment by id.",
     "description": "This endpoint deletes the shipment with supplied id. A comma separated list of ids can be supplied to delete multiple shipments.",
     "parameters": [
       {

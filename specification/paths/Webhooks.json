@@ -3,7 +3,7 @@
     "tags": [
       "Webhooks"
     ],
-    "summary": "🚧 Get all the webhooks.",
+    "summary": "Get all the webhooks.",
     "description": "Get all the webhooks.",
     "responses": {
       "200": {
