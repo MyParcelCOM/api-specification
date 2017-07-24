@@ -1,0 +1,92 @@
+{
+  "get": {
+    "tags": [
+      "Carriers"
+    ],
+    "parameters": [
+      {
+        "in": "path",
+        "name": "carrier_id",
+        "type": "string",
+        "required": true,
+        "description": "Id or comma separated list of id's of the carrier(s)."
+      },
+      {
+        "in": "query",
+        "name": "filters[from][country_code]",
+        "type": "string",
+        "description": "The from country code."
+      },
+      {
+        "in": "query",
+        "name": "filters[from][region_code]",
+        "type": "string",
+        "description": "The from region code."
+      },
+      {
+        "in": "query",
+        "name": "filters[to][country_code]",
+        "type": "string",
+        "description": "The to country code."
+      },
+      {
+        "in": "query",
+        "name": "filters[to][region_code]",
+        "type": "string",
+        "description": "The to region code."
+      }
+    ],
+    "summary": "🚧 Get all the services.",
+    "description": "Get all the services.",
+    "responses": {
+      "200": {
+        "description": "All the services.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Service"
+              }
+            },
+            "meta": {
+              "type": "object",
+              "properties": {
+                "total-pages": {
+                  "type": "number",
+                  "example": 13
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=13&page[size]=30"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
