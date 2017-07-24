@@ -3,7 +3,7 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "🚧 Get all the shipments.",
+    "summary": "Get all the shipments.",
     "description": "Get all the shipments.",
     "responses": {
       "200": {
@@ -76,7 +76,7 @@
         }
       }
     ],
-    "summary": "🚧 Create a new shipment.",
+    "summary": "Create a new shipment.",
     "description": "Create a new shipment with the posted data.",
     "responses": {
       "200": {

@@ -3,7 +3,7 @@
     "tags": [
       "Shops"
     ],
-    "summary": "🚧 Get webhooks from a shop by id.",
+    "summary": "Get webhooks from a shop by id.",
     "description": "This endpoint retrieves the webhook with supplied id. A comma separated list of ids can be supplied to retrieves multiple webhooks.",
     "parameters": [
       {
@@ -76,7 +76,7 @@
     "tags": [
       "Shops"
     ],
-    "summary": "🚧 Delete webhooks by id.",
+    "summary": "Delete webhooks by id.",
     "description": "This endpoint deletes the webhook with supplied id. A comma separated list of ids can be supplied to delete multiple webhooks.",
     "parameters": [
       {

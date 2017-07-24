@@ -3,7 +3,7 @@
     "tags": [
       "Shops"
     ],
-    "summary": "🚧 Get all the webhooks from a shop.",
+    "summary": "Get all the webhooks from a shop.",
     "description": "Get all the webhooks from a shop.",
     "parameters": [
       {
@@ -92,7 +92,7 @@
         }
       }
     ],
-    "summary": "🚧 Create a new webhook.",
+    "summary": "Create a new webhook.",
     "description": "Create a new webhook with the posted data.",
     "responses": {
       "200": {

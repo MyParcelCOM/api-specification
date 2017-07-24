@@ -6,7 +6,7 @@
     "produces": [
       "application/json"
     ],
-    "summary": "🚧 Get all your files",
+    "summary": "Get all your files",
     "description": "",
     "responses": {
       "200": {

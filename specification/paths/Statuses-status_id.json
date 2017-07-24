@@ -3,7 +3,7 @@
     "tags": [
       "Statuses"
     ],
-    "summary": "🚧 Retrieve statuses by id.",
+    "summary": "Retrieve statuses by id.",
     "description": "This endpoint retrieves the status with supplied id. A comma separated list of ids can be supplied to retrieve multiple statuses.",
     "parameters": [
       {
