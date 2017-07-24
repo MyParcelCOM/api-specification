@@ -1,5 +1,8 @@
 {
   "get": {
+    "tags": [
+      "PickupDropoffLocations"
+    ],
     "parameters": [
       {
         "in": "path",
@@ -40,9 +43,6 @@
         "description": "The address number."
       }
     ],
-    "tags": [
-      "PickupDropoffLocations"
-    ],
     "summary": "Get all the pickup and dropoff locations.",
     "description": "",
     "responses": {
@@ -80,12 +80,41 @@
                       "example": {
                         "pickup-dropoff-locations": {
                           "links": {
-                            "self": "/pickup-dropoff-locations/NL/2131BC?filter[carriers]=c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                            "self": "$base_url/pickup-dropoff-locations/NL/2131BC?filter[carriers]=c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                           }
                         }
                       }
                     }
                   }
+                },
+                "total-pages": {
+                  "type": "number",
+                  "example": 13
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=13&page[size]=30"
                 }
               }
             }

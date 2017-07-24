@@ -1,5 +1,8 @@
 {
   "get": {
+    "tags": [
+      "Services"
+    ],
     "parameters": [
       {
         "in": "query",
@@ -26,9 +29,6 @@
         "description": "The to region code."
       }
     ],
-    "tags": [
-      "Services"
-    ],
     "summary": "Get all the services.",
     "description": "Get all the services.",
     "responses": {
@@ -41,6 +41,40 @@
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Service"
+              }
+            },
+            "meta": {
+              "type": "object",
+              "properties": {
+                "total-pages": {
+                  "type": "number",
+                  "example": 13
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/services?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/services?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/services?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/services?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/services?page[number]=13&page[size]=30"
+                }
               }
             }
           }

@@ -1,38 +1,38 @@
 [
   {
     "name": "Carriers",
-    "description": "Get Carriers"
+    "description": ""
   },
   {
     "name": "Files",
-    "description": "🚧 Get files"
+    "description": ""
   },
   {
     "name": "PickupDropoffLocations",
-    "description": "Get pickup and drop-off locations"
+    "description": ""
   },
   {
     "name": "Regions",
-    "description": "Get Regions"
+    "description": ""
   },
   {
     "name": "Services",
-    "description": "Get Services"
+    "description": ""
   },
   {
     "name": "Shipments",
-    "description": "Get Shipments"
+    "description": ""
   },
   {
     "name": "Webhooks",
-    "description": "Get Webhooks"
+    "description": ""
   },
   {
     "name": "Shops",
-    "description": "Get Shops"
+    "description": ""
   },
   {
     "name": "Statuses",
-    "description": "Get Statuses"
+    "description": ""
   }
 ]

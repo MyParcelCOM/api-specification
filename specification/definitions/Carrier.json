@@ -18,7 +18,20 @@
       "properties": {
         "name": {
           "type": "string",
-          "example": "MyParcel.com"
+          "example": "PostNL"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        },
+        "services": {
+          "type": "string",
+          "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services"
         }
       }
     }
