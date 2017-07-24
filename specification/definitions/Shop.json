@@ -48,7 +48,7 @@
               "properties": {
                 "self": {
                    "type": "string",
-                   "example": "/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                   "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 },
               }
             },

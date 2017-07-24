@@ -126,7 +126,7 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -153,7 +153,7 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -181,7 +181,7 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -208,7 +208,7 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -238,7 +238,7 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -252,7 +252,7 @@
       "properties": {
         "self": {
           "type": "string",
-          "example": "/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+          "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }
