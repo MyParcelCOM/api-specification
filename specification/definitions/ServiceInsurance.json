@@ -4,17 +4,14 @@
     "price"
   ],
   "properties": {
-    "min": {
-      "type": "number",
-      "example": "1000"
+    "amount_min": {
+      "$ref": "../definitions/Price.json"
     },
-    "max": {
-      "type": "number",
-      "example": "2000"
+    "amount_max": {
+      "$ref": "../definitions/Price.json"
     },
     "price": {
-      "type": "number",
-      "example": "500"
+      "$ref": "../definitions/Price.json"
     },
   }
 }

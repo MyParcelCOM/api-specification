@@ -25,31 +25,9 @@
           "type": "string",
           "example": "parcel"
         },
-        "step_size": {
-          "type": "string",
-          "example": "1"
-        },
         "insured_amount": {
           "type": "string",
           "example": "10000"
-        },
-        "groups": {
-          "type": "array",
-          "items":{
-            "$ref": "#/definitions/ServiceGroup"
-          }
-        },
-        "options": {
-          "type": "array",
-          "items":{
-            "$ref": "#/definitions/ServiceOption"
-          }
-        },
-        "insurances": {
-          "type": "array",
-          "items":{
-            "$ref": "#/definitions/ServiceInsurance"
-          }
         }
       }
     },

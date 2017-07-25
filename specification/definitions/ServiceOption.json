@@ -9,9 +9,7 @@
       "example": "signature"
     },
     "price": {
-      "readOnly": true,
-      "type": "number",
-      "example": "500"
+      "$ref": "../definitions/Price.json"
     }
   }
 }

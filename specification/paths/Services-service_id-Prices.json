@@ -1,0 +1,107 @@
+{
+  "get": {
+    "tags": [
+      "Services"
+    ],
+    "summary": "Get all the prices.",
+    "description": "Get all the prices.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "service_id",
+        "type": "string",
+        "required": true,
+        "description": "Id or comma separated list of id's of the service(s)."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "This are the service groups, insurances and options",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "example": [
+                {
+                  "type": "weight_groups",
+                  "id": "c9ce29a4-6325-11e7-907b-a6006ad3dba0",
+                  "attributes": {
+                    "weight_min": "10",
+                    "weight_max": "20",
+                    "step_size": "1",
+                    "price": {
+                      "$ref": "../definitions/Price.json"
+                    },
+                    "step_price": {
+                      "$ref": "../definitions/Price.json"
+                    }
+                  }
+                },
+                {
+                  "type": "options",
+                  "id": "c9ce29a4-6325-11e7-907b-a6006ad3dba0",
+                  "attributes": {
+                    "name": "signature",
+                    "price": {
+                      "$ref": "../definitions/Price.json"
+                    }
+                  }
+                },
+                {
+                  "type": "insurances",
+                  "id":"c9ce29a4-6325-11e7-907b-a6006ad3dba0",
+                  "attributes": {
+                    "amount_min": "1000",
+                    "amount_max": "2000",
+                    "price": {
+                      "$ref": "../definitions/Price.json"
+                    }
+                  }
+                }
+              ],
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "This are the service groups, insurances and options"
+              }
+            },
+            "meta": {
+              "type": "object",
+              "properties": {
+                "total-pages": {
+                  "type": "number",
+                  "example": 13
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices?page[number]=13&page[size]=30"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
