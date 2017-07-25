@@ -26,14 +26,16 @@
                   "type": "weight_groups",
                   "id": "c9ce29a4-6325-11e7-907b-a6006ad3dba0",
                   "attributes": {
-                    "weight_min": "10",
-                    "weight_max": "20",
-                    "step_size": "1",
+                    "weight_min": 10,
+                    "weight_max": 20,
+                    "step_size": 1,
                     "price": {
-                      "$ref": "../definitions/Price.json"
+                      "amount": 123,
+                      "currency": "EUR"
                     },
                     "step_price": {
-                      "$ref": "../definitions/Price.json"
+                      "amount": 123,
+                      "currency": "EUR"
                     }
                   }
                 },
@@ -43,7 +45,8 @@
                   "attributes": {
                     "name": "signature",
                     "price": {
-                      "$ref": "../definitions/Price.json"
+                      "amount": 123,
+                      "currency": "EUR"
                     }
                   }
                 },
@@ -51,10 +54,17 @@
                   "type": "insurances",
                   "id":"c9ce29a4-6325-11e7-907b-a6006ad3dba0",
                   "attributes": {
-                    "amount_min": "1000",
-                    "amount_max": "2000",
+                    "amount_min": {
+                      "amount": 1000,
+                      "currency": "EUR"
+                    },
+                    "amount_max": {
+                      "amount": 5000,
+                      "currency": "EUR"
+                    },
                     "price": {
-                      "$ref": "../definitions/Price.json"
+                      "amount": 123,
+                      "currency": "EUR"
                     }
                   }
                 }

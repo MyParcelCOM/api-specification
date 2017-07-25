@@ -14,6 +14,9 @@
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
   },
+  "Price": {
+    "$ref": "./definitions/Price.json"
+  },
   "Region": {
     "$ref": "./definitions/Region.json"
   },
@@ -38,13 +41,13 @@
   "Shop": {
     "$ref": "./definitions/Shop.json"
   },
+  "Status": {
+    "$ref": "./definitions/Status.json"
+  },
   "Webhook": {
     "$ref": "./definitions/Webhook.json"
   },
   "WebhookSubscription": {
     "$ref": "./definitions/WebhookSubscription.json"
-  },
-  "Status": {
-    "$ref": "./definitions/Status.json"
   }
 }
