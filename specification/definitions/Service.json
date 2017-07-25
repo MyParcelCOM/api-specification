@@ -19,7 +19,7 @@
       "properties": {
         "name": {
           "type": "string",
-          "example": "Pakket PUDO"
+          "example": "Parcel to Parcelshop"
         },
         "parcel_type": {
           "type": "string",

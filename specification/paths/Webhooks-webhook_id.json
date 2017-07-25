@@ -11,12 +11,12 @@
         "name": "webhook_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the webhook(s)."
+        "description": "Id or comma separated list of ids of the webhook(s)."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieve the webhook(s).",
+        "description": "Retrieved the webhook(s).",
         "schema": {
           "type": "object",
           "properties": {

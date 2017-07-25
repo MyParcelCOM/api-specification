@@ -7,7 +7,7 @@
     "description": "Get all the shops.",
     "responses": {
       "200": {
-        "description": "All the shops.",
+        "description": "Retrieved the shop(s).",
         "schema": {
           "type": "object",
           "properties": {

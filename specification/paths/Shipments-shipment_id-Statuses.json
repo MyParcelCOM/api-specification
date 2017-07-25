@@ -3,8 +3,8 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "Get all the Statuses.",
-    "description": "Get all the Statuses.",
+    "summary": "Get all the statuses for the supplied shipments.",
+    "description": "Get all the statuses for the supplied shipments.",
     "parameters": [
       {
         "in": "path",
@@ -16,7 +16,7 @@
     ],
     "responses": {
       "200": {
-        "description": "All the Statuses.",
+        "description": "Retrieved the status(es).",
         "schema": {
           "type": "object",
           "properties": {

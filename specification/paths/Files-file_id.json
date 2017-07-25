@@ -57,7 +57,7 @@
     "description": "",
     "responses": {
       "200": {
-        "description": "All the files.",
+        "description": "Retrieved the file(s).",
         "schema": {
           "type": "object",
           "properties": {

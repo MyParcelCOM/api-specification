@@ -11,7 +11,7 @@
         "name": "status_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the status(es)."
+        "description": "Id or comma separated list of ids of the status(es)."
       }
     ],
     "responses": {

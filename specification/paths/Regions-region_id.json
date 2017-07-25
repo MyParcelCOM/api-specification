@@ -11,7 +11,7 @@
         "name": "region_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the region(s)."
+        "description": "Id or comma separated list of ids of the region(s)."
       }
     ],
     "responses": {

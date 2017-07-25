@@ -16,7 +16,7 @@
     ],
     "responses": {
       "200": {
-        "description": "All the webhooks from a shop.",
+        "description": "Retrieved the webhook(s).",
         "schema": {
           "type": "object",
           "properties": {

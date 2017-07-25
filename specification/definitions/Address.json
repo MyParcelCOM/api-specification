@@ -8,40 +8,45 @@
   "properties": {
     "street_1": {
       "type": "string",
-      "example": "Hoofdweg"
+      "example": "218 W 50th St"
     },
     "street_2": {
       "type": "string",
-      "example": "Apartment 3"
+      "example": ""
     },
     "street_number": {
       "type": "number",
-      "example": 679
+      "example": ""
     },
     "street_number_suffix": {
       "type": "string",
-      "example": "b"
+      "example": ""
     },
     "postal_code": {
       "type": "string",
-      "example": "2131BC"
+      "example": "10019"
     },
     "city": {
       "type": "string",
-      "example": "Hoofddorp"
+      "example": "New York"
     },
     "region_code": {
       "type": "string",
-      "pattern": "[A-Z]{3}"
+      "pattern": "[A-Z]{3}",
+      "example": "NY"
     },
     "country_code": {
       "type": "string",
       "pattern": "[A-Z]{2}",
-      "example": "NL"
+      "example": "US"
     },
     "person": {
       "type": "string",
       "example": "John Doe"
+    },
+    "company": {
+      "type": "string",
+      "example": "citizenM New York Times Square hotel"
     }
   }
 }

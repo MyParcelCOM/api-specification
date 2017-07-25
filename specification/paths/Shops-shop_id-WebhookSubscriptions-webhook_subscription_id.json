@@ -18,12 +18,12 @@
         "name": "webhook_subscription_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the webhook subscription(s)."
+        "description": "Id or comma separated list of ids of the webhook subscription(s)."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieve the webhook subscription(s).",
+        "description": "Retrieved the webhook subscription(s).",
         "schema": {
           "type": "object",
           "properties": {
@@ -91,7 +91,7 @@
         "name": "webhook_subscription_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the webhook subscription(s)."
+        "description": "Id or comma separated list of ids of the webhook subscription(s)."
       }
     ],
     "responses": {

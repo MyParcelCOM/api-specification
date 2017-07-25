@@ -7,7 +7,7 @@
     "description": "Get all the shipments.",
     "responses": {
       "200": {
-        "description": "All the shipments.",
+        "description": "Retrieved the shipment(s).",
         "schema": {
           "type": "object",
           "properties": {
@@ -80,7 +80,7 @@
     "description": "Create a new shipment with the posted data.",
     "responses": {
       "200": {
-        "description": "Create a new shipment.",
+        "description": "Created the shipment.",
         "schema": {
           "type": "object",
           "properties": {

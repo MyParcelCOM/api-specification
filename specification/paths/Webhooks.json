@@ -7,7 +7,7 @@
     "description": "Get all the webhooks.",
     "responses": {
       "200": {
-        "description": "All the webhooks.",
+        "description": "Retrieved the webhook(s).",
         "schema": {
           "type": "object",
           "properties": {
