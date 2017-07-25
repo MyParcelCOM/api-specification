@@ -19,6 +19,10 @@
     "step_price": {
       "type": "number",
       "example": "0"
+    },
+    "step_size": {
+      "type": "string",
+      "example": "1"
     }
   }
 }
