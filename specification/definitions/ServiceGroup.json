@@ -13,12 +13,10 @@
       "example": "20"
     },
     "price": {
-      "type": "number",
-      "example": "500"
+      "$ref": "../definitions/Price.json"
     },
     "step_price": {
-      "type": "number",
-      "example": "0"
+      "$ref": "../definitions/Price.json"
     },
     "step_size": {
       "type": "string",

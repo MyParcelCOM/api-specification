@@ -28,6 +28,7 @@
                   "attributes": {
                     "weight_min": "10",
                     "weight_max": "20",
+                    "step_size": "1",
                     "price": {
                       "$ref": "../definitions/Price.json"
                     },
