@@ -5,12 +5,12 @@ COMPOSE="docker-compose"
 
 # Check if the file with environment variables exists, otherwise copy the default file.
 if [ ! -f ${ROOT_DIR}/.env ]; then
-  if [ ! -f ${ROOT_DIR}/docker/.env.dist ]; then
+  if [ ! -f ${ROOT_DIR}/.env.dist ]; then
     >&2 echo 'Unable to locate .env or .env.dist file'
     exit 1
   fi
 
-  cp ${ROOT_DIR}/docker/.env.dist ${ROOT_DIR}/.env
+  cp ${ROOT_DIR}/.env.dist ${ROOT_DIR}/.env
 
   # Add current user and group to .env file, with root as fallback.
   echo "USER_ID=${UID-0}" >> ${ROOT_DIR}/.env
@@ -42,20 +42,15 @@ if [ $# -gt 0 ]; then
     # On Linux fix permissions for the dist folder.
     if [ "$(uname -s)" == "Linux" ]; then
       ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
-
-      # Replace $SANDBOX_HOST and $SANDBOX_SCHEMA with values from environment variables.
-      sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
-      sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
-
-      # Replace the base url variable with the actual base url
-      sed -i "s/\\\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/" ./dist/swagger.json
-    else
-      # Different sed syntax for Mac.
-      sed -i '' "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" ./dist/swagger.json
-      sed -i '' "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" ./dist/swagger.json
-
-      sed -i '' "s/\\\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/" ./dist/swagger.json
     fi
+
+    # Replace environment variables.
+    ${COMPOSE} run --rm bundler sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" //opt/spec/dist/swagger.json
+    ${COMPOSE} run --rm bundler sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" //opt/spec/dist/swagger.json
+    ${COMPOSE} run --rm bundler sed -i "s/\\\$OAUTH_HOST/${OAUTH_HOST}/" //opt/spec/dist/swagger.json
+
+    # Replace the base url variable with the actual base url
+    ${COMPOSE} run --rm bundler sed -i "s/\\\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/" //opt/spec/dist/swagger.json
 
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then

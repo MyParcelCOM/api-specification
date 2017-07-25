@@ -24,8 +24,13 @@
     "$ref": "./specification/responses.json"
   },
   "securityDefinitions": {
+    "oauth2": {
+      "type": "oauth2",
+      "flow": "application",
+      "tokenUrl": "https://$OAUTH_HOST/access_token",
+      "scopes": {}
+    }
   },
-  "security": [],
   "tags": {
     "$ref": "./specification/tags.json"
   }

@@ -4,7 +4,7 @@ This repository describes the API specification used by MyParcel.com. The specif
 ## TODO:
 - [x] Test Docker setup on Linux.
 - [x] Test Docker setup on Mac.
-- [ ] Test Docker setup on Windows.
+- [x] Test Docker setup on Windows.
 - [ ] Actually increment version numbers when building.
 - [ ] Implement Swagger Editor.
 - [ ] Set contributors guidelines.
@@ -26,6 +26,7 @@ Install Docker for Mac from [https://docs.docker.com/docker-for-mac/install](htt
 
 #### Windows
 Install Docker for Windows from [https://docs.docker.com/docker-for-windows/install](https://docs.docker.com/docker-for-windows/install).
+> **NOTE:** We recommend running the commands in a bash shell like Git Bash.
 
 #### Linux
 Install Docker by running the following command:
