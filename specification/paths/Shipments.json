@@ -3,6 +3,11 @@
     "tags": [
       "Shipments"
     ],
+    "security": [
+      {
+        "oauth2": []
+      }
+    ],
     "summary": "Get all the shipments.",
     "description": "Get all the shipments.",
     "responses": {
