@@ -27,8 +27,7 @@
             "example": 3000
           },
           "value": {
-            "type": "number",
-            "example": 20000
+            "$ref": "../definitions/Price.json"
           }
         }
       }
