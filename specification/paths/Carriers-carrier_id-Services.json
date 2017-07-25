@@ -36,7 +36,7 @@
         "description": "The to region code."
       }
     ],
-    "summary": "🚧 Get all the services.",
+    "summary": "Get all the services.",
     "description": "Get all the services.",
     "responses": {
       "200": {
