@@ -1,5 +1,5 @@
 # MyParcel.com API specification
-This repository describes the API specification used by MyParcel.com. The specification adheres to the [Swagger Specification](https://swagger.io/specification/) v2.
+This repository describes the API specification used by MyParcel.com. The specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.
 
 ## TODO:
 - [x] Test Docker setup on Linux.
@@ -22,10 +22,10 @@ The repository provides docker containers to validate and preview the spec befor
 To install Docker, follow the steps below for your preferred OS.
 
 #### Mac
-Install Docker for Mac from [https://docs.docker.com/docker-for-mac/install/](https://docs.docker.com/docker-for-mac/install/).
+Install Docker for Mac from [https://docs.docker.com/docker-for-mac/install](https://docs.docker.com/docker-for-mac/install).
 
 #### Windows
-Install Docker for Windows from [https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/).
+Install Docker for Windows from [https://docs.docker.com/docker-for-windows/install](https://docs.docker.com/docker-for-windows/install).
 
 #### Linux
 Install Docker by running the following command:
@@ -62,7 +62,7 @@ To validate the spec you can run the command:
 Coming Soon.
 
 ## Conventions
-Conventions based on the [Swagger](https://swagger.io/specification/) and [JSON Schema](http://json-schema.org/) specs but enhanced with MyParcel.com conventions.
+Conventions based on the [Swagger](https://swagger.io/specification) and [JSON Schema](http://json-schema.org) specs but enhanced with MyParcel.com conventions.
 
 ### PUT, POST, PATCH
 To avoid discussion the use of the above HTTP methods is described below.
@@ -105,4 +105,4 @@ specification/paths/Carriers-carrier_id-Services.json
 Coming Soon.
 
 ## Licence
-All software by MyParcel.com is licenced under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms/). 
+All software by MyParcel.com is licenced under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 

@@ -3,8 +3,8 @@
     "tags": [
       "Carriers"
     ],
-    "summary": "all available carriers for your account.",
-    "description": "all available carriers for your account.",
+    "summary": "All available carriers for your account.",
+    "description": "All available carriers for your account.",
     "responses": {
       "200": {
         "description": "All the carriers.",

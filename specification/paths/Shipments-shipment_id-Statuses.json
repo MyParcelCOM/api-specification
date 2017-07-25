@@ -16,7 +16,7 @@
     ],
     "responses": {
       "200": {
-        "description": "ALL the Statuses.",
+        "description": "All the Statuses.",
         "schema": {
           "type": "object",
           "properties": {

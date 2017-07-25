@@ -53,7 +53,7 @@
       "application/pdf",
       "image/png"
     ],
-    "summary": "🚧",
+    "summary": "Retrieve files by id.",
     "description": "",
     "responses": {
       "200": {
