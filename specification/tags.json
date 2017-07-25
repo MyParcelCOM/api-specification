@@ -24,15 +24,15 @@
     "description": ""
   },
   {
-    "name": "Webhooks",
-    "description": ""
-  },
-  {
     "name": "Shops",
     "description": ""
   },
   {
     "name": "Statuses",
+    "description": ""
+  },
+  {
+    "name": "Webhooks",
     "description": ""
   }
 ]
