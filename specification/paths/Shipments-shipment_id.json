@@ -11,7 +11,7 @@
         "name": "shipment_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the shipment(s)."
+        "description": "Id or comma separated list of ids of the shipment(s)."
       }
     ],
     "responses": {
@@ -77,7 +77,7 @@
         "name": "shipment_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the shipment(s)."
+        "description": "Id or comma separated list of ids of the shipment(s)."
       }
     ],
     "responses": {

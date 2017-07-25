@@ -22,7 +22,7 @@
         },
         "region_code": {
           "type": "string",
-          "example": "ABC"
+          "example": "NH"
         },
         "currency": {
           "type": "string",
@@ -30,7 +30,7 @@
         },
         "name": {
           "type": "string",
-          "example": "Netherlands"
+          "example": "The Netherlands"
         }
       }
     }

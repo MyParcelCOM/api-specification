@@ -8,32 +8,32 @@
         "in": "query",
         "name": "filters[from][country_code]",
         "type": "string",
-        "description": "The from country code."
+        "description": "The country code from which the shipment is sent."
       },
       {
         "in": "query",
         "name": "filters[from][region_code]",
         "type": "string",
-        "description": "The from region code."
+        "description": "The region code from which the shipment is sent."
       },
       {
         "in": "query",
         "name": "filters[to][country_code]",
         "type": "string",
-        "description": "The to country code."
+        "description": "The country code to which the shipment is sent."
       },
       {
         "in": "query",
         "name": "filters[to][region_code]",
         "type": "string",
-        "description": "The to region code."
+        "description": "The region code to which the shipment is sent."
       }
     ],
     "summary": "Get all the services.",
     "description": "Get all the services.",
     "responses": {
       "200": {
-        "description": "All the services.",
+        "description": "Retrieved the service(s).",
         "schema": {
           "type": "object",
           "properties": {

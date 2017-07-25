@@ -7,7 +7,7 @@
     "description": "Get all the Statuses.",
     "responses": {
       "200": {
-        "description": "All the Statuses.",
+        "description": "Retrieved the status(es).",
         "schema": {
           "type": "object",
           "properties": {

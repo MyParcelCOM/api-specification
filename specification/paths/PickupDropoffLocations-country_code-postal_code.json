@@ -40,14 +40,14 @@
         "in": "query",
         "name": "filter[number]",
         "type": "string",
-        "description": "The address number."
+        "description": "The street number."
       }
     ],
     "summary": "Get all the pickup and dropoff locations.",
     "description": "",
     "responses": {
       "200": {
-        "description": "All the pudo locations.",
+        "description": "Retrieved the location(s).",
         "schema": {
           "type": "object",
           "properties": {
@@ -73,7 +73,7 @@
                     },
                     "detail": {
                       "type": "string",
-                      "example": "An error occured while retrieving locations."
+                      "example": "An error occurred while retrieving locations."
                     },
                     "meta": {
                       "type": "object",

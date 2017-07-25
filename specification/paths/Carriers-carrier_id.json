@@ -4,14 +4,14 @@
       "Carriers"
     ],
     "summary": "Retrieve carriers by id.",
-    "description": "This endpoint retrieves the carrier with supplied id. A comma separated list of ids can be supplied to retrieve multiple carriers.",
+    "description": "This endpoint retrieves the carrier with the supplied id. A comma separated list of ids can be supplied to retrieve multiple carriers.",
     "parameters": [
       {
         "in": "path",
         "name": "carrier_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the carrier(s)."
+        "description": "Id or comma separated list of ids of the carrier(s)."
       }
     ],
     "responses": {
