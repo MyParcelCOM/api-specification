@@ -25,9 +25,8 @@
           "type": "string",
           "example": "parcel"
         },
-        "insured_amount": {
-          "type": "string",
-          "example": "10000"
+        "default_insured_amount": {
+          "$ref": "../definitions/Price.json"
         }
       }
     },
