@@ -5,12 +5,12 @@ COMPOSE="docker-compose"
 
 # Check if the file with environment variables exists, otherwise copy the default file.
 if [ ! -f ${ROOT_DIR}/.env ]; then
-  if [ ! -f ${ROOT_DIR}/docker/.env.dist ]; then
+  if [ ! -f ${ROOT_DIR}/.env.dist ]; then
     >&2 echo 'Unable to locate .env or .env.dist file'
     exit 1
   fi
 
-  cp ${ROOT_DIR}/docker/.env.dist ${ROOT_DIR}/.env
+  cp ${ROOT_DIR}/.env.dist ${ROOT_DIR}/.env
 
   # Add current user and group to .env file, with root as fallback.
   echo "USER_ID=${UID-0}" >> ${ROOT_DIR}/.env
