@@ -59,7 +59,7 @@
             }
           }
         },
-        "region": {
+        "region_from": {
           "type": "object",
           "properties": {
             "links": {
@@ -68,6 +68,32 @@
                 "self": {
                    "type": "string",
                    "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                },
+              }
+            },
+            "data":{
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "regions"
+                }
+              }
+            }
+          }
+        },
+        "region_to": {
+          "type": "object",
+          "properties": {
+            "links": {
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 },
               }
             },

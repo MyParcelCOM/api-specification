@@ -28,7 +28,8 @@
           "$ref": "../definitions/ReadOnlyPrice.json"
         },
         "description": {
-          "type": "string"
+          "type": "string",
+          "example": "order #8008135"
         },
         "created": {
           "readOnly": true,

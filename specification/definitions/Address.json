@@ -8,37 +8,37 @@
   "properties": {
     "street_1": {
       "type": "string",
-      "example": "218 W 50th St"
+      "example": "Some road"
     },
     "street_2": {
       "type": "string",
-      "example": ""
+      "example": "Room 3"
     },
     "street_number": {
       "type": "number",
-      "example": ""
+      "example": "17"
     },
     "street_number_suffix": {
       "type": "string",
-      "example": ""
+      "example": "A"
     },
     "postal_code": {
       "type": "string",
-      "example": "10019"
+      "example": "1GL HF1"
     },
     "city": {
       "type": "string",
-      "example": "New York"
+      "example": "Cardiff"
     },
     "region_code": {
       "type": "string",
       "pattern": "[A-Z]{3}",
-      "example": "NY"
+      "example": "CRF"
     },
     "country_code": {
       "type": "string",
       "pattern": "[A-Z]{2}",
-      "example": "US"
+      "example": "GB"
     },
     "person": {
       "type": "string",
@@ -46,7 +46,7 @@
     },
     "company": {
       "type": "string",
-      "example": "citizenM New York Times Square hotel"
+      "example": "Acme Jewelry Co."
     }
   }
 }

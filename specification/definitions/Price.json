@@ -3,7 +3,7 @@
   "properties": {
     "amount": {
       "type": "number",
-      "example": "100"
+      "example": 100
     },
     "currency": {
       "type": "string",
