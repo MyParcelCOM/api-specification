@@ -6,25 +6,25 @@
     "parameters": [
       {
         "in": "query",
-        "name": "filters[from][country_code]",
+        "name": "filter[from][country_code]",
         "type": "string",
         "description": "The country code from which the shipment is sent."
       },
       {
         "in": "query",
-        "name": "filters[from][region_code]",
+        "name": "filter[from][region_code]",
         "type": "string",
         "description": "The region code from which the shipment is sent."
       },
       {
         "in": "query",
-        "name": "filters[to][country_code]",
+        "name": "filter[to][country_code]",
         "type": "string",
         "description": "The country code to which the shipment is sent."
       },
       {
         "in": "query",
-        "name": "filters[to][region_code]",
+        "name": "filter[to][region_code]",
         "type": "string",
         "description": "The region code to which the shipment is sent."
       }

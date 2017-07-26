@@ -3,8 +3,8 @@
     "tags": [
       "Statuses"
     ],
-    "summary": "Get all the Statuses.",
-    "description": "Get all the Statuses.",
+    "summary": "Get all the statuses.",
+    "description": "Get all the statuses.",
     "responses": {
       "200": {
         "description": "Retrieved the status(es).",

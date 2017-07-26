@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "title": "API Specification",
-  "description": "This is the API reference for MyParcel.com implementing the [Swagger specification](https://swagger.io/specification). For more information visit [https://www.myparcel.com](https://www.myparcel.com).",
+  "title": "MyParcel.com API Specification",
+  "description": "**Introduction**<br>This is the API reference for MyParcel.com implementing the [Swagger specification](https://swagger.io/specification).<br>For more information visit [https://www.myparcel.com](https://www.myparcel.com).",
   "termsOfService": "https://www.myparcel.com/terms",
   "contact": {
     "name": "Tech Support",
