@@ -29,7 +29,7 @@
             "meta": {
               "type": "object",
               "properties": {
-                "total-pages": {
+                "total_pages": {
                   "type": "number",
                   "example": 13
                 }

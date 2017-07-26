@@ -87,7 +87,7 @@
                     }
                   }
                 },
-                "total-pages": {
+                "total_pages": {
                   "type": "number",
                   "example": 13
                 }
