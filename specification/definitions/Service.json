@@ -42,7 +42,7 @@
                 "self": {
                    "type": "string",
                    "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                },
+                }
               }
             },
             "data":{
@@ -68,7 +68,7 @@
                 "self": {
                    "type": "string",
                    "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                },
+                }
               }
             },
             "data":{
@@ -94,7 +94,7 @@
                 "self": {
                   "type": "string",
                   "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                },
+                }
               }
             },
             "data":{
@@ -118,11 +118,11 @@
       "properties": {
         "self": {
           "type": "string",
-          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=3&page[size]=30"
+          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         },
         "prices": {
           "type": "string",
-          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices?page[number]=3&page[size]=30"
+          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices"
         }
       }
     }
