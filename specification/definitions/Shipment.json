@@ -22,7 +22,16 @@
           "$ref": "#/definitions/Address"
         },
         "pickup": {
-          "$ref": "#/definitions/Address"
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string",
+              "example": "123456"
+            },
+            "address": {
+              "$ref": "#/definitions/Address"
+            }
+          }
         },
         "price": {
           "$ref": "../definitions/ReadOnlyPrice.json"

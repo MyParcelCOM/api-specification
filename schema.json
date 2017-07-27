@@ -31,6 +31,11 @@
       "scopes": {}
     }
   },
+  "security": [
+    {
+      "oauth2": []
+    }
+  ],
   "tags": {
     "$ref": "./specification/tags.json"
   }
