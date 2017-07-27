@@ -21,16 +21,8 @@
           "type": "string",
           "example": "123456"
         },
-        "name": {
-          "type": "string",
-          "example": "Times Square hotel"
-        },
         "address": {
           "$ref": "#/definitions/Address"
-        },
-        "phone_number": {
-          "type": "string",
-          "example": "+31 85 208 5997"
         },
         "opening_hours": {
           "type": "array",

@@ -16,9 +16,13 @@
     "attributes": {
       "type": "object",
       "properties": {
+        "carrier_code": {
+          "type": "string",
+          "example": "A01"
+        },
         "code": {
           "type": "string",
-          "example": "11213"
+          "example": "123"
         },
         "name": {
           "type": "string",

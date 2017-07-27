@@ -47,6 +47,14 @@
     "company": {
       "type": "string",
       "example": "Acme Jewelry Co."
+    },
+    "email": {
+      "type": "string",
+      "example": "john@doe.com"
+    },
+    "phone_number": {
+      "type": "string",
+      "example": "+31 234 567 890"
     }
   }
 }
