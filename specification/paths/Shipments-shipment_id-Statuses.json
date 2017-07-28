@@ -26,12 +26,6 @@
                 "$ref": "#/definitions/ShipmentStatus"
               }
             },
-            "included": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Status"
-              }
-            },
             "meta": {
               "type": "object",
               "properties": {
