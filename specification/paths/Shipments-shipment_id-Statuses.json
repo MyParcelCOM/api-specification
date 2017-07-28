@@ -23,6 +23,12 @@
             "data": {
               "type": "array",
               "items": {
+                "$ref": "#/definitions/ShipmentStatus"
+              }
+            },
+            "included": {
+              "type": "array",
+              "items": {
                 "$ref": "#/definitions/Status"
               }
             },
