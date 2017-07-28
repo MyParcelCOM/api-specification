@@ -27,7 +27,7 @@
     "oauth2": {
       "type": "oauth2",
       "flow": "application",
-      "tokenUrl": "https://$OAUTH_HOST/access_token",
+      "tokenUrl": "https://$OAUTH_HOST/access-token",
       "scopes": {}
     }
   },
