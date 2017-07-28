@@ -64,23 +64,26 @@
       {
         "name": "shipments",
         "in": "body",
-        "description": "The shipment object to be created.",
+        "description": "The shipment object(s) to be created.",
         "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "$ref": "#/definitions/Shipment"
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Shipment"
+              }
             }
           }
         }
       }
     ],
-    "summary": "Create a new shipment.",
-    "description": "Create a new shipment with the posted data.",
+    "summary": "Create new shipments.",
+    "description": "Create new shipment(s) with the posted data.",
     "responses": {
       "200": {
-        "description": "Created the shipment.",
+        "description": "Created the shipment(s).",
         "schema": {
           "type": "object",
           "properties": {
