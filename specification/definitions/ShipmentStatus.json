@@ -11,22 +11,75 @@
     },
     "type": {
       "type": "string",
-      "example": "shipment_status"
+      "example": "shipment_statuses"
     },
     "attributes": {
       "type": "object",
       "properties": {
-        "status": {
-          "type": "integer",
-          "example": 3
-        },
-        "status_last_synced": {
+        "date": {
           "type": "string",
           "example": "2017-07-13 17:30:00"
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "shipment": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "shipments"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
         },
-        "status_description": {
-          "type": "string",
-          "example": "Handed to carrier"
+        "status": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "statuses"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
         }
       }
     }
