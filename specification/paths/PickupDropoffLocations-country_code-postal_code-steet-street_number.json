@@ -19,6 +19,20 @@
         "description": "The postal code."
       },
       {
+        "in": "path",
+        "name": "street",
+        "required": true,
+        "type": "string",
+        "description": "The street."
+      },
+      {
+        "in": "path",
+        "name": "street_number",
+        "required": true,
+        "type": "string",
+        "description": "The street number."
+      },
+      {
         "in": "query",
         "name": "filter[carriers]",
         "type": "string",
