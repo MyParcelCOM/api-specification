@@ -21,7 +21,7 @@
           "example": "A01"
         },
         "code": {
-          "type": "string",
+          "type": "number",
           "example": 123
         },
         "name": {
