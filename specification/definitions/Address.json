@@ -16,7 +16,7 @@
     },
     "street_number": {
       "type": "number",
-      "example": "17"
+      "example": 17
     },
     "street_number_suffix": {
       "type": "string",
