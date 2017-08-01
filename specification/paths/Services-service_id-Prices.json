@@ -54,11 +54,11 @@
                   "type": "insurances",
                   "id":"c9ce29a4-6325-11e7-907b-a6006ad3dba0",
                   "attributes": {
-                    "amount_min": {
+                    "min": {
                       "amount": 1000,
                       "currency": "EUR"
                     },
-                    "amount_max": {
+                    "max": {
                       "amount": 5000,
                       "currency": "EUR"
                     },

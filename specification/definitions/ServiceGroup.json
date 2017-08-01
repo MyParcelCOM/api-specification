@@ -1,26 +1,35 @@
 {
   "type": "object",
-  "required": [
-    "price"
-  ],
   "properties": {
-    "weight_min": {
-      "type": "number",
-      "example": "10"
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
-    "weight_max": {
-      "type": "number",
-      "example": "20"
-    },
-    "price": {
-      "$ref": "../definitions/Price.json"
-    },
-    "step_price": {
-      "$ref": "../definitions/Price.json"
-    },
-    "step_size": {
+    "type": {
       "type": "string",
-      "example": "1"
+      "example": "weight_groups"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "weight_min": {
+          "type": "number",
+          "example": "10"
+        },
+        "weight_max": {
+          "type": "number",
+          "example": "20"
+        },
+        "price": {
+          "$ref": "../definitions/Price.json"
+        },
+        "step_price": {
+          "$ref": "../definitions/Price.json"
+        },
+        "step_size": {
+          "type": "string",
+          "example": "1"
+        }
+      }
     }
   }
 }

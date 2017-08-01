@@ -1,15 +1,24 @@
 {
   "type": "object",
-  "required": [
-    "name"
-  ],
   "properties": {
-    "name": {
-      "type": "string",
-      "example": "signature"
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
-    "price": {
-      "$ref": "../definitions/Price.json"
+    "type": {
+      "type": "string",
+      "example": "options"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "signature"
+        },
+        "price": {
+          "$ref": "../definitions/Price.json"
+        }
+      }
     }
   }
 }
