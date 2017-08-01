@@ -1,17 +1,26 @@
 {
   "type": "object",
-  "required": [
-    "price"
-  ],
   "properties": {
-    "amount_min": {
-      "$ref": "../definitions/Price.json"
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
-    "amount_max": {
-      "$ref": "../definitions/Price.json"
+    "type": {
+      "type": "string",
+      "example": "insurances"
     },
-    "price": {
-      "$ref": "../definitions/Price.json"
-    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "$ref": "../definitions/Price.json"
+        },
+        "max": {
+          "$ref": "../definitions/Price.json"
+        },
+        "price": {
+          "$ref": "../definitions/Price.json"
+        }
+      }
+    }
   }
 }

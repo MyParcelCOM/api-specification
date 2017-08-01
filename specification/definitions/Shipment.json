@@ -40,7 +40,7 @@
         "price": {
           "$ref": "../definitions/ReadOnlyPrice.json"
         },
-        "insurance_amount": {
+        "insurance": {
           "$ref": "../definitions/Price.json"
         },
         "barcode": {
