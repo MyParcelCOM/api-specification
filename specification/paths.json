@@ -14,8 +14,8 @@
   "/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/PickupDropoffLocations-country_code-postal_code.json"
   },
-  "/pickup-dropoff-locations/{country_code}/{postal_code}/{steet}/{street_number}": {
-    "$ref": "./paths/PickupDropoffLocations-country_code-postal_code-steet-street_number.json"
+  "/pickup-dropoff-locations/{country_code}/{postal_code}/{street}/{street_number}": {
+    "$ref": "./paths/PickupDropoffLocations-country_code-postal_code-street-street_number.json"
   },
   "/regions": {
     "$ref": "./paths/Regions.json"
