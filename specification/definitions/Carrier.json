@@ -3,18 +3,24 @@
   "required": [
     "id",
     "type",
-    "attributes"
+    "attributes",
+    "links"
   ],
+  "additionalProperties": false,
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
+      "pattern": "carriers",
       "example": "carriers"
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -24,6 +30,7 @@
     },
     "links": {
       "type": "object",
+      "readOnly": true,
       "properties": {
         "self": {
           "type": "string",
