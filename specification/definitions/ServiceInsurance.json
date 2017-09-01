@@ -6,6 +6,7 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^insurances$",
       "example": "insurances"
     },
     "attributes": {

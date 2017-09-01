@@ -11,27 +11,23 @@
     },
     "type": {
       "type": "string",
-      "pattern": "^statuses$",
-      "example": "statuses"
+      "pattern": "^system-messages$",
+      "example": "system-messages"
     },
     "attributes": {
       "type": "object",
       "properties": {
-        "carrier_code": {
+        "type": {
           "type": "string",
-          "example": "A01"
+          "example": "alert"
         },
-        "code": {
-          "type": "number",
-          "example": 123
-        },
-        "name": {
+        "filter": {
           "type": "string",
-          "example": "pending"
+          "example": "shipment"
         },
-        "description": {
+        "content": {
           "type": "string",
-          "example": "The shipment is created"
+          "example": "Carrier X is currently not available"
         }
       }
     }

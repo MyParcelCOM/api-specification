@@ -6,7 +6,8 @@
     },
     "type": {
       "type": "string",
-      "example": "weight_groups"
+      "pattern": "^weight-groups$",
+      "example": "weight-groups"
     },
     "attributes": {
       "type": "object",

@@ -2,6 +2,9 @@
   "Address": {
     "$ref": "./definitions/Address.json"
   },
+  "AddressAttributes": {
+    "$ref": "./definitions/AddressAttributes.json"
+  },
   "Carrier": {
     "$ref": "./definitions/Carrier.json"
   },
@@ -43,6 +46,9 @@
   },
   "Status": {
     "$ref": "./definitions/Status.json"
+  },
+  "SystemMessage": {
+    "$ref": "./definitions/SystemMessage.json"
   },
   "Webhook": {
     "$ref": "./definitions/Webhook.json"

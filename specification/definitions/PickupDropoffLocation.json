@@ -12,6 +12,7 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^pickup-dropoff-locations$",
       "example": "pickup-dropoff-locations"
     },
     "attributes": {
@@ -22,7 +23,7 @@
           "example": "123456"
         },
         "address": {
-          "$ref": "#/definitions/Address"
+          "$ref": "#/definitions/AddressAttributes"
         },
         "opening_hours": {
           "type": "array",

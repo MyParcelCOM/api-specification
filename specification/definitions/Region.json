@@ -11,6 +11,7 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^regions$",
       "example": "regions"
     },
     "attributes": {

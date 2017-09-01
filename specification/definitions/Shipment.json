@@ -10,16 +10,17 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^shipments$",
       "example": "shipments"
     },
     "attributes": {
       "type": "object",
       "properties": {
         "recipient": {
-          "$ref": "#/definitions/Address"
+          "$ref": "#/definitions/AddressAttributes"
         },
         "sender": {
-          "$ref": "#/definitions/Address"
+          "$ref": "#/definitions/AddressAttributes"
         },
         "pickup": {
           "type": "object",
@@ -29,7 +30,7 @@
               "example": "123456"
             },
             "address": {
-              "$ref": "#/definitions/Address"
+              "$ref": "#/definitions/AddressAttributes"
             }
           }
         },

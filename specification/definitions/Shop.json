@@ -12,6 +12,7 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^shops$",
       "example": "shops"
     },
     "attributes": {
@@ -22,10 +23,10 @@
           "example": "MyParcel.com"
         },
         "address_billing": {
-          "$ref": "#/definitions/Address"
+          "$ref": "#/definitions/AddressAttributes"
         },
         "address_return": {
-          "$ref": "#/definitions/Address"
+          "$ref": "#/definitions/AddressAttributes"
         }
       }
     },

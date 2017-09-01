@@ -11,7 +11,8 @@
     },
     "type": {
       "type": "string",
-      "example": "shipment_statuses"
+      "pattern": "^shipment-statuses$",
+      "example": "shipment-statuses"
     },
     "attributes": {
       "type": "object",

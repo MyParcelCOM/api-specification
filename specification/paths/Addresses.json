@@ -1,0 +1,115 @@
+{
+  "get": {
+    "tags": [
+      "Addresses"
+    ],
+    "summary": "Get all the addresses.",
+    "description": "Get all the addresses.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the address(es).",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Address"
+              }
+            },
+            "meta": {
+              "type": "object",
+              "required": [
+                "total_pages"
+              ],
+              "properties": {
+                "total_pages": {
+                  "type": "number",
+                  "example": 13
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/addresses?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/addresses?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/addresses?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/addresses?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/addresses?page[number]=13&page[size]=30"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Addresses"
+    ],
+    "parameters": [
+      {
+        "name": "addresses",
+        "in": "body",
+        "description": "The address object(s) to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Address"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "summary": "Create new addresses.",
+    "description": "Create new address(es) with the posted data.",
+    "responses": {
+      "200": {
+        "description": "Created the address(es).",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Address"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
