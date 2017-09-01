@@ -1,13 +1,13 @@
 {
   "get": {
     "tags": [
-      "SystemMessages"
+      "Addresses"
     ],
-    "summary": "Get all the system messages.",
-    "description": "Get all the system messages.",
+    "summary": "Get all the addresses.",
+    "description": "Get all the addresses.",
     "responses": {
       "200": {
-        "description": "Retrieved the system message(s).",
+        "description": "Retrieved the address(es).",
         "schema": {
           "type": "object",
           "required": [
@@ -20,7 +20,7 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/SystemMessage"
+                "$ref": "#/definitions/Address"
               }
             },
             "meta": {
@@ -45,23 +45,23 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "$base_url/system-messages?page[number]=3&page[size]=30"
+                  "example": "$base_url/addresses?page[number]=3&page[size]=30"
                 },
                 "first": {
                   "type": "string",
-                  "example": "$base_url/system-messages?page[number]=1&page[size]=30"
+                  "example": "$base_url/addresses?page[number]=1&page[size]=30"
                 },
                 "prev": {
                   "type": "string",
-                  "example": "$base_url/system-messages?page[number]=2&page[size]=30"
+                  "example": "$base_url/addresses?page[number]=2&page[size]=30"
                 },
                 "next": {
                   "type": "string",
-                  "example": "$base_url/system-messages?page[number]=4&page[size]=30"
+                  "example": "$base_url/addresses?page[number]=4&page[size]=30"
                 },
                 "last": {
                   "type": "string",
-                  "example": "$base_url/system-messages?page[number]=13&page[size]=30"
+                  "example": "$base_url/addresses?page[number]=13&page[size]=30"
                 }
               }
             }
@@ -72,13 +72,13 @@
   },
   "post": {
     "tags": [
-      "SystemMessages"
+      "Addresses"
     ],
     "parameters": [
       {
-        "name": "system-messages",
+        "name": "addresses",
         "in": "body",
-        "description": "The system message object(s) to be created.",
+        "description": "The address object(s) to be created.",
         "required": true,
         "schema": {
           "type": "object",
@@ -86,25 +86,25 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/SystemMessage"
+                "$ref": "#/definitions/Address"
               }
             }
           }
         }
       }
     ],
-    "summary": "Create new system messages.",
-    "description": "Create new system message(s) with the posted data.",
+    "summary": "Create new addresses.",
+    "description": "Create new address(es) with the posted data.",
     "responses": {
       "200": {
-        "description": "Created the system message(s).",
+        "description": "Created the address(es).",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/SystemMessage"
+                "$ref": "#/definitions/Address"
               }
             }
           }

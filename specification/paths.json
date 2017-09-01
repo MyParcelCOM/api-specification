@@ -1,4 +1,10 @@
 {
+  "/addresses": {
+    "$ref": "./paths/Addresses.json"
+  },
+  "/addresses/{address_id}": {
+    "$ref": "./paths/Addresses-address_id.json"
+  },
   "/carriers": {
     "$ref": "./paths/Carriers.json"
   },
@@ -61,6 +67,9 @@
   },
   "/system-messages": {
     "$ref": "./paths/SystemMessages.json"
+  },
+  "/system-messages/{system_message_id}": {
+    "$ref": "./paths/SystemMessages-system_message_id.json"
   },
   "/webhooks": {
     "$ref": "./paths/Webhooks.json"

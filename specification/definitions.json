@@ -2,6 +2,9 @@
   "Address": {
     "$ref": "./definitions/Address.json"
   },
+  "AddressAttributes": {
+    "$ref": "./definitions/AddressAttributes.json"
+  },
   "Carrier": {
     "$ref": "./definitions/Carrier.json"
   },

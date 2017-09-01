@@ -22,7 +22,7 @@
           "example": "123456"
         },
         "address": {
-          "$ref": "#/definitions/Address"
+          "$ref": "#/definitions/AddressAttributes"
         },
         "opening_hours": {
           "type": "array",
