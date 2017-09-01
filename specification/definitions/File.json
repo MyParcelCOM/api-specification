@@ -6,7 +6,7 @@
     },
     "type": {
       "type": "string",
-      "pattern": "files",
+      "pattern": "^files$",
       "default": "files",
       "example": "files"
     },

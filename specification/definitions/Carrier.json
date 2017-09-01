@@ -13,7 +13,7 @@
     },
     "type": {
       "type": "string",
-      "pattern": "carriers",
+      "pattern": "^carriers$",
       "example": "carriers"
     },
     "attributes": {

@@ -12,6 +12,7 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^pickup-dropoff-locations$",
       "example": "pickup-dropoff-locations"
     },
     "attributes": {

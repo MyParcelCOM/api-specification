@@ -12,6 +12,7 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^shops$",
       "example": "shops"
     },
     "attributes": {

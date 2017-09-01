@@ -6,6 +6,7 @@
     },
     "type": {
       "type": "string",
+      "pattern": "^options$",
       "example": "options"
     },
     "attributes": {
