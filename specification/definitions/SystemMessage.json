@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "attributes"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "../definitions/Uuid.json"
+    },
+    "type": {
+      "type": "string",
+      "example": "system-messages"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "alert"
+        },
+        "filter": {
+          "type": "string",
+          "example": "shipment"
+        },
+        "content": {
+          "type": "string",
+          "example": "Carrier X is currently not available"
+        }
+      }
+    }
+  }
+}

@@ -59,6 +59,9 @@
   "/statuses/{status_id}": {
     "$ref": "./paths/Statuses-status_id.json"
   },
+  "/system-messages": {
+    "$ref": "./paths/SystemMessages.json"
+  },
   "/webhooks": {
     "$ref": "./paths/Webhooks.json"
   },

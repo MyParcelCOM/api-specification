@@ -44,6 +44,9 @@
   "Status": {
     "$ref": "./definitions/Status.json"
   },
+  "SystemMessage": {
+    "$ref": "./definitions/SystemMessage.json"
+  },
   "Webhook": {
     "$ref": "./definitions/Webhook.json"
   },
