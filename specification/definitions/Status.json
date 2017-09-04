@@ -1,13 +1,13 @@
 {
   "type": "object",
   "required": [
-    "id",
     "type",
     "attributes"
   ],
+  "additionalProperties": false,
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
@@ -16,6 +16,13 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "carrier_code",
+        "code",
+        "name",
+        "description"
+      ],
+      "additionalProperties": false,
       "properties": {
         "carrier_code": {
           "type": "string",

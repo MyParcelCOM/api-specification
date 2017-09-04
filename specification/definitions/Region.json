@@ -1,13 +1,13 @@
 {
   "type": "object",
   "required": [
-    "id",
     "type",
     "attributes"
   ],
+  "additionalProperties": false,
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
@@ -16,6 +16,12 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "country_code",
+        "currency",
+        "name"
+      ],
+      "additionalProperties": false,
       "properties": {
         "country_code": {
           "type": "string",
@@ -32,6 +38,9 @@
         "name": {
           "type": "string",
           "example": "The Netherlands"
+        },
+        "parent_id": {
+          "$ref": "../definitions/Uuid.json"
         }
       }
     }

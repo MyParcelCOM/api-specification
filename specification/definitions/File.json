@@ -1,17 +1,26 @@
 {
   "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
       "pattern": "^files$",
-      "default": "files",
       "example": "files"
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "resource_type",
+        "formats"
+      ],
+      "additionalProperties": false,
       "properties": {
         "resource_type": {
           "type": "string",
@@ -26,6 +35,11 @@
           "type": "array",
           "items": {
             "type": "object",
+            "required": [
+              "extension",
+              "mime_type"
+            ],
+            "additionalProperties": false,
             "properties": {
               "extension": {
                 "type": "string",
@@ -48,6 +62,7 @@
       }
     },
     "links": {
+      "readOnly": true,
       "type": "object",
       "properties": {
         "self": {

@@ -1,13 +1,13 @@
 {
   "type": "object",
   "required": [
-    "id",
     "type",
     "attributes"
   ],
+  "additionalProperties": false,
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
@@ -16,6 +16,12 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "type",
+        "filter",
+        "content"
+      ],
+      "additionalProperties": false,
       "properties": {
         "type": {
           "type": "string",

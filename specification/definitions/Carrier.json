@@ -1,10 +1,8 @@
 {
   "type": "object",
   "required": [
-    "id",
     "type",
-    "attributes",
-    "links"
+    "attributes"
   ],
   "additionalProperties": false,
   "properties": {
@@ -21,6 +19,7 @@
       "required": [
         "name"
       ],
+      "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string",
@@ -29,8 +28,8 @@
       }
     },
     "links": {
-      "type": "object",
       "readOnly": true,
+      "type": "object",
       "properties": {
         "self": {
           "type": "string",

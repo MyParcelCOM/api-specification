@@ -1,6 +1,11 @@
 {
   "readOnly": true,
   "type": "object",
+  "required": [
+    "amount",
+    "currency"
+  ],
+  "additionalProperties": false,
   "properties": {
     "amount": {
       "type": "number",

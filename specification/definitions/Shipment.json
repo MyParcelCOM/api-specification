@@ -2,7 +2,8 @@
   "type": "object",
   "required": [
     "type",
-    "attributes"
+    "attributes",
+    "relationships"
   ],
   "properties": {
     "id": {
@@ -15,6 +16,11 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "recipient",
+        "weight"
+      ],
+      "additionalProperties": false,
       "properties": {
         "recipient": {
           "$ref": "#/definitions/AddressAttributes"
@@ -45,8 +51,9 @@
           "$ref": "../definitions/Price.json"
         },
         "barcode": {
+          "readOnly": true,
           "type": "string",
-          "example": "3SOPKA3074023"
+          "example": "3SABCD0123456789"
         },
         "weight": {
           "type": "number",

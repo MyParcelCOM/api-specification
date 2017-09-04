@@ -1,14 +1,14 @@
 {
   "type": "object",
   "required": [
-    "id",
     "type",
     "attributes",
     "relationships"
   ],
+  "additionalProperties": false,
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
@@ -17,12 +17,18 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "name",
+        "package_type",
+        "default_insured_amount"
+      ],
+      "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string",
           "example": "Parcel to Parcelshop"
         },
-        "parcel_type": {
+        "package_type": {
           "type": "string",
           "example": "parcel"
         },
@@ -115,6 +121,7 @@
       }
     },
     "links": {
+      "readOnly": true,
       "type": "object",
       "properties": {
         "self": {
