@@ -3,7 +3,7 @@
     "tags": [
       "Addresses"
     ],
-    "summary": "Retrieve addresses by id.",
+    "summary": "Get addresses by id.",
     "description": "This endpoint retrieves the address with the supplied id. A comma separated list of ids can be supplied to retrieve multiple addresses.",
     "parameters": [
       {
@@ -83,7 +83,7 @@
     "tags": [
       "Addresses"
     ],
-    "summary": "Delete an address by id.",
+    "summary": "Delete addresses by id.",
     "description": "This endpoint deletes the address with supplied id. A comma separated list of ids can be supplied to delete multiple addresses.",
     "parameters": [
       {

@@ -4,7 +4,7 @@
       "Addresses"
     ],
     "summary": "Get all the addresses.",
-    "description": "Get all the addresses.",
+    "description": "This endpoint retrieves addresses.",
     "responses": {
       "200": {
         "description": "Retrieved the address(es).",
@@ -74,6 +74,8 @@
     "tags": [
       "Addresses"
     ],
+    "summary": "Create new addresses.",
+    "description": "This endpoint creates new address(es) with the posted data.",
     "parameters": [
       {
         "name": "addresses",
@@ -93,13 +95,15 @@
         }
       }
     ],
-    "summary": "Create new addresses.",
-    "description": "Create new address(es) with the posted data.",
     "responses": {
       "200": {
         "description": "Created the address(es).",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",

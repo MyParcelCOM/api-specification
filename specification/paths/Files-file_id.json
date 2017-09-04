@@ -3,6 +3,8 @@
     "tags": [
       "Files"
     ],
+    "summary": "Get files by id.",
+    "description": "This endpoint retrieves the file with the supplied id. A comma separated list of ids can be supplied to retrieve multiple files.",
     "parameters": [
       {
         "in": "path",
@@ -45,7 +47,7 @@
           "bottom-left",
           "bottom-right"
         ],
-        "description": "This filter only applies when requesting mulitple files with the Accept header set to \"application/pdf\" and the page size set to A4. It determines the position of the file on the first page."
+        "description": "This filter only applies when requesting multiple files with the Accept header set to \"application/pdf\" and the page size set to A4. It determines the position of the file on the first page."
       }
     ],
     "produces": [
@@ -53,13 +55,17 @@
       "application/pdf",
       "image/png"
     ],
-    "summary": "Retrieve files by id.",
-    "description": "",
     "responses": {
       "200": {
         "description": "Retrieved the file(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -69,6 +75,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -78,6 +87,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",

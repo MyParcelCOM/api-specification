@@ -4,7 +4,7 @@
       "SystemMessages"
     ],
     "summary": "Get all the system messages.",
-    "description": "Get all the system messages.",
+    "description": "This endpoint retrieves system messages.",
     "responses": {
       "200": {
         "description": "Retrieved the system message(s).",
@@ -74,6 +74,8 @@
     "tags": [
       "SystemMessages"
     ],
+    "summary": "Create new system messages.",
+    "description": "This endpoint creates new system message(s) with the posted data.",
     "parameters": [
       {
         "name": "system-messages",
@@ -93,13 +95,15 @@
         }
       }
     ],
-    "summary": "Create new system messages.",
-    "description": "Create new system message(s) with the posted data.",
     "responses": {
       "200": {
         "description": "Created the system message(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",

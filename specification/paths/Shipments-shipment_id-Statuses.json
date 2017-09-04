@@ -3,8 +3,8 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "Get all the statuses for the supplied shipments.",
-    "description": "Get all the statuses for the supplied shipments.",
+    "summary": "Get all the statuses from a shipment.",
+    "description": "This endpoint retrieves statuses for the supplied shipments.",
     "parameters": [
       {
         "in": "path",
@@ -19,6 +19,12 @@
         "description": "Retrieved the status(es).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -28,6 +34,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -37,6 +46,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",

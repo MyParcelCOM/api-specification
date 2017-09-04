@@ -3,7 +3,7 @@
     "tags": [
       "Statuses"
     ],
-    "summary": "Retrieve statuses by id.",
+    "summary": "Get statuses by id.",
     "description": "This endpoint retrieves the status with supplied id. A comma separated list of ids can be supplied to retrieve multiple statuses.",
     "parameters": [
       {
@@ -19,6 +19,12 @@
         "description": "Retrieved the status(es).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -28,6 +34,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -37,6 +46,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",

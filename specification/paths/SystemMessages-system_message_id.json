@@ -3,6 +3,8 @@
     "tags": [
       "SystemMessages"
     ],
+    "summary": "Get system messages by id.",
+    "description": "This endpoint retrieves the system message with supplied id. A comma separated list of ids can be supplied to retrieve multiple system messages.",
     "parameters": [
       {
         "in": "path",
@@ -12,13 +14,17 @@
         "description": "Id or comma separated list of ids of the system message(s)."
       }
     ],
-    "summary": "Get all the system messages.",
-    "description": "Get all the system messages.",
     "responses": {
       "200": {
         "description": "Retrieved the system message(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -28,6 +34,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -37,6 +46,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",
@@ -69,7 +83,7 @@
     "tags": [
       "SystemMessages"
     ],
-    "summary": "Delete a system message by id.",
+    "summary": "Delete system messages by id.",
     "description": "This endpoint deletes the system message with supplied id. A comma separated list of ids can be supplied to delete multiple system messages.",
     "parameters": [
       {
