@@ -3,8 +3,8 @@
     "tags": [
       "Shops"
     ],
-    "summary": "Get webhooks from a shop by id.",
-    "description": "This endpoint retrieves the webhook with supplied id. A comma separated list of ids can be supplied to retrieves multiple webhooks.",
+    "summary": "Get webhook subscriptions by id.",
+    "description": "This endpoint retrieves the webhook subscription with supplied id. A comma separated list of ids can be supplied to retrieves multiple webhook subscriptions.",
     "parameters": [
       {
         "in": "path",
@@ -26,6 +26,12 @@
         "description": "Retrieved the webhook subscription(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -35,6 +41,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -44,6 +53,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",
@@ -76,8 +90,8 @@
     "tags": [
       "Shops"
     ],
-    "summary": "Delete webhooks by id.",
-    "description": "This endpoint deletes the webhook with supplied id. A comma separated list of ids can be supplied to delete multiple webhooks.",
+    "summary": "Delete webhook subscriptions by id.",
+    "description": "This endpoint deletes the webhook subscription with supplied id. A comma separated list of ids can be supplied to delete multiple webhook subscriptions.",
     "parameters": [
       {
         "in": "path",

@@ -3,6 +3,8 @@
     "tags": [
       "PickupDropoffLocations"
     ],
+    "summary": "Get all the pickup and dropoff locations.",
+    "description": "This endpoint retrieves pickup and dropoff locations.",
     "parameters": [
       {
         "in": "path",
@@ -39,13 +41,17 @@
         "description": "The carrier id(s)."
       }
     ],
-    "summary": "Get all the pickup and dropoff locations.",
-    "description": "",
     "responses": {
       "200": {
         "description": "Retrieved the location(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -55,6 +61,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "errors": {
                   "type": "object",
@@ -65,7 +74,7 @@
                     },
                     "title": {
                       "type": "string",
-                      "example": "cannot retrieve carrier locations"
+                      "example": "Unable to retrieve carrier locations"
                     },
                     "detail": {
                       "type": "string",
@@ -91,6 +100,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",

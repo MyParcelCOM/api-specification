@@ -4,12 +4,18 @@
       "Statuses"
     ],
     "summary": "Get all the statuses.",
-    "description": "Get all the statuses.",
+    "description": "This endpoint retrieves statuses.",
     "responses": {
       "200": {
         "description": "Retrieved the status(es).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -19,6 +25,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -28,6 +37,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",

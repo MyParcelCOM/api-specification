@@ -3,6 +3,8 @@
     "tags": [
       "Carriers"
     ],
+    "summary": "Get all the services from a carrier.",
+    "description": "This endpoint retrieves services for the supplied carriers.",
     "parameters": [
       {
         "in": "path",
@@ -36,13 +38,17 @@
         "description": "The to region code."
       }
     ],
-    "summary": "Get all the services.",
-    "description": "Get all the services.",
     "responses": {
       "200": {
         "description": "Retrieved the service(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -52,6 +58,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -61,6 +70,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",

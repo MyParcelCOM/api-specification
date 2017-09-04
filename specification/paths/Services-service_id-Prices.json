@@ -3,24 +3,35 @@
     "tags": [
       "Services"
     ],
-    "summary": "Get all the prices.",
-    "description": "Get all the prices.",
+    "summary": "Get all the prices from a service.",
+    "description": "This endpoint retrieves prices for the supplied services.",
     "parameters": [
       {
         "in": "path",
         "name": "service_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of id's of the service(s)."
+        "description": "Id or comma separated list of ids of the service(s)."
       }
     ],
     "responses": {
       "200": {
-        "description": "This are the service groups, insurances and options",
+        "description": "Retrieved the service groups, insurances and options",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "The service groups, insurances and options"
+              },
               "example": [
                 {
                   "type": "weight_groups",
@@ -68,15 +79,13 @@
                     }
                   }
                 }
-              ],
-              "type": "array",
-              "items": {
-                "type": "object",
-                "description": "This are the service groups, insurances and options"
-              }
+              ]
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -86,6 +95,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",

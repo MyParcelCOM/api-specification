@@ -3,7 +3,7 @@
     "tags": [
       "Carriers"
     ],
-    "summary": "Retrieve carriers by id.",
+    "summary": "Get carriers by id.",
     "description": "This endpoint retrieves the carrier with the supplied id. A comma separated list of ids can be supplied to retrieve multiple carriers.",
     "parameters": [
       {

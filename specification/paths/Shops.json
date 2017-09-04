@@ -4,7 +4,7 @@
       "Shops"
     ],
     "summary": "Get all the shops.",
-    "description": "Get all the shops.",
+    "description": "This endpoint retrieves shops.",
     "responses": {
       "200": {
         "description": "Retrieved the shop(s).",

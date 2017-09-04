@@ -4,12 +4,18 @@
       "Shipments"
     ],
     "summary": "Get all the shipments.",
-    "description": "Get all the shipments.",
+    "description": "This endpoint retrieves shipments.",
     "responses": {
       "200": {
         "description": "Retrieved the shipment(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -19,6 +25,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -28,6 +37,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",
@@ -60,6 +74,8 @@
     "tags": [
       "Shipments"
     ],
+    "summary": "Create new shipments.",
+    "description": "This endpoint creates new shipment(s) with the posted data.",
     "parameters": [
       {
         "name": "shipments",
@@ -79,13 +95,15 @@
         }
       }
     ],
-    "summary": "Create new shipments.",
-    "description": "Create new shipment(s) with the posted data.",
     "responses": {
       "200": {
         "description": "Created the shipment(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",

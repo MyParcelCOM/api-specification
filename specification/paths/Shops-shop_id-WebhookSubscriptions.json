@@ -3,8 +3,8 @@
     "tags": [
       "Shops"
     ],
-    "summary": "Get all the webhooks from a shop.",
-    "description": "Get all the webhooks from a shop.",
+    "summary": "Get all the webhook subscriptions from a shop.",
+    "description": "This endpoint retrieves webhook subscriptions for the supplied shops.",
     "parameters": [
       {
         "in": "path",
@@ -16,9 +16,15 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the webhook(s).",
+        "description": "Retrieved the webhook subscription(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -28,6 +34,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -37,6 +46,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",
@@ -69,6 +83,8 @@
     "tags": [
       "Shops"
     ],
+    "summary": "Create new webhook subscriptions.",
+    "description": "This endpoint creates new webhook subscription(s) with the posted data.",
     "parameters": [
       {
         "in": "path",
@@ -95,13 +111,15 @@
         }
       }
     ],
-    "summary": "Create new webhook subscriptions.",
-    "description": "Create new webhook subscription(s) with the posted data.",
     "responses": {
       "200": {
-        "description": "Create a new webhook.",
+        "description": "Created the webhook subscription(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",

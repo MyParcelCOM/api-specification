@@ -3,6 +3,8 @@
     "tags": [
       "Services"
     ],
+    "summary": "Get all the services.",
+    "description": "This endpoint retrieves services.",
     "parameters": [
       {
         "in": "query",
@@ -29,13 +31,17 @@
         "description": "The region code to which the shipment is sent."
       }
     ],
-    "summary": "Get all the services.",
-    "description": "Get all the services.",
     "responses": {
       "200": {
         "description": "Retrieved the service(s).",
         "schema": {
           "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -45,6 +51,9 @@
             },
             "meta": {
               "type": "object",
+              "required": [
+                "total_pages"
+              ],
               "properties": {
                 "total_pages": {
                   "type": "number",
@@ -54,6 +63,11 @@
             },
             "links": {
               "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
               "properties": {
                 "self": {
                   "type": "string",
