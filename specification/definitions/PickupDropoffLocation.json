@@ -1,14 +1,14 @@
 {
   "type": "object",
   "required": [
-    "id",
     "type",
     "attributes",
     "relationships"
   ],
+  "additionalProperties": false,
   "properties": {
     "id": {
-      "$ref": "../definitions/Uuid.json"
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
       "type": "string",
@@ -17,6 +17,11 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "code",
+        "address"
+      ],
+      "additionalProperties": false,
       "properties": {
         "code": {
           "type": "string",

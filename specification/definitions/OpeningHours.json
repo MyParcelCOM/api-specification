@@ -5,6 +5,7 @@
     "open",
     "closed"
   ],
+  "additionalProperties": false,
   "properties": {
     "day": {
       "type": "string",

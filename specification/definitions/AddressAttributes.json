@@ -5,6 +5,7 @@
     "city",
     "country_code"
   ],
+  "additionalProperties": false,
   "properties": {
     "street_1": {
       "type": "string",

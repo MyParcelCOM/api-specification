@@ -4,6 +4,7 @@
     "type",
     "attributes"
   ],
+  "additionalProperties": false,
   "properties": {
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
@@ -15,6 +16,11 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "name",
+        "description"
+      ],
+      "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string",

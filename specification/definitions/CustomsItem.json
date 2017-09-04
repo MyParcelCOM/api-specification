@@ -1,5 +1,10 @@
 {
   "type": "object",
+  "required": [
+    "contents",
+    "items"
+  ],
+  "additionalProperties": false,
   "properties": {
     "contents": {
       "type": "string",
@@ -13,6 +18,13 @@
       "type": "array",
       "items": {
         "type": "object",
+        "required": [
+          "description",
+          "amount",
+          "weight",
+          "value"
+        ],
+        "additionalProperties": false,
         "properties": {
           "description": {
             "type": "string",

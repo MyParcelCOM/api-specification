@@ -4,6 +4,7 @@
     "latitude",
     "longitude"
   ],
+  "additionalProperties": false,
   "properties": {
     "latitude": {
       "type": "number",
