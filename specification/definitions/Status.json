@@ -17,17 +17,12 @@
     "attributes": {
       "type": "object",
       "required": [
-        "carrier_code",
         "code",
         "name",
         "description"
       ],
       "additionalProperties": false,
       "properties": {
-        "carrier_code": {
-          "type": "string",
-          "example": "A01"
-        },
         "code": {
           "type": "number",
           "example": 123
@@ -39,6 +34,18 @@
         "description": {
           "type": "string",
           "example": "The shipment is created"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }
