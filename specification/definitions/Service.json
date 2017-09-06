@@ -20,7 +20,7 @@
       "required": [
         "name",
         "package_type",
-        "default_insured_amount"
+        "default_insurance"
       ],
       "additionalProperties": false,
       "properties": {
@@ -32,7 +32,7 @@
           "type": "string",
           "example": "parcel"
         },
-        "default_insured_amount": {
+        "default_insurance": {
           "$ref": "../definitions/Price.json"
         }
       }

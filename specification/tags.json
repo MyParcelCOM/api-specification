@@ -40,6 +40,10 @@
     "description": ""
   },
   {
+    "name": "Users",
+    "description": ""
+  },
+  {
     "name": "Webhooks",
     "description": ""
   }

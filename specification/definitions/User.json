@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
+    },
+    "type": {
+      "type": "string",
+      "pattern": "^users$",
+      "example": "users"
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "username",
+        "email"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "johndoe"
+        },
+        "email": {
+          "type": "string",
+          "example": "john@doe.com"
+        },
+        "status": {
+          "type": "string",
+          "example": "active"
+        }
+      }
+    }
+  }
+}
