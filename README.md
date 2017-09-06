@@ -2,7 +2,7 @@
 
 This repository describes the API specification used by MyParcel.com. The specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.
 
-[![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/api-specification/swagger.json.svg)]()
+[![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/api-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/api-specification/swagger.json)
 
 ## TODO:
 - [x] Test Docker setup on Linux.

@@ -50,6 +50,9 @@
   "SystemMessage": {
     "$ref": "./definitions/SystemMessage.json"
   },
+  "User": {
+    "$ref": "./definitions/User.json"
+  },
   "Webhook": {
     "$ref": "./definitions/Webhook.json"
   },

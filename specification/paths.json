@@ -71,6 +71,12 @@
   "/system-messages/{system_message_id}": {
     "$ref": "./paths/SystemMessages-system_message_id.json"
   },
+  "/users": {
+    "$ref": "./paths/Users.json"
+  },
+  "/users/{user_id}": {
+    "$ref": "./paths/Users-user_id.json"
+  },
   "/webhooks": {
     "$ref": "./paths/Webhooks.json"
   },

@@ -92,22 +92,13 @@
           }
         },
         "created": {
-          "readOnly": true,
-          "type": "string",
-          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
-          "example": "2015-02-14 17:12:48"
+          "$ref": "../definitions/ReadOnlyDateTime.json"
         },
         "modified": {
-          "readOnly": true,
-          "type": "string",
-          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
-          "example": "2015-02-14 17:12:48"
+          "$ref": "../definitions/ReadOnlyDateTime.json"
         },
         "status_last_synced": {
-          "readOnly": true,
-          "type": "string",
-          "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}",
-          "example": "2015-02-14 17:12:48"
+          "$ref": "../definitions/ReadOnlyDateTime.json"
         }
       }
     },
