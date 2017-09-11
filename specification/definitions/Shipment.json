@@ -91,14 +91,14 @@
             "$ref": "../definitions/CustomsItem.json"
           }
         },
-        "created": {
-          "$ref": "../definitions/ReadOnlyDateTime.json"
+        "created_at": {
+          "$ref": "../definitions/ReadOnlyTimestamp.json"
         },
-        "modified": {
-          "$ref": "../definitions/ReadOnlyDateTime.json"
+        "updated_at": {
+          "$ref": "../definitions/ReadOnlyTimestamp.json"
         },
-        "status_last_synced": {
-          "$ref": "../definitions/ReadOnlyDateTime.json"
+        "synced_at": {
+          "$ref": "../definitions/ReadOnlyTimestamp.json"
         }
       }
     },
