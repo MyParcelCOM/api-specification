@@ -18,14 +18,13 @@
       "type": "object",
       "required": [
         "type",
-        "filter",
         "content"
       ],
       "additionalProperties": false,
       "properties": {
         "type": {
           "type": "string",
-          "example": "alert"
+          "example": "info"
         },
         "filter": {
           "type": "string",
@@ -33,7 +32,7 @@
         },
         "content": {
           "type": "string",
-          "example": "Carrier X is currently not available"
+          "example": "Information regarding shipments"
         }
       }
     }
