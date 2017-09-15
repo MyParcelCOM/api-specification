@@ -29,10 +29,12 @@ if [ $# -gt 0 ]; then
 
     ${COMPOSE} run --rm bundler ash -c "mkdir -p /opt/dist && json-refs resolve schema.json -f > /opt/spec/dist/swagger.json"
 
+    # On Linux fix permissions for the dist folder.
     if [ "$(uname -s)" == "Linux" ]; then
       ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
     fi
 
+    # Replace environment variables.
     ${COMPOSE} run --rm bundler sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" //opt/spec/dist/swagger.json
     ${COMPOSE} run --rm bundler sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" //opt/spec/dist/swagger.json
     ${COMPOSE} run --rm bundler sed -i "s/\\\$OAUTH_HOST/${OAUTH_HOST}/" //opt/spec/dist/swagger.json
