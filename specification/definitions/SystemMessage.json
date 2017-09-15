@@ -24,6 +24,12 @@
       "properties": {
         "type": {
           "type": "string",
+          "enum": [
+            "info",
+            "success",
+            "warning",
+            "error"
+          ],
           "example": "info"
         },
         "filter": {

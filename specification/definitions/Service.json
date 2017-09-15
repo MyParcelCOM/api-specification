@@ -30,6 +30,11 @@
         },
         "package_type": {
           "type": "string",
+          "enum": [
+            "parcel",
+            "letter",
+            "letterbox"
+          ],
           "example": "parcel"
         },
         "default_insurance": {
@@ -47,12 +52,12 @@
               "type": "object",
               "properties": {
                 "self": {
-                   "type": "string",
-                   "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             },
-            "data":{
+            "data": {
               "type": "object",
               "properties": {
                 "id": {
@@ -73,12 +78,12 @@
               "type": "object",
               "properties": {
                 "self": {
-                   "type": "string",
-                   "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "type": "string",
+                  "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             },
-            "data":{
+            "data": {
               "type": "object",
               "properties": {
                 "id": {
@@ -104,7 +109,7 @@
                 }
               }
             },
-            "data":{
+            "data": {
               "type": "object",
               "properties": {
                 "id": {

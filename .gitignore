@@ -1,4 +1,4 @@
-/.idea
 /.env
+/.idea
 /dist/*
 !/dist/.gitkeep

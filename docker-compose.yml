@@ -5,13 +5,13 @@ services:
     build:
       context: ./docker/json-bundler
       dockerfile: Dockerfile
-    image: myparcel.com/json-bundler
+    image: myparcelcom/json-bundler
     working_dir: /opt/spec
     volumes:
-    - .:/opt/spec
+      - .:/opt/spec
 
   validator:
     image: swaggerapi/swagger-validator
     working_dir: /opt/spec
     volumes:
-    - ./dist:/opt/spec
+      - ./dist:/opt/spec

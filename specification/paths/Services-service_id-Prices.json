@@ -63,7 +63,7 @@
                 },
                 {
                   "type": "insurances",
-                  "id":"c9ce29a4-6325-11e7-907b-a6006ad3dba0",
+                  "id": "c9ce29a4-6325-11e7-907b-a6006ad3dba0",
                   "attributes": {
                     "min": {
                       "amount": 1000,

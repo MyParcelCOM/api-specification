@@ -29,6 +29,11 @@
         },
         "name": {
           "type": "string",
+          "enum": [
+            "pending",
+            "success",
+            "failed"
+          ],
           "example": "pending"
         },
         "description": {
