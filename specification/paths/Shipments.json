@@ -100,10 +100,6 @@
         "description": "Created the shipment(s).",
         "schema": {
           "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",

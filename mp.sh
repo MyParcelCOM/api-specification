@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -eo pipefail
 
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 COMPOSE="docker-compose"
@@ -6,10 +7,9 @@ COMPOSE="docker-compose"
 # Check if the file with environment variables exists, otherwise copy the default file.
 if [ ! -f ${ROOT_DIR}/.env ]; then
   if [ ! -f ${ROOT_DIR}/.env.dist ]; then
-    >&2 echo 'Unable to locate .env or .env.dist file'
+    >&2 echo "Unable to locate .env or .env.dist file"
     exit 1
   fi
-
   cp ${ROOT_DIR}/.env.dist ${ROOT_DIR}/.env
 
   # Add current user and group to .env file, with root as fallback.
@@ -19,15 +19,6 @@ fi
 export $(cat ${ROOT_DIR}/.env | xargs)
 
 if [ $# -gt 0 ]; then
-  # Check if services are running.
-  RUNNING=$(${COMPOSE} ps -q)
-
-  # Either run or exec based on RUNNING var.
-  DO="run --rm"
-  if [ "${RUNNING}" != "" ]; then
-    DO="exec"
-  fi
-
   # Start services.
   if [ "$1" == "up" ]; then
     ${COMPOSE} up -d
@@ -36,8 +27,7 @@ if [ $# -gt 0 ]; then
   elif [ "$1" == "bundle" ]; then
     echo "Bundling spec into a single file..."
 
-    ${COMPOSE} run --rm bundler ash -c \
-    "mkdir -p /opt/dist && json-refs resolve schema.json -f > /opt/spec/dist/swagger.json"
+    ${COMPOSE} run --rm bundler ash -c "mkdir -p /opt/dist && json-refs resolve schema.json -f > /opt/spec/dist/swagger.json"
 
     # On Linux fix permissions for the dist folder.
     if [ "$(uname -s)" == "Linux" ]; then
@@ -48,20 +38,14 @@ if [ $# -gt 0 ]; then
     ${COMPOSE} run --rm bundler sed -i "s/\\\$SANDBOX_HOST/${SANDBOX_HOST}/" //opt/spec/dist/swagger.json
     ${COMPOSE} run --rm bundler sed -i "s/\\\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/" //opt/spec/dist/swagger.json
     ${COMPOSE} run --rm bundler sed -i "s/\\\$OAUTH_HOST/${OAUTH_HOST}/" //opt/spec/dist/swagger.json
-
-    # Replace the base url variable with the actual base url
     ${COMPOSE} run --rm bundler sed -i "s/\\\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/" //opt/spec/dist/swagger.json
 
   # Rebuild the spec and validate it.
   elif [ "$1" == "validate" ]; then
     ./mp.sh bundle
-
     echo "Validating spec..."
 
-    MESSAGES=$(${COMPOSE} ${DO} validator \
-    curl -X POST -d @swagger.json \
-    -H 'Content-Type:application/json' \
-    http://localhost:8080/debug)
+    MESSAGES=$(${COMPOSE} exec validator curl -X POST -d @swagger.json -H 'Content-Type:application/json' http://localhost:8080/debug)
 
     if [ "${MESSAGES}" == "{}" ]; then
         echo -e "\033[0;32mValid!\033[0m"

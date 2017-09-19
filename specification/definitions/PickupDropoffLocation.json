@@ -49,7 +49,7 @@
         "carrier": {
           "type": "object",
           "properties": {
-            "data":{
+            "data": {
               "type": "object",
               "properties": {
                 "id": {

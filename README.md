@@ -1,7 +1,9 @@
 # MyParcel.com API specification
 
-This repository describes the API specification used by MyParcel.com. The specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.
+Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification).
+This specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.0.
 
+[![GitHub release](https://img.shields.io/github/release/MyParcelCOM/api-specification/all.svg)](https://github.com/MyParcelCOM/api-specification)
 [![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/api-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/api-specification/swagger.json)
 
 ## TODO:

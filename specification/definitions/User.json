@@ -32,6 +32,11 @@
         },
         "status": {
           "type": "string",
+          "enum": [
+            "pending",
+            "active",
+            "blocked"
+          ],
           "example": "active"
         }
       }
