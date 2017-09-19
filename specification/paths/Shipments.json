@@ -74,22 +74,19 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "Create new shipments.",
-    "description": "This endpoint creates new shipment(s) with the posted data.",
+    "summary": "Create a new shipment.",
+    "description": "This endpoint creates a new shipment with the posted data.",
     "parameters": [
       {
-        "name": "shipments",
+        "name": "shipment",
         "in": "body",
-        "description": "The shipment object(s) to be created.",
+        "description": "The shipment object to be created.",
         "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Shipment"
-              }
+              "$ref": "#/definitions/Shipment"
             }
           }
         }
@@ -97,15 +94,12 @@
     ],
     "responses": {
       "200": {
-        "description": "Created the shipment(s).",
+        "description": "Created the shipment.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Shipment"
-              }
+              "$ref": "#/definitions/Shipment"
             }
           }
         }

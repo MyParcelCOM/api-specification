@@ -74,22 +74,19 @@
     "tags": [
       "Addresses"
     ],
-    "summary": "Create new addresses.",
-    "description": "This endpoint creates new address(es) with the posted data.",
+    "summary": "Create a new address.",
+    "description": "This endpoint creates a new address with the posted data.",
     "parameters": [
       {
-        "name": "addresses",
         "in": "body",
-        "description": "The address object(s) to be created.",
+        "name": "address",
+        "description": "The address object to be created.",
         "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Address"
-              }
+              "$ref": "#/definitions/Address"
             }
           }
         }
@@ -97,15 +94,12 @@
     ],
     "responses": {
       "200": {
-        "description": "Created the address(es).",
+        "description": "Created the address.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Address"
-              }
+              "$ref": "#/definitions/Address"
             }
           }
         }

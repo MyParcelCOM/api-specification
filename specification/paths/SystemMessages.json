@@ -74,22 +74,19 @@
     "tags": [
       "SystemMessages"
     ],
-    "summary": "Create new system messages.",
-    "description": "This endpoint creates new system message(s) with the posted data.",
+    "summary": "Create a new system message.",
+    "description": "This endpoint creates a new system message with the posted data.",
     "parameters": [
       {
-        "name": "system-messages",
         "in": "body",
-        "description": "The system message object(s) to be created.",
+        "name": "system-message",
+        "description": "The system message object to be created.",
         "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SystemMessage"
-              }
+              "$ref": "#/definitions/SystemMessage"
             }
           }
         }
@@ -97,15 +94,12 @@
     ],
     "responses": {
       "200": {
-        "description": "Created the system message(s).",
+        "description": "Created the system message.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SystemMessage"
-              }
+              "$ref": "#/definitions/SystemMessage"
             }
           }
         }

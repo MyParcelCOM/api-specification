@@ -74,22 +74,19 @@
     "tags": [
       "Users"
     ],
-    "summary": "Create new users.",
-    "description": "This endpoint creates new user(s) with the posted data.",
+    "summary": "Create a new user.",
+    "description": "This endpoint creates a new user with the posted data.",
     "parameters": [
       {
-        "name": "users",
         "in": "body",
-        "description": "The user object(s) to be created.",
+        "name": "user",
+        "description": "The user object to be created.",
         "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/User"
-              }
+              "$ref": "#/definitions/User"
             }
           }
         }
@@ -97,15 +94,12 @@
     ],
     "responses": {
       "200": {
-        "description": "Created the user(s).",
+        "description": "Created the user.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/User"
-              }
+              "$ref": "#/definitions/User"
             }
           }
         }

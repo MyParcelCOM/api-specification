@@ -83,23 +83,23 @@
     "tags": [
       "SystemMessages"
     ],
-    "summary": "Delete system messages by id.",
-    "description": "This endpoint deletes the system message with supplied id. A comma separated list of ids can be supplied to delete multiple system messages.",
+    "summary": "Delete a system message by id.",
+    "description": "This endpoint deletes the system message with supplied id.",
     "parameters": [
       {
         "in": "path",
         "name": "system_message_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of ids of the system message(s)."
+        "description": "Id of the system message."
       }
     ],
     "responses": {
       "202": {
-        "description": "The system message(s) will be deleted."
+        "description": "The system message will be deleted."
       },
       "204": {
-        "description": "The system message(s) are deleted."
+        "description": "The system message is deleted."
       }
     }
   }
