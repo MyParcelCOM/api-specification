@@ -7,13 +7,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/Service.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^services$",
-      "example": "services"
     },
     "attributes": {
       "type": "object",
@@ -60,12 +58,11 @@
             "data": {
               "type": "object",
               "properties": {
+                "type": {
+                  "$ref": "../types/Carrier.json"
+                },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
-                },
-                "type": {
-                  "type": "string",
-                  "example": "carriers"
                 }
               }
             }
@@ -86,12 +83,11 @@
             "data": {
               "type": "object",
               "properties": {
+                "type": {
+                  "$ref": "../types/Region.json"
+                },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
-                },
-                "type": {
-                  "type": "string",
-                  "example": "regions"
                 }
               }
             }
@@ -112,12 +108,11 @@
             "data": {
               "type": "object",
               "properties": {
+                "type": {
+                  "$ref": "../types/Region.json"
+                },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
-                },
-                "type": {
-                  "type": "string",
-                  "example": "regions"
                 }
               }
             }

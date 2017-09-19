@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "^service-options$",
+  "example": "service-options"
+}

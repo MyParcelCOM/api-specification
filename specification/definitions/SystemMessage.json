@@ -6,13 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/SystemMessage.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^system-messages$",
-      "example": "system-messages"
     },
     "attributes": {
       "type": "object",

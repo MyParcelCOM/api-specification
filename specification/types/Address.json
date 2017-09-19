@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "^addresses$",
+  "example": "addresses"
+}

@@ -6,13 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/Carrier.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^carriers$",
-      "example": "carriers"
     },
     "attributes": {
       "type": "object",

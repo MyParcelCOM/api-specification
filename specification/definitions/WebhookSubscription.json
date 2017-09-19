@@ -7,13 +7,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/WebhookSubscription.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^webhook-subscriptions$",
-      "example": "webhook-subscriptions"
     },
     "attributes": {
       "type": "object",

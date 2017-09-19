@@ -7,13 +7,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/ShipmentStatus.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^shipment-statuses$",
-      "example": "shipment-statuses"
     },
     "attributes": {
       "type": "object",
@@ -45,8 +43,7 @@
               "type": "object",
               "properties": {
                 "type": {
-                  "type": "string",
-                  "example": "shipments"
+                  "$ref": "../types/Shipment.json"
                 },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
@@ -73,8 +70,7 @@
               "type": "object",
               "properties": {
                 "type": {
-                  "type": "string",
-                  "example": "statuses"
+                  "$ref": "../types/Status.json"
                 },
                 "id": {
                   "$ref": "../definitions/Uuid.json"

@@ -10,9 +10,7 @@
       "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "type": {
-      "type": "string",
-      "pattern": "^statuses$",
-      "example": "statuses"
+      "$ref": "../types/Status.json"
     },
     "attributes": {
       "type": "object",
