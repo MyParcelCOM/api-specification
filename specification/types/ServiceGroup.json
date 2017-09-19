@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "^service-groups$",
+  "example": "service-groups"
+}

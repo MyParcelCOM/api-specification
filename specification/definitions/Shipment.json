@@ -6,13 +6,11 @@
     "relationships"
   ],
   "properties": {
+    "type": {
+      "$ref": "../types/Shipment.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^shipments$",
-      "example": "shipments"
     },
     "attributes": {
       "type": "object",
@@ -112,10 +110,14 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
                 "properties": {
                   "type": {
-                    "type": "string",
-                    "example": "options"
+                    "$ref": "../types/ServiceOption.json"
                   },
                   "id": {
                     "$ref": "../definitions/Uuid.json"
@@ -131,10 +133,14 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
-                  "type": "string",
-                  "example": "shipments"
+                  "$ref": "../types/Shipment.json"
                 },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
@@ -145,7 +151,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -158,10 +164,14 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
-                  "type": "string",
-                  "example": "shops"
+                  "$ref": "../types/Shop.json"
                 },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
@@ -172,7 +182,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -186,10 +196,14 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
-                  "type": "string",
-                  "example": "statuses"
+                  "$ref": "../types/Status.json"
                 },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
@@ -200,7 +214,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -213,10 +227,14 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
-                  "type": "string",
-                  "example": "services"
+                  "$ref": "../types/Service.json"
                 },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
@@ -227,7 +245,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -243,10 +261,14 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
                 "properties": {
                   "type": {
-                    "type": "string",
-                    "example": "files"
+                    "$ref": "../types/File.json"
                   },
                   "id": {
                     "$ref": "../definitions/Uuid.json"
@@ -257,7 +279,7 @@
             "links": {
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }

@@ -74,22 +74,19 @@
     "tags": [
       "SystemMessages"
     ],
-    "summary": "Create new system messages.",
-    "description": "This endpoint creates new system message(s) with the posted data.",
+    "summary": "Create a new system message.",
+    "description": "This endpoint creates a new system message with the posted data.",
     "parameters": [
       {
-        "name": "system-messages",
         "in": "body",
-        "description": "The system message object(s) to be created.",
+        "name": "system-message",
+        "description": "The system message object to be created.",
         "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SystemMessage"
-              }
+              "$ref": "#/definitions/SystemMessage"
             }
           }
         }
@@ -97,18 +94,62 @@
     ],
     "responses": {
       "200": {
-        "description": "Created the system message(s).",
+        "description": "Created the system message.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/SystemMessage"
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "SystemMessages"
+    ],
+    "summary": "Delete system messages by id.",
+    "description": "This endpoint deletes the system message(s) with supplied ids.",
+    "parameters": [
+      {
+        "in": "body",
+        "name": "system-messages",
+        "description": "The system message(s) to be deleted.",
+        "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/SystemMessage"
+                "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "$ref": "../types/SystemMessage.json"
+                  },
+                  "id": {
+                    "$ref": "../definitions/Uuid.json"
+                  }
+                }
               }
             }
           }
         }
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The system message(s) will be deleted."
+      },
+      "204": {
+        "description": "The system message(s) are deleted."
       }
     }
   }

@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "^service-insurances$",
+  "example": "service-insurances"
+}

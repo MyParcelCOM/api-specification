@@ -7,13 +7,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/Service.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^services$",
-      "example": "services"
     },
     "attributes": {
       "type": "object",
@@ -48,24 +46,28 @@
         "carrier": {
           "type": "object",
           "properties": {
-            "links": {
+            "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                "type": {
+                  "$ref": "../types/Carrier.json"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
                 }
               }
             },
-            "data": {
+            "links": {
               "type": "object",
               "properties": {
-                "id": {
-                  "$ref": "../definitions/Uuid.json"
-                },
-                "type": {
+                "related": {
                   "type": "string",
-                  "example": "carriers"
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -74,24 +76,28 @@
         "region_from": {
           "type": "object",
           "properties": {
-            "links": {
+            "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                "type": {
+                  "$ref": "../types/Region.json"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
                 }
               }
             },
-            "data": {
+            "links": {
               "type": "object",
               "properties": {
-                "id": {
-                  "$ref": "../definitions/Uuid.json"
-                },
-                "type": {
+                "related": {
                   "type": "string",
-                  "example": "regions"
+                  "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -100,24 +106,28 @@
         "region_to": {
           "type": "object",
           "properties": {
-            "links": {
+            "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                "type": {
+                  "$ref": "../types/Region.json"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
                 }
               }
             },
-            "data": {
+            "links": {
               "type": "object",
               "properties": {
-                "id": {
-                  "$ref": "../definitions/Uuid.json"
-                },
-                "type": {
+                "related": {
                   "type": "string",
-                  "example": "regions"
+                  "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }

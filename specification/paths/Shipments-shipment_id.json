@@ -83,23 +83,23 @@
     "tags": [
       "Shipments"
     ],
-    "summary": "Delete shipments by id.",
-    "description": "This endpoint deletes the shipment with supplied id. A comma separated list of ids can be supplied to delete multiple shipments.",
+    "summary": "Delete a shipment by id.",
+    "description": "This endpoint deletes the shipment with supplied id.",
     "parameters": [
       {
         "in": "path",
         "name": "shipment_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of ids of the shipment(s)."
+        "description": "Id of the shipment."
       }
     ],
     "responses": {
       "202": {
-        "description": "The shipment(s) will be deleted."
+        "description": "The shipment will be deleted."
       },
       "204": {
-        "description": "The shipment(s) are deleted."
+        "description": "The shipment is deleted."
       }
     }
   }

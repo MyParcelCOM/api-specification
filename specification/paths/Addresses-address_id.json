@@ -83,23 +83,23 @@
     "tags": [
       "Addresses"
     ],
-    "summary": "Delete addresses by id.",
-    "description": "This endpoint deletes the address with supplied id. A comma separated list of ids can be supplied to delete multiple addresses.",
+    "summary": "Delete an address by id.",
+    "description": "This endpoint deletes the address with supplied id.",
     "parameters": [
       {
         "in": "path",
         "name": "address_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of ids of the address(es)."
+        "description": "Id of the address."
       }
     ],
     "responses": {
       "202": {
-        "description": "The address(es) will be deleted."
+        "description": "The address will be deleted."
       },
       "204": {
-        "description": "The address(es) are deleted."
+        "description": "The address is deleted."
       }
     }
   }

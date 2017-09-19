@@ -6,13 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/Address.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^addresses$",
-      "example": "addresses"
     },
     "attributes": {
       "$ref": "#/definitions/AddressAttributes"

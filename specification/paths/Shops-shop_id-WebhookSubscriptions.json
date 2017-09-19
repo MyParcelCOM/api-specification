@@ -83,8 +83,8 @@
     "tags": [
       "Shops"
     ],
-    "summary": "Create new webhook subscriptions.",
-    "description": "This endpoint creates new webhook subscription(s) with the posted data.",
+    "summary": "Create a new webhook subscription.",
+    "description": "This endpoint creates a new webhook subscription with the posted data.",
     "parameters": [
       {
         "in": "path",
@@ -94,18 +94,15 @@
         "description": "Id of the shop."
       },
       {
-        "name": "webhooks",
         "in": "body",
-        "description": "The webhook subscription object(s) to be created.",
+        "name": "webhook",
+        "description": "The webhook subscription object to be created.",
         "required": true,
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/WebhookSubscription"
-              }
+              "$ref": "#/definitions/WebhookSubscription"
             }
           }
         }
@@ -113,7 +110,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Created the webhook subscription(s).",
+        "description": "Created the webhook subscription.",
         "schema": {
           "type": "object",
           "required": [
@@ -122,13 +119,64 @@
           "additionalProperties": false,
           "properties": {
             "data": {
+              "$ref": "#/definitions/WebhookSubscription"
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Shops"
+    ],
+    "summary": "Delete webhook subscriptions by id.",
+    "description": "This endpoint deletes the webhook subscription(s) with supplied ids.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
+      {
+        "in": "body",
+        "name": "webhook-subscriptions",
+        "description": "The webhook subscription(s) to be deleted.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/WebhookSubscription"
+                "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "$ref": "../types/WebhookSubscription.json"
+                  },
+                  "id": {
+                    "$ref": "../definitions/Uuid.json"
+                  }
+                }
               }
             }
           }
         }
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The webhook subscription(s) will be deleted."
+      },
+      "204": {
+        "description": "The webhook subscription(s) are deleted."
       }
     }
   }

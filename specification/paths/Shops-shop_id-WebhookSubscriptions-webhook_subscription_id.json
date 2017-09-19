@@ -90,8 +90,8 @@
     "tags": [
       "Shops"
     ],
-    "summary": "Delete webhook subscriptions by id.",
-    "description": "This endpoint deletes the webhook subscription with supplied id. A comma separated list of ids can be supplied to delete multiple webhook subscriptions.",
+    "summary": "Delete a webhook subscription by id.",
+    "description": "This endpoint deletes the webhook subscription with supplied id.",
     "parameters": [
       {
         "in": "path",
@@ -105,15 +105,15 @@
         "name": "webhook_subscription_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of ids of the webhook subscription(s)."
+        "description": "Id of the webhook subscription."
       }
     ],
     "responses": {
       "202": {
-        "description": "The webhook subscription(s) will be deleted."
+        "description": "The webhook subscription will be deleted."
       },
       "204": {
-        "description": "The webhook subscription(s) are deleted."
+        "description": "The webhook subscription is deleted."
       }
     }
   }

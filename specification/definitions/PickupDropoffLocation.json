@@ -7,13 +7,11 @@
   ],
   "additionalProperties": false,
   "properties": {
+    "type": {
+      "$ref": "../types/PickupDropoffLocation.json"
+    },
     "id": {
       "$ref": "../definitions/ReadOnlyUuid.json"
-    },
-    "type": {
-      "type": "string",
-      "pattern": "^pickup-dropoff-locations$",
-      "example": "pickup-dropoff-locations"
     },
     "attributes": {
       "type": "object",
@@ -51,13 +49,17 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
+                "type": {
+                  "$ref": "../types/Carrier.json"
+                },
                 "id": {
                   "$ref": "../definitions/Uuid.json"
-                },
-                "type": {
-                  "type": "string",
-                  "example": "carriers"
                 }
               }
             }
