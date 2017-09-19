@@ -49,6 +49,11 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
                   "$ref": "../types/Carrier.json"

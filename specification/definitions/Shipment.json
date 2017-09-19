@@ -110,6 +110,11 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
                 "properties": {
                   "type": {
                     "$ref": "../types/ServiceOption.json"
@@ -128,6 +133,11 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
                   "$ref": "../types/Shipment.json"
@@ -141,7 +151,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -154,6 +164,11 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
                   "$ref": "../types/Shop.json"
@@ -167,7 +182,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -181,6 +196,11 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
                   "$ref": "../types/Status.json"
@@ -194,7 +214,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -207,6 +227,11 @@
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "type": {
                   "$ref": "../types/Service.json"
@@ -220,7 +245,7 @@
               "readOnly": true,
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
@@ -236,6 +261,11 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
                 "properties": {
                   "type": {
                     "$ref": "../types/File.json"
@@ -249,7 +279,7 @@
             "links": {
               "type": "object",
               "properties": {
-                "self": {
+                "related": {
                   "type": "string",
                   "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
