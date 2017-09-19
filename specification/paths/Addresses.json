@@ -105,5 +105,52 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Addresses"
+    ],
+    "summary": "Delete addresses by id.",
+    "description": "This endpoint deletes the address(es) with supplied ids.",
+    "parameters": [
+      {
+        "name": "addresses",
+        "in": "body",
+        "description": "The address(es) to be deleted.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "$ref": "../types/Address.json"
+                  },
+                  "id": {
+                    "$ref": "../definitions/Uuid.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The address(es) will be deleted."
+      },
+      "204": {
+        "description": "The address(es) are deleted."
+      }
+    }
   }
 }

@@ -125,5 +125,59 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Shops"
+    ],
+    "summary": "Delete webhook subscriptions by id.",
+    "description": "This endpoint deletes the webhook subscription(s) with supplied ids.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
+      {
+        "in": "body",
+        "name": "webhook-subscriptions",
+        "description": "The webhook subscription(s) to be deleted.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "$ref": "../types/WebhookSubscription.json"
+                  },
+                  "id": {
+                    "$ref": "../definitions/Uuid.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The webhook subscription(s) will be deleted."
+      },
+      "204": {
+        "description": "The webhook subscription(s) are deleted."
+      }
+    }
   }
 }

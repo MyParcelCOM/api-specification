@@ -105,5 +105,52 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Shipments"
+    ],
+    "summary": "Delete shipments by id.",
+    "description": "This endpoint deletes the shipment(s) with supplied ids.",
+    "parameters": [
+      {
+        "in": "body",
+        "name": "shipments",
+        "description": "The shipment(s) to be deleted.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "$ref": "../types/Shipment.json"
+                  },
+                  "id": {
+                    "$ref": "../definitions/Uuid.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The shipment(s) will be deleted."
+      },
+      "204": {
+        "description": "The shipment(s) are deleted."
+      }
+    }
   }
 }
