@@ -111,7 +111,7 @@
       "Addresses"
     ],
     "summary": "Delete addresses by id.",
-    "description": "This endpoint deletes the address(es) with supplied ids.",
+    "description": "This endpoint deletes the address(es) with the supplied ids.",
     "parameters": [
       {
         "name": "addresses",

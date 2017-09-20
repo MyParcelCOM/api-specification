@@ -3,51 +3,27 @@
     "tags": [
       "Files"
     ],
-    "summary": "Get files by id.",
-    "description": "This endpoint retrieves the file with the supplied id. A comma separated list of ids can be supplied to retrieve multiple files.",
+    "summary": "Get a file by id.",
+    "description": "This endpoint retrieves the file with the supplied id.",
     "parameters": [
       {
         "in": "path",
         "name": "file_id",
-        "required": true,
         "type": "string",
-        "description": "The file id, or a comma separated list of file ids."
+        "required": true,
+        "description": "Id of the file."
       },
       {
         "in": "header",
         "name": "Accept",
-        "required": true,
         "type": "string",
+        "required": true,
         "enum": [
           "application/json",
           "application/pdf",
           "image/png"
         ],
         "description": "You can set the file header to either receive a json response, or the physical files in given format. Possible options are: application/json, application/pdf, image/png"
-      },
-      {
-        "in": "query",
-        "name": "filter[page_size]",
-        "type": "string",
-        "default": "A4",
-        "enum": [
-          "A4",
-          "A6"
-        ],
-        "description": "When requesting multiple files with the Accept header set to \"application/pdf\" this filter determines the page size in the pdf. A page with size A4 will hold 4 files, while an A6 page will only hold 1."
-      },
-      {
-        "in": "query",
-        "name": "filter[start_position]",
-        "type": "string",
-        "default": "top-left",
-        "enum": [
-          "top-left",
-          "top-right",
-          "bottom-left",
-          "bottom-right"
-        ],
-        "description": "This filter only applies when requesting multiple files with the Accept header set to \"application/pdf\" and the page size set to A4. It determines the position of the file on the first page."
       }
     ],
     "produces": [
@@ -57,63 +33,12 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the file(s).",
+        "description": "Retrieved the file.",
         "schema": {
           "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/File"
-              }
-            },
-            "meta": {
-              "type": "object",
-              "required": [
-                "total_pages"
-              ],
-              "properties": {
-                "total_pages": {
-                  "type": "number",
-                  "example": 13
-                }
-              }
-            },
-            "links": {
-              "type": "object",
-              "required": [
-                "self",
-                "first",
-                "last"
-              ],
-              "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=3&page[size]=30"
-                },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=1&page[size]=30"
-                },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/files/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=13&page[size]=30"
-                }
-              }
+              "$ref": "#/definitions/File"
             }
           }
         }
