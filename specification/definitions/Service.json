@@ -17,8 +17,7 @@
       "type": "object",
       "required": [
         "name",
-        "package_type",
-        "default_insurance"
+        "package_type"
       ],
       "additionalProperties": false,
       "properties": {
@@ -34,9 +33,6 @@
             "letterbox"
           ],
           "example": "parcel"
-        },
-        "default_insurance": {
-          "$ref": "../definitions/Price.json"
         }
       }
     },

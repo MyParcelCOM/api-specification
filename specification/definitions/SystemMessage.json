@@ -15,12 +15,12 @@
     "attributes": {
       "type": "object",
       "required": [
-        "type",
+        "level",
         "content"
       ],
       "additionalProperties": false,
       "properties": {
-        "type": {
+        "level": {
           "type": "string",
           "enum": [
             "info",
