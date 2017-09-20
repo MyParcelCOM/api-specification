@@ -3,76 +3,25 @@
     "tags": [
       "SystemMessages"
     ],
-    "summary": "Get system messages by id.",
-    "description": "This endpoint retrieves the system message with supplied id. A comma separated list of ids can be supplied to retrieve multiple system messages.",
+    "summary": "Get a system message by id.",
+    "description": "This endpoint retrieves the system message with the supplied id.",
     "parameters": [
       {
         "in": "path",
         "name": "system_message_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of ids of the system message(s)."
+        "description": "Id of the system message."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the system message(s).",
+        "description": "Retrieved the system message.",
         "schema": {
           "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SystemMessage"
-              }
-            },
-            "meta": {
-              "type": "object",
-              "required": [
-                "total_pages"
-              ],
-              "properties": {
-                "total_pages": {
-                  "type": "number",
-                  "example": 13
-                }
-              }
-            },
-            "links": {
-              "type": "object",
-              "required": [
-                "self",
-                "first",
-                "last"
-              ],
-              "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/system-messages/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=3&page[size]=30"
-                },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/system-messages/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=1&page[size]=30"
-                },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/system-messages/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/system-messages/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/system-messages/c9ce29a4-6325-11e7-907b-a6006ad3dba0/services?page[number]=13&page[size]=30"
-                }
-              }
+              "$ref": "#/definitions/SystemMessage"
             }
           }
         }
@@ -84,7 +33,7 @@
       "SystemMessages"
     ],
     "summary": "Delete a system message by id.",
-    "description": "This endpoint deletes the system message with supplied id.",
+    "description": "This endpoint deletes the system message with the supplied id.",
     "parameters": [
       {
         "in": "path",

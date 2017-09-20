@@ -111,7 +111,7 @@
       "SystemMessages"
     ],
     "summary": "Delete system messages by id.",
-    "description": "This endpoint deletes the system message(s) with supplied ids.",
+    "description": "This endpoint deletes the system message(s) with the supplied ids.",
     "parameters": [
       {
         "in": "body",

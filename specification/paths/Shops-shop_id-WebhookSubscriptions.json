@@ -131,7 +131,7 @@
       "Shops"
     ],
     "summary": "Delete webhook subscriptions by id.",
-    "description": "This endpoint deletes the webhook subscription(s) with supplied ids.",
+    "description": "This endpoint deletes the webhook subscription(s) with the supplied ids.",
     "parameters": [
       {
         "in": "path",

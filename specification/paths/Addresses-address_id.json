@@ -3,76 +3,25 @@
     "tags": [
       "Addresses"
     ],
-    "summary": "Get addresses by id.",
-    "description": "This endpoint retrieves the address with the supplied id. A comma separated list of ids can be supplied to retrieve multiple addresses.",
+    "summary": "Get an address by id.",
+    "description": "This endpoint retrieves the address with the supplied id.",
     "parameters": [
       {
         "in": "path",
         "name": "address_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of ids of the address(es)."
+        "description": "Id of the address."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the address(es).",
+        "description": "Retrieved the address.",
         "schema": {
           "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Address"
-              }
-            },
-            "meta": {
-              "type": "object",
-              "required": [
-                "total_pages"
-              ],
-              "properties": {
-                "total_pages": {
-                  "type": "number",
-                  "example": 13
-                }
-              }
-            },
-            "links": {
-              "type": "object",
-              "required": [
-                "self",
-                "first",
-                "last"
-              ],
-              "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=3&page[size]=30"
-                },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=1&page[size]=30"
-                },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0?page[number]=13&page[size]=30"
-                }
-              }
+              "$ref": "#/definitions/Address"
             }
           }
         }
@@ -84,7 +33,7 @@
       "Addresses"
     ],
     "summary": "Delete an address by id.",
-    "description": "This endpoint deletes the address with supplied id.",
+    "description": "This endpoint deletes the address with the supplied id.",
     "parameters": [
       {
         "in": "path",

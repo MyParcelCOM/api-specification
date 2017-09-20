@@ -111,7 +111,7 @@
       "Shipments"
     ],
     "summary": "Delete shipments by id.",
-    "description": "This endpoint deletes the shipment(s) with supplied ids.",
+    "description": "This endpoint deletes the shipment(s) with the supplied ids.",
     "parameters": [
       {
         "in": "body",
