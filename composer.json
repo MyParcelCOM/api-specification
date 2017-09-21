@@ -1,0 +1,6 @@
+{
+  "name": "myparcelcom/api-specification",
+  "description": "MyParcel.com API specification powering the Swagger documentation.",
+  "homepage": "https://www.myparcel.com",
+  "type": "library"
+}
