@@ -27,6 +27,9 @@
         },
         "name": {
           "type": "string",
+          "example": "At the sorting center"
+        },
+        "level": {
           "enum": [
             "pending",
             "success",
