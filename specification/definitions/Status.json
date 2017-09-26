@@ -27,19 +27,20 @@
         },
         "name": {
           "type": "string",
-          "example": "At the sorting center"
+          "example": "Delivered"
         },
         "level": {
+          "type": "string",
           "enum": [
             "pending",
             "success",
             "failed"
           ],
-          "example": "pending"
+          "example": "success"
         },
         "description": {
           "type": "string",
-          "example": "The shipment is created"
+          "example": "The shipment has been delivered"
         }
       }
     },

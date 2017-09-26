@@ -1,11 +1,18 @@
 {
   "get": {
     "tags": [
-      "PickupDropoffLocations"
+      "Carriers"
     ],
     "summary": "Get all the pickup and dropoff locations.",
     "description": "This endpoint retrieves pickup and dropoff locations.",
     "parameters": [
+      {
+        "in": "path",
+        "name": "carrier_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the carrier."
+      },
       {
         "in": "path",
         "name": "country_code",
@@ -19,6 +26,20 @@
         "required": true,
         "type": "string",
         "description": "The postal code."
+      },
+      {
+        "in": "path",
+        "name": "street",
+        "required": true,
+        "type": "string",
+        "description": "The street."
+      },
+      {
+        "in": "path",
+        "name": "street_number",
+        "required": true,
+        "type": "string",
+        "description": "The street number."
       },
       {
         "in": "query",
