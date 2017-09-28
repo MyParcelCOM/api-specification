@@ -17,9 +17,6 @@
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}/{street}/{street_number}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code-street-street_number.json"
   },
-  "/carriers/{carrier_id}/services": {
-    "$ref": "./paths/Carriers-carrier_id-Services.json"
-  },
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
   },

@@ -5,32 +5,6 @@
     ],
     "summary": "Get all the services.",
     "description": "This endpoint retrieves services.",
-    "parameters": [
-      {
-        "in": "query",
-        "name": "filter[from][country_code]",
-        "type": "string",
-        "description": "The country code from which the shipment is sent."
-      },
-      {
-        "in": "query",
-        "name": "filter[from][region_code]",
-        "type": "string",
-        "description": "The region code from which the shipment is sent."
-      },
-      {
-        "in": "query",
-        "name": "filter[to][country_code]",
-        "type": "string",
-        "description": "The country code to which the shipment is sent."
-      },
-      {
-        "in": "query",
-        "name": "filter[to][region_code]",
-        "type": "string",
-        "description": "The region code to which the shipment is sent."
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the service(s).",
