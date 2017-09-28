@@ -83,12 +83,6 @@
             }
           }
         },
-        "customs_declaration": {
-          "type": "array",
-          "items": {
-            "$ref": "../definitions/CustomsItem.json"
-          }
-        },
         "created_at": {
           "$ref": "../definitions/ReadOnlyTimestamp.json"
         },
