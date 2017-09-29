@@ -19,15 +19,15 @@
         "type": "string",
         "required": true,
         "enum": [
-          "application/json",
+          "application/vnd.api+json",
           "application/pdf",
           "image/png"
         ],
-        "description": "You can set the file header to either receive a json response, or the physical files in given format. Possible options are: application/json, application/pdf, image/png"
+        "description": "You can set the file header to either receive a json response, or the physical files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`image/png`</li></ul>"
       }
     ],
     "produces": [
-      "application/json",
+      "application/vnd.api+json",
       "application/pdf",
       "image/png"
     ],
