@@ -15,18 +15,18 @@
     "attributes": {
       "type": "object",
       "required": [
-        "recipient",
+        "recipient_address",
         "weight"
       ],
       "additionalProperties": false,
       "properties": {
-        "recipient": {
+        "recipient_address": {
           "$ref": "#/definitions/AddressAttributes"
         },
-        "sender": {
+        "sender_address": {
           "$ref": "#/definitions/AddressAttributes"
         },
-        "pickup": {
+        "pickup_location": {
           "type": "object",
           "properties": {
             "code": {
@@ -83,12 +83,6 @@
             }
           }
         },
-        "customs_declaration": {
-          "type": "array",
-          "items": {
-            "$ref": "../definitions/CustomsItem.json"
-          }
-        },
         "created_at": {
           "$ref": "../definitions/ReadOnlyTimestamp.json"
         },
@@ -103,7 +97,7 @@
     "relationships": {
       "type": "object",
       "properties": {
-        "options": {
+        "service_options": {
           "type": "object",
           "properties": {
             "data": {

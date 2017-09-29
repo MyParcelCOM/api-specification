@@ -15,8 +15,8 @@
       "type": "object",
       "required": [
         "name",
-        "address_billing",
-        "address_return"
+        "billing_address",
+        "return_address"
       ],
       "additionalProperties": false,
       "properties": {
@@ -24,10 +24,10 @@
           "type": "string",
           "example": "MyParcel.com"
         },
-        "address_billing": {
+        "billing_address": {
           "$ref": "#/definitions/AddressAttributes"
         },
-        "address_return": {
+        "return_address": {
           "$ref": "#/definitions/AddressAttributes"
         }
       }

@@ -21,7 +21,7 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "carrier_code": {
+        "carrier_status_code": {
           "type": "string",
           "example": "A01"
         },
