@@ -29,6 +29,18 @@
       },
       {
         "in": "query",
+        "name": "street",
+        "type": "string",
+        "description": "The street name."
+      },
+      {
+        "in": "query",
+        "name": "street_number",
+        "type": "string",
+        "description": "The street number."
+      },
+      {
+        "in": "query",
         "name": "filter[carriers]",
         "type": "string",
         "description": "The carrier id(s)."
