@@ -26,8 +26,8 @@
   "/services/{service_id}": {
     "$ref": "./paths/Services-service_id.json"
   },
-  "/services/{service_id}/prices": {
-    "$ref": "./paths/Services-service_id-Prices.json"
+  "/services/{service_id}/contracts": {
+    "$ref": "./paths/Services-service_id-Contracts.json"
   },
   "/shipments": {
     "$ref": "./paths/Shipments.json"

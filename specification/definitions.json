@@ -20,6 +20,9 @@
   "Price": {
     "$ref": "./definitions/Price.json"
   },
+  "Contract": {
+    "$ref": "./definitions/Contract.json"
+  },
   "Region": {
     "$ref": "./definitions/Region.json"
   },

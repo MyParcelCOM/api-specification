@@ -72,33 +72,6 @@
                 "total_pages"
               ],
               "properties": {
-                "errors": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string",
-                      "example": "1234"
-                    },
-                    "title": {
-                      "type": "string",
-                      "example": "Unable to retrieve carrier locations"
-                    },
-                    "detail": {
-                      "type": "string",
-                      "example": "An error occurred while retrieving locations."
-                    },
-                    "meta": {
-                      "type": "object",
-                      "example": {
-                        "pickup-dropoff-locations": {
-                          "links": {
-                            "self": "$base_url/pickup-dropoff-locations/NL/2131BC?filter[carriers]=c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
                 "total_pages": {
                   "type": "number",
                   "example": 13
