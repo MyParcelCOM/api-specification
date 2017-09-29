@@ -1,0 +1,115 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "$ref": "../types/Contract.json"
+    },
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceGroup"
+          }
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceOption"
+          }
+        },
+        "insurances": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceInsurance"
+          }
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "service": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Service.json"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "Carrier": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Carrier.json"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
+    }
+  }
+}

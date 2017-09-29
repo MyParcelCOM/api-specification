@@ -15,19 +15,23 @@
     "attributes": {
       "type": "object",
       "required": [
-        "weight_min",
-        "weight_max",
+        "weight",
         "price"
       ],
       "additionalProperties": false,
       "properties": {
-        "weight_min": {
-          "type": "number",
-          "example": "10"
-        },
-        "weight_max": {
-          "type": "number",
-          "example": "20"
+        "weight": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "number",
+              "example": 0
+            },
+            "max": {
+              "type": "number",
+              "example": 20
+            },
+          }
         },
         "price": {
           "$ref": "../definitions/Price.json"
@@ -36,8 +40,8 @@
           "$ref": "../definitions/Price.json"
         },
         "step_size": {
-          "type": "string",
-          "example": "1"
+          "type": "number",
+          "example": 1
         }
       }
     }

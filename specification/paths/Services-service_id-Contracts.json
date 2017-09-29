@@ -29,57 +29,8 @@
             "data": {
               "type": "array",
               "items": {
-                "type": "object",
-                "description": "The service groups, insurances and options"
-              },
-              "example": [
-                {
-                  "type": "weight_groups",
-                  "id": "c9ce29a4-6325-11e7-907b-a6006ad3dba0",
-                  "attributes": {
-                    "weight_min": 10,
-                    "weight_max": 20,
-                    "step_size": 1,
-                    "price": {
-                      "amount": 123,
-                      "currency": "EUR"
-                    },
-                    "step_price": {
-                      "amount": 123,
-                      "currency": "EUR"
-                    }
-                  }
-                },
-                {
-                  "type": "options",
-                  "id": "c9ce29a4-6325-11e7-907b-a6006ad3dba0",
-                  "attributes": {
-                    "name": "signature",
-                    "price": {
-                      "amount": 123,
-                      "currency": "EUR"
-                    }
-                  }
-                },
-                {
-                  "type": "insurances",
-                  "id": "c9ce29a4-6325-11e7-907b-a6006ad3dba0",
-                  "attributes": {
-                    "min": {
-                      "amount": 1000,
-                      "currency": "EUR"
-                    },
-                    "max": {
-                      "amount": 5000,
-                      "currency": "EUR"
-                    },
-                    "price": {
-                      "amount": 123,
-                      "currency": "EUR"
-                    }
-                  }
-                }
-              ]
+                "$ref": "#/definitions/Contract"
+              }
             },
             "meta": {
               "type": "object",

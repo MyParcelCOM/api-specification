@@ -15,16 +15,12 @@
     "attributes": {
       "type": "object",
       "required": [
-        "min",
-        "max",
+        "covered",
         "price"
       ],
       "additionalProperties": false,
       "properties": {
-        "min": {
-          "$ref": "../definitions/Price.json"
-        },
-        "max": {
+        "covered": {
           "$ref": "../definitions/Price.json"
         },
         "price": {
