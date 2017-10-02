@@ -16,15 +16,23 @@
       "type": "object",
       "required": [
         "code",
+        "resource",
         "name",
-        "description",
-        "resource"
+        "description"
       ],
       "additionalProperties": false,
       "properties": {
         "code": {
           "type": "number",
           "example": 123
+        },
+        "resource": {
+          "type": "string",
+          "enum": [
+            "system",
+            "shipment"
+          ],
+          "example": "shipment"
         },
         "level": {
           "type": "string",
@@ -42,14 +50,27 @@
         "description": {
           "type": "string",
           "example": "The shipment has been delivered"
-        },
-        "resource": {
-          "type": "string",
-          "enum": [
-            "system",
-            "shipment"
-          ],
-          "example": "shipment"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "resource_data": {
+          "type": "object",
+          "properties": {
+            "external_status_code": {
+              "type": "string",
+              "example": "9001"
+            },
+            "external_status_description": {
+              "type": "string",
+              "example": "Confirmed at destination"
+            },
+            "timestamp": {
+              "$ref": "../definitions/ReadOnlyDateTime.json"
+            }
+          }
         }
       }
     },
