@@ -41,9 +41,6 @@
   "Shipment": {
     "$ref": "./definitions/Shipment.json"
   },
-  "ShipmentStatus": {
-    "$ref": "./definitions/ShipmentStatus.json"
-  },
   "Shop": {
     "$ref": "./definitions/Shop.json"
   },
