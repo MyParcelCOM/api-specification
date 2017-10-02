@@ -17,17 +17,14 @@
       "required": [
         "code",
         "name",
-        "description"
+        "description",
+        "resource"
       ],
       "additionalProperties": false,
       "properties": {
         "code": {
           "type": "number",
           "example": 123
-        },
-        "name": {
-          "type": "string",
-          "example": "Delivered"
         },
         "level": {
           "type": "string",
@@ -38,9 +35,21 @@
           ],
           "example": "success"
         },
+        "name": {
+          "type": "string",
+          "example": "Delivered"
+        },
         "description": {
           "type": "string",
           "example": "The shipment has been delivered"
+        },
+        "resource": {
+          "type": "string",
+          "enum": [
+            "system",
+            "shipment"
+          ],
+          "example": "shipment"
         }
       }
     },

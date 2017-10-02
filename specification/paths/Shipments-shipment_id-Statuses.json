@@ -29,7 +29,7 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ShipmentStatus"
+                "$ref": "#/definitions/Status"
               }
             },
             "meta": {
@@ -38,6 +38,18 @@
                 "total_pages"
               ],
               "properties": {
+                "carrier_status": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": "A01"
+                    },
+                    "date": {
+                      "$ref": "../definitions/ReadOnlyDateTime.json"
+                    }
+                  }
+                },
                 "total_pages": {
                   "type": "number",
                   "example": 13
