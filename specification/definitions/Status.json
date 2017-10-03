@@ -30,9 +30,9 @@
           "type": "string",
           "enum": [
             "system",
-            "shipment"
+            "shipments"
           ],
-          "example": "shipment"
+          "example": "shipments"
         },
         "level": {
           "type": "string",
@@ -59,16 +59,16 @@
         "resource_data": {
           "type": "object",
           "properties": {
-            "external_status_code": {
+            "carrier_status_code": {
               "type": "string",
               "example": "9001"
             },
-            "external_status_description": {
+            "carrier_status_description": {
               "type": "string",
               "example": "Confirmed at destination"
             },
-            "timestamp": {
-              "$ref": "../definitions/ReadOnlyDateTime.json"
+            "carrier_timestamp": {
+              "$ref": "../definitions/ReadOnlyTimestamp.json"
             }
           }
         }
