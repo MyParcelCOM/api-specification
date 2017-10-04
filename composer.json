@@ -6,16 +6,16 @@
 
   "scripts": {
     "post-install-cmd": [
-      "./mp.sh bundle"
+      "bash ./mp.sh bundle"
     ],
     "post-update-cmd": [
-      "./mp.sh bundle"
+      "bash ./mp.sh bundle"
     ],
     "post-package-install": [
-      "./mp.sh bundle"
+      "bash ./mp.sh bundle"
     ],
     "post-package-update": [
-      "./mp.sh bundle"
+      "bash ./mp.sh bundle"
     ]
   }
 }
