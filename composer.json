@@ -4,16 +4,18 @@
   "homepage": "https://www.myparcel.com",
   "type": "library",
 
-  "post-install-cmd": [
-    "./mp.sh bundle"
-  ],
-  "post-update-cmd": [
-    "./mp.sh bundle"
-  ],
-  "post-package-install": [
-    "./mp.sh bundle"
-  ],
-  "post-package-update": [
-    "./mp.sh bundle"
-  ]
+  "scripts": {
+    "post-install-cmd": [
+      "./mp.sh bundle"
+    ],
+    "post-update-cmd": [
+      "./mp.sh bundle"
+    ],
+    "post-package-install": [
+      "./mp.sh bundle"
+    ],
+    "post-package-update": [
+      "./mp.sh bundle"
+    ]
+  }
 }
