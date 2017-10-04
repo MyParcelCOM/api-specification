@@ -1,0 +1,82 @@
+{
+  "get": {
+    "tags": [
+      "Shipments"
+    ],
+    "summary": "Get all the files from a shipment.",
+    "description": "This endpoint retrieves files for the supplied shipment.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shipment_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shipment."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the status(es).",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/File"
+              }
+            },
+            "meta": {
+              "type": "object",
+              "required": [
+                "total_pages"
+              ],
+              "properties": {
+                "total_pages": {
+                  "type": "number",
+                  "example": 13
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=13&page[size]=30"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

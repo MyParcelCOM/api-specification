@@ -32,6 +32,9 @@
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
   },
+  "/shipments/{shipment_id}/files": {
+    "$ref": "./paths/Shipments-shipment_id-Files.json"
+  },
   "/shipments/{shipment_id}/statuses": {
     "$ref": "./paths/Shipments-shipment_id-Statuses.json"
   },
