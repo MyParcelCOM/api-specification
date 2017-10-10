@@ -6,11 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
-    },
     "type": {
       "$ref": "../types/Status.json"
+    },
+    "id": {
+      "$ref": "../definitions/ReadOnlyUuid.json"
     },
     "attributes": {
       "type": "object",
