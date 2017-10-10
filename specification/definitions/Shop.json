@@ -9,7 +9,7 @@
       "$ref": "../types/Shop.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -50,7 +50,7 @@
                   "$ref": "../types/Region.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },

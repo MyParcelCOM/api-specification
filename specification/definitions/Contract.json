@@ -8,7 +8,7 @@
       "$ref": "../types/Contract.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -52,7 +52,7 @@
                   "$ref": "../types/Service.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },
@@ -83,7 +83,7 @@
                   "$ref": "../types/Carrier.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },

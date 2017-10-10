@@ -4,7 +4,7 @@
       "Shipments"
     ],
     "summary": "Get all the statuses from a shipment.",
-    "description": "This endpoint retrieves statuses for the supplied shipments.",
+    "description": "This endpoint retrieves statuses for the supplied shipment.",
     "parameters": [
       {
         "in": "path",
@@ -33,16 +33,7 @@
               }
             },
             "meta": {
-              "type": "object",
-              "required": [
-                "total_pages"
-              ],
-              "properties": {
-                "total_pages": {
-                  "type": "number",
-                  "example": 13
-                }
-              }
+              "$ref": "../includes/pagination-meta.json"
             },
             "links": {
               "type": "object",

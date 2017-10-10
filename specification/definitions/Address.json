@@ -10,7 +10,7 @@
       "$ref": "../types/Address.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "$ref": "#/definitions/AddressAttributes"

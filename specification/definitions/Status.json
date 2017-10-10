@@ -6,11 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
-    },
     "type": {
       "$ref": "../types/Status.json"
+    },
+    "id": {
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -68,7 +68,7 @@
               "example": "Confirmed at destination"
             },
             "carrier_timestamp": {
-              "$ref": "../definitions/ReadOnlyTimestamp.json"
+              "$ref": "../includes/read-only-timestamp.json"
             }
           }
         }

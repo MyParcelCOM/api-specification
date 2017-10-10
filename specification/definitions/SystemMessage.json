@@ -10,7 +10,7 @@
       "$ref": "../types/SystemMessage.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",

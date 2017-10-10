@@ -10,7 +10,7 @@
       "$ref": "../types/ServiceOption.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -25,7 +25,7 @@
           "example": "signature"
         },
         "price": {
-          "$ref": "../definitions/Price.json"
+          "$ref": "../includes/price.json"
         }
       }
     }

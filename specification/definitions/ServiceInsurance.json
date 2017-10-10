@@ -10,7 +10,7 @@
       "$ref": "../types/ServiceInsurance.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -21,10 +21,10 @@
       "additionalProperties": false,
       "properties": {
         "covered": {
-          "$ref": "../definitions/Price.json"
+          "$ref": "../includes/price.json"
         },
         "price": {
-          "$ref": "../definitions/Price.json"
+          "$ref": "../includes/price.json"
         }
       }
     }

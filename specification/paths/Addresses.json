@@ -24,16 +24,7 @@
               }
             },
             "meta": {
-              "type": "object",
-              "required": [
-                "total_pages"
-              ],
-              "properties": {
-                "total_pages": {
-                  "type": "number",
-                  "example": 13
-                }
-              }
+              "$ref": "../includes/pagination-meta.json"
             },
             "links": {
               "type": "object",
@@ -135,7 +126,7 @@
                     "$ref": "../types/Address.json"
                   },
                   "id": {
-                    "$ref": "../definitions/Uuid.json"
+                    "$ref": "../includes/uuid.json"
                   }
                 }
               }
