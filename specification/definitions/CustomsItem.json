@@ -39,7 +39,7 @@
             "example": 3000
           },
           "value": {
-            "$ref": "../definitions/Price.json"
+            "$ref": "../includes/price.json"
           }
         }
       }

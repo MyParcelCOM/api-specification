@@ -8,6 +8,9 @@
   "Carrier": {
     "$ref": "./definitions/Carrier.json"
   },
+  "Contract": {
+    "$ref": "./definitions/Contract.json"
+  },
   "Error": {
     "$ref": "./definitions/Error.json"
   },
@@ -16,12 +19,6 @@
   },
   "PickupDropoffLocation": {
     "$ref": "./definitions/PickupDropoffLocation.json"
-  },
-  "Price": {
-    "$ref": "./definitions/Price.json"
-  },
-  "Contract": {
-    "$ref": "./definitions/Contract.json"
   },
   "Region": {
     "$ref": "./definitions/Region.json"

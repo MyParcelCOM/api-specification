@@ -153,7 +153,7 @@
                     "$ref": "../types/WebhookSubscription.json"
                   },
                   "id": {
-                    "$ref": "../definitions/Uuid.json"
+                    "$ref": "../includes/uuid.json"
                   }
                 }
               }

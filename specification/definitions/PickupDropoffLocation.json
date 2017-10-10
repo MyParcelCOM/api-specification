@@ -11,7 +11,7 @@
       "$ref": "../types/PickupDropoffLocation.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -31,13 +31,68 @@
         "opening_hours": {
           "type": "array",
           "items": {
-            "$ref": "../definitions/OpeningHours.json"
+            "type": "object",
+            "required": [
+              "day",
+              "open",
+              "closed"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "day": {
+                "type": "string",
+                "enum": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "example": "Monday"
+              },
+              "open": {
+                "$ref": "../includes/time.json"
+              },
+              "closed": {
+                "$ref": "../includes/time.json"
+              }
+            }
           },
           "minItems": 7,
           "maxItems": 7
         },
         "position": {
-          "$ref": "../definitions/Position.json"
+          "type": "object",
+          "required": [
+            "latitude",
+            "longitude"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "latitude": {
+              "type": "number",
+              "example": 52.3050097
+            },
+            "longitude": {
+              "type": "number",
+              "example": 4.689905
+            },
+            "distance": {
+              "type": "number",
+              "example": 1337
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "meters",
+                "kilometers",
+                "miles"
+              ],
+              "example": "meters"
+            }
+          }
         }
       }
     },
@@ -59,7 +114,7 @@
                   "$ref": "../types/Carrier.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             }

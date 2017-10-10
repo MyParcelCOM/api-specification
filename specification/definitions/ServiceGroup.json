@@ -10,7 +10,7 @@
       "$ref": "../types/ServiceGroup.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -34,10 +34,10 @@
           }
         },
         "price": {
-          "$ref": "../definitions/Price.json"
+          "$ref": "../includes/price.json"
         },
         "step_price": {
-          "$ref": "../definitions/Price.json"
+          "$ref": "../includes/price.json"
         },
         "step_size": {
           "type": "number",

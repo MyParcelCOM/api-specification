@@ -11,7 +11,7 @@
       "$ref": "../types/WebhookSubscription.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -45,7 +45,7 @@
                   "example": "webhooks"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },

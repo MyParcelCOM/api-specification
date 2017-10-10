@@ -10,7 +10,7 @@
       "$ref": "../types/Region.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -29,15 +29,14 @@
           "example": "NH"
         },
         "currency": {
-          "type": "string",
-          "example": "EUR"
+          "$ref": "../includes/currency.json"
         },
         "name": {
           "type": "string",
           "example": "The Netherlands"
         },
         "parent_id": {
-          "$ref": "../definitions/Uuid.json"
+          "$ref": "../includes/uuid.json"
         }
       }
     },

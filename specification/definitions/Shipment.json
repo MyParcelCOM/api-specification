@@ -10,7 +10,7 @@
       "$ref": "../types/Shipment.json"
     },
     "id": {
-      "$ref": "../definitions/ReadOnlyUuid.json"
+      "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -43,10 +43,10 @@
           "example": "order #8008135"
         },
         "price": {
-          "$ref": "../definitions/ReadOnlyPrice.json"
+          "$ref": "../includes/read-only-price.json"
         },
         "insurance": {
-          "$ref": "../definitions/Price.json"
+          "$ref": "../includes/price.json"
         },
         "barcode": {
           "readOnly": true,
@@ -84,13 +84,13 @@
           }
         },
         "created_at": {
-          "$ref": "../definitions/ReadOnlyTimestamp.json"
+          "$ref": "../includes/read-only-timestamp.json"
         },
         "updated_at": {
-          "$ref": "../definitions/ReadOnlyTimestamp.json"
+          "$ref": "../includes/read-only-timestamp.json"
         },
         "synced_at": {
-          "$ref": "../definitions/ReadOnlyTimestamp.json"
+          "$ref": "../includes/read-only-timestamp.json"
         }
       }
     },
@@ -119,7 +119,7 @@
                     "$ref": "../types/ServiceOption.json"
                   },
                   "id": {
-                    "$ref": "../definitions/Uuid.json"
+                    "$ref": "../includes/uuid.json"
                   }
                 }
               }
@@ -142,7 +142,7 @@
                   "$ref": "../types/Shipment.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },
@@ -173,7 +173,7 @@
                   "$ref": "../types/Shop.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },
@@ -205,7 +205,7 @@
                   "$ref": "../types/Status.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },
@@ -236,7 +236,7 @@
                   "$ref": "../types/Service.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },
@@ -267,7 +267,7 @@
                   "$ref": "../types/Contract.json"
                 },
                 "id": {
-                  "$ref": "../definitions/Uuid.json"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             }
@@ -291,7 +291,7 @@
                     "$ref": "../types/File.json"
                   },
                   "id": {
-                    "$ref": "../definitions/Uuid.json"
+                    "$ref": "../includes/uuid.json"
                   }
                 }
               }
