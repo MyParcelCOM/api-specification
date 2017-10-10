@@ -96,6 +96,11 @@
     },
     "relationships": {
       "type": "object",
+      "required": [
+        "shop",
+        "service",
+        "contract"
+      ],
       "properties": {
         "service_options": {
           "type": "object",
@@ -242,6 +247,27 @@
                 "related": {
                   "type": "string",
                   "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "contract": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Contract.json"
+                },
+                "id": {
+                  "$ref": "../definitions/Uuid.json"
                 }
               }
             }
