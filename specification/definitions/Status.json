@@ -23,8 +23,18 @@
       "additionalProperties": false,
       "properties": {
         "code": {
-          "type": "number",
-          "example": 123
+          "type": "string",
+          "enum": [
+            "shipment_concept",
+            "shipment_registered",
+            "shipment_at_carrier",
+            "shipment_at_sorting",
+            "shipment_at_courier",
+            "shipment_delivered",
+            "shipment_inactive",
+            "shipment_failed"
+          ],
+          "example": "shipment_delivered"
         },
         "resource": {
           "type": "string",
