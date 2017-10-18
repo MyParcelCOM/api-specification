@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo -e "\033[0;30;47m Starting containers \033[0m"
+${COMPOSE} up -d

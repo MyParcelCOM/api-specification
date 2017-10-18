@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+if [ "${RUNNING}" == "" ]; then
+  echo -e "\033[0;97;101m Container 'validator' is down \033[0m" >&2
+  exit 1
+fi
+
+${ROOT_DIR}/mp/bundle
+
+echo -e "\033[0;30;47m Validating spec \033[0m"
+MESSAGES=$(${COMPOSE} exec validator curl -X POST -d @swagger.json -H 'Content-Type:application/json' http://localhost:8080/debug)
+
+if [ "${MESSAGES}" == "{}" ]; then
+  echo -e "\033[0;30;42m Valid \033[0m"
+else
+  echo -e "\033[0;97;101m Invalid \033[0m"
+
+  if hash jq 2>/dev/null; then
+    echo -e ${MESSAGES} | jq '.'
+  else
+    echo -e ${MESSAGES}
+  fi
+fi

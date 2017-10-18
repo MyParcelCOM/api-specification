@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo -e "\033[0;30;47m Bundling spec \033[0m"
+${COMPOSE} run --rm bundler ash -c "
+mkdir -p /opt/dist
+json-refs resolve schema.json -f > /opt/spec/dist/swagger.json
+"
+
+if [ "$(uname -s)" == "Linux" ]; then
+  echo -e "\033[0;30;47m Fixing file ownership for Linux \033[0m"
+  ${COMPOSE} run --rm bundler chown -R ${USER_ID}:${GROUP_ID} /opt/spec/dist
+fi
+
+echo -e "\033[0;30;47m Injecting vars \033[0m"
+${COMPOSE} run --rm bundler ash -c "
+sed -i 's/\$SANDBOX_HOST/${SANDBOX_HOST}/' //opt/spec/dist/swagger.json
+sed -i 's/\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/' //opt/spec/dist/swagger.json
+sed -i 's/\$OAUTH_HOST/${OAUTH_HOST}/' //opt/spec/dist/swagger.json
+sed -i 's/\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/' //opt/spec/dist/swagger.json
+"
