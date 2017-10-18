@@ -28,6 +28,65 @@
       }
     }
   },
+  "patch": {
+    "tags": [
+      "SystemMessages"
+    ],
+    "summary": "Update a system message by id.",
+    "description": "This endpoint updates the system message with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "system_message_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the system message."
+      },
+      {
+        "in": "body",
+        "name": "system-message",
+        "description": "The system message object with attributes to be updated.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/SystemMessage.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                },
+                "attributes": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "$ref": "../properties/SystemMessage.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Updated the system message.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/SystemMessage"
+            }
+          }
+        }
+      }
+    }
+  },
   "delete": {
     "tags": [
       "SystemMessages"
