@@ -1,0 +1,20 @@
+{
+  "level": {
+    "type": "string",
+    "enum": [
+      "info",
+      "success",
+      "warning",
+      "error"
+    ],
+    "example": "info"
+  },
+  "filter": {
+    "type": "string",
+    "example": "shipment"
+  },
+  "content": {
+    "type": "string",
+    "example": "Information regarding shipments"
+  }
+}

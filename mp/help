@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo -e "\033[0;30;47m Available commands \033[0m"
+ls -p ${ROOT_DIR}/mp | grep -v '/'
+
+echo -e "\033[0;30;47m Available docker-compose commands \033[0m"
+echo "https://docs.docker.com/compose/reference"

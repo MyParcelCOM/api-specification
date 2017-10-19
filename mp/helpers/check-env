@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+if [ ! -f ${ROOT_DIR}/.env ]; then
+  if [ ! -f ${ROOT_DIR}/.env.dist ]; then
+    echo -e "\033[0;97;101m Unable to locate .env.dist file \033[0m" >&2
+    exit 1
+  fi
+
+  cp -a ${ROOT_DIR}/.env.dist ${ROOT_DIR}/.env
+
+  # Add current user and group to .env file, with root as fallback.
+  echo "
+USER_ID=${UID-0}
+GROUP_ID=${GROUPS-0}
+" >> ${ROOT_DIR}/.env
+
+  echo -e "\033[0;30;47m .env file has been created \033[0m"
+  echo -e "\033[0;97;103m set GULP_MODE=watch for development environments \033[0m" >&2
+fi
+
+# Check if .env.dist file contains variables not present in .env file.
+cat .env.dist | while read -r LINE; do
+  KEY=$(cut -d '=' -f1 <<< ${LINE})
+  FOUND=$(cat .env | grep -F "${KEY}=")
+  if [ "${FOUND}" == "" ]; then
+    echo -e "\033[0;30;47m .env.dist has new variables \033[0m"
+    echo "${KEY}"
+    echo -e "\033[0;97;101m please update your .env file and rebuild containers \033[0m" >&2
+    exit 1
+  fi
+done

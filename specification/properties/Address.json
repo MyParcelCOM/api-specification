@@ -1,0 +1,52 @@
+{
+  "street_1": {
+    "type": "string",
+    "example": "Some road"
+  },
+  "street_2": {
+    "type": "string",
+    "example": "Room 3"
+  },
+  "street_number": {
+    "type": "number",
+    "example": 17
+  },
+  "street_number_suffix": {
+    "type": "string",
+    "example": "A"
+  },
+  "postal_code": {
+    "type": "string",
+    "example": "1GL HF1"
+  },
+  "city": {
+    "type": "string",
+    "example": "Cardiff"
+  },
+  "region_code": {
+    "type": "string",
+    "pattern": "[A-Z]{3}",
+    "example": "CRF"
+  },
+  "country_code": {
+    "type": "string",
+    "pattern": "[A-Z]{2}",
+    "example": "GB"
+  },
+  "person": {
+    "type": "string",
+    "example": "John Doe"
+  },
+  "company": {
+    "type": "string",
+    "example": "Acme Jewelry Co."
+  },
+  "email": {
+    "type": "string",
+    "example": "john@doe.com"
+  },
+  "phone_number": {
+    "type": "string",
+    "example": "+31 234 567 890"
+  }
+}

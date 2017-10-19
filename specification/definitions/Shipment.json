@@ -21,10 +21,28 @@
       "additionalProperties": false,
       "properties": {
         "recipient_address": {
-          "$ref": "#/definitions/AddressAttributes"
+          "type": "object",
+          "required": [
+            "street_1",
+            "city",
+            "country_code"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "$ref": "../properties/Address.json"
+          }
         },
         "sender_address": {
-          "$ref": "#/definitions/AddressAttributes"
+          "type": "object",
+          "required": [
+            "street_1",
+            "city",
+            "country_code"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "$ref": "../properties/Address.json"
+          }
         },
         "pickup_location": {
           "type": "object",
@@ -34,7 +52,16 @@
               "example": "123456"
             },
             "address": {
-              "$ref": "#/definitions/AddressAttributes"
+              "type": "object",
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "$ref": "../properties/Address.json"
+              }
             }
           }
         },
