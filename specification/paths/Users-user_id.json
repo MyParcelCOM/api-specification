@@ -27,5 +27,64 @@
         }
       }
     }
+  },
+  "patch": {
+    "tags": [
+      "Users"
+    ],
+    "summary": "Update a user by id.",
+    "description": "This endpoint updates the user with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "user_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the user."
+      },
+      {
+        "in": "body",
+        "name": "user",
+        "description": "The user object with attributes to be updated.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/User.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                },
+                "attributes": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "$ref": "../properties/User.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "The user is updated.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    }
   }
 }
