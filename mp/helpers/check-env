@@ -15,7 +15,6 @@ GROUP_ID=${GROUPS-0}
 " >> ${ROOT_DIR}/.env
 
   echo -e "\033[0;30;47m .env file has been created \033[0m"
-  echo -e "\033[0;97;103m set GULP_MODE=watch for development environments \033[0m" >&2
 fi
 
 # Check if .env.dist file contains variables not present in .env file.

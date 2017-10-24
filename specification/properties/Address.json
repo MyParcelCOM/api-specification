@@ -33,9 +33,13 @@
     "pattern": "[A-Z]{2}",
     "example": "GB"
   },
-  "person": {
+  "first_name": {
     "type": "string",
-    "example": "John Doe"
+    "example": "John"
+  },
+  "last_name": {
+    "type": "string",
+    "example": "Doe"
   },
   "company": {
     "type": "string",

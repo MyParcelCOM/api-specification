@@ -85,7 +85,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Created the user.",
+        "description": "The user is created.",
         "schema": {
           "type": "object",
           "properties": {
