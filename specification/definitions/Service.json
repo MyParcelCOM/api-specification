@@ -139,9 +139,9 @@
           "type": "string",
           "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         },
-        "prices": {
+        "contracts": {
           "type": "string",
-          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/prices"
+          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts"
         }
       }
     }
