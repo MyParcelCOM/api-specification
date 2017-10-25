@@ -20,23 +20,7 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "username": {
-          "type": "string",
-          "example": "johndoe"
-        },
-        "email": {
-          "type": "string",
-          "example": "john@doe.com"
-        },
-        "status": {
-          "type": "string",
-          "enum": [
-            "pending",
-            "active",
-            "blocked"
-          ],
-          "example": "active"
-        }
+        "$ref": "../properties/User.json"
       }
     }
   }

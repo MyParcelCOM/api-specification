@@ -75,7 +75,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Updated the system message.",
+        "description": "The system message is updated.",
         "schema": {
           "type": "object",
           "properties": {
