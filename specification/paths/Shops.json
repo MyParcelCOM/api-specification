@@ -60,5 +60,41 @@
         }
       }
     }
+  },
+  "post": {
+    "tags": [
+      "Shops"
+    ],
+    "summary": "Create a new shop.",
+    "description": "This endpoint creates a new shop with the posted data.",
+    "parameters": [
+      {
+        "in": "body",
+        "name": "shop",
+        "description": "The shop object to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Shop"
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "The shop is created.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Shop"
+            }
+          }
+        }
+      }
+    }
   }
 }
