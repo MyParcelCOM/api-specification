@@ -27,5 +27,64 @@
         }
       }
     }
+  },
+  "patch": {
+    "tags": [
+      "Shops"
+    ],
+    "summary": "Update a shop by id.",
+    "description": "This endpoint updates the shop with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
+      {
+        "in": "body",
+        "name": "shop",
+        "description": "The shop object with attributes to be updated.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Shop.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                },
+                "attributes": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "$ref": "../properties/Shop.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "The shop is updated.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Shop"
+            }
+          }
+        }
+      }
+    }
   }
 }
