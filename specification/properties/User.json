@@ -1,17 +1,4 @@
 {
-  "username": {
-    "type": "string",
-    "example": "johndoe"
-  },
-  "status": {
-    "type": "string",
-    "enum": [
-      "pending",
-      "active",
-      "blocked"
-    ],
-    "example": "active"
-  },
   "first_name": {
     "type": "string",
     "example": "John"
@@ -31,5 +18,17 @@
   "phone_number": {
     "type": "string",
     "example": "+31 234 567 890"
+  },
+  "status": {
+    "type": "string",
+    "enum": [
+      "pending",
+      "active",
+      "blocked"
+    ],
+    "example": "active"
+  },
+  "created_at": {
+    "$ref": "../includes/read-only-timestamp.json"
   }
 }
