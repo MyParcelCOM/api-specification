@@ -15,7 +15,6 @@
     "attributes": {
       "type": "object",
       "required": [
-        "username",
         "email"
       ],
       "additionalProperties": false,

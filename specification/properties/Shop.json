@@ -26,5 +26,8 @@
     "properties": {
       "$ref": "../properties/Address.json"
     }
+  },
+  "created_at": {
+    "$ref": "../includes/read-only-timestamp.json"
   }
 }
