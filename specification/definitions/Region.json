@@ -34,9 +34,6 @@
         "name": {
           "type": "string",
           "example": "The Netherlands"
-        },
-        "parent_id": {
-          "$ref": "../includes/uuid.json"
         }
       }
     },
