@@ -84,8 +84,8 @@
       }
     ],
     "responses": {
-      "200": {
-        "description": "Created the address.",
+      "201": {
+        "description": "The address is created.",
         "schema": {
           "type": "object",
           "properties": {

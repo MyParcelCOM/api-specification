@@ -100,7 +100,7 @@
       }
     ],
     "responses": {
-      "200": {
+      "201": {
         "description": "The webhook subscription is created.",
         "schema": {
           "type": "object",

@@ -84,7 +84,7 @@
       }
     ],
     "responses": {
-      "200": {
+      "201": {
         "description": "The user is created.",
         "schema": {
           "type": "object",

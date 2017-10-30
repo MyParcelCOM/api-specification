@@ -84,7 +84,7 @@
       }
     ],
     "responses": {
-      "200": {
+      "201": {
         "description": "The system message is created.",
         "schema": {
           "type": "object",
