@@ -15,7 +15,11 @@
     "attributes": {
       "type": "object",
       "required": [
-        "email"
+        "first_name",
+        "last_name",
+        "company",
+        "email",
+        "phone_number"
       ],
       "additionalProperties": false,
       "properties": {

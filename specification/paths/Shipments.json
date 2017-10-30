@@ -84,7 +84,7 @@
       }
     ],
     "responses": {
-      "200": {
+      "201": {
         "description": "The shipment is created.",
         "schema": {
           "type": "object",
