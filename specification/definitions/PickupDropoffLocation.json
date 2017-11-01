@@ -71,7 +71,6 @@
               }
             }
           },
-          "minItems": 7,
           "maxItems": 7
         },
         "position": {
