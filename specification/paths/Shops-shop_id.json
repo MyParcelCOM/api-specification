@@ -66,6 +66,9 @@
                   "properties": {
                     "$ref": "../properties/Shop.json"
                   }
+                },
+                "relationships": {
+                  "$ref": "../relationships/Shop.json"
                 }
               }
             }
