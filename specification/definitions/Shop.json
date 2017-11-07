@@ -14,9 +14,7 @@
     "attributes": {
       "type": "object",
       "required": [
-        "name",
-        "billing_address",
-        "return_address"
+        "name"
       ],
       "additionalProperties": false,
       "properties": {
@@ -24,39 +22,7 @@
       }
     },
     "relationships": {
-      "type": "object",
-      "properties": {
-        "region": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "type": "object",
-              "required": [
-                "type",
-                "id"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "$ref": "../types/Region.json"
-                },
-                "id": {
-                  "$ref": "../includes/uuid.json"
-                }
-              }
-            },
-            "links": {
-              "type": "object",
-              "properties": {
-                "related": {
-                  "type": "string",
-                  "example": "$base_url/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                }
-              }
-            }
-          }
-        }
-      }
+      "$ref": "../relationships/Shop.json"
     }
   }
 }
