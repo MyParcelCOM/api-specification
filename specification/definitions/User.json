@@ -25,6 +25,15 @@
       "properties": {
         "$ref": "../properties/User.json"
       }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "shop_name": {
+          "type": "string",
+          "example": "my.webshop.com"
+        }
+      }
     }
   }
 }
