@@ -21,6 +21,7 @@
           }
         },
         "links": {
+          "readOnly": true,
           "type": "object",
           "properties": {
             "related": {

@@ -59,6 +59,7 @@
               }
             },
             "links": {
+              "readOnly": true,
               "type": "object",
               "properties": {
                 "related": {
@@ -89,6 +90,7 @@
               }
             },
             "links": {
+              "readOnly": true,
               "type": "object",
               "properties": {
                 "related": {
@@ -119,6 +121,7 @@
               }
             },
             "links": {
+              "readOnly": true,
               "type": "object",
               "properties": {
                 "related": {
