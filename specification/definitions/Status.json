@@ -85,6 +85,7 @@
       }
     },
     "links": {
+      "readOnly": true,
       "type": "object",
       "required": [
         "self"
