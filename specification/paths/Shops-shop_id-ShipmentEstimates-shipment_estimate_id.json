@@ -15,20 +15,20 @@
       },
       {
         "in": "path",
-        "name": "shop_estimate_id",
+        "name": "shipment_estimate_id",
         "type": "string",
         "required": true,
-        "description": "Id of the shop estimate."
+        "description": "Id of the shipment estimate."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the shop estimate.",
+        "description": "Retrieved the shipment estimate.",
         "schema": {
           "type": "object",
           "properties": {
             "data": {
-              "$ref": "#/definitions/ShopEstimate"
+              "$ref": "#/definitions/ShipmentEstimate"
             }
           }
         }

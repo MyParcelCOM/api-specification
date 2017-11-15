@@ -16,7 +16,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the shop estimate(s).",
+        "description": "Retrieved the shipment estimate(s).",
         "schema": {
           "type": "object",
           "required": [
@@ -29,7 +29,7 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ShopEstimate"
+                "$ref": "#/definitions/ShipmentEstimate"
               }
             },
             "meta": {
@@ -64,6 +64,53 @@
                   "example": "$base_url/shop-estimates?page[number]=13&page[size]=30"
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Shops"
+    ],
+    "summary": "Create a new shipment estimate.",
+    "description": "This endpoint creates a new shipment estimate with the posted data.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
+      {
+        "in": "body",
+        "name": "estimate",
+        "description": "The shipment estimate object to be created.",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ShipmentEstimate"
+            }
+          }
+        }
+      }
+    ],
+    "responses": {
+      "201": {
+        "description": "The shipment estimate is created.",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ShipmentEstimate"
             }
           }
         }

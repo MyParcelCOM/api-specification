@@ -1,5 +1,0 @@
-{
-  "type": "string",
-  "pattern": "^shop-estimates$",
-  "example": "shop-estimates"
-}

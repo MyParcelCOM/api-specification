@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "^shipment-estimates$",
+  "example": "shipment-estimates"
+}
