@@ -56,6 +56,12 @@
   "/shops/{shop_id}/webhook-subscriptions/{webhook_subscription_id}": {
     "$ref": "./paths/Shops-shop_id-WebhookSubscriptions-webhook_subscription_id.json"
   },
+  "/shop-estimates": {
+    "$ref": "./paths/ShopEstimates.json"
+  },
+  "/shop-estimates/{shop_estimate_id}": {
+    "$ref": "./paths/ShopEstimates-shop_estimate_id.json"
+  },
   "/statuses": {
     "$ref": "./paths/Statuses.json"
   },

@@ -1,43 +1,34 @@
 {
   "type": "object",
   "required": [
-    "type"
+    "type",
+    "attributes"
   ],
+  "additionalProperties": false,
   "properties": {
     "type": {
-      "$ref": "../types/Contract.json"
+      "$ref": "../types/ShopEstimate.json"
     },
     "id": {
       "$ref": "../includes/read-only-uuid.json"
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "estimate"
+      ],
       "additionalProperties": false,
       "properties": {
-        "groups": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ServiceGroup"
-          }
-        },
-        "options": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ServiceOption"
-          }
-        },
-        "insurances": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ServiceInsurance"
-          }
+        "estimate": {
+          "type": "number",
+          "example": "3000"
         }
       }
     },
     "relationships": {
       "type": "object",
       "properties": {
-        "service": {
+        "shop": {
           "type": "object",
           "properties": {
             "data": {
@@ -49,7 +40,7 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "$ref": "../types/Service.json"
+                  "$ref": "../types/Shop.json"
                 },
                 "id": {
                   "$ref": "../includes/uuid.json"
@@ -62,13 +53,13 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
           }
         },
-        "carrier": {
+        "region": {
           "type": "object",
           "properties": {
             "data": {
@@ -80,10 +71,13 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "$ref": "../types/Carrier.json"
+                  "type": "string",
+                  "pattern": "^regions$",
+                  "example": "regions"
                 },
                 "id": {
-                  "$ref": "../includes/uuid.json"
+                  "type": "string",
+                  "example": "c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             },
@@ -93,11 +87,24 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "http://localhost:8080/v1/regions/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
           }
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/shop-estimates/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }

@@ -41,6 +41,9 @@
   "Shop": {
     "$ref": "./definitions/Shop.json"
   },
+  "ShopEstimate": {
+    "$ref": "./definitions/ShopEstimate.json"
+  },
   "Status": {
     "$ref": "./definitions/Status.json"
   },

@@ -1,0 +1,31 @@
+{
+  "get": {
+    "tags": [
+      "ShopEstimates"
+    ],
+    "summary": "Get a shop estimate by id.",
+    "description": "This endpoint retrieves the shop estimate with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shop_estimate_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop estimate."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the shop estimate.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ShopEstimate"
+            }
+          }
+        }
+      }
+    }
+  }
+}
