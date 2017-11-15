@@ -45,23 +45,23 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "$base_url/shop-estimates?page[number]=3&page[size]=30"
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/shipment-estimates?page[number]=3&page[size]=30"
                 },
                 "first": {
                   "type": "string",
-                  "example": "$base_url/shop-estimates?page[number]=1&page[size]=30"
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/shipment-estimates?page[number]=1&page[size]=30"
                 },
                 "prev": {
                   "type": "string",
-                  "example": "$base_url/shop-estimates?page[number]=2&page[size]=30"
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/shipment-estimates?page[number]=2&page[size]=30"
                 },
                 "next": {
                   "type": "string",
-                  "example": "$base_url/shop-estimates?page[number]=4&page[size]=30"
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/shipment-estimates?page[number]=4&page[size]=30"
                 },
                 "last": {
                   "type": "string",
-                  "example": "$base_url/shop-estimates?page[number]=13&page[size]=30"
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/shipment-estimates?page[number]=13&page[size]=30"
                 }
               }
             }

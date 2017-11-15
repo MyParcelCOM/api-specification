@@ -19,7 +19,7 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "estimate": {
+        "amount": {
           "type": "number",
           "example": "3000"
         }
@@ -89,19 +89,6 @@
               }
             }
           }
-        }
-      }
-    },
-    "links": {
-      "readOnly": true,
-      "type": "object",
-      "required": [
-        "self"
-      ],
-      "properties": {
-        "self": {
-          "type": "string",
-          "example": "$base_url/shop-estimates/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }
