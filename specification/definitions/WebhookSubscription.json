@@ -25,6 +25,37 @@
     "relationships": {
       "type": "object",
       "properties": {
+        "shop": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Shop.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
         "webhook": {
           "type": "object",
           "required": [

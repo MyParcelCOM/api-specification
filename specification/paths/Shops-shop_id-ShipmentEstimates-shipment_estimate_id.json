@@ -1,11 +1,18 @@
 {
   "get": {
     "tags": [
-      "ShopEstimates"
+      "Shops"
     ],
-    "summary": "Get a shop estimate by id.",
-    "description": "This endpoint retrieves the shop estimate with the supplied id.",
+    "summary": "Get a shipment estimate by id.",
+    "description": "This endpoint retrieves the shipment estimate with the supplied id.",
     "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      },
       {
         "in": "path",
         "name": "shop_estimate_id",

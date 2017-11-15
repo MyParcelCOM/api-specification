@@ -1,10 +1,19 @@
 {
   "get": {
     "tags": [
-      "ShopEstimates"
+      "Shops"
     ],
-    "summary": "Get all available shop estimates for your account.",
-    "description": "This endpoint retrieves available shop estimates for your account.",
+    "summary": "Get all available shipment estimates for your shop.",
+    "description": "This endpoint retrieves available shipment estimates for your shop.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shop_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shop."
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the shop estimate(s).",

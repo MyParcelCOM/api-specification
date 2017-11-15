@@ -71,13 +71,10 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "type": "string",
-                  "pattern": "^regions$",
-                  "example": "regions"
+                  "$ref": "../types/Region.json"
                 },
                 "id": {
-                  "type": "string",
-                  "example": "c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "$ref": "../includes/uuid.json"
                 }
               }
             },
