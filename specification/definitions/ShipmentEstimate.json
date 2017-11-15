@@ -15,7 +15,7 @@
     "attributes": {
       "type": "object",
       "required": [
-        "estimate"
+        "amount"
       ],
       "additionalProperties": false,
       "properties": {
