@@ -50,6 +50,12 @@
   "/shops/{shop_id}": {
     "$ref": "./paths/Shops-shop_id.json"
   },
+  "/shops/{shop_id}/shipment-estimates": {
+    "$ref": "./paths/Shops-shop_id-ShipmentEstimates.json"
+  },
+  "/shops/{shop_id}/shipment-estimates/{shipment_estimate_id}": {
+    "$ref": "./paths/Shops-shop_id-ShipmentEstimates-shipment_estimate_id.json"
+  },
   "/shops/{shop_id}/webhook-subscriptions": {
     "$ref": "./paths/Shops-shop_id-WebhookSubscriptions.json"
   },
