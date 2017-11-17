@@ -5,6 +5,36 @@
     ],
     "summary": "Get all the regions.",
     "description": "This endpoint retrieves regions.",
+    "parameters": [
+      {
+        "in": "query",
+        "name": "filter[parent]",
+        "type": "string",
+        "required": false,
+        "description": "Comma separated string of parent ids to filter on."
+      },
+      {
+        "in": "query",
+        "name": "filter[country_code]",
+        "type": "string",
+        "required": false,
+        "description": "Comma separated string of country codes to filter on."
+      },
+      {
+        "in": "query",
+        "name": "filter[region_code]",
+        "type": "string",
+        "required": false,
+        "description": "Comma separated string of region codes to filter on."
+      },
+      {
+        "in": "query",
+        "name": "filter[name]",
+        "type": "string",
+        "required": false,
+        "description": "Name of the region to filter on."
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the regions(s).",
