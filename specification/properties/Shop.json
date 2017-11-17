@@ -9,7 +9,7 @@
   },
   "iban": {
     "type": "string",
-    "example": "NL91 ABNA 0417 1643 00"
+    "example": "NL99 ABNA 0123 4567 89"
   },
   "billing_address": {
     "type": "object",
