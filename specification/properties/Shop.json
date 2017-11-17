@@ -3,6 +3,14 @@
     "type": "string",
     "example": "MyParcel.com"
   },
+  "coc": {
+    "type": "string",
+    "example": "63190133"
+  },
+  "iban": {
+    "type": "string",
+    "example": "NL91 ABNA 0417 1643 00"
+  },
   "billing_address": {
     "type": "object",
     "required": [
