@@ -31,6 +31,48 @@
           }
         }
       }
+    },
+    "default_product": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "required": [
+            "type",
+            "id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$ref": "../types/Product.json"
+            },
+            "id": {
+              "$ref": "../includes/uuid.json"
+            }
+          }
+        }
+      }
+    },
+    "default_contract": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "required": [
+            "type",
+            "id"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$ref": "../types/Contract.json"
+            },
+            "id": {
+              "$ref": "../includes/uuid.json"
+            }
+          }
+        }
+      }
     }
   }
 }

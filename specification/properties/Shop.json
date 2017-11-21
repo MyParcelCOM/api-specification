@@ -29,7 +29,7 @@
     "required": [
       "street_1",
       "city",
-      "country_code"
+      "country_code",
     ],
     "additionalProperties": false,
     "properties": {
