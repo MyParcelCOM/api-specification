@@ -8,6 +8,10 @@
     "description": ""
   },
   {
+    "name": "Invitations",
+    "description": ""
+  },
+  {
     "name": "PasswordResets",
     "description": ""
   },

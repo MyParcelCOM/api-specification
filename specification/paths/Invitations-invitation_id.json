@@ -1,0 +1,31 @@
+{
+  "get": {
+    "tags": [
+      "Invitations"
+    ],
+    "summary": "Get a invitation by id.",
+    "description": "This endpoint retrieves the invitation with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "invitation_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the invitation."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the invitation.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Invitation"
+            }
+          }
+        }
+      }
+    }
+  }
+}

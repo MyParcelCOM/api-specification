@@ -11,6 +11,12 @@
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
   },
+  "/invitations": {
+    "$ref": "./paths/Invitations.json"
+  },
+  "/invitations/{invitation_id}": {
+    "$ref": "./paths/Invitations-invitation_id.json"
+  },
   "/password-resets": {
     "$ref": "./paths/PasswordResets.json"
   },

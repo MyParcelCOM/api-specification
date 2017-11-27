@@ -14,6 +14,9 @@
   "File": {
     "$ref": "./definitions/File.json"
   },
+  "Invitation": {
+    "$ref": "./definitions/Invitation.json"
+  },
   "PasswordReset": {
     "$ref": "./definitions/PasswordReset.json"
   },
