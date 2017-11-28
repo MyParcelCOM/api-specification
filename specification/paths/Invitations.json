@@ -65,8 +65,8 @@
     "tags": [
       "Invitations"
     ],
-    "summary": "Create a invitation.",
-    "description": "This endpoint creates an new invitation with the posted data. <strong>A invitation will be sent via email.</strong> ",
+    "summary": "Create an invitation.",
+    "description": "This endpoint creates a new invitation with the posted data. <strong>An invitation will be sent via email.</strong> ",
     "parameters": [
       {
         "in": "body",
