@@ -3,7 +3,7 @@
     "tags": [
       "Invitations"
     ],
-    "summary": "Get a invitation by id.",
+    "summary": "Get an invitation by id.",
     "description": "This endpoint retrieves the invitation with the supplied id.",
     "parameters": [
       {
