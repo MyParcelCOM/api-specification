@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/Invitation.json"
+    },
+    "id": {
+      "$ref": "../includes/read-only-uuid.json"
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "James@doe.com"
+        },
+        "name": {
+          "type": "string",
+          "example": "James Jonson"
+        },
+        "message": {
+          "type": "string",
+          "example": "Hi James, this is your invitation to join myparcel.com"
+        }
+      }
+    }
+  }
+}
