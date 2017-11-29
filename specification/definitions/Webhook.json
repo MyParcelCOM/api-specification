@@ -29,6 +29,19 @@
           "example": "Whenever a shipment has a status change, this webhook is called."
         }
       }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/webhooks/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
     }
   }
 }

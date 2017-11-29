@@ -14,19 +14,37 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "email",
+        "name",
+        "message"
+      ],
       "additionalProperties": false,
       "properties": {
         "email": {
           "type": "string",
-          "example": "James@doe.com"
+          "example": "james@doe.com"
         },
         "name": {
           "type": "string",
-          "example": "James Jonson"
+          "example": "James Johnson"
         },
         "message": {
           "type": "string",
           "example": "Hi James, this is your invitation to join myparcel.com"
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/invitations/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }

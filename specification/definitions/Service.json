@@ -138,6 +138,10 @@
     "links": {
       "readOnly": true,
       "type": "object",
+      "required": [
+        "self",
+        "contracts"
+      ],
       "properties": {
         "self": {
           "type": "string",

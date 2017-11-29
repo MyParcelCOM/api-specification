@@ -118,8 +118,16 @@
       }
     ],
     "responses": {
-      "202": {
-        "description": "A new invitation will be sent to the specified user via email."
+      "201": {
+        "description": "The invitation is created and will be sent to the specified user via email.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/Invitation"
+            }
+          }
+        }
       }
     }
   }
