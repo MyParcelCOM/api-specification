@@ -23,6 +23,19 @@
     },
     "relationships": {
       "$ref": "../relationships/Shop.json"
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
     }
   }
 }

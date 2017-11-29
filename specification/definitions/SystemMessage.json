@@ -22,6 +22,19 @@
       "properties": {
         "$ref": "../properties/SystemMessage.json"
       }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/system-messages/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
     }
   }
 }
