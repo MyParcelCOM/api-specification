@@ -110,6 +110,82 @@
             }
           }
         },
+        "customs": {
+          "type": "object",
+          "properties": {
+            "package_type": {
+              "type": "string",
+              "enum": [
+                "merchandise",
+                "sample_merchandise",
+                "returned_merchandise",
+                "documents",
+                "gifts"
+              ],
+              "example": "merchandise"
+            },
+            "invoice": {
+              "type": "string",
+              "example": "9000"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "sku",
+                  "description",
+                  "item_value",
+                  "quantity",
+                  "hs_code",
+                  "origin_country_code"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "sku": {
+                    "type": "string",
+                    "example": "123456789"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Kittens"
+                  },
+                  "item_value": {
+                    "$ref": "../includes/price.json"
+                  },
+                  "quantity": {
+                    "type": "string",
+                    "example": "2"
+                  },
+                  "hs_code": {
+                    "type": "string",
+                    "example": "23091090"
+                  },
+                  "origin_country_code": {
+                    "type": "string",
+                    "example": "NL"
+                  }
+                }
+              }
+            },
+            "non_delivery": {
+              "type": "string",
+              "enum": [
+                "return",
+                "abandon"
+              ],
+              "example": "return"
+            },
+            "incoterm": {
+              "type": "string",
+              "enum": [
+                "DDU",
+                "DDP"
+              ],
+              "example": "DDU"
+            }
+          }
+        },
         "created_at": {
           "$ref": "../includes/read-only-timestamp.json"
         },
