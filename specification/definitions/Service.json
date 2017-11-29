@@ -28,9 +28,10 @@
         "package_type": {
           "type": "string",
           "enum": [
-            "parcel",
             "letter",
-            "letterbox"
+            "letterbox",
+            "parcel",
+            "unstamped"
           ],
           "example": "parcel"
         }
