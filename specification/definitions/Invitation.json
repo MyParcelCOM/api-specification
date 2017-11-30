@@ -32,6 +32,15 @@
         "message": {
           "type": "string",
           "example": "Hi James, this is your invitation to join myparcel.com"
+        },
+        "status": {
+          "readOnly": true,
+          "type": "string",
+          "enum": [
+            "pending",
+            "accepted"
+          ],
+          "example": "pending"
         }
       }
     },
