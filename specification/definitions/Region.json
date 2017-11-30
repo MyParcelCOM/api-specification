@@ -21,8 +21,7 @@
       "additionalProperties": false,
       "properties": {
         "country_code": {
-          "type": "string",
-          "example": "NL"
+          "$ref": "../includes/country-code.json"
         },
         "region_code": {
           "type": "string",
