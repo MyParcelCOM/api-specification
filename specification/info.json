@@ -1,5 +1,5 @@
 {
-  "version": "0.2.22",
+  "version": "0.2.24",
   "title": "MyParcel.com API Specification",
   "description": "**Introduction**<br>This is the API reference for MyParcel.com implementing the [Swagger specification](https://swagger.io/specification) according to [JSON API](http://jsonapi.org) conventions.<br>For more information visit our [API documentation](https://docs.myparcel.com).",
   "termsOfService": "https://www.myparcel.com/terms",
