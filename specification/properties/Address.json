@@ -29,9 +29,7 @@
     "example": "CRF"
   },
   "country_code": {
-    "type": "string",
-    "pattern": "[A-Z]{2}",
-    "example": "GB"
+    "$ref": "../includes/country-code.json"
   },
   "first_name": {
     "type": "string",
