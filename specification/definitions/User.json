@@ -32,6 +32,9 @@
         "shop_name": {
           "type": "string",
           "example": "my.webshop.com"
+        },
+        "invitation_id": {
+          "$ref": "../includes/uuid.json"
         }
       }
     },
