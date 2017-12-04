@@ -84,16 +84,8 @@
       }
     ],
     "responses": {
-      "201": {
-        "description": "The user is created.",
-        "schema": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/User"
-            }
-          }
-        }
+      "202": {
+        "description": "The user is created."
       }
     }
   }
