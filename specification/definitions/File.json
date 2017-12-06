@@ -15,12 +15,12 @@
     "attributes": {
       "type": "object",
       "required": [
-        "resource_type",
+        "document_type",
         "formats"
       ],
       "additionalProperties": false,
       "properties": {
-        "resource_type": {
+        "document_type": {
           "type": "string",
           "enum": [
             "label",

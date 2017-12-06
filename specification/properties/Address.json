@@ -24,9 +24,7 @@
     "example": "Cardiff"
   },
   "region_code": {
-    "type": "string",
-    "pattern": "[A-Z]{3}",
-    "example": "CRF"
+    "$ref": "../includes/region-code.json"
   },
   "country_code": {
     "$ref": "../includes/country-code.json"
@@ -44,8 +42,7 @@
     "example": "Acme Jewelry Co."
   },
   "email": {
-    "type": "string",
-    "example": "john@doe.com"
+    "$ref": "../includes/email.json"
   },
   "phone_number": {
     "type": "string",

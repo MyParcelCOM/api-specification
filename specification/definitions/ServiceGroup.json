@@ -30,7 +30,7 @@
             "max": {
               "type": "number",
               "example": 20
-            },
+            }
           }
         },
         "price": {

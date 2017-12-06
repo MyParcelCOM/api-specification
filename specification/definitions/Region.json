@@ -24,8 +24,7 @@
           "$ref": "../includes/country-code.json"
         },
         "region_code": {
-          "type": "string",
-          "example": "NH"
+          "$ref": "../includes/region-code.json"
         },
         "currency": {
           "$ref": "../includes/currency.json"

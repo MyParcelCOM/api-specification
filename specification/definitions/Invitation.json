@@ -27,8 +27,7 @@
           "example": "c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         },
         "email": {
-          "type": "string",
-          "example": "james@doe.com"
+          "$ref": "../includes/email.json"
         },
         "name": {
           "type": "string",

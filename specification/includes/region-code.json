@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "^[A-Z]{2,3}$",
+  "example": "NIR"
+}

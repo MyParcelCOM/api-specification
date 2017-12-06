@@ -9,9 +9,13 @@
     ],
     "example": "info"
   },
-  "filter": {
+  "resource_type": {
     "type": "string",
-    "example": "shipment"
+    "enum": [
+      "shipments",
+      "carriers"
+    ],
+    "example": "shipments"
   },
   "content": {
     "type": "string",

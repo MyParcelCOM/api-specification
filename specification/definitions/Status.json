@@ -16,7 +16,7 @@
       "type": "object",
       "required": [
         "code",
-        "resource",
+        "resource_type",
         "name",
         "description"
       ],
@@ -36,10 +36,9 @@
           ],
           "example": "shipment_delivered"
         },
-        "resource": {
+        "resource_type": {
           "type": "string",
           "enum": [
-            "system",
             "shipments"
           ],
           "example": "shipments"
