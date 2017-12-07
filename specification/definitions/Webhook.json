@@ -15,14 +15,19 @@
     "attributes": {
       "type": "object",
       "required": [
+        "code",
         "name",
         "description"
       ],
       "additionalProperties": false,
       "properties": {
+        "code": {
+          "type": "string",
+          "example": "shipment_status_update"
+        },
         "name": {
           "type": "string",
-          "example": "shipment_status_change"
+          "example": "Shipment status update"
         },
         "description": {
           "type": "string",

@@ -21,7 +21,8 @@
         "enum": [
           "application/vnd.api+json",
           "application/pdf",
-          "image/png"
+          "image/png",
+          "image/jpeg"
         ],
         "description": "You can set the file header to either receive a json response, or the physical files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`image/png`</li></ul>"
       }

@@ -98,8 +98,7 @@
                   "additionalProperties": false,
                   "properties": {
                     "email": {
-                      "type": "string",
-                      "example": "James@doe.com"
+                      "$ref": "../includes/email.json"
                     },
                     "name": {
                       "type": "string",

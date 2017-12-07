@@ -12,8 +12,7 @@
     "example": "Acme Jewelry Co."
   },
   "email": {
-    "type": "string",
-    "example": "john@doe.com"
+    "$ref": "../includes/email.json"
   },
   "phone_number": {
     "type": "string",
