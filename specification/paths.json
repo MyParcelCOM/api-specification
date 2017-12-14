@@ -50,6 +50,9 @@
   "/shipments/{shipment_id}/statuses": {
     "$ref": "./paths/Shipments-shipment_id-Statuses.json"
   },
+  "/shipments/{shipment_id}/statuses/{shipment_status_id}": {
+    "$ref": "./paths/Shipments-shipment_id-Statuses-shipment_status_id.json"
+  },
   "/shops": {
     "$ref": "./paths/Shops.json"
   },

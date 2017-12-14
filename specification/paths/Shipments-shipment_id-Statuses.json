@@ -29,7 +29,7 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Status"
+                "$ref": "#/definitions/ShipmentStatus"
               }
             },
             "meta": {
