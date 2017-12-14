@@ -37,9 +37,8 @@
     "relationships": {
       "type": "object",
       "required": [
-        "shop",
-        "service",
-        "contract"
+        "status",
+        "shipment"
       ],
       "properties": {
         "status": {
