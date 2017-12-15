@@ -1,0 +1,38 @@
+{
+  "get": {
+    "tags": [
+      "Shipments"
+    ],
+    "summary": "Get a shipment status by id.",
+    "description": "This endpoint retrieves the status with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "shipment_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shipment."
+      },
+      {
+        "in": "path",
+        "name": "shipment_status_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the shipment status."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the shipment status.",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ShipmentStatus"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -62,27 +62,6 @@
         }
       }
     },
-    "meta": {
-      "type": "object",
-      "properties": {
-        "resource_data": {
-          "type": "object",
-          "properties": {
-            "carrier_status_code": {
-              "type": "string",
-              "example": "9001"
-            },
-            "carrier_status_description": {
-              "type": "string",
-              "example": "Confirmed at destination"
-            },
-            "carrier_timestamp": {
-              "$ref": "../includes/read-only-timestamp.json"
-            }
-          }
-        }
-      }
-    },
     "links": {
       "readOnly": true,
       "type": "object",

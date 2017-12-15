@@ -1,0 +1,124 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "../types/ShipmentStatus.json"
+    },
+    "id": {
+      "$ref": "../includes/read-only-uuid.json"
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "carrier_status_code",
+        "carrier_status_description",
+        "carrier_timestamp"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "carrier_status_code": {
+          "type": "string",
+          "example": "9001"
+        },
+        "carrier_status_description": {
+          "type": "string",
+          "example": "Confirmed at destination"
+        },
+        "carrier_timestamp": {
+          "$ref": "../includes/read-only-timestamp.json"
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "required": [
+        "status",
+        "shipment"
+      ],
+      "properties": {
+        "status": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Status.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "shipment": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Shipment.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
+    }
+  }
+}
