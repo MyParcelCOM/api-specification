@@ -307,7 +307,7 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "$ref": "../types/Status.json"
+                  "$ref": "../types/ShipmentStatus.json"
                 },
                 "id": {
                   "$ref": "../includes/uuid.json"
