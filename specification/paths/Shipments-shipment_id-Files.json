@@ -12,6 +12,13 @@
         "type": "string",
         "required": true,
         "description": "Id of the shipment."
+      },
+      {
+        "in": "query",
+        "name": "filter[document_type]",
+        "type": "string",
+        "required": false,
+        "description": "The document type to filter by."
       }
     ],
     "responses": {
