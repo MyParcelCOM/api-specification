@@ -80,6 +80,16 @@
           "type": "string",
           "example": "3SABCD0123456789"
         },
+        "tracking_code": {
+          "readOnly": true,
+          "type": "string",
+          "example": "3SABCD0123456789"
+        },
+        "tracking_url": {
+          "readOnly": true,
+          "type": "string",
+          "example": "https://tracker.carrier.com/3SABCD0123456789"
+        },
         "weight": {
           "type": "number",
           "example": 24
