@@ -77,7 +77,43 @@
           "type": "object",
           "properties": {
             "data": {
-              "$ref": "#/definitions/User"
+              "type": "object",
+              "required": [
+                "type",
+                "attributes"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/User.json"
+                },
+                "attributes": {
+                  "type": "object",
+                  "required": [
+                    "first_name",
+                    "last_name",
+                    "company",
+                    "email",
+                    "phone_number"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "$ref": "../properties/User.json"
+                  }
+                },
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "shop_name": {
+                      "type": "string",
+                      "example": "my.webshop.com"
+                    },
+                    "invitation_id": {
+                      "$ref": "../includes/uuid.json"
+                    }
+                  }
+                }
+              }
             }
           }
         }
