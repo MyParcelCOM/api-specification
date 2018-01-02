@@ -21,7 +21,7 @@
       "properties": {
         "amount": {
           "type": "number",
-          "example": "3000"
+          "example": 3000
         }
       }
     },
