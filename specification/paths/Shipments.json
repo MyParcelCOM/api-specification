@@ -5,6 +5,14 @@
     ],
     "summary": "Get all the shipments.",
     "description": "This endpoint retrieves shipments.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "type": "string",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service, contract, service_options, status and files."
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the shipment(s).",
