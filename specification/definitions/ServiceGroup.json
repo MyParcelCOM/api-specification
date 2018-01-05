@@ -22,6 +22,11 @@
       "properties": {
         "weight": {
           "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
           "properties": {
             "min": {
               "type": "number",
@@ -29,7 +34,7 @@
             },
             "max": {
               "type": "number",
-              "example": 20
+              "example": 2000
             }
           }
         },
@@ -41,7 +46,7 @@
         },
         "step_size": {
           "type": "number",
-          "example": 1
+          "example": 100
         }
       }
     }

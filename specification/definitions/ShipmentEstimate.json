@@ -27,9 +27,11 @@
     },
     "relationships": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "shop": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -61,6 +63,7 @@
         },
         "region": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",

@@ -40,10 +40,12 @@
         "status",
         "shipment"
       ],
+      "additionalProperties": false,
       "properties": {
         "status": {
           "readOnly": true,
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -76,6 +78,7 @@
         "shipment": {
           "readOnly": true,
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
