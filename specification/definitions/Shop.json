@@ -4,6 +4,7 @@
     "type",
     "attributes"
   ],
+  "additionalProperties": false,
   "properties": {
     "type": {
       "$ref": "../types/Shop.json"

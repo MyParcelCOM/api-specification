@@ -24,6 +24,10 @@
     },
     "relationships": {
       "type": "object",
+      "required": [
+        "webhook"
+      ],
+      "additionalProperties": false,
       "properties": {
         "shop": {
           "type": "object",
@@ -72,8 +76,7 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "type": "string",
-                  "example": "webhooks"
+                  "$ref": "../types/Webhook.json"
                 },
                 "id": {
                   "$ref": "../includes/uuid.json"

@@ -122,6 +122,14 @@
         },
         "customs": {
           "type": "object",
+          "required": [
+            "content_type",
+            "invoice_number",
+            "items",
+            "non_delivery",
+            "incoterm"
+          ],
+          "additionalProperties": false,
           "properties": {
             "content_type": {
               "type": "string",
@@ -219,6 +227,7 @@
       "properties": {
         "service_options": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -244,6 +253,7 @@
         "parent": {
           "readOnly": true,
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -275,6 +285,7 @@
         },
         "shop": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -307,6 +318,7 @@
         "status": {
           "readOnly": true,
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -338,6 +350,7 @@
         },
         "service": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -369,6 +382,7 @@
         },
         "contract": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -391,6 +405,7 @@
         "files": {
           "readOnly": true,
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -412,7 +427,11 @@
               }
             },
             "links": {
+              "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
               "properties": {
                 "related": {
                   "type": "string",

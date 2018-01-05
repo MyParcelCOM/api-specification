@@ -1,7 +1,8 @@
 {
   "type": "object",
   "required": [
-    "type"
+    "type",
+    "attributes"
   ],
   "additionalProperties": false,
   "properties": {
