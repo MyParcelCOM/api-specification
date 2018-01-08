@@ -16,7 +16,7 @@
         "name": "filter[search]",
         "in": "query",
         "type": "string",
-        "description": "Comma separated string of characters you want to look for in the description and recipient fields of the shipment."
+        "description": "Comma separated string of characters you want to look for in the description and recipient_address fields of the shipment."
       }
     ],
     "responses": {
