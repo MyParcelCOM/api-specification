@@ -92,6 +92,7 @@
         },
         "weight": {
           "type": "number",
+          "minimum": 0,
           "example": 24
         },
         "physical_properties": {
@@ -100,23 +101,28 @@
           "properties": {
             "height": {
               "type": "number",
+              "minimum": 0,
               "example": 24
             },
             "width": {
               "type": "number",
+              "minimum": 0,
               "example": 50
             },
             "length": {
               "type": "number",
+              "minimum": 0,
               "example": 50
             },
             "volume": {
               "type": "number",
+              "minimum": 0,
               "example": 50
             },
             "weight": {
               "type": "number",
-              "example": 24
+              "minimum": 0,
+              "example": 24,
             }
           }
         },
