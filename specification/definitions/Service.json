@@ -17,7 +17,8 @@
       "type": "object",
       "required": [
         "name",
-        "package_type"
+        "package_type",
+        "transit_time"
       ],
       "additionalProperties": false,
       "properties": {
@@ -34,6 +35,20 @@
             "unstamped"
           ],
           "example": "parcel"
+        },
+        "transit_time": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": ["number", "null"],
+              "example": 1
+            },
+            "max": {
+              "type": ["number", "null"],
+              "example": 3
+            }
+          }
         }
       }
     },
