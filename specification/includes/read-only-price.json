@@ -9,7 +9,8 @@
   "properties": {
     "amount": {
       "type": "number",
-      "example": 100
+      "example": 995,
+      "description": "Price amount in cents"
     },
     "currency": {
       "$ref": "../includes/currency.json"
