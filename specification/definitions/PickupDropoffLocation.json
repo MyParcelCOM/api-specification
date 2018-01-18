@@ -52,17 +52,7 @@
             "additionalProperties": false,
             "properties": {
               "day": {
-                "type": "string",
-                "enum": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                  "Sunday"
-                ],
-                "example": "Monday"
+                "$ref": "../includes/day.json"
               },
               "open": {
                 "$ref": "../includes/time.json"

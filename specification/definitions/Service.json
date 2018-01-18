@@ -37,6 +37,19 @@
           ],
           "example": "parcel"
         },
+        "delivery_days": {
+          "type": "array",
+          "items": {
+            "$ref": "../includes/day.json"
+          },
+          "example": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ]
+        },
         "transit_time": {
           "type": "object",
           "additionalProperties": false,
