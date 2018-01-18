@@ -19,7 +19,8 @@
       "required": [
         "name",
         "package_type",
-        "transit_time"
+        "transit_time",
+        "handover_method"
       ],
       "additionalProperties": false,
       "properties": {
@@ -50,6 +51,14 @@
               "example": 3
             }
           }
+        },
+        "handover_method": {
+          "type": "string",
+          "enum": [
+            "drop-off",
+            "collection"
+          ],
+          "example": "drop-off"
         }
       }
     },
