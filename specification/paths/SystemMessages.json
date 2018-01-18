@@ -96,52 +96,5 @@
         }
       }
     }
-  },
-  "delete": {
-    "tags": [
-      "SystemMessages"
-    ],
-    "summary": "Delete system messages by id.",
-    "description": "This endpoint deletes the system message(s) with the supplied ids.",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "system-messages",
-        "description": "The system message(s) to be deleted.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "type",
-                  "id"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "type": {
-                    "$ref": "../types/SystemMessage.json"
-                  },
-                  "id": {
-                    "$ref": "../includes/uuid.json"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    ],
-    "responses": {
-      "202": {
-        "description": "The system message(s) will be deleted."
-      },
-      "204": {
-        "description": "The system message(s) are deleted."
-      }
-    }
   }
 }
