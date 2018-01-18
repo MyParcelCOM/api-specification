@@ -1,0 +1,13 @@
+{
+  "type": "string",
+  "enum": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  "example": "Monday"
+}
