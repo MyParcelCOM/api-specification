@@ -36,7 +36,10 @@
     "$ref": "./paths/Services-service_id.json"
   },
   "/services/{service_id}/contracts": {
-    "$ref": "./paths/Services-service_id-Contracts.json"
+    "$ref": "./paths/Services-service_id-ServiceContracts.json"
+  },
+  "/services/{service_id}/contracts/{service_contract_id}": {
+    "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id.json"
   },
   "/shipments": {
     "$ref": "./paths/Shipments.json"

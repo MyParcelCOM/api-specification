@@ -411,7 +411,7 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "$ref": "../types/Contract.json"
+                  "$ref": "../types/ServiceContract.json"
                 },
                 "id": {
                   "$ref": "../includes/uuid.json"

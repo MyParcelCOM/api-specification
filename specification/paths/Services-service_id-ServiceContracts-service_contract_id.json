@@ -1,0 +1,55 @@
+{
+  "get": {
+    "tags": [
+      "Services"
+    ],
+    "summary": "Get one contract for a service.",
+    "description": "This endpoint retrieves the contract for given service.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "service_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the service."
+      },
+      {
+        "in": "path",
+        "name": "service_contract_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the contract."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the contract for ",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data",
+            "links"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ServiceContract"
+            },
+            "links": {
+              "type": "object",
+              "required": [
+                "self"
+              ],
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
