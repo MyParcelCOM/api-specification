@@ -16,7 +16,7 @@
       "type": "object",
       "required": [
         "recipient_address",
-        "weight"
+        "physical_properties"
       ],
       "additionalProperties": false,
       "properties": {
@@ -90,47 +90,11 @@
           "type": "string",
           "example": "https://tracker.carrier.com/3SABCD0123456789"
         },
-        "weight": {
-          "type": "number",
-          "minimum": 0,
-          "example": 5000,
-          "description": "Weight in grams"
-        },
         "physical_properties": {
-          "readOnly": true,
-          "type": "object",
-          "properties": {
-            "height": {
-              "type": "number",
-              "minimum": 0,
-              "example": 150,
-              "description": "Height in millimeters"
-            },
-            "width": {
-              "type": "number",
-              "minimum": 0,
-              "example": 300,
-              "description": "Width in millimeters"
-            },
-            "length": {
-              "type": "number",
-              "minimum": 0,
-              "example": 500,
-              "description": "Length in millimeters"
-            },
-            "volume": {
-              "type": "number",
-              "minimum": 0,
-              "example": 22.5,
-              "description": "Volume in litres"
-            },
-            "weight": {
-              "type": "number",
-              "minimum": 0,
-              "example": 5000,
-              "description": "Weight in grams"
-            }
-          }
+          "$ref": "../includes/physical-properties.json"
+        },
+        "physical_properties_verified": {
+          "$ref": "../includes/read-only-physical-properties.json"
         },
         "customs": {
           "type": "object",
