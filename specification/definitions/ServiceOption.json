@@ -2,8 +2,7 @@
   "type": "object",
   "required": [
     "type",
-    "attributes",
-    "code"
+    "attributes"
   ],
   "additionalProperties": false,
   "properties": {
@@ -17,7 +16,8 @@
       "type": "object",
       "required": [
         "name",
-        "price"
+        "price",
+        "code"
       ],
       "additionalProperties": false,
       "properties": {
