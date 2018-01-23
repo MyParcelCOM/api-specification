@@ -2,7 +2,8 @@
   "type": "object",
   "required": [
     "type",
-    "attributes"
+    "attributes",
+    "code"
   ],
   "additionalProperties": false,
   "properties": {
@@ -26,6 +27,14 @@
         },
         "price": {
           "$ref": "../includes/price.json"
+        },
+        "category": {
+          "type": "string",
+          "example": "handover-method"
+        },
+        "code": {
+          "type": "string",
+          "example": "handover-method-collection"
         }
       }
     }
