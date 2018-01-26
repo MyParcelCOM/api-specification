@@ -71,6 +71,13 @@
             "collection"
           ],
           "example": "drop-off"
+        },
+        "rating": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "example": 0.8,
+          "description": "Generic rating of the service which indicates a combination of price, quality and popularity"
         }
       }
     },
