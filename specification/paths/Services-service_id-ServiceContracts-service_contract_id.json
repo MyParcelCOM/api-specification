@@ -36,7 +36,6 @@
             "data",
             "links"
           ],
-          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/ServiceContract"

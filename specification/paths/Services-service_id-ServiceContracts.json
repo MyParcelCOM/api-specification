@@ -30,7 +30,6 @@
             "meta",
             "links"
           ],
-          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
