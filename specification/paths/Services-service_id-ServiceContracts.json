@@ -3,8 +3,8 @@
     "tags": [
       "Services"
     ],
-    "summary": "Get all the contracts from a service.",
-    "description": "This endpoint retrieves contracts for the supplied services.",
+    "summary": "Get all the contracts for a service.",
+    "description": "This endpoint retrieves contracts for the supplied service.",
     "parameters": [
       {
         "in": "path",
@@ -12,11 +12,17 @@
         "type": "string",
         "required": true,
         "description": "Id of the service."
+      },
+      {
+        "in": "query",
+        "name": "include",
+        "type": "string",
+        "description": "Comma seperated list of relationship names you want to include the data of.<br> The relationships that can be included are carrier-contract, service-groups, service-insurances and service-options."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the contracts for the services.",
+        "description": "Retrieved the contracts for the supplied service.",
         "schema": {
           "type": "object",
           "required": [
