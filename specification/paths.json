@@ -47,6 +47,24 @@
   "/services/{service_id}/contracts/{service_contract_id}": {
     "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id.json"
   },
+  "/services/{service_id}/contracts/{service_contract_id}/groups": {
+    "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id-ServiceGroups.json"
+  },
+  "/services/{service_id}/contracts/{service_contract_id}/groups/{group_id}": {
+    "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id-ServiceGroups-service_group_id.json"
+  },
+  "/services/{service_id}/contracts/{service_contract_id}/insurances": {
+    "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id-ServiceInsurances.json"
+  },
+  "/services/{service_id}/contracts/{service_contract_id}/insurances/{insurance_id}": {
+    "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id-ServiceInsurances-service_insurance_id.json"
+  },
+  "/services/{service_id}/contracts/{service_contract_id}/options": {
+    "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id-ServiceOptions.json"
+  },
+  "/services/{service_id}/contracts/{service_contract_id}/options/{option_id}": {
+    "$ref": "./paths/Services-service_id-ServiceContracts-service_contract_id-ServiceOptions-service_option_id.json"
+  },
   "/shipments": {
     "$ref": "./paths/Shipments.json"
   },

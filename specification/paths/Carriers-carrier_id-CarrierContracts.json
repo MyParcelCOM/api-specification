@@ -3,8 +3,8 @@
     "tags": [
       "Carriers"
     ],
-    "summary": "Get all the contracts for a carrier.",
-    "description": "This endpoint retrieves contracts for the supplied carrier.",
+    "summary": "Get all the carrier contracts for a carrier.",
+    "description": "This endpoint retrieves carrier contracts for the supplied carrier.",
     "parameters": [
       {
         "in": "path",
@@ -16,7 +16,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the contracts for the carrier.",
+        "description": "Retrieved the carrier contract(s).",
         "schema": {
           "type": "object",
           "required": [

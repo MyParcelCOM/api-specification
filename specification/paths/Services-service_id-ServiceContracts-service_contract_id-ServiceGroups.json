@@ -3,8 +3,8 @@
     "tags": [
       "Services"
     ],
-    "summary": "Get all the service contracts for a service.",
-    "description": "This endpoint retrieves service contracts for the supplied service.",
+    "summary": "Get all the service groups for a service contract.",
+    "description": "This endpoint retrieves service groups for the supplied service contract.",
     "parameters": [
       {
         "in": "path",
@@ -14,15 +14,16 @@
         "description": "Id of the service."
       },
       {
-        "in": "query",
-        "name": "include",
+        "in": "path",
+        "name": "service_contract_id",
         "type": "string",
-        "description": "Comma seperated list of relationship names you want to include the data of.<br> The relationships that can be included are carrier-contract, service-groups, service-insurances and service-options."
+        "required": true,
+        "description": "Id of the service contract."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the service contract(s).",
+        "description": "Retrieved the service group(s).",
         "schema": {
           "type": "object",
           "required": [
@@ -35,7 +36,7 @@
             "data": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ServiceContract"
+                "$ref": "#/definitions/ServiceGroup"
               }
             },
             "meta": {
@@ -48,27 +49,26 @@
                 "first",
                 "last"
               ],
-              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=3&page[size]=30"
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/groups?page[number]=3&page[size]=30"
                 },
                 "first": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=1&page[size]=30"
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/groups?page[number]=1&page[size]=30"
                 },
                 "prev": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=2&page[size]=30"
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/groups?page[number]=2&page[size]=30"
                 },
                 "next": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=4&page[size]=30"
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/groups?page[number]=4&page[size]=30"
                 },
                 "last": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=13&page[size]=30"
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/groups?page[number]=13&page[size]=30"
                 }
               }
             }

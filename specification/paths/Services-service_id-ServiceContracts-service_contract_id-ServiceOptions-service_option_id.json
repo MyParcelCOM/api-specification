@@ -3,8 +3,8 @@
     "tags": [
       "Services"
     ],
-    "summary": "Get a service contract for a service by id.",
-    "description": "This endpoint retrieves a service contract for the supplied service.",
+    "summary": "Get a service option for a service contract by id.",
+    "description": "This endpoint retrieves a service option for the supplied service contract.",
     "parameters": [
       {
         "in": "path",
@@ -21,15 +21,16 @@
         "description": "Id of the service contract."
       },
       {
-        "in": "query",
-        "name": "include",
+        "in": "path",
+        "name": "service_option_id",
         "type": "string",
-        "description": "Comma seperated list of relationship names you want to include the data of.<br> The relationships that can be included are carrier-contract, service-groups, service-insurances and service-options."
+        "required": true,
+        "description": "Id of the service option."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the service contract",
+        "description": "Retrieved the service option.",
         "schema": {
           "type": "object",
           "required": [
@@ -39,7 +40,7 @@
           "additionalProperties": false,
           "properties": {
             "data": {
-              "$ref": "#/definitions/ServiceContract"
+              "$ref": "#/definitions/ServiceOption"
             },
             "links": {
               "type": "object",
@@ -49,7 +50,7 @@
               "properties": {
                 "self": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }

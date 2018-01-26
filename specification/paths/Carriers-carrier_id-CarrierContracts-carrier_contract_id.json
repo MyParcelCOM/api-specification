@@ -3,8 +3,8 @@
     "tags": [
       "Carriers"
     ],
-    "summary": "Get a contract for a carrier by id.",
-    "description": "This endpoint retrieves a contract for the supplied carrier.",
+    "summary": "Get a carrier contract for a carrier by id.",
+    "description": "This endpoint retrieves a carrier contract for the supplied carrier.",
     "parameters": [
       {
         "in": "path",
@@ -18,12 +18,12 @@
         "name": "carrier_contract_id",
         "type": "string",
         "required": true,
-        "description": "Id of the contract."
+        "description": "Id of the carrier contract."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the contract for the carrier.",
+        "description": "Retrieved the carrier contract.",
         "schema": {
           "type": "object",
           "required": [
