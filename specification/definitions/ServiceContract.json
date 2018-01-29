@@ -12,9 +12,7 @@
     },
     "attributes": {
       "type": "object",
-      "additionalProperties": false,
-      "properties": {
-      }
+      "additionalProperties": false
     },
     "relationships": {
       "type": "object",
