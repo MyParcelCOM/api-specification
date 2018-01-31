@@ -58,7 +58,7 @@
         },
         "description": {
           "type": "string",
-          "example": "The shipment has been delivered"
+          "example": "The shipment has been delivered."
         }
       }
     },

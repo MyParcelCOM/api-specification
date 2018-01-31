@@ -12,6 +12,12 @@
         "type": "string",
         "required": true,
         "description": "Id of the shipment."
+      },
+      {
+        "in": "query",
+        "name": "include",
+        "type": "string",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service, contract, service_options, status and files."
       }
     ],
     "responses": {
@@ -19,6 +25,9 @@
         "description": "Retrieved the shipment.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "properties": {
             "data": {
               "$ref": "#/definitions/Shipment"

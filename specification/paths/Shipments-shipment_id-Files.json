@@ -17,7 +17,6 @@
         "in": "query",
         "name": "filter[document_type]",
         "type": "string",
-        "required": false,
         "description": "Filter files based on document type. Multiple types can be passed comma separated."
       }
     ],

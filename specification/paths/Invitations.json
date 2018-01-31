@@ -70,11 +70,15 @@
     "parameters": [
       {
         "in": "body",
-        "name": "password",
+        "name": "invitation",
         "description": "The invitation object to be created.",
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -121,6 +125,10 @@
         "description": "The invitation is created and will be sent to the specified user via email.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/Invitation"

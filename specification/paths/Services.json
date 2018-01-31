@@ -10,28 +10,24 @@
         "in": "query",
         "name": "filter[package_type]",
         "type": "string",
-        "required": false,
         "description": "Comma separated string of package types to filter on."
       },
       {
         "in": "query",
         "name": "filter[carrier]",
         "type": "string",
-        "required": false,
         "description": "Comma separated string of carrier ids to filter on."
       },
       {
         "in": "query",
         "name": "filter[region_from]",
         "type": "string",
-        "required": false,
         "description": "Comma separated string of region ids to filter on."
       },
       {
         "in": "query",
         "name": "filter[region_to]",
         "type": "string",
-        "required": false,
         "description": "Comma separated string of region ids to filter on."
       }
     ],

@@ -26,6 +26,10 @@
         "description": "Retrieved the shipment estimate.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/ShipmentEstimate"

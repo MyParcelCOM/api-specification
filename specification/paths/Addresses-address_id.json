@@ -19,6 +19,10 @@
         "description": "Retrieved the address.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/Address"

@@ -30,7 +30,8 @@
           "example": "Confirmed at destination"
         },
         "carrier_timestamp": {
-          "$ref": "../includes/read-only-timestamp.json"
+          "type": "number",
+          "example": 1504801719
         }
       }
     },
@@ -43,7 +44,6 @@
       "additionalProperties": false,
       "properties": {
         "status": {
-          "readOnly": true,
           "type": "object",
           "additionalProperties": false,
           "properties": {
@@ -76,7 +76,6 @@
           }
         },
         "shipment": {
-          "readOnly": true,
           "type": "object",
           "additionalProperties": false,
           "properties": {

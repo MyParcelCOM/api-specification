@@ -66,7 +66,7 @@
       "Users"
     ],
     "summary": "Create a new user.",
-    "description": "This endpoint creates a new user with the posted data.",
+    "description": "This endpoint creates a new user with the posted data. <strong>A registration confirmation will be sent via email.</strong>",
     "parameters": [
       {
         "in": "body",
@@ -75,6 +75,10 @@
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -86,6 +90,9 @@
               "properties": {
                 "type": {
                   "$ref": "../types/User.json"
+                },
+                "id": {
+                  "$ref": "../includes/read-only-uuid.json"
                 },
                 "attributes": {
                   "type": "object",
@@ -108,8 +115,9 @@
                       "type": "string",
                       "example": "my.webshop.com"
                     },
-                    "invitation_id": {
-                      "$ref": "../includes/uuid.json"
+                    "invitation_code": {
+                      "type": "string",
+                      "example": "15317471056093"
                     }
                   }
                 }

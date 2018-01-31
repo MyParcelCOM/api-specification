@@ -70,11 +70,15 @@
     "parameters": [
       {
         "in": "body",
-        "name": "system-message",
+        "name": "system_message",
         "description": "The system message object to be created.",
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/SystemMessage"
@@ -88,6 +92,10 @@
         "description": "The system message is created.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/SystemMessage"

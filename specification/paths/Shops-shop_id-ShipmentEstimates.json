@@ -86,11 +86,15 @@
       },
       {
         "in": "body",
-        "name": "estimate",
+        "name": "shipment_estimate",
         "description": "The shipment estimate object to be created.",
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/ShipmentEstimate"

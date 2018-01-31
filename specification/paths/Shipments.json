@@ -7,14 +7,14 @@
     "description": "This endpoint retrieves shipments.",
     "parameters": [
       {
-        "name": "include",
         "in": "query",
+        "name": "include",
         "type": "string",
         "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service, contract, service_options, status and files."
       },
       {
-        "name": "filter[search]",
         "in": "query",
+        "name": "filter[search]",
         "type": "string",
         "description": "String of characters you want to look for in the description and recipient_address fields of the shipment."
       }
@@ -29,7 +29,6 @@
             "meta",
             "links"
           ],
-          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "array",
@@ -83,12 +82,16 @@
     "description": "This endpoint creates a new shipment with the posted data.",
     "parameters": [
       {
-        "name": "shipment",
         "in": "body",
+        "name": "shipment",
         "description": "The shipment object to be created.",
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/Shipment"
@@ -102,6 +105,10 @@
         "description": "The shipment is created.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/Shipment"
