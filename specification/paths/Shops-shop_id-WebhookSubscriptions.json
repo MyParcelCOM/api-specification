@@ -16,7 +16,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the webhook subscription(s).",
+        "description": "Retrieved the webhook subscriptions.",
         "schema": {
           "type": "object",
           "required": [
@@ -42,6 +42,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

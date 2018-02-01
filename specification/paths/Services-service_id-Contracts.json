@@ -4,14 +4,14 @@
       "Services"
     ],
     "summary": "Get all the prices from a service.",
-    "description": "This endpoint retrieves prices for the supplied services.",
+    "description": "This endpoint retrieves prices for the supplied service.",
     "parameters": [
       {
         "in": "path",
         "name": "service_id",
         "type": "string",
         "required": true,
-        "description": "Id or comma separated list of ids of the service(s)."
+        "description": "Id of the service."
       }
     ],
     "responses": {
@@ -42,6 +42,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

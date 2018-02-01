@@ -22,7 +22,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the status(es).",
+        "description": "Retrieved the shipment statuses.",
         "schema": {
           "type": "object",
           "required": [
@@ -47,6 +47,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

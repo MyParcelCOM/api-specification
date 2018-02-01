@@ -1,5 +1,6 @@
 {
   "get": {
+    "deprecated": true,
     "tags": [
       "Shops"
     ],

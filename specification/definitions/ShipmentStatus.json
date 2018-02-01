@@ -45,6 +45,9 @@
       "properties": {
         "status": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -66,6 +69,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -77,6 +84,9 @@
         },
         "shipment": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -98,6 +108,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",

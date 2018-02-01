@@ -25,7 +25,7 @@
       "type": "number",
       "minimum": 0,
       "example": 22.5,
-      "description": "Volume in litres (dm3)"
+      "description": "Volume in liters (dm3)"
     },
     "weight": {
       "type": "number",

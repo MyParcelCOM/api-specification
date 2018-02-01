@@ -7,7 +7,7 @@
     "description": "This endpoint retrieves available carriers for your account.",
     "responses": {
       "200": {
-        "description": "Retrieved the carrier(s).",
+        "description": "Retrieved the carriers.",
         "schema": {
           "type": "object",
           "required": [
@@ -33,6 +33,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

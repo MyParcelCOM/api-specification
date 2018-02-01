@@ -4,7 +4,7 @@
       "Files"
     ],
     "summary": "Get a file by id.",
-    "description": "This endpoint retrieves the file with the supplied id.",
+    "description": "This endpoint retrieves the file with the supplied id. Accept headers can be used to retrieve the file in a different format.",
     "parameters": [
       {
         "in": "path",

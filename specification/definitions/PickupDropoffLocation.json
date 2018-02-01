@@ -119,6 +119,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",

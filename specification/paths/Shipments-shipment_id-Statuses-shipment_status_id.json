@@ -4,7 +4,7 @@
       "Shipments"
     ],
     "summary": "Get a shipment status by id.",
-    "description": "This endpoint retrieves the status with the supplied id.",
+    "description": "This endpoint retrieves the shipment status with the supplied id.",
     "parameters": [
       {
         "in": "path",

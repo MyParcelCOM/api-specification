@@ -15,10 +15,17 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false,
       "properties": {
         "url": {
           "type": "string",
           "example": "https://magento.com/notifications"
+        },
+        "created_at": {
+          "$ref": "../includes/read-only-timestamp.json"
         }
       }
     },
@@ -30,7 +37,12 @@
       "additionalProperties": false,
       "properties": {
         "shop": {
+          "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
@@ -51,6 +63,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -86,6 +102,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",

@@ -10,7 +10,7 @@
         "in": "query",
         "name": "include",
         "type": "string",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service, contract, service_options, status and files."
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service and status."
       },
       {
         "in": "query",
@@ -21,7 +21,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the shipment(s).",
+        "description": "Retrieved the shipments.",
         "schema": {
           "type": "object",
           "required": [
@@ -46,6 +46,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

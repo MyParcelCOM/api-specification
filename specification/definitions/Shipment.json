@@ -211,6 +211,9 @@
       "properties": {
         "service_options": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -237,6 +240,9 @@
         "parent": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -258,6 +264,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -269,6 +279,9 @@
         },
         "shop": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -290,6 +303,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -302,6 +319,9 @@
         "status": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -323,6 +343,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -334,6 +358,9 @@
         },
         "service": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -355,6 +382,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -366,6 +397,9 @@
         },
         "contract": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -389,6 +423,9 @@
         "files": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {

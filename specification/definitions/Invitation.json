@@ -54,6 +54,7 @@
       "required": [
         "self"
       ],
+      "additionalProperties": false,
       "properties": {
         "self": {
           "type": "string",

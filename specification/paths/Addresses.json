@@ -7,7 +7,7 @@
     "description": "This endpoint retrieves addresses.",
     "responses": {
       "200": {
-        "description": "Retrieved the address(es).",
+        "description": "Retrieved the addresses.",
         "schema": {
           "type": "object",
           "required": [
@@ -33,6 +33,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",
@@ -106,12 +107,12 @@
       "Addresses"
     ],
     "summary": "Delete addresses by id.",
-    "description": "This endpoint deletes the address(es) with the supplied ids.",
+    "description": "This endpoint deletes the addresses with the supplied ids.",
     "parameters": [
       {
         "name": "addresses",
         "in": "body",
-        "description": "The address(es) to be deleted.",
+        "description": "The addresses to be deleted.",
         "required": true,
         "schema": {
           "type": "object",
@@ -145,10 +146,10 @@
     ],
     "responses": {
       "202": {
-        "description": "The address(es) will be deleted."
+        "description": "The addresses will be deleted."
       },
       "204": {
-        "description": "The address(es) are deleted."
+        "description": "The addresses are deleted."
       }
     }
   }

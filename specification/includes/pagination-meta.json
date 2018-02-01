@@ -4,6 +4,7 @@
     "total_pages",
     "total_records"
   ],
+  "additionalProperties": false,
   "properties": {
     "total_pages": {
       "type": "number",

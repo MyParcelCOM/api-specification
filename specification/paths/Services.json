@@ -33,7 +33,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the service(s).",
+        "description": "Retrieved the services.",
         "schema": {
           "type": "object",
           "required": [
@@ -59,6 +59,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

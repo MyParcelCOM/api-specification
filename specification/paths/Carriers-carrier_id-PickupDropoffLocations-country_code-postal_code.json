@@ -3,8 +3,8 @@
     "tags": [
       "Carriers"
     ],
-    "summary": "Get all the pickup and dropoff locations.",
-    "description": "This endpoint retrieves pickup and dropoff locations.",
+    "summary": "Get all the pickup and dropoff locations from a carrier.",
+    "description": "This endpoint retrieves pickup and dropoff locations offered by a carrier.",
     "parameters": [
       {
         "in": "path",
@@ -42,7 +42,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the location(s).",
+        "description": "Retrieved the locations.",
         "schema": {
           "type": "object",
           "required": [
@@ -68,6 +68,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

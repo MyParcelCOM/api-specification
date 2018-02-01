@@ -7,7 +7,7 @@
     "description": "This endpoint retrieves users.",
     "responses": {
       "200": {
-        "description": "Retrieved the user(s).",
+        "description": "Retrieved the users.",
         "schema": {
           "type": "object",
           "required": [
@@ -33,6 +33,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",
@@ -128,7 +129,7 @@
       }
     ],
     "responses": {
-      "202": {
+      "204": {
         "description": "The user is created."
       }
     }

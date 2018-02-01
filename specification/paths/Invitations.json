@@ -4,10 +4,10 @@
       "Invitations"
     ],
     "summary": "Get all the invitations.",
-    "description": "This endpoint retrieves invitations.",
+    "description": "This endpoint retrieves the invitations you have sent.",
     "responses": {
       "200": {
-        "description": "Retrieved the invitation(s).",
+        "description": "Retrieved the invitations.",
         "schema": {
           "type": "object",
           "required": [
@@ -33,6 +33,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",
@@ -81,40 +82,7 @@
           "additionalProperties": false,
           "properties": {
             "data": {
-              "type": "object",
-              "required": [
-                "type",
-                "attributes"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "$ref": "../types/Invitation.json"
-                },
-                "id": {
-                  "$ref": "../includes/read-only-uuid.json"
-                },
-                "attributes": {
-                  "type": "object",
-                  "required": [
-                    "email"
-                  ],
-                  "additionalProperties": false,
-                  "properties": {
-                    "email": {
-                      "$ref": "../includes/email.json"
-                    },
-                    "name": {
-                      "type": "string",
-                      "example": "James Jonson"
-                    },
-                    "message": {
-                      "type": "string",
-                      "example": "Hi James, this is your invitation to join myparcel.com"
-                    }
-                  }
-                }
-              }
+              "$ref": "#/definitions/Invitation"
             }
           }
         }
