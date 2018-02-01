@@ -205,8 +205,7 @@
       "type": "object",
       "required": [
         "shop",
-        "service",
-        "contract"
+        "service_contract"
       ],
       "properties": {
         "service_options": {
@@ -356,46 +355,7 @@
             }
           }
         },
-        "service": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "object",
-              "required": [
-                "type",
-                "id"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "$ref": "../types/Service.json"
-                },
-                "id": {
-                  "$ref": "../includes/uuid.json"
-                }
-              }
-            },
-            "links": {
-              "readOnly": true,
-              "type": "object",
-              "required": [
-                "related"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "related": {
-                  "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                }
-              }
-            }
-          }
-        },
-        "contract": {
+        "service_contract": {
           "type": "object",
           "required": [
             "data"
@@ -415,6 +375,20 @@
                 },
                 "id": {
                   "$ref": "../includes/uuid.json"
+                }
+              }
+            },
+            "links": {
+              "type": "object",
+              "readOnly": true,
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }

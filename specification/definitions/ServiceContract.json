@@ -1,7 +1,8 @@
 {
   "type": "object",
   "required": [
-    "type"
+    "type",
+    "links"
   ],
   "properties": {
     "type": {
@@ -10,9 +11,18 @@
     "id": {
       "$ref": "../includes/read-only-uuid.json"
     },
-    "attributes": {
+    "links": {
       "type": "object",
-      "additionalProperties": false
+      "required": [
+        "self"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+        }
+      }
     },
     "relationships": {
       "type": "object",

@@ -62,7 +62,7 @@
             }
           }
         },
-        "service-contracts": {
+        "service_contracts": {
           "type": "object",
           "required": [
             "data"

@@ -10,7 +10,7 @@
         "in": "query",
         "name": "include",
         "type": "string",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service and status."
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service_contract, service_options, status and files."
       },
       {
         "in": "query",

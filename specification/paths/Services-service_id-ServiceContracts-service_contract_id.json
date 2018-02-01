@@ -33,24 +33,11 @@
         "schema": {
           "type": "object",
           "required": [
-            "data",
-            "links"
+            "data"
           ],
           "properties": {
             "data": {
               "$ref": "#/definitions/ServiceContract"
-            },
-            "links": {
-              "type": "object",
-              "required": [
-                "self"
-              ],
-              "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                }
-              }
             }
           }
         }
