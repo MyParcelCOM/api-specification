@@ -19,6 +19,10 @@
         "description": "Retrieved the user.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/User"
@@ -49,9 +53,18 @@
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "type": "object",
+              "required": [
+                "type",
+                "id",
+                "attributes"
+              ],
               "additionalProperties": false,
               "properties": {
                 "type": {
@@ -78,6 +91,10 @@
         "description": "The user is updated.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/User"

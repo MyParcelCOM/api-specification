@@ -30,6 +30,10 @@
         },
         "category": {
           "type": "string",
+          "enum": [
+            "delivery-day",
+            "handover-method"
+          ],
           "example": "handover-method"
         },
         "code": {

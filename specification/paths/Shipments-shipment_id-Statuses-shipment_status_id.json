@@ -4,7 +4,7 @@
       "Shipments"
     ],
     "summary": "Get a shipment status by id.",
-    "description": "This endpoint retrieves the status with the supplied id.",
+    "description": "This endpoint retrieves the shipment status with the supplied id.",
     "parameters": [
       {
         "in": "path",
@@ -21,8 +21,8 @@
         "description": "Id of the shipment status."
       },
       {
-        "name": "include",
         "in": "query",
+        "name": "include",
         "type": "string",
         "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are status and shipment."
       }
@@ -32,6 +32,9 @@
         "description": "Retrieved the shipment status.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "properties": {
             "data": {
               "$ref": "#/definitions/ShipmentStatus"

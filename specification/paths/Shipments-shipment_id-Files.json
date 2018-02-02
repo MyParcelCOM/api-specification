@@ -17,13 +17,12 @@
         "in": "query",
         "name": "filter[document_type]",
         "type": "string",
-        "required": false,
         "description": "Filter files based on document type. Multiple types can be passed comma separated."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the status(es).",
+        "description": "Retrieved the files.",
         "schema": {
           "type": "object",
           "required": [
@@ -49,6 +48,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

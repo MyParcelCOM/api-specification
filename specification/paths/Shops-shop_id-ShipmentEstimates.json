@@ -1,10 +1,11 @@
 {
   "get": {
+    "deprecated": true,
     "tags": [
       "Shops"
     ],
-    "summary": "Get all available shipment estimates for your shop.",
-    "description": "This endpoint retrieves available shipment estimates for your shop.",
+    "summary": "Get all the shipment estimates from a shop.",
+    "description": "This endpoint retrieves shipment estimates for the supplied shop.",
     "parameters": [
       {
         "in": "path",
@@ -16,7 +17,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the shipment estimate(s).",
+        "description": "Retrieved the shipment estimates.",
         "schema": {
           "type": "object",
           "required": [
@@ -42,6 +43,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",
@@ -71,6 +73,7 @@
     }
   },
   "post": {
+    "deprecated": true,
     "tags": [
       "Shops"
     ],
@@ -86,11 +89,15 @@
       },
       {
         "in": "body",
-        "name": "estimate",
+        "name": "shipment_estimate",
         "description": "The shipment estimate object to be created.",
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/ShipmentEstimate"

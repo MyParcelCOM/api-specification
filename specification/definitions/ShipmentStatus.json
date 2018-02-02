@@ -30,7 +30,8 @@
           "example": "Confirmed at destination"
         },
         "carrier_timestamp": {
-          "$ref": "../includes/read-only-timestamp.json"
+          "type": "number",
+          "example": 1504801719
         }
       }
     },
@@ -43,8 +44,10 @@
       "additionalProperties": false,
       "properties": {
         "status": {
-          "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -66,6 +69,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -76,8 +83,10 @@
           }
         },
         "shipment": {
-          "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -99,6 +108,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",

@@ -4,7 +4,7 @@
       "Files"
     ],
     "summary": "Get a file by id.",
-    "description": "This endpoint retrieves the file with the supplied id.",
+    "description": "This endpoint retrieves the file with the supplied id. Accept headers can be used to retrieve the file in a different format.",
     "parameters": [
       {
         "in": "path",
@@ -24,7 +24,7 @@
           "image/png",
           "image/jpeg"
         ],
-        "description": "You can set the file header to either receive a json response, or the physical files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`image/png`</li></ul>"
+        "description": "You can set the file header to either receive a json response, or the files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`image/png`</li><li>`image/jpeg`</li></ul>"
       }
     ],
     "produces": [
@@ -37,6 +37,10 @@
         "description": "Retrieved the file.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/File"

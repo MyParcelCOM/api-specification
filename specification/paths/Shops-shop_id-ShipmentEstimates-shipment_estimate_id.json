@@ -1,5 +1,6 @@
 {
   "get": {
+    "deprecated": true,
     "tags": [
       "Shops"
     ],
@@ -26,6 +27,10 @@
         "description": "Retrieved the shipment estimate.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/ShipmentEstimate"

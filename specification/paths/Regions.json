@@ -4,40 +4,36 @@
       "Regions"
     ],
     "summary": "Get all the regions.",
-    "description": "This endpoint retrieves regions.",
+    "description": "This endpoint retrieves regions. All regions are connected via parent-child relationships. Services are available in certain regions. Regions with a country code can be used to create shipments.",
     "parameters": [
       {
         "in": "query",
         "name": "filter[parent]",
         "type": "string",
-        "required": false,
         "description": "Comma separated string of parent ids to filter on."
       },
       {
         "in": "query",
         "name": "filter[country_code]",
         "type": "string",
-        "required": false,
         "description": "Comma separated string of country codes to filter on."
       },
       {
         "in": "query",
         "name": "filter[region_code]",
         "type": "string",
-        "required": false,
         "description": "Comma separated string of region codes to filter on."
       },
       {
         "in": "query",
         "name": "filter[name]",
         "type": "string",
-        "required": false,
         "description": "Name of the region to filter on."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the regions(s).",
+        "description": "Retrieved the regions.",
         "schema": {
           "type": "object",
           "required": [
@@ -63,6 +59,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

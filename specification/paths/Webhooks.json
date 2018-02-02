@@ -4,10 +4,10 @@
       "Webhooks"
     ],
     "summary": "Get all the webhooks.",
-    "description": "This endpoint retrieves webhooks.",
+    "description": "This endpoint retrieves all available webhooks. Use the `/shops/{shop_id}/webhook-subscriptions` endpoint to subscribe to a webhook.",
     "responses": {
       "200": {
-        "description": "Retrieved the webhook(s).",
+        "description": "Retrieved the webhooks.",
         "schema": {
           "type": "object",
           "required": [
@@ -33,6 +33,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

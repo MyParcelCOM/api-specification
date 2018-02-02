@@ -4,10 +4,10 @@
       "SystemMessages"
     ],
     "summary": "Get all the system messages.",
-    "description": "This endpoint retrieves system messages.",
+    "description": "This endpoint retrieves system messages. These are informative messages about our system or a specific type of resource.",
     "responses": {
       "200": {
-        "description": "Retrieved the system message(s).",
+        "description": "Retrieved the system messages.",
         "schema": {
           "type": "object",
           "required": [
@@ -33,6 +33,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",
@@ -70,11 +71,15 @@
     "parameters": [
       {
         "in": "body",
-        "name": "system-message",
+        "name": "system_message",
         "description": "The system message object to be created.",
         "required": true,
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/SystemMessage"
@@ -88,6 +93,10 @@
         "description": "The system message is created.",
         "schema": {
           "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
           "properties": {
             "data": {
               "$ref": "#/definitions/SystemMessage"

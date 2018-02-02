@@ -4,10 +4,10 @@
       "Statuses"
     ],
     "summary": "Get all the statuses.",
-    "description": "This endpoint retrieves statuses.",
+    "description": "This endpoint retrieves all available statuses. Statuses can be attached to resources, for example shipment-statuses.",
     "responses": {
       "200": {
-        "description": "Retrieved the status(es).",
+        "description": "Retrieved the statuses.",
         "schema": {
           "type": "object",
           "required": [
@@ -33,6 +33,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

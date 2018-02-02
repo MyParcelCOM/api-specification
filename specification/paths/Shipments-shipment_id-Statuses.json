@@ -14,15 +14,15 @@
         "description": "Id of the shipment."
       },
       {
-        "name": "include",
         "in": "query",
+        "name": "include",
         "type": "string",
         "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are status and shipment."
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the status(es).",
+        "description": "Retrieved the shipment statuses.",
         "schema": {
           "type": "object",
           "required": [
@@ -47,6 +47,7 @@
                 "first",
                 "last"
               ],
+              "additionalProperties": false,
               "properties": {
                 "self": {
                   "type": "string",

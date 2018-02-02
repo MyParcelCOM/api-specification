@@ -27,10 +27,17 @@
     },
     "relationships": {
       "type": "object",
+      "required": [
+        "region"
+      ],
       "additionalProperties": false,
       "properties": {
         "shop": {
+          "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -52,6 +59,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -63,6 +74,9 @@
         },
         "region": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -84,6 +98,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",

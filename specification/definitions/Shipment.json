@@ -46,6 +46,11 @@
         },
         "pickup_location": {
           "type": "object",
+          "required": [
+            "code",
+            "address"
+          ],
+          "additionalProperties": false,
           "properties": {
             "code": {
               "type": "string",
@@ -156,7 +161,8 @@
                   "hs_code": {
                     "type": "string",
                     "pattern": "^[0-9.]+$",
-                    "example": "8517.12.00"
+                    "example": "8517.12.00",
+                    "description": "Harmonized System code used by customs"
                   },
                   "origin_country_code": {
                     "$ref": "../includes/country-code.json"
@@ -170,7 +176,8 @@
                 "return",
                 "abandon"
               ],
-              "example": "return"
+              "example": "return",
+              "description": "Action when the parcel cannot be delivered"
             },
             "incoterm": {
               "type": "string",
@@ -178,7 +185,8 @@
                 "DDU",
                 "DDP"
               ],
-              "example": "DDU"
+              "example": "DDU",
+              "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)"
             }
           }
         },
@@ -203,6 +211,9 @@
       "properties": {
         "service_options": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -229,6 +240,9 @@
         "parent": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -250,6 +264,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -261,6 +279,9 @@
         },
         "shop": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -282,6 +303,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -294,6 +319,9 @@
         "status": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -315,6 +343,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -326,6 +358,9 @@
         },
         "service": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -347,6 +382,10 @@
             "links": {
               "readOnly": true,
               "type": "object",
+              "required": [
+                "related"
+              ],
+              "additionalProperties": false,
               "properties": {
                 "related": {
                   "type": "string",
@@ -358,6 +397,9 @@
         },
         "contract": {
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
@@ -381,6 +423,9 @@
         "files": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "data"
+          ],
           "additionalProperties": false,
           "properties": {
             "data": {
