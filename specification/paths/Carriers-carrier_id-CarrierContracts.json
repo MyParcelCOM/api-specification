@@ -1,0 +1,73 @@
+{
+  "get": {
+    "tags": [
+      "Carriers"
+    ],
+    "summary": "Get all the carrier contracts for a carrier.",
+    "description": "This endpoint retrieves carrier contracts for the supplied carrier.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "carrier_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the carrier."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the carrier contract(s).",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data",
+            "meta",
+            "links"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CarrierContract"
+              }
+            },
+            "meta": {
+              "$ref": "../includes/pagination-meta.json"
+            },
+            "links": {
+              "type": "object",
+              "required": [
+                "self",
+                "first",
+                "last"
+              ],
+              "properties": {
+                "self": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=3&page[size]=30"
+                },
+                "first": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=1&page[size]=30"
+                },
+                "prev": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=2&page[size]=30"
+                },
+                "next": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=4&page[size]=30"
+                },
+                "last": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=13&page[size]=30"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

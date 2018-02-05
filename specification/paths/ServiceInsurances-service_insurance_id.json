@@ -1,0 +1,35 @@
+{
+  "get": {
+    "tags": [
+      "ServiceInsurances"
+    ],
+    "summary": "Get a service insurance by id.",
+    "description": "This endpoint retrieves a service insurance with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "service_insurance_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the service insurance."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the service insurance.",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ServiceInsurance"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "relationships"
+  ],
+  "properties": {
+    "type": {
+      "$ref": "../types/CarrierContract.json"
+    },
+    "id": {
+      "$ref": "../includes/read-only-uuid.json"
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "currency": {
+          "$ref": "../includes/currency.json"
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "required": [
+        "carrier"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "carrier": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/Carrier.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
+        },
+        "service_contracts": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "type": {
+                    "$ref": "../types/ServiceContract.json"
+                  },
+                  "id": {
+                    "$ref": "../includes/uuid.json"
+                  },
+                  "links": {
+                    "readOnly": true,
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "type": "string",
+                        "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "get": {
+    "tags": [
+      "ServiceContracts"
+    ],
+    "summary": "Get a service contract for a service by id.",
+    "description": "This endpoint retrieves a service contract for the supplied service.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "service_contract_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the service contract."
+      },
+      {
+        "in": "query",
+        "name": "include",
+        "type": "string",
+        "description": "Comma seperated list of relationship names you want to include the data of.<br> The relationships that can be included are carrier-contract, service-groups, service-insurances and service-options."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the service contract",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ServiceContract"
+            }
+          }
+        }
+      }
+    }
+  }
+}

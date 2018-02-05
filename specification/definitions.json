@@ -5,8 +5,8 @@
   "Carrier": {
     "$ref": "./definitions/Carrier.json"
   },
-  "Contract": {
-    "$ref": "./definitions/Contract.json"
+  "CarrierContract": {
+    "$ref": "./definitions/CarrierContract.json"
   },
   "Error": {
     "$ref": "./definitions/Error.json"
@@ -28,6 +28,9 @@
   },
   "Service": {
     "$ref": "./definitions/Service.json"
+  },
+  "ServiceContract": {
+    "$ref": "./definitions/ServiceContract.json"
   },
   "ServiceGroup": {
     "$ref": "./definitions/ServiceGroup.json"

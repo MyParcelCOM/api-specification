@@ -205,8 +205,7 @@
       "type": "object",
       "required": [
         "shop",
-        "service",
-        "contract"
+        "service_contract"
       ],
       "properties": {
         "service_options": {
@@ -356,7 +355,7 @@
             }
           }
         },
-        "service": {
+        "service_contract": {
           "type": "object",
           "required": [
             "data"
@@ -372,7 +371,7 @@
               "additionalProperties": false,
               "properties": {
                 "type": {
-                  "$ref": "../types/Service.json"
+                  "$ref": "../types/ServiceContract.json"
                 },
                 "id": {
                   "$ref": "../includes/uuid.json"
@@ -380,8 +379,8 @@
               }
             },
             "links": {
-              "readOnly": true,
               "type": "object",
+              "readOnly": true,
               "required": [
                 "related"
               ],
@@ -389,32 +388,7 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
-                }
-              }
-            }
-          }
-        },
-        "contract": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "object",
-              "required": [
-                "type",
-                "id"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "$ref": "../types/Contract.json"
-                },
-                "id": {
-                  "$ref": "../includes/uuid.json"
+                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }

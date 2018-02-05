@@ -2,7 +2,8 @@
   "type": "object",
   "required": [
     "type",
-    "attributes"
+    "attributes",
+    "links"
   ],
   "additionalProperties": false,
   "properties": {
@@ -25,6 +26,18 @@
         },
         "price": {
           "$ref": "../includes/price.json"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/service-insurances/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }
