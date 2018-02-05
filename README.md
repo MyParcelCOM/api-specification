@@ -4,21 +4,12 @@
 [![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/api-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/api-specification/swagger.json)
 
 Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification).
-This specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.0.
-
-## TODO:
-- [x] Test Docker setup on Linux.
-- [x] Test Docker setup on Mac.
-- [x] Test Docker setup on Windows.
-- [ ] Actually increment version numbers when building.
-- [ ] Implement Swagger Editor.
-- [ ] Set contributors guidelines.
+This specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.0 and implements the [JSON API specification](http://jsonapi.org/).
 
 ## Content
 - [Installation](#installation)
 - [Validating the Spec](#validating-the-spec)
 - [Conventions](#conventions)
-- [Contributing](#contributing)
 
 ## Installation
 The repository provides docker containers to validate and preview the spec before committing changes. This is also used when validating pull requests.
@@ -64,14 +55,13 @@ To validate the spec you can run the command:
 
 > **NOTE:** The validator only works when the containers are already running. Don't forget to start them.
 
-### Tinkering in Swagger Editor
-Coming Soon.
-
 ## Conventions
-Conventions based on the [Swagger](https://swagger.io/specification) and [JSON Schema](http://json-schema.org) specs but enhanced with MyParcel.com conventions.
+Conventions based on the [Swagger](https://swagger.io/specification) and [JSON Schema](http://json-schema.org) specs.
+
+Our internal conventions are described below.
 
 ### PUT, POST, PATCH
-To avoid discussion the use of the above HTTP methods is described below.
+To avoid discussion, the use of the above HTTP methods is described below.
 
 #### `PUT`
 - Used to create or replace a resource.
@@ -81,7 +71,7 @@ To avoid discussion the use of the above HTTP methods is described below.
 #### `POST`
 - Used to create a resource.
 - Does not return the same response on repeated requests.
-- Does not need the full resource for the request (often does not need the id for the to be created resource.)
+- Does not need the full resource for the request (often does not need the id for the to be created resource).
 
 #### `PATCH`
 - Used to update an existing resource.
@@ -89,7 +79,7 @@ To avoid discussion the use of the above HTTP methods is described below.
 - Does not need the full resource for the request (you might only want to update a user's name for example).
 
 ### API versioning
-The API versioning follows semantic versioning. The increment in version number is **not** done manually and should not be part of the pull request.
+The API versioning follows semantic versioning. The increment in version number is done manually and should be part of the pull request.
 
 ### Definition file naming
 Definition file names follow PascalCasing. Where every first letter of a word (including the first word) is uppercase. For example, the definition for a country code would be found in:
@@ -106,9 +96,6 @@ can be found in:
 ```
 specification/paths/Carriers-carrier_id-Services.json
 ```
-
-## Contributing
-Coming Soon.
 
 ## Licence
 All software by MyParcel.com is licenced under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 
