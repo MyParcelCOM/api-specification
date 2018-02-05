@@ -1,0 +1,35 @@
+{
+  "get": {
+    "tags": [
+      "ServiceGroups"
+    ],
+    "summary": "Get a service group for a service contract by id.",
+    "description": "This endpoint retrieves a service group for the supplied service contract.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "service_group_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the service group."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the service group.",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ServiceGroup"
+            }
+          }
+        }
+      }
+    }
+  }
+}

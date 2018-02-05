@@ -20,7 +20,7 @@
       "properties": {
         "self": {
           "type": "string",
-          "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+          "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     },
@@ -84,7 +84,7 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/carriers/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                  "example": "$base_url/carrier-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
                 }
               }
             }
@@ -118,7 +118,7 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/groups"
+                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/groups"
                 }
               }
             }
@@ -152,7 +152,7 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options"
+                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options"
                 }
               }
             }
@@ -186,7 +186,7 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/insurances"
+                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/insurances"
                 }
               }
             }
