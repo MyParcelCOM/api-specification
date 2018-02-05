@@ -3,8 +3,8 @@
     "tags": [
       "ServiceGroups"
     ],
-    "summary": "Get a service group for a service contract by id.",
-    "description": "This endpoint retrieves a service group for the supplied service contract.",
+    "summary": "Get a service group by id.",
+    "description": "This endpoint retrieves a service group with the supplied id.",
     "parameters": [
       {
         "in": "path",

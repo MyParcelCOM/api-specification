@@ -51,7 +51,7 @@
       "properties": {
         "self": {
           "type": "string",
-          "example": "$base_url/service-groups/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+          "example": "$base_url/service-options/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }

@@ -3,8 +3,8 @@
     "tags": [
       "ServiceInsurances"
     ],
-    "summary": "Get a service insurance for a service contract by id.",
-    "description": "This endpoint retrieves a service insurance for the supplied service contract.",
+    "summary": "Get a service insurance by id.",
+    "description": "This endpoint retrieves a service insurance with the supplied id.",
     "parameters": [
       {
         "in": "path",

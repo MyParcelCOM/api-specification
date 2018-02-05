@@ -3,8 +3,8 @@
     "tags": [
       "ServiceOptions"
     ],
-    "summary": "Get a service option for a service contract by id.",
-    "description": "This endpoint retrieves a service option for the supplied service contract.",
+    "summary": "Get a service option by id.",
+    "description": "This endpoint retrieves a service option with the supplied id.",
     "parameters": [
       {
         "in": "path",
