@@ -55,8 +55,7 @@
     "relationships": {
       "type": "object",
       "required": [
-        "service_contract",
-        "service_option"
+        "service_contract"
       ],
       "additionalProperties": false,
       "properties": {
