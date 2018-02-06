@@ -3,6 +3,7 @@
   "required": [
     "type",
     "attributes",
+    "relationships",
     "links"
   ],
   "additionalProperties": false,
@@ -48,6 +49,52 @@
         "step_size": {
           "type": "number",
           "example": 100
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "required": [
+        "service_contract",
+        "service_option"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "service_contract": {
+          "type": "object",
+          "required": [
+            "data",
+            "links"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/ServiceContract.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
         }
       }
     },

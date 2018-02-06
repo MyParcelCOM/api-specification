@@ -4,6 +4,10 @@
     "description": ""
   },
   {
+    "name": "CarrierContracts",
+    "description": ""
+  },
+  {
     "name": "Files",
     "description": ""
   },
@@ -21,6 +25,26 @@
   },
   {
     "name": "Services",
+    "description": ""
+  },
+  {
+    "name": "ServiceContracts",
+    "description": ""
+  },
+  {
+    "name": "ServiceGroups",
+    "description": ""
+  },
+  {
+    "name": "ServiceInsurances",
+    "description": ""
+  },
+  {
+    "name": "ServiceOptions",
+    "description": ""
+  },
+  {
+    "name": "ServiceOptionPrices",
     "description": ""
   },
   {

@@ -53,8 +53,8 @@
   "/service-contracts/{service_contract_id}/insurances": {
     "$ref": "./paths/ServiceContracts-service_contract_id-ServiceInsurances.json"
   },
-  "/service-contracts/{service_contract_id}/options": {
-    "$ref": "./paths/ServiceContracts-service_contract_id-ServiceOptions.json"
+  "/service-contracts/{service_contract_id}/option-prices": {
+    "$ref": "./paths/ServiceContracts-service_contract_id-ServiceOptionPrices.json"
   },
   "/service-groups/{service_group_id}": {
     "$ref": "./paths/ServiceGroups-service_group_id.json"
@@ -62,8 +62,14 @@
   "/service-insurances/{service_insurance_id}": {
     "$ref": "./paths/ServiceInsurances-service_insurance_id.json"
   },
+  "/service-options": {
+    "$ref": "./paths/ServiceOptions.json"
+  },
   "/service-options/{service_option_id}": {
     "$ref": "./paths/ServiceOptions-service_option_id.json"
+  },
+  "/service-option-prices/{service_option_price_id}": {
+    "$ref": "./paths/ServiceOptionPrices-service_option_price_id.json"
   },
   "/shipments": {
     "$ref": "./paths/Shipments.json"

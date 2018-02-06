@@ -26,9 +26,6 @@
           "type": "string",
           "example": "signature"
         },
-        "price": {
-          "$ref": "../includes/price.json"
-        },
         "category": {
           "type": "string",
           "enum": [

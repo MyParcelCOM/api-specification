@@ -9,7 +9,7 @@
   "additionalProperties": false,
   "properties": {
     "type": {
-      "$ref": "../types/ServiceInsurance.json"
+      "$ref": "../types/ServiceOptionPrice.json"
     },
     "id": {
       "$ref": "../includes/read-only-uuid.json"
@@ -17,14 +17,10 @@
     "attributes": {
       "type": "object",
       "required": [
-        "covered",
         "price"
       ],
       "additionalProperties": false,
       "properties": {
-        "covered": {
-          "$ref": "../includes/price.json"
-        },
         "price": {
           "$ref": "../includes/price.json"
         }
@@ -73,6 +69,42 @@
               }
             }
           }
+        },
+        "service_option": {
+          "type": "object",
+          "required": [
+            "data",
+            "links"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "type": "object",
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "$ref": "../types/ServiceOption.json"
+                },
+                "id": {
+                  "$ref": "../includes/uuid.json"
+                }
+              }
+            },
+            "links": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "related": {
+                  "type": "string",
+                  "example": "$base_url/service-options/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -84,7 +116,7 @@
       "properties": {
         "self": {
           "type": "string",
-          "example": "$base_url/service-insurances/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+          "example": "$base_url/service-option-prices/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
         }
       }
     }
