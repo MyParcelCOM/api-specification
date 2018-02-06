@@ -11,7 +11,7 @@
       "$ref": "../types/PickupDropoffLocation.json"
     },
     "id": {
-      "$ref": "../includes/read-only-uuid.json"
+      "$ref": "../includes/read-only-pudo-uuid.json"
     },
     "attributes": {
       "type": "object",
@@ -23,7 +23,7 @@
       "properties": {
         "code": {
           "type": "string",
-          "example": "123456"
+          "example": "dpd123"
         },
         "address": {
           "type": "object",
