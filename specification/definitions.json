@@ -41,6 +41,9 @@
   "ServiceOption": {
     "$ref": "./definitions/ServiceOption.json"
   },
+  "ServiceOptionPrice": {
+    "$ref": "./definitions/ServiceOptionPrice.json"
+  },
   "Shipment": {
     "$ref": "./definitions/Shipment.json"
   },

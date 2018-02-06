@@ -1,0 +1,5 @@
+{
+  "type": "string",
+  "pattern": "^service-option-prices$",
+  "example": "service-option-prices"
+}

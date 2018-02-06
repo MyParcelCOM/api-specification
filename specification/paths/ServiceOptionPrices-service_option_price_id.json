@@ -1,0 +1,35 @@
+{
+  "get": {
+    "tags": [
+      "ServiceOptionPrices"
+    ],
+    "summary": "Get a service option price by id.",
+    "description": "This endpoint retrieves a service option price with the supplied id.",
+    "parameters": [
+      {
+        "in": "path",
+        "name": "service_option_price_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of the service option price."
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the service option price.",
+        "schema": {
+          "type": "object",
+          "required": [
+            "data"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/ServiceOptionPrice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
