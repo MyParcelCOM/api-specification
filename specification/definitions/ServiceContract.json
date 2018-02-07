@@ -59,7 +59,7 @@
             }
           }
         },
-        "carrier-contract": {
+        "carrier_contract": {
           "type": "object",
           "properties": {
             "data": {
@@ -90,7 +90,7 @@
             }
           }
         },
-        "service-groups": {
+        "service_groups": {
           "type": "object",
           "properties": {
             "data": {
@@ -124,7 +124,7 @@
             }
           }
         },
-        "service-options": {
+        "service_option_prices": {
           "type": "object",
           "properties": {
             "data": {
@@ -138,7 +138,7 @@
                 "additionalProperties": false,
                 "properties": {
                   "type": {
-                    "$ref": "../types/ServiceOption.json"
+                    "$ref": "../types/ServiceOptionPrice.json"
                   },
                   "id": {
                     "$ref": "../includes/uuid.json"
@@ -152,13 +152,13 @@
               "properties": {
                 "related": {
                   "type": "string",
-                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options"
+                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/option-prices"
                 }
               }
             }
           }
         },
-        "service-insurances": {
+        "service_insurances": {
           "type": "object",
           "properties": {
             "data": {
