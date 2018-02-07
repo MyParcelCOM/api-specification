@@ -6,7 +6,7 @@
 [![OpenAPI Specification](https://img.shields.io/badge/OAS-3.0.0-7CB749.svg)](https://swagger.io/specification)
 
 Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification).
-This specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.0 and implements the [JSON API specification](http://jsonapi.org/).
+This specification adheres to the [OpenApi 3.0.1 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md) and implements the [JSON API specification](http://jsonapi.org/).
 
 ## Content
 - [Installation](#installation)
@@ -32,6 +32,7 @@ Install Docker for Windows from [https://docs.docker.com/docker-for-windows/inst
 
 #### Linux
 Install Docker by running the following command:
+
 ```bash
 curl -sSL https://get.docker.com/ | sh
 ```
@@ -39,22 +40,27 @@ curl -sSL https://get.docker.com/ | sh
 Then install Docker Compose by following the instructions [here](https://github.com/docker/compose/releases).
 
 Finally assign yourself to the Docker group:
+
 ```bash
 sudo usermod -aG docker $(whoami)
 ```
 
 ### Setting up the environment
 For validation to work the Docker containers must be running. To start the containers, run:
+
 ```bash
 ./mp.sh up
 ```
+
 To stop the containers when you are done working, run:
+
 ```bash
 ./mp.sh down
 ```
 
 ## Validating the spec
 To validate the spec you can run the command:
+
 ```bash
 ./mp.sh validate
 ```
@@ -87,21 +93,34 @@ To avoid discussion, the use of the above HTTP methods is described below.
 ### API versioning
 The API versioning follows semantic versioning. The increment in version number is done manually and should be part of the pull request.
 
-### Definition file naming
+### Schema file naming
 Definition file names follow PascalCasing. Where every first letter of a word (including the first word) is uppercase. For example, the definition for a country code would be found in:
+
 ```
-specification/definitions/CountryCode.json
+specification/schemas/CountryCode.json
 ```
 
 ### Path file naming
-The files in `specification/paths` are named to their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route: 
+The files in `specification/paths` are named to their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route:
+ 
 ```
 carriers/{carrier_id}/services
 ```
+
 can be found in:
+
 ```
 specification/paths/Carriers-carrier_id-Services.json
 ```
+
+### Parameter file naming
+Parameter file names are prefixed with the corresponding parameter type. A path parameter for `carrier_id` would get the following file path;
+
+```
+specification/parameters/path-carrier_id.json
+```
+
+Unique parameters can just remain in the path file and do not need to be extracted to their own files.
 
 ## Licence
 All software by MyParcel.com is licenced under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 

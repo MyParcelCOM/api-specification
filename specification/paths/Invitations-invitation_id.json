@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves the invitation with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "invitation_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the invitation."
+        "$ref": "#/components/parameters/path-invitation_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the invitation.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Invitation"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Invitation"
+                }
+              }
             }
           }
         }

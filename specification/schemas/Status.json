@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalStatus"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "code",
+            "resource_type",
+            "name",
+            "description"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string",
+              "enum": [
+                "shipment_concept",
+                "shipment_registered",
+                "shipment_at_carrier",
+                "shipment_at_sorting",
+                "shipment_at_courier",
+                "shipment_delivered",
+                "shipment_inactive",
+                "shipment_failed"
+              ],
+              "example": "shipment_delivered"
+            },
+            "resource_type": {
+              "type": "string",
+              "enum": [
+                "shipments"
+              ],
+              "example": "shipments"
+            },
+            "level": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "success",
+                "failed"
+              ],
+              "example": "success"
+            },
+            "name": {
+              "type": "string",
+              "example": "Delivered"
+            },
+            "description": {
+              "type": "string",
+              "example": "The shipment has been delivered."
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/statuses/5c868557-0827-4d21-a7f4-9820f01769f4"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

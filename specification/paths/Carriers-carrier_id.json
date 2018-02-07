@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves the carrier with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "carrier_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the carrier."
+        "$ref": "#/components/parameters/path-carrier_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the carrier.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Carrier"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Carrier"
+                }
+              }
             }
           }
         }

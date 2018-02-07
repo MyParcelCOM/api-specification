@@ -1,0 +1,10 @@
+{
+  "name": "service_insurance_id",
+  "in": "path",
+  "description": "Id of the service insurance.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

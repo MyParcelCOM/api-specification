@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^webhook-subscriptions$",
+      "example": "webhook-subscriptions"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "b424b441-d8a0-4d1d-a0db-94b8963c5762",
+      "readOnly": true
+    }
+  }
+}

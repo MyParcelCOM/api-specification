@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^webhooks$",
+      "example": "webhooks"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "a0bed0cb-5344-483a-aaa9-e349f6630cf4",
+      "readOnly": true
+    }
+  }
+}

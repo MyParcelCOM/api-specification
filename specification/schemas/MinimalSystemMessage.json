@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^system-messages$",
+      "example": "system-messages"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "e6bb8463-2551-469b-94cc-6d861e364621",
+      "readOnly": true
+    }
+  }
+}

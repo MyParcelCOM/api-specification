@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalUser"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "first_name",
+            "last_name",
+            "company",
+            "email",
+            "phone_number"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "first_name": {
+              "type": "string",
+              "example": "Sherlock"
+            },
+            "last_name": {
+              "type": "string",
+              "example": "Holmes"
+            },
+            "company": {
+              "type": "string",
+              "example": "Holmes Investigations"
+            },
+            "email": {
+              "$ref": "#/components/schemas/Email"
+            },
+            "phone_number": {
+              "type": "string",
+              "example": "+31 234 567 890"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/users/6b341b44-f2f8-4c8b-b066-b8aa5c78ef6b"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

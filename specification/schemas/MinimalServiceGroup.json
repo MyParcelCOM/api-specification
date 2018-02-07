@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^service-groups$",
+      "example": "service-groups"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "09a8f83a-bc8d-4598-81e6-ebf9d59a186a",
+      "readOnly": true
+    }
+  }
+}

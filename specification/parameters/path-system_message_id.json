@@ -1,0 +1,10 @@
+{
+  "name": "system_message_id",
+  "in": "path",
+  "description": "Id of the system message.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

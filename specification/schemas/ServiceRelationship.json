@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinimalService"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "related": {
+          "type": "string",
+          "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalSystemMessage"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "level",
+            "content"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "info",
+                "success",
+                "warning",
+                "error"
+              ],
+              "example": "info"
+            },
+            "resource_type": {
+              "type": "string",
+              "enum": [
+                "shipments",
+                "carriers"
+              ],
+              "example": "shipments"
+            },
+            "content": {
+              "type": "string",
+              "example": "Information regarding shipments"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/system-messages/e6bb8463-2551-469b-94cc-6d861e364621"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -7,61 +7,61 @@
     "description": "This endpoint retrieves service options for the supplied service contract.",
     "parameters": [
       {
-        "in": "path",
-        "name": "service_contract_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the service contract."
+        "$ref": "#/components/parameters/path-service_contract_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the service option(s).",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ServiceOptionPrice"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
+              "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceOptionPrice"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/service-contracts/c9ce29a4-6325-11e7-907b-a6006ad3dba0/options?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }

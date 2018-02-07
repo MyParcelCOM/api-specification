@@ -1,0 +1,130 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalPickupDropoffLocation"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "code",
+            "address"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string",
+              "example": "205604"
+            },
+            "address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Address"
+                },
+                {
+                  "required": [
+                    "company",
+                    "street_1",
+                    "street_number",
+                    "city",
+                    "country_code"
+                  ]
+                }
+              ]
+            },
+            "opening_hours": {
+              "type": "array",
+              "maxItems": 7,
+              "items": {
+                "type": "object",
+                "required": [
+                  "day"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "day": {
+                    "type": "string",
+                    "enum": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday"
+                    ],
+                    "example": "Monday"
+                  },
+                  "open": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Time"
+                      },
+                      {
+                        "example": "08:30"
+                      }
+                    ]
+                  },
+                  "closed": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Time"
+                      },
+                      {
+                        "example": "19:00"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "position": {
+              "type": "object",
+              "required": [
+                "latitude",
+                "longitude"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "latitude": {
+                  "type": "number",
+                  "format": "double",
+                  "example": "51.5237758"
+                },
+                "longitude": {
+                  "type": "number",
+                  "format": "double",
+                  "example": "-0.1606707"
+                },
+                "distance": {
+                  "type": "integer",
+                  "description": "Distance to the location in meters",
+                  "example": "1337"
+                }
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "carrier"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "carrier": {
+              "$ref": "#/components/schemas/CarrierRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

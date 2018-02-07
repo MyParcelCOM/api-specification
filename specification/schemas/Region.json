@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalRegion"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "country_code": {
+              "$ref": "#/components/schemas/CountryCode"
+            },
+            "region_code": {
+              "$ref": "#/components/schemas/RegionCode"
+            },
+            "currency": {
+              "$ref": "#/components/schemas/Currency"
+            },
+            "name": {
+              "type": "string",
+              "example": "England"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "parent": {
+              "$ref": "#/components/schemas/RegionRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$base_url/regions/0b6ecd39-6072-4529-a031-f21247a91296"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

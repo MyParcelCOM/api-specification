@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalCarrierContract"
+    },
+    {
+      "required": [
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "currency": {
+              "$ref": "#/components/schemas/Currency"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "carrier"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "carrier": {
+              "$ref": "#/components/schemas/CarrierRelationship"
+            },
+            "service_contracts": {
+              "$ref": "#/components/schemas/ServiceContractsRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

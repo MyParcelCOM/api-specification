@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves the webhook with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "webhook_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the webhook."
+        "$ref": "#/components/parameters/path-webhook_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the webhook.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Webhook"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Webhook"
+                }
+              }
             }
           }
         }

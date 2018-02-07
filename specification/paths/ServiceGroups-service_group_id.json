@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves a service group with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "service_group_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the service group."
+        "$ref": "#/components/parameters/path-service_group_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the service group.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/ServiceGroup"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ServiceGroup"
+                }
+              }
             }
           }
         }

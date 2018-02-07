@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^statuses$",
+      "example": "statuses"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "5c868557-0827-4d21-a7f4-9820f01769f4",
+      "readOnly": true
+    }
+  }
+}

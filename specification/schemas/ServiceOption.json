@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalServiceOption"
+    },
+    {
+      "required": [
+        "attributes",
+        "links"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name",
+            "code"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "signature"
+            },
+            "category": {
+              "type": "string",
+              "enum": [
+                "delivery-day",
+                "handover-method"
+              ],
+              "example": "handover-method"
+            },
+            "code": {
+              "type": "string",
+              "example": "handover-method-collection"
+            }
+          }
+        },
+        "links": {
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/service-options/4c675b1a-516c-4410-abff-d237fd45bcd0"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

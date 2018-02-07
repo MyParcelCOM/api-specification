@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^service-option-prices$",
+      "example": "service-option-prices"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "43f76bc8-9330-425f-ac18-ce7890945bad",
+      "readOnly": true
+    }
+  }
+}

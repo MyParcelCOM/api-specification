@@ -1,0 +1,27 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "$ref": "./specification/info.json"
+  },
+  "servers": [
+    {
+      "url": "$API_HOST",
+      "description": "The MyParcel.com API Sandbox"
+    }
+  ],
+  "paths": {
+    "$ref": "./specification/paths.json"
+  },
+  "components": {
+    "schemas": {
+      "$ref": "./specification/schemas.json"
+    },
+    "parameters": {
+      "$ref": "./specification/parameters.json"
+    }
+  },
+  "externalDocs": {
+    "url": "https://docs.myparcel.com",
+    "description": "The documentation describing the MyParcel.com API and its corresponding tools."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "total_pages",
+    "total_records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "total_pages": {
+      "type": "integer",
+      "example": 13
+    },
+    "total_records": {
+      "type": "integer",
+      "example": 373
+    }
+  }
+}
