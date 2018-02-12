@@ -17,6 +17,12 @@
         "name": "filter[search]",
         "type": "string",
         "description": "String of characters you want to look for in the description and recipient_address fields of the shipment."
+      },
+      {
+        "in": "query",
+        "name": "filter[shop_id]",
+        "type": "string",
+        "description": "Id of the shop you want to filter the shipments on."
       }
     ],
     "responses": {
