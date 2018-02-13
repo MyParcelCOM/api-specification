@@ -20,9 +20,9 @@
       },
       {
         "in": "query",
-        "name": "filter[shop_id]",
+        "name": "filter[shop]",
         "type": "string",
-        "description": "Id of the shop you want to filter the shipments on."
+        "description": "Comma separated string of shop ids to filter on."
       }
     ],
     "responses": {
