@@ -2,19 +2,5 @@
   "name": "myparcelcom/api-specification",
   "description": "MyParcel.com API specification based on the OpenAPI Specification.",
   "homepage": "https://docs.myparcel.com/api-specification",
-  "type": "library",
-  "scripts": {
-    "post-install-cmd": [
-      "bash ./mp.sh bundle"
-    ],
-    "post-update-cmd": [
-      "bash ./mp.sh bundle"
-    ],
-    "post-package-install": [
-      "bash ./mp.sh bundle"
-    ],
-    "post-package-update": [
-      "bash ./mp.sh bundle"
-    ]
-  }
+  "type": "library"
 }
