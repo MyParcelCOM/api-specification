@@ -1,0 +1,472 @@
+/* defaults */
+
+body {
+  margin: 0;
+  background: #fafafa;
+  color: #040707;
+}
+
+a {
+  text-decoration: none;
+  color: #3a927d !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.title a,
+.title a:hover {
+  color: #040707 !important;
+  outline: none;
+}
+
+/* overrides */
+
+#swagger-ui * {
+  border-radius: 0;
+}
+
+#swagger-ui .auth-wrapper,
+#swagger-ui .authorization__btn,
+#swagger-ui .info > div,
+#swagger-ui .models h4 svg,
+#swagger-ui .opblock-tag button,
+#swagger-ui .topbar a *,
+#swagger-ui .topbar .download-url-wrapper {
+  display: none;
+}
+
+#swagger-ui .btn,
+#swagger-ui .models h4,
+#swagger-ui .opblock-title_normal p,
+#swagger-ui .response-col_status,
+#swagger-ui .scheme-container .schemes > label {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+#swagger-ui .model,
+#swagger-ui .opblock-summary-path a,
+#swagger-ui .opblock-summary-path__deprecated a,
+#swagger-ui .tab li {
+  color: #040707 !important;
+}
+
+#swagger-ui label,
+#swagger-ui table thead tr td,
+#swagger-ui table thead tr th,
+#swagger-ui .info .title,
+#swagger-ui .info .title small pre,
+#swagger-ui .main,
+#swagger-ui .model-title,
+#swagger-ui .opblock-tag,
+#swagger-ui .parameter__name,
+#swagger-ui .response-col_status,
+#swagger-ui .tab li {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  color: #040707;
+}
+
+#swagger-ui .info a,
+#swagger-ui .info li,
+#swagger-ui .info p,
+#swagger-ui .info .base-url,
+#swagger-ui .opblock-description-wrapper p,
+#swagger-ui .opblock-section-header h4,
+#swagger-ui .opblock-section-header label,
+#swagger-ui .opblock-summary-description,
+#swagger-ui .parameters-col_description p,
+#swagger-ui .responses-inner h4,
+#swagger-ui .responses-inner h5 {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #040707;
+}
+
+/* form elements */
+
+#swagger-ui a.nostyle {
+  color: #040707 !important;
+}
+
+#swagger-ui select {
+  font-family: 'Source Code Pro', monospace;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#swagger-ui table {
+  border-collapse: inherit;
+  border-spacing: 0;
+  padding: 0;
+}
+
+#swagger-ui textarea {
+  border: 0;
+}
+
+/* buttons */
+
+#swagger-ui .btn {
+  height: 32px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 0 16px;
+  background: #eee;
+  color: #040707;
+  animation: none;
+  border: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  text-transform: uppercase;
+}
+
+#swagger-ui .btn:active {
+  background: #a6a6a6;
+}
+
+#swagger-ui .btn.execute,
+#swagger-ui .try-out__btn {
+  background: #ffe128;
+}
+
+#swagger-ui .btn.execute:active,
+#swagger-ui .try-out__btn:active {
+  background: #b39f1e;
+}
+
+#swagger-ui .btn.execute {
+  margin-bottom: 20px;
+}
+
+#swagger-ui .errors-wrapper {
+  margin: 84px 20px -46px;
+}
+
+#swagger-ui .execute-wrapper {
+  padding: 0 20px;
+}
+
+/* intro */
+
+#swagger-ui .info {
+  margin: 64px 0 0;
+  background: #faf7ef;
+}
+
+#swagger-ui .info a {
+  font-weight: 400;
+}
+
+#swagger-ui .info .description {
+  display: block;
+  margin-top: 32px;
+}
+
+#swagger-ui .info .description strong,
+#swagger-ui .info .title,
+#swagger-ui .opblock-tag {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 16px 0;
+  padding: 0;
+}
+
+#swagger-ui .info .title {
+  background: #96ebd7;
+  text-align: center;
+  padding: 48px 0 48px;
+}
+
+#swagger-ui .info .title img {
+  display: block;
+  width: 400px;
+  margin: 0 auto 16px;
+}
+
+#swagger-ui .info .title small {
+  display: block;
+  top: 0;
+  width: 104px;
+  margin: 24px auto 0;
+  padding: 8px;
+  border-radius: 2px;
+  background: #ffe128;
+}
+
+.dialog-ux h6,
+#swagger-ui .info .version {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#swagger-ui .main {
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+#swagger-ui .main strong {
+  font-weight: 500;
+}
+
+/* models */
+
+#swagger-ui section.models {
+  background: #fff;
+  border-color: #eee;
+}
+
+#swagger-ui section.models h4 {
+  background: #333;
+  border-color: #eee;
+  color: #fff;
+  cursor: default;
+}
+
+#swagger-ui .model-box {
+  background: #eee;
+}
+
+#swagger-ui .model-toggle {
+  margin: 0 8px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, .14), 3px 0 1px -2px rgba(0, 0, 0, .2), 1px 0 5px 0 rgba(0, 0, 0, .12);
+}
+
+#swagger-ui .model-toggle.collapsed {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+#swagger-ui .model-toggle:before {
+  color: #fff;
+}
+
+/* endpoints */
+
+#swagger-ui .opblock {
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#swagger-ui .opblock a.nostyle {
+  cursor: pointer;
+}
+
+#swagger-ui .opblock-section-header h4 {
+  font-weight: 500;
+}
+
+#swagger-ui .opblock-summary {
+  padding: 0;
+}
+
+#swagger-ui .opblock-summary-method {
+  height: 32px;
+  line-height: 32px;
+  font-family: 'Source Code Pro', monospace;
+  padding: 0;
+}
+
+#swagger-ui .opblock-tag {
+  background: transparent;
+  border: 0;
+  cursor: default;
+}
+
+/* delete endpoints */
+
+#swagger-ui .opblock-delete,
+#swagger-ui .opblock-delete table thead tr th,
+#swagger-ui .opblock-delete table thead tr td {
+  background: #fff;
+  border-color: #cd021b;
+}
+
+#swagger-ui .opblock-delete .opblock-summary {
+  background: #ffb7bf;
+  border-color: #cd021b;
+  transition: background .3s;
+}
+
+#swagger-ui .opblock-delete.is-open .opblock-summary {
+  background: #cd021b;
+}
+
+#swagger-ui .opblock-delete.is-open a.nostyle,
+#swagger-ui .opblock-delete.is-open .opblock-summary-description,
+#swagger-ui .opblock-delete.is-open .opblock-summary-path {
+  color: #fff !important;
+}
+
+#swagger-ui .opblock-delete .opblock-summary-method {
+  background: #cd021b;
+}
+
+#swagger-ui .opblock-delete .opblock-section-header {
+  background: #ffb7bf;
+  border: solid #cd021b;
+}
+
+/* get endpoints */
+
+#swagger-ui .opblock-get,
+#swagger-ui .opblock-get table thead tr th,
+#swagger-ui .opblock-get table thead tr td {
+  background: #fff;
+  border-color: #96ebd7;
+}
+
+#swagger-ui .opblock-get .opblock-summary {
+  background: #d5f7ef;
+  border-color: #96ebd7;
+  transition: background .3s;
+}
+
+#swagger-ui .opblock-get.is-open .opblock-summary {
+  background: #96ebd7;
+}
+
+#swagger-ui .opblock-get .opblock-summary-method {
+  background: #96ebd7;
+  color: #040707;
+}
+
+#swagger-ui .opblock-get .opblock-section-header {
+  background: #d5f7ef;
+  border: solid #96ebd7;
+}
+
+/* post endpoints */
+
+#swagger-ui .opblock-post,
+#swagger-ui .opblock-post table thead tr th,
+#swagger-ui .opblock-post table thead tr td {
+  background: #fff;
+  border-color: #ffe128;
+}
+
+#swagger-ui .opblock-post .opblock-summary {
+  background: #fff3a9;
+  border-color: #ffe128;
+  transition: background .3s;
+}
+
+#swagger-ui .opblock-post.is-open .opblock-summary {
+  background: #ffe128;
+}
+
+#swagger-ui .opblock-post .opblock-summary-method {
+  background: #ffe128;
+  color: #040707;
+}
+
+#swagger-ui .opblock-post .opblock-section-header {
+  background: #fff3a9;
+  border: solid #ffe128;
+}
+
+/* patch endpoints */
+
+#swagger-ui .opblock-patch,
+#swagger-ui .opblock-patch table thead tr th,
+#swagger-ui .opblock-patch table thead tr td {
+  background: #fff;
+  border-color: #ed8c00;
+}
+
+#swagger-ui .opblock-patch .opblock-summary {
+  background: #fadcb2;
+  border-color: #ed8c00;
+  transition: background .3s;
+}
+
+#swagger-ui .opblock-patch.is-open .opblock-summary {
+  background: #ed8c00;
+}
+
+#swagger-ui .opblock-patch .opblock-summary-method {
+  background: #ed8c00;
+  color: #040707;
+}
+
+#swagger-ui .opblock-patch .opblock-section-header {
+  background: #fadcb2;
+  border: solid #ed8c00;
+}
+
+/* all endpoints */
+
+#swagger-ui .opblock .opblock-section-header {
+  min-height: 0;
+  border-width: 1px 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#swagger-ui .parameters-col_name,
+#swagger-ui .response-col_status {
+  width: 20%;
+}
+
+#swagger-ui .parameters-col_description,
+#swagger-ui .response-col_description {
+  width: 80%;
+}
+
+/* code blocks */
+
+#swagger-ui textarea.curl,
+#swagger-ui .opblock-body pre {
+  background: #333;
+  color: #fafafa;
+}
+
+#swagger-ui .scheme-container {
+  background: #eee;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* header */
+
+#swagger-ui .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  background: #333;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  z-index: 1337;
+}
+
+#swagger-ui .topbar a {
+  height: 64px;
+  max-width: none;
+  background: url(https://www.myparcel.com/images/myparcel-logo-white.png) 0 50% no-repeat;
+  background-size: 160px;
+}
+
+/* usability */
+
+::-moz-selection {
+  background: #ffe128;
+  color: #040707;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ffe128;
+  color: #040707;
+  text-shadow: none;
+}
+
+#swagger-ui .body-param__text {
+  border: 1px solid #040707;
+}

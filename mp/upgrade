@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo -e "\033[0;30;47m Updating npm dependencies \033[0m"
+${COMPOSE} ${DO} node bash -c "
+npm update --quiet
+npm outdated --quiet
+"
+
+if [ "${RUNNING}" != "" ]; then
+  echo -e "\033[0;30;47m Restarting servers \033[0m"
+  ${COMPOSE} restart
+fi

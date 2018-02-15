@@ -1,7 +1,9 @@
 # MyParcel.com API specification
 
 [![GitHub release](https://img.shields.io/github/release/MyParcelCOM/api-specification/all.svg)](https://github.com/MyParcelCOM/api-specification)
+[![Packagist](https://img.shields.io/packagist/v/MyParcelCOM/api-specification.svg)](https://packagist.org/packages/myparcelcom/api-specification)
 [![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/api-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/api-specification/swagger.json)
+[![OpenAPI Specification](https://img.shields.io/badge/OAS-3.0.0-7CB749.svg)](https://swagger.io/specification)
 
 Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification).
 This specification adheres to the [Swagger Specification](https://swagger.io/specification) v2.0 and implements the [JSON API specification](http://jsonapi.org/).

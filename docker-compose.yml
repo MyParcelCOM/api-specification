@@ -2,13 +2,20 @@ version: '3'
 
 services:
   bundler:
-    build:
-      context: ./docker/json-bundler
-      dockerfile: Dockerfile
-    image: myparcelcom/json-bundler
+    image: node:8-alpine
     working_dir: /opt/spec
+    command: ./node_modules/.bin/gulp bundle --port $GULP_PORT --specification-json-url $SPECIFICATION_JSON_URL --deprecated $SANDBOX_SCHEMA --deprecated $SANDBOX_HOST --deprecated $OAUTH_HOST --silent
     volumes:
       - .:/opt/spec
+
+  node:
+    image: node:8-alpine
+    working_dir: /opt/spec
+    command: ./node_modules/.bin/gulp watch --port $GULP_PORT --specification-json-url $SPECIFICATION_JSON_URL --deprecated $SANDBOX_SCHEMA --deprecated $SANDBOX_HOST --deprecated $OAUTH_HOST
+    volumes:
+      - .:/opt/spec
+    ports:
+      - $GULP_PORT:$GULP_PORT
 
   validator:
     image: swaggerapi/swagger-validator
