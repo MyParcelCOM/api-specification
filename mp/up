@@ -2,3 +2,5 @@
 
 echo -e "\033[0;30;47m Starting containers \033[0m"
 ${COMPOSE} up -d
+
+echo -e "\033[0;30;47m Browsersync running on \033[0m https://localhost:${GULP_PORT}"

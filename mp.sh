@@ -9,6 +9,7 @@ set -o allexport
   export $(cat ${ROOT_DIR}/.env | xargs)
   COMPOSE="docker-compose --project-name ${PROJECT_NAME}"
   RUNNING=$(${COMPOSE} ps -q)
+  [ "${RUNNING}" != "" ] && DO="exec" || DO="run --rm"
 }
 set +o allexport
 

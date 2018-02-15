@@ -8,12 +8,6 @@ if [ ! -f ${ROOT_DIR}/.env ]; then
 
   cp -a ${ROOT_DIR}/.env.dist ${ROOT_DIR}/.env
 
-  # Add current user and group to .env file, with root as fallback.
-  echo "
-USER_ID=${UID-0}
-GROUP_ID=${GROUPS-0}
-" >> ${ROOT_DIR}/.env
-
   echo -e "\033[0;30;47m .env file has been created \033[0m"
 fi
 

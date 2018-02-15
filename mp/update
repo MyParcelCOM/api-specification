@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo -e "\033[0;30;47m Installing npm dependencies from lock file \033[0m"
+${COMPOSE} ${DO} node bash -c "
+npm install --quiet
+npm outdated --quiet
+"
+
+if [ "${RUNNING}" != "" ]; then
+  echo -e "\033[0;30;47m Restarting servers \033[0m"
+  ${COMPOSE} restart
+fi
