@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo -e "\033[0;30;47m Bundling spec \033[0m"
+${COMPOSE} run --rm bundler

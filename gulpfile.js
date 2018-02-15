@@ -3,7 +3,7 @@ var replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
 var json_refs = require('gulp-json-refs');
 
-gulp.task('specification', function() {
+gulp.task('bundle', function() {
   return gulp.src('schema.json')
     .pipe(json_refs())
     // TODO: remove (probably all) replace functions below when OpenAPI 3.0 is merged (also clean gulpfile and env dist)
@@ -29,7 +29,7 @@ gulp.task('swagger-ui', function() {
     .pipe(gulp.dest('dist/swagger-ui/'));
 });
 
-gulp.task('serve', ['specification', 'src', 'swagger-ui'], function() {
+gulp.task('serve', ['bundle', 'src', 'swagger-ui'], function() {
   browserSync.init({
     https: true,
     online: false,
@@ -43,6 +43,6 @@ gulp.task('serve', ['specification', 'src', 'swagger-ui'], function() {
 });
 
 gulp.task('watch', ['serve'], function() {
-  gulp.watch(['specification/**/*'], {interval: 500}, ['specification']);
+  gulp.watch(['specification/**/*'], {interval: 500}, ['bundle']);
   gulp.watch(['src/**/*'], {interval: 500}, ['src']);
 });
