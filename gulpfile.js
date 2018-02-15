@@ -1,7 +1,8 @@
 var gulp = require('gulp');
-var replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
 var json_refs = require('gulp-json-refs');
+var rename = require("gulp-rename");
+var replace = require('gulp-replace');
 
 gulp.task('bundle', function() {
   return gulp.src('schema.json')
@@ -11,6 +12,7 @@ gulp.task('bundle', function() {
     .pipe(replace('$SANDBOX_HOST', process.argv[10]))
     .pipe(replace('$OAUTH_HOST', process.argv[12]))
     .pipe(replace('$base_url', process.argv[8] + '://' + process.argv[10]))
+    .pipe(rename('swagger.json'))
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
 });

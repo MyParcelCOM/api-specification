@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "${RUNNING}" == "" ]; then
-  echo -e "\033[0;97;101m Container 'validator' is down \033[0m" >&2
-  exit 1
-fi
-
+${COMPOSE} up -d validator
 ${ROOT_DIR}/mp/bundle
 
 echo -e "\033[0;30;47m Validating spec \033[0m"
@@ -21,3 +17,5 @@ else
     echo -e ${MESSAGES}
   fi
 fi
+
+${COMPOSE} stop validator
