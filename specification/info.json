@@ -1,7 +1,7 @@
 {
   "version": "0.7.1",
   "title": "MyParcel.com API Specification",
-  "description": "**Introduction**<br>This is the API reference for MyParcel.com implementing the [Swagger specification](https://swagger.io/specification) according to [JSON API](http://jsonapi.org) conventions.<br>For more information visit our [API documentation](https://docs.myparcel.com).<br>**Units**<br>Some attributes in the API have values in one of the following units:<ul><li>Currency: cents where applicable (eg. EUR, GBP, USD), otherwise the basic unit (eg. JPY, NOK)</li><li>Distances: meters</li><li>Dimensions: millimeters</li><li>Volumes: liters (dm3)</li><li>Weights: grams</li></ul>",
+  "description": "**Introduction**<br>This is the API reference for MyParcel.com implementing the [Swagger specification](https://swagger.io/specification) according to [JSON API](http://jsonapi.org) conventions.<br>For more information visit our [API documentation](https://docs.myparcel.com).<br>**Units**Some attributes in the API have values in one of the following units:<ul><li>Currency: cents where applicable (eg. EUR, GBP, USD), otherwise the basic unit (eg. JPY, NOK)</li><li>Distances: meters</li><li>Dimensions: millimeters</li><li>Volumes: liters (dm3)</li><li>Weights: grams</li></ul>",
   "termsOfService": "https://www.myparcel.com/terms",
   "contact": {
     "name": "Tech Support",
