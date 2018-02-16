@@ -1,4 +1,21 @@
 #!/usr/bin/env bash
 
 echo -e "\033[0;30;47m Bundling spec \033[0m"
-${COMPOSE} run --rm bundler
+${COMPOSE} run --rm bundler ash -c "
+mkdir -p dist
+npm install -g json-refs
+json-refs resolve schema.json -f > dist/swagger.json
+"
+
+if [ "$(uname -s)" == "Linux" ]; then
+  echo -e "\033[0;30;47m Fixing file ownership for Linux \033[0m"
+  ${COMPOSE} run --rm bundler chown -R $(id -u):$(id -g) dist
+fi
+
+echo -e "\033[0;30;47m Injecting vars \033[0m"
+${COMPOSE} run --rm bundler ash -c "
+sed -i 's/\$SANDBOX_HOST/${SANDBOX_HOST}/' dist/swagger.json
+sed -i 's/\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/' dist/swagger.json
+sed -i 's/\$OAUTH_HOST/${OAUTH_HOST}/' dist/swagger.json
+sed -i 's/\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/' dist/swagger.json
+"
