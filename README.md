@@ -14,7 +14,11 @@ This specification adheres to the [Swagger Specification](https://swagger.io/spe
 - [Conventions](#conventions)
 
 ## Installation
-The repository provides docker containers to validate and preview the spec before committing changes. This is also used when validating pull requests.
+The repository provides Docker containers to validate and preview the spec before committing changes.
+This is also used when validating pull requests. To setup the project for development run:
+```bash
+./mp.sh setup
+```
 
 ### Installing Docker
 To install Docker, follow the steps below for your preferred OS.
