@@ -2,9 +2,8 @@ version: '3'
 
 services:
   bundler:
-    image: node:9
+    image: node:9-alpine
     working_dir: /opt/spec
-    command: ./node_modules/.bin/gulp bundle --port $GULP_PORT --specification-json-url $SPECIFICATION_JSON_URL --deprecated $SANDBOX_SCHEMA --deprecated $SANDBOX_HOST --deprecated $OAUTH_HOST --silent
     volumes:
       - .:/opt/spec
 
