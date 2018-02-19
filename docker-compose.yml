@@ -10,7 +10,7 @@ services:
   node:
     image: node:9
     working_dir: /opt/spec
-    command: ./node_modules/.bin/gulp watch --port $GULP_PORT --specification-json-url $SPECIFICATION_JSON_URL --deprecated $SANDBOX_SCHEMA --deprecated $SANDBOX_HOST --deprecated $OAUTH_HOST
+    command: ./node_modules/.bin/gulp watch --port $GULP_PORT --specification-json-url $SPECIFICATION_JSON_URL --api-host $API_HOST --auth-host $AUTH_HOST
     volumes:
       - .:/opt/spec
     ports:
