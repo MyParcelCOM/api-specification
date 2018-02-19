@@ -1,0 +1,8 @@
+{
+  "name": "street_number",
+  "in": "query",
+  "description": "The street number.",
+  "schema": {
+    "type": "string"
+  }
+}

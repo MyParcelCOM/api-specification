@@ -1,5 +1,0 @@
-{
-  "type": "string",
-  "pattern": "^regions$",
-  "example": "regions"
-}

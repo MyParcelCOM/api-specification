@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves a service option price with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "service_option_price_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the service option price."
+        "$ref": "#/components/parameters/path-service_option_price_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the service option price.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/ServiceOptionPrice"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ServiceOptionPrice"
+                }
+              }
             }
           }
         }

@@ -1,0 +1,10 @@
+{
+  "name": "file_id",
+  "in": "path",
+  "description": "Id of the file.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

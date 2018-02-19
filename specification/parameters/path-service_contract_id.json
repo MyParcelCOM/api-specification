@@ -1,0 +1,10 @@
+{
+  "name": "service_contract_id",
+  "in": "path",
+  "description": "Id of the service contract.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

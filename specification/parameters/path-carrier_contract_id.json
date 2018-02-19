@@ -1,0 +1,10 @@
+{
+  "name": "carrier_contract_id",
+  "in": "path",
+  "description": "Id of the carrier contract.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

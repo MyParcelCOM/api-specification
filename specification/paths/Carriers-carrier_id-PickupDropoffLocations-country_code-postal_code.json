@@ -7,88 +7,74 @@
     "description": "This endpoint retrieves pickup and dropoff locations offered by a carrier.",
     "parameters": [
       {
-        "in": "path",
-        "name": "carrier_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the carrier."
+        "$ref": "#/components/parameters/path-carrier_id"
       },
       {
-        "in": "path",
-        "name": "country_code",
-        "required": true,
-        "type": "string",
-        "description": "The country code."
+        "$ref": "#/components/parameters/path-country_code"
       },
       {
-        "in": "path",
-        "name": "postal_code",
-        "required": true,
-        "type": "string",
-        "description": "The postal code."
+        "$ref": "#/components/parameters/path-postal_code"
       },
       {
-        "in": "query",
-        "name": "street",
-        "type": "string",
-        "description": "The street name."
+        "$ref": "#/components/parameters/query-street"
       },
       {
-        "in": "query",
-        "name": "street_number",
-        "type": "string",
-        "description": "The street number."
+        "$ref": "#/components/parameters/query-street_number"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the locations.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/PickupDropoffLocation"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.json+api": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
               "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PickupDropoffLocation"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/pickup-dropoff-locations/NL/1234AB?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/pickup-dropoff-locations/GB/NW120%6XE?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/pickup-dropoff-locations/GB/NW120%6XE?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/pickup-dropoff-locations/GB/NW120%6XE?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/pickup-dropoff-locations/GB/NW120%6XE?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/pickup-dropoff-locations/GB/NW120%6XE?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }

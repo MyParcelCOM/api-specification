@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves the region with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "region_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the region."
+        "$ref": "#/components/parameters/path-region_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the region.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Region"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Region"
+                }
+              }
             }
           }
         }

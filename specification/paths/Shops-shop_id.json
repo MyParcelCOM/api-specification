@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves the shop with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shop_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shop."
+        "$ref": "#/components/parameters/path-shop_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the shop.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Shop"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Shop"
+                }
+              }
             }
           }
         }
@@ -40,67 +40,45 @@
     "description": "This endpoint updates the shop with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shop_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shop."
-      },
-      {
-        "in": "body",
-        "name": "shop",
-        "description": "The shop object with attributes to be updated.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "object",
-              "required": [
-                "type",
-                "id",
-                "attributes"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "$ref": "../types/Shop.json"
-                },
-                "id": {
-                  "$ref": "../includes/uuid.json"
-                },
-                "attributes": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "$ref": "../properties/Shop.json"
-                  }
-                },
-                "relationships": {
-                  "$ref": "../relationships/Shop.json"
-                }
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The shop object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/Shop"
               }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "200": {
         "description": "The shop is updated.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Shop"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Shop"
+                }
+              }
             }
           }
         }

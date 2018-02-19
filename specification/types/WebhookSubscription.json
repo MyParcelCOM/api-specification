@@ -1,5 +1,0 @@
-{
-  "type": "string",
-  "pattern": "^webhook-subscriptions$",
-  "example": "webhook-subscriptions"
-}

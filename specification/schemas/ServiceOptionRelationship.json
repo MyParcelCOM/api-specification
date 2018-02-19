@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "data",
+    "links"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinimalServiceOption"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "related": {
+          "type": "string",
+          "example": "$base_url/service-options/4c675b1a-516c-4410-abff-d237fd45bcd0"
+        }
+      }
+    }
+  }
+}

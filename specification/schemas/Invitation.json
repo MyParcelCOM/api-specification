@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalInvitation"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "email",
+            "name",
+            "message"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "readOnly": true,
+              "type": "string",
+              "example": "15317471056093"
+            },
+            "email": {
+              "$ref": "#/components/schemas/Email"
+            },
+            "name": {
+              "type": "string",
+              "example": "Sherlock Holmes"
+            },
+            "message": {
+              "type": "string",
+              "example": "Hi Sherlock, this is your invitation to join myparcel.com"
+            },
+            "status": {
+              "readOnly": true,
+              "type": "string",
+              "enum": [
+                "pending",
+                "accepted"
+              ],
+              "example": "pending"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/invitations/06ff9497-7ef0-441e-a12d-9aa90d36caf3"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

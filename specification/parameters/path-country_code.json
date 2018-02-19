@@ -1,0 +1,9 @@
+{
+  "name": "country_code",
+  "in": "path",
+  "description": "The country code.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/CountryCode"
+  }
+}

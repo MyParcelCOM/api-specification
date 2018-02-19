@@ -13,9 +13,11 @@ if [ "$(uname -s)" == "Linux" ]; then
 fi
 
 echo -e "\033[0;30;47m Injecting vars \033[0m"
+# Escape "/" characters to avoid conflict with sed.
+API_HOST=${API_HOST//\//\\/}
+AUTH_HOST=${AUTH_HOST//\//\\/}
+
 ${COMPOSE} run --rm bundler ash -c "
-sed -i 's/\$SANDBOX_HOST/${SANDBOX_HOST}/' dist/swagger.json
-sed -i 's/\$SANDBOX_SCHEMA/${SANDBOX_SCHEMA}/' dist/swagger.json
-sed -i 's/\$OAUTH_HOST/${OAUTH_HOST}/' dist/swagger.json
-sed -i 's/\$base_url/${SANDBOX_SCHEMA}:\/\/${SANDBOX_HOST}\/v1/' dist/swagger.json
+sed -i 's/\$API_HOST/${API_HOST}/' dist/swagger.json
+sed -i 's/\$AUTH_HOST/${AUTH_HOST}/' dist/swagger.json
 "

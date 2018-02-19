@@ -7,67 +7,69 @@
     "description": "This endpoint retrieves service contracts for the supplied service.",
     "parameters": [
       {
-        "in": "path",
-        "name": "service_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the service."
+        "$ref": "#/components/parameters/path-service_id"
       },
       {
-        "in": "query",
         "name": "include",
-        "type": "string",
-        "description": "Comma separated list of relationship names you want to include the data of.<br> The relationships that can be included are:<ul><li>carrier_contract</li><li>service_groups</li><li>service_insurances</li><li>service_option_prices</li><li>service_option_prices.service_option</li></ul>"
+        "in": "query",
+        "description": "Comma separated list of relationship names you want to include the data of.<br> The relationships that can be included are:<ul><li>carrier_contract</li><li>service_groups</li><li>service_insurances</li><li>service_option_prices</li><li>service_option_prices.service_option</li></ul>",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the service contract(s).",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ServiceContract"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
-              "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceContract"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/services/c9ce29a4-6325-11e7-907b-a6006ad3dba0/contracts?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb/contracts?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb/contracts?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb/contracts?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb/contracts?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb/contracts?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }

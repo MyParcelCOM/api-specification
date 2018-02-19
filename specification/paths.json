@@ -8,11 +8,11 @@
   "/carriers/{carrier_id}/contracts": {
     "$ref": "./paths/Carriers-carrier_id-CarrierContracts.json"
   },
-  "/carrier-contracts/{carrier_contract_id}": {
-    "$ref": "./paths/CarrierContracts-carrier_contract_id.json"
-  },
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code.json"
+  },
+  "/carrier-contracts/{carrier_contract_id}": {
+    "$ref": "./paths/CarrierContracts-carrier_contract_id.json"
   },
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
@@ -91,12 +91,6 @@
   },
   "/shops/{shop_id}": {
     "$ref": "./paths/Shops-shop_id.json"
-  },
-  "/shops/{shop_id}/shipment-estimates": {
-    "$ref": "./paths/Shops-shop_id-ShipmentEstimates.json"
-  },
-  "/shops/{shop_id}/shipment-estimates/{shipment_estimate_id}": {
-    "$ref": "./paths/Shops-shop_id-ShipmentEstimates-shipment_estimate_id.json"
   },
   "/shops/{shop_id}/webhook-subscriptions": {
     "$ref": "./paths/Shops-shop_id-WebhookSubscriptions.json"
