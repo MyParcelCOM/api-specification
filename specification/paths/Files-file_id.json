@@ -7,43 +7,28 @@
     "description": "This endpoint retrieves the file with the supplied id. Accept headers can be used to retrieve the file in a different format.",
     "parameters": [
       {
-        "in": "path",
-        "name": "file_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the file."
+        "$ref": "#/components/parameters/path-file_id"
       },
       {
-        "in": "header",
-        "name": "Accept",
-        "type": "string",
-        "required": true,
-        "enum": [
-          "application/vnd.api+json",
-          "application/pdf",
-          "image/png",
-          "image/jpeg"
-        ],
-        "description": "You can set the file header to either receive a json response, or the files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`image/png`</li><li>`image/jpeg`</li></ul>"
+        "$ref": "#/components/parameters/header-files"
       }
-    ],
-    "produces": [
-      "application/vnd.api+json",
-      "application/pdf",
-      "image/png"
     ],
     "responses": {
       "200": {
         "description": "Retrieved the file.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/File"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/File"
+                }
+              }
             }
           }
         }

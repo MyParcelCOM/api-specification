@@ -8,52 +8,56 @@
     "responses": {
       "200": {
         "description": "Retrieved the users.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/User"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
               "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/users?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/users?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/users?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/users?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/users?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/users?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/users?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/users?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/users?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/users?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }
@@ -68,66 +72,47 @@
     ],
     "summary": "Create a new user.",
     "description": "This endpoint creates a new user with the posted data. <strong>A registration confirmation will be sent via email.</strong>",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "user",
-        "description": "The user object to be created.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "object",
-              "required": [
-                "type",
-                "attributes"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "$ref": "../types/User.json"
-                },
-                "id": {
-                  "$ref": "../includes/read-only-uuid.json"
-                },
-                "attributes": {
-                  "type": "object",
-                  "required": [
-                    "first_name",
-                    "last_name",
-                    "company",
-                    "email",
-                    "phone_number"
-                  ],
-                  "additionalProperties": false,
-                  "properties": {
-                    "$ref": "../properties/User.json"
-                  }
-                },
-                "meta": {
-                  "type": "object",
-                  "properties": {
-                    "shop_name": {
-                      "type": "string",
-                      "example": "my.webshop.com"
-                    },
-                    "invitation_code": {
-                      "type": "string",
-                      "example": "15317471056093"
+    "requestBody": {
+      "description": "The user object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/User"
+                  },
+                  {
+                    "properties": {
+                      "meta": {
+                        "type": "object",
+                        "properties": {
+                          "shop_name": {
+                            "type": "string",
+                            "example": "my.webshop.com"
+                          },
+                          "invitation_code": {
+                            "type": "string",
+                            "example": "15317471056093"
+                          }
+                        }
+                      }
                     }
                   }
-                }
+                ]
               }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "204": {
         "description": "The user is created."

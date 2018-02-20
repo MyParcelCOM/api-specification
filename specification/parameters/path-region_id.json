@@ -1,0 +1,10 @@
+{
+  "name": "region_id",
+  "in": "path",
+  "description": "Id of the region.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

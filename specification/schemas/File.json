@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalFile"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "document_type",
+            "formats"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "document_type": {
+              "type": "string",
+              "enum": [
+                "label",
+                "printcode",
+                "invoice"
+              ],
+              "example": "label"
+            },
+            "formats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "This array holds objects describing the type of formats this file is available in.",
+                "required": [
+                  "extension",
+                  "mime_type"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "extension": {
+                    "type": "string",
+                    "example": "pdf"
+                  },
+                  "mime_type": {
+                    "type": "string",
+                    "example": "application/pdf"
+                  }
+                }
+              },
+              "example": [
+                {
+                  "extension": "pdf",
+                  "mime_type": "application/pdf"
+                }
+              ]
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/files/0f621db6-d239-4ae9-b85d-8e97469b10ce"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

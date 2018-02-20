@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves the service with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "service_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the service."
+        "$ref": "#/components/parameters/path-service_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the service.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Service"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Service"
+                }
+              }
             }
           }
         }

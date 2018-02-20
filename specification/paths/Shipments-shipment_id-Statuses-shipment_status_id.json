@@ -7,37 +7,35 @@
     "description": "This endpoint retrieves the shipment status with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shipment_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shipment."
+        "$ref": "#/components/parameters/path-shipment_id"
       },
       {
-        "in": "path",
-        "name": "shipment_status_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shipment status."
+        "$ref": "#/components/parameters/path-shipment_status_id"
       },
       {
-        "in": "query",
         "name": "include",
-        "type": "string",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are status and shipment."
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are status and shipment.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the shipment status.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/ShipmentStatus"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ShipmentStatus"
+                }
+              }
             }
           }
         }

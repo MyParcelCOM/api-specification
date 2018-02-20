@@ -1,0 +1,125 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalService"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name",
+            "package_type",
+            "handover_method"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Parcel to Parcelshop"
+            },
+            "package_type": {
+              "type": "string",
+              "enum": [
+                "letter",
+                "letterbox",
+                "parcel",
+                "unstamped"
+              ],
+              "example": "parcel"
+            },
+            "delivery_days": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Day"
+              },
+              "example": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ]
+            },
+            "transit_time": {
+              "type": "object",
+              "description": "The number of days for transit. Use 0 for same day delivery.",
+              "additionalProperties": false,
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "max": {
+                  "type": "integer",
+                  "example": 3
+                }
+              }
+            },
+            "handover_method": {
+              "type": "string",
+              "enum": [
+                "drop-off",
+                "collection"
+              ],
+              "example": "drop-off"
+            },
+            "rating": {
+              "type": "number",
+              "format": "float",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "example": 0.8,
+              "description": "Generic rating of the service which indicates a combination of price, quality and popularity"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "carrier",
+            "region_from",
+            "region_to"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "carrier": {
+              "$ref": "#/components/schemas/CarrierRelationship"
+            },
+            "region_from": {
+              "$ref": "#/components/schemas/RegionRelationship"
+            },
+            "region_to": {
+              "$ref": "#/components/schemas/RegionRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self",
+            "contracts"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb"
+            },
+            "contracts": {
+              "type": "string",
+              "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb/contracts"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

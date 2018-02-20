@@ -1,0 +1,10 @@
+{
+  "name": "shop_id",
+  "in": "path",
+  "description": "Id of the shop.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

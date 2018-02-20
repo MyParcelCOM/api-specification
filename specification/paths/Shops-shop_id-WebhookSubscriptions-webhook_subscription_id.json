@@ -7,32 +7,28 @@
     "description": "This endpoint retrieves the webhook subscription with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shop_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shop."
+        "$ref": "#/components/parameters/path-shop_id"
       },
       {
-        "in": "path",
-        "name": "webhook_subscription_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the webhook subscription."
+        "$ref": "#/components/parameters/path-webhook_subscription_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the webhook subscription.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/WebhookSubscription"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/WebhookSubscription"
+                }
+              }
             }
           }
         }
@@ -47,18 +43,10 @@
     "description": "This endpoint deletes the webhook subscription with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shop_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shop."
+        "$ref": "#/components/parameters/path-shop_id"
       },
       {
-        "in": "path",
-        "name": "webhook_subscription_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the webhook subscription."
+        "$ref": "#/components/parameters/path-webhook_subscription_id"
       }
     ],
     "responses": {

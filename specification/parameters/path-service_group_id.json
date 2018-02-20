@@ -1,0 +1,10 @@
+{
+  "name": "service_group_id",
+  "in": "path",
+  "description": "Id of the service group.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

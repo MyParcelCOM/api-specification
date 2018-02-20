@@ -7,72 +7,82 @@
     "description": "This endpoint retrieves shipments.",
     "parameters": [
       {
-        "in": "query",
         "name": "include",
-        "type": "string",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service_contract, service_options, status and files."
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service_contract, service_options, status and files.",
+        "schema": {
+          "type": "string"
+        }
       },
       {
-        "in": "query",
         "name": "filter[search]",
-        "type": "string",
-        "description": "String of characters you want to look for in the description and recipient_address fields of the shipment."
+        "in": "query",
+        "description": "String of characters you want to look for in the description and recipient_address fields of the shipment.",
+        "schema": {
+          "type": "string"
+        }
       },
       {
-        "in": "query",
         "name": "filter[shop]",
-        "type": "string",
-        "description": "Comma separated string of shop ids to filter on."
+        "in": "query",
+        "description": "Comma separated string of shop ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the shipments.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Shipment"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
-              "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/shipments?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Shipment"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/shipments?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/shipments?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/shipments?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/shipments?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }
@@ -87,38 +97,42 @@
     ],
     "summary": "Create a new shipment.",
     "description": "This endpoint creates a new shipment with the posted data.",
-    "parameters": [
-      {
-        "in": "body",
-        "name": "shipment",
-        "description": "The shipment object to be created.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Shipment"
+    "requestBody": {
+      "description": "The shipment object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/Shipment"
+              }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "201": {
         "description": "The shipment is created.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Shipment"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Shipment"
+                }
+              }
             }
           }
         }

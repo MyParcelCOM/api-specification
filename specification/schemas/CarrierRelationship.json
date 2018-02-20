@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "object",
+      "allOf": [
+        {
+            "$ref": "#/components/schemas/MinimalCarrier"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "related": {
+          "type": "string",
+          "format": "url",
+          "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9"
+        }
+      }
+    }
+  }
+}

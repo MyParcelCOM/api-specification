@@ -1,0 +1,77 @@
+{
+  "header-files": {
+    "$ref": "./parameters/header-files.json"
+  },
+  "path-carrier_id": {
+    "$ref": "./parameters/path-carrier_id.json"
+  },
+  "path-carrier_contract_id": {
+    "$ref": "./parameters/path-carrier_contract_id.json"
+  },
+  "path-country_code": {
+    "$ref": "./parameters/path-country_code.json"
+  },
+  "path-file_id": {
+    "$ref": "./parameters/path-file_id.json"
+  },
+  "path-invitation_id": {
+    "$ref": "./parameters/path-invitation_id.json"
+  },
+  "path-password_reset_id": {
+    "$ref": "./parameters/path-password_reset_id.json"
+  },
+  "path-postal_code": {
+    "$ref": "./parameters/path-postal_code.json"
+  },
+  "path-region_id": {
+    "$ref": "./parameters/path-region_id.json"
+  },
+  "path-service_id": {
+    "$ref": "./parameters/path-service_id.json"
+  },
+  "path-service_contract_id": {
+    "$ref": "./parameters/path-service_contract_id.json"
+  },
+  "path-service_group_id": {
+    "$ref": "./parameters/path-service_group_id.json"
+  },
+  "path-service_insurance_id": {
+    "$ref": "./parameters/path-service_insurance_id.json"
+  },
+  "path-service_option_id": {
+    "$ref": "./parameters/path-service_option_id.json"
+  },
+  "path-service_option_price_id": {
+    "$ref": "./parameters/path-service_option_price_id.json"
+  },
+  "path-shipment_id": {
+    "$ref": "./parameters/path-shipment_id.json"
+  },
+  "path-shipment_status_id": {
+    "$ref": "./parameters/path-shipment_status_id.json"
+  },
+  "path-shop_id": {
+    "$ref": "./parameters/path-shop_id.json"
+  },
+  "path-status_id": {
+    "$ref": "./parameters/path-status_id.json"
+  },
+  "path-system_message_id": {
+    "$ref": "./parameters/path-system_message_id.json"
+  },
+  "path-user_id": {
+    "$ref": "./parameters/path-user_id.json"
+  },
+  "path-webhook_id": {
+    "$ref": "./parameters/path-webhook_id.json"
+  },
+  "path-webhook_subscription_id": {
+    "$ref": "./parameters/path-webhook_subscription_id.json"
+  },
+  "query-street": {
+    "$ref": "./parameters/query-street.json"
+  },
+  "query-street_number": {
+    "$ref": "./parameters/query-street_number.json"
+  }
+}

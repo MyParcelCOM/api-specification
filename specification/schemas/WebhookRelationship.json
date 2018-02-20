@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinimalWebhook"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "related"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "type": "string",
+          "example": "$API_HOST/webhooks/a0bed0cb-5344-483a-aaa9-e349f6630cf4"
+        }
+      }
+    }
+  }
+}

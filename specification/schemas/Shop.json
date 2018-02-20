@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalShop"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "MyParcel.com"
+            },
+            "coc": {
+              "type": "string",
+              "example": "63190133"
+            },
+            "iban": {
+              "$ref": "#/components/schemas/Iban"
+            },
+            "billing_address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Address"
+                },
+                {
+                  "required": [
+                    "street_1",
+                    "city",
+                    "country_code"
+                  ]
+                }
+              ]
+            },
+            "return_address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Address"
+                },
+                {
+                  "required": [
+                    "street_1",
+                    "city",
+                    "country_code"
+                  ]
+                }
+              ]
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "region"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "region": {
+              "$ref": "#/components/schemas/RegionRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

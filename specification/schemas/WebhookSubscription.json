@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalWebhookSubscription"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "url"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "url": {
+              "type": "string",
+              "example": "https://magento.com/notifications"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "webhook"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "webhook": {
+              "$ref": "#/components/schemas/WebhookRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves a carrier contract for the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "carrier_contract_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the carrier contract."
+        "$ref": "#/components/parameters/path-carrier_contract_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the carrier contract.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/CarrierContract"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/CarrierContract"
+                }
+              }
             }
           }
         }

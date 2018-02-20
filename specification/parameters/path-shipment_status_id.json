@@ -1,0 +1,10 @@
+{
+  "name": "shipment_status_id",
+  "in": "path",
+  "description": "Id of the shipment status.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

@@ -7,62 +7,62 @@
     "description": "This endpoint retrieves webhook subscriptions for the supplied shops.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shop_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shop."
+        "$ref": "#/components/parameters/path-shop_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the webhook subscriptions.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/WebhookSubscription"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
               "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WebhookSubscription"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/shops/c9ce29a4-6325-11e7-907b-a6006ad3dba0/webhook-subscriptions?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/webhook-subscriptions?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/webhook-subscriptions?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/webhook-subscriptions?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/webhook-subscriptions?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/webhook-subscriptions?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }
@@ -79,43 +79,45 @@
     "description": "This endpoint creates a new webhook subscription with the posted data.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shop_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shop."
-      },
-      {
-        "in": "body",
-        "name": "webhook_subscription",
-        "description": "The webhook subscription object to be created.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/WebhookSubscription"
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The webhook subscription object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/WebhookSubscription"
+              }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "201": {
         "description": "The webhook subscription is created.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/WebhookSubscription"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/WebhookSubscription"
+                }
+              }
             }
           }
         }

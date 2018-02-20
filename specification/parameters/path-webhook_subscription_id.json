@@ -1,0 +1,10 @@
+{
+  "name": "webhook_subscription_id",
+  "in": "path",
+  "description": "Id of the webhook subscription.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

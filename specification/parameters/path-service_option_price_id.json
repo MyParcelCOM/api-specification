@@ -1,0 +1,10 @@
+{
+  "name": "service_option_price_id",
+  "in": "path",
+  "description": "Id of the service option price.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

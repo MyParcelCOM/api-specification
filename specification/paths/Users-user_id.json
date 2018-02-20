@@ -7,25 +7,25 @@
     "description": "This endpoint retrieves the user with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "user_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the user."
+        "$ref": "#/components/parameters/path-user_id"
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the user.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/User"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
             }
           }
         }
@@ -40,64 +40,45 @@
     "description": "This endpoint updates the user with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "user_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the user."
-      },
-      {
-        "in": "body",
-        "name": "user",
-        "description": "The user object with attributes to be updated.",
-        "required": true,
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "type": "object",
-              "required": [
-                "type",
-                "id",
-                "attributes"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "type": {
-                  "$ref": "../types/User.json"
-                },
-                "id": {
-                  "$ref": "../includes/uuid.json"
-                },
-                "attributes": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "$ref": "../properties/User.json"
-                  }
-                }
+        "$ref": "#/components/parameters/path-user_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The user object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/User"
               }
             }
           }
         }
       }
-    ],
+    },
     "responses": {
       "200": {
         "description": "The user is updated.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/User"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
             }
           }
         }

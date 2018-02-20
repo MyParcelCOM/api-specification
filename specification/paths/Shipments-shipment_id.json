@@ -7,30 +7,32 @@
     "description": "This endpoint retrieves the shipment with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shipment_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shipment."
+        "$ref": "#/components/parameters/path-shipment_id"
       },
       {
-        "in": "query",
         "name": "include",
-        "type": "string",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service and status."
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are shop, service and status.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the shipment.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data"
-          ],
-          "properties": {
-            "data": {
-              "$ref": "#/definitions/Shipment"
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Shipment"
+                }
+              }
             }
           }
         }
@@ -45,11 +47,7 @@
     "description": "This endpoint deletes the shipment with the supplied id.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shipment_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shipment."
+        "$ref": "#/components/parameters/path-shipment_id"
       }
     ],
     "responses": {

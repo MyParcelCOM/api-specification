@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MinimalServiceContract"
+          },
+          {
+            "required": [
+              "id"
+            ]
+          }
+        ]
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "related": {
+          "type": "string",
+          "example": "$API_HOST/services/d35a7388-5300-49f9-9a84-01ca549a7775/contracts/af5e65b6-a709-4f61-a565-7c12a752482f"
+        }
+      }
+    }
+  }
+}

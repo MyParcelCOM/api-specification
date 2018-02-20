@@ -7,67 +7,69 @@
     "description": "This endpoint retrieves statuses for the supplied shipment.",
     "parameters": [
       {
-        "in": "path",
-        "name": "shipment_id",
-        "type": "string",
-        "required": true,
-        "description": "Id of the shipment."
+        "$ref": "#/components/parameters/path-shipment_id"
       },
       {
-        "in": "query",
         "name": "include",
-        "type": "string",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are status and shipment."
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are status and shipment.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
       "200": {
         "description": "Retrieved the shipment statuses.",
-        "schema": {
-          "type": "object",
-          "required": [
-            "data",
-            "meta",
-            "links"
-          ],
-          "properties": {
-            "data": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ShipmentStatus"
-              }
-            },
-            "meta": {
-              "$ref": "../includes/pagination-meta.json"
-            },
-            "links": {
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
               "type": "object",
               "required": [
-                "self",
-                "first",
-                "last"
+                "data",
+                "meta",
+                "links"
               ],
-              "additionalProperties": false,
               "properties": {
-                "self": {
-                  "type": "string",
-                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=3&page[size]=30"
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ShipmentStatus"
+                  }
                 },
-                "first": {
-                  "type": "string",
-                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=1&page[size]=30"
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "prev": {
-                  "type": "string",
-                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=2&page[size]=30"
-                },
-                "next": {
-                  "type": "string",
-                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=4&page[size]=30"
-                },
-                "last": {
-                  "type": "string",
-                  "example": "$base_url/shipments/c9ce29a4-6325-11e7-907b-a6006ad3dba0/statuses?page[number]=13&page[size]=30"
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }

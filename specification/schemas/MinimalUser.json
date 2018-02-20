@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^users$",
+      "example": "users"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "6b341b44-f2f8-4c8b-b066-b8aa5c78ef6b",
+      "readOnly": true
+    }
+  }
+}

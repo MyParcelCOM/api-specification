@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalServiceGroup"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "weight",
+            "price"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "weight": {
+              "type": "object",
+              "required": [
+                "min",
+                "max"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "example": 0
+                },
+                "max": {
+                  "type": "integer",
+                  "example": 2000
+                }
+              }
+            },
+            "price": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "step_price": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "step_size": {
+              "type": "number",
+              "example": 100
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "service_contract"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "service_contract": {
+              "$ref": "#/components/schemas/ServiceContractRelationship"
+            }
+          }
+        },
+        "links": {
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$base_url/service-groups/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

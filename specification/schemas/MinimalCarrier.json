@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^carriers$",
+      "example": "carriers"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "be7f6752-34e0-49a1-a832-bcc209450ea9",
+      "readOnly": true
+    }
+  }
+}
