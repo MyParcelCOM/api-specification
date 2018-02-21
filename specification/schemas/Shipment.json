@@ -119,12 +119,17 @@
                 }
               ]
             },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ShipmentItem"
+              }
+            },
             "customs": {
               "type": "object",
               "required": [
                 "content_type",
                 "invoice_number",
-                "items",
                 "non_delivery",
                 "incoterm"
               ],
@@ -144,12 +149,6 @@
                 "invoice_number": {
                   "type": "string",
                   "example": "9000"
-                },
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ShipmentItem"
-                  }
                 },
                 "non_delivery": {
                   "type": "string",
