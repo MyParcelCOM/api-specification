@@ -9,7 +9,6 @@
         "attributes",
         "links"
       ],
-      "additionalProperties": false,
       "properties": {
         "attributes": {
           "type": "object",
