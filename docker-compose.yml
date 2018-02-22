@@ -15,9 +15,3 @@ services:
       - .:/opt/spec
     ports:
       - $GULP_PORT:$GULP_PORT
-
-  validator:
-    image: swaggerapi/swagger-validator
-    working_dir: /opt/spec
-    volumes:
-      - ./dist:/opt/spec
