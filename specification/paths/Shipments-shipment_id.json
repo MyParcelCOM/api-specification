@@ -39,7 +39,7 @@
                     }
                   ],
                   "example": {
-                    "$ref": "../examples/Shipment.json"
+                    "$ref": "../examples/ShipmentResponse.json"
                   }
                 }
               }

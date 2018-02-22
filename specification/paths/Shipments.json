@@ -58,7 +58,7 @@
                   },
                   "example": [
                     {
-                      "$ref": "../examples/Shipment.json"
+                      "$ref": "../examples/ShipmentResponse.json"
                     }
                   ]
                 },
@@ -131,7 +131,7 @@
                   }
                 ],
                 "example": {
-                  "$ref": "../examples/Shipment.json"
+                  "$ref": "../examples/ShipmentRequestBody.json"
                 }
               }
             }
@@ -161,7 +161,7 @@
                     }
                   ],
                   "example": {
-                    "$ref": "../examples/Shipment.json"
+                    "$ref": "../examples/ShipmentResponse.json"
                   }
                 }
               }
