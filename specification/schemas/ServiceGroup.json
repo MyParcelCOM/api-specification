@@ -10,7 +10,6 @@
         "relationships",
         "links"
       ],
-      "additionalProperties": false,
       "properties": {
         "attributes": {
           "type": "object",

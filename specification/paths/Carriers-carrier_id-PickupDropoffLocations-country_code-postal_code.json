@@ -26,7 +26,7 @@
       "200": {
         "description": "Retrieved the locations.",
         "content": {
-          "application/vnd.json+api": {
+          "application/vnd.api+json": {
             "schema": {
               "type": "object",
               "required": [

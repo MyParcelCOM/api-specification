@@ -8,14 +8,9 @@
       "required": [
         "attributes"
       ],
-      "additionalProperties": false,
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "level",
-            "content"
-          ],
           "additionalProperties": false,
           "properties": {
             "level": {

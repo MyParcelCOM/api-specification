@@ -8,7 +8,6 @@
       "required": [
         "attributes"
       ],
-      "additionalProperties": false,
       "properties": {
         "attributes": {
           "type": "object",
