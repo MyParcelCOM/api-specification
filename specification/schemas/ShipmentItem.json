@@ -1,12 +1,8 @@
 {
   "type": "object",
   "required": [
-    "sku",
     "description",
-    "item_value",
-    "quantity",
-    "hs_code",
-    "origin_country_code"
+    "quantity"
   ],
   "additionalProperties": false,
   "properties": {

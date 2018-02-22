@@ -47,8 +47,20 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Shipment"
-                  }
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Shipment"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternationalShipment"
+                      }
+                    ]
+                  },
+                  "example": [
+                    {
+                      "$ref": "../examples/Shipment.json"
+                    }
+                  ]
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
@@ -110,7 +122,17 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/Shipment"
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "$ref": "#/components/schemas/InternationalShipment"
+                  }
+                ],
+                "example": {
+                  "$ref": "../examples/Shipment.json"
+                }
               }
             }
           }
@@ -130,7 +152,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shipment"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Shipment"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternationalShipment"
+                    }
+                  ],
+                  "example": {
+                    "$ref": "../examples/Shipment.json"
+                  }
                 }
               }
             }

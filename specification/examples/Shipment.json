@@ -1,0 +1,159 @@
+{
+  "type": "shipments",
+  "id": "7b808eee-bf1c-40cd-98f2-3c335a06417e",
+  "attributes": {
+    "recipient_address": {
+      "street_1": "Baker Street",
+      "street_2": "Marylebone",
+      "street_number": 221,
+      "street_number_suffix": "B",
+      "postal_code": "NW1 6XE",
+      "city": "London",
+      "region_code": "ENG",
+      "country_code": "GB",
+      "first_name": "Sherlock",
+      "last_name": "Holmes",
+      "company": "Holmes Investigations",
+      "email": "s.holmes@holmesinvestigations.com",
+      "phone_number": "+31 234 567 890"
+    },
+    "sender_address": {
+      "street_1": "Baker Street",
+      "street_2": "Marylebone",
+      "street_number": 221,
+      "street_number_suffix": "B",
+      "postal_code": "NW1 6XE",
+      "city": "London",
+      "region_code": "ENG",
+      "country_code": "GB",
+      "first_name": "Sherlock",
+      "last_name": "Holmes",
+      "company": "Holmes Investigations",
+      "email": "s.holmes@holmesinvestigations.com",
+      "phone_number": "+31 234 567 890"
+    },
+    "pickup_location": {
+      "code": "205604",
+      "address": {
+        "street_1": "Baker Street",
+        "street_2": "Marylebone",
+        "street_number": 221,
+        "street_number_suffix": "B",
+        "postal_code": "NW1 6XE",
+        "city": "London",
+        "region_code": "ENG",
+        "country_code": "GB",
+        "first_name": "Sherlock",
+        "last_name": "Holmes",
+        "company": "Holmes Investigations",
+        "email": "s.holmes@holmesinvestigations.com",
+        "phone_number": "+31 234 567 890"
+      }
+    },
+    "description": "Order #8008135",
+    "price": {
+      "amount": 995,
+      "currency": "EUR"
+    },
+    "insurance": {
+      "amount": 995,
+      "currency": "EUR"
+    },
+    "barcode": "3SABCD0123456789",
+    "tracking_code": "3SABCD0123456789",
+    "tracking_url": "https://tracker.carrier.com/3SABCD0123456789",
+    "physical_properties": {
+      "height": 150,
+      "width": 300,
+      "length": 500,
+      "volume": 22.5,
+      "weight": 5000
+    },
+    "physical_properties_verified": {
+      "height": 150,
+      "width": 300,
+      "length": 500,
+      "volume": 22.5,
+      "weight": 5000
+    },
+    "items": [
+      {
+        "sku": "123456789",
+        "description": "OnePlus X",
+        "item_value": {
+          "amount": 995,
+          "currency": "EUR"
+        },
+        "quantity": 2,
+        "hs_code": "8517.12.00",
+        "origin_country_code": "GB"
+      }
+    ],
+    "created_at": 1504801719,
+    "updated_at": 1504801719,
+    "synced_at": 1504801719
+  },
+  "relationships": {
+    "service_options": {
+      "data": [
+        {
+          "type": "service-options",
+          "id": "4c675b1a-516c-4410-abff-d237fd45bcd0"
+        }
+      ],
+      "links": {
+        "related": "https://sandbox-api.myparcel.com/v1/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
+      }
+    },
+    "parent": {
+      "data": {
+        "type": "shipments",
+        "id": "7b808eee-bf1c-40cd-98f2-3c335a06417e"
+      },
+      "links": {
+        "related": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+      }
+    },
+    "shop": {
+      "data": {
+        "type": "shops",
+        "id": "35eddf50-1d84-47a3-8479-6bfda729cd99"
+      },
+      "links": {
+        "related": "https://sandbox-api.myparcel.com/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
+      }
+    },
+    "status": {
+      "data": {
+        "type": "shipment-statuses",
+        "id": "9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
+      },
+      "links": {
+        "related": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses/9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
+      }
+    },
+    "service_contract": {
+      "data": {
+        "type": "service-contracts",
+        "id": "af5e65b6-a709-4f61-a565-7c12a752482f"
+      },
+      "links": {
+        "related": "$base_url/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f"
+      }
+    },
+    "files": {
+      "data": [
+        {
+          "type": "files",
+          "id": "0f621db6-d239-4ae9-b85d-8e97469b10ce"
+        }
+      ],
+      "links": {
+        "related": "https://sandbox-api.myparcel.com/v1/shipments/0f621db6-d239-4ae9-b85d-8e97469b10ce/files"
+      }
+    }
+  },
+  "links": {
+    "self": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+  }
+}

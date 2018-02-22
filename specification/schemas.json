@@ -32,6 +32,9 @@
   "Iban": {
     "$ref": "./schemas/Iban.json"
   },
+  "InternationalShipment": {
+    "$ref": "./schemas/InternationalShipment.json"
+  },
   "Invitation": {
     "$ref": "./schemas/Invitation.json"
   },
