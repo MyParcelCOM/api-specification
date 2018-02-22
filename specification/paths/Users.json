@@ -22,7 +22,25 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/User"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/User"
+                      },
+                      {
+                        "properties": {
+                          "attributes": {
+                            "type": "object",
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "company",
+                              "email",
+                              "phone_number"
+                            ]
+                          }
+                        }
+                      }
+                    ]
                   }
                 },
                 "meta": {

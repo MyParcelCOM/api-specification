@@ -137,7 +137,23 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/SystemMessage"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/SystemMessage"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "level",
+                            "content"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }

@@ -23,7 +23,25 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/User"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/User"
+                    },
+                    {
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "first_name",
+                            "last_name",
+                            "company",
+                            "email",
+                            "phone_number"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -76,7 +94,25 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/User"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/User"
+                    },
+                    {
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "first_name",
+                            "last_name",
+                            "company",
+                            "email",
+                            "phone_number"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }

@@ -11,13 +11,6 @@
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "first_name",
-            "last_name",
-            "company",
-            "email",
-            "phone_number"
-          ],
           "additionalProperties": false,
           "properties": {
             "first_name": {
