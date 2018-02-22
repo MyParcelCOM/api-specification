@@ -22,7 +22,23 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SystemMessage"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/SystemMessage"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "attributes": {
+                            "type": "object",
+                            "required": [
+                              "level",
+                              "content"
+                            ]
+                          }
+                        }
+                      }
+                    ]
                   }
                 },
                 "meta": {
@@ -85,7 +101,23 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/SystemMessage"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SystemMessage"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "attributes": {
+                        "type": "object",
+                        "required": [
+                          "level",
+                          "content"
+                        ]
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
