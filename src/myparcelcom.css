@@ -470,7 +470,3 @@ a:hover {
 #swagger-ui .body-param__text {
   border: 1px solid #040707;
 }
-
-#operations-Shipments-get_shipments > div:nth-child(2) > div > div.responses-wrapper > div.responses-inner > table > tbody > tr > td.col.response-col_description > div:nth-child(3) > div > div > span > span > span.inner-object > table > tbody > tr:nth-child(1) > td:nth-child(2) > span > span > span:nth-child(2) {
-  display: none;
-}

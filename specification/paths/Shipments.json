@@ -54,13 +54,11 @@
                       {
                         "$ref": "#/components/schemas/InternationalShipment"
                       }
-                    ]
-                  },
-                  "example": [
-                    {
-                      "$ref": "../examples/ShipmentResponse.json"
+                    ],
+                    "example": {
+                      "$ref": "#/components/examples/ShipmentResponse"
                     }
-                  ]
+                  }
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
@@ -131,7 +129,7 @@
                   }
                 ],
                 "example": {
-                  "$ref": "../examples/ShipmentRequestBody.json"
+                  "$ref": "#/components/examples/ShipmentRequestBody"
                 }
               }
             }
@@ -161,7 +159,7 @@
                     }
                   ],
                   "example": {
-                    "$ref": "../examples/ShipmentResponse.json"
+                    "$ref": "#/components/examples/ShipmentResponse"
                   }
                 }
               }
