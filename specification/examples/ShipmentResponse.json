@@ -1,0 +1,78 @@
+{
+  "allOf": [
+    {
+      "$ref": "./ShipmentRequest.json"
+    },
+    {
+      "id": "7b808eee-bf1c-40cd-98f2-3c335a06417e",
+      "attributes": {
+        "price": {
+          "amount": 995,
+          "currency": "EUR"
+        },
+        "barcode": "3SABCD0123456789",
+        "tracking_code": "3SABCD0123456789",
+        "tracking_url": "https://tracker.carrier.com/3SABCD0123456789",
+        "physical_properties_verified": {
+          "height": 150,
+          "width": 300,
+          "length": 500,
+          "volume": 22.5,
+          "weight": 5000
+        },
+        "created_at": 1504801719,
+        "updated_at": 1504801719,
+        "synced_at": 1504801719
+      },
+      "relationships": {
+        "service_options": {
+          "links": {
+            "related": "https://sandbox-api.myparcel.com/v1/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
+          }
+        },
+        "parent": {
+          "data": {
+            "type": "shipments",
+            "id": "7b808eee-bf1c-40cd-98f2-3c335a06417e"
+          },
+          "links": {
+            "related": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+          }
+        },
+        "shop": {
+          "links": {
+            "related": "https://sandbox-api.myparcel.com/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
+          }
+        },
+        "status": {
+          "data": {
+            "type": "shipment-statuses",
+            "id": "9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
+          },
+          "links": {
+            "related": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses/9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
+          }
+        },
+        "service_contract": {
+          "links": {
+            "related": "$base_url/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f"
+          }
+        },
+        "files": {
+          "data": [
+            {
+              "type": "files",
+              "id": "0f621db6-d239-4ae9-b85d-8e97469b10ce"
+            }
+          ],
+          "links": {
+            "related": "https://sandbox-api.myparcel.com/v1/shipments/0f621db6-d239-4ae9-b85d-8e97469b10ce/files"
+          }
+        }
+      },
+      "links": {
+        "self": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+      }
+    }
+  ]
+}

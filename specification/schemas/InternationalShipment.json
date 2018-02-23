@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Shipment"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "required": [
+            "items",
+            "customs"
+          ],
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {
+                "required": [
+                  "description",
+                  "quantity",
+                  "sku",
+                  "item_value",
+                  "hs_code",
+                  "origin_country_code"
+                ]
+              }
+            },
+            "customs": {
+              "type": "object",
+              "required": [
+                "content_type",
+                "invoice_number",
+                "non_delivery",
+                "incoterm"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "content_type": {
+                  "type": "string",
+                  "enum": [
+                    "merchandise",
+                    "sample_merchandise",
+                    "returned_merchandise",
+                    "documents",
+                    "gifts"
+                  ],
+                  "example": "merchandise"
+                },
+                "invoice_number": {
+                  "type": "string",
+                  "example": "9000"
+                },
+                "non_delivery": {
+                  "type": "string",
+                  "enum": [
+                    "return",
+                    "abandon"
+                  ],
+                  "example": "return",
+                  "description": "Action when the parcel cannot be delivered"
+                },
+                "incoterm": {
+                  "type": "string",
+                  "enum": [
+                    "DDU",
+                    "DDP"
+                  ],
+                  "example": "DDU",
+                  "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

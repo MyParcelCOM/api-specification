@@ -1,0 +1,106 @@
+{
+  "type": "shipments",
+  "attributes": {
+    "recipient_address": {
+      "street_1": "Baker Street",
+      "street_2": "Marylebone",
+      "street_number": 221,
+      "street_number_suffix": "B",
+      "postal_code": "NW1 6XE",
+      "city": "London",
+      "region_code": "ENG",
+      "country_code": "GB",
+      "first_name": "Sherlock",
+      "last_name": "Holmes",
+      "company": "Holmes Investigations",
+      "email": "s.holmes@holmesinvestigations.com",
+      "phone_number": "+31 234 567 890"
+    },
+    "sender_address": {
+      "street_1": "Baker Street",
+      "street_2": "Marylebone",
+      "street_number": 221,
+      "street_number_suffix": "B",
+      "postal_code": "NW1 6XE",
+      "city": "London",
+      "region_code": "ENG",
+      "country_code": "GB",
+      "first_name": "Sherlock",
+      "last_name": "Holmes",
+      "company": "Holmes Investigations",
+      "email": "s.holmes@holmesinvestigations.com",
+      "phone_number": "+31 234 567 890"
+    },
+    "pickup_location": {
+      "code": "205604",
+      "address": {
+        "street_1": "Baker Street",
+        "street_2": "Marylebone",
+        "street_number": 221,
+        "street_number_suffix": "B",
+        "postal_code": "NW1 6XE",
+        "city": "London",
+        "region_code": "ENG",
+        "country_code": "GB",
+        "first_name": "Sherlock",
+        "last_name": "Holmes",
+        "company": "Holmes Investigations",
+        "email": "s.holmes@holmesinvestigations.com",
+        "phone_number": "+31 234 567 890"
+      }
+    },
+    "description": "Order #8008135",
+    "insurance": {
+      "amount": 995,
+      "currency": "EUR"
+    },
+    "physical_properties": {
+      "height": 150,
+      "width": 300,
+      "length": 500,
+      "volume": 22.5,
+      "weight": 5000
+    },
+    "items": [
+      {
+        "sku": "123456789",
+        "description": "OnePlus X",
+        "item_value": {
+          "amount": 995,
+          "currency": "EUR"
+        },
+        "quantity": 2,
+        "hs_code": "8517.12.00",
+        "origin_country_code": "GB"
+      }
+    ],
+    "customs": {
+      "content_type": "merchandise",
+      "invoice_number": "9000",
+      "non_delivery": "return",
+      "incoterm": "DDU"
+    }
+  },
+  "relationships": {
+    "service_options": {
+      "data": [
+        {
+          "type": "service-options",
+          "id": "4c675b1a-516c-4410-abff-d237fd45bcd0"
+        }
+      ]
+    },
+    "shop": {
+      "data": {
+        "type": "shops",
+        "id": "35eddf50-1d84-47a3-8479-6bfda729cd99"
+      }
+    },
+    "service_contract": {
+      "data": {
+        "type": "service-contracts",
+        "id": "af5e65b6-a709-4f61-a565-7c12a752482f"
+      }
+    }
+  }
+}

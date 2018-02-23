@@ -30,7 +30,17 @@
               ],
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shipment"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Shipment"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternationalShipment"
+                    }
+                  ],
+                  "example": {
+                    "$ref": "#/components/examples/ShipmentResponse"
+                  }
                 }
               }
             }

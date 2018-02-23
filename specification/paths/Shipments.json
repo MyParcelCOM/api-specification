@@ -47,7 +47,17 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Shipment"
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/Shipment"
+                      },
+                      {
+                        "$ref": "#/components/schemas/InternationalShipment"
+                      }
+                    ],
+                    "example": {
+                      "$ref": "#/components/examples/ShipmentResponse"
+                    }
                   }
                 },
                 "meta": {
@@ -110,7 +120,17 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/Shipment"
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "$ref": "#/components/schemas/InternationalShipment"
+                  }
+                ],
+                "example": {
+                  "$ref": "#/components/examples/ShipmentRequest"
+                }
               }
             }
           }
@@ -130,7 +150,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shipment"
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Shipment"
+                    },
+                    {
+                      "$ref": "#/components/schemas/InternationalShipment"
+                    }
+                  ],
+                  "example": {
+                    "$ref": "#/components/examples/ShipmentResponse"
+                  }
                 }
               }
             }
