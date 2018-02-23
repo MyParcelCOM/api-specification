@@ -2,7 +2,7 @@
   "ShipmentResponse": {
     "$ref": "./examples/ShipmentResponse.json"
   },
-  "ShipmentRequestBody": {
-    "$ref": "./examples/ShipmentRequestBody.json"
+  "ShipmentRequest": {
+    "$ref": "./examples/ShipmentRequest.json"
   }
 }

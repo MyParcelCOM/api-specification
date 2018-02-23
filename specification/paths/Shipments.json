@@ -129,7 +129,7 @@
                   }
                 ],
                 "example": {
-                  "$ref": "#/components/examples/ShipmentRequestBody"
+                  "$ref": "#/components/examples/ShipmentRequest"
                 }
               }
             }
