@@ -1,5 +1,5 @@
 {
   "type": "string",
-  "pattern": "^[A-Z]{2,3}$",
+  "pattern": "^$|^[A-Z]{2,3}$",
   "example": "ENG"
 }
