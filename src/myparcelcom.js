@@ -10,38 +10,24 @@
     window.location.search = ''
   }
 
-  document.title = 'API Specification | MyParcel.com'
-
-  var link = document.createElement('link')
-  link.href = 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
-  link.rel = 'stylesheet'
-  document.head.appendChild(link)
-
   document.addEventListener('DOMContentLoaded', function () {
     // wait for the swagger.json to be processed
     var swaggerInterval = setInterval(function () {
-      var baseUrl = document.getElementsByClassName('base-url')[0]
-      if ('undefined' !== typeof baseUrl) {
+      var info = document.getElementsByClassName('info')[0]
+      if ('undefined' !== typeof info) {
         clearInterval(swaggerInterval)
 
-        // fix base url text
-        baseUrl.innerHTML = '<strong>' + baseUrl.innerText.replace('[', '').replace(']', '').replace(': ', ':</strong> ').trim()
-
-        // fix json link timestamp param
-        var swaggerlink = baseUrl.nextSibling
-        swaggerlink.innerHTML = swaggerlink.innerText.split('?d=')[0]
-
-        // move description
-        var description = document.getElementsByClassName('description')[0]
-        description.classList.add('wrapper')
-        baseUrl.parentNode.insertBefore(description, baseUrl)
+        // fix info text
+        info.innerHTML = info.innerHTML.replace('<p></p>', '')
 
         // inject logo
         var title = document.getElementsByClassName('title')[0]
         title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://www.myparcel.com/images/myparcel-logo-black.png" alt="MyParcel.com">')
 
         // version link
-        var version = document.querySelector('.version')
+        var versions = document.querySelectorAll('.version')
+
+        var version = versions[0]
         version.innerHTML = 'Version ' + version.innerText.trim()
         var versionLink = document.createElement('a')
         versionLink.href = 'https://github.com/MyParcelCOM/api-specification/releases'
@@ -49,36 +35,21 @@
         version.parentNode.insertBefore(versionLink, version)
         versionLink.appendChild(version)
 
-        // base url link
-        baseUrl.childNodes[1].nodeValue = ' https://' + baseUrl.childNodes[1].nodeValue.trim()
-        var baseUrlNode = document.createElement('a')
-        baseUrlNode.href = baseUrl.childNodes[1].nodeValue.trim()
-        baseUrlNode.target = '_blank'
-        baseUrlNode.appendChild(baseUrl.childNodes[1])
-        baseUrl.appendChild(baseUrlNode)
-
-        // make nice
-        document.getElementsByClassName('information-container')[0].classList.remove('wrapper')
-        document.querySelector('.description br').style.display = 'none'
-
-        // move info elements
-        var wrapper = document.createElement('div')
-        wrapper.classList.add('wrapper')
-        description.parentNode.insertBefore(wrapper, description.nextSibling)
-        wrapper.appendChild(baseUrl)
-        var strong = document.createElement('strong')
-        strong.innerHTML = 'JSON: '
-        wrapper.appendChild(strong)
-        wrapper.appendChild(swaggerlink)
+        var openapi = versions[1]
+        openapi.innerHTML = 'OpenAPI 3.0'
+        var openapiLink = document.createElement('a')
+        openapiLink.href = 'https://github.com/OAI/OpenAPI-Specification'
+        openapiLink.target = '_blank'
+        openapi.parentNode.insertBefore(openapiLink, openapi)
+        openapiLink.appendChild(openapi)
 
         // disable main endpoint accordeons
-        var accordeons = document.querySelectorAll('.opblock-tag, section.models h4')
+        var accordeons = document.querySelectorAll('.opblock-tag')
         for (var i = 0; i < accordeons.length; i++) {
-          var accordeon = accordeons[i]
           if (document.attachEvent) {
-            accordeon.attachEvent('onclick', cancelEvent)
+            accordeons[i].attachEvent('onclick', cancelEvent)
           } else {
-            accordeon.addEventListener('click', cancelEvent)
+            accordeons[i].addEventListener('click', cancelEvent)
           }
         }
       }
