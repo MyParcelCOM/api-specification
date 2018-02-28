@@ -1,69 +1,32 @@
 # MyParcel.com API specification
 
-[![GitHub release](https://img.shields.io/github/release/MyParcelCOM/api-specification/all.svg)](https://github.com/MyParcelCOM/api-specification)
 [![Packagist](https://img.shields.io/packagist/v/MyParcelCOM/api-specification.svg)](https://packagist.org/packages/myparcelcom/api-specification)
-[![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/docs.myparcel.com/api-specification/swagger.json.svg)](https://online.swagger.io/validator/debug?url=https://docs.myparcel.com/api-specification/swagger.json)
-[![OpenAPI Specification](https://img.shields.io/badge/OAS-3.0.0-7CB749.svg)](https://swagger.io/specification)
+[![OpenAPI Specification](https://img.shields.io/badge/OpenAPI-3.0-brightgreen.svg)](https://github.com/OAI/OpenAPI-Specification)
 
-Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification).
-This specification adheres to the [OpenApi 3.0.1 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md) and implements the [JSON API specification](http://jsonapi.org/).
+Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification). This specification adheres to the [OpenApi 3.0 specification](https://github.com/OAI/OpenAPI-Specification) and implements the [JSON API specification](http://jsonapi.org).
 
 ## Content
 - [Installation](#installation)
-- [Validating the Spec](#validating-the-spec)
+- [Commands](#commands)
 - [Conventions](#conventions)
+- [License](#license)
 
 ## Installation
-The repository provides Docker containers to validate and preview the spec before committing changes.
-This is also used when validating pull requests. To setup the project for development run:
+The repository provides Docker containers to validate and preview the spec before committing changes. This is also used when validating pull requests. To install Docker, follow the steps in the [documentation](https://docs.myparcel.com/github/#docker).
+
+To setup the project for development run:
+
 ```bash
 ./mp.sh setup
 ```
 
-### Installing Docker
-To install Docker, follow the steps below for your preferred OS.
+## Commands
 
-#### Mac
-Install Docker for Mac from [https://docs.docker.com/docker-for-mac/install](https://docs.docker.com/docker-for-mac/install).
+`./mp.sh up` - Start the containers which will start a server to watch file changes and reload automatically.
 
-#### Windows
-Install Docker for Windows from [https://docs.docker.com/docker-for-windows/install](https://docs.docker.com/docker-for-windows/install).
-> **NOTE:** We recommend running the commands in a bash shell like Git Bash.
+`./mp.sh down` - Stop the containers.
 
-#### Linux
-Install Docker by running the following command:
-
-```bash
-curl -sSL https://get.docker.com/ | sh
-```
-
-Then install Docker Compose by following the instructions [here](https://github.com/docker/compose/releases).
-
-Finally assign yourself to the Docker group:
-
-```bash
-sudo usermod -aG docker $(whoami)
-```
-
-### Setting up the environment
-For validation to work the Docker containers must be running. To start the containers, run:
-
-```bash
-./mp.sh up
-```
-
-To stop the containers when you are done working, run:
-
-```bash
-./mp.sh down
-```
-
-## Validating the spec
-To validate the spec you can run the command:
-
-```bash
-./mp.sh validate
-```
+`./mp.sh validate` - Validate the specification.
 
 > **NOTE:** The validator only works when the containers are already running. Don't forget to start them.
 
@@ -101,7 +64,7 @@ specification/schemas/CountryCode.json
 ```
 
 ### Path file naming
-The files in `specification/paths` are named to their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route:
+The files in `specification/paths` are named after their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route:
  
 ```
 carriers/{carrier_id}/services
@@ -114,7 +77,7 @@ specification/paths/Carriers-carrier_id-Services.json
 ```
 
 ### Parameter file naming
-Parameter file names are prefixed with the corresponding parameter type. A path parameter for `carrier_id` would get the following file path;
+Parameter file names are prefixed with the corresponding parameter type. A path parameter for `carrier_id` would get the following file path:
 
 ```
 specification/parameters/path-carrier_id.json
@@ -122,5 +85,5 @@ specification/parameters/path-carrier_id.json
 
 Unique parameters can just remain in the path file and do not need to be extracted to their own files.
 
-## Licence
-All software by MyParcel.com is licenced under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 
+## License
+All software by MyParcel.com is licensed under the [MyParcel.com general terms and conditions](https://www.myparcel.com/terms). 

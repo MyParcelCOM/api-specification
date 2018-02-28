@@ -2,7 +2,9 @@ version: '3'
 
 services:
   bundler:
-    image: node:9-alpine
+    build:
+      context: ./docker/json-bundler
+      dockerfile: Dockerfile
     working_dir: /opt/spec
     volumes:
       - .:/opt/spec
