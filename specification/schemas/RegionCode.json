@@ -1,5 +1,12 @@
 {
-  "type": "string",
-  "pattern": "^[A-Z]{2,3}$",
-  "example": "ENG"
+  "oneOf": [
+    {
+      "type": "string",
+      "pattern": "^[A-Z]{2,3}$",
+      "example": "ENG"
+    },
+    {
+      "type": "null"
+    }
+  ]
 }
