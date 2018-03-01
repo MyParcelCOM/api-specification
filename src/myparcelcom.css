@@ -1,5 +1,3 @@
-/* defaults */
-
 body {
   margin: 0;
   background: #fafafa;
@@ -15,83 +13,57 @@ a:hover {
   text-decoration: underline;
 }
 
-.title a,
-.title a:hover {
-  color: #040707 !important;
-  outline: none;
-}
-
-/* overrides */
-
 #swagger-ui * {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
   border-radius: 0;
 }
 
-#swagger-ui .auth-wrapper,
-#swagger-ui .authorization__btn,
-#swagger-ui .info > div,
-#swagger-ui .models h4 svg,
-#swagger-ui .opblock-tag button,
-#swagger-ui .topbar a *,
-#swagger-ui .topbar .download-url-wrapper {
+#swagger-ui h4 span:after,
+#swagger-ui .main > a,
+#swagger-ui .response-col_links {
   display: none;
 }
 
-#swagger-ui .btn,
-#swagger-ui .models h4,
-#swagger-ui .opblock-title_normal p,
-#swagger-ui .response-col_status,
-#swagger-ui .scheme-container .schemes > label {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-}
-
-#swagger-ui .model,
-#swagger-ui .opblock-summary-path a,
-#swagger-ui .opblock-summary-path__deprecated a,
-#swagger-ui .tab li {
-  color: #040707 !important;
-}
-
-#swagger-ui label,
-#swagger-ui table thead tr td,
-#swagger-ui table thead tr th,
-#swagger-ui .info .title,
-#swagger-ui .info .title small pre,
-#swagger-ui .main,
-#swagger-ui .model-title,
-#swagger-ui .opblock-tag,
-#swagger-ui .parameter__name,
-#swagger-ui .response-col_status,
-#swagger-ui .tab li {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  color: #040707;
-}
-
-#swagger-ui .info a,
-#swagger-ui .info li,
-#swagger-ui .info p,
-#swagger-ui .info .base-url,
-#swagger-ui .opblock-description-wrapper p,
-#swagger-ui .opblock-section-header h4,
-#swagger-ui .opblock-section-header label,
-#swagger-ui .opblock-summary-description,
-#swagger-ui .parameters-col_description p,
-#swagger-ui .responses-inner h4,
-#swagger-ui .responses-inner h5 {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+#swagger-ui div,
+#swagger-ui h2,
+#swagger-ui h4,
+#swagger-ui p,
+#swagger-ui td,
+#swagger-ui th,
+#swagger-ui .info .title small pre {
   font-size: 16px;
-  font-weight: 300;
   color: #040707;
 }
 
-/* form elements */
+#swagger-ui h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
 
-#swagger-ui a.nostyle {
-  color: #040707 !important;
+#swagger-ui .info .title small pre {
+  font-size: 14px;
+}
+
+#swagger-ui .model-box * {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#swagger-ui .opblock-body pre,
+#swagger-ui .opblock-body pre span,
+#swagger-ui .response-col_description__inner .renderedMarkdown,
+#swagger-ui .response-col_description__inner .renderedMarkdown p {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  background: #333;
+  color: #fafafa;
 }
 
 #swagger-ui select {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Courier New', monospace;
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #000;
@@ -100,86 +72,81 @@ a:hover {
 }
 
 #swagger-ui table {
-  border-collapse: inherit;
   border-spacing: 0;
   padding: 0;
 }
 
-#swagger-ui textarea {
-  border: 0;
-}
-
-/* buttons */
-
-#swagger-ui .btn {
-  height: 32px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 0 16px;
+#swagger-ui .global-server-container {
   background: #eee;
-  color: #040707;
-  animation: none;
-  border: 0;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-  text-transform: uppercase;
 }
-
-#swagger-ui .btn:active {
-  background: #a6a6a6;
-}
-
-#swagger-ui .btn.execute,
-#swagger-ui .try-out__btn {
-  background: #ffe128;
-}
-
-#swagger-ui .btn.execute:active,
-#swagger-ui .try-out__btn:active {
-  background: #b39f1e;
-}
-
-#swagger-ui .btn.execute {
-  margin-bottom: 20px;
-}
-
-#swagger-ui .errors-wrapper {
-  margin: 84px 20px -46px;
-}
-
-#swagger-ui .execute-wrapper {
-  padding: 0 20px;
-}
-
-/* intro */
 
 #swagger-ui .info {
-  margin: 64px 0 0;
+  margin: 0;
+}
+
+#swagger-ui .info > div,
+#swagger-ui .wrapper {
+  width: calc(100% - 64px);
+  margin: 0 auto;
+}
+
+#swagger-ui .information-container {
+  width: 100%;
+  max-width: none;
   background: #faf7ef;
 }
 
+#swagger-ui .information-container .description {
+  max-width: 1460px;
+}
+
+#swagger-ui .main {
+  background: #96ebd7;
+  text-align: center;
+  margin: 0;
+}
+
+#swagger-ui .main span {
+  display: block;
+}
+
+#swagger-ui .wrapper {
+  padding: 0;
+}
+
 #swagger-ui .info a {
-  font-weight: 400;
+  font-size: 16px;
 }
 
-#swagger-ui .info .description {
-  display: block;
-  margin-top: 32px;
+#swagger-ui .info > a,
+#swagger-ui .info > div {
+  display: none;
 }
 
-#swagger-ui .info .description strong,
-#swagger-ui .info .title,
-#swagger-ui .opblock-tag {
+#swagger-ui .info > div.description {
   display: block;
-  font-size: 20px;
+  padding: 20px 0 32px;
+}
+
+#swagger-ui .info strong {
+  display: block;
+  font-size: 24px;
   font-weight: 500;
-  margin: 16px 0;
+  margin-top: 16px;
+}
+
+#swagger-ui .info th {
+  text-align: left;
+}
+
+#swagger-ui .info td {
   padding: 0;
 }
 
 #swagger-ui .info .title {
   background: #96ebd7;
   text-align: center;
-  padding: 48px 0 48px;
+  padding: 48px 0 40px;
 }
 
 #swagger-ui .info .title img {
@@ -189,28 +156,11 @@ a:hover {
 }
 
 #swagger-ui .info .title small {
-  display: block;
-  top: 0;
-  width: 104px;
-  margin: 24px auto 0;
+  font-weight: 500;
+  margin: 24px 8px 0;
   padding: 8px;
   border-radius: 2px;
-  background: #ffe128;
-}
-
-.dialog-ux h6,
-#swagger-ui .info .version {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-#swagger-ui .main {
-  margin: 0;
-  padding-bottom: 32px;
-}
-
-#swagger-ui .main strong {
-  font-weight: 500;
+  background: #ffe128 !important;
 }
 
 /* models */
@@ -218,13 +168,21 @@ a:hover {
 #swagger-ui section.models {
   background: #fff;
   border-color: #eee;
+  overflow: hidden;
 }
 
 #swagger-ui section.models h4 {
   background: #333;
   border-color: #eee;
   color: #fff;
-  cursor: default;
+}
+
+#swagger-ui section.models svg {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 4px solid #fff;
+  border-radius: 50%;
 }
 
 #swagger-ui .model-box {
@@ -232,6 +190,7 @@ a:hover {
 }
 
 #swagger-ui .model-toggle {
+  top: 4px;
   margin: 0 8px;
   background: #fff;
   border-radius: 50%;
@@ -254,36 +213,39 @@ a:hover {
   box-shadow: none;
 }
 
-#swagger-ui .opblock a.nostyle {
-  cursor: pointer;
-}
-
-#swagger-ui .opblock-section-header h4 {
-  font-weight: 500;
-}
-
 #swagger-ui .opblock-summary {
   padding: 0;
 }
 
-#swagger-ui .opblock-summary-method {
-  height: 32px;
-  line-height: 32px;
-  font-family: 'Source Code Pro', monospace;
-  padding: 0;
+#swagger-ui .opblock-summary a {
+  color: #040707 !important;
+  outline: none;
+}
+
+#swagger-ui .opblock-summary-description {
+  text-align: right;
+  padding-right: 8px;
 }
 
 #swagger-ui .opblock-tag {
+  font-size: 24px;
+  font-weight: 500;
   background: transparent;
   border: 0;
   cursor: default;
 }
 
+#swagger-ui .opblock-tag a {
+  color: #040707 !important;
+}
+
+#swagger-ui .expand-operation {
+  display: none;
+}
+
 /* delete endpoints */
 
-#swagger-ui .opblock-delete,
-#swagger-ui .opblock-delete table thead tr th,
-#swagger-ui .opblock-delete table thead tr td {
+#swagger-ui .opblock-delete {
   background: #fff;
   border-color: #cd021b;
 }
@@ -306,18 +268,18 @@ a:hover {
 
 #swagger-ui .opblock-delete .opblock-summary-method {
   background: #cd021b;
+  color: #fafafa;
 }
 
 #swagger-ui .opblock-delete .opblock-section-header {
   background: #ffb7bf;
-  border: solid #cd021b;
+  border: 1px solid #cd021b;
+  border-width: 1px 0;
 }
 
 /* get endpoints */
 
-#swagger-ui .opblock-get,
-#swagger-ui .opblock-get table thead tr th,
-#swagger-ui .opblock-get table thead tr td {
+#swagger-ui .opblock-get {
   background: #fff;
   border-color: #96ebd7;
 }
@@ -339,14 +301,13 @@ a:hover {
 
 #swagger-ui .opblock-get .opblock-section-header {
   background: #d5f7ef;
-  border: solid #96ebd7;
+  border: 1px solid #96ebd7;
+  border-width: 1px 0;
 }
 
 /* post endpoints */
 
-#swagger-ui .opblock-post,
-#swagger-ui .opblock-post table thead tr th,
-#swagger-ui .opblock-post table thead tr td {
+#swagger-ui .opblock-post {
   background: #fff;
   border-color: #ffe128;
 }
@@ -368,14 +329,13 @@ a:hover {
 
 #swagger-ui .opblock-post .opblock-section-header {
   background: #fff3a9;
-  border: solid #ffe128;
+  border: 1px solid #ffe128;
+  border-width: 1px 0;
 }
 
 /* patch endpoints */
 
-#swagger-ui .opblock-patch,
-#swagger-ui .opblock-patch table thead tr th,
-#swagger-ui .opblock-patch table thead tr td {
+#swagger-ui .opblock-patch {
   background: #fff;
   border-color: #ed8c00;
 }
@@ -397,16 +357,33 @@ a:hover {
 
 #swagger-ui .opblock-patch .opblock-section-header {
   background: #fadcb2;
-  border: solid #ed8c00;
+  border: 1px solid #ed8c00;
+  border-width: 1px 0;
 }
 
 /* all endpoints */
+
+#swagger-ui .opblock a.nostyle span {
+  font-family: 'Courier New', monospace;
+}
+
+#swagger-ui .opblock .opblock-summary-method {
+  padding: 8px 16px;
+  font-weight: 500;
+  text-shadow: none;
+}
 
 #swagger-ui .opblock .opblock-section-header {
   min-height: 0;
   border-width: 1px 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+#swagger-ui .parameter__extension,
+#swagger-ui .parameter__in,
+#swagger-ui .parameter__type {
+  font-weight: 400;
 }
 
 #swagger-ui .parameters-col_name,
@@ -419,38 +396,20 @@ a:hover {
   width: 80%;
 }
 
-/* code blocks */
-
-#swagger-ui textarea.curl,
-#swagger-ui .opblock-body pre {
-  background: #333;
-  color: #fafafa;
-}
-
-#swagger-ui .scheme-container {
-  background: #eee;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-/* header */
-
-#swagger-ui .topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+#topbar {
+  display: inline-block;
   width: 100%;
-  padding: 0;
+  height: 64px;
+  line-height: 64px;
   background: #333;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-  z-index: 1337;
+  z-index: 1;
 }
 
-#swagger-ui .topbar a {
-  height: 64px;
-  max-width: none;
-  background: url(https://www.myparcel.com/images/myparcel-logo-white.png) 0 50% no-repeat;
-  background-size: 160px;
+#topbar img {
+  width: 160px;
+  margin-left: 16px;
+  vertical-align: middle;
 }
 
 /* usability */
@@ -465,8 +424,4 @@ a:hover {
   background: #ffe128;
   color: #040707;
   text-shadow: none;
-}
-
-#swagger-ui .body-param__text {
-  border: 1px solid #040707;
 }

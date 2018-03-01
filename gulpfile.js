@@ -48,6 +48,11 @@ gulp.task('bundle-sync', ['bundle'], function () {
   browserSync.reload()
 })
 
+gulp.task('src-sync', ['src', 'html'], function () {
+  browserSync.reload()
+})
+
 gulp.task('watch', ['serve'], function () {
   gulp.watch(['specification/**/*'], {interval: 500}, ['bundle-sync'])
+  gulp.watch(['src/**/*'], {interval: 500}, ['src-sync'])
 })
