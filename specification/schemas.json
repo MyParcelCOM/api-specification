@@ -35,6 +35,9 @@
   "FileRelationship": {
     "$ref": "./schemas/FileRelationship.json"
   },
+  "FilesRelationship": {
+    "$ref": "./schemas/FilesRelationship.json"
+  },
   "Iban": {
     "$ref": "./schemas/Iban.json"
   },
