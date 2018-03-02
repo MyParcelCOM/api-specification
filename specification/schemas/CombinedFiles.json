@@ -1,0 +1,85 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalCombinedFiles"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "document_type": {
+              "type": "string",
+              "enum": [
+                "label"
+              ],
+              "example": "label"
+            },
+            "page_size": {
+              "type": "string",
+              "enum": [
+                "A4",
+                "A5",
+                "A6"
+              ],
+              "example": "A4"
+            },
+            "starting_position": {
+              "type": "string",
+              "enum": [
+                "top-left",
+                "top-right",
+                "bottom-left",
+                "bottom-right"
+              ],
+              "example": "top-left"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "source_files"
+          ],
+          "properties": {
+            "combined_file": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/FileRelationship"
+                },
+                {
+                  "readOnly": true
+                }
+              ]
+            },
+            "source_files": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/FileRelationship"
+              }
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/combined-files/1624e8f8-8b00-413c-a684-fd4337ccb66b"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

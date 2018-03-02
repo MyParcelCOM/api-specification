@@ -14,6 +14,12 @@
   "/carrier-contracts/{carrier_contract_id}": {
     "$ref": "./paths/CarrierContracts-carrier_contract_id.json"
   },
+  "/combined-files": {
+    "$ref": "./paths/CombinedFiles.json"
+  },
+  "/combined-files/{combined-files_id}": {
+    "$ref": "./paths/CombinedFiles-combined_files_id.json"
+  },
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
   },

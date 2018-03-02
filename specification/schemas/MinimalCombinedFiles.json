@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^combined-files$",
+      "example": "combined-files"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "1624e8f8-8b00-413c-a684-fd4337ccb66b",
+      "readOnly": true
+    }
+  }
+}

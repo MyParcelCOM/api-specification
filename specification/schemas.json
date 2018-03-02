@@ -14,6 +14,9 @@
   "CarrierContractRelationship": {
     "$ref": "./schemas/CarrierContractRelationship.json"
   },
+  "CombinedFiles": {
+    "$ref": "./schemas/CombinedFiles.json"
+  },
   "CountryCode": {
     "$ref": "./schemas/CountryCode.json"
   },
@@ -29,6 +32,9 @@
   "File": {
     "$ref": "./schemas/File.json"
   },
+  "FileRelationship": {
+    "$ref": "./schemas/FileRelationship.json"
+  },
   "Iban": {
     "$ref": "./schemas/Iban.json"
   },
@@ -43,6 +49,9 @@
   },
   "MinimalCarrierContract": {
     "$ref": "./schemas/MinimalCarrierContract.json"
+  },
+  "MinimalCombinedFiles": {
+    "$ref": "./schemas/MinimalCombinedFiles.json"
   },
   "MinimalFile": {
     "$ref": "./schemas/MinimalFile.json"
