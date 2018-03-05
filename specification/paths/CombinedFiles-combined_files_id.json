@@ -1,0 +1,35 @@
+{
+  "get": {
+    "tags": [
+      "CombinedFiles"
+    ],
+    "summary": "Get a combined-files resource by id.",
+    "description": "This endpoint retrieves a combined-files resource with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-combined_files_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the combined-files resource.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/CombinedFiles"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

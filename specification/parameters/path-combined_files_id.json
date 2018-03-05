@@ -1,0 +1,10 @@
+{
+  "name": "combined_files_id",
+  "in": "path",
+  "description": "Id of the combined-files resource.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}
