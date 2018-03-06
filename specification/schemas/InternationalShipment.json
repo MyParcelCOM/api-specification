@@ -34,6 +34,20 @@
                 }
               ]
             },
+            "return_address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Address"
+                },
+                {
+                  "required": [
+                    "street_1",
+                    "city",
+                    "country_code"
+                  ]
+                }
+              ]
+            },
             "sender_address": {
               "allOf": [
                 {
