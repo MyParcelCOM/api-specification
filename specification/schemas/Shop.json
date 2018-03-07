@@ -55,6 +55,20 @@
                 }
               ]
             },
+            "sender_address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Address"
+                },
+                {
+                  "required": [
+                    "street_1",
+                    "city",
+                    "country_code"
+                  ]
+                }
+              ]
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }

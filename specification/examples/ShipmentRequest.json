@@ -16,6 +16,21 @@
       "email": "s.holmes@holmesinvestigations.com",
       "phone_number": "+31 234 567 890"
     },
+    "return_address": {
+      "street_1": "Baker Street",
+      "street_2": "Marylebone",
+      "street_number": 221,
+      "street_number_suffix": "B",
+      "postal_code": "NW1 6XE",
+      "city": "London",
+      "region_code": "ENG",
+      "country_code": "GB",
+      "first_name": "Sherlock",
+      "last_name": "Holmes",
+      "company": "Holmes Investigations",
+      "email": "s.holmes@holmesinvestigations.com",
+      "phone_number": "+31 234 567 890"
+    },
     "sender_address": {
       "street_1": "Baker Street",
       "street_2": "Marylebone",

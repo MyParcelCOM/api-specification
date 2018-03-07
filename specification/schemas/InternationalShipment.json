@@ -14,6 +14,8 @@
           "type": "object",
           "required": [
             "recipient_address",
+            "return_address",
+            "sender_address",
             "physical_properties",
             "items",
             "customs"
@@ -21,6 +23,20 @@
           "additionalProperties": false,
           "properties": {
             "recipient_address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Address"
+                },
+                {
+                  "required": [
+                    "street_1",
+                    "city",
+                    "country_code"
+                  ]
+                }
+              ]
+            },
+            "return_address": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/Address"
