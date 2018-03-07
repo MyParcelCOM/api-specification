@@ -3,11 +3,11 @@
     "tags": [
       "CombinedFiles"
     ],
-    "summary": "Get all the combined-files resources.",
-    "description": "This endpoint retrieves all the combined-files resources you have requested.",
+    "summary": "Get all the combined-files.",
+    "description": "This endpoint retrieves all the combined-files you have requested.",
     "responses": {
       "200": {
-        "description": "Retrieved the combined-files resources.",
+        "description": "Retrieved the combined-files.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -22,7 +22,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CombinedFiles"
+                    "$ref": "#/components/schemas/CombinedFile"
                   }
                 },
                 "meta": {
@@ -70,10 +70,10 @@
     "tags": [
       "CombinedFiles"
     ],
-    "summary": "Create a combined-files resource.",
-    "description": "This endpoint creates a new combined-files resource with the posted data and files.",
+    "summary": "Create a combined-file.",
+    "description": "This endpoint creates a new combined-file with the posted data and files.",
     "requestBody": {
-      "description": "The combined-files object to be created.",
+      "description": "The combined-file object to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -85,7 +85,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/CombinedFiles"
+                "$ref": "#/components/schemas/CombinedFile"
               }
             }
           }
@@ -94,7 +94,7 @@
     },
     "responses": {
       "201": {
-        "description": "The combined-files resource has been created",
+        "description": "The combined-file has been created",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -105,7 +105,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CombinedFiles"
+                  "$ref": "#/components/schemas/CombinedFile"
                 }
               }
             }
