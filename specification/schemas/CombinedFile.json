@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalCombinedFiles"
+      "$ref": "#/components/schemas/MinimalCombinedFile"
     },
     {
       "required": [
@@ -48,9 +48,13 @@
         "relationships": {
           "type": "object",
           "required": [
+            "shop",
             "source_files"
           ],
           "properties": {
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            },
             "combined_file": {
               "allOf": [
                 {
