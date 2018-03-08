@@ -22,7 +22,8 @@
               "enum": [
                 "label",
                 "printcode",
-                "invoice"
+                "invoice",
+                "combined-label"
               ],
               "example": "label"
             },
