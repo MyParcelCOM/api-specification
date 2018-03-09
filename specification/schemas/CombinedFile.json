@@ -70,18 +70,18 @@
               "$ref": "#/components/schemas/FilesRelationship"
             }
           }
-        }
-      },
-      "links": {
-        "readOnly": true,
-        "type": "object",
-        "required": [
-          "self"
-        ],
-        "properties": {
-          "self": {
-            "type": "string",
-            "example": "$API_HOST/combined-files/1624e8f8-8b00-413c-a684-fd4337ccb66b"
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/combined-files/1624e8f8-8b00-413c-a684-fd4337ccb66b"
+            }
           }
         }
       }
