@@ -49,6 +49,59 @@
       }
     }
   },
+  "patch": {
+    "tags": [
+      "Shipments"
+    ],
+    "summary": "Update a shipment by id.",
+    "description": "This endpoint updates the shipment with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-shipment_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The shipment object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/Shipment"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The shipment is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Shipment"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "delete": {
     "tags": [
       "Shipments"
