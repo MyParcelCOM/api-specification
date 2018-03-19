@@ -1,0 +1,8 @@
+{
+  "name": "region_code",
+  "in": "query",
+  "description": "The region code.",
+  "schema": {
+    "type": "string"
+  }
+}

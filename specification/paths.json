@@ -1,4 +1,7 @@
 {
+  "/addresses/{country_code}/{street_1}": {
+    "$ref": "./paths/Addresses-country_code-street_1.json"
+  },
   "/carriers": {
     "$ref": "./paths/Carriers.json"
   },

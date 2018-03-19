@@ -59,6 +59,9 @@
   "path-status_id": {
     "$ref": "./parameters/path-status_id.json"
   },
+  "path-street": {
+    "$ref": "./parameters/path-street.json"
+  },
   "path-system_message_id": {
     "$ref": "./parameters/path-system_message_id.json"
   },
@@ -71,10 +74,22 @@
   "path-webhook_subscription_id": {
     "$ref": "./parameters/path-webhook_subscription_id.json"
   },
+  "query-city": {
+    "$ref": "./parameters/query-city.json"
+  },
+  "query-postal_code": {
+    "$ref": "./parameters/query-postal_code.json"
+  },
+  "query-region_code": {
+    "$ref": "./parameters/query-region_code.json"
+  },
   "query-street": {
     "$ref": "./parameters/query-street.json"
   },
   "query-street_number": {
     "$ref": "./parameters/query-street_number.json"
+  },
+  "query-street_number_suffix": {
+    "$ref": "./parameters/query-street_number_suffix.json"
   }
 }

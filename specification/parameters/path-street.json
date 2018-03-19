@@ -1,0 +1,9 @@
+{
+  "name": "street",
+  "in": "path",
+  "required": true,
+  "description": "The street name.",
+  "schema": {
+    "type": "string"
+  }
+}
