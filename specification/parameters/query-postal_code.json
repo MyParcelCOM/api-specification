@@ -1,0 +1,8 @@
+{
+  "name": "postal_code",
+  "in": "query",
+  "description": "The postal code.",
+  "schema": {
+    "type": "string"
+  }
+}

@@ -2,6 +2,9 @@
   "Address": {
     "$ref": "./schemas/Address.json"
   },
+  "AddressAttributes": {
+    "$ref": "./schemas/AddressAttributes.json"
+  },
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
   },

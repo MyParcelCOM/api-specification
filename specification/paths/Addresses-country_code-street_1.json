@@ -1,0 +1,92 @@
+{
+  "get": {
+    "tags": [
+      "Addresses"
+    ],
+    "summary": "Get address suggestions based on your input.",
+    "description": "This endpoint returns address suggestions based on user input.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-country_code"
+      },
+      {
+        "$ref": "#/components/parameters/path-street"
+      },
+      {
+        "$ref": "#/components/parameters/query-region_code"
+      },
+      {
+        "$ref": "#/components/parameters/query-city"
+      },
+      {
+        "$ref": "#/components/parameters/query-postal_code"
+      },
+      {
+        "$ref": "#/components/parameters/query-street_number"
+      },
+      {
+        "$ref": "#/components/parameters/query-street_number_suffix"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved a list of suggestions.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Address"
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses/GB/NW120%6XE?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses/GB/NW120%6XE?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses/GB/NW120%6XE?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses/GB/NW120%6XE?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses/GB/NW120%6XE?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
