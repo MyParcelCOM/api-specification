@@ -7,7 +7,7 @@
     "description": "This endpoint retrieves all the service contracts.",
     "parameters": [
       {
-        "name": "filter[carrier_contracts]",
+        "name": "filter[carrier_contract]",
         "in": "query",
         "description": "Comma separated string of carrier contract ids to filter on.",
         "schema": {
@@ -49,23 +49,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/regions?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/service-contracts?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/regions?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/service-contracts?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/regions?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/service-contracts?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/regions?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/service-contracts?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/regions?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/service-contracts?page[number]=13&page[size]=30"
                     }
                   }
                 }

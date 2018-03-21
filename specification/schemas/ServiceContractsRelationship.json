@@ -8,7 +8,7 @@
       "properties": {
         "related": {
           "type": "string",
-          "example": "$API_HOST/services-contracts?filter[carrier_contract]=2cb32706-5762-4b96-9212-327e6afaeef"
+          "example": "$API_HOST/service-contracts?filter[carrier_contract]=2cb32706-5762-4b96-9212-327e6afaeef"
         }
       }
     }
