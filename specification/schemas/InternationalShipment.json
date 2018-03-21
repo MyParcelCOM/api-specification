@@ -200,6 +200,17 @@
                 }
               }
             },
+            "register_at": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Timestamp"
+                },
+                {
+                  "readOnly": false,
+                  "description": "This shipment will be registered with the carrier when this time has been reached. While this is `null` or a time in the future, the shipment will stay in concept."
+                }
+              ]
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             },
