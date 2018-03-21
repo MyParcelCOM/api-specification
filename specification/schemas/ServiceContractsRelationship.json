@@ -1,38 +1,14 @@
 {
   "type": "object",
-  "required": [
-    "data"
-  ],
   "additionalProperties": false,
   "properties": {
-    "data": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/MinimalServiceContract"
-          },
-          {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "readOnly": false
-              }
-            }
-          }
-        ]
-      }
-    },
     "links": {
       "readOnly": true,
       "type": "object",
       "properties": {
         "related": {
           "type": "string",
-          "example": "$API_HOST/services/d35a7388-5300-49f9-9a84-01ca549a7775/contracts"
+          "example": "$API_HOST/service-contracts?filter[carrier_contract]=2cb32706-5762-4b96-9212-327e6afaeef"
         }
       }
     }
