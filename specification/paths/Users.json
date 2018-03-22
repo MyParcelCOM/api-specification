@@ -103,28 +103,20 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/User"
+              },
+              "meta": {
+                "type": "object",
+                "properties": {
+                  "shop_name": {
+                    "type": "string",
+                    "example": "my.webshop.com"
                   },
-                  {
-                    "properties": {
-                      "meta": {
-                        "type": "object",
-                        "properties": {
-                          "shop_name": {
-                            "type": "string",
-                            "example": "my.webshop.com"
-                          },
-                          "invitation_code": {
-                            "type": "string",
-                            "example": "15317471056093"
-                          }
-                        }
-                      }
-                    }
+                  "invitation_code": {
+                    "type": "string",
+                    "example": "15317471056093"
                   }
-                ]
+                }
               }
             }
           }
