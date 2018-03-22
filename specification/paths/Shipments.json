@@ -17,7 +17,7 @@
       {
         "name": "filter[search]",
         "in": "query",
-        "description": "String of characters you want to look for in the description and recipient_address fields of the shipment.",
+        "description": "String of characters you want to look for in a shipment's attributes. Available fields to look in are:<ul><li>date created (YYYY-MM-DD)</li><li>description</li><li>recipient_address</li><li>tracking_code</li></ul>",
         "schema": {
           "type": "string"
         }
