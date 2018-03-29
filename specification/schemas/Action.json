@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "action_type",
+    "values"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "example": "update-query"
+    },
+    "resource_type": {
+      "type": "string",
+      "example": "services"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/PredicateValue"
+      },
+      "example": [
+        {
+          "path": "attributes.message_type",
+          "value": {
+            "value_type": "scalar",
+            "value": "email"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,7 @@
 {
+  "Action": {
+    "$ref": "./schemas/Action.json"
+  },
   "Address": {
     "$ref": "./schemas/Address.json"
   },
@@ -40,6 +43,9 @@
   },
   "FilesRelationship": {
     "$ref": "./schemas/FilesRelationship.json"
+  },
+  "Hook": {
+    "$ref": "./schemas/Hook.json"
   },
   "Iban": {
     "$ref": "./schemas/Iban.json"
@@ -133,6 +139,12 @@
   },
   "PickupDropoffLocation": {
     "$ref": "./schemas/PickupDropoffLocation.json"
+  },
+  "Predicate": {
+    "$ref": "./schemas/Predicate.json"
+  },
+  "PredicateValue": {
+    "$ref": "./schemas/PredicateValue.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"

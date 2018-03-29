@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": [
+    "operator",
+    "left_value",
+    "right_value"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "operator": {
+      "type": "string",
+      "enum": [
+        "==", "!=", ">", "<", ">=", "<=", "AND", "OR"
+      ],
+      "example": "=="
+    },
+    "left_value": {
+      "$ref": "#/components/schemas/PredicateValue"
+    },
+    "right_value": {
+      "$ref": "#/components/schemas/PredicateValue"
+    }
+  }
+}

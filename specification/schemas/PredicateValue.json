@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "required": [
+    "value_type",
+    "value"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "value_type": {
+       "type": "string",
+       "enum": [
+         "path",
+         "scalar",
+         "predicate",
+         "resource"
+       ],
+       "example": "scalar"
+    },
+    "value": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Predicate"
+        },
+        {
+          "type": "string",
+          "example": "5000"
+        }
+      ]
+    }
+  }
+}
