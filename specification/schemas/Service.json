@@ -15,7 +15,8 @@
           "required": [
             "name",
             "package_type",
-            "handover_method"
+            "handover_method",
+            "delivery_method"
           ],
           "additionalProperties": false,
           "properties": {
@@ -68,6 +69,14 @@
                 "collection"
               ],
               "example": "drop-off"
+            },
+            "delivery_method": {
+              "type": "string",
+              "enum": [
+                "delivery",
+                "pick-up"
+              ],
+              "example": "pick-up"
             },
             "rating": {
               "type": "number",
