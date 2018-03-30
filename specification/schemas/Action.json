@@ -8,7 +8,7 @@
   "properties": {
     "action_type": {
       "type": "string",
-      "example": "update-query"
+      "example": "create"
     },
     "resource_type": {
       "type": "string",

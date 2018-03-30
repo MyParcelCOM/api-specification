@@ -14,7 +14,10 @@
     "resource_action": {
       "type": "string",
       "enum": [
-        "create","read","update","delete"
+        "create",
+        "read",
+        "update",
+        "delete"
       ],
       "example": "create"
     },
