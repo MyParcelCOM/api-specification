@@ -149,6 +149,15 @@
   "PredicateValue": {
     "$ref": "./schemas/PredicateValue.json"
   },
+  "PathValue": {
+    "$ref": "./schemas/PathValue.json"
+  },
+  "ScalarValue": {
+    "$ref": "./schemas/ScalarValue.json"
+  },
+  "ResourceValue": {
+    "$ref": "./schemas/ResourceValue.json"
+  },
   "Price": {
     "$ref": "./schemas/Price.json"
   },

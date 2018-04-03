@@ -6,9 +6,10 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "value_type": "predicate",
+    "value_type": "path",
     "value": {
-      "$ref": "#/components/schemas/Predicate"
+      "type": "string",
+      "example": "attributes.physical_properties.weight"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "required": [
+    "value_type",
+    "value"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "value_type": "resource",
+    "value": {
+      "type": "object",
+      "required": [
+        "resource_type",
+        "attributes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "resource_type": {
+          "type": "string",
+          "example": "regions"
+        },
+        "path": {
+          "type": "string",
+          "example": "relationships.parent.relationships.parent"
+        },
+        "attributes": {
+          "type": "object",
+        }
+      }
+    }
+  }
+}

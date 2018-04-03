@@ -22,10 +22,36 @@
       "example": "=="
     },
     "left_value": {
-      "$ref": "#/components/schemas/PredicateValue"
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/PredicateValue"
+        },
+        {
+          "$ref": "#/components/schemas/ScalarValue"
+        },
+        {
+          "$ref": "#/components/schemas/PathValue"
+        },
+        {
+          "$ref": "#/components/schemas/ResourceValue"
+        }
+      ]
     },
     "right_value": {
-      "$ref": "#/components/schemas/PredicateValue"
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/PredicateValue"
+        },
+        {
+          "$ref": "#/components/schemas/ScalarValue"
+        },
+        {
+          "$ref": "#/components/schemas/PathValue"
+        },
+        {
+          "$ref": "#/components/schemas/ResourceValue"
+        }
+      ]
     }
   }
 }

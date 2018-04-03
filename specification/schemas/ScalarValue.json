@@ -6,9 +6,10 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "value_type": "predicate",
+    "value_type": "scalar",
     "value": {
-      "$ref": "#/components/schemas/Predicate"
+      "type": "number",
+      "example": "5000"
     }
   }
 }

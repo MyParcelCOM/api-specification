@@ -8,7 +8,11 @@
   "properties": {
     "action_type": {
       "type": "string",
-      "example": "create"
+      "enum": [
+        "create-resource",
+        "update-resource"
+      ],
+      "example": "create-resource"
     },
     "resource_type": {
       "type": "string",
@@ -17,17 +21,28 @@
     "values": {
       "type": "array",
       "items": {
-        "$ref": "#/components/schemas/PredicateValue"
-      },
-      "example": [
-        {
-          "path": "attributes.message_type",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/PredicateValue"
+          },
+          {
+            "$ref": "#/components/schemas/ScalarValue"
+          },
+          {
+            "$ref": "#/components/schemas/PathValue"
+          },
+          {
+            "$ref": "#/components/schemas/ResourceValue"
+          }
+        ],
+        "example": {
+          "value_type": "scalar",
           "value": {
-            "value_type": "scalar",
-            "value": "email"
+            "type": "number",
+            "example": "5000"
           }
         }
-      ]
+      }
     }
   }
 }
