@@ -15,9 +15,7 @@
       "type": "string",
       "enum": [
         "create",
-        "read",
-        "update",
-        "delete"
+        "read"
       ],
       "example": "create"
     },

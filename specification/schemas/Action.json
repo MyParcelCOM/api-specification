@@ -21,25 +21,14 @@
     "values": {
       "type": "array",
       "items": {
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/PredicateValue"
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "example": "attributes.physical_properties.volume"
           },
-          {
-            "$ref": "#/components/schemas/ScalarValue"
-          },
-          {
-            "$ref": "#/components/schemas/PathValue"
-          },
-          {
-            "$ref": "#/components/schemas/ResourceValue"
-          }
-        ],
-        "example": {
-          "value_type": "scalar",
           "value": {
-            "type": "number",
-            "example": "5000"
+            "$ref": "#/components/schemas/HookValue"
           }
         }
       }

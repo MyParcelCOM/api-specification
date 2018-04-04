@@ -24,7 +24,7 @@
           "example": "relationships.parent.relationships.parent"
         },
         "attributes": {
-          "type": "object",
+          "type": "object"
         }
       }
     }
