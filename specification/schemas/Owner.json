@@ -1,0 +1,16 @@
+{
+  "oneOf": [
+    {
+      "$ref": "#/components/schemas/Enterprise"
+    },
+    {
+      "$ref": "#/components/schemas/Broker"
+    },
+    {
+      "$ref": "#/components/schemas/Organization"
+    },
+    {
+      "$ref": "#/components/schemas/Shop"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "oneOf": [
+    {
+      "$ref": "#/components/schemas/MinimalEnterprise"
+    },
+    {
+      "$ref": "#/components/schemas/MinimalBroker"
+    },
+    {
+      "$ref": "#/components/schemas/MinimalOrganization"
+    },
+    {
+      "$ref": "#/components/schemas/MinimalShop"
+    }
+  ]
+}

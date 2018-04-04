@@ -5,6 +5,12 @@
   "Address": {
     "$ref": "./schemas/Address.json"
   },
+  "Broker": {
+    "$ref": "./schemas/Broker.json"
+  },
+  "BrokerRelationship": {
+    "$ref": "./schemas/BrokerRelationship.json"
+  },
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
   },
@@ -35,6 +41,12 @@
   "Email": {
     "$ref": "./schemas/Email.json"
   },
+  "Enterprise": {
+    "$ref": "./schemas/Enterprise.json"
+  },
+  "EnterpriseRelationship": {
+    "$ref": "./schemas/EnterpriseRelationship.json"
+  },
   "File": {
     "$ref": "./schemas/File.json"
   },
@@ -62,8 +74,8 @@
   "InvoiceCustoms": {
     "$ref": "./schemas/InvoiceCustoms.json"
   },
-  "OrganizationRelationship": {
-    "$ref": "./schemas/OrganizationRelationship.json"
+  "MinimalBroker": {
+    "$ref": "./schemas/MinimalBroker.json"
   },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
@@ -74,8 +86,14 @@
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
   },
+  "MinimalEnterprise": {
+    "$ref": "./schemas/MinimalEnterprise.json"
+  },
   "MinimalFile": {
     "$ref": "./schemas/MinimalFile.json"
+  },
+  "MinimalHook": {
+    "$ref": "./schemas/MinimalHook.json"
   },
   "MinimalInvitation": {
     "$ref": "./schemas/MinimalInvitation.json"
@@ -136,6 +154,18 @@
   },
   "NoInvoiceCustoms": {
     "$ref": "./schemas/NoInvoiceCustoms.json"
+  },
+  "Organization": {
+    "$ref": "./schemas/Organization.json"
+  },
+  "OrganizationRelationship": {
+    "$ref": "./schemas/OrganizationRelationship.json"
+  },
+  "Owner": {
+    "$ref": "./schemas/Owner.json"
+  },
+  "OwnerRelationship": {
+    "$ref": "./schemas/OwnerRelationship.json"
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"

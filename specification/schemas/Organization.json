@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "required": [
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "attributes": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Lars B.V"
+        },
+        "billing_address": {
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/Address"
+            },
+            {
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "organization": {
+          "$ref": "#/components/schemas/OrganizationRelationship"
+        },
+        "broker": {
+          "$ref": "#/components/schemas/BrokerRelationship"
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/organizations/0b6ecd39-6072-4529-a031-f21247a91296"
+        }
+      }
+    }
+  }
+}

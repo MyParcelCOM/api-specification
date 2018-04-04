@@ -1,29 +1,69 @@
 {
   "type": "object",
-  "required": [
-    "resource_type",
-    "resource_action",
-    "predicate",
-    "action"
-  ],
-  "properties": {
-    "resource_type": {
-      "type": "string",
-      "example": "services"
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalHook"
     },
-    "resource_action": {
-      "type": "string",
-      "enum": [
-        "create",
-        "read"
+    {
+      "required": [
+        "attributes"
       ],
-      "example": "create"
-    },
-    "predicate": {
-      "$ref": "#/components/schemas/Predicate"
-    },
-    "action": {
-      "$ref": "#/components/schemas/Action"
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "resource_type",
+            "resource_action",
+            "predicate",
+            "action"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "resource_type": {
+              "type": "string",
+              "example": "services"
+            },
+            "resource_action": {
+              "type": "string",
+              "enum": [
+                "create",
+                "read"
+              ],
+              "example": "create"
+            },
+            "predicate": {
+              "$ref": "#/components/schemas/Predicate"
+            },
+            "action": {
+              "$ref": "#/components/schemas/Action"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "owner"
+          ],
+          "properties": {
+            "owner": {
+              "$ref": "#/components/schemas/OwnerRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/hooks/5c868557-0827-4d21-a7f4-9820f01769f4"
+            }
+          }
+        }
+      }
     }
-  }
+  ]
 }

@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "$ref": "#/components/schemas/MinimalBroker"
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "related": {
+          "type": "string",
+          "format": "url",
+          "example": "$API_HOST/brokers/0f621db6-d239-4ae9-b85d-8e97469b10ce"
+        }
+      }
+    }
+  }
+}
