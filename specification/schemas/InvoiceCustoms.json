@@ -1,0 +1,23 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Customs"
+    },
+    {
+      "required": [
+        "invoice_number"
+      ],
+      "properties": {
+        "content_type": {
+          "type": "string",
+          "enum": [
+            "merchandise",
+            "sample_merchandise",
+            "returned_merchandise"
+          ],
+          "example": "sample_merchandise"
+        }
+      }
+    }
+  ]
+}

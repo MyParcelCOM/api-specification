@@ -20,6 +20,12 @@
   "CountryCode": {
     "$ref": "./schemas/CountryCode.json"
   },
+  "Customs": {
+    "$ref": "./schemas/Customs.json"
+  },
+  "InvoiceCustoms": {
+    "$ref": "./schemas/InvoiceCustoms.json"
+  },
   "Currency": {
     "$ref": "./schemas/Currency.json"
   },
