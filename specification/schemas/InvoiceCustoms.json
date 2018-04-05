@@ -1,43 +1,23 @@
 {
-  "type": "object",
-  "required": [
-    "content_type",
-    "invoice_number",
-    "non_delivery",
-    "incoterm"
-  ],
-  "additionalProperties": false,
-  "properties": {
-    "content_type": {
-      "type": "string",
-      "enum": [
-        "merchandise",
-        "sample_merchandise",
-        "returned_merchandise"
-      ],
-      "example": "merchandise"
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Customs"
     },
-    "invoice_number": {
-      "type": "string",
-      "example": "9000"
-    },
-    "non_delivery": {
-      "type": "string",
-      "enum": [
-        "return",
-        "abandon"
+    {
+      "required": [
+        "invoice_number"
       ],
-      "example": "return",
-      "description": "Action when the parcel cannot be delivered"
-    },
-    "incoterm": {
-      "type": "string",
-      "enum": [
-        "DDU",
-        "DDP"
-      ],
-      "example": "DDU",
-      "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)"
+      "properties": {
+        "content_type": {
+          "type": "string",
+          "enum": [
+            "merchandise",
+            "sample_merchandise",
+            "returned_merchandise"
+          ],
+          "example": "sample_merchandise"
+        }
+      }
     }
-  }
+  ]
 }
