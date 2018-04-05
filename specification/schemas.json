@@ -59,9 +59,6 @@
   "Hook": {
     "$ref": "./schemas/Hook.json"
   },
-  "HookValue": {
-    "$ref": "./schemas/HookValue.json"
-  },
   "Iban": {
     "$ref": "./schemas/Iban.json"
   },
@@ -286,6 +283,9 @@
   },
   "User": {
     "$ref": "./schemas/User.json"
+  },
+  "Value": {
+    "$ref": "./schemas/Value.json"
   },
   "Webhook": {
     "$ref": "./schemas/Webhook.json"

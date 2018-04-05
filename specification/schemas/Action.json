@@ -28,7 +28,7 @@
             "example": "attributes.physical_properties.volume"
           },
           "value": {
-            "$ref": "#/components/schemas/HookValue"
+            "$ref": "#/components/schemas/Value"
           }
         }
       }
