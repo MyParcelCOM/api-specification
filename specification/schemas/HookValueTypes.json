@@ -1,0 +1,16 @@
+{
+  "oneOf": [
+    {
+      "$ref": "#/components/schemas/PredicateValueType"
+    },
+    {
+      "$ref": "#/components/schemas/ScalarValueType"
+    },
+    {
+      "$ref": "#/components/schemas/PathValueType"
+    },
+    {
+      "$ref": "#/components/schemas/ResourceValueType"
+    }
+  ]
+}

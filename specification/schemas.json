@@ -59,6 +59,9 @@
   "Hook": {
     "$ref": "./schemas/Hook.json"
   },
+  "HookValueTypes": {
+    "$ref": "./schemas/HookValueTypes.json"
+  },
   "Iban": {
     "$ref": "./schemas/Iban.json"
   },
@@ -167,8 +170,8 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
-  "PathValue": {
-    "$ref": "./schemas/PathValue.json"
+  "PathValueType": {
+    "$ref": "./schemas/PathValueType.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
@@ -179,8 +182,8 @@
   "Predicate": {
     "$ref": "./schemas/Predicate.json"
   },
-  "PredicateValue": {
-    "$ref": "./schemas/PredicateValue.json"
+  "PredicateValueType": {
+    "$ref": "./schemas/PredicateValueType.json"
   },
   "Price": {
     "$ref": "./schemas/Price.json"
@@ -194,11 +197,11 @@
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
   },
-  "ResourceValue": {
-    "$ref": "./schemas/ResourceValue.json"
+  "ResourceValueType": {
+    "$ref": "./schemas/ResourceValueType.json"
   },
-  "ScalarValue": {
-    "$ref": "./schemas/ScalarValue.json"
+  "ScalarValueType": {
+    "$ref": "./schemas/ScalarValueType.json"
   },
   "Service": {
     "$ref": "./schemas/Service.json"
@@ -283,9 +286,6 @@
   },
   "User": {
     "$ref": "./schemas/User.json"
-  },
-  "Value": {
-    "$ref": "./schemas/Value.json"
   },
   "Webhook": {
     "$ref": "./schemas/Webhook.json"

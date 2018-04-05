@@ -22,10 +22,10 @@
       "example": "=="
     },
     "left_value": {
-      "$ref": "#/components/schemas/Value"
+      "$ref": "#/components/schemas/HookValueTypes"
     },
     "right_value": {
-      "$ref": "#/components/schemas/Value"
+      "$ref": "#/components/schemas/HookValueTypes"
     }
   }
 }
