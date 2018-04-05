@@ -4,18 +4,14 @@
       "$ref": "#/components/schemas/BaseCustoms"
     },
     {
-      "required": [
-        "invoice_number"
-      ],
       "properties": {
         "content_type": {
           "type": "string",
           "enum": [
-            "merchandise",
-            "sample_merchandise",
-            "returned_merchandise"
+            "gifts",
+            "documents"
           ],
-          "example": "sample_merchandise"
+          "example": "gifts"
         }
       }
     }

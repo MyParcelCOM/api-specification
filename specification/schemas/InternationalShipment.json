@@ -158,7 +158,7 @@
             "customs": {
               "oneOf": [
                 {
-                  "$ref": "#/components/schemas/Customs"
+                  "$ref": "#/components/schemas/NoInvoiceCustoms"
                 },
                 {
                   "$ref": "#/components/schemas/InvoiceCustoms"

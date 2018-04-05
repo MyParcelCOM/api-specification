@@ -5,16 +5,7 @@
     "non_delivery",
     "incoterm"
   ],
-  "additionalProperties": false,
   "properties": {
-    "content_type": {
-      "type": "string",
-      "enum": [
-        "documents",
-        "gifts"
-      ],
-      "example": "documents"
-    },
     "invoice_number": {
       "type": "string",
       "example": "9000"
