@@ -10,10 +10,13 @@
     "content_type": {
       "type": "string",
       "enum": [
-        "documents",
-        "gifts"
+        "merchandise",
+        "sample_merchandise",
+        "returned_merchandise",
+        "gifts",
+        "documents"
       ],
-      "example": "documents"
+      "example": "sample_merchandise"
     },
     "invoice_number": {
       "type": "string",

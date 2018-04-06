@@ -20,11 +20,8 @@
   "CountryCode": {
     "$ref": "./schemas/CountryCode.json"
   },
-  "Customs": {
-    "$ref": "./schemas/Customs.json"
-  },
-  "InvoiceCustoms": {
-    "$ref": "./schemas/InvoiceCustoms.json"
+  "BaseCustoms": {
+    "$ref": "./schemas/BaseCustoms.json"
   },
   "Currency": {
     "$ref": "./schemas/Currency.json"
@@ -52,6 +49,9 @@
   },
   "Invitation": {
     "$ref": "./schemas/Invitation.json"
+  },
+  "InvoiceCustoms": {
+    "$ref": "./schemas/InvoiceCustoms.json"
   },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
@@ -118,6 +118,9 @@
   },
   "MinimalWebhookSubscription": {
     "$ref": "./schemas/MinimalWebhookSubscription.json"
+  },
+  "NoInvoiceCustoms": {
+    "$ref": "./schemas/NoInvoiceCustoms.json"
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
