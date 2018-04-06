@@ -5,7 +5,19 @@
     "non_delivery",
     "incoterm"
   ],
+  "additionalProperties": false,
   "properties": {
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "merchandise",
+        "sample_merchandise",
+        "returned_merchandise",
+        "gifts",
+        "documents"
+      ],
+      "example": "sample_merchandise"
+    },
     "invoice_number": {
       "type": "string",
       "example": "9000"
