@@ -2,7 +2,7 @@
   "readOnly": true,
   "type": "object",
   "required": [
-    "data"
+    "links"
   ],
   "additionalProperties": false,
   "properties": {
