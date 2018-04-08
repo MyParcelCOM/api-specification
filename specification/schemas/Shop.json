@@ -6,7 +6,8 @@
     },
     {
       "required": [
-        "attributes"
+        "attributes",
+        "relationships"
       ],
       "properties": {
         "attributes": {
@@ -77,12 +78,15 @@
         "relationships": {
           "type": "object",
           "required": [
-            "region"
+            "organization"
           ],
           "additionalProperties": false,
           "properties": {
             "region": {
               "$ref": "#/components/schemas/RegionRelationship"
+            },
+            "organization": {
+              "$ref": "#/components/schemas/OrganizationRelationship"
             }
           }
         },

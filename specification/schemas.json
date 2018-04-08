@@ -53,6 +53,9 @@
   "InvoiceCustoms": {
     "$ref": "./schemas/InvoiceCustoms.json"
   },
+  "OrganizationRelationship": {
+    "$ref": "./schemas/OrganizationRelationship.json"
+  },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
   },
@@ -67,6 +70,9 @@
   },
   "MinimalInvitation": {
     "$ref": "./schemas/MinimalInvitation.json"
+  },
+  "MinimalOrganization": {
+    "$ref": "./schemas/MinimalOrganization.json"
   },
   "MinimalPasswordReset": {
     "$ref": "./schemas/MinimalPasswordReset.json"
