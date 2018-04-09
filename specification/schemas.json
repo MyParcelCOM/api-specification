@@ -161,9 +161,6 @@
   "OrganizationRelationship": {
     "$ref": "./schemas/OrganizationRelationship.json"
   },
-  "Owner": {
-    "$ref": "./schemas/Owner.json"
-  },
   "OwnerRelationship": {
     "$ref": "./schemas/OwnerRelationship.json"
   },

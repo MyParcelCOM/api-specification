@@ -6,7 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "value_type": "resource",
+    "value_type": {
+      "type": "string",
+      "pattern": "^resource$",
+      "example": "resource"
+    },
     "value": {
       "type": "object",
       "required": [

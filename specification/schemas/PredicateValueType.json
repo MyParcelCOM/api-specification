@@ -6,7 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "value_type": "predicate",
+    "value_type": {
+      "type": "string",
+      "pattern": "^predicate$",
+      "example": "predicate"
+    },
     "value": {
       "$ref": "#/components/schemas/Predicate"
     }

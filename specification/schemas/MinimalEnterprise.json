@@ -6,8 +6,8 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^enterprise$",
-      "example": "enterprise"
+      "pattern": "^enterprises$",
+      "example": "enterprises"
     },
     "id": {
       "type": "string",

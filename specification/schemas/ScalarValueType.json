@@ -6,10 +6,26 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "value_type": "scalar",
+    "value_type": {
+      "type": "string",
+      "pattern": "^scalar$",
+      "example": "scalar"
+    },
     "value": {
-      "type": "number",
-      "example": "5000"
+      "oneOf": [
+        {
+          "type": "number",
+          "example": "5000"
+        },
+        {
+          "type": "string",
+          "example": "Africa"
+        },
+        {
+          "type": "null"
+        }
+      ]
+
     }
   }
 }

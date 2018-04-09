@@ -6,7 +6,11 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "value_type": "path",
+    "value_type": {
+      "type": "string",
+      "pattern": "^path$",
+      "example": "path"
+    },
     "value": {
       "type": "string",
       "example": "attributes.physical_properties.weight"
