@@ -15,7 +15,7 @@
       "oneOf": [
         {
           "type": "number",
-          "example": "5000"
+          "example": 5000
         },
         {
           "type": "string",

@@ -14,7 +14,7 @@
       "properties": {
         "name": {
           "type": "string",
-          "example": "Lars B.V"
+          "example": "Holmes investigation inc. 🕵"
         },
         "billing_address": {
           "allOf": [
