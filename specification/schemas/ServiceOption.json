@@ -32,7 +32,7 @@
             },
             "code": {
               "type": "string",
-              "example": "handover-method-collection"
+              "example": "handover-method:collection"
             }
           }
         },
