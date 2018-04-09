@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^hooks$",
+      "example": "hooks"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "be7f6752-34e0-49a1-a832-bcc209450ea9",
+      "readOnly": true
+    }
+  }
+}

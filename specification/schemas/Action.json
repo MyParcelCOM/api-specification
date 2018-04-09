@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "required": [
+    "action_type",
+    "values"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "create-resource",
+        "update-resource"
+      ],
+      "example": "create-resource"
+    },
+    "resource_type": {
+      "type": "string",
+      "example": "services"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "example": "attributes.physical_properties.volume"
+          },
+          "value": {
+            "$ref": "#/components/schemas/HookValueTypes"
+          }
+        }
+      }
+    }
+  }
+}

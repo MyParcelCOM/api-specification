@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "required": [
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "attributes": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "MyParcel"
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "self": {
+          "type": "string",
+          "example": "$base_url/enterprise/0b6ecd39-6072-4529-a031-f21247a91296"
+        }
+      }
+    }
+  }
+}

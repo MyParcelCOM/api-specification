@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "value_type",
+    "value"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "value_type": {
+      "type": "string",
+      "pattern": "^predicate$",
+      "example": "predicate"
+    },
+    "value": {
+      "$ref": "#/components/schemas/Predicate"
+    }
+  }
+}

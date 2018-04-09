@@ -1,6 +1,15 @@
 {
+  "Action": {
+    "$ref": "./schemas/Action.json"
+  },
   "Address": {
     "$ref": "./schemas/Address.json"
+  },
+  "Broker": {
+    "$ref": "./schemas/Broker.json"
+  },
+  "BrokerRelationship": {
+    "$ref": "./schemas/BrokerRelationship.json"
   },
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
@@ -8,11 +17,11 @@
   "CarrierContract": {
     "$ref": "./schemas/CarrierContract.json"
   },
-  "CarrierRelationship": {
-    "$ref": "./schemas/CarrierRelationship.json"
-  },
   "CarrierContractRelationship": {
     "$ref": "./schemas/CarrierContractRelationship.json"
+  },
+  "CarrierRelationship": {
+    "$ref": "./schemas/CarrierRelationship.json"
   },
   "CombinedFile": {
     "$ref": "./schemas/CombinedFile.json"
@@ -32,6 +41,12 @@
   "Email": {
     "$ref": "./schemas/Email.json"
   },
+  "Enterprise": {
+    "$ref": "./schemas/Enterprise.json"
+  },
+  "EnterpriseRelationship": {
+    "$ref": "./schemas/EnterpriseRelationship.json"
+  },
   "File": {
     "$ref": "./schemas/File.json"
   },
@@ -40,6 +55,12 @@
   },
   "FilesRelationship": {
     "$ref": "./schemas/FilesRelationship.json"
+  },
+  "Hook": {
+    "$ref": "./schemas/Hook.json"
+  },
+  "HookValueTypes": {
+    "$ref": "./schemas/HookValueTypes.json"
   },
   "Iban": {
     "$ref": "./schemas/Iban.json"
@@ -53,8 +74,8 @@
   "InvoiceCustoms": {
     "$ref": "./schemas/InvoiceCustoms.json"
   },
-  "OrganizationRelationship": {
-    "$ref": "./schemas/OrganizationRelationship.json"
+  "MinimalBroker": {
+    "$ref": "./schemas/MinimalBroker.json"
   },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
@@ -65,8 +86,14 @@
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
   },
+  "MinimalEnterprise": {
+    "$ref": "./schemas/MinimalEnterprise.json"
+  },
   "MinimalFile": {
     "$ref": "./schemas/MinimalFile.json"
+  },
+  "MinimalHook": {
+    "$ref": "./schemas/MinimalHook.json"
   },
   "MinimalInvitation": {
     "$ref": "./schemas/MinimalInvitation.json"
@@ -128,14 +155,32 @@
   "NoInvoiceCustoms": {
     "$ref": "./schemas/NoInvoiceCustoms.json"
   },
+  "Organization": {
+    "$ref": "./schemas/Organization.json"
+  },
+  "OrganizationRelationship": {
+    "$ref": "./schemas/OrganizationRelationship.json"
+  },
+  "OwnerRelationship": {
+    "$ref": "./schemas/OwnerRelationship.json"
+  },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
+  },
+  "PathValueType": {
+    "$ref": "./schemas/PathValueType.json"
+  },
+  "PhysicalProperties": {
+    "$ref": "./schemas/PhysicalProperties.json"
   },
   "PickupDropoffLocation": {
     "$ref": "./schemas/PickupDropoffLocation.json"
   },
-  "PhysicalProperties": {
-    "$ref": "./schemas/PhysicalProperties.json"
+  "Predicate": {
+    "$ref": "./schemas/Predicate.json"
+  },
+  "PredicateValueType": {
+    "$ref": "./schemas/PredicateValueType.json"
   },
   "Price": {
     "$ref": "./schemas/Price.json"
@@ -148,6 +193,12 @@
   },
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
+  },
+  "ResourceValueType": {
+    "$ref": "./schemas/ResourceValueType.json"
+  },
+  "ScalarValueType": {
+    "$ref": "./schemas/ScalarValueType.json"
   },
   "Service": {
     "$ref": "./schemas/Service.json"
