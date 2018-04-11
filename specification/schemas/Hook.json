@@ -12,6 +12,7 @@
         "attributes": {
           "type": "object",
           "required": [
+            "name",
             "resource_type",
             "resource_action",
             "predicate",
@@ -19,6 +20,10 @@
           ],
           "additionalProperties": false,
           "properties": {
+            "name": {
+              "type": "string",
+              "example": "shipment-update-send-mail"
+            },
             "resource_type": {
               "type": "string",
               "example": "services"
@@ -36,6 +41,14 @@
             },
             "action": {
               "$ref": "#/components/schemas/Action"
+            },
+            "priority": {
+              "type": "number",
+              "example": 1
+            },
+            "active": {
+              "type": "boolean",
+              "example": true
             }
           }
         },
