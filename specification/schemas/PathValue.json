@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "path",
+    "value"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "path": {
+      "type": "string",
+      "example": "attributes.physical_properties.weight"
+    },
+    "value": {
+      "$ref": "#/components/schemas/HookValueTypes"
+    }
+  }
+}

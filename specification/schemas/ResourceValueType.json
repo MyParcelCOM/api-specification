@@ -14,8 +14,7 @@
     "value": {
       "type": "object",
       "required": [
-        "resource_type",
-        "attributes"
+        "resource_type"
       ],
       "additionalProperties": false,
       "properties": {
@@ -23,12 +22,15 @@
           "type": "string",
           "example": "regions"
         },
-        "path": {
+        "value_path": {
           "type": "string",
           "example": "relationships.parent.relationships.parent"
         },
-        "attributes": {
-          "type": "object"
+        "filters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/PathValue"
+          }
         }
       }
     }

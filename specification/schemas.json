@@ -167,6 +167,9 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
+  "PathValue": {
+    "$ref": "./schemas/PathValue.json"
+  },
   "PathValueType": {
     "$ref": "./schemas/PathValueType.json"
   },
