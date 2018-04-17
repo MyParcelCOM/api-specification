@@ -1,7 +1,7 @@
 {
-  "name": "combined_files_id",
+  "name": "combined_file_id",
   "in": "path",
-  "description": "Id of the combined-files resource.",
+  "description": "Id of the combined file resource.",
   "required": true,
   "schema": {
     "type": "string",

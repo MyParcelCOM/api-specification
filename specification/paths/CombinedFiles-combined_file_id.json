@@ -3,16 +3,16 @@
     "tags": [
       "CombinedFiles"
     ],
-    "summary": "Get a combined-file  by id.",
-    "description": "This endpoint retrieves a combined-file with the supplied id.",
+    "summary": "Get a combined file  by id.",
+    "description": "This endpoint retrieves a combined file with the supplied id.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-combined_files_id"
+        "$ref": "#/components/parameters/path-combined_file_id"
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the combined-file.",
+        "description": "Retrieved the combined file.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
