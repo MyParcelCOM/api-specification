@@ -8,8 +8,8 @@
   "path-carrier_contract_id": {
     "$ref": "./parameters/path-carrier_contract_id.json"
   },
-  "path-combined_files_id": {
-    "$ref": "./parameters/path-combined_files_id.json"
+  "path-combined_file_id": {
+    "$ref": "./parameters/path-combined_file_id.json"
   },
   "path-country_code": {
     "$ref": "./parameters/path-country_code.json"

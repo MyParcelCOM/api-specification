@@ -3,11 +3,11 @@
     "tags": [
       "CombinedFiles"
     ],
-    "summary": "Get all the combined-files.",
-    "description": "This endpoint retrieves all the combined-files you have requested.",
+    "summary": "Get all the combined files.",
+    "description": "This endpoint retrieves all the combined files you have requested.",
     "responses": {
       "200": {
-        "description": "Retrieved the combined-files.",
+        "description": "Retrieved the combined files.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -70,10 +70,10 @@
     "tags": [
       "CombinedFiles"
     ],
-    "summary": "Create a combined-file.",
-    "description": "This endpoint creates a new combined-file with the posted data and files.",
+    "summary": "Create a combined file.",
+    "description": "This endpoint creates a new combined file with the posted data and files.",
     "requestBody": {
-      "description": "The combined-file object to be created.",
+      "description": "The combined file object to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -94,7 +94,7 @@
     },
     "responses": {
       "201": {
-        "description": "The combined-file has been created",
+        "description": "The combined file has been created",
         "content": {
           "application/vnd.api+json": {
             "schema": {

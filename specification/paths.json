@@ -17,8 +17,8 @@
   "/combined-files": {
     "$ref": "./paths/CombinedFiles.json"
   },
-  "/combined-files/{combined-files_id}": {
-    "$ref": "./paths/CombinedFiles-combined_files_id.json"
+  "/combined-files/{combined_file_id}": {
+    "$ref": "./paths/CombinedFiles-combined_file_id.json"
   },
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
