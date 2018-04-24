@@ -1,0 +1,36 @@
+{
+  "type": "hooks",
+  "attributes": {
+    "name": "shipment-create-send-mail",
+    "resource_type": "services",
+    "resource_action": "create",
+    "predicate": {
+      "left_hook_value": {
+
+      },
+      "right_hook_value": {
+
+      },
+      "operator": "=="
+    },
+    "action": {
+      "action_type": "create-resource",
+      "resource_type": "services",
+      "values": [
+        {
+          "path": "attributes.physical_properties.volume"
+        }
+      ]
+    },
+    "priority": 1,
+    "active": true
+  },
+  "relationships": {
+    "shop": {
+      "data": {
+        "type": "shops",
+        "id": "35eddf50-1d84-47a3-8479-6bfda729cd99"
+      }
+    }
+  }
+}

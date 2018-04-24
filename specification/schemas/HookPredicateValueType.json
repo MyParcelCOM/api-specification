@@ -12,7 +12,7 @@
       "example": "predicate"
     },
     "value": {
-      "$ref": "#/components/schemas/Predicate"
+      "$ref": "#/components/schemas/HookPredicate"
     }
   }
 }

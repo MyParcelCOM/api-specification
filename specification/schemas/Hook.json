@@ -37,10 +37,10 @@
               "example": "create"
             },
             "predicate": {
-              "$ref": "#/components/schemas/Predicate"
+              "$ref": "#/components/schemas/HookPredicate"
             },
             "action": {
-              "$ref": "#/components/schemas/Action"
+              "$ref": "#/components/schemas/HookAction"
             },
             "priority": {
               "type": "number",

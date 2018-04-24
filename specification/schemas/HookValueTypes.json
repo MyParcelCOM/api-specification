@@ -1,16 +1,16 @@
 {
   "oneOf": [
     {
-      "$ref": "#/components/schemas/PredicateValueType"
+      "$ref": "#/components/schemas/HookPredicateValueType"
     },
     {
-      "$ref": "#/components/schemas/ScalarValueType"
+      "$ref": "#/components/schemas/HookScalarValueType"
     },
     {
-      "$ref": "#/components/schemas/PathValueType"
+      "$ref": "#/components/schemas/HookPathValueType"
     },
     {
-      "$ref": "#/components/schemas/ResourceValueType"
+      "$ref": "#/components/schemas/HookResourceValueType"
     }
   ]
 }
