@@ -32,7 +32,7 @@
               "type": "string",
               "enum": [
                 "create",
-                "read"
+                "update"
               ],
               "example": "create"
             },
