@@ -28,20 +28,6 @@
             "iban": {
               "$ref": "#/components/schemas/Iban"
             },
-            "billing_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
-            },
             "return_address": {
               "allOf": [
                 {
