@@ -21,13 +21,6 @@
               "type": "string",
               "example": "MyParcel.com"
             },
-            "coc": {
-              "type": "string",
-              "example": "63190133"
-            },
-            "iban": {
-              "$ref": "#/components/schemas/Iban"
-            },
             "return_address": {
               "allOf": [
                 {
