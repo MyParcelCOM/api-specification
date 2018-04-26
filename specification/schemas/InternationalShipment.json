@@ -203,7 +203,7 @@
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
             },
-            "status": {
+            "shipment_status": {
               "$ref": "#/components/schemas/ShipmentStatusRelationship"
             },
             "service_contract": {

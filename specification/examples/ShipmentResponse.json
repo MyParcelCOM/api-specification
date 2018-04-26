@@ -45,7 +45,7 @@
             "related": "https://sandbox-api.myparcel.com/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
           }
         },
-        "status": {
+        "shipment_status": {
           "data": {
             "type": "shipment-statuses",
             "id": "9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
