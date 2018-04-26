@@ -16,6 +16,13 @@
           "type": "string",
           "example": "Holmes investigation inc. 🕵"
         },
+        "coc": {
+          "type": "string",
+          "example": "63190133"
+        },
+        "iban": {
+          "$ref": "#/components/schemas/Iban"
+        },
         "billing_address": {
           "allOf": [
             {
