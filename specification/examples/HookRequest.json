@@ -1,24 +1,29 @@
 {
   "type": "hooks",
   "attributes": {
-    "name": "shipment-create-send-mail",
-    "resource_type": "services",
+    "name": "on-shipment-create-update-description",
+    "resource_type": "shipments",
     "resource_action": "create",
     "predicate": {
-      "left_hook_value": {
-
+      "left_value": {
+        "value_type": "path",
+        "value": "attributes.description"
       },
-      "right_hook_value": {
-
+      "right_value": {
+        "value_type": "scalar",
+        "value": null
       },
       "operator": "=="
     },
     "action": {
-      "action_type": "create-resource",
-      "resource_type": "services",
+      "action_type": "update-resource",
       "values": [
         {
-          "path": "attributes.physical_properties.volume"
+          "path": "attributes.description",
+          "value": {
+            "value_type": "scalar",
+            "value": "Auto generated shipment"
+          }
         }
       ]
     },
@@ -26,7 +31,7 @@
     "active": true
   },
   "relationships": {
-    "shop": {
+    "owner": {
       "data": {
         "type": "shops",
         "id": "35eddf50-1d84-47a3-8479-6bfda729cd99"
