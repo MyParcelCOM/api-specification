@@ -92,6 +92,9 @@
   "InvoiceCustoms": {
     "$ref": "./schemas/InvoiceCustoms.json"
   },
+  "Language": {
+    "$ref": "./schemas/Language.json"
+  },
   "MinimalBroker": {
     "$ref": "./schemas/MinimalBroker.json"
   },
