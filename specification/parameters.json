@@ -23,6 +23,9 @@
   "path-invitation_id": {
     "$ref": "./parameters/path-invitation_id.json"
   },
+  "path-organization_id": {
+    "$ref": "./parameters/path-organization_id.json"
+  },
   "path-password_reset_id": {
     "$ref": "./parameters/path-password_reset_id.json"
   },

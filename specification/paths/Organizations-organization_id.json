@@ -1,0 +1,122 @@
+{
+  "get": {
+    "tags": [
+      "Organizations"
+    ],
+    "summary": "Get an organization by id.",
+    "description": "This endpoint retrieves the organization with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-organization_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the organization.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Organization"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Organizations"
+    ],
+    "summary": "Update an organization by id.",
+    "description": "This endpoint updates the organization with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-organization_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The organization object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Organization"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The organization is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Organization"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Organizations"
+    ],
+    "summary": "Delete an organization by id.",
+    "description": "This endpoint deletes the organization with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-organization_id"
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The organization will be deleted."
+      },
+      "204": {
+        "description": "The organization is deleted."
+      }
+    }
+  }
+}

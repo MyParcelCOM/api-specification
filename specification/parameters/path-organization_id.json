@@ -1,0 +1,10 @@
+{
+  "name": "organization_id",
+  "in": "path",
+  "description": "Id of the organization.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}
