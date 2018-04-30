@@ -74,7 +74,21 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/User"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/User"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": false
+                      }
+                    }
+                  }
+                ]
               }
             }
           }

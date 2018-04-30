@@ -72,7 +72,21 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/SystemMessage"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SystemMessage"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": false
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
