@@ -24,15 +24,14 @@
               "type": "string",
               "example": "63190133"
             },
+            "iban": {
+              "$ref": "#/components/schemas/Iban"
+            },
             "language": {
-              "type": "enum",
-              "enum": [
-                "english"
-              ],
-              "example": "english"
+              "$ref": "#/components/schemas/Language"
             },
             "payment_method": {
-              "type": "enum",
+              "type": "string",
               "enum": [
                 "sepa_direct_debit",
                 "on_credit",
@@ -45,18 +44,12 @@
               "example": "123456789MVA"
             },
             "payment_term": {
-              "type": "integer",
-              "example": "1"
+              "type": "number",
+              "example": "1",
+              "description": "Amount of days in which organization needs to pay"
             },
             "currency": {
-              "type": "enum",
-              "enum": [
-                "GBP"
-              ],
-              "example": "GBP"
-            },
-            "iban": {
-              "$ref": "#/components/schemas/Iban"
+              "$ref": "#/components/schemas/Currency"
             },
             "billing_address": {
               "allOf": [
