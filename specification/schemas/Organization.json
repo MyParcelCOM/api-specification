@@ -24,6 +24,37 @@
               "type": "string",
               "example": "63190133"
             },
+            "language": {
+              "type": "enum",
+              "enum": [
+                "english"
+              ],
+              "example": "english"
+            },
+            "payment_method": {
+              "type": "enum",
+              "enum": [
+                "sepa_direct_debit",
+                "on_credit",
+                "prepayment"
+              ],
+              "example": "prepayment"
+            },
+            "vat_number": {
+              "type": "string",
+              "example": "123456789MVA"
+            },
+            "payment_term": {
+              "type": "integer",
+              "example": "1"
+            },
+            "currency": {
+              "type": "enum",
+              "enum": [
+                "GBP"
+              ],
+              "example": "GBP"
+            },
             "iban": {
               "$ref": "#/components/schemas/Iban"
             },
