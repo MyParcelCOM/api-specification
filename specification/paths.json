@@ -35,6 +35,12 @@
   "/invitations/{invitation_id}": {
     "$ref": "./paths/Invitations-invitation_id.json"
   },
+  "/organizations": {
+    "$ref": "./paths/Organizations.json"
+  },
+  "/organizations/{organization_id}": {
+    "$ref": "./paths/Organizations-organization_id.json"
+  },
   "/password-resets": {
     "$ref": "./paths/PasswordResets.json"
   },
