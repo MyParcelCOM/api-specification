@@ -1,18 +1,17 @@
 {
   "type": "object",
   "required": [
-    "value_type",
+    "path",
     "value"
   ],
   "additionalProperties": false,
   "properties": {
-    "value_type": {
+    "path": {
       "type": "string",
-      "pattern": "^predicate$",
-      "example": "predicate"
+      "example": "attributes.physical_properties.weight"
     },
     "value": {
-      "$ref": "#/components/schemas/Predicate"
+      "$ref": "#/components/schemas/HookValueTypes"
     }
   }
 }

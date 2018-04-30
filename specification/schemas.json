@@ -1,7 +1,4 @@
 {
-  "Action": {
-    "$ref": "./schemas/Action.json"
-  },
   "Address": {
     "$ref": "./schemas/Address.json"
   },
@@ -58,6 +55,27 @@
   },
   "Hook": {
     "$ref": "./schemas/Hook.json"
+  },
+  "HookAction": {
+    "$ref": "./schemas/HookAction.json"
+  },
+  "HookPathValue": {
+    "$ref": "./schemas/HookPathValue.json"
+  },
+  "HookPathValueType": {
+    "$ref": "./schemas/HookPathValueType.json"
+  },
+  "HookPredicate": {
+    "$ref": "./schemas/HookPredicate.json"
+  },
+  "HookPredicateValueType": {
+    "$ref": "./schemas/HookPredicateValueType.json"
+  },
+  "HookResourceValueType": {
+    "$ref": "./schemas/HookResourceValueType.json"
+  },
+  "HookScalarValueType": {
+    "$ref": "./schemas/HookScalarValueType.json"
   },
   "HookValueTypes": {
     "$ref": "./schemas/HookValueTypes.json"
@@ -167,20 +185,11 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
-  "PathValueType": {
-    "$ref": "./schemas/PathValueType.json"
-  },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
   },
   "PickupDropoffLocation": {
     "$ref": "./schemas/PickupDropoffLocation.json"
-  },
-  "Predicate": {
-    "$ref": "./schemas/Predicate.json"
-  },
-  "PredicateValueType": {
-    "$ref": "./schemas/PredicateValueType.json"
   },
   "Price": {
     "$ref": "./schemas/Price.json"
@@ -193,12 +202,6 @@
   },
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
-  },
-  "ResourceValueType": {
-    "$ref": "./schemas/ResourceValueType.json"
-  },
-  "ScalarValueType": {
-    "$ref": "./schemas/ScalarValueType.json"
   },
   "Service": {
     "$ref": "./schemas/Service.json"

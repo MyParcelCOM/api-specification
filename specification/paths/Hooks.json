@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "Hooks"
+      "⚠ Hooks"
     ],
     "summary": "Get all available hooks for your account.",
     "description": "This endpoint retrieves available hooks for your account.",
@@ -68,7 +68,7 @@
   },
   "post": {
     "tags": [
-      "Hooks"
+      "⚠ Hooks"
     ],
     "summary": "Create a new hook.",
     "description": "This endpoint creates a new hook with the posted data.",
