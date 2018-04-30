@@ -75,14 +75,42 @@
               "data": {
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/Shipment"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Shipment"
+                      },
+                      {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "readOnly": false
+                          }
+                        }
+                      }
+                    ]
                   },
                   {
-                    "$ref": "#/components/schemas/InternationalShipment"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/InternationalShipment"
+                      },
+                      {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "readOnly": false
+                          }
+                        }
+                      }
+                    ]
                   }
                 ],
                 "example": {
-                  "$ref": "#/components/examples/ShipmentRequest"
+                  "$ref": "#/components/examples/PatchShipmentRequest"
                 }
               }
             }
