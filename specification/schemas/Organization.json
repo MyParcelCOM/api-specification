@@ -27,6 +27,30 @@
             "iban": {
               "$ref": "#/components/schemas/Iban"
             },
+            "language": {
+              "$ref": "#/components/schemas/Language"
+            },
+            "payment_method": {
+              "type": "string",
+              "enum": [
+                "sepa_direct_debit",
+                "on_credit",
+                "prepayment"
+              ],
+              "example": "prepayment"
+            },
+            "vat_number": {
+              "type": "string",
+              "example": "123456789MVA"
+            },
+            "payment_term": {
+              "type": "number",
+              "example": "1",
+              "description": "Amount of days in which the organization needs to pay"
+            },
+            "currency": {
+              "$ref": "#/components/schemas/Currency"
+            },
             "billing_address": {
               "allOf": [
                 {
