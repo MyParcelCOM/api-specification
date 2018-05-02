@@ -9,17 +9,12 @@
       "type": "object",
       "allOf": [
         {
-            "$ref": "#/components/schemas/MinimalCarrier"
+          "$ref": "#/components/schemas/MinimalCarrier"
         },
         {
           "required": [
             "id"
-          ],
-          "properties": {
-            "id": {
-              "readOnly": false
-            }
-          }
+          ]
         }
       ]
     },

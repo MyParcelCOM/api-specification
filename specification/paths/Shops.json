@@ -84,7 +84,18 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/Shop"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shop"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }

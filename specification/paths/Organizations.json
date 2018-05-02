@@ -84,7 +84,18 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/Organization"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Organization"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }

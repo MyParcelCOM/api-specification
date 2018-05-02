@@ -6,7 +6,16 @@
   "additionalProperties": false,
   "properties": {
     "data": {
-      "$ref": "#/components/schemas/MinimalEnterprise"
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinimalEnterprise"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
     },
     "links": {
       "readOnly": true,

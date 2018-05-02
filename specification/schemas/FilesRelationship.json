@@ -15,12 +15,7 @@
           {
             "required": [
               "id"
-            ],
-            "properties": {
-              "id": {
-                "readOnly": false
-              }
-            }
+            ]
           }
         ]
       }

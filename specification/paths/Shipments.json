@@ -122,10 +122,32 @@
               "data": {
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/Shipment"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Shipment"
+                      },
+                      {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    ]
                   },
                   {
-                    "$ref": "#/components/schemas/InternationalShipment"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/InternationalShipment"
+                      },
+                      {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    ]
                   }
                 ],
                 "example": {
