@@ -12,13 +12,19 @@
         "attributes": {
           "type": "object",
           "required": [
-            "name"
+            "name",
+            "code"
           ],
           "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
-              "example": "DPD"
+              "example": "MyParcel.com"
+            },
+            "code": {
+              "type": "string",
+              "example": "my-parcel-com",
+              "description": "Unique slugified version of the carrier name to identify a carrier"
             }
           }
         },
