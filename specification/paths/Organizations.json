@@ -89,9 +89,23 @@
                     "$ref": "#/components/schemas/Organization"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name"
+                        ]
+                      },
+                      "relationships": {
+                        "required": [
+                          "broker"
+                        ]
                       }
                     }
                   }
