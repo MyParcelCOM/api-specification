@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
   "properties": {
     "data": {
       "type": "object",
@@ -10,12 +14,7 @@
         {
           "required": [
             "id"
-          ],
-          "properties": {
-            "id": {
-              "readOnly": false
-            }
-          }
+          ]
         }
       ]
     },
@@ -25,6 +24,7 @@
       "properties": {
         "related": {
           "type": "string",
+          "format": "url",
           "example": "$API_HOST/carrier-contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
         }
       }

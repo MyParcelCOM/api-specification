@@ -85,7 +85,18 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/CombinedFile"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CombinedFile"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }

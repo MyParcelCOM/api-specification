@@ -95,7 +95,18 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/WebhookSubscription"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/WebhookSubscription"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }

@@ -12,8 +12,7 @@
     "id": {
       "type": "string",
       "format": "uuid",
-      "example": "be7f6752-34e0-49a1-a832-bcc209450ea9",
-      "readOnly": true
+      "example": "be7f6752-34e0-49a1-a832-bcc209450ea9"
     }
   }
 }

@@ -14,13 +14,7 @@
         {
           "required": [
             "id"
-          ],
-          "properties": {
-            "id": {
-              "example": "0b6ecd39-6072-4529-a031-f21247a91296",
-              "readOnly": false
-            }
-          }
+          ]
         }
       ]
     },

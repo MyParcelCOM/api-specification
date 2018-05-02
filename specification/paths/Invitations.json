@@ -85,7 +85,18 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/Invitation"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Invitation"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }

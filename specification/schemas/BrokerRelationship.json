@@ -6,7 +6,17 @@
   "additionalProperties": false,
   "properties": {
     "data": {
-      "$ref": "#/components/schemas/MinimalBroker"
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MinimalBroker"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
     },
     "links": {
       "readOnly": true,

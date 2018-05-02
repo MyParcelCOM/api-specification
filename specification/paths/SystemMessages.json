@@ -108,6 +108,9 @@
                   {
                     "type": "object",
                     "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
                       "attributes": {
                         "type": "object",
                         "required": [
