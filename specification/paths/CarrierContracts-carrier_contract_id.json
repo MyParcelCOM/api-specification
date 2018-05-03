@@ -8,6 +8,14 @@
     "parameters": [
       {
         "$ref": "#/components/parameters/path-carrier_contract_id"
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>carrier</li><li>owner</li></ul>",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
