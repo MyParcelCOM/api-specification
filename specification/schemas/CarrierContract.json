@@ -15,13 +15,25 @@
           "properties": {
             "currency": {
               "$ref": "#/components/schemas/Currency"
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "status": {
+              "type": "string",
+              "enums": [
+                "concept",
+                "verified",
+                "invalid"
+              ]
             }
           }
         },
         "relationships": {
           "type": "object",
           "required": [
-            "carrier"
+            "carrier",
+            "owner"
           ],
           "additionalProperties": false,
           "properties": {
@@ -30,6 +42,16 @@
             },
             "service_contracts": {
               "$ref": "#/components/schemas/ServiceContractsRelationship"
+            },
+            "owner": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BrokerRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/OrganizationRelationship"
+                }
+              ]
             }
           }
         }
