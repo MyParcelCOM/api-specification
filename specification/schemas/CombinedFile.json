@@ -6,7 +6,6 @@
     },
     {
       "required": [
-        "attributes",
         "relationships"
       ],
       "properties": {
