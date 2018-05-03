@@ -8,13 +8,20 @@
     "attributes": {
       "type": "object",
       "required": [
-        "name"
+        "name",
+        "cost_center"
       ],
       "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string",
           "example": "MyParcel UK"
+        },
+        "cost_center": {
+          "type": "string",
+          "enum": [
+            "GBP"
+          ]
         }
       }
     },
