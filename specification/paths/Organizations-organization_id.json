@@ -23,7 +23,36 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Organization"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Organization"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "relationships": {
+                          "required": [
+                            "broker"
+                          ]
+                        },
+                        "links": {
+                          "required": [
+                            "self"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -85,7 +114,36 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Organization"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Organization"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name"
+                          ]
+                        },
+                        "relationships": {
+                          "required": [
+                            "broker"
+                          ]
+                        },
+                        "links": {
+                          "required": [
+                            "self"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
