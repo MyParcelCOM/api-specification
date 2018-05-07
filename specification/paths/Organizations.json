@@ -39,9 +39,15 @@
                             ]
                           },
                           "relationships": {
+                            "type": "object",
                             "required": [
                               "broker"
-                            ]
+                            ],
+                            "properties": {
+                              "broker": {
+                                "$ref": "#/components/schemas/BrokerRelationship"
+                              }
+                            }
                           },
                           "links": {
                             "required": [
@@ -132,9 +138,22 @@
                         ]
                       },
                       "relationships": {
+                        "type": "object",
                         "required": [
                           "broker"
-                        ]
+                        ],
+                        "properties": {
+                          "broker": {
+                            "$ref": "#/components/schemas/BrokerRelationship"
+                          }
+                        }
+                      },
+                      "links": {
+                        "properties": {
+                          "self": {
+                            "readOnly": true
+                          }
+                        }
                       }
                     }
                   }
@@ -176,9 +195,15 @@
                           ]
                         },
                         "relationships": {
+                          "type": "object",
                           "required": [
                             "broker"
-                          ]
+                          ],
+                          "properties": {
+                            "broker": {
+                              "$ref": "#/components/schemas/BrokerRelationship"
+                            }
+                          }
                         },
                         "links": {
                           "required": [

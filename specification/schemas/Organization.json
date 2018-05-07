@@ -61,14 +61,6 @@
             }
           }
         },
-        "relationships": {
-          "type": "object",
-          "properties": {
-            "broker": {
-              "$ref": "#/components/schemas/BrokerRelationship"
-            }
-          }
-        },
         "links": {
           "readOnly": true,
           "type": "object",
