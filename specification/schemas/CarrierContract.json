@@ -22,7 +22,7 @@
             },
             "name": {
               "type": "string",
-              "example": "Tier 1"
+              "example": "My Custom contract"
             },
             "status": {
               "type": "string",
