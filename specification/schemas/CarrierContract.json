@@ -17,15 +17,21 @@
               "$ref": "#/components/schemas/Currency"
             },
             "active": {
-              "type": "boolean"
+              "type": "boolean",
+              "example": true
+            },
+            "name": {
+              "type": "string",
+              "example": "My Custom contract"
             },
             "status": {
               "type": "string",
-              "enums": [
+              "enum": [
                 "concept",
                 "verified",
                 "invalid"
-              ]
+              ],
+              "example": "verified"
             }
           }
         },
