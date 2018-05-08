@@ -37,6 +37,14 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[with_contract]",
+        "in": "query",
+        "description": "Boolean value. <ul><li>true: Only services with active contract associations</li><li>false: Only services without active contract associations</li></ul>",
+        "schema": {
+          "type": "boolean"
+        }
       }
     ],
     "responses": {
