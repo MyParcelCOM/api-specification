@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "⚠ Webhooks"
+      "Webhooks"
     ],
     "summary": "Get a webhook by id.",
     "description": "This endpoint retrieves the webhook with the supplied id.",

@@ -425,3 +425,18 @@ a:hover {
   color: #040707;
   text-shadow: none;
 }
+
+/* experimental */
+
+#operations-tag-CarrierContracts:before,
+#operations-tag-CombinedFiles:before,
+#operations-tag-Hooks:before,
+#operations-tag-Invitations:before,
+#operations-tag-ServiceContracts:before,
+#operations-tag-ServiceInsurances:before,
+#operations-tag-SystemMessages:before,
+#operations-tag-Users:before,
+#operations-tag-Webhooks:before {
+  content: "⚠";
+  margin-right: 8px;
+}

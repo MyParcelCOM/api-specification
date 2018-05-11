@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "⚠ Hooks"
+      "Hooks"
     ],
     "summary": "Get a hook by id.",
     "description": "This endpoint retrieves the hook with the supplied id.",
@@ -34,7 +34,7 @@
   },
   "delete": {
     "tags": [
-      "⚠ Hooks"
+      "Hooks"
     ],
     "summary": "Delete a hook by id.",
     "description": "This endpoint deletes the hook with the supplied id.",
