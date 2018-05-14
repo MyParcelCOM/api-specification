@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "⚠ SystemMessages"
+      "SystemMessages"
     ],
     "summary": "Get a system message by id.",
     "description": "This endpoint retrieves the system message with the supplied id.",

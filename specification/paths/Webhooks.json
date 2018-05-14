@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "⚠ Webhooks"
+      "Webhooks"
     ],
     "summary": "Get all the webhooks.",
     "description": "This endpoint retrieves all available webhooks. Use the `/shops/{shop_id}/webhook-subscriptions` endpoint to subscribe to a webhook.",

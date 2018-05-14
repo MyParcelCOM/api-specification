@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "⚠ SystemMessages"
+      "SystemMessages"
     ],
     "summary": "Get all the system messages.",
     "description": "This endpoint retrieves system messages. These are informative messages about our system or a specific type of resource.",
