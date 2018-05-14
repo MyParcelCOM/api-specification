@@ -1,18 +1,13 @@
 {
-  "type": "object",
-  "required": [
-    "amount",
-    "currency"
-  ],
-  "additionalProperties": false,
-  "properties": {
-    "amount": {
-      "type": "number",
-      "example": 995,
-      "description": "Price amount in cents"
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/BasePrice"
     },
-    "currency": {
-      "$ref": "#/components/schemas/Currency"
+    {
+      "required": [
+        "amount",
+        "currency"
+      ]
     }
-  }
+  ]
 }

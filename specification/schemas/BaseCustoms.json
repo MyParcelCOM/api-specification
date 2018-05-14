@@ -1,10 +1,5 @@
 {
   "type": "object",
-  "required": [
-    "content_type",
-    "non_delivery",
-    "incoterm"
-  ],
   "additionalProperties": false,
   "properties": {
     "content_type": {

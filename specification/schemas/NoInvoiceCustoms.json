@@ -4,6 +4,11 @@
       "$ref": "#/components/schemas/BaseCustoms"
     },
     {
+      "required": [
+        "content_type",
+        "non_delivery",
+        "incoterm"
+      ],
       "properties": {
         "content_type": {
           "type": "string",

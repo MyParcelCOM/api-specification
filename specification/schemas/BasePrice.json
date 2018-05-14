@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "amount": {
+      "type": "number",
+      "example": 995,
+      "description": "Price amount in cents"
+    },
+    "currency": {
+      "$ref": "#/components/schemas/Currency"
+    }
+  }
+}

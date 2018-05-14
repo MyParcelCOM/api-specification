@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalShipment"
+      "$ref": "#/components/schemas/BaseShipment"
     },
     {
       "required": [
@@ -11,7 +11,6 @@
       ],
       "properties": {
         "attributes": {
-          "type": "object",
           "required": [
             "recipient_address",
             "return_address",
@@ -21,78 +20,24 @@
           "additionalProperties": false,
           "properties": {
             "recipient_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/Address"
             },
             "return_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/Address"
             },
             "sender_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/Address"
             },
             "pickup_location": {
-              "type": "object",
               "required": [
                 "code",
                 "address"
               ],
-              "additionalProperties": false,
               "properties": {
-                "code": {
-                  "type": "string",
-                  "example": "205604"
-                },
                 "address": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Address"
-                    },
-                    {
-                      "required": [
-                        "street_1",
-                        "city",
-                        "country_code"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Address"
                 }
               }
-            },
-            "description": {
-              "type": "string",
-              "example": "Order #8008135"
             },
             "price": {
               "allOf": [
@@ -141,17 +86,6 @@
                 "$ref": "#/components/schemas/ShipmentItem"
               }
             },
-            "register_at": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Timestamp"
-                },
-                {
-                  "readOnly": false,
-                  "description": "This shipment will be registered with the carrier when this time has been reached. While this is `null` or a time in the future, the shipment will stay in concept."
-                }
-              ]
-            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             },
@@ -170,9 +104,6 @@
             "service_contract"
           ],
           "properties": {
-            "service_options": {
-              "$ref": "#/components/schemas/ServiceOptionsRelationship"
-            },
             "parent": {
               "$ref": "#/components/schemas/ShipmentRelationship"
             },
@@ -181,9 +112,6 @@
             },
             "shipment_status": {
               "$ref": "#/components/schemas/ShipmentStatusRelationship"
-            },
-            "service_contract": {
-              "$ref": "#/components/schemas/ServiceContractRelationship"
             },
             "files": {
               "$ref": "#/components/schemas/ShipmentFilesRelationship"

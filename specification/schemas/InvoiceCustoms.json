@@ -5,7 +5,10 @@
     },
     {
       "required": [
-        "invoice_number"
+        "invoice_number",
+        "content_type",
+        "non_delivery",
+        "incoterm"
       ],
       "properties": {
         "content_type": {

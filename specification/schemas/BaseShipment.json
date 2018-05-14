@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalShipment"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "recipient_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "return_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "sender_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "pickup_location": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "example": "205604"
+                },
+                "address": {
+                  "$ref": "#/components/schemas/BaseAddress"
+                }
+              }
+            },
+            "description": {
+              "type": "string",
+              "example": "Order #8008135"
+            },
+            "insurance": {
+              "$ref": "#/components/schemas/BasePrice"
+            },
+            "physical_properties": {
+              "$ref": "#/components/schemas/BasePhysicalProperties"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/BaseShipmentItem"
+              }
+            },
+            "register_at": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Timestamp"
+                },
+                {
+                  "readOnly": false,
+                  "description": "This shipment will be registered with the carrier when this time has been reached. While this is `null` or a time in the future, the shipment will stay in concept."
+                }
+              ]
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "properties": {
+            "service_options": {
+              "$ref": "#/components/schemas/ServiceOptionsRelationship"
+            },
+            "service_contract": {
+              "$ref": "#/components/schemas/ServiceContractRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
