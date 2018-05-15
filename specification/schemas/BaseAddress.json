@@ -7,19 +7,31 @@
       "example": "Baker Street"
     },
     "street_2": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "Marylebone"
     },
     "street_number": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "example": 221
     },
     "street_number_suffix": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "B"
     },
     "postal_code": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "NW1 6XE"
     },
     "city": {
@@ -33,22 +45,34 @@
       "$ref": "#/components/schemas/CountryCode"
     },
     "first_name": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "Sherlock"
     },
     "last_name": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "Holmes"
     },
     "company": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "Holmes Investigations"
     },
     "email": {
       "$ref": "#/components/schemas/Email"
     },
     "phone_number": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "+31 234 567 890"
     }
   }

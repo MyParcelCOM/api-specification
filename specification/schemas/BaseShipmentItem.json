@@ -3,7 +3,10 @@
   "additionalProperties": false,
   "properties": {
     "sku": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "minLength": 1,
       "example": "123456789"
     },
@@ -13,14 +16,24 @@
       "example": "OnePlus X"
     },
     "item_value": {
-      "$ref": "#/components/schemas/BasePrice"
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/BasePrice"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "quantity": {
       "type": "number",
       "example": 2
     },
     "hs_code": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^[0-9.]+$",
       "example": "8517.12.00",
       "description": "Harmonized System code used by customs"
@@ -31,7 +44,14 @@
       "description": "The nett weight of the item in grams"
     },
     "origin_country_code": {
-      "$ref": "#/components/schemas/CountryCode"
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CountryCode"
+        },
+        {
+          "type": "null"
+        }
+      ]
     }
   }
 }

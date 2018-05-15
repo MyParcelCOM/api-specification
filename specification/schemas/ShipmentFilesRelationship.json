@@ -2,6 +2,7 @@
   "readOnly": true,
   "type": "object",
   "required": [
+    "data",
     "links"
   ],
   "additionalProperties": false,
@@ -9,6 +10,7 @@
     "data": {
       "type": "array",
       "items": {
+        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/MinimalFile"
@@ -29,6 +31,7 @@
       ],
       "properties": {
         "related": {
+          "readOnly": true,
           "type": "string",
           "example": "$API_HOST/shipments/0f621db6-d239-4ae9-b85d-8e97469b10ce/files"
         }

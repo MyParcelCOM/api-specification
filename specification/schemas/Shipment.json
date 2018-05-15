@@ -10,6 +10,9 @@
         "relationships"
       ],
       "properties": {
+        "id": {
+          "readOnly": true
+        },
         "attributes": {
           "required": [
             "recipient_address",
@@ -76,15 +79,26 @@
                   "$ref": "#/components/schemas/PhysicalProperties"
                 },
                 {
-                  "readOnly": true
+                  "readOnly": true,
+                  "properties": {
+                    "height": {
+                      "readOnly": true
+                    },
+                    "width": {
+                      "readOnly": true
+                    },
+                    "length": {
+                      "readOnly": true
+                    },
+                    "volume": {
+                      "readOnly": true,
+                    },
+                    "weight": {
+                      "readOnly": true
+                    }
+                  }
                 }
               ]
-            },
-            "items": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ShipmentItem"
-              }
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
@@ -102,21 +116,7 @@
           "required": [
             "shop",
             "service_contract"
-          ],
-          "properties": {
-            "parent": {
-              "$ref": "#/components/schemas/ShipmentRelationship"
-            },
-            "shop": {
-              "$ref": "#/components/schemas/ShopRelationship"
-            },
-            "shipment_status": {
-              "$ref": "#/components/schemas/ShipmentStatusRelationship"
-            },
-            "files": {
-              "$ref": "#/components/schemas/ShipmentFilesRelationship"
-            }
-          }
+          ]
         },
         "links": {
           "readOnly": true,

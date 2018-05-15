@@ -3,25 +3,37 @@
   "additionalProperties": false,
   "properties": {
     "height": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0,
       "example": 150,
       "description": "Height in millimeters"
     },
     "width": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0,
       "example": 300,
       "description": "Width in millimeters"
     },
     "length": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0,
       "example": 500,
       "description": "Length in millimeters"
     },
     "volume": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0,
       "example": 22.5,
       "description": "Volume in liters (dm3)"

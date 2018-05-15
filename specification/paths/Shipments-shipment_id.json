@@ -73,7 +73,39 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/BaseShipment"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BaseShipment"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "properties": {
+                          "customs": {
+                            "oneOf": [
+                              {
+                                "$ref": "#/components/schemas/BaseCustoms"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "properties": {
+                          "shop": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
