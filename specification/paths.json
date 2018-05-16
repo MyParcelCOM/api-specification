@@ -1,4 +1,10 @@
 {
+  "/brokers": {
+    "$ref": "./paths/Brokers.json"
+  },
+  "/brokers/{broker_id}": {
+    "$ref": "./paths/Brokers-broker_id.json"
+  },
   "/carriers": {
     "$ref": "./paths/Carriers.json"
   },

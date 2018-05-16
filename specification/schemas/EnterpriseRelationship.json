@@ -24,7 +24,7 @@
         "related": {
           "type": "string",
           "format": "url",
-          "example": "$API_HOST/brokers/0f621db6-d239-4ae9-b85d-8e97469b10ce"
+          "example": "$API_HOST/enterprises/8f778acf-0bcd-4121-b998-ad92fa1dcdce"
         }
       }
     }

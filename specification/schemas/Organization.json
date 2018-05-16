@@ -68,7 +68,7 @@
           "properties": {
             "self": {
               "type": "string",
-              "example": "$base_url/organizations/0b6ecd39-6072-4529-a031-f21247a91296"
+              "example": "$base_url/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
             }
           }
         }
