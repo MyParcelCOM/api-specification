@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalShop"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "MyParcel.com"
+            },
+            "return_address": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BaseAddress"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "sender_address": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BaseAddress"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "created_at": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Timestamp"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

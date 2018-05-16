@@ -73,39 +73,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/BaseShipment"
-                  },
-                  {
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "attributes": {
-                        "properties": {
-                          "customs": {
-                            "oneOf": [
-                              {
-                                "$ref": "#/components/schemas/BaseCustoms"
-                              },
-                              {
-                                "type": "null"
-                              }
-                            ]
-                          }
-                        }
-                      },
-                      "relationships": {
-                        "properties": {
-                          "shop": {
-                            "readOnly": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
+                "$ref": "#/components/schemas/PatchShipment"
               }
             }
           }

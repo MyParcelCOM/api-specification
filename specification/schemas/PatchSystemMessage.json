@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalSystemMessage"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": [
+                "info",
+                "success",
+                "warning",
+                "error"
+              ],
+              "example": "info"
+            },
+            "resource_type": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "shipments",
+                "carriers"
+              ],
+              "example": "shipments"
+            },
+            "content": {
+              "type": "string",
+              "example": "Information regarding shipments"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
