@@ -1,18 +1,36 @@
 {
-  "allOf": [
-    {
-      "$ref": "#/components/schemas/BaseShipmentItem"
+  "type": "object",
+  "required": [
+    "description",
+    "quantity"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "sku": {
+      "type": "string",
+      "minLength": 1,
+      "example": "123456789"
     },
-    {
-      "required": [
-        "description",
-        "quantity"
-      ],
-      "properties": {
-        "item_value": {
-          "$ref": "#/components/schemas/Price"
-        }
-      }
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "example": "OnePlus X"
+    },
+    "item_value": {
+      "$ref": "#/components/schemas/Price"
+    },
+    "quantity": {
+      "type": "number",
+      "example": 2
+    },
+    "hs_code": {
+      "type": "string",
+      "pattern": "^[0-9.]+$",
+      "example": "8517.12.00",
+      "description": "Harmonized System code used by customs"
+    },
+    "origin_country_code": {
+      "$ref": "#/components/schemas/CountryCode"
     }
-  ]
+  }
 }

@@ -14,10 +14,7 @@
       "example": "sample_merchandise"
     },
     "invoice_number": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": "string",
       "example": "9000"
     },
     "non_delivery": {

@@ -45,16 +45,20 @@
               ]
             },
             "payment_method": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "enum": [
-                "sepa-direct-debit",
-                "on-credit",
-                "prepayment"
-              ],
-              "example": "prepayment"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "sepa-direct-debit",
+                    "on-credit",
+                    "prepayment"
+                  ],
+                  "example": "prepayment"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "vat_number": {
               "type": [

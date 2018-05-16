@@ -30,7 +30,8 @@
               ],
               "enum": [
                 "shipments",
-                "carriers"
+                "carriers",
+                null
               ],
               "example": "shipments"
             },

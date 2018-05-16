@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/BaseShipment"
+      "$ref": "#/components/schemas/MinimalShipment"
     },
     {
       "required": [
@@ -32,15 +32,25 @@
               "$ref": "#/components/schemas/Address"
             },
             "pickup_location": {
+              "type": "object",
               "required": [
                 "code",
                 "address"
               ],
+              "additionalProperties": false,
               "properties": {
+                "code": {
+                  "type": "string",
+                  "example": "205604"
+                },
                 "address": {
                   "$ref": "#/components/schemas/Address"
                 }
               }
+            },
+            "description": {
+              "type": "string",
+              "example": "Order #8008135"
             },
             "price": {
               "allOf": [
@@ -91,12 +101,29 @@
                       "readOnly": true
                     },
                     "volume": {
-                      "readOnly": true,
+                      "readOnly": true
                     },
                     "weight": {
                       "readOnly": true
                     }
                   }
+                }
+              ]
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ShipmentItem"
+              }
+            },
+            "register_at": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Timestamp"
+                },
+                {
+                  "readOnly": false,
+                  "description": "This shipment will be registered with the carrier when this time has been reached. While this is `null` or a time in the future, the shipment will stay in concept."
                 }
               ]
             },
@@ -116,7 +143,85 @@
           "required": [
             "shop",
             "service_contract"
-          ]
+          ],
+          "properties": {
+            "service_options": {
+              "$ref": "#/components/schemas/ServiceOptionsRelationship"
+            },
+            "service_contract": {
+              "$ref": "#/components/schemas/ServiceContractRelationship"
+            },
+            "parent": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "properties": {
+                        "id": {
+                          "readOnly": true
+                        },
+                        "type": {
+                          "readOnly": true
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "shipment_status": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentStatusRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "properties": {
+                        "id": {
+                          "readOnly": true
+                        },
+                        "type": {
+                          "readOnly": true
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "files": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentFilesRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          },
+                          "type": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
         },
         "links": {
           "readOnly": true,
