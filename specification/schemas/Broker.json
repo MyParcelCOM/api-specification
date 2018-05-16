@@ -1,45 +1,42 @@
 {
   "type": "object",
-  "required": [
-    "attributes"
-  ],
-  "additionalProperties": false,
-  "properties": {
-    "attributes": {
-      "type": "object",
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "type": "string",
-          "example": "MyParcel UK"
-        }
-      }
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalBroker"
     },
-    "relationships": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "organization": {
-          "$ref": "#/components/schemas/OrganizationRelationship"
-        }
-      }
-    },
-    "links": {
-      "readOnly": true,
-      "type": "object",
+    {
       "required": [
-        "self"
+        "attributes"
       ],
-      "additionalProperties": false,
       "properties": {
-        "self": {
-          "type": "string",
-          "example": "$base_url/broker/0b6ecd39-6072-4529-a031-f21247a91296"
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "MyParcel UK"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$base_url/brokers/a294ee55-bc94-4890-b734-afd56c158f95"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

@@ -1,0 +1,10 @@
+{
+  "name": "broker_id",
+  "in": "path",
+  "description": "Id of the broker.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

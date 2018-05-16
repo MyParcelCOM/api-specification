@@ -6,7 +6,6 @@
   "additionalProperties": false,
   "properties": {
     "data": {
-      "type": "object",
       "allOf": [
         {
           "$ref": "#/components/schemas/MinimalBroker"
@@ -17,6 +16,20 @@
           ]
         }
       ]
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "related"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "type": "string",
+          "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95"
+        }
+      }
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+  "get": {
+    "tags": [
+      "Brokers"
+    ],
+    "summary": "Get a broker by id.",
+    "description": "This endpoint retrieves the broker with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-broker_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the broker.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Broker"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
