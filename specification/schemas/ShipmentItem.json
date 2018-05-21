@@ -2,7 +2,8 @@
   "type": "object",
   "required": [
     "description",
-    "quantity"
+    "quantity",
+    "nett_weight"
   ],
   "additionalProperties": false,
   "properties": {
@@ -22,6 +23,11 @@
     "quantity": {
       "type": "number",
       "example": 2
+    },
+    "nett_weight": {
+      "type": "number",
+      "example": 135,
+      "description": "The nett weight of the item in grams"
     },
     "hs_code": {
       "type": "string",
