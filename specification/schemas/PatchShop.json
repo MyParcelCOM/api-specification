@@ -18,24 +18,10 @@
               "example": "MyParcel.com"
             },
             "return_address": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/BaseAddress"
-                },
-                {
-                  "type": "null"
-                }
-              ]
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "sender_address": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/BaseAddress"
-                },
-                {
-                  "type": "null"
-                }
-              ]
+              "$ref": "#/components/schemas/BaseAddress"
             }
           }
         }
