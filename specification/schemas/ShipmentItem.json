@@ -2,8 +2,7 @@
   "type": "object",
   "required": [
     "description",
-    "quantity",
-    "nett_weight"
+    "quantity"
   ],
   "additionalProperties": false,
   "properties": {
