@@ -36,16 +36,6 @@
                   "type": "null"
                 }
               ]
-            },
-            "created_at": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Timestamp"
-                },
-                {
-                  "type": "null"
-                }
-              ]
             }
           }
         }

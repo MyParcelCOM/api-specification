@@ -31,6 +31,11 @@
     },
     "origin_country_code": {
       "$ref": "#/components/schemas/CountryCode"
+    },
+    "nett_weight": {
+      "type": "number",
+      "example": 135,
+      "description": "The nett weight of the item in grams"
     }
   }
 }
