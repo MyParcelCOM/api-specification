@@ -23,6 +23,11 @@
       "type": "number",
       "example": 2
     },
+    "nett_weight": {
+      "type": "number",
+      "example": 135,
+      "description": "The nett weight of the item in grams"
+    },
     "hs_code": {
       "type": "string",
       "pattern": "^[0-9.]+$",
