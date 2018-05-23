@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalUser"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "first_name": {
+              "type": "string",
+              "example": "Sherlock"
+            },
+            "last_name": {
+              "type": "string",
+              "example": "Holmes"
+            },
+            "company": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "Holmes Investigations"
+            },
+            "email": {
+              "$ref": "#/components/schemas/Email"
+            },
+            "phone_number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "+31 234 567 890"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

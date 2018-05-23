@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalShipment"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "recipient_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "return_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "sender_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "pickup_location": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": "205604"
+                    },
+                    "address": {
+                      "$ref": "#/components/schemas/BaseAddress"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "Order #8008135"
+            },
+            "insurance": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BasePrice"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "physical_properties": {
+              "$ref": "#/components/schemas/BasePhysicalProperties"
+            },
+            "items": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BaseShipmentItem"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "customs": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BaseCustoms"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "register_at": {
+              "oneOf": [
+                {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Timestamp"
+                    },
+                    {
+                      "readOnly": false,
+                      "description": "This shipment will be registered with the carrier when this time has been reached. While this is `null` or a time in the future, the shipment will stay in concept."
+                    }
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "properties": {
+            "service_options": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "service_contract": {
+              "$ref": "#/components/schemas/ServiceContractRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

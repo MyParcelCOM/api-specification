@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
   "properties": {
     "data": {
       "type": "array",
@@ -20,8 +24,12 @@
     "links": {
       "readOnly": true,
       "type": "object",
+      "required": [
+        "related"
+      ],
       "properties": {
         "related": {
+          "readOnly": true,
           "type": "string",
           "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
         }

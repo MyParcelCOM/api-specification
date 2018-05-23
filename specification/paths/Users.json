@@ -33,9 +33,7 @@
                             "required": [
                               "first_name",
                               "last_name",
-                              "company",
-                              "email",
-                              "phone_number"
+                              "email"
                             ]
                           }
                         }
@@ -111,6 +109,13 @@
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "first_name",
+                          "last_name",
+                          "email"
+                        ]
                       }
                     }
                   }

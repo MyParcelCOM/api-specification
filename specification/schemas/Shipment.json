@@ -10,6 +10,9 @@
         "relationships"
       ],
       "properties": {
+        "id": {
+          "readOnly": true
+        },
         "attributes": {
           "type": "object",
           "required": [
@@ -21,46 +24,13 @@
           "additionalProperties": false,
           "properties": {
             "recipient_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/Address"
             },
             "return_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/Address"
             },
             "sender_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/Address"
             },
             "pickup_location": {
               "type": "object",
@@ -75,18 +45,7 @@
                   "example": "205604"
                 },
                 "address": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Address"
-                    },
-                    {
-                      "required": [
-                        "street_1",
-                        "city",
-                        "country_code"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Address"
                 }
               }
             },
@@ -131,7 +90,24 @@
                   "$ref": "#/components/schemas/PhysicalProperties"
                 },
                 {
-                  "readOnly": true
+                  "readOnly": true,
+                  "properties": {
+                    "height": {
+                      "readOnly": true
+                    },
+                    "width": {
+                      "readOnly": true
+                    },
+                    "length": {
+                      "readOnly": true
+                    },
+                    "volume": {
+                      "readOnly": true
+                    },
+                    "weight": {
+                      "readOnly": true
+                    }
+                  }
                 }
               ]
             },
@@ -173,20 +149,78 @@
             "service_options": {
               "$ref": "#/components/schemas/ServiceOptionsRelationship"
             },
+            "service_contract": {
+              "$ref": "#/components/schemas/ServiceContractRelationship"
+            },
             "parent": {
-              "$ref": "#/components/schemas/ShipmentRelationship"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "properties": {
+                        "id": {
+                          "readOnly": true
+                        },
+                        "type": {
+                          "readOnly": true
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
             },
             "shipment_status": {
-              "$ref": "#/components/schemas/ShipmentStatusRelationship"
-            },
-            "service_contract": {
-              "$ref": "#/components/schemas/ServiceContractRelationship"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentStatusRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "properties": {
+                        "id": {
+                          "readOnly": true
+                        },
+                        "type": {
+                          "readOnly": true
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
             },
             "files": {
-              "$ref": "#/components/schemas/ShipmentFilesRelationship"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentFilesRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          },
+                          "type": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
             }
           }
         },

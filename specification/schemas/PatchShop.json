@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalShop"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "MyParcel.com"
+            },
+            "return_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "sender_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

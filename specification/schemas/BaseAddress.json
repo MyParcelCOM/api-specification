@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "street_1": {
+      "type": "string",
+      "example": "Baker Street"
+    },
+    "street_2": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "Marylebone"
+    },
+    "street_number": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "example": 221
+    },
+    "street_number_suffix": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "B"
+    },
+    "postal_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "NW1 6XE"
+    },
+    "city": {
+      "type": "string",
+      "example": "London"
+    },
+    "region_code": {
+      "$ref": "#/components/schemas/RegionCode"
+    },
+    "country_code": {
+      "$ref": "#/components/schemas/CountryCode"
+    },
+    "first_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "Sherlock"
+    },
+    "last_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "Holmes"
+    },
+    "company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "Holmes Investigations"
+    },
+    "email": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Email"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "phone_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "+31 234 567 890"
+    }
+  }
+}

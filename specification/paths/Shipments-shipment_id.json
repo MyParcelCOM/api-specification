@@ -73,35 +73,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "oneOf": [
-                  {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Shipment"
-                      },
-                      {
-                        "required": [
-                          "id"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/InternationalShipment"
-                      },
-                      {
-                        "required": [
-                          "id"
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "example": {
-                  "$ref": "#/components/examples/PatchShipmentRequest"
-                }
+                "$ref": "#/components/schemas/PatchShipment"
               }
             }
           }

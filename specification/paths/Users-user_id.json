@@ -34,9 +34,7 @@
                           "required": [
                             "first_name",
                             "last_name",
-                            "company",
-                            "email",
-                            "phone_number"
+                            "email"
                           ]
                         }
                       }
@@ -74,16 +72,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/User"
-                  },
-                  {
-                    "required": [
-                      "id"
-                    ]
-                  }
-                ]
+                "$ref": "#/components/schemas/PatchUser"
               }
             }
           }
@@ -114,9 +103,7 @@
                           "required": [
                             "first_name",
                             "last_name",
-                            "company",
-                            "email",
-                            "phone_number"
+                            "email"
                           ]
                         }
                       }

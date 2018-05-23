@@ -2,6 +2,24 @@
   "Address": {
     "$ref": "./schemas/Address.json"
   },
+  "BaseAddress": {
+    "$ref": "./schemas/BaseAddress.json"
+  },
+  "BaseCustoms": {
+    "$ref": "./schemas/BaseCustoms.json"
+  },
+  "BaseShipment": {
+    "$ref": "./schemas/BaseShipment.json"
+  },
+  "BaseShipmentItem": {
+    "$ref": "./schemas/BaseShipmentItem.json"
+  },
+  "BasePhysicalProperties": {
+    "$ref": "./schemas/BasePhysicalProperties.json"
+  },
+  "BasePrice": {
+    "$ref": "./schemas/BasePrice.json"
+  },
   "Broker": {
     "$ref": "./schemas/Broker.json"
   },
@@ -25,9 +43,6 @@
   },
   "CountryCode": {
     "$ref": "./schemas/CountryCode.json"
-  },
-  "BaseCustoms": {
-    "$ref": "./schemas/BaseCustoms.json"
   },
   "Currency": {
     "$ref": "./schemas/Currency.json"
@@ -187,6 +202,21 @@
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
+  },
+  "PatchOrganization": {
+    "$ref": "./schemas/PatchOrganization.json"
+  },
+  "PatchShipment": {
+    "$ref": "./schemas/PatchShipment.json"
+  },
+  "PatchShop": {
+    "$ref": "./schemas/PatchShop.json"
+  },
+  "PatchSystemMessage": {
+    "$ref": "./schemas/PatchSystemMessage.json"
+  },
+  "PatchUser": {
+    "$ref": "./schemas/PatchUser.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"

@@ -1,0 +1,103 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalOrganization"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Holmes investigation inc. 🕵"
+            },
+            "coc": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "63190133"
+            },
+            "iban": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Iban"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "language": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Language"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "payment_method": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "sepa-direct-debit",
+                    "on-credit",
+                    "prepayment"
+                  ],
+                  "example": "prepayment"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "vat_number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "123456789MVA"
+            },
+            "payment_term": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "example": "1",
+              "description": "Amount of days in which the organization needs to pay"
+            },
+            "currency": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Currency"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "billing_address": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BaseAddress"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

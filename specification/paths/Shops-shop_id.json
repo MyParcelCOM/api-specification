@@ -56,16 +56,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/Shop"
-                  },
-                  {
-                    "required": [
-                      "id"
-                    ]
-                  }
-                ]
+                "$ref": "#/components/schemas/PatchShop"
               }
             }
           }

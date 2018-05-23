@@ -21,8 +21,12 @@
     "links": {
       "readOnly": true,
       "type": "object",
+      "required": [
+        "related"
+      ],
       "properties": {
         "related": {
+          "readOnly": true,
           "type": "string",
           "example": "$base_url/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f"
         }
