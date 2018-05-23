@@ -6,7 +6,6 @@
     },
     {
       "required": [
-        "relationships",
         "id"
       ],
       "properties": {
@@ -28,7 +27,8 @@
             "credentials": {
               "type": "object",
               "example": {
-                "$ref": "#/components/examples/CarrierContractCredentials"
+                "api_username": "your_api_username",
+                "api_password": "your_api_password"
               }
             }
           }
@@ -37,12 +37,6 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "carrier": {
-              "$ref": "#/components/schemas/CarrierRelationship"
-            },
-            "service_contracts": {
-              "$ref": "#/components/schemas/ServiceContractsRelationship"
-            },
             "owner": {
               "oneOf": [
                 {
@@ -51,7 +45,16 @@
                 {
                   "$ref": "#/components/schemas/OrganizationRelationship"
                 }
-              ]
+              ],
+              "example": {
+                "data": {
+                  "type": "organizations",
+                  "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                },
+                "links": {
+                  "related": "localhost:9443/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                }
+              }
             }
           }
         }

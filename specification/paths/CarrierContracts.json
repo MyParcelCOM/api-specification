@@ -121,7 +121,8 @@
                           "credentials": {
                             "type": "object",
                             "example": {
-                              "$ref": "#/components/examples/CarrierContractCredentials"
+                              "api_username": "your_api_username",
+                              "api_password": "your_api_password"
                             }
                           }
                         }
