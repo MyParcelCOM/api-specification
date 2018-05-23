@@ -25,6 +25,7 @@
               "example": "My Custom contract"
             },
             "status": {
+              "readOnly": true,
               "type": "string",
               "enum": [
                 "concept",

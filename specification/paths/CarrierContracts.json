@@ -3,8 +3,8 @@
     "tags": [
       "CarrierContracts"
     ],
-    "summary": "Get a carrier contract by id.",
-    "description": "This endpoint retrieves a carrier contract for the supplied id.",
+    "summary": "Get all the carrier contracts.",
+    "description": "This endpoint retrieves carrier contracts.",
     "parameters": [
       {
         "$ref": "#/components/parameters/path-carrier_contract_id"
@@ -20,18 +20,56 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the carrier contract.",
+        "description": "Retrieved the carrier contracts.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
               "type": "object",
               "required": [
-                "data"
+                "data",
+                "meta",
+                "links"
               ],
-              "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CarrierContract"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarrierContract"
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/carrier-contracts?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/carrier-contracts?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/carrier-contracts?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/carrier-contracts?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/carrier-contracts?page[number]=13&page[size]=30"
+                    }
+                  }
                 }
               }
             }
@@ -40,19 +78,14 @@
       }
     }
   },
-  "patch": {
+  "post": {
     "tags": [
       "CarrierContracts"
     ],
-    "summary": "Update an carrier contract by id.",
-    "description": "This endpoint updates the carrier contract with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-carrier_contract_id"
-      }
-    ],
+    "summary": "Create a new carrier contract.",
+    "description": "This endpoint creates a new carrier contract with the posted data.",
     "requestBody": {
-      "description": "The carrier contract object with attributes to be updated.",
+      "description": "The carrier contract object to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -69,10 +102,10 @@
                     "$ref": "#/components/schemas/CarrierContract"
                   },
                   {
-                    "required": [
-                      "id"
-                    ],
                     "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
                       "attributes": {
                         "properties": {
                           "credentials": {
@@ -91,8 +124,8 @@
       }
     },
     "responses": {
-      "200": {
-        "description": "The carrier contract is updated.",
+      "201": {
+        "description": "The carrier contract is created.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -109,26 +142,6 @@
             }
           }
         }
-      }
-    }
-  },
-  "delete": {
-    "tags": [
-      "CarrierContracts"
-    ],
-    "summary": "Delete an carrier contract by id.",
-    "description": "This endpoint deletes the carrier contract with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-carrier_contract_id"
-      }
-    ],
-    "responses": {
-      "202": {
-        "description": "The carrier contract will be deleted."
-      },
-      "204": {
-        "description": "The carrier contract is deleted."
       }
     }
   }
