@@ -24,7 +24,8 @@
                 "printcode",
                 "invoice",
                 "combined-label",
-                "customs-declaration-form"
+                "customs-declaration-form",
+                "commercial-invoice"
               ],
               "example": "label"
             },
