@@ -34,7 +34,17 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CarrierContract"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/CarrierContract"
+                      },
+                      {
+                        "required": [
+                          "active",
+                          "status"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {
@@ -109,8 +119,10 @@
                       "attributes": {
                         "properties": {
                           "credentials": {
-                            "type": "string",
-                            "example": "{\"api_user\":\"your_api_user\",\"api_password\":\"your_password\"}"
+                            "type": "object",
+                            "example": {
+                              "$ref": "#/components/examples/CarrierContractCredentials"
+                            }
                           }
                         }
                       }
@@ -136,7 +148,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CarrierContract"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierContract"
+                    },
+                    {
+                      "required": [
+                        "active",
+                        "status"
+                      ]
+                    }
+                  ]
                 }
               }
             }

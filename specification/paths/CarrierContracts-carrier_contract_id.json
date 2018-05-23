@@ -31,7 +31,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CarrierContract"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierContract"
+                    },
+                    {
+                      "required": [
+                        "active",
+                        "status"
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -64,26 +74,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/CarrierContract"
-                  },
-                  {
-                    "required": [
-                      "id"
-                    ],
-                    "properties": {
-                      "attributes": {
-                        "properties": {
-                          "credentials": {
-                            "type": "string",
-                            "example": "{\"api_user\":\"your_api_user\",\"api_password\":\"your_password\"}"
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
+                "$ref": "#/components/schemas/PatchCarrierContract"
               }
             }
           }
@@ -103,7 +94,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CarrierContract"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierContract"
+                    },
+                    {
+                      "required": [
+                        "active",
+                        "status"
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -116,7 +117,7 @@
     "tags": [
       "CarrierContracts"
     ],
-    "summary": "Delete an carrier contract by id.",
+    "summary": "Delete a carrier contract by id.",
     "description": "This endpoint deletes the carrier contract with the supplied id.",
     "parameters": [
       {

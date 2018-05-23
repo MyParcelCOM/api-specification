@@ -6,47 +6,35 @@
     },
     {
       "required": [
-        "relationships"
+        "relationships",
+        "id"
       ],
       "properties": {
         "attributes": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "currency",
-            "name"
-          ],
           "properties": {
             "currency": {
               "$ref": "#/components/schemas/Currency"
             },
             "active": {
               "type": "boolean",
-              "default": false,
               "example": true
             },
             "name": {
               "type": "string",
               "example": "My Custom contract"
             },
-            "status": {
-              "readOnly": true,
-              "type": "string",
-              "enum": [
-                "concept",
-                "verified",
-                "invalid"
-              ],
-              "example": "verified"
+            "credentials": {
+              "type": "object",
+              "example": {
+                "$ref": "#/components/examples/CarrierContractCredentials"
+              }
             }
           }
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "carrier",
-            "owner"
-          ],
           "additionalProperties": false,
           "properties": {
             "carrier": {

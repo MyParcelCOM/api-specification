@@ -1,4 +1,7 @@
 {
+  "CarrierContractCredentials": {
+    "$ref": "./examples/CarrierContractCredentials.json"
+  },
   "ShipmentResponse": {
     "$ref": "./examples/ShipmentResponse.json"
   },
