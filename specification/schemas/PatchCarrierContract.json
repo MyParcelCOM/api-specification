@@ -18,6 +18,7 @@
             },
             "active": {
               "type": "boolean",
+              "default": false,
               "example": true
             },
             "name": {

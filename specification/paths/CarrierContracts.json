@@ -39,6 +39,9 @@
                         "$ref": "#/components/schemas/CarrierContract"
                       },
                       {
+                        "required": [
+                          "id"
+                        ],
                         "properties": {
                           "attributes": {
                             "required": [
@@ -166,6 +169,9 @@
                       "$ref": "#/components/schemas/CarrierContract"
                     },
                     {
+                      "required": [
+                        "id"
+                      ],
                       "properties": {
                         "attributes": {
                           "type": "object",

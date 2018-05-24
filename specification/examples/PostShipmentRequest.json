@@ -1,7 +1,6 @@
 {
   "type": "shipments",
   "attributes": {
-    "type": "object",
     "recipient_address": {
       "street_1": "Baker Street",
       "street_2": "Marylebone",

@@ -6,7 +6,6 @@
     {
       "id": "7b808eee-bf1c-40cd-98f2-3c335a06417e",
       "attributes": {
-        "type": "object",
         "price": {
           "amount": 995,
           "currency": "EUR"
