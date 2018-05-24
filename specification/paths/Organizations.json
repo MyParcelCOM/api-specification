@@ -34,6 +34,7 @@
                         ],
                         "properties": {
                           "attributes": {
+                            "type": "object",
                             "required": [
                               "name"
                             ]
@@ -133,6 +134,7 @@
                         "readOnly": true
                       },
                       "attributes": {
+                        "type": "object",
                         "required": [
                           "name"
                         ]
@@ -190,6 +192,7 @@
                       ],
                       "properties": {
                         "attributes": {
+                          "type": "object",
                           "required": [
                             "name"
                           ]

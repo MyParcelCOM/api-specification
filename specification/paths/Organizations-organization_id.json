@@ -36,6 +36,7 @@
                       ],
                       "properties": {
                         "attributes": {
+                          "type": "object",
                           "required": [
                             "name"
                           ]
@@ -124,6 +125,7 @@
                       ],
                       "properties": {
                         "attributes": {
+                          "type": "object",
                           "required": [
                             "name"
                           ]

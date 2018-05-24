@@ -36,10 +36,17 @@
                       "$ref": "#/components/schemas/CarrierContract"
                     },
                     {
-                      "required": [
-                        "active",
-                        "status"
-                      ]
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "active",
+                            "status",
+                            "currency",
+                            "name"
+                          ]
+                        }
+                      }
                     }
                   ]
                 }
@@ -99,10 +106,17 @@
                       "$ref": "#/components/schemas/CarrierContract"
                     },
                     {
-                      "required": [
-                        "active",
-                        "status"
-                      ]
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "active",
+                            "status",
+                            "currency",
+                            "name"
+                          ]
+                        }
+                      }
                     }
                   ]
                 }

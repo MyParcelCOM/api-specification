@@ -6,6 +6,7 @@
     },
     {
       "required": [
+        "attributes",
         "relationships"
       ],
       "properties": {
@@ -53,6 +54,7 @@
               "$ref": "#/components/schemas/CarrierRelationship"
             },
             "service_contracts": {
+              "readOnly": true,
               "$ref": "#/components/schemas/ServiceContractsRelationship"
             },
             "owner": {

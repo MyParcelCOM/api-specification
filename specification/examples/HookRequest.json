@@ -1,6 +1,7 @@
 {
   "type": "hooks",
   "attributes": {
+    "type": "object",
     "name": "on-shipment-create-update-description",
     "resource_type": "shipments",
     "resource_action": "create",

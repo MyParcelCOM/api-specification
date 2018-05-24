@@ -39,10 +39,16 @@
                         "$ref": "#/components/schemas/CarrierContract"
                       },
                       {
-                        "required": [
-                          "active",
-                          "status"
-                        ]
+                        "properties": {
+                          "attributes": {
+                            "required": [
+                              "active",
+                              "status",
+                              "currency",
+                              "name"
+                            ]
+                          }
+                        }
                       }
                     ]
                   }
@@ -117,6 +123,12 @@
                         "readOnly": true
                       },
                       "attributes": {
+                        "type": "object",
+                        "required": [
+                          "credentials",
+                          "currency",
+                          "name"
+                        ],
                         "properties": {
                           "credentials": {
                             "type": "object",
@@ -154,10 +166,17 @@
                       "$ref": "#/components/schemas/CarrierContract"
                     },
                     {
-                      "required": [
-                        "active",
-                        "status"
-                      ]
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "active",
+                            "status",
+                            "currency",
+                            "name"
+                          ]
+                        }
+                      }
                     }
                   ]
                 }
