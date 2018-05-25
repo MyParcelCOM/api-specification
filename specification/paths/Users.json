@@ -96,7 +96,8 @@
           "schema": {
             "type": "object",
             "required": [
-              "data"
+              "data",
+              "meta"
             ],
             "additionalProperties": false,
             "properties": {
@@ -124,10 +125,14 @@
               },
               "meta": {
                 "type": "object",
+                "required": [
+                  "client_id"
+                ],
                 "properties": {
-                  "shop_name": {
+                  "client_id": {
                     "type": "string",
-                    "example": "my.webshop.com"
+                    "format": "uuid",
+                    "example": "46e46c4d-b67b-45d7-bf17-517122b38561"
                   },
                   "invitation_code": {
                     "type": "string",
