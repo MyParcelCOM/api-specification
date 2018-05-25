@@ -31,12 +31,125 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CarrierContract"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierContract"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "active",
+                            "status",
+                            "currency",
+                            "name"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
           }
         }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "CarrierContracts"
+    ],
+    "summary": "Update an carrier contract by id.",
+    "description": "This endpoint updates the carrier contract with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-carrier_contract_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The carrier contract object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/PatchCarrierContract"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The carrier contract is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierContract"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "active",
+                            "status",
+                            "currency",
+                            "name"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "CarrierContracts"
+    ],
+    "summary": "Delete a carrier contract by id.",
+    "description": "This endpoint deletes the carrier contract with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-carrier_contract_id"
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The carrier contract will be deleted."
+      },
+      "204": {
+        "description": "The carrier contract is deleted."
       }
     }
   }

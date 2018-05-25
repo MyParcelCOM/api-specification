@@ -1,13 +1,26 @@
 {
   "get": {
     "tags": [
-      "Organizations"
+      "CarrierContracts"
     ],
-    "summary": "Get all the organizations.",
-    "description": "This endpoint retrieves organizations.",
+    "summary": "Get all the carrier contracts.",
+    "description": "This endpoint retrieves carrier contracts.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-carrier_contract_id"
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>carrier</li><li>owner</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
-        "description": "Retrieved the organizations.",
+        "description": "Retrieved the carrier contracts.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -23,36 +36,19 @@
                   "items": {
                     "allOf": [
                       {
-                        "$ref": "#/components/schemas/Organization"
+                        "$ref": "#/components/schemas/CarrierContract"
                       },
                       {
                         "required": [
-                          "id",
-                          "attributes",
-                          "relationships",
-                          "links"
+                          "id"
                         ],
                         "properties": {
                           "attributes": {
-                            "type": "object",
                             "required": [
+                              "active",
+                              "status",
+                              "currency",
                               "name"
-                            ]
-                          },
-                          "relationships": {
-                            "type": "object",
-                            "required": [
-                              "broker"
-                            ],
-                            "properties": {
-                              "broker": {
-                                "$ref": "#/components/schemas/BrokerRelationship"
-                              }
-                            }
-                          },
-                          "links": {
-                            "required": [
-                              "self"
                             ]
                           }
                         }
@@ -74,23 +70,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/organizations?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/carrier-contracts?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/organizations?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/carrier-contracts?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/organizations?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/carrier-contracts?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/organizations?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/carrier-contracts?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/organizations?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/carrier-contracts?page[number]=13&page[size]=30"
                     }
                   }
                 }
@@ -103,12 +99,12 @@
   },
   "post": {
     "tags": [
-      "Organizations"
+      "CarrierContracts"
     ],
-    "summary": "Create a new organization.",
-    "description": "This endpoint creates a new organization with the posted data.",
+    "summary": "Create a new carrier contract.",
+    "description": "This endpoint creates a new carrier contract with the posted data.",
     "requestBody": {
-      "description": "The organization object to be created.",
+      "description": "The carrier contract object to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -122,13 +118,9 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/Organization"
+                    "$ref": "#/components/schemas/CarrierContract"
                   },
                   {
-                    "required": [
-                      "attributes",
-                      "relationships"
-                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
@@ -136,24 +128,17 @@
                       "attributes": {
                         "type": "object",
                         "required": [
+                          "credentials",
+                          "currency",
                           "name"
-                        ]
-                      },
-                      "relationships": {
-                        "type": "object",
-                        "required": [
-                          "broker"
                         ],
                         "properties": {
-                          "broker": {
-                            "$ref": "#/components/schemas/BrokerRelationship"
-                          }
-                        }
-                      },
-                      "links": {
-                        "properties": {
-                          "self": {
-                            "readOnly": true
+                          "credentials": {
+                            "type": "object",
+                            "example": {
+                              "api_username": "your_api_username",
+                              "api_password": "your_api_password"
+                            }
                           }
                         }
                       }
@@ -168,7 +153,7 @@
     },
     "responses": {
       "201": {
-        "description": "The organization is created.",
+        "description": "The carrier contract is created.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -181,36 +166,20 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/Organization"
+                      "$ref": "#/components/schemas/CarrierContract"
                     },
                     {
                       "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
+                        "id"
                       ],
                       "properties": {
                         "attributes": {
                           "type": "object",
                           "required": [
+                            "active",
+                            "status",
+                            "currency",
                             "name"
-                          ]
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "broker"
-                          ],
-                          "properties": {
-                            "broker": {
-                              "$ref": "#/components/schemas/BrokerRelationship"
-                            }
-                          }
-                        },
-                        "links": {
-                          "required": [
-                            "self"
                           ]
                         }
                       }

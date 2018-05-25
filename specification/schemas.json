@@ -203,6 +203,9 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
+  "PatchCarrierContract": {
+    "$ref": "./schemas/PatchCarrierContract.json"
+  },
   "PatchOrganization": {
     "$ref": "./schemas/PatchOrganization.json"
   },

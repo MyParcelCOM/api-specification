@@ -6,17 +6,12 @@
     },
     {
       "required": [
-        "attributes",
-        "relationships"
+        "id"
       ],
       "properties": {
         "attributes": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "currency",
-            "name"
-          ],
           "properties": {
             "currency": {
               "$ref": "#/components/schemas/Currency"
@@ -30,33 +25,19 @@
               "type": "string",
               "example": "My Custom contract"
             },
-            "status": {
-              "readOnly": true,
-              "type": "string",
-              "enum": [
-                "concept",
-                "verified",
-                "invalid"
-              ],
-              "example": "verified"
+            "credentials": {
+              "type": "object",
+              "example": {
+                "api_username": "your_api_username",
+                "api_password": "your_api_password"
+              }
             }
           }
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "carrier",
-            "owner"
-          ],
           "additionalProperties": false,
           "properties": {
-            "carrier": {
-              "$ref": "#/components/schemas/CarrierRelationship"
-            },
-            "service_contracts": {
-              "readOnly": true,
-              "$ref": "#/components/schemas/ServiceContractsRelationship"
-            },
             "owner": {
               "oneOf": [
                 {

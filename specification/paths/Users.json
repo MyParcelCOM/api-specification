@@ -111,6 +111,7 @@
                         "readOnly": true
                       },
                       "attributes": {
+                        "type": "object",
                         "required": [
                           "first_name",
                           "last_name",
