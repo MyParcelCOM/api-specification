@@ -20,6 +20,14 @@
       },
       {
         "$ref": "#/components/parameters/query-street_number"
+      },
+      {
+        "name": "filter[categories]",
+        "in": "query",
+        "description": "Comma separated list of what kind of locations to return. Possible values: 'pick-up', 'drop-off'.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
