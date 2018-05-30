@@ -13,11 +13,23 @@
         "attributes": {
           "type": "object",
           "required": [
+            "categories",
             "code",
             "address"
           ],
           "additionalProperties": false,
           "properties": {
+            "categories": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "pick-up",
+                  "drop-off"
+                ],
+                "example": "pick-up"
+              }
+            },
             "code": {
               "type": "string",
               "example": "205604"
