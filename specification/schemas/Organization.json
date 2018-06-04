@@ -39,7 +39,7 @@
             },
             "payment_term": {
               "type": "number",
-              "example": "1",
+              "example": 1,
               "description": "Amount of days in which the organization needs to pay"
             },
             "currency": {
