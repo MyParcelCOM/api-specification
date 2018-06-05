@@ -16,7 +16,9 @@
             "document_type": {
               "type": "string",
               "enum": [
-                "label"
+                "label",
+                "customs-declaration-form",
+                "commercial-invoice"
               ],
               "default": "label",
               "example": "label"
