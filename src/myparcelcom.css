@@ -185,8 +185,14 @@ a:hover {
   border-radius: 50%;
 }
 
-#swagger-ui .model-box {
+#swagger-ui .model-container {
   background: #eee;
+}
+
+#swagger-ui div.model-box {
+  width: 100%;
+  background: #eee;
+  overflow-x: auto;
 }
 
 #swagger-ui .model-toggle {
@@ -203,6 +209,10 @@ a:hover {
 
 #swagger-ui .model-toggle:before {
   color: #fff;
+}
+
+#swagger-ui .prop-type {
+  margin-right: 8px;
 }
 
 /* endpoints */
