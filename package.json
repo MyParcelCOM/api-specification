@@ -17,9 +17,9 @@
     "gulp": "^3.9.1",
     "gulp-json-refs": "^0.1.1",
     "gulp-rename": "^1.2.3",
-    "gulp-replace": "^0.6.1"
+    "gulp-replace": "^1.0.0"
   },
   "dependencies": {
-    "swagger-ui-dist": "^3.14.2"
+    "swagger-ui-dist": "^3.17.0"
   }
 }
