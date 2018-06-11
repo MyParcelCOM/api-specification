@@ -13,7 +13,8 @@
           "type": "object",
           "required": [
             "name",
-            "code"
+            "code",
+            "credentials_format"
           ],
           "additionalProperties": false,
           "properties": {
@@ -25,6 +26,24 @@
               "type": "string",
               "example": "my-parcel-com",
               "description": "Unique slugified version of the carrier name to identify a carrier"
+            },
+            "credentials_format": {
+              "type": "object",
+              "example": {
+                "additionalProperties": false,
+                "required": [
+                  "api_user",
+                  "api_password"
+                ],
+                "properties": {
+                  "api_user": {
+                    "type": "string"
+                  },
+                  "api_password": {
+                    "type": "string"
+                  }
+                }
+              }
             }
           }
         },
