@@ -55,7 +55,7 @@
   document.addEventListener('click', function () {
     // change 'stringnull' to 'string null'
     window.requestAnimationFrame(function () {
-      let properties = document.getElementsByClassName('prop-type')
+      const properties = document.getElementsByClassName('prop-type')
       for (let i = 0; i < properties.length; i++) {
         const text = properties[i].innerText
         if (text.indexOf('null') !== -1) {
