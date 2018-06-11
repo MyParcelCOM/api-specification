@@ -1,6 +1,6 @@
 {
   "name": "myparcelcom-api-specification",
-  "version": "0.16.2",
+  "version": "0.16.4",
   "description": "Specification of the MyParcel.com API",
   "repository": {
     "type": "git",
