@@ -33,7 +33,7 @@
               "readOnly": true,
               "type": "string",
               "enum": [
-                "concept",
+                "pending",
                 "verified",
                 "invalid"
               ],
