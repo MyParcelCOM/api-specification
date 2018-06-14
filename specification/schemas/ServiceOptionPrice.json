@@ -21,9 +21,10 @@
             "price": {
               "$ref": "#/components/schemas/Price"
             },
-            "required": {
+            "included": {
               "type": "boolean",
-              "example": true
+              "example": true,
+              "description": "Indicates whether or not the service option is always included in the service."
             }
           }
         },
