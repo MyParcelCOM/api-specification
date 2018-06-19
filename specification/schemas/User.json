@@ -33,6 +33,7 @@
               "example": "+31 234 567 890"
             },
             "status": {
+              "readOnly": true,
               "type": "string",
               "enum": [
                 "pending",
