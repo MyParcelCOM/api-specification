@@ -1,6 +1,6 @@
 {
   "name": "myparcelcom-api-specification",
-  "version": "0.18.0",
+  "version": "0.18.2",
   "description": "Specification of the MyParcel.com API",
   "repository": {
     "type": "git",
@@ -16,10 +16,10 @@
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-json-refs": "^0.1.1",
-    "gulp-rename": "^1.2.3",
+    "gulp-rename": "^1.3.0",
     "gulp-replace": "^1.0.0"
   },
   "dependencies": {
-    "swagger-ui-dist": "^3.17.0"
+    "swagger-ui-dist": "^3.17.1"
   }
 }

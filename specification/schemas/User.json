@@ -32,6 +32,16 @@
               "type": "string",
               "example": "+31 234 567 890"
             },
+            "status": {
+              "readOnly": true,
+              "type": "string",
+              "enum": [
+                "pending",
+                "active",
+                "blocked"
+              ],
+              "example": "active"
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }
