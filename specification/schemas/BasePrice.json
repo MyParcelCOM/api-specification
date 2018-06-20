@@ -5,7 +5,7 @@
     "amount": {
       "type": "number",
       "example": 995,
-      "description": "Price amount in cents"
+      "description": "Price amount in cents/pence"
     },
     "currency": {
       "$ref": "#/components/schemas/Currency"
