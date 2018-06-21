@@ -23,6 +23,14 @@
         }
       },
       {
+        "name": "filter[shop]",
+        "in": "query",
+        "description": "Comma separated string of shop ids to filter on shops that have access to the service-contracts.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "include",
         "in": "query",
         "description": "Comma separated list of relationship names you want to include the data of.<br> The relationships that can be included are:<ul><li>carrier_contract</li><li>service_groups</li><li>service_insurances</li><li>service_option_prices</li><li>service_option_prices.service_option</li></ul>",
