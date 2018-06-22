@@ -31,8 +31,7 @@
                 {
                   "required": [
                     "first_name",
-                    "last_name",
-                    "postal_code"
+                    "last_name"
                   ]
                 }
               ]
