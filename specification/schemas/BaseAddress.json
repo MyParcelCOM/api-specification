@@ -28,10 +28,7 @@
       "example": "B"
     },
     "postal_code": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": "string",
       "example": "NW1 6XE"
     },
     "city": {
@@ -45,17 +42,11 @@
       "$ref": "#/components/schemas/CountryCode"
     },
     "first_name": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": "string",
       "example": "Sherlock"
     },
     "last_name": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": "string",
       "example": "Holmes"
     },
     "company": {
@@ -76,10 +67,7 @@
       ]
     },
     "phone_number": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": "string",
       "example": "+31 234 567 890"
     }
   }

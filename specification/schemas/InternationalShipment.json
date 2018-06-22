@@ -21,12 +21,25 @@
             "recipient_address",
             "return_address",
             "sender_address",
-            "physical_properties"
+            "physical_properties",
+            "description"
           ],
           "additionalProperties": false,
           "properties": {
             "recipient_address": {
-              "$ref": "#/components/schemas/Address"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Address"
+                },
+                {
+                  "required": [
+                    "first_name",
+                    "last_name",
+                    "postal_code",
+                    "phone_number"
+                  ]
+                }
+              ]
             },
             "return_address": {
               "$ref": "#/components/schemas/Address"
