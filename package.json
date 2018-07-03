@@ -20,6 +20,6 @@
     "gulp-replace": "^1.0.0"
   },
   "dependencies": {
-    "swagger-ui-dist": "^3.17.1"
+    "swagger-ui-dist": "^3.17.2"
   }
 }
