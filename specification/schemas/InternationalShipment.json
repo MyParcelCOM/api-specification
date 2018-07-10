@@ -134,7 +134,6 @@
                   },
                   {
                     "required": [
-                      "sku",
                       "item_value",
                       "hs_code",
                       "origin_country_code",
