@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo -e "\033[0;30;47m Bundling spec \033[0m"
-${COMPOSE} run --rm bundler ash -c "
+${COMPOSE} run --rm bundler bash -c "
 mkdir -p dist
 json-refs resolve root.json -f > dist/swagger.json
 "
@@ -16,7 +16,7 @@ echo -e "\033[0;30;47m Injecting vars \033[0m"
 API_HOST=${API_HOST//\//\\/}
 AUTH_HOST=${AUTH_HOST//\//\\/}
 
-${COMPOSE} run --rm bundler ash -c "
+${COMPOSE} run --rm bundler bash -c "
 sed -i 's/\$API_HOST/${API_HOST}/' dist/swagger.json
 sed -i 's/\$AUTH_HOST/${AUTH_HOST}/' dist/swagger.json
 "
