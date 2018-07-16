@@ -28,6 +28,13 @@
             "name": {
               "type": "string",
               "example": "England"
+            },
+            "category": {
+              "type": "string",
+              "enum": [
+                "country"
+              ],
+              "example": "country"
             }
           }
         },
