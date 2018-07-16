@@ -37,6 +37,15 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[categories][]",
+        "in": "query",
+        "description": "Array of strings of region categories to filter by.",
+        "schema": {
+          "type": "array"
+        },
+        "example": "$API_HOST/regions?filter[categories][]=country&filter[categories][]=continent"
       }
     ],
     "responses": {
