@@ -39,13 +39,13 @@
         }
       },
       {
-        "name": "filter[categories][]",
+        "name": "filter[category]",
         "in": "query",
-        "description": "Array of strings of region categories to filter by.",
+        "description": "Comma separated string of categories to filter by.",
         "schema": {
-          "type": "array"
+          "type": "string"
         },
-        "example": "$API_HOST/regions?filter[categories][]=country&filter[categories][]=continent"
+        "example": "$API_HOST/regions?filter[category]=continent,continent"
       }
     ],
     "responses": {
