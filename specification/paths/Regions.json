@@ -45,7 +45,7 @@
         "schema": {
           "type": "string"
         },
-        "example": "$API_HOST/regions?filter[category]=continent,continent"
+        "example": "$API_HOST/regions?filter[category]=country,continent"
       }
     ],
     "responses": {
