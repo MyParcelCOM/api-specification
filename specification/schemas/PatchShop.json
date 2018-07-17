@@ -22,6 +22,10 @@
             },
             "sender_address": {
               "$ref": "#/components/schemas/BaseAddress"
+            },
+            "website": {
+              "type": "string",
+              "example": "https://www.myparcel.com"
             }
           }
         }

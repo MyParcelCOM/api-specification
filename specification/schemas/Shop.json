@@ -49,6 +49,10 @@
                 }
               ]
             },
+            "website": {
+              "type": "string",
+              "example": "https://www.myparcel.com"
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }
