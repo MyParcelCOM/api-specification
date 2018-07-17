@@ -24,7 +24,10 @@
               "$ref": "#/components/schemas/BaseAddress"
             },
             "website": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "https://www.myparcel.com"
             }
           }
