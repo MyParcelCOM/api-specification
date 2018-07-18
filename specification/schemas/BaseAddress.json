@@ -41,6 +41,10 @@
     "country_code": {
       "$ref": "#/components/schemas/CountryCode"
     },
+    "sub_region": {
+      "type": "string",
+      "example": "Norfolk"
+    },
     "first_name": {
       "type": "string",
       "example": "Sherlock"
