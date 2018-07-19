@@ -34,6 +34,20 @@
       ],
       "example": "DDU",
       "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)"
+    },
+    "license_number": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "example": "512842382"
+    },
+    "certificate_number": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "example": "2112211"
     }
   }
 }
