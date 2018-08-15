@@ -65,10 +65,6 @@
       }
     },
     "description": "Order #8008135",
-    "insurance": {
-      "amount": 995,
-      "currency": "EUR"
-    },
     "physical_properties": {
       "height": 150,
       "width": 300,

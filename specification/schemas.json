@@ -155,9 +155,6 @@
   "MinimalServiceGroup": {
     "$ref": "./schemas/MinimalServiceGroup.json"
   },
-  "MinimalServiceInsurance": {
-    "$ref": "./schemas/MinimalServiceInsurance.json"
-  },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
   },
@@ -250,12 +247,6 @@
   },
   "ServiceGroupsRelationship": {
     "$ref": "./schemas/ServiceGroupsRelationship.json"
-  },
-  "ServiceInsurance": {
-    "$ref": "./schemas/ServiceInsurance.json"
-  },
-  "ServiceInsurancesRelationship": {
-    "$ref": "./schemas/ServiceInsurancesRelationship.json"
   },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"
