@@ -74,12 +74,6 @@
   "path-user_id": {
     "$ref": "./parameters/path-user_id.json"
   },
-  "path-webhook_id": {
-    "$ref": "./parameters/path-webhook_id.json"
-  },
-  "path-webhook_subscription_id": {
-    "$ref": "./parameters/path-webhook_subscription_id.json"
-  },
   "query-street": {
     "$ref": "./parameters/query-street.json"
   },

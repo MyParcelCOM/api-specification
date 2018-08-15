@@ -182,12 +182,6 @@
   "MinimalUser": {
     "$ref": "./schemas/MinimalUser.json"
   },
-  "MinimalWebhook": {
-    "$ref": "./schemas/MinimalWebhook.json"
-  },
-  "MinimalWebhookSubscription": {
-    "$ref": "./schemas/MinimalWebhookSubscription.json"
-  },
   "NoInvoiceCustoms": {
     "$ref": "./schemas/NoInvoiceCustoms.json"
   },
@@ -322,14 +316,5 @@
   },
   "User": {
     "$ref": "./schemas/User.json"
-  },
-  "Webhook": {
-    "$ref": "./schemas/Webhook.json"
-  },
-  "WebhookRelationship": {
-    "$ref": "./schemas/WebhookRelationship.json"
-  },
-  "WebhookSubscription": {
-    "$ref": "./schemas/WebhookSubscription.json"
   }
 }
