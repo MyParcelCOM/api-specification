@@ -438,7 +438,6 @@ a:hover {
 
 /* experimental */
 
-#operations-tag-CarrierContracts:before,
 #operations-tag-CombinedFiles:before,
 #operations-tag-Hooks:before,
 #operations-tag-Invitations:before,
@@ -455,7 +454,6 @@ a:hover {
   position: relative;
 }
 
-#operations-tag-CarrierContracts:hover:after,
 #operations-tag-CombinedFiles:hover:after,
 #operations-tag-Hooks:hover:after,
 #operations-tag-Invitations:hover:after,
