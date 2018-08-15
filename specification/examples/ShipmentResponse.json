@@ -28,7 +28,7 @@
       "relationships": {
         "service_options": {
           "links": {
-            "related": "https://sandbox-api.myparcel.com/v1/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
+            "related": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
           }
         },
         "parent": {
@@ -37,12 +37,12 @@
             "id": "7b808eee-bf1c-40cd-98f2-3c335a06417e"
           },
           "links": {
-            "related": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+            "related": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
           }
         },
         "shop": {
           "links": {
-            "related": "https://sandbox-api.myparcel.com/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
+            "related": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
           }
         },
         "shipment_status": {
@@ -51,12 +51,12 @@
             "id": "9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
           },
           "links": {
-            "related": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses/9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
+            "related": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses/9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
           }
         },
         "service_contract": {
           "links": {
-            "related": "$base_url/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f"
+            "related": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f"
           }
         },
         "files": {
@@ -67,12 +67,12 @@
             }
           ],
           "links": {
-            "related": "https://sandbox-api.myparcel.com/v1/shipments/0f621db6-d239-4ae9-b85d-8e97469b10ce/files"
+            "related": "$API_HOST/shipments/0f621db6-d239-4ae9-b85d-8e97469b10ce/files"
           }
         }
       },
       "links": {
-        "self": "https://sandbox-api.myparcel.com/v1/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+        "self": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
       }
     }
   ]

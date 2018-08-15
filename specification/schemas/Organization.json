@@ -71,7 +71,7 @@
           "properties": {
             "self": {
               "type": "string",
-              "example": "$base_url/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+              "example": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
             }
           }
         }
