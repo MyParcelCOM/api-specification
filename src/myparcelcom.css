@@ -474,3 +474,15 @@ a:hover {
   padding: 2px 4px;
   border-radius: 4px;
 }
+
+#operations-tag-CarrierContracts,
+#operations-tag-CombinedFiles,
+#operations-tag-Invitations,
+#operations-tag-SystemMessages,
+#model-CarrierContract,
+#model-CarrierContractRelationship,
+#model-CombinedFile,
+#model-Invitation,
+#model-SystemMessage {
+  display: none;
+}
