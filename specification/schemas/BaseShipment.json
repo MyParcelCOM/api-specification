@@ -38,16 +38,6 @@
               ],
               "example": "Order #8008135"
             },
-            "insurance": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/BasePrice"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
             "physical_properties": {
               "$ref": "#/components/schemas/BasePhysicalProperties"
             },

@@ -73,9 +73,6 @@
                 }
               ]
             },
-            "insurance": {
-              "$ref": "#/components/schemas/Price"
-            },
             "barcode": {
               "readOnly": true,
               "type": "string",

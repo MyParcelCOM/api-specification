@@ -74,17 +74,11 @@
   "/service-contracts/{service_contract_id}/groups": {
     "$ref": "./paths/ServiceContracts-service_contract_id-ServiceGroups.json"
   },
-  "/service-contracts/{service_contract_id}/insurances": {
-    "$ref": "./paths/ServiceContracts-service_contract_id-ServiceInsurances.json"
-  },
   "/service-contracts/{service_contract_id}/option-prices": {
     "$ref": "./paths/ServiceContracts-service_contract_id-ServiceOptionPrices.json"
   },
   "/service-groups/{service_group_id}": {
     "$ref": "./paths/ServiceGroups-service_group_id.json"
-  },
-  "/service-insurances/{service_insurance_id}": {
-    "$ref": "./paths/ServiceInsurances-service_insurance_id.json"
   },
   "/service-options": {
     "$ref": "./paths/ServiceOptions.json"
@@ -116,12 +110,6 @@
   "/shops/{shop_id}": {
     "$ref": "./paths/Shops-shop_id.json"
   },
-  "/shops/{shop_id}/webhook-subscriptions": {
-    "$ref": "./paths/Shops-shop_id-WebhookSubscriptions.json"
-  },
-  "/shops/{shop_id}/webhook-subscriptions/{webhook_subscription_id}": {
-    "$ref": "./paths/Shops-shop_id-WebhookSubscriptions-webhook_subscription_id.json"
-  },
   "/statuses": {
     "$ref": "./paths/Statuses.json"
   },
@@ -139,11 +127,5 @@
   },
   "/users/{user_id}": {
     "$ref": "./paths/Users-user_id.json"
-  },
-  "/webhooks": {
-    "$ref": "./paths/Webhooks.json"
-  },
-  "/webhooks/{webhook_id}": {
-    "$ref": "./paths/Webhooks-webhook_id.json"
   }
 }
