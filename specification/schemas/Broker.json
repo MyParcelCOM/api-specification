@@ -32,7 +32,7 @@
           "properties": {
             "self": {
               "type": "string",
-              "example": "$base_url/brokers/a294ee55-bc94-4890-b734-afd56c158f95"
+              "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95"
             }
           }
         }

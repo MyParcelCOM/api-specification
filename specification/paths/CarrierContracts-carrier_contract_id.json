@@ -54,7 +54,7 @@
                             "owner": {
                               "example": {
                                 "links": {
-                                  "related": "localhost:9443/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                                  "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
                                 }
                               }
                             }
@@ -138,7 +138,7 @@
                             "owner": {
                               "example": {
                                 "links": {
-                                  "related": "localhost:9443/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                                  "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
                                 }
                               }
                             }
