@@ -3,6 +3,12 @@
     "tags": [
       "Shipments"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get a shipment status by id.",
     "description": "This endpoint retrieves the shipment status with the supplied id.",
     "parameters": [

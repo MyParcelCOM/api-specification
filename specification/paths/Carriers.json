@@ -3,6 +3,14 @@
     "tags": [
       "Carriers"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage",
+        "brokers.manage",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Get all available carriers for your account.",
     "description": "This endpoint retrieves available carriers for your account.",
     "responses": {

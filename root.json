@@ -21,6 +21,33 @@
     },
     "parameters": {
       "$ref": "./specification/parameters.json"
+    },
+    "securitySchemes": {
+      "OAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://localhost:8888/access-token",
+            "scopes": {
+              "brokers.show": "Grants read access",
+              "brokers.manage": "Grants read access",
+              "organizations.make": "Grants read access",
+              "organizations.show": "Grants read access",
+              "organizations.manage": "Grants read access",
+              "shipments.show": "Grants read access",
+              "shipments.manage": "Grants read access",
+              "shops.show": "Grants read access",
+              "shops.manage": "Grants read access",
+              "system-messages.show": "Grants read access",
+              "system-messages.manage": "Grants read access",
+              "users.show": "Grants read access",
+              "users.manage": "Grants read access",
+              "invitations.show": "Grants read access",
+              "invitations.manage": "Grants read access",
+            }
+          }
+        }
+      }
     }
   },
   "externalDocs": {

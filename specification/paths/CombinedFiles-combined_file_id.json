@@ -3,6 +3,12 @@
     "tags": [
       "CombinedFiles"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get a combined file  by id.",
     "description": "This endpoint retrieves a combined file with the supplied id.",
     "parameters": [

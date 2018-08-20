@@ -3,6 +3,16 @@
     "tags": [
       "CarrierContracts"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage",
+        "brokers.show",
+        "brokers.manage",
+        "brokers.manage",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Get a carrier contract by id.",
     "description": "This endpoint retrieves a carrier contract for the supplied id.",
     "parameters": [
@@ -75,6 +85,12 @@
     "tags": [
       "CarrierContracts"
     ],
+    "security": [{
+      "OAuth2": [
+        "organization.manage",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Update an carrier contract by id.",
     "description": "This endpoint updates the carrier contract with the supplied id.",
     "parameters": [
@@ -159,6 +175,12 @@
     "tags": [
       "CarrierContracts"
     ],
+    "security": [{
+      "OAuth2": [
+        "organization.manage",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Delete a carrier contract by id.",
     "description": "This endpoint deletes the carrier contract with the supplied id.",
     "parameters": [

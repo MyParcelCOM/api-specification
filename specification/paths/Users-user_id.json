@@ -3,6 +3,12 @@
     "tags": [
       "Users"
     ],
+    "security": [{
+      "OAuth2": [
+        "users.show",
+        "users.manage"
+      ]
+    }],
     "summary": "Get a user by id.",
     "description": "This endpoint retrieves the user with the supplied id.",
     "parameters": [
@@ -52,6 +58,11 @@
     "tags": [
       "Users"
     ],
+    "security": [{
+      "OAuth2": [
+        "users.manage"
+      ]
+    }],
     "summary": "Update a user by id.",
     "description": "This endpoint updates the user with the supplied id.",
     "parameters": [

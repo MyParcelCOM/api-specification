@@ -3,6 +3,12 @@
     "tags": [
       "Invitations"
     ],
+    "security": [{
+      "OAuth2": [
+        "invitations.show",
+        "invitations.manage"
+      ]
+    }],
     "summary": "Get an invitation by id.",
     "description": "This endpoint retrieves the invitation with the supplied id.",
     "parameters": [

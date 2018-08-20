@@ -3,6 +3,12 @@
     "tags": [
       "Shops"
     ],
+    "security": [{
+      "OAuth2": [
+        "shops.show",
+        "shops.manage"
+      ]
+    }],
     "summary": "Get a shop by id.",
     "description": "This endpoint retrieves the shop with the supplied id.",
     "parameters": [
@@ -36,6 +42,11 @@
     "tags": [
       "Shops"
     ],
+    "security": [{
+      "OAuth2": [
+        "shops.manage"
+      ]
+    }],
     "summary": "Update a shop by id.",
     "description": "This endpoint updates the shop with the supplied id.",
     "parameters": [

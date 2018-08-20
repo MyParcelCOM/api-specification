@@ -3,6 +3,12 @@
     "tags": [
       "Shipments"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get all the statuses from a shipment.",
     "description": "This endpoint retrieves statuses for the supplied shipment.",
     "parameters": [

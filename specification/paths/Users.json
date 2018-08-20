@@ -3,6 +3,12 @@
     "tags": [
       "Users"
     ],
+    "security": [{
+      "OAuth2": [
+        "users.show",
+        "users.manage"
+      ]
+    }],
     "summary": "Get all the users.",
     "description": "This endpoint retrieves users.",
     "responses": {

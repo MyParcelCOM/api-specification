@@ -3,6 +3,16 @@
     "tags": [
       "Carriers"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage",
+        "brokers.show",
+        "brokers.manage",
+        "brokers.manage",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Get all the carrier contracts for a carrier.",
     "description": "This endpoint retrieves carrier contracts for the supplied carrier.",
     "parameters": [
