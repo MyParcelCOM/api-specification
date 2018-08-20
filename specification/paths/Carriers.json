@@ -7,7 +7,7 @@
       "OAuth2": [
         "shipments.show",
         "shipments.manage",
-        "brokers.manage",
+        "brokers.show",
         "brokers.manage"
       ]
     }],

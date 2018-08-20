@@ -482,7 +482,12 @@ a:hover {
 #model-CarrierContractRelationship,
 #model-CombinedFile,
 #model-Invitation,
-#model-SystemMessage {
+#model-SystemMessage,
+label[for='invitations.show-clientCredentials-checkbox-OAuth2'],
+label[for='invitations.manage-clientCredentials-checkbox-OAuth2'],
+label[for='system-messages.show-clientCredentials-checkbox-OAuth2'],
+label[for='system-messages.manage-clientCredentials-checkbox-OAuth2']
+{
   display: none !important;
 }
 
