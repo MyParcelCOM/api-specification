@@ -3,5 +3,6 @@
   "enum": [
     "en"
   ],
-  "example": "en"
+  "example": "en",
+  "description": "Language code in ISO 639-1 format."
 }

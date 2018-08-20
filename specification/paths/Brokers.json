@@ -11,7 +11,7 @@
       ]
     }],
     "summary": "Get all available brokers for your account.",
-    "description": "This endpoint retrieves available brokers for your account.",
+    "description": "This endpoint retrieves all brokers available to your API client. If you client is created within our `MyParcel.com` portal, it will be connected to 1 broker, for example `MyParcel.com - UK`.",
     "responses": {
       "200": {
         "description": "Retrieved the brokers.",

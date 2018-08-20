@@ -9,13 +9,13 @@
         "shipments.manage"
       ]
     }],
-    "summary": "Get all the shipments.",
-    "description": "This endpoint retrieves shipments.",
+    "summary": "Get all available shipments for your account.",
+    "description": "This endpoint retrieves all shipments available to your API client.",
     "parameters": [
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are:<ul><li>files</li><li>service_contract</li><li>service_contract.service</li><li>service_options</li><li>shop</li><li>shipment_status</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`files`</li><li>`service_contract`</li><li>`service_contract.service`</li><li>`service_options`</li><li>`shipment_status`</li><li>`shop`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -23,7 +23,7 @@
       {
         "name": "filter[search]",
         "in": "query",
-        "description": "String of characters you want to look for in a shipment's attributes. Available fields to look in are:<ul><li>date created (YYYY-MM-DD)</li><li>description</li><li>recipient_address</li><li>tracking_code</li></ul>",
+        "description": "String of characters you want to look for in a shipment's attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD)</li><li>`description`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
         "schema": {
           "type": "string"
         }

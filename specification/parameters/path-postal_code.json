@@ -1,7 +1,7 @@
 {
   "name": "postal_code",
   "in": "path",
-  "description": "The postal code.",
+  "description": "Postal code.",
   "required": true,
   "schema": {
     "type": "string"

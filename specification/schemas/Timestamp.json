@@ -1,5 +1,6 @@
 {
   "readOnly": true,
   "type": "number",
-  "example": 1504801719
+  "example": 1504801719,
+  "description": "Unix timestamp."
 }

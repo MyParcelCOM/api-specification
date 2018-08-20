@@ -1,7 +1,7 @@
 {
   "name": "country_code",
   "in": "path",
-  "description": "The country code.",
+  "description": "Country code in ISO 3166-1 alpha-2 format.",
   "required": true,
   "schema": {
     "$ref": "#/components/schemas/CountryCode"

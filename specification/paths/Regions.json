@@ -18,7 +18,7 @@
       {
         "name": "filter[parent]",
         "in": "query",
-        "description": "Comma separated string of parent ids to filter on.",
+        "description": "Comma separated string of parent ids to filter by.",
         "schema": {
           "type": "string"
         }
@@ -26,7 +26,7 @@
       {
         "name": "filter[country_code]",
         "in": "query",
-        "description": "Comma separated string of country codes to filter on.",
+        "description": "Comma separated string of country codes to filter by.",
         "schema": {
           "type": "string"
         }
@@ -34,7 +34,7 @@
       {
         "name": "filter[region_code]",
         "in": "query",
-        "description": "Comma separated string of region codes to filter on.",
+        "description": "Comma separated string of region codes to filter by.",
         "schema": {
           "type": "string"
         }
@@ -42,7 +42,7 @@
       {
         "name": "filter[name]",
         "in": "query",
-        "description": "Name of the region to filter on.",
+        "description": "Name of the region to filter by.",
         "schema": {
           "type": "string"
         }

@@ -61,7 +61,8 @@
                 "address": {
                   "$ref": "#/components/schemas/Address"
                 }
-              }
+              },
+              "description": "Required if the service delivery method is `pick-up`."
             },
             "description": {
               "type": "string",

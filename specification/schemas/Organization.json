@@ -16,7 +16,8 @@
             },
             "coc": {
               "type": "string",
-              "example": "63190133"
+              "example": "63190133",
+              "description": "Chamber of Commerce number."
             },
             "iban": {
               "$ref": "#/components/schemas/Iban"
@@ -31,16 +32,18 @@
                 "on-credit",
                 "prepayment"
               ],
-              "example": "prepayment"
+              "example": "prepayment",
+              "description": "When and how shipment labels should be paid."
             },
             "vat_number": {
               "type": "string",
-              "example": "123456789MVA"
+              "example": "123456789MVA",
+              "description": "Value Added Tax identification number."
             },
             "payment_term": {
               "type": "number",
               "example": 1,
-              "description": "Amount of days in which the organization needs to pay"
+              "description": "Amount of days in which the organization needs to pay."
             },
             "currency": {
               "$ref": "#/components/schemas/Currency"

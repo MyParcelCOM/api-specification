@@ -1,7 +1,7 @@
 {
   "name": "street",
   "in": "query",
-  "description": "The street name.",
+  "description": "Name of the street.",
   "schema": {
     "type": "string"
   }

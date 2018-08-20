@@ -19,7 +19,8 @@
             "active": {
               "type": "boolean",
               "default": false,
-              "example": true
+              "example": true,
+              "description": "Indicates if the carrier contract may be used to create shipments."
             },
             "name": {
               "type": "string",
@@ -30,7 +31,8 @@
               "example": {
                 "api_username": "your_api_username",
                 "api_password": "your_api_password"
-              }
+              },
+              "description": "The credentials required to communicate with the carrier as defined by the `credentials_format` of the carrier."
             }
           }
         },

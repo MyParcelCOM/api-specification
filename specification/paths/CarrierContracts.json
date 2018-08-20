@@ -13,13 +13,13 @@
         "organizations.manage"
       ]
     }],
-    "summary": "Get all the carrier contracts.",
-    "description": "This endpoint retrieves carrier contracts.",
+    "summary": "Get all available carrier contracts for your account.",
+    "description": "This endpoint retrieves carrier contracts available to your API client. Only active carrier contracts with a verified status can be used to create shipments.",
     "parameters": [
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>carrier</li><li>owner</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`owner`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -126,7 +126,7 @@
       ]
     }],
     "summary": "Create a new carrier contract.",
-    "description": "This endpoint creates a new carrier contract with the posted data.",
+    "description": "This endpoint creates a new carrier contract with the posted data. Use your organization ID in the owner relationship to become the contract owner. The status will be `pending` until our system has checked if the credentials are valid.",
     "requestBody": {
       "description": "The carrier contract object to be created.",
       "required": true,
@@ -162,7 +162,8 @@
                             "example": {
                               "api_username": "your_api_username",
                               "api_password": "your_api_password"
-                            }
+                            },
+                            "description": "The credentials required to communicate with the carrier as defined by the `credentials_format` of the carrier."
                           }
                         }
                       }
