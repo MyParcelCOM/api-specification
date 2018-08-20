@@ -9,8 +9,8 @@
         "shipments.manage",
         "brokers.show",
         "brokers.manage",
-        "brokers.manage",
-        "brokers.manage"
+        "organizations.show",
+        "organizations.manage"
       ]
     }],
     "summary": "Get all the carrier contracts for a carrier.",

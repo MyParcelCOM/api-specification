@@ -9,8 +9,8 @@
         "shipments.manage",
         "brokers.show",
         "brokers.manage",
-        "brokers.manage",
-        "brokers.manage"
+        "organizations.show",
+        "organizations.manage"
       ]
     }],
     "summary": "Get a carrier contract by id.",
@@ -91,7 +91,7 @@
         "brokers.manage"
       ]
     }],
-    "summary": "Update an carrier contract by id.",
+    "summary": "Update a carrier contract by id.",
     "description": "This endpoint updates the carrier contract with the supplied id.",
     "parameters": [
       {
