@@ -3,6 +3,12 @@
     "tags": [
       "Shipments"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get all the files from a shipment.",
     "description": "This endpoint retrieves files for the supplied shipment.",
     "parameters": [

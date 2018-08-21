@@ -3,6 +3,12 @@
     "tags": [
       "Shops"
     ],
+    "security": [{
+      "OAuth2": [
+        "shops.show",
+        "shops.manage"
+      ]
+    }],
     "summary": "Get all the shops.",
     "description": "This endpoint retrieves shops.",
     "responses": {
@@ -69,6 +75,11 @@
     "tags": [
       "Shops"
     ],
+    "security": [{
+      "OAuth2": [
+        "shops.manage"
+      ]
+    }],
     "summary": "Create a new shop.",
     "description": "This endpoint creates a new shop with the posted data.",
     "requestBody": {

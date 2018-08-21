@@ -3,6 +3,12 @@
     "tags": [
       "ServiceOptions"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get a service option by id.",
     "description": "This endpoint retrieves a service option with the supplied id.",
     "parameters": [

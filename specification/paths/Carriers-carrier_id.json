@@ -3,6 +3,14 @@
     "tags": [
       "Carriers"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage",
+        "brokers.show",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Get a carrier by id.",
     "description": "This endpoint retrieves the carrier with the supplied id.",
     "parameters": [

@@ -3,6 +3,13 @@
     "tags": [
       "Brokers"
     ],
+    "security": [{
+      "OAuth2": [
+        "brokers.show",
+        "brokers.manage",
+        "organizations.make"
+      ]
+    }],
     "summary": "Get all available brokers for your account.",
     "description": "This endpoint retrieves available brokers for your account.",
     "responses": {

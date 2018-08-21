@@ -3,6 +3,12 @@
     "tags": [
       "Carriers"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get all the pickup and dropoff locations from a carrier.",
     "description": "This endpoint retrieves pickup and dropoff locations offered by a carrier.",
     "parameters": [

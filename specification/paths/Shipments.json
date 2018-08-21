@@ -3,6 +3,12 @@
     "tags": [
       "Shipments"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get all the shipments.",
     "description": "This endpoint retrieves shipments.",
     "parameters": [
@@ -113,6 +119,11 @@
     "tags": [
       "Shipments"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.manage"
+      ]
+    }],
     "summary": "Create a new shipment.",
     "description": "This endpoint creates a new shipment with the posted data.",
     "requestBody": {

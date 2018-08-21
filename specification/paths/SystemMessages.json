@@ -3,6 +3,12 @@
     "tags": [
       "SystemMessages"
     ],
+    "security": [{
+      "OAuth2": [
+        "system-messages.show",
+        "system-messages.manage"
+      ]
+    }],
     "summary": "Get all the system messages.",
     "description": "This endpoint retrieves system messages. These are informative messages about our system or a specific type of resource.",
     "responses": {
@@ -86,6 +92,11 @@
     "tags": [
       "SystemMessages"
     ],
+    "security": [{
+      "OAuth2": [
+        "system-messages.manage"
+      ]
+    }],
     "summary": "Create a new system message.",
     "description": "This endpoint creates a new system message with the posted data.",
     "requestBody": {

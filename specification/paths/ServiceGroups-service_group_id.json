@@ -3,6 +3,12 @@
     "tags": [
       "ServiceGroups"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get a service group by id.",
     "description": "This endpoint retrieves a service group with the supplied id.",
     "parameters": [

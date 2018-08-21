@@ -21,6 +21,33 @@
     },
     "parameters": {
       "$ref": "./specification/parameters.json"
+    },
+    "securitySchemes": {
+      "OAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "$AUTH_HOST",
+            "scopes": {
+              "brokers.show": "Read available brokers",
+              "brokers.manage": "Create/Read/Update/Delete available brokers",
+              "organizations.make": "Create an organization",
+              "organizations.show": "Read available organizations",
+              "organizations.manage": "Create/Read/Update/Delete available organizations",
+              "shipments.show": "Read available shipments",
+              "shipments.manage": "Create/Read/Update/Delete available shipments",
+              "shops.show": "Read available shops",
+              "shops.manage": "Create/Read/Update/Delete available shops",
+              "system-messages.show": "Read available system messages",
+              "system-messages.manage": "Create/Read/Update/Delete available system messages",
+              "users.show": "Read available users",
+              "users.manage": "Create/Read/Update/Delete available users",
+              "invitations.show": "Read available invitations",
+              "invitations.manage": "Create/Read/Update/Delete available invitations"
+            }
+          }
+        }
+      }
     }
   },
   "externalDocs": {

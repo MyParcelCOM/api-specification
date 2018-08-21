@@ -3,6 +3,14 @@
     "tags": [
       "Services"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage",
+        "brokers.show",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Get all the services.",
     "description": "This endpoint retrieves services.",
     "parameters": [

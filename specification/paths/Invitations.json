@@ -3,6 +3,12 @@
     "tags": [
       "Invitations"
     ],
+    "security": [{
+      "OAuth2": [
+        "invitations.show",
+        "invitations.manage"
+      ]
+    }],
     "summary": "Get all the invitations.",
     "description": "This endpoint retrieves the invitations you have sent.",
     "responses": {
@@ -70,6 +76,11 @@
     "tags": [
       "Invitations"
     ],
+    "security": [{
+      "OAuth2": [
+        "invitations.manage"
+      ]
+    }],
     "summary": "Create an invitation.",
     "description": "This endpoint creates a new invitation with the posted data. <strong>An invitation will be sent via email.</strong> ",
     "requestBody": {

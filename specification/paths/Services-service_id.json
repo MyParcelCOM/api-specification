@@ -3,6 +3,14 @@
     "tags": [
       "Services"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage",
+        "brokers.show",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Get a service by id.",
     "description": "This endpoint retrieves the service with the supplied id.",
     "parameters": [

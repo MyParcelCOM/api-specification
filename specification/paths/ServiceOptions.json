@@ -3,6 +3,12 @@
     "tags": [
       "ServiceOptions"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get all the service options.",
     "description": "This endpoint retrieves all the service options.",
     "responses": {

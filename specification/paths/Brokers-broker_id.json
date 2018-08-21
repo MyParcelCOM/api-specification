@@ -3,6 +3,13 @@
     "tags": [
       "Brokers"
     ],
+    "security": [{
+      "OAuth2": [
+        "brokers.show",
+        "brokers.manage",
+        "organizations.make"
+      ]
+    }],
     "summary": "Get a broker by id.",
     "description": "This endpoint retrieves the broker with the supplied id.",
     "parameters": [

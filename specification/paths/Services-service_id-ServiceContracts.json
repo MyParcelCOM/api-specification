@@ -3,6 +3,12 @@
     "tags": [
       "Services"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage"
+      ]
+    }],
     "summary": "Get all the service contracts for a service.",
     "description": "This endpoint retrieves service contracts for the supplied service.",
     "parameters": [

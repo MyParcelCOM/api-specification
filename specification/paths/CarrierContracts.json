@@ -3,6 +3,16 @@
     "tags": [
       "CarrierContracts"
     ],
+    "security": [{
+      "OAuth2": [
+        "shipments.show",
+        "shipments.manage",
+        "brokers.show",
+        "brokers.manage",
+        "organizations.show",
+        "organizations.manage"
+      ]
+    }],
     "summary": "Get all the carrier contracts.",
     "description": "This endpoint retrieves carrier contracts.",
     "parameters": [
@@ -109,6 +119,12 @@
     "tags": [
       "CarrierContracts"
     ],
+    "security": [{
+      "OAuth2": [
+        "organization.manage",
+        "brokers.manage"
+      ]
+    }],
     "summary": "Create a new carrier contract.",
     "description": "This endpoint creates a new carrier contract with the posted data.",
     "requestBody": {

@@ -473,6 +473,7 @@ a:hover {
   border-radius: 4px;
 }
 
+/* Hide endpoints */
 #operations-tag-CarrierContracts,
 #operations-tag-CombinedFiles,
 #operations-tag-Invitations,
@@ -481,6 +482,26 @@ a:hover {
 #model-CarrierContractRelationship,
 #model-CombinedFile,
 #model-Invitation,
-#model-SystemMessage {
-  display: none;
+#model-SystemMessage,
+label[for='invitations.show-clientCredentials-checkbox-OAuth2'],
+label[for='invitations.manage-clientCredentials-checkbox-OAuth2'],
+label[for='system-messages.show-clientCredentials-checkbox-OAuth2'],
+label[for='system-messages.manage-clientCredentials-checkbox-OAuth2']
+{
+  display: none !important;
+}
+
+/* Hide auth components */
+.auth-container{
+  margin: -40px -20px !important;
+}
+.auth-container .auth-btn-wrapper,
+.auth-container .scope-def,
+.auth-container .checkbox .item,
+.auth-container .scope-def > div > div > h4,
+.auth-container > div > div > div > h4,
+.auth-container > div > div > div > p,
+.auth-container > div > div > div > .wrapper
+{
+  display: none !important;
 }

@@ -3,6 +3,12 @@
     "tags": [
       "Organizations"
     ],
+    "security": [{
+      "OAuth2": [
+        "organizations.show",
+        "organizations.manage"
+      ]
+    }],
     "summary": "Get all the organizations.",
     "description": "This endpoint retrieves organizations.",
     "responses": {
@@ -105,6 +111,11 @@
     "tags": [
       "Organizations"
     ],
+    "security": [{
+      "OAuth2": [
+        "organizations.make"
+      ]
+    }],
     "summary": "Create a new organization.",
     "description": "This endpoint creates a new organization with the posted data.",
     "requestBody": {
