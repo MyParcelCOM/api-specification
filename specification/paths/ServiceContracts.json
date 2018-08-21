@@ -10,7 +10,7 @@
       ]
     }],
     "summary": "Get all available service contracts for your API client.",
-    "description": "This endpoint retrieves all service contracts available to your API client. Only the service contracts belonging to an active carrier contract with a verified status will be returned.",
+    "description": "This endpoint retrieves all service contracts available to your API client.",
     "parameters": [
       {
         "name": "filter[carrier_contract]",

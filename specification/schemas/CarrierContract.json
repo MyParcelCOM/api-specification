@@ -39,7 +39,7 @@
                 "invalid"
               ],
               "example": "verified",
-              "description": "A new carrier contract is pending until the `credentials` have been verified."
+              "description": "A new carrier contract is pending until the `credentials` have been verified. The verification process is done automatically."
             }
           }
         },
