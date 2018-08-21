@@ -9,7 +9,7 @@
         "shipments.manage"
       ]
     }],
-    "summary": "Get all available shipments for your account.",
+    "summary": "Get all available shipments for your API client.",
     "description": "This endpoint retrieves all shipments available to your API client.",
     "parameters": [
       {

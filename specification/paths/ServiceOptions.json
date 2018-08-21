@@ -9,7 +9,7 @@
         "shipments.manage"
       ]
     }],
-    "summary": "Get all available service options for your account.",
+    "summary": "Get all available service options for your API client.",
     "description": "This endpoint retrieves all service options available to your API client.",
     "responses": {
       "200": {

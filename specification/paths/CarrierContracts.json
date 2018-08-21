@@ -13,7 +13,7 @@
         "organizations.manage"
       ]
     }],
-    "summary": "Get all available carrier contracts for your account.",
+    "summary": "Get all available carrier contracts for your API client.",
     "description": "This endpoint retrieves carrier contracts available to your API client. Only active carrier contracts with a verified status can be used to create shipments.",
     "parameters": [
       {

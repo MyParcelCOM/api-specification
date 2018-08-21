@@ -3,8 +3,8 @@
     "tags": [
       "Hooks"
     ],
-    "summary": "Get all available hooks for your account.",
-    "description": "This endpoint retrieves available hooks for your account.",
+    "summary": "Get all available hooks for your API client.",
+    "description": "This endpoint retrieves available hooks for your API client.",
     "responses": {
       "200": {
         "description": "Retrieved the hooks.",

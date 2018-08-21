@@ -9,7 +9,7 @@
         "organizations.manage"
       ]
     }],
-    "summary": "Get all available organizations for your account.",
+    "summary": "Get all available organizations for your API client.",
     "description": "This endpoint retrieves all organizations available to your API client.",
     "responses": {
       "200": {

@@ -9,7 +9,7 @@
         "shipments.manage"
       ]
     }],
-    "summary": "Get all available service contracts for your account.",
+    "summary": "Get all available service contracts for your API client.",
     "description": "This endpoint retrieves all service contracts available to your API client. Only the service contracts belonging to an active carrier contract with a verified status will be returned.",
     "parameters": [
       {

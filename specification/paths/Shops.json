@@ -9,7 +9,7 @@
         "shops.manage"
       ]
     }],
-    "summary": "Get all available shops for your account.",
+    "summary": "Get all available shops for your API client.",
     "description": "This endpoint retrieves all shops available to your API client.",
     "responses": {
       "200": {

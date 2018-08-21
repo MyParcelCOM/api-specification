@@ -11,7 +11,7 @@
         "brokers.manage"
       ]
     }],
-    "summary": "Get all available services for your account.",
+    "summary": "Get all available services for your API client.",
     "description": "This endpoint retrieves all services available to your API client.",
     "parameters": [
       {
