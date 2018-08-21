@@ -34,7 +34,8 @@
               "enum": [
                 "country"
               ],
-              "example": "country"
+              "example": "country",
+              "description": "Present if the region is part of a common geographical group."
             }
           }
         },

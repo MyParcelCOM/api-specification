@@ -22,7 +22,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>carrier</li><li>owner</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`owner`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -91,8 +91,8 @@
         "brokers.manage"
       ]
     }],
-    "summary": "Update a carrier contract by id.",
-    "description": "This endpoint updates the carrier contract with the supplied id.",
+    "summary": "Update an carrier contract by id.",
+    "description": "This endpoint updates the carrier contract with the supplied id. The status will be `pending` until our system has checked if the credentials are valid.",
     "parameters": [
       {
         "$ref": "#/components/parameters/path-carrier_contract_id"

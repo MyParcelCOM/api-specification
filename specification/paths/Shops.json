@@ -9,8 +9,8 @@
         "shops.manage"
       ]
     }],
-    "summary": "Get all the shops.",
-    "description": "This endpoint retrieves shops.",
+    "summary": "Get all available shops for your API client.",
+    "description": "This endpoint retrieves all shops available to your API client.",
     "responses": {
       "200": {
         "description": "Retrieved the shops.",

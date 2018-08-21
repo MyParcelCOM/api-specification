@@ -25,7 +25,7 @@
             "code": {
               "type": "string",
               "example": "my-parcel-com",
-              "description": "Unique slugified version of the carrier name to identify a carrier"
+              "description": "Unique slugified version of the carrier name to identify a carrier."
             },
             "credentials_format": {
               "type": "object",
@@ -43,7 +43,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "description": "JSON Schema specification of the credentials required to communicate with the carrier."
             }
           }
         },

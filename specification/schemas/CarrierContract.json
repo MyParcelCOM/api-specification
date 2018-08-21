@@ -23,7 +23,8 @@
             "active": {
               "type": "boolean",
               "default": false,
-              "example": true
+              "example": true,
+              "description": "Indicates if the carrier contract may be used to create shipments."
             },
             "name": {
               "type": "string",
@@ -37,7 +38,8 @@
                 "verified",
                 "invalid"
               ],
-              "example": "verified"
+              "example": "verified",
+              "description": "A new carrier contract is pending until the `credentials` have been verified. The verification process is done automatically."
             }
           }
         },

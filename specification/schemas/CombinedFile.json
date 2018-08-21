@@ -21,7 +21,8 @@
                 "commercial-invoice"
               ],
               "default": "label",
-              "example": "label"
+              "example": "label",
+              "description": "All successfully registered shipments will have a `label` file. International shipments with customs information will have extra files."
             },
             "page_size": {
               "type": "string",
@@ -31,7 +32,8 @@
                 "A6"
               ],
               "default": "A4",
-              "example": "A4"
+              "example": "A4",
+              "description": "One of the available page sizes, most likely `A6` or `A4` depending on your printer."
             },
             "starting_position": {
               "type": "string",
@@ -42,7 +44,8 @@
                 "bottom-right"
               ],
               "default": "top-left",
-              "example": "top-left"
+              "example": "top-left",
+              "description": "Position on the first A4 page to start printing labels. All positions before this one will be left empty."
             }
           }
         },

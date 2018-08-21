@@ -1,7 +1,7 @@
 {
   "name": "Accept",
   "in": "header",
-  "description": "You can set the file header to either receive a json response, or the files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`image/png`</li></ul>",
+  "description": "You can set the accept header to either receive a JSON response, or the files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`image/png`</li></ul>",
   "required": true,
   "schema": {
     "type": "string",

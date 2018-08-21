@@ -29,7 +29,8 @@
                 "address": {
                   "$ref": "#/components/schemas/BaseAddress"
                 }
-              }
+              },
+              "description": "Required if the service delivery method is `pick-up`."
             },
             "description": {
               "type": [

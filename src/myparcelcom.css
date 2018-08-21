@@ -18,6 +18,16 @@ a:hover {
   border-radius: 0;
 }
 
+#swagger-ui code {
+  font-size: 14px;
+  font-family: 'Consolas', 'monaco', monospace;
+  padding: 0 6px;
+  background: #FFF7DD;
+  border: 1px solid #ffeeb8;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
 #swagger-ui h4 span:after,
 #swagger-ui .main > a,
 #swagger-ui .response-col_links {
@@ -475,9 +485,25 @@ a:hover {
 
 /* Hide endpoints */
 #operations-tag-CarrierContracts,
+#operations-CarrierContracts-get_carrier_contracts,
+#operations-CarrierContracts-post_carrier_contracts,
+#operations-CarrierContracts-get_carrier_contracts__carrier_contract_id_,
+#operations-CarrierContracts-patch_carrier_contracts__carrier_contract_id_,
+#operations-CarrierContracts-delete_carrier_contracts__carrier_contract_id_,
 #operations-tag-CombinedFiles,
+#operations-CombinedFiles-get_combined_files,
+#operations-CombinedFiles-post_combined_files,
+#operations-CombinedFiles-get_combined_files__combined_file_id_,
 #operations-tag-Invitations,
+#operations-Invitations-get_invitations,
+#operations-Invitations-post_invitations,
+#operations-Invitations-get_invitations__invitation_id_,
 #operations-tag-SystemMessages,
+#operations-SystemMessages-get_system_messages,
+#operations-SystemMessages-post_system_messages,
+#operations-SystemMessages-get_system_messages__system_message_id_,
+#operations-SystemMessages-patch_system_messages__system_message_id_,
+#operations-SystemMessages-delete_system_messages__system_message_id_,
 #model-CarrierContract,
 #model-CarrierContractRelationship,
 #model-CombinedFile,

@@ -11,13 +11,13 @@
         "brokers.manage"
       ]
     }],
-    "summary": "Get all the services.",
-    "description": "This endpoint retrieves services.",
+    "summary": "Get all available services for your API client.",
+    "description": "This endpoint retrieves all services available to your API client.",
     "parameters": [
       {
         "name": "filter[package_type]",
         "in": "query",
-        "description": "Comma separated string of package types to filter on.",
+        "description": "Comma separated string of package types to filter by.",
         "schema": {
           "type": "string"
         }
@@ -25,7 +25,7 @@
       {
         "name": "filter[carrier]",
         "in": "query",
-        "description": "Comma separated string of carrier ids to filter on.",
+        "description": "Comma separated string of carrier ids to filter by.",
         "schema": {
           "type": "string"
         }
@@ -33,7 +33,7 @@
       {
         "name": "filter[region_from]",
         "in": "query",
-        "description": "Comma separated string of region ids to filter on.",
+        "description": "Comma separated string of region ids to filter by.",
         "schema": {
           "type": "string"
         }
@@ -41,7 +41,7 @@
       {
         "name": "filter[region_to]",
         "in": "query",
-        "description": "Comma separated string of region ids to filter on.",
+        "description": "Comma separated string of region ids to filter by.",
         "schema": {
           "type": "string"
         }
@@ -49,7 +49,7 @@
       {
         "name": "filter[has_contract]",
         "in": "query",
-        "description": "Boolean value. <ul><li>true: Only services with active contract associations</li><li>false: Only services without active contract associations</li></ul>",
+        "description": "Boolean value.<ul><li>`true` Only services with active contract associations.</li><li>`false` Only services without active contract associations.</li></ul>",
         "schema": {
           "type": "boolean"
         }
@@ -57,7 +57,7 @@
       {
         "name": "filter[delivery_method]",
         "in": "query",
-        "description": "Filter the services retrieved based on given delivery method. Options are: <ul><li>delivery</li><li>pick-up</li></ul>",
+        "description": "Filter the services retrieved based on given delivery method. Possible options are:<ul><li>`delivery`</li><li>`pick-up`</li></ul>",
         "schema": {
           "type": "string"
         }

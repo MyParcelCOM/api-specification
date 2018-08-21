@@ -38,7 +38,8 @@
               "enum": [
                 "shipments"
               ],
-              "example": "shipments"
+              "example": "shipments",
+              "description": "Resource type this status can be applied to."
             },
             "level": {
               "type": "string",

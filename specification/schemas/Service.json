@@ -45,7 +45,8 @@
                 "Wednesday",
                 "Thursday",
                 "Friday"
-              ]
+              ],
+              "description": "Days on which the carrier delivers parcels."
             },
             "transit_time": {
               "type": "object",
@@ -68,7 +69,8 @@
                 "drop-off",
                 "collection"
               ],
-              "example": "drop-off"
+              "example": "drop-off",
+              "description": "How the parcel can enter the network of the carrier."
             },
             "delivery_method": {
               "type": "string",
@@ -76,7 +78,8 @@
                 "delivery",
                 "pick-up"
               ],
-              "example": "pick-up"
+              "example": "pick-up",
+              "description": "Where the parcel will be delivered to the customer. In case of `pick-up`, a carrier location of type pick-up must be sent with the shipment request."
             },
             "rating": {
               "type": "number",
@@ -84,7 +87,7 @@
               "minimum": 0.0,
               "maximum": 1.0,
               "example": 0.8,
-              "description": "Generic rating of the service which indicates a combination of price, quality and popularity"
+              "description": "Generic rating of the service which indicates a combination of price, quality and popularity."
             }
           }
         },
