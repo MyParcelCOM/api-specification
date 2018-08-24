@@ -140,6 +140,9 @@
   "MinimalPasswordReset": {
     "$ref": "./schemas/MinimalPasswordReset.json"
   },
+  "MinimalPaymentIdentity": {
+    "$ref": "./schemas/MinimalPaymentIdentity.json"
+  },
   "MinimalPickupDropoffLocation": {
     "$ref": "./schemas/MinimalPickupDropoffLocation.json"
   },
@@ -211,6 +214,9 @@
   },
   "PatchUser": {
     "$ref": "./schemas/PatchUser.json"
+  },
+  "PaymentIdentity": {
+    "$ref": "./schemas/PaymentIdentity.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
