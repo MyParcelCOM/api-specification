@@ -48,9 +48,6 @@
                             "provider",
                             "credit_card_supported",
                             "debit_card_supported",
-                            "sepa_supported",
-                            "ideal_supported",
-                            "paypal_supported",
                             "created_at",
                             "updated_at"
                           ]
@@ -150,9 +147,6 @@
                             "provider",
                             "credit_card_supported",
                             "debit_card_supported",
-                            "sepa_supported",
-                            "ideal_supported",
-                            "paypal_supported",
                             "created_at",
                             "updated_at"
                           ]

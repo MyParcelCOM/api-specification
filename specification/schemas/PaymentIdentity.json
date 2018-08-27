@@ -30,21 +30,6 @@
               "default": false,
               "example": false
             },
-            "sepa_supported": {
-              "type": "boolean",
-              "default": false,
-              "example": false
-            },
-            "ideal_supported": {
-              "type": "boolean",
-              "default": false,
-              "example": false
-            },
-            "paypal_supported": {
-              "type": "boolean",
-              "default": false,
-              "example": false
-            },
             "created_at": {
               "type": "number",
               "readOnly": true,
