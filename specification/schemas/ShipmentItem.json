@@ -17,7 +17,16 @@
       "example": "OnePlus X"
     },
     "item_value": {
-      "$ref": "#/components/schemas/Price"
+      "allOf": [
+        {
+          "required": [
+            "amount"
+          ]
+        },
+        {
+          "$ref": "#/components/schemas/Price"
+        }
+      ]
     },
     "quantity": {
       "type": "number",
