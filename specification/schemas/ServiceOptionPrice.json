@@ -19,24 +19,7 @@
           "additionalProperties": false,
           "properties": {
             "price": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "currency"
-              ],
-              "properties": {
-                "amount": {
-                  "type": [
-                    "number",
-                    "null"
-                  ],
-                  "example": 995,
-                  "description": "Price amount in cents/pence"
-                },
-                "currency": {
-                  "$ref": "#/components/schemas/Currency"
-                }
-              }
+              "$ref": "#/components/schemas/Price"
             },
             "included": {
               "type": "boolean",
