@@ -87,7 +87,7 @@
       }
     ],
     "requestBody": {
-      "description": "The organization object with attributes to be updated.",
+      "description": "The payment identity resource with attributes to be updated.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -118,7 +118,7 @@
     },
     "responses": {
       "200": {
-        "description": "The organization is updated.",
+        "description": "The payment identity is updated.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
