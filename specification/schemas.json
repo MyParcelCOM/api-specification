@@ -104,6 +104,9 @@
   "Invitation": {
     "$ref": "./schemas/Invitation.json"
   },
+  "Invoice": {
+    "$ref": "./schemas/Invoice.json"
+  },
   "InvoiceCustoms": {
     "$ref": "./schemas/InvoiceCustoms.json"
   },
@@ -133,6 +136,9 @@
   },
   "MinimalInvitation": {
     "$ref": "./schemas/MinimalInvitation.json"
+  },
+  "MinimalInvoice": {
+    "$ref": "./schemas/MinimalInvoice.json"
   },
   "MinimalOrganization": {
     "$ref": "./schemas/MinimalOrganization.json"

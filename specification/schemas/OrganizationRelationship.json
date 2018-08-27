@@ -20,6 +20,9 @@
     "links": {
       "readOnly": true,
       "type": "object",
+      "required": [
+        "related"
+      ],
       "properties": {
         "related": {
           "type": "string",

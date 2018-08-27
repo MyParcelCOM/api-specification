@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalInvoice"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "example": "Invoice for February 2018"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "amount": {
+              "type": "number",
+              "example": 7985
+            },
+            "currency": {
+              "$ref": "#/components/schemas/Currency"
+            },
+            "billing_term_start_at": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "example": 1517443200,
+                  "description": "Start of the billing term this invoice is created for as a Unix timestamp."
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "billing_term_end_at": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "example": 1519862399,
+                  "description": "End of the billing term this invoice is created for as a Unix timestamp."
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "updated_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "organization": {
+              "$ref": "#/components/schemas/OrganizationRelationship"
+            },
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "readOnly": true,
+              "type": "string",
+              "example": "$API_HOST/invoices/c93c4bd6-9dc9-4560-be08-915b58fab3f0"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
