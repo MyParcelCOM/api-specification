@@ -31,16 +31,10 @@
               "example": false
             },
             "created_at": {
-              "type": "number",
-              "readOnly": true,
-              "example": 1504801719,
-              "description": "Unix timestamp when this payment-identities resource was created."
+              "$ref": "#/components/schemas/Timestamp"
             },
             "updated_at": {
-              "type": "number",
-              "readOnly": true,
-              "example": 1504801719,
-              "description": "Unix timestamp when this payment-identities resource was last updated."
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },
