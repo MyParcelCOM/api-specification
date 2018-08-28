@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^payment-identities$",
+      "example": "payment-identities"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "a8948d0c-ec4c-4c4b-8c03-191123e3ce1e"
+    }
+  }
+}

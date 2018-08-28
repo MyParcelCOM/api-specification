@@ -50,6 +50,12 @@
   "/password-resets/{password_reset_id}": {
     "$ref": "./paths/PasswordResets-password_reset_id.json"
   },
+  "/payment-identities": {
+    "$ref": "./paths/PaymentIdentities.json"
+  },
+  "/payment-identities/{payment_identity_id}": {
+    "$ref": "./paths/PaymentIdentities-payment_identity_id.json"
+  },
   "/regions": {
     "$ref": "./paths/Regions.json"
   },
