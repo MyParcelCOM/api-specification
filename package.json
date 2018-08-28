@@ -13,13 +13,13 @@
   },
   "homepage": "https://docs.myparcel.com/api-specification",
   "devDependencies": {
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
     "gulp-json-refs": "^0.1.1",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.0.0"
   },
   "dependencies": {
-    "swagger-ui-dist": "^3.18.1"
+    "swagger-ui-dist": "^3.18.2"
   }
 }
