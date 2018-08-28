@@ -38,6 +38,12 @@
   "/invitations/{invitation_id}": {
     "$ref": "./paths/Invitations-invitation_id.json"
   },
+  "/invoices": {
+    "$ref": "./paths/Invoices.json"
+  },
+  "/invoices/{invoice_id}": {
+    "$ref": "./paths/Invoices-invoice_id.json"
+  },
   "/organizations": {
     "$ref": "./paths/Organizations.json"
   },

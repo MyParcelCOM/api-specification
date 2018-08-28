@@ -1,0 +1,218 @@
+{
+  "get": {
+    "tags": [
+      "Invoices"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
+    "summary": "Get all available invoices.",
+    "description": "",
+    "responses": {
+      "200": {
+        "description": "Retrieved the invoices.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Invoice"
+                      },
+                      {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "attributes",
+                          "relationships",
+                          "links"
+                        ],
+                        "properties": {
+                          "attributes": {
+                            "type": "object",
+                            "required": [
+                              "amount",
+                              "currency",
+                              "updated_at",
+                              "created_at"
+                            ]
+                          },
+                          "relationships": {
+                            "type": "object",
+                            "required": [
+                              "organization",
+                              "status"
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/invoices?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/invoices?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/invoices?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/invoices?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/invoices?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Invoices"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
+    "summary": "Create a new invoice.",
+    "description": "This endpoint creates a new invoice with the posted data.",
+    "requestBody": {
+      "description": "The invoices resource to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Invoice"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "type": "object",
+                        "required": [
+                          "amount",
+                          "currency"
+                        ]
+                      },
+                      "relationships": {
+                        "type": "object",
+                        "required": [
+                          "organization"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The invoice is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Invoice"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "amount",
+                            "currency",
+                            "updated_at",
+                            "created_at"
+                          ]
+                        },
+                        "relationships": {
+                          "type": "object",
+                          "required": [
+                            "organization",
+                            "status"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
