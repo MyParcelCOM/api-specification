@@ -79,7 +79,7 @@
         ]
       }
     ],
-    "summary": "Update a invoice by id.",
+    "summary": "Update an invoice by id.",
     "description": "This endpoint updates the invoice with the supplied id.",
     "parameters": [
       {
@@ -87,7 +87,7 @@
       }
     ],
     "requestBody": {
-      "description": "The organization object with attributes to be updated.",
+      "description": "The invoice object with attributes to be updated.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
