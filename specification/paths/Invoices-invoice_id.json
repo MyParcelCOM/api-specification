@@ -45,11 +45,18 @@
                         "attributes": {
                           "type": "object",
                           "required": [
-                            "amount",
-                            "currency",
+                            "price",
                             "updated_at",
                             "created_at"
-                          ]
+                          ],
+                          "properties": {
+                            "price": {
+                              "required": [
+                                "amount",
+                                "currency"
+                              ]
+                            }
+                          }
                         },
                         "relationships": {
                           "type": "object",
@@ -144,11 +151,18 @@
                         "attributes": {
                           "type": "object",
                           "required": [
-                            "amount",
-                            "currency",
+                            "price",
                             "updated_at",
                             "created_at"
-                          ]
+                          ],
+                          "properties": {
+                            "price": {
+                              "required": [
+                                "amount",
+                                "currency"
+                              ]
+                            }
+                          }
                         },
                         "relationships": {
                           "type": "object",

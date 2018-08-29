@@ -17,12 +17,8 @@
               ],
               "example": "Invoice for February 2018"
             },
-            "amount": {
-              "type": "number",
-              "example": 7985
-            },
-            "currency": {
-              "$ref": "#/components/schemas/Currency"
+            "price": {
+              "$ref": "#/components/schemas/BasePrice"
             },
             "billing_term_start_at": {
               "type": [
