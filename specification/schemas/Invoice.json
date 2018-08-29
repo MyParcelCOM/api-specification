@@ -11,15 +11,11 @@
           "additionalProperties": false,
           "properties": {
             "description": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "example": "Invoice for February 2018"
-                },
-                {
-                  "type": "null"
-                }
-              ]
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "Invoice for February 2018"
             },
             "amount": {
               "type": "number",
@@ -29,28 +25,20 @@
               "$ref": "#/components/schemas/Currency"
             },
             "billing_term_start_at": {
-              "oneOf": [
-                {
-                  "type": "number",
-                  "example": 1517443200,
-                  "description": "Start of the billing term this invoice is created for as a Unix timestamp."
-                },
-                {
-                  "type": "null"
-                }
-              ]
+              "type": [
+                "number",
+                "null"
+              ],
+              "example": 1517443200,
+              "description": "Start of the billing term this invoice is created for as a Unix timestamp."
             },
             "billing_term_end_at": {
-              "oneOf": [
-                {
-                  "type": "number",
-                  "example": 1519862399,
-                  "description": "End of the billing term this invoice is created for as a Unix timestamp."
-                },
-                {
-                  "type": "null"
-                }
-              ]
+              "type": [
+                "number",
+                "null"
+              ],
+              "example": 1519862399,
+              "description": "End of the billing term this invoice is created for as a Unix timestamp."
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
