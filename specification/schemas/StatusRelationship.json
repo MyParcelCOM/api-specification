@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "readOnly": true,
   "required": [
     "data"
   ],

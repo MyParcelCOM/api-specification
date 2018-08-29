@@ -3,9 +3,7 @@
   "additionalProperties": false,
   "properties": {
     "amount": {
-      "type": "number",
-      "example": 995,
-      "description": "Price amount in cents/pence"
+      "$ref": "#/components/schemas/PriceAmount"
     },
     "currency": {
       "$ref": "#/components/schemas/Currency"

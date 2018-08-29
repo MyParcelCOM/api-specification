@@ -1,0 +1,98 @@
+{
+  "get": {
+    "tags": [
+      "Payments"
+    ],
+    "security": [
+      {
+        "OAuth2": []
+      }
+    ],
+    "summary": "Get an payment by id.",
+    "description": "This endpoint retrieves the payment with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-payment_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the payment.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Payment"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Payments"
+    ],
+    "security": [
+      {
+        "OAuth2": []
+      }
+    ],
+    "summary": "Update a payment by id.",
+    "description": "This endpoint updates the payment with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-payment_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The payment object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/PatchPayment"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The payment is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Payment"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

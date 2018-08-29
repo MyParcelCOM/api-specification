@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalPayment"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": {
+              "$ref": "#/components/schemas/PriceAmount"
+            },
+            "currency": {
+              "$ref": "#/components/schemas/Currency"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "organization",
+            "status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "organization": {
+              "$ref": "#/components/schemas/OrganizationRelationship"
+            },
+            "invoice": {
+              "$ref": "#/components/schemas/InvoiceRelationship"
+            },
+            "payment-identity": {
+              "$ref": "#/components/schemas/PaymentIdentityRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
