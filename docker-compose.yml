@@ -5,7 +5,7 @@ services:
     build:
       context: ./docker/json-bundler
       dockerfile: Dockerfile
-    image: myparcelcom/json-bundler:v1-dev
+    image: myparcelcom/api-spec-bundler:v1-dev
     working_dir: /opt/spec
     volumes:
       - .:/opt/spec
