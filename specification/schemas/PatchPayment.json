@@ -23,10 +23,6 @@
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "organization",
-            "status"
-          ],
           "additionalProperties": false,
           "properties": {
             "organization": {

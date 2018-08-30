@@ -26,14 +26,6 @@
                 }
               ]
             },
-            "provider_response": {
-              "readOnly": true,
-              "type": [
-                "string",
-                "null"
-              ],
-              "example": "succeeded"
-            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             },
@@ -44,10 +36,6 @@
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "organization",
-            "status"
-          ],
           "additionalProperties": false,
           "properties": {
             "organization": {
