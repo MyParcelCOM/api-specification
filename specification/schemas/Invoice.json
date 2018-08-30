@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalInvoice"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "Invoice for February 2018"
+            },
+            "price": {
+              "$ref": "#/components/schemas/BasePrice"
+            },
+            "billing_term_start_at": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "example": 1517443200,
+              "description": "Start of the billing term this invoice is created for as a Unix timestamp."
+            },
+            "billing_term_end_at": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "example": 1519862399,
+              "description": "End of the billing term this invoice is created for as a Unix timestamp."
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "updated_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "organization": {
+              "$ref": "#/components/schemas/OrganizationRelationship"
+            },
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "readOnly": true,
+              "type": "string",
+              "example": "$API_HOST/invoices/c93c4bd6-9dc9-4560-be08-915b58fab3f0"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

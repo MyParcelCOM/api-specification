@@ -1,0 +1,10 @@
+{
+  "name": "invoice_id",
+  "in": "path",
+  "description": "Id of the invoice.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "get": {
+    "tags": [
+      "Invoices"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
+    "summary": "Get one invoice.",
+    "description": "",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-invoice_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the invoice.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Invoice"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "price",
+                            "updated_at",
+                            "created_at"
+                          ],
+                          "properties": {
+                            "price": {
+                              "required": [
+                                "amount",
+                                "currency"
+                              ]
+                            }
+                          }
+                        },
+                        "relationships": {
+                          "type": "object",
+                          "required": [
+                            "organization",
+                            "status"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Invoices"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
+    "summary": "Update an invoice by id.",
+    "description": "This endpoint updates the invoice with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-invoice_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The invoice object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Invoice"
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The invoice is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Invoice"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "price",
+                            "updated_at",
+                            "created_at"
+                          ],
+                          "properties": {
+                            "price": {
+                              "required": [
+                                "amount",
+                                "currency"
+                              ]
+                            }
+                          }
+                        },
+                        "relationships": {
+                          "type": "object",
+                          "required": [
+                            "organization",
+                            "status"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
