@@ -33,13 +33,13 @@
                       "$ref": "#/components/schemas/Payment"
                     },
                     {
-                      "type": "object",
                       "required": [
                         "attributes"
-                      ],
+                      ]
+                    },
+                    {
                       "properties": {
-                        "attributes": {
-                          "type": "object",
+                        "relationships": {
                           "required": [
                             "organization",
                             "status"

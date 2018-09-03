@@ -30,14 +30,14 @@
                         "$ref": "#/components/schemas/Payment"
                       },
                       {
-                        "type": "object",
                         "required": [
                           "id",
                           "attributes"
-                        ],
+                        ]
+                      },
+                      {
                         "properties": {
-                          "attributes": {
-                            "type": "object",
+                          "relationships": {
                             "required": [
                               "organization",
                               "status"
@@ -116,13 +116,13 @@
                     "$ref": "#/components/schemas/Payment"
                   },
                   {
-                    "type": "object",
                     "required": [
                       "attributes"
-                    ],
+                    ]
+                  },
+                  {
                     "properties": {
-                      "attributes": {
-                        "type": "object",
+                      "relationships": {
                         "required": [
                           "organization",
                           "status"

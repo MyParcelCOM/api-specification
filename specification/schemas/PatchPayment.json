@@ -28,6 +28,9 @@
             "organization": {
               "$ref": "#/components/schemas/OrganizationRelationship"
             },
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            },
             "invoice": {
               "$ref": "#/components/schemas/InvoiceRelationship"
             },
