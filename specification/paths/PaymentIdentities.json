@@ -144,7 +144,8 @@
                       "attributes": {
                         "type": "object",
                         "required": [
-                          "provider"
+                          "provider",
+                          "credentials"
                         ]
                       },
                       "relationships": {

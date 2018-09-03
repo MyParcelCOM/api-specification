@@ -32,7 +32,8 @@
                       {
                         "required": [
                           "id",
-                          "attributes"
+                          "attributes",
+                          "relationships"
                         ]
                       },
                       {
@@ -41,6 +42,11 @@
                             "required": [
                               "organization",
                               "status"
+                            ]
+                          },
+                          "attributes": {
+                            "required": [
+                              "price"
                             ]
                           }
                         }
@@ -117,15 +123,20 @@
                   },
                   {
                     "required": [
-                      "attributes"
+                      "attributes",
+                      "relationships"
                     ]
                   },
                   {
                     "properties": {
                       "relationships": {
                         "required": [
-                          "organization",
-                          "status"
+                          "organization"
+                        ]
+                      },
+                      "attributes": {
+                        "required": [
+                          "price"
                         ]
                       }
                     }
