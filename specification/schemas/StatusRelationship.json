@@ -18,7 +18,6 @@
       ]
     },
     "links": {
-      "readOnly": true,
       "type": "object",
       "required": [
         "related"

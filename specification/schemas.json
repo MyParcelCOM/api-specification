@@ -110,6 +110,9 @@
   "InvoiceCustoms": {
     "$ref": "./schemas/InvoiceCustoms.json"
   },
+  "InvoiceRelationship": {
+    "$ref": "./schemas/InvoiceRelationship.json"
+  },
   "Language": {
     "$ref": "./schemas/Language.json"
   },
@@ -146,8 +149,14 @@
   "MinimalPasswordReset": {
     "$ref": "./schemas/MinimalPasswordReset.json"
   },
+  "MinimalPayment": {
+    "$ref": "./schemas/MinimalPayment.json"
+  },
   "MinimalPaymentIdentity": {
     "$ref": "./schemas/MinimalPaymentIdentity.json"
+  },
+  "PaymentIdentityRelationship": {
+    "$ref": "./schemas/PaymentIdentityRelationship.json"
   },
   "MinimalPickupDropoffLocation": {
     "$ref": "./schemas/MinimalPickupDropoffLocation.json"
@@ -209,6 +218,9 @@
   "PatchOrganization": {
     "$ref": "./schemas/PatchOrganization.json"
   },
+  "PatchPayment": {
+    "$ref": "./schemas/PatchPayment.json"
+  },
   "PatchShipment": {
     "$ref": "./schemas/PatchShipment.json"
   },
@@ -221,6 +233,9 @@
   "PatchUser": {
     "$ref": "./schemas/PatchUser.json"
   },
+  "Payment": {
+    "$ref": "./schemas/Payment.json"
+  },
   "PaymentIdentity": {
     "$ref": "./schemas/PaymentIdentity.json"
   },
@@ -232,6 +247,9 @@
   },
   "Price": {
     "$ref": "./schemas/Price.json"
+  },
+  "PriceAmount": {
+    "$ref": "./schemas/PriceAmount.json"
   },
   "Region": {
     "$ref": "./schemas/Region.json"

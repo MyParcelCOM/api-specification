@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^payment-identities$",
+          "example": "payment-identities"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "example": "7b808eee-bf1c-40cd-98f2-3c335a06417e"
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "required": [
+        "related"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "type": "string",
+          "example": "$API_HOST/payment-identities/5c868557-0827-4d21-a7f4-9820f01769f4"
+        }
+      }
+    }
+  }
+}

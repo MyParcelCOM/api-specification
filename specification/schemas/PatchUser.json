@@ -14,11 +14,17 @@
           "additionalProperties": false,
           "properties": {
             "first_name": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "Sherlock"
             },
             "last_name": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "Holmes"
             },
             "company": {

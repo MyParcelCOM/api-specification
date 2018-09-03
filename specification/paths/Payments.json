@@ -1,0 +1,173 @@
+{
+  "get": {
+    "tags": [
+      "Payments"
+    ],
+    "security": [{
+      "OAuth2": []
+    }],
+    "summary": "Get all the payments.",
+    "description": "This endpoint retrieves the payments for your API client.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the payments.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Payment"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "attributes",
+                          "relationships"
+                        ]
+                      },
+                      {
+                        "properties": {
+                          "relationships": {
+                            "required": [
+                              "organization",
+                              "status"
+                            ]
+                          },
+                          "attributes": {
+                            "required": [
+                              "price"
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/payments?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/payments?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/payments?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/payments?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/payments?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Payments"
+    ],
+    "security": [{
+      "OAuth2": []
+    }],
+    "summary": "Create an payment.",
+    "description": "This endpoint creates a new payment with the posted data.",
+    "requestBody": {
+      "description": "The payment object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Payment"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "relationships": {
+                        "required": [
+                          "organization"
+                        ]
+                      },
+                      "attributes": {
+                        "required": [
+                          "price"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The payment is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Payment"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
