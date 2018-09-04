@@ -34,7 +34,7 @@
             "invoice": {
               "$ref": "#/components/schemas/InvoiceRelationship"
             },
-            "payment-identity": {
+            "payment_identity": {
               "$ref": "#/components/schemas/PaymentIdentityRelationship"
             }
           }

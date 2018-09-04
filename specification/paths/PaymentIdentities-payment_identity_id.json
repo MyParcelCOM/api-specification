@@ -18,7 +18,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the payment-identity.",
+        "description": "Retrieved the payment identity.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
