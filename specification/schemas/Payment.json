@@ -14,14 +14,12 @@
               "$ref": "#/components/schemas/Price"
             },
             "paid_at": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Timestamp"
-                },
-                {
-                  "type": "null"
-                }
-              ]
+              "type": [
+                "number",
+                "null"
+              ],
+              "example": 1504801719,
+              "description": "Unix timestamp."
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
