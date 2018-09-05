@@ -111,7 +111,7 @@
         ]
       }
     ],
-    "summary": "Create an payment.",
+    "summary": "Create a payment.",
     "description": "This endpoint creates a new payment with the posted data.",
     "requestBody": {
       "description": "The payment object to be created.",
@@ -143,7 +143,8 @@
                       },
                       "relationships": {
                         "required": [
-                          "organization"
+                          "organization",
+                          "status"
                         ]
                       },
                       "attributes": {
