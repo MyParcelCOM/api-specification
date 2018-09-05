@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalPaymentIdentity"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "credentials": {
+              "type": "object",
+              "example": {
+                "token": "FHzWRJl5guoU6IIH"
+              }
+            },
+            "credit_card_supported": {
+              "type": "boolean",
+              "default": false,
+              "example": true
+            },
+            "debit_card_supported": {
+              "type": "boolean",
+              "default": false,
+              "example": false
+            }
+          }
+        }
+      }
+    }
+  ]
+}
