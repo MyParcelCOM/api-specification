@@ -99,17 +99,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/PaymentIdentity"
-                  },
-                  {
-                    "type": "object",
-                    "required": [
-                      "id"
-                    ]
-                  }
-                ]
+                "$ref": "#/components/schemas/PatchPaymentIdentity"
               }
             }
           }

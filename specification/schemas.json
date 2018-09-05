@@ -221,6 +221,9 @@
   "PatchPayment": {
     "$ref": "./schemas/PatchPayment.json"
   },
+  "PatchPaymentIdentity": {
+    "$ref": "./schemas/PatchPaymentIdentity.json"
+  },
   "PatchShipment": {
     "$ref": "./schemas/PatchShipment.json"
   },
