@@ -5,7 +5,10 @@
     ],
     "security": [
       {
-        "OAuth2": []
+        "OAuth2": [
+          "billing.show",
+          "billing.manage"
+        ]
       }
     ],
     "summary": "Get a payment by id.",
@@ -69,7 +72,9 @@
     ],
     "security": [
       {
-        "OAuth2": []
+        "OAuth2": [
+          "billing.manage"
+        ]
       }
     ],
     "summary": "Update a payment by id.",

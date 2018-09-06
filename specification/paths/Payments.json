@@ -3,9 +3,14 @@
     "tags": [
       "Payments"
     ],
-    "security": [{
-      "OAuth2": []
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "billing.show",
+          "billing.manage"
+        ]
+      }
+    ],
     "summary": "Get all the payments.",
     "description": "This endpoint retrieves the payments for your API client.",
     "responses": {
@@ -99,10 +104,14 @@
     "tags": [
       "Payments"
     ],
-    "security": [{
-      "OAuth2": []
-    }],
-    "summary": "Create an payment.",
+    "security": [
+      {
+        "OAuth2": [
+          "billing.manage"
+        ]
+      }
+    ],
+    "summary": "Create a payment.",
     "description": "This endpoint creates a new payment with the posted data.",
     "requestBody": {
       "description": "The payment object to be created.",
@@ -129,9 +138,13 @@
                   },
                   {
                     "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
                       "relationships": {
                         "required": [
-                          "organization"
+                          "organization",
+                          "status"
                         ]
                       },
                       "attributes": {
