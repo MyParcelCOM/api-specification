@@ -12,9 +12,7 @@
         "attributes": {
           "type": "object",
           "required": [
-            "carrier_status_code",
-            "carrier_status_description",
-            "carrier_timestamp"
+            "created_at"
           ],
           "additionalProperties": false,
           "properties": {
@@ -32,6 +30,11 @@
               "type": "number",
               "example": 1504801719,
               "description": "Unix timestamp when the carrier registered this status."
+            },
+            "created_at": {
+              "type": "number",
+              "example": 1504801719,
+              "description": "Unix timestamp when the status was created."
             }
           }
         },
