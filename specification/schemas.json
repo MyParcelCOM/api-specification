@@ -59,6 +59,9 @@
   "EnterpriseRelationship": {
     "$ref": "./schemas/EnterpriseRelationship.json"
   },
+  "Error": {
+    "$ref": "./schemas/Error.json"
+  },
   "File": {
     "$ref": "./schemas/File.json"
   },

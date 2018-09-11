@@ -33,18 +33,9 @@
             },
             "errors": {
               "type": "array",
-              "example": [
-                {
-                  "status": 503,
-                  "code": "12345",
-                  "title": "Service Unavailable",
-                  "detail": "We could not reach the carrier at the moment.",
-                  "meta": {
-                    "carrier_response": "API is temporarily not available",
-                    "carrier_status": 503
-                  }
-                }
-              ]
+              "items": {
+                "$ref": "#/components/schemas/Error"
+              }
             },
             "created_at": {
               "type": "number",
