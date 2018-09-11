@@ -6,11 +6,13 @@
     "security": [
       {
         "OAuth2": [
+          "billing.show",
+          "billing.manage"
         ]
       }
     ],
     "summary": "Get one payment identity.",
-    "description": "",
+    "description": "This endpoint retrieves the payment identity with the supplied id.",
     "parameters": [
       {
         "$ref": "#/components/parameters/path-payment_identity_id"

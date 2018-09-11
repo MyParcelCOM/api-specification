@@ -13,11 +13,13 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "amount": {
-              "$ref": "#/components/schemas/PriceAmount"
-            },
-            "currency": {
-              "$ref": "#/components/schemas/Currency"
+            "paid_at": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "example": 1504801719,
+              "description": "Unix timestamp."
             }
           }
         },
@@ -25,14 +27,8 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "organization": {
-              "$ref": "#/components/schemas/OrganizationRelationship"
-            },
             "status": {
               "$ref": "#/components/schemas/StatusRelationship"
-            },
-            "invoice": {
-              "$ref": "#/components/schemas/InvoiceRelationship"
             },
             "payment_identity": {
               "$ref": "#/components/schemas/PaymentIdentityRelationship"
