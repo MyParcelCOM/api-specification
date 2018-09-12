@@ -31,6 +31,12 @@
               "example": 1504801719,
               "description": "Unix timestamp when the carrier registered this status."
             },
+            "errors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Error"
+              }
+            },
             "created_at": {
               "type": "number",
               "example": 1504801719,

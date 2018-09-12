@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "number",
+      "example": 422
+    },
+    "code": {
+      "type": "string",
+      "example": "12345"
+    },
+    "title": {
+      "type": "string",
+      "example": "Value is too long"
+    },
+    "details": {
+      "type": "string",
+      "example": "The description field exceeds the limit of 25 characters."
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "pointer": {
+          "type": "string",
+          "example": "/data/attributes/description",
+          "description": "A JSON Pointer to the associated entity in the request body."
+        },
+        "parameter": {
+          "type": "string",
+          "example": "include",
+          "description": "Indication of which URI query parameter caused the error."
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "carrier_response": {
+          "type": [
+            "object",
+            "string"
+          ],
+          "example": "ParcelDescription1 exceeds character limit."
+        },
+        "carrier_status": {
+          "type": "number",
+          "example": 400
+        },
+        "carrier_rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "example": "max-length",
+                "description": "Indicating what type of rule applies. Examples are: max-length, required, required-unless."
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "number",
+                  "object"
+                ],
+                "example": "35"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
