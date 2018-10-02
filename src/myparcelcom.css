@@ -535,3 +535,17 @@ label[for='system-messages.manage-clientCredentials-checkbox-OAuth2']
 {
   display: none !important;
 }
+
+#swagger-ui .scheme-container {
+  margin: 0;
+  padding: 0;
+  background: #faf7ef;
+  box-shadow: none;
+}
+#swagger-ui .scheme-container .schemes {
+  position: relative;
+}
+#swagger-ui .scheme-container .auth-wrapper {
+  float: right;
+  margin-top: -96px;
+}
