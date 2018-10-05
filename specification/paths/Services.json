@@ -47,7 +47,7 @@
         }
       },
       {
-        "name": "filter[has_contract]",
+        "name": "filter[has_active_contract]",
         "in": "query",
         "description": "Boolean value.<ul><li>`true` Only services with active contract associations.</li><li>`false` Only services without active contract associations.</li></ul>",
         "schema": {
