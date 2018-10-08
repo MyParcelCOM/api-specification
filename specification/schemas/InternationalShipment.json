@@ -96,33 +96,6 @@
             "physical_properties": {
               "$ref": "#/components/schemas/PhysicalProperties"
             },
-            "physical_properties_verified": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/PhysicalProperties"
-                },
-                {
-                  "readOnly": true,
-                  "properties": {
-                    "height": {
-                      "readOnly": true
-                    },
-                    "width": {
-                      "readOnly": true
-                    },
-                    "length": {
-                      "readOnly": true
-                    },
-                    "volume": {
-                      "readOnly": true
-                    },
-                    "weight": {
-                      "readOnly": true
-                    }
-                  }
-                }
-              ]
-            },
             "items": {
               "type": "array",
               "items": {

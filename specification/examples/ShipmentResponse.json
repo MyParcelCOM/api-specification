@@ -13,13 +13,6 @@
         "barcode": "3SABCD0123456789",
         "tracking_code": "3SABCD0123456789",
         "tracking_url": "https://tracker.carrier.com/3SABCD0123456789",
-        "physical_properties_verified": {
-          "height": 150,
-          "width": 300,
-          "length": 500,
-          "volume": 22.5,
-          "weight": 5000
-        },
         "register_at": 1504801719,
         "created_at": 1504801719,
         "updated_at": 1504801719,
