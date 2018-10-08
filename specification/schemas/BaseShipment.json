@@ -91,28 +91,6 @@
             "service_contract": {
               "$ref": "#/components/schemas/ServiceContractRelationship"
             },
-            "parent": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ShipmentRelationship"
-                },
-                {
-                  "properties": {
-                    "data": {
-                      "readOnly": true,
-                      "properties": {
-                        "id": {
-                          "readOnly": true
-                        },
-                        "type": {
-                          "readOnly": true
-                        }
-                      }
-                    }
-                  }
-                }
-              ]
-            },
             "shop": {
               "allOf": [
                 {
