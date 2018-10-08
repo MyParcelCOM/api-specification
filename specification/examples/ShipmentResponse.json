@@ -31,15 +31,6 @@
             "related": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
           }
         },
-        "parent": {
-          "data": {
-            "type": "shipments",
-            "id": "7b808eee-bf1c-40cd-98f2-3c335a06417e"
-          },
-          "links": {
-            "related": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
-          }
-        },
         "shop": {
           "links": {
             "related": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
