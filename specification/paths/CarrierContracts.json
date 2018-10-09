@@ -54,7 +54,6 @@
                         "properties": {
                           "attributes": {
                             "required": [
-                              "active",
                               "status",
                               "currency",
                               "name"
@@ -208,7 +207,6 @@
                         "attributes": {
                           "type": "object",
                           "required": [
-                            "active",
                             "status",
                             "currency",
                             "name"
