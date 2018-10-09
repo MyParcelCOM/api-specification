@@ -47,8 +47,8 @@
           "example": "ParcelDescription1 exceeds character limit."
         },
         "carrier_status": {
-          "type": "number",
-          "example": 400
+          "type": "string",
+          "example": "400"
         },
         "carrier_rules": {
           "type": "array",
