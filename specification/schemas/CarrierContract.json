@@ -20,25 +20,19 @@
             "currency": {
               "$ref": "#/components/schemas/Currency"
             },
-            "active": {
-              "type": "boolean",
-              "default": false,
-              "example": true,
-              "description": "Indicates if the carrier contract may be used to create shipments."
-            },
             "name": {
               "type": "string",
               "example": "My Custom contract"
             },
             "status": {
-              "readOnly": true,
               "type": "string",
               "enum": [
-                "pending",
-                "verified",
-                "invalid"
+                "active",
+                "inactive",
+                "invalid",
+                "pending"
               ],
-              "example": "verified",
+              "example": "active",
               "description": "A new carrier contract is pending until the `credentials` have been verified. The verification process is done automatically."
             }
           }
