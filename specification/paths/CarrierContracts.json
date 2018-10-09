@@ -3,16 +3,18 @@
     "tags": [
       "CarrierContracts"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.show",
-        "shipments.manage",
-        "brokers.show",
-        "brokers.manage",
-        "organizations.show",
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.show",
+          "shipments.manage",
+          "brokers.show",
+          "brokers.manage",
+          "organizations.show",
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get all available carrier contracts for your API client.",
     "description": "This endpoint retrieves carrier contracts available to your API client. Only active carrier contracts with a verified status can be used to create shipments.",
     "parameters": [
@@ -119,12 +121,14 @@
     "tags": [
       "CarrierContracts"
     ],
-    "security": [{
-      "OAuth2": [
-        "organization.manage",
-        "brokers.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organization.manage",
+          "brokers.manage"
+        ]
+      }
+    ],
     "summary": "Create a new carrier contract.",
     "description": "This endpoint creates a new carrier contract with the posted data. Use your organization ID in the owner relationship to become the contract owner. The status will be `pending` until our system has checked if the credentials are valid.",
     "requestBody": {
@@ -157,6 +161,9 @@
                           "name"
                         ],
                         "properties": {
+                          "status": {
+                            "readOnly": true
+                          },
                           "credentials": {
                             "type": "object",
                             "example": {
