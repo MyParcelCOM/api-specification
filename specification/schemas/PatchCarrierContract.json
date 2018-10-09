@@ -16,11 +16,12 @@
             "currency": {
               "$ref": "#/components/schemas/Currency"
             },
-            "active": {
-              "type": "boolean",
-              "default": false,
-              "example": true,
-              "description": "Indicates if the carrier contract may be used to create shipments."
+            "status": {
+              "type": "string",
+              "enum": [
+                "active",
+                "inactive"
+              ]
             },
             "name": {
               "type": "string",
