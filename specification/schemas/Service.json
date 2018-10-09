@@ -81,14 +81,6 @@
               "example": "pick-up",
               "description": "Where the parcel will be delivered to the customer. In case of `pick-up`, a carrier location of type pick-up must be sent with the shipment request."
             },
-            "rating": {
-              "type": "number",
-              "format": "float",
-              "minimum": 0.0,
-              "maximum": 1.0,
-              "example": 0.8,
-              "description": "Generic rating of the service which indicates a combination of price, quality and popularity."
-            }
           }
         },
         "relationships": {
