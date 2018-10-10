@@ -14,36 +14,18 @@
               "type": "string",
               "example": "Holmes investigation inc. 🕵"
             },
-            "coc": {
+            "company_registration_number": {
               "type": "string",
               "example": "63190133",
               "description": "Chamber of Commerce number."
             },
-            "iban": {
-              "$ref": "#/components/schemas/Iban"
-            },
             "language": {
               "$ref": "#/components/schemas/Language"
-            },
-            "payment_method": {
-              "type": "string",
-              "enum": [
-                "sepa-direct-debit",
-                "on-credit",
-                "prepayment"
-              ],
-              "example": "prepayment",
-              "description": "When and how shipment labels should be paid."
             },
             "vat_number": {
               "type": "string",
               "example": "123456789MVA",
               "description": "Value Added Tax identification number."
-            },
-            "payment_term": {
-              "type": "number",
-              "example": 1,
-              "description": "Amount of days in which the organization needs to pay."
             },
             "currency": {
               "$ref": "#/components/schemas/Currency"

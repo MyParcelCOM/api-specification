@@ -98,9 +98,6 @@
   "HookValueTypes": {
     "$ref": "./schemas/HookValueTypes.json"
   },
-  "Iban": {
-    "$ref": "./schemas/Iban.json"
-  },
   "InternationalShipment": {
     "$ref": "./schemas/InternationalShipment.json"
   },
