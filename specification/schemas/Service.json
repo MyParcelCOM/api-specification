@@ -80,7 +80,7 @@
               ],
               "example": "pick-up",
               "description": "Where the parcel will be delivered to the customer. In case of `pick-up`, a carrier location of type pick-up must be sent with the shipment request."
-            },
+            }
           }
         },
         "relationships": {
