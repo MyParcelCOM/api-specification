@@ -17,43 +17,17 @@
               "type": "string",
               "example": "Holmes investigation inc. 🕵"
             },
-            "coc": {
+            "company_registration_number": {
               "type": [
                 "string",
                 "null"
               ],
               "example": "63190133"
             },
-            "iban": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Iban"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
             "language": {
               "oneOf": [
                 {
                   "$ref": "#/components/schemas/Language"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
-            "payment_method": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "sepa-direct-debit",
-                    "on-credit",
-                    "prepayment"
-                  ],
-                  "example": "prepayment"
                 },
                 {
                   "type": "null"
@@ -66,14 +40,6 @@
                 "null"
               ],
               "example": "123456789MVA"
-            },
-            "payment_term": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "example": "1",
-              "description": "Amount of days in which the organization needs to pay"
             },
             "currency": {
               "oneOf": [
