@@ -36,7 +36,7 @@
       "type": "string",
       "pattern": "^[0-9.]+$",
       "example": "8517.12.00",
-      "description": "Harmonized System code used by customs"
+      "description": "Harmonized System code used by customs."
     },
     "origin_country_code": {
       "$ref": "#/components/schemas/CountryCode"
@@ -44,7 +44,7 @@
     "nett_weight": {
       "type": "number",
       "example": 135,
-      "description": "The nett weight of the item in grams"
+      "description": "The nett weight of the item in grams."
     }
   }
 }

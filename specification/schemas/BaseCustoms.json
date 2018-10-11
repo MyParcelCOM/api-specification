@@ -24,7 +24,7 @@
         "abandon"
       ],
       "example": "return",
-      "description": "Action when the parcel cannot be delivered"
+      "description": "Action when the parcel cannot be delivered."
     },
     "incoterm": {
       "type": "string",
@@ -33,7 +33,7 @@
         "DDP"
       ],
       "example": "DDU",
-      "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)"
+      "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)."
     },
     "license_number": {
       "type": [

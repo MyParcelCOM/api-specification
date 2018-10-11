@@ -113,13 +113,19 @@
                   "type": "number",
                   "format": "double",
                   "example": "-0.1606707"
-                },
-                "distance": {
-                  "type": "integer",
-                  "description": "Distance to the location in meters",
-                  "example": "1337"
                 }
               }
+            }
+          }
+        },
+        "meta": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "distance": {
+              "type": "integer",
+              "description": "Distance from the specified postal code to the location in meters.",
+              "example": "1337"
             }
           }
         },
