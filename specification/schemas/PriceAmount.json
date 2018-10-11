@@ -1,5 +1,5 @@
 {
   "type": "number",
   "example": 995,
-  "description": "Price amount in cents/pence"
+  "description": "Price amount in cents/pence."
 }

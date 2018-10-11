@@ -26,7 +26,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the service contract",
+        "description": "Retrieved the service contract.",
         "content": {
           "application/vnd.api+json": {
             "schema": {

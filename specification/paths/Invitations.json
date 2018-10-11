@@ -82,7 +82,7 @@
       ]
     }],
     "summary": "Create an invitation.",
-    "description": "This endpoint creates a new invitation with the posted data. <strong>An invitation will be sent via email.</strong> ",
+    "description": "This endpoint creates a new invitation with the posted data. <strong>An invitation will be sent via email.</strong>",
     "requestBody": {
       "description": "The invitation object to be created.",
       "required": true,

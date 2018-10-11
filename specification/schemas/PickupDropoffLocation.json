@@ -124,7 +124,7 @@
           "properties": {
             "distance": {
               "type": "integer",
-              "description": "Distance from the specified postal code to the location in meters",
+              "description": "Distance from the specified postal code to the location in meters.",
               "example": "1337"
             }
           }

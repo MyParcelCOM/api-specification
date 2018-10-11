@@ -9,7 +9,7 @@
       ],
       "minimum": 0,
       "example": 150,
-      "description": "Height in millimeters"
+      "description": "Height in millimeters."
     },
     "width": {
       "type": [
@@ -18,7 +18,7 @@
       ],
       "minimum": 0,
       "example": 300,
-      "description": "Width in millimeters"
+      "description": "Width in millimeters."
     },
     "length": {
       "type": [
@@ -27,7 +27,7 @@
       ],
       "minimum": 0,
       "example": 500,
-      "description": "Length in millimeters"
+      "description": "Length in millimeters."
     },
     "volume": {
       "type": [
@@ -36,13 +36,13 @@
       ],
       "minimum": 0,
       "example": 22.5,
-      "description": "Volume in liters (dm3)"
+      "description": "Volume in liters. (dm3)"
     },
     "weight": {
       "type": "number",
       "minimum": 0,
       "example": 5000,
-      "description": "Weight in grams"
+      "description": "Weight in grams."
     }
   }
 }
