@@ -11,6 +11,16 @@
     }],
     "summary": "Get all available organizations for your API client.",
     "description": "This endpoint retrieves all organizations available to your API client.",
+    "parameters": [
+      {
+        "name": "filter[search]",
+        "in": "query",
+        "description": "String of characters you want to look for in a organizations attributes. Available fields to look in are:<ul><li>`Name`</li><li>`Address`</li><li>`Email`</li><li>`Phone`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the organizations.",
