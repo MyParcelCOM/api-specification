@@ -23,7 +23,10 @@
               "$ref": "#/components/schemas/RegionCode"
             },
             "currency": {
-              "$ref": "#/components/schemas/Currency"
+              "type": "string",
+              "pattern": "^[A-Z]{3}$",
+              "example": "EUR",
+              "description": "Currency code in ISO 4217 format."
             },
             "name": {
               "type": "string",

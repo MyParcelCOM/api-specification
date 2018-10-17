@@ -1,6 +1,9 @@
 {
   "type": "string",
-  "pattern": "[A-Z]{3}",
+  "enum": [
+    "EUR",
+    "GBP"
+  ],
   "example": "EUR",
   "description": "Currency code in ISO 4217 format."
 }
