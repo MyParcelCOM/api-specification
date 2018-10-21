@@ -537,8 +537,7 @@ label[for='system-messages.manage-clientCredentials-checkbox-OAuth2']
 }
 
 #swagger-ui .scheme-container {
-  margin: 0;
-  padding: 0;
+  padding-top: 0;
   background: #faf7ef;
   box-shadow: none;
 }

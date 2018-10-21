@@ -7,11 +7,11 @@
   "additionalProperties": false,
   "properties": {
     "total_pages": {
-      "type": "integer",
+      "type": "number",
       "example": 13
     },
     "total_records": {
-      "type": "integer",
+      "type": "number",
       "example": 373
     }
   }
