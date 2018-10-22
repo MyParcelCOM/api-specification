@@ -13,9 +13,9 @@
     "description": "This endpoint retrieves all service contracts available to your API client.",
     "parameters": [
       {
-        "name": "filter[carrier_contract]",
+        "name": "filter[contract]",
         "in": "query",
-        "description": "Comma separated string of carrier contract ids to filter by.",
+        "description": "Comma separated string of contract ids to filter by.",
         "schema": {
           "type": "string"
         }
@@ -39,7 +39,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier_contract`</li><li>`service`</li><li>`service_groups`</li><li>`service_option_prices`</li><li>`service_option_prices.service_option`</li></ul>",
+        "description": "Comma separated string of relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`service`</li><li>`service_groups`</li><li>`service_option_prices`</li><li>`service_option_prices.service_option`</li></ul>",
         "schema": {
           "type": "string"
         }

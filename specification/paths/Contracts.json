@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "CarrierContracts"
+      "Contracts"
     ],
     "security": [
       {
@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get all available carrier contracts for your API client.",
-    "description": "This endpoint retrieves carrier contracts available to your API client. Only active carrier contracts with a verified status can be used to create shipments.",
+    "summary": "Get all available contracts for your API client.",
+    "description": "This endpoint retrieves contracts available to your API client. Only active contracts with a verified status can be used to create shipments.",
     "parameters": [
       {
         "name": "include",
@@ -29,7 +29,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the carrier contracts.",
+        "description": "Retrieved the contracts.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -45,7 +45,7 @@
                   "items": {
                     "allOf": [
                       {
-                        "$ref": "#/components/schemas/CarrierContract"
+                        "$ref": "#/components/schemas/Contract"
                       },
                       {
                         "required": [
@@ -89,23 +89,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/carrier-contracts?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/contracts?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/carrier-contracts?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/contracts?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/carrier-contracts?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/contracts?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/carrier-contracts?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/contracts?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/carrier-contracts?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/contracts?page[number]=13&page[size]=30"
                     }
                   }
                 }
@@ -118,7 +118,7 @@
   },
   "post": {
     "tags": [
-      "CarrierContracts"
+      "Contracts"
     ],
     "security": [
       {
@@ -128,10 +128,10 @@
         ]
       }
     ],
-    "summary": "Create a new carrier contract.",
-    "description": "This endpoint creates a new carrier contract with the posted data. Use your organization ID in the owner relationship to become the contract owner. The status will be `pending` until our system has checked if the credentials are valid.",
+    "summary": "Create a new contract.",
+    "description": "This endpoint creates a new contract with the posted data. Use your organization ID in the owner relationship to become the contract owner. The status will be `pending` until our system has checked if the credentials are valid.",
     "requestBody": {
-      "description": "The carrier contract object to be created.",
+      "description": "The contract object to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -145,7 +145,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/CarrierContract"
+                    "$ref": "#/components/schemas/Contract"
                   },
                   {
                     "properties": {
@@ -184,7 +184,7 @@
     },
     "responses": {
       "201": {
-        "description": "The carrier contract is created.",
+        "description": "The contract is created.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -197,7 +197,7 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/CarrierContract"
+                      "$ref": "#/components/schemas/Contract"
                     },
                     {
                       "required": [

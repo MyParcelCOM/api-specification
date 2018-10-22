@@ -2,56 +2,45 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalCarrierContract"
+      "$ref": "#/components/schemas/MinimalContract"
     },
     {
       "required": [
-        "attributes",
-        "relationships"
+        "id"
       ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "currency",
-            "name"
-          ],
+          "additionalProperties": false,
           "properties": {
             "currency": {
               "$ref": "#/components/schemas/Currency"
-            },
-            "name": {
-              "type": "string",
-              "example": "My Custom contract"
             },
             "status": {
               "type": "string",
               "enum": [
                 "active",
-                "inactive",
-                "invalid",
-                "pending"
-              ],
-              "example": "active",
-              "description": "A new carrier contract is pending until the `credentials` have been verified. The verification process is done automatically."
+                "inactive"
+              ]
+            },
+            "name": {
+              "type": "string",
+              "example": "My Custom Contract"
+            },
+            "credentials": {
+              "type": "object",
+              "example": {
+                "api_username": "your_api_username",
+                "api_password": "your_api_password"
+              },
+              "description": "The credentials required to communicate with the carrier as defined by the `credentials_format` of the carrier."
             }
           }
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "carrier",
-            "owner"
-          ],
           "additionalProperties": false,
           "properties": {
-            "carrier": {
-              "$ref": "#/components/schemas/CarrierRelationship"
-            },
-            "service_contracts": {
-              "readOnly": true,
-              "$ref": "#/components/schemas/ServiceContractsRelationship"
-            },
             "owner": {
               "oneOf": [
                 {
