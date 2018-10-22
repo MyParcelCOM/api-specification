@@ -98,7 +98,9 @@
                           "meta": {
                             "type": "object",
                             "required": [
-                              "price"
+                              "price",
+                              "weight_min",
+                              "weight_max"
                             ],
                             "additionalProperties": false,
                             "properties": {
