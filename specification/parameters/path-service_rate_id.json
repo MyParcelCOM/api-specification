@@ -1,7 +1,7 @@
 {
-  "name": "service_group_id",
+  "name": "service_rate_id",
   "in": "path",
-  "description": "Id of the service group.",
+  "description": "Id of the service rate.",
   "required": true,
   "schema": {
     "type": "string",

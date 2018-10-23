@@ -6,8 +6,8 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^service-groups$",
-      "example": "service-groups"
+      "pattern": "^service-rates$",
+      "example": "service-rates"
     },
     "id": {
       "type": "string",

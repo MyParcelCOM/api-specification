@@ -53,8 +53,8 @@
   "path-service_contract_id": {
     "$ref": "./parameters/path-service_contract_id.json"
   },
-  "path-service_group_id": {
-    "$ref": "./parameters/path-service_group_id.json"
+  "path-service_rate_id": {
+    "$ref": "./parameters/path-service_rate_id.json"
   },
   "path-service_option_id": {
     "$ref": "./parameters/path-service_option_id.json"
