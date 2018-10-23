@@ -95,6 +95,9 @@
   "/service-contracts/{service_contract_id}/option-prices": {
     "$ref": "./paths/ServiceContracts-service_contract_id-ServiceOptionPrices.json"
   },
+  "/service-groups": {
+    "$ref": "./paths/ServiceGroups.json"
+  },
   "/service-groups/{service_group_id}": {
     "$ref": "./paths/ServiceGroups-service_group_id.json"
   },
