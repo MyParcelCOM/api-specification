@@ -13,8 +13,8 @@
         "organizations.manage"
       ]
     }],
-    "summary": "Get all the carrier contracts for a carrier.",
-    "description": "This endpoint retrieves carrier contracts for the supplied carrier. Only active carrier contracts with a verified status can be used to create shipments.",
+    "summary": "Get all the contracts for a carrier.",
+    "description": "This endpoint retrieves contracts for the supplied carrier. Only active contracts with a verified status can be used to create shipments.",
     "parameters": [
       {
         "$ref": "#/components/parameters/path-carrier_id"
@@ -30,7 +30,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the carrier contract(s).",
+        "description": "Retrieved the contract(s).",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -45,7 +45,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CarrierContract"
+                    "$ref": "#/components/schemas/Contract"
                   }
                 },
                 "meta": {

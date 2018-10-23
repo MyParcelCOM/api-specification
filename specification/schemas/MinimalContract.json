@@ -6,8 +6,8 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^carrier-contracts$",
-      "example": "carrier-contracts"
+      "pattern": "^contracts$",
+      "example": "contracts"
     },
     "id": {
       "type": "string",

@@ -12,16 +12,16 @@
     "$ref": "./paths/Carriers-carrier_id.json"
   },
   "/carriers/{carrier_id}/contracts": {
-    "$ref": "./paths/Carriers-carrier_id-CarrierContracts.json"
+    "$ref": "./paths/Carriers-carrier_id-Contracts.json"
   },
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code.json"
   },
-  "/carrier-contracts": {
-    "$ref": "./paths/CarrierContracts.json"
+  "/contracts": {
+    "$ref": "./paths/Contracts.json"
   },
-  "/carrier-contracts/{carrier_contract_id}": {
-    "$ref": "./paths/CarrierContracts-carrier_contract_id.json"
+  "/contracts/{contract_id}": {
+    "$ref": "./paths/Contracts-contract_id.json"
   },
   "/combined-files": {
     "$ref": "./paths/CombinedFiles.json"

@@ -1,7 +1,7 @@
 {
-  "name": "carrier_contract_id",
+  "name": "contract_id",
   "in": "path",
-  "description": "Id of the carrier contract.",
+  "description": "Id of the contract.",
   "required": true,
   "schema": {
     "type": "string",

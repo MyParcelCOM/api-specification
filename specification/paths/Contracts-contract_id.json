@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "CarrierContracts"
+      "Contracts"
     ],
     "security": [{
       "OAuth2": [
@@ -13,11 +13,11 @@
         "organizations.manage"
       ]
     }],
-    "summary": "Get a carrier contract by id.",
-    "description": "This endpoint retrieves a carrier contract for the supplied id.",
+    "summary": "Get a contract by id.",
+    "description": "This endpoint retrieves a contract for the supplied id.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-carrier_contract_id"
+        "$ref": "#/components/parameters/path-contract_id"
       },
       {
         "name": "include",
@@ -30,7 +30,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the carrier contract.",
+        "description": "Retrieved the contract.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -43,7 +43,7 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/CarrierContract"
+                      "$ref": "#/components/schemas/Contract"
                     },
                     {
                       "required": [
@@ -82,7 +82,7 @@
   },
   "patch": {
     "tags": [
-      "CarrierContracts"
+      "Contracts"
     ],
     "security": [{
       "OAuth2": [
@@ -90,15 +90,15 @@
         "brokers.manage"
       ]
     }],
-    "summary": "Update an carrier contract by id.",
-    "description": "This endpoint updates the carrier contract with the supplied id. The status will be `pending` until our system has checked if the credentials are valid.",
+    "summary": "Update a contract by id.",
+    "description": "This endpoint updates the contract with the supplied id. The status will be `pending` until our system has checked if the credentials are valid.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-carrier_contract_id"
+        "$ref": "#/components/parameters/path-contract_id"
       }
     ],
     "requestBody": {
-      "description": "The carrier contract object with attributes to be updated.",
+      "description": "The contract object with attributes to be updated.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -110,7 +110,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchCarrierContract"
+                "$ref": "#/components/schemas/PatchContract"
               }
             }
           }
@@ -119,7 +119,7 @@
     },
     "responses": {
       "200": {
-        "description": "The carrier contract is updated.",
+        "description": "The contract is updated.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -132,7 +132,7 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/CarrierContract"
+                      "$ref": "#/components/schemas/Contract"
                     },
                     {
                       "required": [
@@ -171,7 +171,7 @@
   },
   "delete": {
     "tags": [
-      "CarrierContracts"
+      "Contracts"
     ],
     "security": [{
       "OAuth2": [
@@ -179,19 +179,19 @@
         "brokers.manage"
       ]
     }],
-    "summary": "Delete a carrier contract by id.",
-    "description": "This endpoint deletes the carrier contract with the supplied id.",
+    "summary": "Delete a contract by id.",
+    "description": "This endpoint deletes the contract with the supplied id.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-carrier_contract_id"
+        "$ref": "#/components/parameters/path-contract_id"
       }
     ],
     "responses": {
       "202": {
-        "description": "The carrier contract will be deleted."
+        "description": "The contract will be deleted."
       },
       "204": {
-        "description": "The carrier contract is deleted."
+        "description": "The contract is deleted."
       }
     }
   }
