@@ -78,7 +78,7 @@
           "additionalProperties": false,
           "properties": {
             "contract": {
-              "$ref": "#/components/schemas/CarrierContractRelationship"
+              "$ref": "#/components/schemas/ContractRelationship"
             },
             "service": {
               "$ref": "#/components/schemas/ServiceRelationship"
