@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalServiceGroup"
+      "$ref": "#/components/schemas/MinimalServiceRate"
     },
     {
       "required": [
@@ -131,7 +131,7 @@
           "properties": {
             "self": {
               "type": "string",
-              "example": "$API_HOST/service-groups/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+              "example": "$API_HOST/service-rates/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
             }
           }
         }

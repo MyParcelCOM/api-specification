@@ -19,8 +19,8 @@
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
             },
-            "service_groups": {
-              "$ref": "#/components/schemas/ServiceGroupsRelationship"
+            "service_rates": {
+              "$ref": "#/components/schemas/ServiceRatesRelationship"
             },
             "service_option_prices": {
               "$ref": "#/components/schemas/ServiceOptionPricesRelationship"
