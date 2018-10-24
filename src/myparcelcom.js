@@ -22,7 +22,7 @@
 
         // inject logo
         const title = document.getElementsByClassName('title')[0]
-        title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://www.myparcel.com/images/myparcel-logo-black.png" alt="MyParcel.com">')
+        title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://cdn.myparcel.com/images/myparcelcom-black.svg" alt="MyParcel.com">')
 
         // version link
         const versions = document.querySelectorAll('.version')
