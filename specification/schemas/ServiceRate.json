@@ -14,6 +14,8 @@
         "attributes": {
           "type": "object",
           "required": [
+            "weight_min",
+            "weight_max",
             "price"
           ],
           "additionalProperties": false,
@@ -98,9 +100,7 @@
                           "meta": {
                             "type": "object",
                             "required": [
-                              "price",
-                              "weight_min",
-                              "weight_max"
+                              "price"
                             ],
                             "additionalProperties": false,
                             "properties": {
