@@ -32,6 +32,14 @@
         }
       },
       {
+        "name": "filter[postal_code]",
+        "in": "query",
+        "description": "Postal code to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "filter[region_code]",
         "in": "query",
         "description": "Comma separated string of region codes to filter by.",
