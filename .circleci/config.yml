@@ -17,7 +17,12 @@ jobs:
 
     - run:
         name: Start server to build dist files
-        command: ./mp.sh up
+        command: |
+          ./mp.sh up
+          while [ ! -f dist/swagger.json ]
+          do
+            sleep 1
+          done
 
     - run:
         name: Deploy to staging server
