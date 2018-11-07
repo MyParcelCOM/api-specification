@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+if [ "$1" != "staging" ]; then
+  echo "Deploying can only be done to staging for now."
+  exit
+fi
+
+if [ "$2" == "" ]; then
+  echo "Please supply a path to your ssh key as the second parameter."
+  exit
+fi
+SSH_KEY="$2"
+
+echo ""
+echo "MP: Creating export bundle"
+tar zcvf ${ROOT_DIR}/api-spec-export.tar.gz dist/*
+
+echo ""
+echo -e "MP: Uploading bundle to server"
+scp -C -i ${SSH_KEY} ${ROOT_DIR}/api-spec-export.tar.gz ubuntu@staging-docs.myparcel.com:~/staging-docs.myparcel.com
+
+# Check if scp was successful.
+SCP_CODE=$?
+if [ $SCP_CODE != 0 ]; then
+  echo "scp seems to have failed with code $SCP_CODE"
+  exit $SCP_CODE
+fi
+
+echo ""
+echo "MP: Trigger server side deploy script"
+ssh -i ${SSH_KEY} ubuntu@staging-docs.myparcel.com 'bash -s' < ${ROOT_DIR}/deployment/server_unpacking.sh
+
+# Check if ssh was successful.
+SSH_CODE=$?
+if [ $SSH_CODE != 0 ]; then
+  echo "ssh seems to have failed with code $SSH_CODE"
+  exit $SSH_CODE
+fi
+
+echo ""
+echo "MP: Cleaning up export bundle"
+rm ${ROOT_DIR}/api-spec-export.tar.gz
+
+echo ""
+echo "MP: Done!"

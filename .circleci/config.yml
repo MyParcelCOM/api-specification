@@ -1,0 +1,41 @@
+version: 2
+jobs:
+  deploy_develop:
+    machine:
+      image: circleci/classic:edge
+
+    steps:
+    - add_ssh_keys:
+        fingerprints:
+        - "1c:5c:08:53:84:9c:23:a1:aa:d5:d4:83:29:ad:86:fb"
+
+    - checkout
+
+    - run:
+        name: Install dependencies
+        command: ./mp.sh setup
+
+    - run:
+        name: Start server to build dist files
+        command: |
+          ./mp.sh up
+          while [ ! -f dist/swagger.json ]
+          do
+            sleep 1
+          done
+
+    - run:
+        name: Deploy to staging server
+        command: |
+          SSH_KEY_NAME=$(ls ~/.ssh | grep id_rsa_)
+          ./mp.sh deploy staging ~/.ssh/${SSH_KEY_NAME:-id_rsa}
+
+workflows:
+  version: 2
+
+  deploy_to_staging:
+    jobs:
+    - deploy_develop:
+        filters:
+          branches:
+            only: master
