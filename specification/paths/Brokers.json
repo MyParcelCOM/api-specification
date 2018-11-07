@@ -10,7 +10,7 @@
         "organizations.make"
       ]
     }],
-    "summary": "Get all available brokers for your API client!",
+    "summary": "Get all available brokers for your API client.",
     "description": "This endpoint retrieves all brokers available to your API client. If your client is created within our `MyParcel.com` portal, it will be connected to 1 broker, for example `MyParcel.com - UK`.",
     "responses": {
       "200": {
