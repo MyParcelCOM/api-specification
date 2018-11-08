@@ -47,6 +47,38 @@
         }
       },
       {
+        "name": "filter[address_from][country_code]",
+        "in": "query",
+        "description": "Country code of origin location to filter by. May be used instead of region_from and can be combined with filter[address_from][postal_code] for more accurate results.",
+        "schema": {
+          "$ref": "#/components/schemas/CountryCode"
+        }
+      },
+      {
+        "name": "filter[address_from][postal_code]",
+        "in": "query",
+        "description": "Postal code of origin location to filter by. May be used instead of region_from and can be combined with filter[address_from][country_code] for more accurate results.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[address_to][country_code]",
+        "in": "query",
+        "description": "Country code of destination location to filter by. May be used instead of region_to and can be combined with filter[address_to][postal_code] for more accurate results.",
+        "schema": {
+          "$ref": "#/components/schemas/CountryCode"
+        }
+      },
+      {
+        "name": "filter[address_to][postal_code]",
+        "in": "query",
+        "description": "Postal code of destination location to filter by. May be used instead of region_to and can be combined with filter[address_to][country_code] for more accurate results.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "filter[has_active_contract]",
         "in": "query",
         "description": "Boolean value.<ul><li>`true` Only services with active contract associations.</li><li>`false` Only services without active contract associations.</li></ul>",
