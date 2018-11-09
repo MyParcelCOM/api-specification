@@ -13,7 +13,32 @@
     ],
     "summary": "Get all available service rates for your API client.",
     "description": "This endpoint retrieves all service rates available to your API client.",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "filter[contract]",
+        "in": "query",
+        "description": "Comma separated string of contract ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[service]",
+        "in": "query",
+        "description": "Comma separated string of service ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[weight]",
+        "in": "query",
+        "description": "Weight value in grams to filter by. <br>Only service rates which `weight_min`-`weight_max` range includes the desired weight will be returned.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the service rates.",
