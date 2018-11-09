@@ -1,24 +1,36 @@
 {
   "get": {
     "tags": [
-      "ServiceContracts"
+      "Carriers"
     ],
     "security": [{
       "OAuth2": [
         "shipments.show",
-        "shipments.manage"
+        "shipments.manage",
+        "brokers.show",
+        "brokers.manage",
+        "organizations.show",
+        "organizations.manage"
       ]
     }],
-    "summary": "Get all the service groups for a service contract.",
-    "description": "This endpoint retrieves service groups for the supplied service contract.",
+    "summary": "Get all the contracts for a carrier.",
+    "description": "This endpoint retrieves contracts for the supplied carrier. Only active contracts with a verified status can be used to create shipments.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-service_contract_id"
+        "$ref": "#/components/parameters/path-carrier_id"
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`owner`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the service group(s).",
+        "description": "Retrieved the contract(s).",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -33,7 +45,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ServiceGroup"
+                    "$ref": "#/components/schemas/Contract"
                   }
                 },
                 "meta": {
@@ -49,23 +61,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/groups?page[number]=3&page[size]=30"
+                      "example": "API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/contracts?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/groups?page[number]=1&page[size]=30"
+                      "example": "API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/contracts?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/groups?page[number]=2&page[size]=30"
+                      "example": "API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/contracts?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/groups?page[number]=4&page[size]=30"
+                      "example": "API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/contracts?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/groups?page[number]=13&page[size]=30"
+                      "example": "API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/contracts?page[number]=13&page[size]=30"
                     }
                   }
                 }

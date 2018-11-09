@@ -29,11 +29,11 @@
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
   },
-  "CarrierContract": {
-    "$ref": "./schemas/CarrierContract.json"
+  "Contract": {
+    "$ref": "./schemas/Contract.json"
   },
-  "CarrierContractRelationship": {
-    "$ref": "./schemas/CarrierContractRelationship.json"
+  "ContractRelationship": {
+    "$ref": "./schemas/ContractRelationship.json"
   },
   "CarrierRelationship": {
     "$ref": "./schemas/CarrierRelationship.json"
@@ -122,8 +122,8 @@
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
   },
-  "MinimalCarrierContract": {
-    "$ref": "./schemas/MinimalCarrierContract.json"
+  "MinimalContract": {
+    "$ref": "./schemas/MinimalContract.json"
   },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
@@ -170,8 +170,8 @@
   "MinimalServiceContract": {
     "$ref": "./schemas/MinimalServiceContract.json"
   },
-  "MinimalServiceGroup": {
-    "$ref": "./schemas/MinimalServiceGroup.json"
+  "MinimalServiceRate": {
+    "$ref": "./schemas/MinimalServiceRate.json"
   },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
@@ -212,8 +212,8 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
-  "PatchCarrierContract": {
-    "$ref": "./schemas/PatchCarrierContract.json"
+  "PatchContract": {
+    "$ref": "./schemas/PatchContract.json"
   },
   "PatchOrganization": {
     "$ref": "./schemas/PatchOrganization.json"
@@ -275,11 +275,11 @@
   "ServiceContractsRelationship": {
     "$ref": "./schemas/ServiceContractsRelationship.json"
   },
-  "ServiceGroup": {
-    "$ref": "./schemas/ServiceGroup.json"
+  "ServiceRate": {
+    "$ref": "./schemas/ServiceRate.json"
   },
-  "ServiceGroupsRelationship": {
-    "$ref": "./schemas/ServiceGroupsRelationship.json"
+  "ServiceRatesRelationship": {
+    "$ref": "./schemas/ServiceRatesRelationship.json"
   },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"

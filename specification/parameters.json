@@ -8,8 +8,8 @@
   "path-carrier_id": {
     "$ref": "./parameters/path-carrier_id.json"
   },
-  "path-carrier_contract_id": {
-    "$ref": "./parameters/path-carrier_contract_id.json"
+  "path-contract_id": {
+    "$ref": "./parameters/path-contract_id.json"
   },
   "path-combined_file_id": {
     "$ref": "./parameters/path-combined_file_id.json"
@@ -53,8 +53,8 @@
   "path-service_contract_id": {
     "$ref": "./parameters/path-service_contract_id.json"
   },
-  "path-service_group_id": {
-    "$ref": "./parameters/path-service_group_id.json"
+  "path-service_rate_id": {
+    "$ref": "./parameters/path-service_rate_id.json"
   },
   "path-service_option_id": {
     "$ref": "./parameters/path-service_option_id.json"

@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "ServiceGroups"
+      "ServiceRates"
     ],
     "security": [{
       "OAuth2": [
@@ -9,16 +9,16 @@
         "shipments.manage"
       ]
     }],
-    "summary": "Get a service group by id.",
-    "description": "This endpoint retrieves a service group with the supplied id.",
+    "summary": "Get a service rate by id.",
+    "description": "This endpoint retrieves a service rate with the supplied id.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-service_group_id"
+        "$ref": "#/components/parameters/path-service_rate_id"
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the service group.",
+        "description": "Retrieved the service rate.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -29,7 +29,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ServiceGroup"
+                  "$ref": "#/components/schemas/ServiceRate"
                 }
               }
             }

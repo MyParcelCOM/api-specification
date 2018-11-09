@@ -6,13 +6,13 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^carrier-contracts$",
-      "example": "carrier-contracts"
+      "pattern": "^service-rates$",
+      "example": "service-rates"
     },
     "id": {
       "type": "string",
       "format": "uuid",
-      "example": "2cb32706-5762-4b96-9212-327e6afaeeff"
+      "example": "09a8f83a-bc8d-4598-81e6-ebf9d59a186a"
     }
   }
 }
