@@ -108,8 +108,11 @@
                 }
               ]
             },
-            "service_contract": {
-              "$ref": "#/components/schemas/ServiceContractRelationship"
+            "service": {
+              "$ref": "#/components/schemas/ServiceRelationship"
+            },
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
             }
           }
         }

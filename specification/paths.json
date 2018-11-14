@@ -80,15 +80,6 @@
   "/services/{service_id}": {
     "$ref": "./paths/Services-service_id.json"
   },
-  "/services/{service_id}/contracts": {
-    "$ref": "./paths/Services-service_id-ServiceContracts.json"
-  },
-  "/service-contracts": {
-    "$ref": "./paths/ServiceContracts.json"
-  },
-  "/service-contracts/{service_contract_id}": {
-    "$ref": "./paths/ServiceContracts-service_contract_id.json"
-  },
   "/service-rates": {
     "$ref": "./paths/ServiceRates.json"
   },

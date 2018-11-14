@@ -451,8 +451,6 @@ a:hover {
 #operations-tag-CombinedFiles:before,
 #operations-tag-Hooks:before,
 #operations-tag-Invitations:before,
-#operations-tag-ServiceContracts:before,
-#operations-tag-ServiceInsurances:before,
 #operations-tag-SystemMessages:before,
 #operations-tag-Users:before,
 #operations-tag-Webhooks:before {
@@ -467,8 +465,6 @@ a:hover {
 #operations-tag-CombinedFiles:hover:after,
 #operations-tag-Hooks:hover:after,
 #operations-tag-Invitations:hover:after,
-#operations-tag-ServiceContracts:hover:after,
-#operations-tag-ServiceInsurances:hover:after,
 #operations-tag-SystemMessages:hover:after,
 #operations-tag-Users:hover:after,
 #operations-tag-Webhooks:hover:after {

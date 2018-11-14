@@ -50,17 +50,11 @@
   "path-service_id": {
     "$ref": "./parameters/path-service_id.json"
   },
-  "path-service_contract_id": {
-    "$ref": "./parameters/path-service_contract_id.json"
-  },
   "path-service_rate_id": {
     "$ref": "./parameters/path-service_rate_id.json"
   },
   "path-service_option_id": {
     "$ref": "./parameters/path-service_option_id.json"
-  },
-  "path-service_option_price_id": {
-    "$ref": "./parameters/path-service_option_price_id.json"
   },
   "path-shipment_id": {
     "$ref": "./parameters/path-shipment_id.json"

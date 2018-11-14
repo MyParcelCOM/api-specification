@@ -111,10 +111,16 @@
         "id": "35eddf50-1d84-47a3-8479-6bfda729cd99"
       }
     },
-    "service_contract": {
+    "service": {
       "data": {
-        "type": "service-contracts",
-        "id": "af5e65b6-a709-4f61-a565-7c12a752482f"
+        "type": "services",
+        "id": "175a235f-aff5-4e44-87b5-3657b75c1deb"
+      }
+    },
+    "contract": {
+      "data": {
+        "type": "contracts",
+        "id": "2cb32706-5762-4b96-9212-327e6afaeeff"
       }
     }
   }
