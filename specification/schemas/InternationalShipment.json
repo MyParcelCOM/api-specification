@@ -150,14 +150,18 @@
           "type": "object",
           "required": [
             "shop",
-            "service_contract"
+            "service",
+            "contract"
           ],
           "properties": {
             "service_options": {
               "$ref": "#/components/schemas/ServiceOptionsRelationship"
             },
-            "service_contract": {
-              "$ref": "#/components/schemas/ServiceContractRelationship"
+            "service": {
+              "$ref": "#/components/schemas/ServiceRelationship"
+            },
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"

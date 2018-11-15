@@ -38,9 +38,14 @@
             "related": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses/9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
           }
         },
-        "service_contract": {
+        "service": {
           "links": {
-            "related": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f"
+            "related": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb"
+          }
+        },
+        "contract": {
+          "links": {
+            "related": "$API_HOST/contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
           }
         },
         "files": {

@@ -167,17 +167,11 @@
   "MinimalService": {
     "$ref": "./schemas/MinimalService.json"
   },
-  "MinimalServiceContract": {
-    "$ref": "./schemas/MinimalServiceContract.json"
-  },
   "MinimalServiceRate": {
     "$ref": "./schemas/MinimalServiceRate.json"
   },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
-  },
-  "MinimalServiceOptionPrice": {
-    "$ref": "./schemas/MinimalServiceOptionPrice.json"
   },
   "MinimalShipment": {
     "$ref": "./schemas/MinimalShipment.json"
@@ -266,15 +260,6 @@
   "Service": {
     "$ref": "./schemas/Service.json"
   },
-  "ServiceContract": {
-    "$ref": "./schemas/ServiceContract.json"
-  },
-  "ServiceContractRelationship": {
-    "$ref": "./schemas/ServiceContractRelationship.json"
-  },
-  "ServiceContractsRelationship": {
-    "$ref": "./schemas/ServiceContractsRelationship.json"
-  },
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
   },
@@ -283,12 +268,6 @@
   },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"
-  },
-  "ServiceOptionPrice": {
-    "$ref": "./schemas/ServiceOptionPrice.json"
-  },
-  "ServiceOptionPricesRelationship": {
-    "$ref": "./schemas/ServiceOptionPricesRelationship.json"
   },
   "ServiceOptionRelationship": {
     "$ref": "./schemas/ServiceOptionRelationship.json"
