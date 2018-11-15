@@ -45,7 +45,7 @@
         },
         "contract": {
           "links": {
-            "related": "$API_HOST/services/2cb32706-5762-4b96-9212-327e6afaeeff"
+            "related": "$API_HOST/contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
           }
         },
         "files": {
