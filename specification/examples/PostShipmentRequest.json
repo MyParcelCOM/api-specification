@@ -83,7 +83,7 @@
         "quantity": 2,
         "hs_code": "8517.12.00",
         "origin_country_code": "GB",
-        "nett_weight": 135
+        "item_weight": 135
       }
     ],
     "customs": {
