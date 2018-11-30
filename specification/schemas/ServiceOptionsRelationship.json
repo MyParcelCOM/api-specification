@@ -46,7 +46,7 @@
         "related": {
           "readOnly": true,
           "type": "string",
-          "example": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
+          "example": "$API_HOST/service-options"
         }
       }
     }

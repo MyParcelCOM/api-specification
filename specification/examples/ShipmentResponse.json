@@ -21,7 +21,7 @@
       "relationships": {
         "service_options": {
           "links": {
-            "related": "$API_HOST/service-contracts/af5e65b6-a709-4f61-a565-7c12a752482f/options"
+            "related": "$API_HOST/service-options"
           }
         },
         "shop": {
@@ -56,7 +56,7 @@
             }
           ],
           "links": {
-            "related": "$API_HOST/shipments/0f621db6-d239-4ae9-b85d-8e97469b10ce/files"
+            "related": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/files"
           }
         }
       },

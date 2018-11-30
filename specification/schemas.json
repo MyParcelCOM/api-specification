@@ -263,9 +263,6 @@
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
   },
-  "ServiceRatesRelationship": {
-    "$ref": "./schemas/ServiceRatesRelationship.json"
-  },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"
   },
