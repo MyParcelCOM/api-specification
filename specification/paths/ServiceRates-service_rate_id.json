@@ -34,7 +34,6 @@
               "required": [
                 "data"
               ],
-              "additionalProperties": false,
               "properties": {
                 "data": {
                   "$ref": "#/components/schemas/ServiceRate"
