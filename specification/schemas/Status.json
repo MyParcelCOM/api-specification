@@ -15,23 +15,25 @@
             "code",
             "resource_type",
             "name",
-            "description"
+            "description",
+            "level"
           ],
           "additionalProperties": false,
           "properties": {
             "code": {
               "type": "string",
               "enum": [
-                "shipment_concept",
-                "shipment_registered",
-                "shipment_at_carrier",
-                "shipment_at_sorting",
-                "shipment_at_courier",
-                "shipment_delivered",
-                "shipment_inactive",
-                "shipment_failed"
+                "shipment-concept",
+                "shipment-registered",
+                "shipment-received-by-carrier",
+                "shipment-at-sorting",
+                "shipment-with-courier",
+                "shipment-delivered",
+                "shipment-registration-failed",
+                "shipment-created-without-tracking",
+                "shipment-failed"
               ],
-              "example": "shipment_delivered"
+              "example": "shipment-delivered"
             },
             "resource_type": {
               "type": "string",
@@ -46,7 +48,8 @@
               "enum": [
                 "pending",
                 "success",
-                "failed"
+                "failed",
+                "in-progress"
               ],
               "example": "success"
             },
@@ -56,7 +59,7 @@
             },
             "description": {
               "type": "string",
-              "example": "The shipment has been delivered."
+              "example": "The shipment was delivered successfully."
             }
           }
         },
