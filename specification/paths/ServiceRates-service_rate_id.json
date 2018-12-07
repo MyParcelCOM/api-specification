@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "ServiceContracts"
+      "ServiceRates"
     ],
     "security": [{
       "OAuth2": [
@@ -9,16 +9,16 @@
         "shipments.manage"
       ]
     }],
-    "summary": "Get a service contract by id.",
-    "description": "This endpoint retrieves the service contract with the supplied id.",
+    "summary": "Get a service rate by id.",
+    "description": "This endpoint retrieves a service rate with the supplied id.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-service_contract_id"
+        "$ref": "#/components/parameters/path-service_rate_id"
       },
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier_contract`</li><li>`service`</li><li>`service_groups`</li><li>`service_option_prices`</li><li>`service_option_prices.service_option`</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`service`</li><li>`service_options`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -26,7 +26,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the service contract.",
+        "description": "Retrieved the service rate.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -36,7 +36,7 @@
               ],
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ServiceContract"
+                  "$ref": "#/components/schemas/ServiceRate"
                 }
               }
             }

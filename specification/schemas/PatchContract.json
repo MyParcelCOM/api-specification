@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalCarrierContract"
+      "$ref": "#/components/schemas/MinimalContract"
     },
     {
       "required": [
@@ -25,7 +25,7 @@
             },
             "name": {
               "type": "string",
-              "example": "My Custom contract"
+              "example": "My Custom Contract"
             },
             "credentials": {
               "type": "object",

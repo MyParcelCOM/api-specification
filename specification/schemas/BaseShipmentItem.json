@@ -38,10 +38,10 @@
       "example": "8517.12.00",
       "description": "Harmonized System code used by customs."
     },
-    "nett_weight": {
+    "item_weight": {
       "type": "number",
       "example": 135,
-      "description": "The nett weight of the item in grams."
+      "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
     },
     "origin_country_code": {
       "oneOf": [

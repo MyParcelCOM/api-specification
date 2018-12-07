@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalCarrierContract"
+      "$ref": "#/components/schemas/MinimalContract"
     },
     {
       "required": [
@@ -22,7 +22,7 @@
             },
             "name": {
               "type": "string",
-              "example": "My Custom contract"
+              "example": "My Custom Contract"
             },
             "status": {
               "type": "string",
@@ -33,7 +33,7 @@
                 "pending"
               ],
               "example": "active",
-              "description": "A new carrier contract is pending until the `credentials` have been verified. The verification process is done automatically."
+              "description": "A new contract is pending until the `credentials` have been verified. The verification process is done automatically."
             }
           }
         },
@@ -47,10 +47,6 @@
           "properties": {
             "carrier": {
               "$ref": "#/components/schemas/CarrierRelationship"
-            },
-            "service_contracts": {
-              "readOnly": true,
-              "$ref": "#/components/schemas/ServiceContractsRelationship"
             },
             "owner": {
               "oneOf": [

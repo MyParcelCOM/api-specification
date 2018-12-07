@@ -9,7 +9,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalCarrierContract"
+          "$ref": "#/components/schemas/MinimalContract"
         },
         {
           "required": [
@@ -25,7 +25,7 @@
         "related": {
           "type": "string",
           "format": "url",
-          "example": "$API_HOST/carrier-contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
+          "example": "$API_HOST/contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
         }
       }
     }

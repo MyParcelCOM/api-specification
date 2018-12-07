@@ -41,10 +41,10 @@
     "origin_country_code": {
       "$ref": "#/components/schemas/CountryCode"
     },
-    "nett_weight": {
+    "item_weight": {
       "type": "number",
       "example": 135,
-      "description": "The nett weight of the item in grams."
+      "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
     }
   }
 }

@@ -29,11 +29,11 @@
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
   },
-  "CarrierContract": {
-    "$ref": "./schemas/CarrierContract.json"
+  "Contract": {
+    "$ref": "./schemas/Contract.json"
   },
-  "CarrierContractRelationship": {
-    "$ref": "./schemas/CarrierContractRelationship.json"
+  "ContractRelationship": {
+    "$ref": "./schemas/ContractRelationship.json"
   },
   "CarrierRelationship": {
     "$ref": "./schemas/CarrierRelationship.json"
@@ -122,8 +122,8 @@
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
   },
-  "MinimalCarrierContract": {
-    "$ref": "./schemas/MinimalCarrierContract.json"
+  "MinimalContract": {
+    "$ref": "./schemas/MinimalContract.json"
   },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
@@ -167,17 +167,11 @@
   "MinimalService": {
     "$ref": "./schemas/MinimalService.json"
   },
-  "MinimalServiceContract": {
-    "$ref": "./schemas/MinimalServiceContract.json"
-  },
-  "MinimalServiceGroup": {
-    "$ref": "./schemas/MinimalServiceGroup.json"
+  "MinimalServiceRate": {
+    "$ref": "./schemas/MinimalServiceRate.json"
   },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
-  },
-  "MinimalServiceOptionPrice": {
-    "$ref": "./schemas/MinimalServiceOptionPrice.json"
   },
   "MinimalShipment": {
     "$ref": "./schemas/MinimalShipment.json"
@@ -212,8 +206,8 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
-  "PatchCarrierContract": {
-    "$ref": "./schemas/PatchCarrierContract.json"
+  "PatchContract": {
+    "$ref": "./schemas/PatchContract.json"
   },
   "PatchOrganization": {
     "$ref": "./schemas/PatchOrganization.json"
@@ -266,29 +260,11 @@
   "Service": {
     "$ref": "./schemas/Service.json"
   },
-  "ServiceContract": {
-    "$ref": "./schemas/ServiceContract.json"
-  },
-  "ServiceContractRelationship": {
-    "$ref": "./schemas/ServiceContractRelationship.json"
-  },
-  "ServiceContractsRelationship": {
-    "$ref": "./schemas/ServiceContractsRelationship.json"
-  },
-  "ServiceGroup": {
-    "$ref": "./schemas/ServiceGroup.json"
-  },
-  "ServiceGroupsRelationship": {
-    "$ref": "./schemas/ServiceGroupsRelationship.json"
+  "ServiceRate": {
+    "$ref": "./schemas/ServiceRate.json"
   },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"
-  },
-  "ServiceOptionPrice": {
-    "$ref": "./schemas/ServiceOptionPrice.json"
-  },
-  "ServiceOptionPricesRelationship": {
-    "$ref": "./schemas/ServiceOptionPricesRelationship.json"
   },
   "ServiceOptionRelationship": {
     "$ref": "./schemas/ServiceOptionRelationship.json"

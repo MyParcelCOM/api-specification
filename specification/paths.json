@@ -12,16 +12,16 @@
     "$ref": "./paths/Carriers-carrier_id.json"
   },
   "/carriers/{carrier_id}/contracts": {
-    "$ref": "./paths/Carriers-carrier_id-CarrierContracts.json"
+    "$ref": "./paths/Carriers-carrier_id-Contracts.json"
   },
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code.json"
   },
-  "/carrier-contracts": {
-    "$ref": "./paths/CarrierContracts.json"
+  "/contracts": {
+    "$ref": "./paths/Contracts.json"
   },
-  "/carrier-contracts/{carrier_contract_id}": {
-    "$ref": "./paths/CarrierContracts-carrier_contract_id.json"
+  "/contracts/{contract_id}": {
+    "$ref": "./paths/Contracts-contract_id.json"
   },
   "/combined-files": {
     "$ref": "./paths/CombinedFiles.json"
@@ -80,32 +80,17 @@
   "/services/{service_id}": {
     "$ref": "./paths/Services-service_id.json"
   },
-  "/services/{service_id}/contracts": {
-    "$ref": "./paths/Services-service_id-ServiceContracts.json"
+  "/service-rates": {
+    "$ref": "./paths/ServiceRates.json"
   },
-  "/service-contracts": {
-    "$ref": "./paths/ServiceContracts.json"
-  },
-  "/service-contracts/{service_contract_id}": {
-    "$ref": "./paths/ServiceContracts-service_contract_id.json"
-  },
-  "/service-contracts/{service_contract_id}/groups": {
-    "$ref": "./paths/ServiceContracts-service_contract_id-ServiceGroups.json"
-  },
-  "/service-contracts/{service_contract_id}/option-prices": {
-    "$ref": "./paths/ServiceContracts-service_contract_id-ServiceOptionPrices.json"
-  },
-  "/service-groups/{service_group_id}": {
-    "$ref": "./paths/ServiceGroups-service_group_id.json"
+  "/service-rates/{service_rate_id}": {
+    "$ref": "./paths/ServiceRates-service_rate_id.json"
   },
   "/service-options": {
     "$ref": "./paths/ServiceOptions.json"
   },
   "/service-options/{service_option_id}": {
     "$ref": "./paths/ServiceOptions-service_option_id.json"
-  },
-  "/service-option-prices/{service_option_price_id}": {
-    "$ref": "./paths/ServiceOptionPrices-service_option_price_id.json"
   },
   "/shipments": {
     "$ref": "./paths/Shipments.json"

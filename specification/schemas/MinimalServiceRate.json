@@ -6,13 +6,13 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^service-option-prices$",
-      "example": "service-option-prices"
+      "pattern": "^service-rates$",
+      "example": "service-rates"
     },
     "id": {
       "type": "string",
       "format": "uuid",
-      "example": "43f76bc8-9330-425f-ac18-ce7890945bad"
+      "example": "09a8f83a-bc8d-4598-81e6-ebf9d59a186a"
     }
   }
 }
