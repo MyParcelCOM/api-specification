@@ -12,7 +12,6 @@
         "attributes": {
           "type": "object",
           "required": [
-            "carrier_statuses",
             "created_at"
           ],
           "additionalProperties": false,
