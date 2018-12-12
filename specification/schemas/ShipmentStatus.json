@@ -16,20 +16,33 @@
           ],
           "additionalProperties": false,
           "properties": {
-            "carrier_status_code": {
-              "type": "string",
-              "example": "9001",
-              "description": "The code used by the carrier for this status."
-            },
-            "carrier_status_description": {
-              "type": "string",
-              "example": "Confirmed at destination",
-              "description": "Description of the code used by the carrier."
-            },
-            "carrier_timestamp": {
-              "type": "number",
-              "example": 1504801719,
-              "description": "Unix timestamp when the carrier registered this status."
+            "carrier_statuses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "description",
+                  "assigned_at"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "example": "9001",
+                    "description": "The code used by the carrier for this status."
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Confirmed at destination",
+                    "description": "Description of the code used by the carrier."
+                  },
+                  "assigned_at": {
+                    "type": "number",
+                    "example": 1504801719,
+                    "description": "Unix timestamp when the carrier registered this status."
+                  }
+                }
+              }
             },
             "errors": {
               "type": "array",
