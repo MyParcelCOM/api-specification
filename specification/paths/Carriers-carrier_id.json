@@ -3,10 +3,12 @@
     "tags": [
       "Carriers"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get a carrier by id.",
     "description": "This endpoint retrieves the carrier with the supplied id.",
     "parameters": [
@@ -27,7 +29,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Carrier"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Carrier"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }

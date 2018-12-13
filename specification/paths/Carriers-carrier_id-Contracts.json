@@ -40,7 +40,38 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contract"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Contract"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ],
+                        "properties": {
+                          "attributes": {
+                            "type": "object",
+                            "required": [
+                              "status",
+                              "currency",
+                              "name"
+                            ]
+                          },
+                          "relationships": {
+                            "properties": {
+                              "owner": {
+                                "example": {
+                                  "links": {
+                                    "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
                   }
                 },
                 "meta": {

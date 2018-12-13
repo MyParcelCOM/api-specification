@@ -3,10 +3,12 @@
     "tags": [
       "Regions"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get all the regions.",
     "description": "This endpoint retrieves regions. All regions are connected via parent-child relationships. Services are available in certain regions. Regions with a country code can be used to create shipments.",
     "parameters": [
@@ -77,7 +79,17 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Region"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Region"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {

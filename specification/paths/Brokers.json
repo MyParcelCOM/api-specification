@@ -27,7 +27,17 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Broker"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Broker"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {

@@ -3,10 +3,12 @@
     "tags": [
       "ServiceOptions"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get all available service options for your API client.",
     "description": "This endpoint retrieves all service options available to your API client.",
     "responses": {
@@ -26,7 +28,16 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ServiceOption"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ServiceOption"
+                      },
+                      {
+                        "required": [
+                          "id"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {

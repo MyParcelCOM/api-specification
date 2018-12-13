@@ -3,10 +3,12 @@
     "tags": [
       "Services"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get all available services for your API client.",
     "description": "This endpoint retrieves all services available to your API client.",
     "parameters": [
@@ -108,7 +110,17 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Service"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Service"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {

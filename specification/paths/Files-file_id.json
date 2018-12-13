@@ -3,11 +3,13 @@
     "tags": [
       "Files"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Get a file by id.",
     "description": "This endpoint retrieves the file with the supplied id. Accept headers can be used to retrieve the file in a different format.",
     "parameters": [
@@ -31,7 +33,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/File"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/File"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }

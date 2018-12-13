@@ -15,8 +15,7 @@
           "type": "object",
           "required": [
             "weight_min",
-            "weight_max",
-            "price"
+            "weight_max"
           ],
           "additionalProperties": false,
           "properties": {
@@ -54,16 +53,7 @@
               "$ref": "#/components/schemas/Price"
             },
             "step_price": {
-              "allOf": [
-                {
-                  "required": [
-                    "amount"
-                  ]
-                },
-                {
-                  "$ref": "#/components/schemas/Price"
-                }
-              ]
+              "$ref": "#/components/schemas/Price"
             },
             "step_size": {
               "type": "number",
@@ -96,11 +86,16 @@
                     "data": {
                       "type": "array",
                       "items": {
+                        "required": [
+                          "id",
+                          "type",
+                          "meta"
+                        ],
                         "properties": {
                           "meta": {
                             "type": "object",
                             "required": [
-                              "price"
+                              "included"
                             ],
                             "additionalProperties": false,
                             "properties": {
@@ -110,6 +105,7 @@
                               "included": {
                                 "type": "boolean",
                                 "example": true,
+                                "default": false,
                                 "description": "Indicates whether or not the service option is always included in the service."
                               }
                             }

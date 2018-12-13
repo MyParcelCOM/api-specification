@@ -43,7 +43,8 @@
                     },
                     {
                       "required": [
-                        "id"
+                        "id",
+                        "links"
                       ],
                       "properties": {
                         "attributes": {

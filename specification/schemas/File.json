@@ -22,7 +22,6 @@
               "enum": [
                 "label",
                 "printcode",
-                "invoice",
                 "combined-label",
                 "customs-declaration-form",
                 "commercial-invoice"

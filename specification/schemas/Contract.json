@@ -65,6 +65,20 @@
               }
             }
           }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "example": "$API_HOST/contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
+            }
+          }
         }
       }
     }

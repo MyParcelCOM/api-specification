@@ -14,25 +14,27 @@
           "type": "object",
           "required": [
             "name",
-            "code"
+            "code",
+            "category"
           ],
           "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
-              "example": "signature"
+              "example": "Sunday Delivery"
             },
             "category": {
               "type": "string",
               "enum": [
-                "delivery-day",
-                "handover-method"
+                "proof-of-delivery",
+                "handover-method",
+                "delivery-window"
               ],
-              "example": "handover-method"
+              "example": "delivery-window"
             },
             "code": {
               "type": "string",
-              "example": "handover-method:collection"
+              "example": "delivery-window:sunday"
             }
           }
         },
