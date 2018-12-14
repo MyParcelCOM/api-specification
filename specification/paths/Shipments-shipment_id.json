@@ -3,11 +3,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Get a shipment by id.",
     "description": "This endpoint retrieves the shipment with the supplied id.",
     "parameters": [
@@ -58,11 +60,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Update a shipment by id.",
     "description": "This endpoint updates the shipment with the supplied id.",
     "parameters": [
@@ -126,11 +130,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Delete a shipment by id.",
     "description": "This endpoint deletes the shipment with the supplied id.",
     "parameters": [

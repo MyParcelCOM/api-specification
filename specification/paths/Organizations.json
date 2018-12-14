@@ -3,11 +3,13 @@
     "tags": [
       "Organizations"
     ],
-    "security": [{
-      "OAuth2": [
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get all available organizations for your API client.",
     "description": "This endpoint retrieves all organizations available to your API client.",
     "parameters": [
@@ -121,11 +123,13 @@
     "tags": [
       "Organizations"
     ],
-    "security": [{
-      "OAuth2": [
-        "broker.member"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "broker.member"
+        ]
+      }
+    ],
     "summary": "Create a new organization.",
     "description": "This endpoint creates a new organization with the posted data.",
     "requestBody": {

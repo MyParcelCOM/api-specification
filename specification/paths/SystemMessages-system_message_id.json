@@ -3,12 +3,14 @@
     "tags": [
       "SystemMessages"
     ],
-    "security": [{
-      "OAuth2": [
-        "broker.member",
-        "system.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "broker.member",
+          "system.manage"
+        ]
+      }
+    ],
     "summary": "Get a system message by id.",
     "description": "This endpoint retrieves the system message with the supplied id.",
     "parameters": [
@@ -58,11 +60,13 @@
     "tags": [
       "SystemMessages"
     ],
-    "security": [{
-      "OAuth2": [
-        "system.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "system.manage"
+        ]
+      }
+    ],
     "summary": "Update a system message by id.",
     "description": "This endpoint updates the system message with the supplied id.",
     "parameters": [
@@ -132,11 +136,13 @@
     "tags": [
       "SystemMessages"
     ],
-    "security": [{
-      "OAuth2": [
-        "system.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "system.manage"
+        ]
+      }
+    ],
     "summary": "Delete a system message by id.",
     "description": "This endpoint deletes the system message with the supplied id.",
     "parameters": [

@@ -3,11 +3,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Get all the files from a shipment.",
     "description": "This endpoint retrieves files for the supplied shipment. All successfully registered shipments will have a `label` file. International shipments with customs information will have extra files.",
     "parameters": [

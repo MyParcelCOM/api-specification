@@ -3,11 +3,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Get all available shipments for your API client.",
     "description": "This endpoint retrieves all shipments available to your API client.",
     "parameters": [
@@ -118,11 +120,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Create a new shipment.",
     "description": "This endpoint creates a new shipment with the posted data.",
     "requestBody": {
