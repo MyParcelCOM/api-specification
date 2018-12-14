@@ -1,3 +1,3 @@
-FROM node:9.11
+FROM node:11.4
 
 RUN npm install -g json-refs
