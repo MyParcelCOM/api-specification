@@ -6,7 +6,6 @@
   "additionalProperties": false,
   "properties": {
     "data": {
-      "type": "object",
       "allOf": [
         {
           "$ref": "#/components/schemas/MinimalCarrier"
@@ -21,6 +20,9 @@
     "links": {
       "readOnly": true,
       "type": "object",
+      "required": [
+        "related"
+      ],
       "properties": {
         "related": {
           "type": "string",

@@ -6,7 +6,6 @@
   "additionalProperties": false,
   "properties": {
     "data": {
-      "type": "object",
       "allOf": [
         {
           "$ref": "#/components/schemas/MinimalFile"

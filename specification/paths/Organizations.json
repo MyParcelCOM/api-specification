@@ -54,6 +54,7 @@
                             "type": "object",
                             "required": [
                               "name",
+                              "billing_address",
                               "created_at"
                             ]
                           },
@@ -161,7 +162,8 @@
                       "attributes": {
                         "type": "object",
                         "required": [
-                          "name"
+                          "name",
+                          "billing_address"
                         ]
                       },
                       "relationships": {
@@ -229,7 +231,9 @@
                         "attributes": {
                           "type": "object",
                           "required": [
-                            "name"
+                            "name",
+                            "billing_address",
+                            "created_at"
                           ]
                         },
                         "relationships": {

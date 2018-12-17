@@ -14,7 +14,8 @@
           "type": "object",
           "required": [
             "currency",
-            "name"
+            "name",
+            "created_at"
           ],
           "properties": {
             "currency": {
@@ -34,6 +35,9 @@
               ],
               "example": "active",
               "description": "A new contract is pending until the `credentials` have been verified. The verification process is done automatically."
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },

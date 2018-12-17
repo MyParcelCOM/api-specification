@@ -31,7 +31,27 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shop"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Shop"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "return_address",
+                            "sender_address",
+                            "created_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -91,7 +111,27 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shop"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Shop"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "return_address",
+                            "sender_address",
+                            "created_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
