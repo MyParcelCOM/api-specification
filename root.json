@@ -5,8 +5,7 @@
   },
   "servers": [
     {
-      "url": "$API_HOST",
-      "description": "The MyParcel.com API Sandbox"
+      "url": "$API_HOST"
     }
   ],
   "paths": {
