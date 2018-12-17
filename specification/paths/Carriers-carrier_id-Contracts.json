@@ -57,7 +57,8 @@
                             "required": [
                               "status",
                               "currency",
-                              "name"
+                              "name",
+                              "created_at"
                             ]
                           },
                           "relationships": {

@@ -13,8 +13,7 @@
           "type": "object",
           "required": [
             "document_type",
-            "formats",
-            "created_at"
+            "formats"
           ],
           "additionalProperties": false,
           "properties": {

@@ -14,8 +14,7 @@
           "type": "object",
           "required": [
             "currency",
-            "name",
-            "created_at"
+            "name"
           ],
           "properties": {
             "currency": {

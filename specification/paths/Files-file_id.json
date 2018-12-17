@@ -41,7 +41,16 @@
                       "required": [
                         "id",
                         "links"
-                      ]
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "document_type",
+                            "formats",
+                            "created_at"
+                          ]
+                        }
+                      }
                     }
                   ]
                 }
