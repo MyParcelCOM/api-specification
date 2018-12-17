@@ -52,6 +52,9 @@
         "links": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "self"
+          ],
           "additionalProperties": false,
           "properties": {
             "self": {

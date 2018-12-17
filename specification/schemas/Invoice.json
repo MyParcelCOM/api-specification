@@ -65,7 +65,6 @@
           "additionalProperties": false,
           "properties": {
             "self": {
-              "readOnly": true,
               "type": "string",
               "example": "$API_HOST/invoices/c93c4bd6-9dc9-4560-be08-915b58fab3f0"
             }
