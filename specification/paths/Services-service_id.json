@@ -29,7 +29,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Service"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Service"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }
