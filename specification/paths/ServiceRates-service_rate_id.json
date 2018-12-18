@@ -5,8 +5,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "shipments.show",
-        "shipments.manage"
+        "organizations.manage"
       ]
     }],
     "summary": "Get a service rate by id.",

@@ -5,8 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "invitations.show",
-        "invitations.manage"
       ]
     }],
     "summary": "Get an invitation by id.",

@@ -5,8 +5,8 @@
     ],
     "security": [{
       "OAuth2": [
-        "system-messages.show",
-        "system-messages.manage"
+        "broker.member",
+        "system.manage"
       ]
     }],
     "summary": "Get all the system messages.",
@@ -94,7 +94,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "system-messages.manage"
+        "system.manage"
       ]
     }],
     "summary": "Create a new system message.",

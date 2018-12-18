@@ -5,8 +5,8 @@
     ],
     "security": [{
       "OAuth2": [
-        "shops.show",
-        "shops.manage"
+        "shipments.manage",
+        "organizations.manage"
       ]
     }],
     "summary": "Get all available shops for your API client.",
@@ -87,7 +87,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "shops.manage"
+        "organizations.manage"
       ]
     }],
     "summary": "Create a new shop.",

@@ -5,8 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "users.show",
-        "users.manage"
       ]
     }],
     "summary": "Get a user by id.",
@@ -60,7 +58,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "users.manage"
       ]
     }],
     "summary": "Update a user by id.",

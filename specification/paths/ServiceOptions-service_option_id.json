@@ -5,8 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "shipments.show",
-        "shipments.manage"
       ]
     }],
     "summary": "Get a service option by id.",

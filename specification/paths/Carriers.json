@@ -5,10 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "shipments.show",
-        "shipments.manage",
-        "brokers.show",
-        "brokers.manage"
       ]
     }],
     "summary": "Get all available carriers for your API client.",
