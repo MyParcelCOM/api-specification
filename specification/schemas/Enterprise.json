@@ -28,6 +28,7 @@
       "properties": {
         "self": {
           "type": "string",
+          "format": "url",
           "example": "$API_HOST/enterprises/8f778acf-0bcd-4121-b998-ad92fa1dcdce"
         }
       }

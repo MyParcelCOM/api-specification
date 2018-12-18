@@ -81,9 +81,11 @@
           "required": [
             "self"
           ],
+          "additionalProperties": false,
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99"
             }
           }

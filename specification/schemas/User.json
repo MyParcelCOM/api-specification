@@ -53,9 +53,11 @@
           "required": [
             "self"
           ],
+          "additionalProperties": false,
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/users/6b341b44-f2f8-4c8b-b066-b8aa5c78ef6b"
             }
           }

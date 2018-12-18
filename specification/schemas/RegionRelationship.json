@@ -27,6 +27,7 @@
       "properties": {
         "related": {
           "type": "string",
+          "format": "url",
           "example": "$API_HOST/regions/0b6ecd39-6072-4529-a031-f21247a91296"
         }
       }

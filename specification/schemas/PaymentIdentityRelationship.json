@@ -25,6 +25,7 @@
       }
     },
     "links": {
+      "readOnly": true,
       "type": "object",
       "required": [
         "related"
@@ -33,6 +34,7 @@
       "properties": {
         "related": {
           "type": "string",
+          "format": "url",
           "example": "$API_HOST/payment-identities/5c868557-0827-4d21-a7f4-9820f01769f4"
         }
       }

@@ -120,13 +120,16 @@
           }
         },
         "links": {
+          "readOnly": true,
           "type": "object",
           "required": [
             "self"
           ],
+          "additionalProperties": false,
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/service-rates/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
             }
           }
