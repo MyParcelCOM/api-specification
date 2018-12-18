@@ -5,8 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "invitations.show",
-        "invitations.manage"
       ]
     }],
     "summary": "Get all the invitations.",
@@ -78,7 +76,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "invitations.manage"
       ]
     }],
     "summary": "Create an invitation.",

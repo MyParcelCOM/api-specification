@@ -5,8 +5,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "shipments.show",
-        "shipments.manage"
+        "experimental"
       ]
     }],
     "summary": "Get all the combined files.",
@@ -78,8 +77,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "shipments.show",
-        "shipments.manage"
+        "experimental"
       ]
     }],
     "summary": "Create a combined file.",

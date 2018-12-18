@@ -5,8 +5,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "shipments.show",
-        "shipments.manage"
+        "experimental"
       ]
     }],
     "summary": "Get a combined file  by id.",

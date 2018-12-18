@@ -5,11 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "organizations.make",
-        "shipments.show",
-        "shipments.manage",
-        "shops.show",
-        "shops.manage"
       ]
     }],
     "summary": "Get all the regions.",

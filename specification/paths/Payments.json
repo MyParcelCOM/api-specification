@@ -6,8 +6,6 @@
     "security": [
       {
         "OAuth2": [
-          "billing.show",
-          "billing.manage"
         ]
       }
     ],
@@ -107,7 +105,6 @@
     "security": [
       {
         "OAuth2": [
-          "billing.manage"
         ]
       }
     ],

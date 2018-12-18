@@ -5,8 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "shipments.show",
-        "shipments.manage"
       ]
     }],
     "summary": "Get all available service options for your API client.",

@@ -5,8 +5,6 @@
     ],
     "security": [{
       "OAuth2": [
-        "users.show",
-        "users.manage"
       ]
     }],
     "summary": "Get all the users.",

@@ -5,9 +5,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "brokers.show",
-        "brokers.manage",
-        "organizations.make"
+        "broker.member"
       ]
     }],
     "summary": "Get a broker by id.",

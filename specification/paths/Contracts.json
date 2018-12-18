@@ -6,11 +6,7 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.show",
           "shipments.manage",
-          "brokers.show",
-          "brokers.manage",
-          "organizations.show",
           "organizations.manage"
         ]
       }
@@ -123,8 +119,7 @@
     "security": [
       {
         "OAuth2": [
-          "organization.manage",
-          "brokers.manage"
+          "organization.manage"
         ]
       }
     ],

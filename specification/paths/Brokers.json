@@ -5,9 +5,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "brokers.show",
-        "brokers.manage",
-        "organizations.make"
+        "broker.member"
       ]
     }],
     "summary": "Get all available brokers for your API client.",

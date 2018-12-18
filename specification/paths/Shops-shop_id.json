@@ -5,8 +5,8 @@
     ],
     "security": [{
       "OAuth2": [
-        "shops.show",
-        "shops.manage"
+        "shipments.manage",
+        "organizations.manage"
       ]
     }],
     "summary": "Get a shop by id.",
@@ -44,7 +44,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "shops.manage"
+        "organizations.manage"
       ]
     }],
     "summary": "Update a shop by id.",

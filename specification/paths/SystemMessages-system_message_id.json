@@ -5,8 +5,8 @@
     ],
     "security": [{
       "OAuth2": [
-        "system-messages.show",
-        "system-messages.manage"
+        "broker.member",
+        "system.manage"
       ]
     }],
     "summary": "Get a system message by id.",
@@ -60,7 +60,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "system-messages.manage"
+        "system.manage"
       ]
     }],
     "summary": "Update a system message by id.",
@@ -134,7 +134,7 @@
     ],
     "security": [{
       "OAuth2": [
-        "system-messages.manage"
+        "system.manage"
       ]
     }],
     "summary": "Delete a system message by id.",

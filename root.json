@@ -28,21 +28,11 @@
           "clientCredentials": {
             "tokenUrl": "$AUTH_HOST",
             "scopes": {
-              "brokers.show": "Read available brokers",
-              "brokers.manage": "Create/Read/Update/Delete available brokers",
-              "organizations.make": "Create an organization",
-              "organizations.show": "Read available organizations",
-              "organizations.manage": "Create/Read/Update/Delete available organizations",
-              "shipments.show": "Read available shipments",
-              "shipments.manage": "Create/Read/Update/Delete available shipments",
-              "shops.show": "Read available shops",
-              "shops.manage": "Create/Read/Update/Delete available shops",
-              "system-messages.show": "Read available system messages",
-              "system-messages.manage": "Create/Read/Update/Delete available system messages",
-              "users.show": "Read available users",
-              "users.manage": "Create/Read/Update/Delete available users",
-              "invitations.show": "Read available invitations",
-              "invitations.manage": "Create/Read/Update/Delete available invitations"
+              "broker.member": "Read broker details and create organizations for that broker.",
+              "organizations.manage": "Manage organization related resources on behalf of a single organization or all organizations belonging to a broker.",
+              "shipments.manage": "Manage shipments on behalf of all shops belonging to a single organization or all shops belonging to a broker.",
+              "system.manage": "Manage all system related resources.",
+              "experimental": "This scope contains all permissions for experimental endpoints."
             }
           }
         }
