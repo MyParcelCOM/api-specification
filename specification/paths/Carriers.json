@@ -3,10 +3,12 @@
     "tags": [
       "Carriers"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get all available carriers for your API client.",
     "description": "This endpoint retrieves all carriers available to your API client. The availability of carriers depends on the broker your client is connected to. For example the broker `MyParcel.com - UK` will only return carriers active in the `United Kingdom`.",
     "responses": {
@@ -26,7 +28,17 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Carrier"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Carrier"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {

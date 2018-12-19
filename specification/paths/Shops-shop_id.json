@@ -3,12 +3,14 @@
     "tags": [
       "Shops"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage",
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get a shop by id.",
     "description": "This endpoint retrieves the shop with the supplied id.",
     "parameters": [
@@ -29,7 +31,25 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shop"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Shop"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "created_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
@@ -42,11 +62,13 @@
     "tags": [
       "Shops"
     ],
-    "security": [{
-      "OAuth2": [
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Update a shop by id.",
     "description": "This endpoint updates the shop with the supplied id.",
     "parameters": [
@@ -87,7 +109,25 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shop"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Shop"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "created_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }

@@ -27,8 +27,8 @@
       "additionalProperties": false,
       "properties": {
         "related": {
-          "readOnly": true,
           "type": "string",
+          "format": "url",
           "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
         }
       }

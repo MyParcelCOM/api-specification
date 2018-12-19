@@ -5,6 +5,7 @@
     },
     {
       "required": [
+        "amount",
         "currency"
       ]
     }

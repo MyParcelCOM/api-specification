@@ -18,10 +18,50 @@
               "example": "MyParcel.com"
             },
             "return_address": {
-              "$ref": "#/components/schemas/BaseAddress"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/BaseAddress"
+                },
+                {
+                  "properties": {
+                    "first_name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "last_name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              ]
             },
             "sender_address": {
-              "$ref": "#/components/schemas/BaseAddress"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/BaseAddress"
+                },
+                {
+                  "properties": {
+                    "first_name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "last_name": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              ]
             },
             "website": {
               "type": [

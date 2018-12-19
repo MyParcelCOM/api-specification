@@ -22,7 +22,6 @@
               "enum": [
                 "label",
                 "printcode",
-                "invoice",
                 "combined-label",
                 "customs-declaration-form",
                 "commercial-invoice"
@@ -56,6 +55,9 @@
                   "mime_type": "application/pdf"
                 }
               ]
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },
@@ -69,6 +71,7 @@
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/files/0f621db6-d239-4ae9-b85d-8e97469b10ce"
             }
           }

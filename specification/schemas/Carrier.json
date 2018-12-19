@@ -58,6 +58,7 @@
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9"
             }
           }

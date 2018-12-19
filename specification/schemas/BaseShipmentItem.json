@@ -39,7 +39,10 @@
       "description": "Harmonized System code used by customs."
     },
     "item_weight": {
-      "type": "number",
+      "type": [
+        "number",
+        "null"
+      ],
       "example": 135,
       "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
     },

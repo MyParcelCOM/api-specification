@@ -3,11 +3,13 @@
     "tags": [
       "CombinedFiles"
     ],
-    "security": [{
-      "OAuth2": [
-        "experimental"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "experimental"
+        ]
+      }
+    ],
     "summary": "Get a combined file  by id.",
     "description": "This endpoint retrieves a combined file with the supplied id.",
     "parameters": [

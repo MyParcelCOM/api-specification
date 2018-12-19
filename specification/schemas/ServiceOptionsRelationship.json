@@ -8,7 +8,6 @@
     "data": {
       "type": "array",
       "items": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/MinimalServiceOption"
@@ -24,9 +23,11 @@
                 "required": [
                   "self"
                 ],
+                "additionalProperties": false,
                 "properties": {
                   "self": {
                     "type": "string",
+                    "format": "url",
                     "example": "$API_HOST/service-options/4c675b1a-516c-4410-abff-d237fd45bcd0"
                   }
                 }
@@ -34,20 +35,6 @@
             }
           }
         ]
-      }
-    },
-    "links": {
-      "readOnly": true,
-      "type": "object",
-      "required": [
-        "related"
-      ],
-      "properties": {
-        "related": {
-          "readOnly": true,
-          "type": "string",
-          "example": "$API_HOST/service-options"
-        }
       }
     }
   }

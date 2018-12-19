@@ -3,10 +3,12 @@
     "tags": [
       "Services"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get a service by id.",
     "description": "This endpoint retrieves the service with the supplied id.",
     "parameters": [
@@ -27,7 +29,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Service"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Service"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }

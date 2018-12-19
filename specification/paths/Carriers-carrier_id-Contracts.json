@@ -3,11 +3,13 @@
     "tags": [
       "Carriers"
     ],
-    "security": [{
-      "OAuth2": [
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get all the contracts for a carrier.",
     "description": "This endpoint retrieves contracts for the supplied carrier. Only active contracts with a verified status can be used to create shipments.",
     "parameters": [
@@ -40,7 +42,39 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contract"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Contract"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ],
+                        "properties": {
+                          "attributes": {
+                            "type": "object",
+                            "required": [
+                              "status",
+                              "currency",
+                              "name",
+                              "created_at"
+                            ]
+                          },
+                          "relationships": {
+                            "properties": {
+                              "owner": {
+                                "example": {
+                                  "links": {
+                                    "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
                   }
                 },
                 "meta": {

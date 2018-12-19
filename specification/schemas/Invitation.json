@@ -55,6 +55,7 @@
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/invitations/06ff9497-7ef0-441e-a12d-9aa90d36caf3"
             }
           }

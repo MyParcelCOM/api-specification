@@ -3,11 +3,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Get a shipment by id.",
     "description": "This endpoint retrieves the shipment with the supplied id.",
     "parameters": [
@@ -37,10 +39,73 @@
                 "data": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/Shipment"
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/Shipment"
+                        },
+                        {
+                          "required": [
+                            "id",
+                            "links"
+                          ],
+                          "properties": {
+                            "attributes": {
+                              "required": [
+                                "recipient_address",
+                                "return_address",
+                                "sender_address",
+                                "physical_properties",
+                                "created_at",
+                                "updated_at"
+                              ]
+                            },
+                            "relationships": {
+                              "required": [
+                                "shop",
+                                "service",
+                                "contract",
+                                "shipment_status"
+                              ]
+                            }
+                          }
+                        }
+                      ]
                     },
                     {
-                      "$ref": "#/components/schemas/InternationalShipment"
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/InternationalShipment"
+                        },
+                        {
+                          "required": [
+                            "id",
+                            "links"
+                          ],
+                          "properties": {
+                            "attributes": {
+                              "required": [
+                                "items",
+                                "customs",
+                                "recipient_address",
+                                "return_address",
+                                "sender_address",
+                                "physical_properties",
+                                "description",
+                                "created_at",
+                                "updated_at"
+                              ]
+                            },
+                            "relationships": {
+                              "required": [
+                                "shop",
+                                "service",
+                                "contract",
+                                "shipment_status"
+                              ]
+                            }
+                          }
+                        }
+                      ]
                     }
                   ],
                   "example": {
@@ -58,11 +123,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Update a shipment by id.",
     "description": "This endpoint updates the shipment with the supplied id.",
     "parameters": [
@@ -105,10 +172,30 @@
                 "data": {
                   "oneOf": [
                     {
-                      "$ref": "#/components/schemas/Shipment"
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/Shipment"
+                        },
+                        {
+                          "required": [
+                            "id",
+                            "links"
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "$ref": "#/components/schemas/InternationalShipment"
+                      "allOf": [
+                        {
+                          "$ref": "#/components/schemas/InternationalShipment"
+                        },
+                        {
+                          "required": [
+                            "id",
+                            "links"
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "example": {
@@ -126,11 +213,13 @@
     "tags": [
       "Shipments"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
     "summary": "Delete a shipment by id.",
     "description": "This endpoint deletes the shipment with the supplied id.",
     "parameters": [

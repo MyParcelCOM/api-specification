@@ -3,12 +3,14 @@
     "tags": [
       "Shops"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage",
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get all available shops for your API client.",
     "description": "This endpoint retrieves all shops available to your API client.",
     "parameters": [
@@ -37,7 +39,25 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Shop"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Shop"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ],
+                        "properties": {
+                          "attributes": {
+                            "required": [
+                              "name",
+                              "created_at"
+                            ]
+                          }
+                        }
+                      }
+                    ]
                   }
                 },
                 "meta": {
@@ -85,11 +105,13 @@
     "tags": [
       "Shops"
     ],
-    "security": [{
-      "OAuth2": [
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Create a new shop.",
     "description": "This endpoint creates a new shop with the posted data.",
     "requestBody": {
@@ -136,7 +158,25 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shop"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Shop"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "created_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }

@@ -3,10 +3,12 @@
     "tags": [
       "Carriers"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get all the locations from a carrier.",
     "description": "This endpoint retrieves pick-up and drop-off locations offered by the supplied carrier. Locations of the type `pick-up` can be used with services offering this as their `delivery_method`. Locations of the type `drop-off` can be used with services offering this as their `handover_method`.",
     "parameters": [
@@ -51,7 +53,16 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/PickupDropoffLocation"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/PickupDropoffLocation"
+                      },
+                      {
+                        "required": [
+                          "id"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {

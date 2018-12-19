@@ -45,14 +45,16 @@
                       },
                       {
                         "required": [
-                          "id"
+                          "id",
+                          "links"
                         ],
                         "properties": {
                           "attributes": {
                             "required": [
                               "status",
                               "currency",
-                              "name"
+                              "name",
+                              "created_at"
                             ]
                           },
                           "relationships": {
@@ -204,7 +206,8 @@
                           "required": [
                             "status",
                             "currency",
-                            "name"
+                            "name",
+                            "created_at"
                           ]
                         },
                         "relationships": {

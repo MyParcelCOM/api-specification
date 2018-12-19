@@ -14,36 +14,41 @@
           "type": "object",
           "required": [
             "name",
-            "code"
+            "code",
+            "category"
           ],
           "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
-              "example": "signature"
+              "example": "Sunday Delivery"
             },
             "category": {
               "type": "string",
               "enum": [
-                "delivery-day",
-                "handover-method"
+                "proof-of-delivery",
+                "handover-method",
+                "delivery-window"
               ],
-              "example": "handover-method"
+              "example": "delivery-window"
             },
             "code": {
               "type": "string",
-              "example": "handover-method:collection"
+              "example": "delivery-window:sunday"
             }
           }
         },
         "links": {
+          "readOnly": true,
           "type": "object",
           "required": [
             "self"
           ],
+          "additionalProperties": false,
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/service-options/4c675b1a-516c-4410-abff-d237fd45bcd0"
             }
           }

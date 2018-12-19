@@ -43,9 +43,11 @@
           "required": [
             "self"
           ],
+          "additionalProperties": false,
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/system-messages/e6bb8463-2551-469b-94cc-6d861e364621"
             }
           }

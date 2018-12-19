@@ -3,11 +3,13 @@
     "tags": [
       "Brokers"
     ],
-    "security": [{
-      "OAuth2": [
-        "broker.member"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "broker.member"
+        ]
+      }
+    ],
     "summary": "Get a broker by id.",
     "description": "This endpoint retrieves the broker with the supplied id.",
     "parameters": [
@@ -28,7 +30,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Broker"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Broker"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }

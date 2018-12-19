@@ -62,7 +62,16 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ServiceRate"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ServiceRate"
+                      },
+                      {
+                        "required": [
+                          "id"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {

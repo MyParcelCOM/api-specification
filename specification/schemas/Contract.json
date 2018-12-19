@@ -34,6 +34,9 @@
               ],
               "example": "active",
               "description": "A new contract is pending until the `credentials` have been verified. The verification process is done automatically."
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },
@@ -63,6 +66,21 @@
                   "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
                 }
               }
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
             }
           }
         }

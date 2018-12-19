@@ -3,10 +3,12 @@
     "tags": [
       "Regions"
     ],
-    "security": [{
-      "OAuth2": [
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get a region by id.",
     "description": "This endpoint retrieves the region with the supplied id.",
     "parameters": [
@@ -27,7 +29,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Region"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Region"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }

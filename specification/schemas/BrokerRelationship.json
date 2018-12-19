@@ -27,6 +27,7 @@
       "properties": {
         "related": {
           "type": "string",
+          "format": "url",
           "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95"
         }
       }

@@ -3,12 +3,14 @@
     "tags": [
       "Contracts"
     ],
-    "security": [{
-      "OAuth2": [
-        "shipments.manage",
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get a contract by id.",
     "description": "This endpoint retrieves a contract for the supplied id.",
     "parameters": [
@@ -43,7 +45,8 @@
                     },
                     {
                       "required": [
-                        "id"
+                        "id",
+                        "links"
                       ],
                       "properties": {
                         "attributes": {
@@ -51,7 +54,8 @@
                           "required": [
                             "status",
                             "currency",
-                            "name"
+                            "name",
+                            "created_at"
                           ]
                         },
                         "relationships": {
@@ -80,11 +84,13 @@
     "tags": [
       "Contracts"
     ],
-    "security": [{
-      "OAuth2": [
-        "organization.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organization.manage"
+        ]
+      }
+    ],
     "summary": "Update a contract by id.",
     "description": "This endpoint updates the contract with the supplied id. The status will be `pending` until our system has checked if the credentials are valid.",
     "parameters": [
@@ -139,7 +145,8 @@
                           "required": [
                             "status",
                             "currency",
-                            "name"
+                            "name",
+                            "created_at"
                           ]
                         },
                         "relationships": {
@@ -168,11 +175,13 @@
     "tags": [
       "Contracts"
     ],
-    "security": [{
-      "OAuth2": [
-        "organization.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organization.manage"
+        ]
+      }
+    ],
     "summary": "Delete a contract by id.",
     "description": "This endpoint deletes the contract with the supplied id.",
     "parameters": [

@@ -54,14 +54,12 @@
               "type": "files",
               "id": "0f621db6-d239-4ae9-b85d-8e97469b10ce"
             }
-          ],
-          "links": {
-            "related": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/files"
-          }
+          ]
         }
       },
       "links": {
-        "self": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+        "self": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e",
+        "files": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/files"
       }
     }
   ]

@@ -3,11 +3,13 @@
     "tags": [
       "Organizations"
     ],
-    "security": [{
-      "OAuth2": [
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get an organization by id.",
     "description": "This endpoint retrieves the organization with the supplied id.",
     "parameters": [
@@ -43,7 +45,8 @@
                         "attributes": {
                           "type": "object",
                           "required": [
-                            "name"
+                            "name",
+                            "created_at"
                           ]
                         },
                         "relationships": {
@@ -77,11 +80,13 @@
     "tags": [
       "Organizations"
     ],
-    "security": [{
-      "OAuth2": [
-        "organizations.manage"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Update an organization by id.",
     "description": "This endpoint updates the organization with the supplied id.",
     "parameters": [
@@ -137,7 +142,8 @@
                         "attributes": {
                           "type": "object",
                           "required": [
-                            "name"
+                            "name",
+                            "created_at"
                           ]
                         },
                         "relationships": {

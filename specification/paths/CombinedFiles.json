@@ -3,11 +3,13 @@
     "tags": [
       "CombinedFiles"
     ],
-    "security": [{
-      "OAuth2": [
-        "experimental"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "experimental"
+        ]
+      }
+    ],
     "summary": "Get all the combined files.",
     "description": "This endpoint retrieves all the combined files you have requested.",
     "responses": {
@@ -75,11 +77,13 @@
     "tags": [
       "CombinedFiles"
     ],
-    "security": [{
-      "OAuth2": [
-        "experimental"
-      ]
-    }],
+    "security": [
+      {
+        "OAuth2": [
+          "experimental"
+        ]
+      }
+    ],
     "summary": "Create a combined file.",
     "description": "This endpoint creates a new combined file with the posted data and files.",
     "requestBody": {

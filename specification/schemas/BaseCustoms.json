@@ -29,11 +29,11 @@
     "incoterm": {
       "type": "string",
       "enum": [
-        "DDU",
+        "DAP",
         "DDP"
       ],
-      "example": "DDU",
-      "description": "DDU (Delivered Duty Unpaid) or DDP (Delivered Duty Paid)."
+      "example": "DAP",
+      "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid)."
     },
     "license_number": {
       "type": [

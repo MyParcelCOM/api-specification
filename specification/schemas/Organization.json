@@ -52,10 +52,14 @@
         "links": {
           "readOnly": true,
           "type": "object",
+          "required": [
+            "self"
+          ],
           "additionalProperties": false,
           "properties": {
             "self": {
               "type": "string",
+              "format": "url",
               "example": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
             }
           }
