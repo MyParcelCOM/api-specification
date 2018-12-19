@@ -46,7 +46,6 @@
                           "type": "object",
                           "required": [
                             "name",
-                            "billing_address",
                             "created_at"
                           ]
                         },
@@ -144,7 +143,6 @@
                           "type": "object",
                           "required": [
                             "name",
-                            "billing_address",
                             "created_at"
                           ]
                         },

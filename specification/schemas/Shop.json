@@ -13,9 +13,7 @@
         "attributes": {
           "type": "object",
           "required": [
-            "name",
-            "return_address",
-            "sender_address"
+            "name"
           ],
           "additionalProperties": false,
           "properties": {

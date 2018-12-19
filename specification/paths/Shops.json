@@ -52,8 +52,6 @@
                           "attributes": {
                             "required": [
                               "name",
-                              "return_address",
-                              "sender_address",
                               "created_at"
                             ]
                           }
@@ -173,8 +171,6 @@
                         "attributes": {
                           "required": [
                             "name",
-                            "return_address",
-                            "sender_address",
                             "created_at"
                           ]
                         }
