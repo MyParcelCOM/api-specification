@@ -44,6 +44,22 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[current_status_code]",
+        "in": "query",
+        "description": "Comma separated string of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[service_code]",
+        "in": "query",
+        "description": "Comma separated string of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the response.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
