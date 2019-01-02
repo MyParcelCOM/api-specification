@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name",
+            "label"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "My Magento client"
+            },
+            "label": {
+              "type": "string",
+              "example": "Magento"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "owner"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "owner": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/UserRelationship"
+                }
+              ]
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/clients/6a4baca2-7b94-4987-9e4e-2283c22bac1d"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
