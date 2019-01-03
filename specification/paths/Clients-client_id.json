@@ -1,0 +1,118 @@
+{
+  "get": {
+    "tags": [
+      "Clients"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Get a client by id.",
+    "description": "This endpoint retrieves the client with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-client_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the client.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Client"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "relationships",
+                        "links"
+                      ],
+                      "properties": {
+                        "relationships": {
+                          "type": "object",
+                          "required": [
+                            "owner"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "owner": {
+                              "allOf": [
+                                {
+                                  "$ref": "#/components/schemas/UserRelationship"
+                                },
+                                {
+                                  "required": [
+                                    "links"
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "links": {
+                          "readOnly": true,
+                          "type": "object",
+                          "required": [
+                            "self"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "self": {
+                              "type": "string",
+                              "format": "url",
+                              "example": "$API_HOST/clients/6a4baca2-7b94-4987-9e4e-2283c22bac1d"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Clients"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a client by id.",
+    "description": "This endpoint deletes the client with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-client_id"
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The client will be deleted."
+      },
+      "204": {
+        "description": "The client is deleted."
+      }
+    }
+  }
+}

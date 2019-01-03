@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalClient"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "My Magento client"
+            },
+            "label": {
+              "type": "string",
+              "example": "Magento"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
