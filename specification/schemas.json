@@ -29,14 +29,20 @@
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
   },
+  "CarrierRelationship": {
+    "$ref": "./schemas/CarrierRelationship.json"
+  },
+  "Client": {
+    "$ref": "./schemas/Client.json"
+  },
+  "ClientRelationship": {
+    "$ref": "./schemas/ClientRelationship.json"
+  },
   "Contract": {
     "$ref": "./schemas/Contract.json"
   },
   "ContractRelationship": {
     "$ref": "./schemas/ContractRelationship.json"
-  },
-  "CarrierRelationship": {
-    "$ref": "./schemas/CarrierRelationship.json"
   },
   "CombinedFile": {
     "$ref": "./schemas/CombinedFile.json"
@@ -121,6 +127,9 @@
   },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
+  },
+  "MinimalClient": {
+    "$ref": "./schemas/MinimalClient.json"
   },
   "MinimalContract": {
     "$ref": "./schemas/MinimalContract.json"
@@ -316,5 +325,8 @@
   },
   "User": {
     "$ref": "./schemas/User.json"
+  },
+  "UserRelationship": {
+    "$ref": "./schemas/UserRelationship.json"
   }
 }

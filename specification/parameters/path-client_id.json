@@ -1,0 +1,10 @@
+{
+  "name": "client_id",
+  "in": "path",
+  "description": "Id of the client.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

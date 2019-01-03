@@ -8,6 +8,9 @@
   "path-carrier_id": {
     "$ref": "./parameters/path-carrier_id.json"
   },
+  "path-client_id": {
+    "$ref": "./parameters/path-client_id.json"
+  },
   "path-contract_id": {
     "$ref": "./parameters/path-contract_id.json"
   },
