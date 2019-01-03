@@ -14,6 +14,7 @@
           "type": "object",
           "required": [
             "name",
+            "code",
             "package_type",
             "handover_method",
             "delivery_method"
@@ -23,6 +24,11 @@
             "name": {
               "type": "string",
               "example": "Parcel to Parcelshop"
+            },
+            "code": {
+              "type": "string",
+              "example": "spring-pap",
+              "description": "Slug of the service"
             },
             "package_type": {
               "type": "string",
