@@ -80,15 +80,11 @@
                       "items": {
                         "required": [
                           "id",
-                          "type",
-                          "meta"
+                          "type"
                         ],
                         "properties": {
                           "meta": {
                             "type": "object",
-                            "required": [
-                              "included"
-                            ],
                             "properties": {
                               "price": {
                                 "$ref": "#/components/schemas/Price"

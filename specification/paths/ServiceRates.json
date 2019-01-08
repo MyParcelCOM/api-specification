@@ -70,7 +70,34 @@
                         "required": [
                           "id",
                           "links"
-                        ]
+                        ],
+                        "properties": {
+                          "relationships": {
+                            "properties": {
+                              "service_options": {
+                                "properties": {
+                                  "data": {
+                                    "items": {
+                                      "required": [
+                                        "id",
+                                        "type",
+                                        "links",
+                                        "meta"
+                                      ],
+                                      "properties": {
+                                        "meta": {
+                                          "required": [
+                                            "included"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       }
                     ]
                   }
@@ -209,7 +236,34 @@
                       "required": [
                         "id",
                         "links"
-                      ]
+                      ],
+                      "properties": {
+                        "relationships": {
+                          "properties": {
+                            "service_options": {
+                              "properties": {
+                                "data": {
+                                  "items": {
+                                    "required": [
+                                      "id",
+                                      "type",
+                                      "links",
+                                      "meta"
+                                    ],
+                                    "properties": {
+                                      "meta": {
+                                        "required": [
+                                          "included"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   ]
                 }
