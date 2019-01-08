@@ -16,7 +16,6 @@
             "weight_min",
             "weight_max"
           ],
-          "additionalProperties": false,
           "properties": {
             "weight_min": {
               "type": "number",
