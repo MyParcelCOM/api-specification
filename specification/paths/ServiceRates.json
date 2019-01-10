@@ -68,8 +68,36 @@
                       },
                       {
                         "required": [
-                          "id"
-                        ]
+                          "id",
+                          "links"
+                        ],
+                        "properties": {
+                          "relationships": {
+                            "properties": {
+                              "service_options": {
+                                "properties": {
+                                  "data": {
+                                    "items": {
+                                      "required": [
+                                        "id",
+                                        "type",
+                                        "links",
+                                        "meta"
+                                      ],
+                                      "properties": {
+                                        "meta": {
+                                          "required": [
+                                            "included"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
                       }
                     ]
                   }
@@ -107,6 +135,137 @@
                       "example": "$API_HOST/service-rates?page[number]=13&page[size]=30"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "ServiceRates"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new service rate.",
+    "description": "This endpoint creates a new service rate from the posted data.",
+    "requestBody": {
+      "description": "The service rate object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ServiceRate"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "properties": {
+                          "purchase_price": {
+                            "$ref": "#/components/schemas/Price"
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "properties": {
+                          "service_options": {
+                            "properties": {
+                              "data": {
+                                "items": {
+                                  "properties": {
+                                    "meta": {
+                                      "properties": {
+                                        "purchase_price": {
+                                          "$ref": "#/components/schemas/Price"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The service rate is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ServiceRate"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "relationships": {
+                          "properties": {
+                            "service_options": {
+                              "properties": {
+                                "data": {
+                                  "items": {
+                                    "required": [
+                                      "id",
+                                      "type",
+                                      "links",
+                                      "meta"
+                                    ],
+                                    "properties": {
+                                      "meta": {
+                                        "required": [
+                                          "included"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
