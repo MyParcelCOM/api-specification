@@ -81,7 +81,6 @@
                                       "required": [
                                         "id",
                                         "type",
-                                        "links",
                                         "meta"
                                       ],
                                       "properties": {
@@ -247,7 +246,6 @@
                                     "required": [
                                       "id",
                                       "type",
-                                      "links",
                                       "meta"
                                     ],
                                     "properties": {

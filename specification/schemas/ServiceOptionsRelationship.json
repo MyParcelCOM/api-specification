@@ -15,24 +15,7 @@
           {
             "required": [
               "id"
-            ],
-            "properties": {
-              "links": {
-                "readOnly": true,
-                "type": "object",
-                "required": [
-                  "self"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "self": {
-                    "type": "string",
-                    "format": "url",
-                    "example": "$API_HOST/service-options/4c675b1a-516c-4410-abff-d237fd45bcd0"
-                  }
-                }
-              }
-            }
+            ]
           }
         ]
       }
