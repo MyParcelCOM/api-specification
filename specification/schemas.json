@@ -227,6 +227,9 @@
   "PatchPaymentIdentity": {
     "$ref": "./schemas/PatchPaymentIdentity.json"
   },
+  "PatchServiceRate": {
+    "$ref": "./schemas/PatchServiceRate.json"
+  },
   "PatchShipment": {
     "$ref": "./schemas/PatchShipment.json"
   },
