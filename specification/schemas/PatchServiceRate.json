@@ -1,0 +1,114 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalServiceRate"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "weight_min": {
+              "type": "number",
+              "example": 0,
+              "description": "Weight in grams."
+            },
+            "weight_max": {
+              "type": "number",
+              "example": 2000,
+              "description": "Weight in grams."
+            },
+            "length_max": {
+              "type": "number",
+              "example": 300,
+              "description": "Length in mm."
+            },
+            "width_max": {
+              "type": "number",
+              "example": 200,
+              "description": "Width in mm."
+            },
+            "height_max": {
+              "type": "number",
+              "example": 200,
+              "description": "Height in mm."
+            },
+            "volume_max": {
+              "type": "number",
+              "example": 12,
+              "description": "Volume in liters. (dm3)"
+            },
+            "price": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "purchase_price": {
+              "$ref": "#/components/schemas/Price"
+            }
+          }
+        },
+        "relationships": {
+          "properties": {
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
+            },
+            "service": {
+              "$ref": "#/components/schemas/ServiceRelationship"
+            },
+            "service_options": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "required": [
+                              "id",
+                              "type"
+                            ],
+                            "properties": {
+                              "meta": {
+                                "type": "object",
+                                "properties": {
+                                  "price": {
+                                    "$ref": "#/components/schemas/Price"
+                                  },
+                                  "purchase_price": {
+                                    "$ref": "#/components/schemas/Price"
+                                  },
+                                  "included": {
+                                    "type": "boolean",
+                                    "example": true,
+                                    "default": false,
+                                    "description": "Indicates whether or not the service option is always included in the service."
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
