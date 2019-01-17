@@ -9,26 +9,22 @@
     "action_type": {
       "type": "string",
       "enum": [
-        "create-resource",
         "update-resource"
       ],
-      "example": "create-resource"
-    },
-    "resource_type": {
-      "type": "string",
-      "example": "services"
+      "example": "update-resource"
     },
     "values": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "path": {
+          "pointer": {
             "type": "string",
-            "example": "attributes.physical_properties.volume"
+            "example": "/relationships/service/data/id"
           },
           "value": {
-            "$ref": "#/components/schemas/HookValueTypes"
+            "type": "string",
+            "example": "myparcel-com-next-day-service-id"
           }
         }
       }

@@ -13,9 +13,9 @@
           "type": "object",
           "required": [
             "name",
-            "resource_type",
-            "resource_action",
-            "predicate",
+            "order",
+            "active",
+            "trigger",
             "action"
           ],
           "additionalProperties": false,
@@ -24,31 +24,19 @@
               "type": "string",
               "example": "shipment-update-send-mail"
             },
-            "resource_type": {
+            "order": {
               "type": "string",
-              "example": "services"
+              "example": "shipment-update-send-mail"
             },
-            "resource_action": {
-              "type": "string",
-              "enum": [
-                "create",
-                "update"
-              ],
-              "example": "create"
+            "active": {
+              "type": "boolean",
+              "example": true
             },
             "predicate": {
               "$ref": "#/components/schemas/HookPredicate"
             },
             "action": {
               "$ref": "#/components/schemas/HookAction"
-            },
-            "priority": {
-              "type": "number",
-              "example": 1
-            },
-            "active": {
-              "type": "boolean",
-              "example": true
             }
           }
         },

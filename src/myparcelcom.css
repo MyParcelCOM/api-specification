@@ -449,7 +449,6 @@ a:hover {
 /* experimental */
 
 #operations-tag-CombinedFiles:before,
-#operations-tag-Hooks:before,
 #operations-tag-Invitations:before,
 #operations-tag-SystemMessages:before,
 #operations-tag-Users:before,
@@ -463,7 +462,6 @@ a:hover {
 }
 
 #operations-tag-CombinedFiles:hover:after,
-#operations-tag-Hooks:hover:after,
 #operations-tag-Invitations:hover:after,
 #operations-tag-SystemMessages:hover:after,
 #operations-tag-Users:hover:after,
