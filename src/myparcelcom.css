@@ -480,12 +480,6 @@ a:hover {
 }
 
 /* Hide endpoints */
-#operations-tag-CarrierContracts,
-#operations-CarrierContracts-get_carrier_contracts,
-#operations-CarrierContracts-post_carrier_contracts,
-#operations-CarrierContracts-get_carrier_contracts__carrier_contract_id_,
-#operations-CarrierContracts-patch_carrier_contracts__carrier_contract_id_,
-#operations-CarrierContracts-delete_carrier_contracts__carrier_contract_id_,
 #operations-tag-CombinedFiles,
 #operations-CombinedFiles-get_combined_files,
 #operations-CombinedFiles-post_combined_files,
@@ -494,6 +488,8 @@ a:hover {
 #operations-Invitations-get_invitations,
 #operations-Invitations-post_invitations,
 #operations-Invitations-get_invitations__invitation_id_,
+#operations-ServiceRates-post_service_rates,
+#operations-ServiceRates-patch_service_rates__service_rate_id_,
 #operations-tag-SystemMessages,
 #operations-SystemMessages-get_system_messages,
 #operations-SystemMessages-post_system_messages,
@@ -504,8 +500,6 @@ a:hover {
 #operations-PasswordResets-post_password_resets,
 #operations-PasswordResets-patch_password_resets__password_reset_id_,
 #model-MinimalPasswordReset,
-#model-CarrierContract,
-#model-CarrierContractRelationship,
 #model-CombinedFile,
 #model-Invitation,
 #model-SystemMessage,
