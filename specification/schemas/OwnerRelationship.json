@@ -1,9 +1,6 @@
 {
   "oneOf": [
     {
-      "$ref": "#/components/schemas/EnterpriseRelationship"
-    },
-    {
       "$ref": "#/components/schemas/BrokerRelationship"
     },
     {
