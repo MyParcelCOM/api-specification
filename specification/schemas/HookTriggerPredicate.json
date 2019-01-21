@@ -15,17 +15,17 @@
         ">",
         "<",
         ">=",
-        "<=",
-        "AND",
-        "OR"
+        "<="
       ],
       "example": "=="
     },
-    "left_value": {
-      "$ref": "#/components/schemas/HookValueTypes"
+    "pointer": {
+      "type": "string",
+      "example": "/attributes/physical_properties/weight"
     },
-    "right_value": {
-      "$ref": "#/components/schemas/HookValueTypes"
+    "value": {
+      "type": "string",
+      "example": "1000"
     }
   }
 }

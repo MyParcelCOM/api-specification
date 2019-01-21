@@ -83,8 +83,14 @@
   "HookAction": {
     "$ref": "./schemas/HookAction.json"
   },
-  "HookPredicate": {
-    "$ref": "./schemas/HookPredicate.json"
+  "HookActionValue": {
+    "$ref": "./schemas/HookActionValue.json"
+  },
+  "HookTrigger": {
+    "$ref": "./schemas/HookTrigger.json"
+  },
+  "HookTriggerPredicate": {
+    "$ref": "./schemas/HookTriggerPredicate.json"
   },
   "InternationalShipment": {
     "$ref": "./schemas/InternationalShipment.json"
@@ -190,9 +196,6 @@
   },
   "OrganizationRelationship": {
     "$ref": "./schemas/OrganizationRelationship.json"
-  },
-  "OwnerRelationship": {
-    "$ref": "./schemas/OwnerRelationship.json"
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"

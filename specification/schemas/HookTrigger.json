@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "resource_type",
+    "resource_action",
+    "predicates"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "resource_type": {
+      "type": "string",
+      "example": "shipments"
+    },
+    "resource_action": {
+      "type": "string",
+      "enum": [
+        "create",
+        "update",
+        "delete"
+      ],
+      "example": "create"
+    },
+    "predicates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "$ref": "#/components/schemas/HookTriggerPredicate"
+      }
+    }
+  }
+}

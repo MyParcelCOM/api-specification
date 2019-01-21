@@ -42,7 +42,7 @@
     "$ref": "./paths/Hooks.json"
   },
   "/hooks/{hook_id}": {
-    "$ref": "./paths/hooks-hook_id.json"
+    "$ref": "./paths/Hooks-hook_id.json"
   },
   "/invitations": {
     "$ref": "./paths/Invitations.json"

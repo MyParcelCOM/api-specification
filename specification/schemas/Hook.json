@@ -25,15 +25,15 @@
               "example": "shipment-update-send-mail"
             },
             "order": {
-              "type": "string",
-              "example": "shipment-update-send-mail"
+              "type": "number",
+              "example": 3
             },
             "active": {
               "type": "boolean",
               "example": true
             },
-            "predicate": {
-              "$ref": "#/components/schemas/HookPredicate"
+            "trigger": {
+              "$ref": "#/components/schemas/HookTrigger"
             },
             "action": {
               "$ref": "#/components/schemas/HookAction"
@@ -47,7 +47,20 @@
           ],
           "properties": {
             "owner": {
-              "$ref": "#/components/schemas/OwnerRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BrokerRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/OrganizationRelationship"
+                }
+              ],
+              "example": {
+                "data": {
+                  "type": "organizations",
+                  "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                }
+              }
             }
           }
         },
