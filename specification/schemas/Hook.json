@@ -53,6 +53,9 @@
                 },
                 {
                   "$ref": "#/components/schemas/OrganizationRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/ShopRelationship"
                 }
               ],
               "example": {
