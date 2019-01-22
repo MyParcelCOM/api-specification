@@ -49,6 +49,9 @@
             },
             "price": {
               "$ref": "#/components/schemas/Price"
+            },
+            "purchase_price": {
+              "$ref": "#/components/schemas/Price"
             }
           }
         },
@@ -86,6 +89,9 @@
                             "type": "object",
                             "properties": {
                               "price": {
+                                "$ref": "#/components/schemas/Price"
+                              },
+                              "purchase_price": {
                                 "$ref": "#/components/schemas/Price"
                               },
                               "included": {
