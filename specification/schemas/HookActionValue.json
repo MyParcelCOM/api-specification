@@ -1,8 +1,8 @@
 {
   "type": "object",
   "required": [
-    "left_value",
-    "right_value"
+    "pointer",
+    "value"
   ],
   "additionalProperties": false,
   "properties": {
@@ -11,8 +11,11 @@
       "example": "/attributes/physical_properties/weight"
     },
     "value": {
-      "type": "string",
-      "example": "1000"
+      "type": [
+        "number",
+        "string"
+      ],
+      "example": 1000
     }
   }
 }
