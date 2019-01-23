@@ -9,26 +9,27 @@
     "action_type": {
       "type": "string",
       "enum": [
-        "create-resource",
         "update-resource"
       ],
-      "example": "create-resource"
-    },
-    "resource_type": {
-      "type": "string",
-      "example": "services"
+      "example": "update-resource"
     },
     "values": {
       "type": "array",
       "items": {
         "type": "object",
+        "required": [
+          "pointer",
+          "value"
+        ],
         "properties": {
-          "path": {
+          "pointer": {
             "type": "string",
-            "example": "attributes.physical_properties.volume"
+            "example": "/relationships/service/data/id"
           },
           "value": {
-            "$ref": "#/components/schemas/HookValueTypes"
+            "type": "string",
+            "example": "8321796d-5205-4e13-963f-61bf7db34390",
+            "description": "In this specific case this could be a DPD Next Day service id."
           }
         }
       }

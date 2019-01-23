@@ -83,26 +83,8 @@
   "HookAction": {
     "$ref": "./schemas/HookAction.json"
   },
-  "HookPathValue": {
-    "$ref": "./schemas/HookPathValue.json"
-  },
-  "HookPathValueType": {
-    "$ref": "./schemas/HookPathValueType.json"
-  },
-  "HookPredicate": {
-    "$ref": "./schemas/HookPredicate.json"
-  },
-  "HookPredicateValueType": {
-    "$ref": "./schemas/HookPredicateValueType.json"
-  },
-  "HookResourceValueType": {
-    "$ref": "./schemas/HookResourceValueType.json"
-  },
-  "HookScalarValueType": {
-    "$ref": "./schemas/HookScalarValueType.json"
-  },
-  "HookValueTypes": {
-    "$ref": "./schemas/HookValueTypes.json"
+  "HookTrigger": {
+    "$ref": "./schemas/HookTrigger.json"
   },
   "InternationalShipment": {
     "$ref": "./schemas/InternationalShipment.json"
@@ -208,9 +190,6 @@
   },
   "OrganizationRelationship": {
     "$ref": "./schemas/OrganizationRelationship.json"
-  },
-  "OwnerRelationship": {
-    "$ref": "./schemas/OwnerRelationship.json"
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"

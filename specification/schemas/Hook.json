@@ -6,49 +6,39 @@
     },
     {
       "required": [
-        "attributes"
+        "attributes",
+        "relationships"
       ],
       "properties": {
         "attributes": {
           "type": "object",
           "required": [
             "name",
-            "resource_type",
-            "resource_action",
-            "predicate",
+            "order",
+            "active",
+            "trigger",
             "action"
           ],
           "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
-              "example": "shipment-update-send-mail"
+              "example": "DPD Next Day for medium packages"
             },
-            "resource_type": {
-              "type": "string",
-              "example": "services"
-            },
-            "resource_action": {
-              "type": "string",
-              "enum": [
-                "create",
-                "update"
-              ],
-              "example": "create"
-            },
-            "predicate": {
-              "$ref": "#/components/schemas/HookPredicate"
-            },
-            "action": {
-              "$ref": "#/components/schemas/HookAction"
-            },
-            "priority": {
+            "order": {
               "type": "number",
-              "example": 1
+              "example": 3,
+              "description": "Priority of this hook, lower value means it is triggered first."
             },
             "active": {
               "type": "boolean",
               "example": true
+            },
+            "trigger": {
+              "$ref": "#/components/schemas/HookTrigger"
+            },
+            "action": {
+              "$ref": "#/components/schemas/HookAction"
             }
           }
         },
@@ -59,7 +49,23 @@
           ],
           "properties": {
             "owner": {
-              "$ref": "#/components/schemas/OwnerRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BrokerRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/OrganizationRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/ShopRelationship"
+                }
+              ],
+              "example": {
+                "data": {
+                  "type": "organizations",
+                  "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                }
+              }
             }
           }
         },
