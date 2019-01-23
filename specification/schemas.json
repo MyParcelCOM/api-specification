@@ -83,14 +83,8 @@
   "HookAction": {
     "$ref": "./schemas/HookAction.json"
   },
-  "HookActionValue": {
-    "$ref": "./schemas/HookActionValue.json"
-  },
   "HookTrigger": {
     "$ref": "./schemas/HookTrigger.json"
-  },
-  "HookTriggerPredicate": {
-    "$ref": "./schemas/HookTriggerPredicate.json"
   },
   "InternationalShipment": {
     "$ref": "./schemas/InternationalShipment.json"
