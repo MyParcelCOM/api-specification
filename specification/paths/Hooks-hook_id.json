@@ -23,7 +23,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Hook"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Hook"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }

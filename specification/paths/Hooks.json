@@ -22,7 +22,17 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Hook"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Hook"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ]
+                      }
+                    ]
                   }
                 },
                 "meta": {
@@ -116,7 +126,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Hook"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Hook"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
                 }
               }
             }

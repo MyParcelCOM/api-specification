@@ -6,7 +6,8 @@
     },
     {
       "required": [
-        "attributes"
+        "attributes",
+        "relationships"
       ],
       "properties": {
         "attributes": {
@@ -22,11 +23,12 @@
           "properties": {
             "name": {
               "type": "string",
-              "example": "shipment-update-send-mail"
+              "example": "DPD Next Day for medium packages"
             },
             "order": {
               "type": "number",
-              "example": 3
+              "example": 3,
+              "description": "Priority of this hook, lower value means it is triggered first."
             },
             "active": {
               "type": "boolean",

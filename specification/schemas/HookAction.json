@@ -17,6 +17,10 @@
       "type": "array",
       "items": {
         "type": "object",
+        "required": [
+          "pointer",
+          "value"
+        ],
         "properties": {
           "pointer": {
             "type": "string",
@@ -24,7 +28,8 @@
           },
           "value": {
             "type": "string",
-            "example": "myparcel-com-next-day-service-id"
+            "example": "8321796d-5205-4e13-963f-61bf7db34390",
+            "description": "In this specific case this could be a DPD Next Day service id."
           }
         }
       }
