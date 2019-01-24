@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalHook"
+    },
+    {
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "DPD Next Day for medium packages"
+            },
+            "order": {
+              "type": "number",
+              "example": 3,
+              "description": "Priority of this hook, lower value means it is triggered first."
+            },
+            "active": {
+              "type": "boolean",
+              "example": true
+            },
+            "trigger": {
+              "$ref": "#/components/schemas/HookTrigger"
+            },
+            "action": {
+              "$ref": "#/components/schemas/HookAction"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
