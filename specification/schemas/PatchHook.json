@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "additionalProperties": false,
   "allOf": [
     {
       "$ref": "#/components/schemas/MinimalHook"
