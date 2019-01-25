@@ -197,6 +197,9 @@
   "PatchContract": {
     "$ref": "./schemas/PatchContract.json"
   },
+  "PatchHook": {
+    "$ref": "./schemas/PatchHook.json"
+  },
   "PatchOrganization": {
     "$ref": "./schemas/PatchOrganization.json"
   },
