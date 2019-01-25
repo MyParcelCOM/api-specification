@@ -1,41 +1,46 @@
 {
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "#/components/schemas/MinimalHook"
+  "required": [
+    "id",
+    "type",
+    "attributes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^hooks$",
+      "example": "hooks"
     },
-    {
-      "required": [
-        "id"
-      ],
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "be7f6752-34e0-49a1-a832-bcc209450ea9"
+    },
+    "attributes": {
+      "type": "object",
       "additionalProperties": false,
       "properties": {
-        "attributes": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "name": {
-              "type": "string",
-              "example": "DPD Next Day for medium packages"
-            },
-            "order": {
-              "type": "number",
-              "example": 3,
-              "description": "Priority of this hook, lower value means it is triggered first."
-            },
-            "active": {
-              "type": "boolean",
-              "example": true
-            },
-            "trigger": {
-              "$ref": "#/components/schemas/HookTrigger"
-            },
-            "action": {
-              "$ref": "#/components/schemas/HookAction"
-            }
-          }
+        "name": {
+          "type": "string",
+          "example": "DPD Next Day for medium packages"
+        },
+        "order": {
+          "type": "number",
+          "example": 3,
+          "description": "Priority of this hook, lower value means it is triggered first."
+        },
+        "active": {
+          "type": "boolean",
+          "example": true
+        },
+        "trigger": {
+          "$ref": "#/components/schemas/HookTrigger"
+        },
+        "action": {
+          "$ref": "#/components/schemas/HookAction"
         }
       }
     }
-  ]
+  }
 }
