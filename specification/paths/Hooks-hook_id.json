@@ -3,6 +3,13 @@
     "tags": [
       "Hooks"
     ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
     "summary": "Get a hook by id.",
     "description": "This endpoint retrieves the hook with the supplied id.",
     "parameters": [
@@ -115,6 +122,13 @@
   "delete": {
     "tags": [
       "Hooks"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
     ],
     "summary": "Delete a hook by id.",
     "description": "This endpoint deletes the hook with the supplied id.",
