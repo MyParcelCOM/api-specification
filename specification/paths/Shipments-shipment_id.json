@@ -62,8 +62,6 @@
                             "relationships": {
                               "required": [
                                 "shop",
-                                "service",
-                                "contract",
                                 "shipment_status"
                               ]
                             }
@@ -98,8 +96,6 @@
                             "relationships": {
                               "required": [
                                 "shop",
-                                "service",
-                                "contract",
                                 "shipment_status"
                               ]
                             }

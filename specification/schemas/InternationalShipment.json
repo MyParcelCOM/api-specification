@@ -148,9 +148,7 @@
         "relationships": {
           "type": "object",
           "required": [
-            "shop",
-            "service",
-            "contract"
+            "shop"
           ],
           "properties": {
             "service_options": {
