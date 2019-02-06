@@ -38,6 +38,14 @@
         }
       },
       {
+        "name": "filter[organization]",
+        "in": "query",
+        "description": "Comma separated string of organization ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "include",
         "in": "query",
         "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`service`</li><li>`service_options`</li></ul>",
