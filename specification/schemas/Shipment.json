@@ -61,7 +61,10 @@
               "description": "Required if the service delivery method is `pick-up`."
             },
             "description": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "Order #8008135"
             },
             "price": {
