@@ -22,6 +22,9 @@
             "label": {
               "type": "string",
               "example": "Magento"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         }
