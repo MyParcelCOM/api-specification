@@ -7,7 +7,7 @@
         "number",
         "null"
       ],
-      "minimum": 0,
+      "minimum": 1,
       "example": 150,
       "description": "Height in millimeters."
     },
@@ -16,7 +16,7 @@
         "number",
         "null"
       ],
-      "minimum": 0,
+      "minimum": 1,
       "example": 300,
       "description": "Width in millimeters."
     },
@@ -25,7 +25,7 @@
         "number",
         "null"
       ],
-      "minimum": 0,
+      "minimum": 1,
       "example": 500,
       "description": "Length in millimeters."
     },
@@ -34,13 +34,13 @@
         "number",
         "null"
       ],
-      "minimum": 0,
+      "minimum": 0.01,
       "example": 22.5,
       "description": "Volume in liters. (dm3)"
     },
     "weight": {
       "type": "number",
-      "minimum": 0,
+      "minimum": 1,
       "example": 5000,
       "description": "Weight in grams."
     }
