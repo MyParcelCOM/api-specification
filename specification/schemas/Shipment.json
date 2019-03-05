@@ -144,6 +144,9 @@
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
             },
+            "client": {
+              "$ref": "#/components/schemas/ClientRelationship"
+            },
             "shipment_status": {
               "allOf": [
                 {
