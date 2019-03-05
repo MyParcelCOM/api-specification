@@ -2,8 +2,7 @@
   "type": "object",
   "required": [
     "resource_type",
-    "resource_action",
-    "predicates"
+    "resource_action"
   ],
   "additionalProperties": false,
   "properties": {
