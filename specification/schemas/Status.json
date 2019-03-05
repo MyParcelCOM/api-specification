@@ -23,22 +23,30 @@
             "code": {
               "type": "string",
               "enum": [
-                "shipment-concept",
-                "shipment-registered",
+                "invoice-paid",
+                "invoice-pending",
+                "payment-pending",
+                "payment-rejected",
+                "payment-succeeded",
                 "shipment-received-by-carrier",
-                "shipment-at-sorting",
                 "shipment-with-courier",
-                "shipment-delivered",
-                "shipment-registration-failed",
+                "shipment-at-sorting",
                 "shipment-created-without-tracking",
-                "shipment-failed"
+                "shipment-concept",
+                "shipment-delivered",
+                "shipment-failed",
+                "shipment-registered",
+                "shipment-registration-failed",
+                "shipment-tracking-expired"
               ],
               "example": "shipment-delivered"
             },
             "resource_type": {
               "type": "string",
               "enum": [
-                "shipments"
+                "shipments",
+                "invoices",
+                "payments"
               ],
               "example": "shipments",
               "description": "Resource type this status can be applied to."
