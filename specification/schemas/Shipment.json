@@ -195,7 +195,7 @@
         "meta": {
           "readOnly": true,
           "type": "object",
-          "application_origin": {
+          "origin": {
             "readOnly": true,
             "type": "string",
             "example": "MyParcel.com backoffice",
