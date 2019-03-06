@@ -144,9 +144,6 @@
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
             },
-            "client": {
-              "$ref": "#/components/schemas/ClientRelationship"
-            },
             "shipment_status": {
               "allOf": [
                 {
@@ -193,6 +190,16 @@
                 }
               ]
             }
+          }
+        },
+        "meta": {
+          "readOnly": true,
+          "type": "object",
+          "application_origin": {
+            "readOnly": true,
+            "type": "string",
+            "example": "MyParcel.com backoffice",
+            "description": "Reference of application client which the shipment was created."
           }
         },
         "links": {
