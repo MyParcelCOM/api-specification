@@ -195,10 +195,12 @@
         "meta": {
           "readOnly": true,
           "type": "object",
-          "origin": {
-            "type": "string",
-            "example": "MyParcel.com backoffice",
-            "description": "Reference of application client which the shipment was created."
+          "properties": {
+            "origin": {
+              "type": "string",
+              "example": "MyParcel.com backoffice",
+              "description": "Reference of application client which the shipment was created."
+            }
           }
         },
         "links": {
