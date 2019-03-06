@@ -199,7 +199,7 @@
             "origin": {
               "type": "string",
               "example": "MyParcel.com backoffice",
-              "description": "Reference of application client which the shipment was created."
+              "description": "Label of the API client used to create the shipment."
             }
           }
         },
