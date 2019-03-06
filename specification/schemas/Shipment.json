@@ -196,7 +196,6 @@
           "readOnly": true,
           "type": "object",
           "origin": {
-            "readOnly": true,
             "type": "string",
             "example": "MyParcel.com backoffice",
             "description": "Reference of application client which the shipment was created."
