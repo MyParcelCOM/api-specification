@@ -192,6 +192,17 @@
             }
           }
         },
+        "meta": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "origin": {
+              "type": "string",
+              "example": "MyParcel.com backoffice",
+              "description": "Label of the API client used to create the shipment."
+            }
+          }
+        },
         "links": {
           "readOnly": true,
           "type": "object",
