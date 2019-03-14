@@ -6,7 +6,7 @@
     "security": [
       {
         "OAuth2": [
-          "addresses:suggest"
+          "addresses.suggest"
         ]
       }
     ],
@@ -76,8 +76,8 @@
                         "example": "2131 BC"
                       },
                       "street_number": {
-                        "type": "string",
-                        "example": "679"
+                        "type": "number",
+                        "example": 679
                       },
                       "city": {
                         "type": "string",
