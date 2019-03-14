@@ -40,6 +40,10 @@
                   "street_number": {
                     "type": "string",
                     "example": "679"
+                  },
+                  "street_number_suffix": {
+                    "type": "string",
+                    "example": "A1"
                   }
                 }
               }
@@ -76,8 +80,8 @@
                         "example": "2131 BC"
                       },
                       "street_number": {
-                        "type": "number",
-                        "example": 679
+                        "type": "string",
+                        "example": "679"
                       },
                       "city": {
                         "type": "string",
