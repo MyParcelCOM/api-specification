@@ -1,0 +1,108 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "addresses.suggest"
+        ]
+      }
+    ],
+    "summary": "Get address suggestions.",
+    "description": "This endpoint returns address suggestions based on the provided address details.",
+    "requestBody": {
+      "description": "The address details to request address suggestions for.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "country_code"
+                ],
+                "properties": {
+                  "country_code": {
+                    "type": "string",
+                    "example": "NL"
+                  },
+                  "postal_code": {
+                    "type": "string",
+                    "example": "2131 BC"
+                  },
+                  "street_number": {
+                    "type": "number",
+                    "example": 679
+                  },
+                  "street_number_suffix": {
+                    "type": "string",
+                    "example": "A1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Address suggestions have been returned.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "country_code"
+                    ],
+                    "properties": {
+                      "country_code": {
+                        "type": "string",
+                        "example": "NL"
+                      },
+                      "postal_code": {
+                        "type": "string",
+                        "example": "2131 BC"
+                      },
+                      "street_number": {
+                        "type": "number",
+                        "example": 679
+                      },
+                      "city": {
+                        "type": "string",
+                        "example": "Hoofddorp"
+                      },
+                      "street_name": {
+                        "type": "string",
+                        "example": "Hoofdweg"
+                      },
+                      "street_number_suffix": {
+                        "type": "string",
+                        "example": "A1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
