@@ -131,9 +131,6 @@
   "/statuses/{status_id}": {
     "$ref": "./paths/Statuses-status_id.json"
   },
-  "/suggest-address": {
-    "$ref": "./paths/SuggestAddress.json"
-  },
   "/system-messages": {
     "$ref": "./paths/SystemMessages.json"
   },
@@ -145,5 +142,8 @@
   },
   "/users/{user_id}": {
     "$ref": "./paths/Users-user_id.json"
+  },
+  "/suggest-address": {
+    "$ref": "./paths/SuggestAddress.json"
   }
 }
