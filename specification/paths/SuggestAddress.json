@@ -71,6 +71,10 @@
                       "country_code"
                     ],
                     "properties": {
+                      "city": {
+                        "type": "string",
+                        "example": "Hoofddorp"
+                      },
                       "country_code": {
                         "type": "string",
                         "example": "NL"
@@ -79,17 +83,13 @@
                         "type": "string",
                         "example": "2131 BC"
                       },
-                      "street_number": {
-                        "type": "number",
-                        "example": 679
-                      },
-                      "city": {
-                        "type": "string",
-                        "example": "Hoofddorp"
-                      },
                       "street_name": {
                         "type": "string",
                         "example": "Hoofdweg"
+                      },
+                      "street_number": {
+                        "type": "number",
+                        "example": 679
                       },
                       "street_number_suffix": {
                         "type": "string",
