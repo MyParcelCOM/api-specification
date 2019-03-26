@@ -11,7 +11,7 @@ services:
       - .:/opt/spec
 
   node:
-    image: node:11.4
+    image: node:11.12
     working_dir: /opt/spec
     command: ./node_modules/.bin/gulp watch --port $GULP_PORT --api-host $API_HOST --auth-host $AUTH_HOST
     volumes:
