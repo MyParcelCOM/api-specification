@@ -13,7 +13,7 @@
     "summary": "Manually update a shipment's status.",
     "description": "This endpoint allows a user to manually update a shipment's status.",
     "requestBody": {
-      "description": "The shipment id to be updated and the status details to update it with.",
+      "description": "The shipment id to be updated and the status id to update it with.",
       "required": true,
       "content": {
         "application/json": {
