@@ -1,0 +1,56 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Manually update a shipment's status.",
+    "description": "This endpoint allows a user to manually update a shipment's status.",
+    "requestBody": {
+      "description": "The shipment id to be updated and the status id to update it with.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "shipment_id",
+                  "status_id"
+                ],
+                "properties": {
+                  "shipment_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "ea002ef2-0c0f-432a-8263-c8dcb191e728"
+                  },
+                  "status_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "be1c7cb5-e8d4-494a-9637-edb27ecab7c1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The status has been added to the shipment."
+      }
+    }
+  }
+}

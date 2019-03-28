@@ -145,5 +145,8 @@
   },
   "/suggest-address": {
     "$ref": "./paths/SuggestAddress.json"
+  },
+  "/update-shipment-status": {
+    "$ref": "./paths/UpdateShipmentStatus.json"
   }
 }
