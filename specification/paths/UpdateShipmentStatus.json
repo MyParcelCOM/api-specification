@@ -39,12 +39,6 @@
                     "type": "string",
                     "format": "uuid",
                     "example": "be1c7cb5-e8d4-494a-9637-edb27ecab7c1"
-                  },
-                  "carrier_status": {
-                    "$ref": "#/components/schemas/CarrierStatus"
-                  },
-                  "error": {
-                    "$ref": "#/components/schemas/Error"
                   }
                 }
               }
@@ -54,23 +48,8 @@
       }
     },
     "responses": {
-      "200": {
-        "description": "The status has been added to the shipment.",
-        "content": {
-          "application/vnd.api+json": {
-            "schema": {
-              "type": "object",
-              "required": [
-                "data"
-              ],
-              "properties": {
-                "data": {
-                  "$ref": "#/components/schemas/ShipmentStatus"
-                }
-              }
-            }
-          }
-        }
+      "204": {
+        "description": "The status has been added to the shipment."
       }
     }
   }
