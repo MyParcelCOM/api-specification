@@ -91,6 +91,14 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[code]",
+        "in": "query",
+        "description": "Filter the services retrieved based on given code.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
