@@ -4,7 +4,7 @@
   "properties": {
     "height": {
       "type": [
-        "number",
+        "integer",
         "null"
       ],
       "minimum": 1,
@@ -13,7 +13,7 @@
     },
     "width": {
       "type": [
-        "number",
+        "integer",
         "null"
       ],
       "minimum": 1,
@@ -22,7 +22,7 @@
     },
     "length": {
       "type": [
-        "number",
+        "integer",
         "null"
       ],
       "minimum": 1,
@@ -39,7 +39,7 @@
       "description": "Volume in liters. (dm3)"
     },
     "weight": {
-      "type": "number",
+      "type": "integer",
       "minimum": 1,
       "example": 5000,
       "description": "Weight in grams."

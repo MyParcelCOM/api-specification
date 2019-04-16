@@ -15,7 +15,7 @@
             },
             "paid_at": {
               "type": [
-                "number",
+                "integer",
                 "null"
               ],
               "example": 1504801719,

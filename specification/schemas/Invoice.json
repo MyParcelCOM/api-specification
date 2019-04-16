@@ -22,7 +22,7 @@
             },
             "billing_term_start_at": {
               "type": [
-                "number",
+                "integer",
                 "null"
               ],
               "example": 1517443200,
@@ -30,7 +30,7 @@
             },
             "billing_term_end_at": {
               "type": [
-                "number",
+                "integer",
                 "null"
               ],
               "example": 1519862399,

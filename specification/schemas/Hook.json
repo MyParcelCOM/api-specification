@@ -26,7 +26,7 @@
               "example": "DPD Next Day for medium packages"
             },
             "order": {
-              "type": "number",
+              "type": "integer",
               "example": 3,
               "description": "Priority of this hook, lower value means it is triggered first."
             },
