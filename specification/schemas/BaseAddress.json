@@ -15,7 +15,7 @@
     },
     "street_number": {
       "type": [
-        "number",
+        "integer",
         "null"
       ],
       "example": 221

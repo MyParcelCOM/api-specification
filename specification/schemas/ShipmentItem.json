@@ -29,7 +29,7 @@
       ]
     },
     "quantity": {
-      "type": "number",
+      "type": "integer",
       "example": 2
     },
     "hs_code": {
@@ -43,11 +43,11 @@
     },
     "item_weight": {
       "type": [
-        "number",
+        "integer",
         "null"
       ],
       "example": 135,
-      "description": "Weight of a single item within item resource. Should be multiplied by quantity to get total weight."
+      "description": "Weight in grams of a single item within item resource. Should be multiplied by quantity to get total weight."
     }
   }
 }

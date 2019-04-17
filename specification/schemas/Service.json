@@ -60,11 +60,11 @@
               "additionalProperties": false,
               "properties": {
                 "min": {
-                  "type": "number",
+                  "type": "integer",
                   "example": 1
                 },
                 "max": {
-                  "type": "number",
+                  "type": "integer",
                   "example": 3
                 }
               }

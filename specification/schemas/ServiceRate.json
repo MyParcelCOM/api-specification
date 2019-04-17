@@ -18,33 +18,33 @@
           ],
           "properties": {
             "weight_min": {
-              "type": "number",
+              "type": "integer",
               "example": 0,
               "description": "Weight in grams."
             },
             "weight_max": {
-              "type": "number",
+              "type": "integer",
               "example": 2000,
               "description": "Weight in grams."
             },
             "length_max": {
-              "type": "number",
+              "type": "integer",
               "example": 300,
               "description": "Length in mm."
             },
             "width_max": {
-              "type": "number",
+              "type": "integer",
               "example": 200,
               "description": "Width in mm."
             },
             "height_max": {
-              "type": "number",
+              "type": "integer",
               "example": 200,
               "description": "Height in mm."
             },
             "volume_max": {
               "type": "number",
-              "example": 12,
+              "example": 12.5,
               "description": "Volume in liters. (dm3)"
             },
             "price": {
