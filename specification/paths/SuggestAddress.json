@@ -25,9 +25,6 @@
             "properties": {
               "data": {
                 "type": "object",
-                "required": [
-                  "country_code"
-                ],
                 "properties": {
                   "country_code": {
                     "type": "string",
@@ -44,6 +41,14 @@
                   "street_number_suffix": {
                     "type": "string",
                     "example": "A1"
+                  },
+                  "city": {
+                    "type": "string",
+                    "example": "Amsterdam"
+                  },
+                  "street_1": {
+                    "type": "string",
+                    "example": "Marnixstraat"
                   }
                 }
               }
@@ -83,7 +88,7 @@
                         "type": "string",
                         "example": "2131 BC"
                       },
-                      "street_name": {
+                      "street_1": {
                         "type": "string",
                         "example": "Hoofdweg"
                       },
