@@ -67,6 +67,11 @@
               ],
               "example": "Order #8008135"
             },
+            "channel": {
+              "type": "string",
+              "example": "MyParcel.com backoffice",
+              "description": "Name of the application used to create the shipment."
+            },
             "price": {
               "allOf": [
                 {
@@ -189,17 +194,6 @@
                   }
                 }
               ]
-            }
-          }
-        },
-        "meta": {
-          "readOnly": true,
-          "type": "object",
-          "properties": {
-            "origin": {
-              "type": "string",
-              "example": "MyParcel.com backoffice",
-              "description": "Label of the API client used to create the shipment."
             }
           }
         },
