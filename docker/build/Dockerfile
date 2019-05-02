@@ -23,6 +23,6 @@ RUN apt update \
 
 FROM nginx:1.15-alpine
 
-COPY --from=build /build/dist /usr/share/nginx/html
+COPY --from=build /build/dist /usr/share/nginx/html/api-specification
 
 ADD ./docker/build/default.conf /etc/nginx/conf.d/default.conf
