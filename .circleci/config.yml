@@ -1,13 +1,74 @@
 version: 2
 jobs:
-  deploy_develop:
+  build:
+    docker:
+      - image: myparcelcom/kubectl-aws
+        auth:
+          username: ${DOCKER_USER}
+          password: ${DOCKER_PASSWORD}
+    working_directory: ~/project
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Authenticate AWS
+          command: |
+            export AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
+            export AWS_SECRET_KEY=${AWS_SECRET_ACCESS_KEY}
+            aws-login
+      - run:
+          name: Building and Pushing Docker images
+          command: |
+            NS=$(env_namespace)
+            eval $(aws-ssm-params ${NS})
+            IMAGE_TAG=$(image_tag)
+            docker build \
+              -t myparcelcom/api-specification:${IMAGE_TAG} \
+              --build-arg API_HOST=${API_HOST} \
+              --build-arg AUTH_HOST=${AUTH_HOST} \
+              -f docker/build/Dockerfile .
+            docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
+            docker push myparcelcom/api-specification:${IMAGE_TAG}
+
+  deploy:
+    docker:
+      - image: myparcelcom/kubectl-aws
+        auth:
+          username: ${DOCKER_USER}
+          password: ${DOCKER_PASSWORD}
+    steps:
+      - checkout
+      - run:
+          name: Bootstrap AWS EKS and kubectl
+          command: |
+            export CLUSTER=$(cluster_name)
+            export AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
+            export AWS_SECRET_KEY=${AWS_SECRET_ACCESS_KEY}
+            bootstrap
+      - run:
+          name: Process templates
+          command: |
+            export NS=$(env_namespace)
+            export IMAGE_TAG=$(image_tag)
+
+            eval $(aws-ssm-params ${NS}/${CIRCLE_PROJECT_REPONAME}) # fetch project settings
+
+            envsubst < kube/deployment.template.yaml > kube/deployment.yaml
+            envsubst < kube/service.template.yaml > kube/service.yaml
+      - run:
+          name: Deploy
+          command: |
+            kubectl apply -f kube/deployment.yaml
+            kubectl apply -f kube/service.yaml
+
+  deploy_staging:
     machine:
       image: circleci/classic:edge
 
     steps:
     - add_ssh_keys:
         fingerprints:
-        - "1c:5c:08:53:84:9c:23:a1:aa:d5:d4:83:29:ad:86:fb"
+          - "1c:5c:08:53:84:9c:23:a1:aa:d5:d4:83:29:ad:86:fb"
 
     - checkout
 
@@ -33,9 +94,23 @@ jobs:
 workflows:
   version: 2
 
-  deploy_to_staging:
+  deploy:
     jobs:
-    - deploy_develop:
-        filters:
-          branches:
-            only: master
+      - build:
+          filters:
+            branches:
+              only:
+                - develop
+                - master
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+      - deploy_staging:
+          filters:
+            branches:
+              only: master
