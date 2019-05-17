@@ -35,6 +35,7 @@
                 "shipment-concept",
                 "shipment-delivered",
                 "shipment-failed",
+                "shipment-processing",
                 "shipment-registered",
                 "shipment-registration-failed",
                 "shipment-tracking-expired"
