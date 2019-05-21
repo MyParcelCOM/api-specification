@@ -83,6 +83,12 @@
   "HookAction": {
     "$ref": "./schemas/HookAction.json"
   },
+  "HookLog": {
+    "$ref": "./schemas/HookLog.json"
+  },
+  "HookLogRelationship": {
+    "$ref": "./schemas/HookLogRelationship.json"
+  },
   "HookTrigger": {
     "$ref": "./schemas/HookTrigger.json"
   },
