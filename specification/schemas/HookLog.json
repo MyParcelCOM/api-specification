@@ -1,16 +1,25 @@
 {
   "type": "object",
   "required": [
+    "id",
+    "type",
+    "links",
     "attributes",
     "relationships"
   ],
   "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^hook-logs$",
+      "example": "hook-logs"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "be7f6752-34e0-49a1-a832-bcc209450ea9"
+    },
     "attributes": {
       "type": "object",
-      "required": [
-        "resource_diff",
-        "errors"
-      ],
       "additionalProperties": false,
       "properties": {
         "resource_diff": {
@@ -19,6 +28,7 @@
             "relationships" : {
               "service": {
                 "data": {
+                  "type" : "services",
                   "id" : "7b808eee-bf1c-40cd-98f2-3c335a06417e"
                 }
               }
@@ -30,7 +40,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "example": "Applying the hook failed because the selecting service was not available for the shipment contract."
+            "example": "Applying the hook failed because the desired service was not available for the shipment contract."
           },
           "description": "An array of errors encountered when trying to run this hook."
         }
@@ -92,13 +102,7 @@
           }
         },
         "hook": {
-          "$ref": "#/components/schemas/HookLogRelationship",
-          "example": {
-            "data": {
-              "type": "organizations",
-              "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
-            }
-          }
+          "$ref": "#/components/schemas/HookLogRelationship"
         }
       }
     },
