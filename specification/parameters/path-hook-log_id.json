@@ -1,0 +1,10 @@
+{
+  "name": "hook_log_id",
+  "in": "path",
+  "description": "Id of the hook log.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

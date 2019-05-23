@@ -149,6 +149,9 @@
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
             },
+            "hook_logs": {
+              "$ref": "#/components/schemas/HookLogRelationship"
+            },
             "shipment_status": {
               "allOf": [
                 {

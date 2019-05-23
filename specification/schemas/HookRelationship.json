@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "type",
+        "id"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^hooks$",
+          "example": "hooks"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "example": "5c868557-0827-4d21-a7f4-9820f01769f4"
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "related"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "type": "string",
+          "format": "url",
+          "example": "$API_HOST/hooks/5c868557-0827-4d21-a7f4-9820f01769f4"
+        }
+      }
+    }
+  }
+}

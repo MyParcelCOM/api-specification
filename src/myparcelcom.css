@@ -452,7 +452,8 @@ a:hover {
 #operations-tag-Invitations:before,
 #operations-tag-SystemMessages:before,
 #operations-tag-Users:before,
-#operations-tag-Webhooks:before {
+#operations-tag-Webhooks:before,
+#operations-tag-HookLogs:before{
   content: "⚠";
   margin-right: 8px;
 }
@@ -465,7 +466,8 @@ a:hover {
 #operations-tag-Invitations:hover:after,
 #operations-tag-SystemMessages:hover:after,
 #operations-tag-Users:hover:after,
-#operations-tag-Webhooks:hover:after {
+#operations-tag-Webhooks:hover:after,
+#operations-tag-HookLogs:hover:after{
   content: "This is an experimental endpoint";
   position: absolute;
   bottom: -5px;
