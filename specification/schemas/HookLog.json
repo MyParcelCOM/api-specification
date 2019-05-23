@@ -102,7 +102,7 @@
           }
         },
         "hook": {
-          "$ref": "#/components/schemas/HookLogRelationship"
+          "$ref": "#/components/schemas/HookRelationship"
         }
       }
     },
