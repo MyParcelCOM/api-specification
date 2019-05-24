@@ -1,4 +1,4 @@
-version: 2
+version: '2.1'
 jobs:
   build:
     docker:
@@ -36,6 +36,12 @@ jobs:
         auth:
           username: ${DOCKER_USER}
           password: ${DOCKER_PASSWORD}
+    parameters:
+      is_sandbox:
+        type: string
+        default: "false"
+    environment:
+      IS_SANDBOX: <<parameters.is_sandbox>>
     steps:
       - checkout
       - run:
@@ -62,8 +68,6 @@ jobs:
             kubectl apply -f kube/service.yaml
 
 workflows:
-  version: 2
-
   deploy:
     jobs:
       - build:
@@ -75,6 +79,7 @@ workflows:
             tags:
               only: /^v\d+\.\d+\.\d+$/
       - deploy:
+          is_sandbox: "true"
           requires:
             - build
           filters:
@@ -82,3 +87,5 @@ workflows:
               only:
                 - master
                 - develop
+            tags:
+              only: /^v\d+\.\d+\.\d+$/
