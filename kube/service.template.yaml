@@ -6,7 +6,6 @@ metadata:
 spec:
   selector:
     app: ${CIRCLE_PROJECT_REPONAME}
-    revision: ${CIRCLE_SHA1}
   ports:
     - protocol: TCP
       port: 80
