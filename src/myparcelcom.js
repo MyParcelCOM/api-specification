@@ -1,6 +1,5 @@
 (function () {
   function cancelEvent (e) {
-    e.preventDefault()
     e.stopPropagation()
     return false
   }
@@ -13,16 +12,17 @@
   document.addEventListener('DOMContentLoaded', function () {
     // wait for the swagger.json to be processed
     const swaggerInterval = setInterval(function () {
-      const info = document.getElementsByClassName('info')[0]
-      if ('undefined' !== typeof info) {
+      const ready = document.getElementsByClassName('title')[0]
+      if ('undefined' !== typeof ready) {
         clearInterval(swaggerInterval)
 
-        // fix info text
+        // remove empty paragraph from info text
+        const info = document.getElementsByClassName('info')[0]
         info.innerHTML = info.innerHTML.replace('<p></p>', '')
 
         // inject logo
         const title = document.getElementsByClassName('title')[0]
-        title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://cdn.myparcel.com/images/myparcelcom-black.svg" alt="MyParcel.com">')
+        title.innerHTML = title.innerHTML.replace('MyParcel.com', '<img src="https://cdn.myparcel.com/images/myparcelcom-white.svg" alt="MyParcel.com">')
 
         // version link
         const versions = document.querySelectorAll('.version')
