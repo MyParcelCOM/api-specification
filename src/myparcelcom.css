@@ -181,9 +181,18 @@ a:hover {
   top: 0;
   font-weight: 500;
   margin: 28px 8px 0;
-  padding: 8px;
+  padding: 0;
   border-radius: 2px;
   background: #ffe128 !important;
+}
+
+#swagger-ui .info .title small a {
+  display: block;
+  padding: 8px 16px;
+}
+
+#swagger-ui .info .title small a:hover {
+  text-decoration: none;
 }
 
 /* models */
@@ -242,10 +251,10 @@ a:hover {
 /* endpoints */
 
 #swagger-ui .opblock {
+  margin-bottom: 16px;
   background: #fff;
-  border-color: #040707;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  border: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 #swagger-ui .opblock-summary {
@@ -283,14 +292,16 @@ a:hover {
 #swagger-ui .opblock .opblock-section-header {
   min-height: 0;
   background: #fff;
-  border: 1px solid #040707;
+  border: 1px solid #ccc;
   border-width: 1px 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 #swagger-ui .opblock .opblock-summary-method {
-  padding: 8px 16px;
+  min-width: 96px;
+  line-height: 24px;
+  font-size: 16px;
   font-weight: 700;
   color: #040707;
   text-shadow: none;
