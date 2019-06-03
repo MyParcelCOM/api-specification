@@ -263,6 +263,9 @@
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
   },
+  "ServiceRegion": {
+    "$ref": "./schemas/ServiceRegion.json"
+  },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"
   },
