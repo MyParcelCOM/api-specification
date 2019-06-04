@@ -198,6 +198,7 @@
                 {
                   "properties": {
                     "data": {
+                      "readOnly": true,
                       "items": {
                         "properties": {
                           "id": {
@@ -212,6 +213,9 @@
                   }
                 }
               ]
+            },
+            "hook_logs": {
+              "$ref": "#/components/schemas/HookLogsRelationship"
             }
           }
         },

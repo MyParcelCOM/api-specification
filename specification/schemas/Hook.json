@@ -80,7 +80,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/hooks/5c868557-0827-4d21-a7f4-9820f01769f4"
+              "example": "$API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332"
             }
           }
         }
