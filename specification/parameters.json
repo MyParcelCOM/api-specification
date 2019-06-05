@@ -26,6 +26,9 @@
   "path-hook_id": {
     "$ref": "./parameters/path-hook_id.json"
   },
+  "path-hook-log_id": {
+    "$ref": "./parameters/path-hook-log_id.json"
+  },
   "path-invitation_id": {
     "$ref": "./parameters/path-invitation_id.json"
   },

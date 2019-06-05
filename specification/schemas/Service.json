@@ -17,7 +17,9 @@
             "code",
             "package_type",
             "handover_method",
-            "delivery_method"
+            "delivery_method",
+            "regions_from",
+            "regions_to"
           ],
           "additionalProperties": false,
           "properties": {
@@ -86,6 +88,18 @@
               ],
               "example": "pick-up",
               "description": "Where the parcel will be delivered to the customer. In case of `pick-up`, a carrier location of type pick-up must be sent with the shipment request."
+            },
+            "regions_from": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ServiceRegion"
+              }
+            },
+            "regions_to": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ServiceRegion"
+              }
             }
           }
         },

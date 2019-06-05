@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": [
+    "country_code"
+  ],
+  "properties": {
+    "country_code": {
+      "$ref": "#/components/schemas/CountryCode"
+    },
+    "region_code": {
+      "$ref": "#/components/schemas/RegionCode"
+    }
+  }
+}

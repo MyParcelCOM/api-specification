@@ -194,6 +194,9 @@
                   }
                 }
               ]
+            },
+            "hook_logs": {
+              "$ref": "#/components/schemas/HookLogsRelationship"
             }
           }
         },

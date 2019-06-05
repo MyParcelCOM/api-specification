@@ -83,6 +83,15 @@
   "HookAction": {
     "$ref": "./schemas/HookAction.json"
   },
+  "HookLog": {
+    "$ref": "./schemas/HookLog.json"
+  },
+  "HookLogsRelationship": {
+    "$ref": "./schemas/HookLogsRelationship.json"
+  },
+  "HookRelationship": {
+    "$ref": "./schemas/HookRelationship.json"
+  },
   "HookTrigger": {
     "$ref": "./schemas/HookTrigger.json"
   },
@@ -256,6 +265,9 @@
   },
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
+  },
+  "ServiceRegion": {
+    "$ref": "./schemas/ServiceRegion.json"
   },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"
