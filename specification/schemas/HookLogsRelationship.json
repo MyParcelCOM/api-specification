@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "id"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "pattern": "^hook-logs$",
+            "example": "hook-logs"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "1e568bac-8075-466f-a898-7baed146136e"
+          }
+        }
+      }
+    }
+  }
+}
