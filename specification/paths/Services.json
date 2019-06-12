@@ -57,7 +57,7 @@
         "in": "query",
         "description": "Region code of origin location to filter by. May be used instead of region_from and can be combined with filter[address_from][country_code] and filter[address_from][postal_code] for more accurate results.",
         "schema": {
-          "$ref": "#/components/schemas/CountryCode"
+          "$ref": "#/components/schemas/RegionCode"
         }
       },
       {
@@ -81,7 +81,7 @@
         "in": "query",
         "description": "Region code of destination location to filter by. May be used instead of region_to and can be combined with filter[address_to][country_code] and filter[address_to][postal_code] for more accurate results.",
         "schema": {
-          "$ref": "#/components/schemas/CountryCode"
+          "$ref": "#/components/schemas/RegionCode"
         }
       },
       {
