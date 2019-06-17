@@ -17,6 +17,7 @@ metadata:
   namespace: ${NS}
   annotations:
     kubernetes.io/ingress.class: "nginx-${NS}"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /api-specification
 spec:
   rules:
