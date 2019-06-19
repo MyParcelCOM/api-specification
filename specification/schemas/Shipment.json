@@ -109,6 +109,16 @@
                 "$ref": "#/components/schemas/ShipmentItem"
               }
             },
+            "customs": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/NoInvoiceCustoms"
+                },
+                {
+                  "$ref": "#/components/schemas/InvoiceCustoms"
+                }
+              ]
+            },
             "register_at": {
               "allOf": [
                 {
