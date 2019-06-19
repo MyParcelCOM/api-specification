@@ -19,7 +19,8 @@
             "handover_method",
             "delivery_method",
             "regions_from",
-            "regions_to"
+            "regions_to",
+            "uses_volumetric_weight"
           ],
           "additionalProperties": false,
           "properties": {
@@ -100,6 +101,11 @@
               "items": {
                 "$ref": "#/components/schemas/ServiceRegion"
               }
+            },
+            "uses_volumetric_weight": {
+              "type": "boolean",
+              "example": true,
+              "description": "Whether the volumetric weight of a shipment is taken into account when determining the price for a service."
             }
           }
         },
