@@ -110,14 +110,7 @@
               }
             },
             "customs": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/NoInvoiceCustoms"
-                },
-                {
-                  "$ref": "#/components/schemas/InvoiceCustoms"
-                }
-              ]
+              "$ref": "#/components/schemas/BaseCustoms"
             },
             "register_at": {
               "allOf": [
