@@ -179,18 +179,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/Shipment"
-                  },
-                  {
-                    "properties": {
-                      "id": {
-                        "readOnly": true
-                      }
-                    }
-                  }
-                ],
+                "$ref": "#/components/schemas/Shipment",
                 "example": {
                   "$ref": "#/components/examples/PostShipmentRequest"
                 }
