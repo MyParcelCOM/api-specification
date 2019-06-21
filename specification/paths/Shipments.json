@@ -106,10 +106,7 @@
                           }
                         }
                       }
-                    ],
-                    "example": {
-                      "$ref": "#/components/examples/ShipmentResponse"
-                    }
+                    ]
                   }
                 },
                 "meta": {
@@ -179,10 +176,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/Shipment",
-                "example": {
-                  "$ref": "#/components/examples/PostShipmentRequest"
-                }
+                "$ref": "#/components/schemas/Shipment"
               }
             }
           }
@@ -212,10 +206,7 @@
                         "links"
                       ]
                     }
-                  ],
-                  "example": {
-                    "$ref": "#/components/examples/ShipmentResponse"
-                  }
+                  ]
                 }
               }
             }

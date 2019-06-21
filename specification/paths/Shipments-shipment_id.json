@@ -65,10 +65,7 @@
                         }
                       }
                     }
-                  ],
-                  "example": {
-                    "$ref": "#/components/examples/ShipmentResponse"
-                  }
+                  ]
                 }
               }
             }
@@ -136,12 +133,17 @@
                       "required": [
                         "id",
                         "links"
-                      ]
+                      ],
+                      "properties": {
+                        "relationships": {
+                          "required": [
+                            "shop",
+                            "shipment_status"
+                          ]
+                        }
+                      }
                     }
-                  ],
-                  "example": {
-                    "$ref": "#/components/examples/ShipmentResponse"
-                  }
+                  ]
                 }
               }
             }
