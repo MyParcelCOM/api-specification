@@ -109,6 +109,9 @@
                 "$ref": "#/components/schemas/ShipmentItem"
               }
             },
+            "customs": {
+              "$ref": "#/components/schemas/BaseCustoms"
+            },
             "register_at": {
               "allOf": [
                 {
@@ -196,7 +199,28 @@
               ]
             },
             "hook_logs": {
-              "$ref": "#/components/schemas/HookLogsRelationship"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/HookLogsRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          },
+                          "type": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
             }
           }
         },
