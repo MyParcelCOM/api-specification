@@ -43,6 +43,16 @@
       "minimum": 1,
       "example": 5000,
       "description": "Weight in grams."
+    },
+    "volumetric_weight": {
+      "readOnly": true,
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "example": 4500,
+      "description": "Volumetric weight in grams. Calculated by the API by multiplying shipment dimensions (if present) and dividing them by 5000: (height in mm * length in mm * width in mm) / 5000."
     }
   }
 }

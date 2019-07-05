@@ -95,17 +95,11 @@
   "HookTrigger": {
     "$ref": "./schemas/HookTrigger.json"
   },
-  "InternationalShipment": {
-    "$ref": "./schemas/InternationalShipment.json"
-  },
   "Invitation": {
     "$ref": "./schemas/Invitation.json"
   },
   "Invoice": {
     "$ref": "./schemas/Invoice.json"
-  },
-  "InvoiceCustoms": {
-    "$ref": "./schemas/InvoiceCustoms.json"
   },
   "InvoiceRelationship": {
     "$ref": "./schemas/InvoiceRelationship.json"
@@ -190,9 +184,6 @@
   },
   "MinimalUser": {
     "$ref": "./schemas/MinimalUser.json"
-  },
-  "NoInvoiceCustoms": {
-    "$ref": "./schemas/NoInvoiceCustoms.json"
   },
   "Organization": {
     "$ref": "./schemas/Organization.json"

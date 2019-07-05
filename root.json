@@ -15,9 +15,6 @@
     "schemas": {
       "$ref": "./specification/schemas.json"
     },
-    "examples": {
-      "$ref": "./specification/examples.json"
-    },
     "parameters": {
       "$ref": "./specification/parameters.json"
     },

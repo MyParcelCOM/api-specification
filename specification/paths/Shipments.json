@@ -78,76 +78,35 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
+                    "allOf": [
                       {
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/Shipment"
-                          },
-                          {
-                            "required": [
-                              "id",
-                              "links"
-                            ],
-                            "properties": {
-                              "attributes": {
-                                "required": [
-                                  "recipient_address",
-                                  "return_address",
-                                  "sender_address",
-                                  "physical_properties",
-                                  "created_at",
-                                  "updated_at"
-                                ]
-                              },
-                              "relationships": {
-                                "required": [
-                                  "shop",
-                                  "shipment_status"
-                                ]
-                              }
-                            }
-                          }
-                        ]
+                        "$ref": "#/components/schemas/Shipment"
                       },
                       {
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/InternationalShipment"
-                          },
-                          {
+                        "required": [
+                          "id",
+                          "links"
+                        ],
+                        "properties": {
+                          "attributes": {
                             "required": [
-                              "id",
-                              "links"
-                            ],
-                            "properties": {
-                              "attributes": {
-                                "required": [
-                                  "items",
-                                  "customs",
-                                  "recipient_address",
-                                  "return_address",
-                                  "sender_address",
-                                  "physical_properties",
-                                  "description",
-                                  "created_at",
-                                  "updated_at"
-                                ]
-                              },
-                              "relationships": {
-                                "required": [
-                                  "shop",
-                                  "shipment_status"
-                                ]
-                              }
-                            }
+                              "recipient_address",
+                              "return_address",
+                              "sender_address",
+                              "physical_properties",
+                              "created_at",
+                              "updated_at"
+                            ]
+                          },
+                          "relationships": {
+                            "required": [
+                              "shop",
+                              "shipment_status"
+                            ]
                           }
-                        ]
+                        }
                       }
-                    ],
-                    "example": {
-                      "$ref": "#/components/examples/ShipmentResponse"
-                    }
+                    ]
                   }
                 },
                 "meta": {
@@ -217,39 +176,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "oneOf": [
-                  {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Shipment"
-                      },
-                      {
-                        "properties": {
-                          "id": {
-                            "readOnly": true
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/InternationalShipment"
-                      },
-                      {
-                        "properties": {
-                          "id": {
-                            "readOnly": true
-                          }
-                        }
-                      }
-                    ]
-                  }
-                ],
-                "example": {
-                  "$ref": "#/components/examples/PostShipmentRequest"
-                }
+                "$ref": "#/components/schemas/Shipment"
               }
             }
           }
@@ -269,37 +196,17 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "oneOf": [
+                  "allOf": [
                     {
-                      "allOf": [
-                        {
-                          "$ref": "#/components/schemas/Shipment"
-                        },
-                        {
-                          "required": [
-                            "id",
-                            "links"
-                          ]
-                        }
-                      ]
+                      "$ref": "#/components/schemas/Shipment"
                     },
                     {
-                      "allOf": [
-                        {
-                          "$ref": "#/components/schemas/InternationalShipment"
-                        },
-                        {
-                          "required": [
-                            "id",
-                            "links"
-                          ]
-                        }
+                      "required": [
+                        "id",
+                        "links"
                       ]
                     }
-                  ],
-                  "example": {
-                    "$ref": "#/components/examples/ShipmentResponse"
-                  }
+                  ]
                 }
               }
             }
