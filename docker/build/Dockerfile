@@ -1,4 +1,4 @@
-FROM node:11.12 as build
+FROM node:12 as build
 
 ARG API_HOST
 ARG AUTH_HOST
