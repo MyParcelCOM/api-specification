@@ -38,6 +38,14 @@
         }
       },
       {
+        "name": "filter[volumetric_weight]",
+        "in": "query",
+        "description": "Volumetric weight value in grams to filter by. <br>Service rates for services that use volumetric weight will be filtered on the highest value between gross weight and volumetric weight. Use in conjunction with the filter[weight] filter above.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "filter[organization]",
         "in": "query",
         "description": "Comma separated string of organization ids to filter by.",

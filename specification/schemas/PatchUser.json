@@ -43,6 +43,16 @@
                 "null"
               ],
               "example": "+31 234 567 890"
+            },
+            "locale": {
+              "type": "string",
+              "enum": [
+                "en-GB",
+                "it-IT",
+                "de-DE",
+                "nl-NL"
+              ],
+              "example": "en-GB"
             }
           }
         }
