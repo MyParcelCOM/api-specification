@@ -72,6 +72,9 @@
               "example": "MyParcel.com backoffice",
               "description": "Name of the application used to create the shipment."
             },
+            "total_value": {
+              "$ref": "#/components/schemas/Price"
+            },
             "price": {
               "allOf": [
                 {
