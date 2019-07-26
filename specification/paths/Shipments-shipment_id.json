@@ -106,6 +106,15 @@
             "properties": {
               "data": {
                 "$ref": "#/components/schemas/PatchShipment"
+              },
+              "meta":  {
+                "type": "object",
+                "properties": {
+                  "label_mime_type": {
+                    "type": "string",
+                    "example": "application/pdf"
+                  }
+                }
               }
             }
           }
