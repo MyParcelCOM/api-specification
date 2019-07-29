@@ -14,6 +14,10 @@ a:hover {
   text-decoration: underline;
 }
 
+input:disabled {
+  display: none;
+}
+
 #swagger-ui * {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   border-radius: 0;
@@ -32,6 +36,7 @@ a:hover {
 
 #topbar,
 #swagger-ui h4 span:after,
+#swagger-ui .examples-select,
 #swagger-ui .execute-wrapper,
 #swagger-ui .expand-operation,
 #swagger-ui .main > a,
@@ -75,6 +80,12 @@ a:hover {
   font-weight: 300;
   background: #333;
   color: #fafafa;
+}
+
+#swagger-ui .response-col_description__inner .renderedMarkdown {
+  display: inline-block;
+  width: 100%;
+  padding: 0 10px;
 }
 
 #swagger-ui .prop-type,
