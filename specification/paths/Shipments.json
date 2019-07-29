@@ -177,6 +177,15 @@
             "properties": {
               "data": {
                 "$ref": "#/components/schemas/Shipment"
+              },
+              "meta":  {
+                "type": "object",
+                "properties": {
+                  "label_mime_type": {
+                    "type": "string",
+                    "example": "application/pdf"
+                  }
+                }
               }
             }
           }
