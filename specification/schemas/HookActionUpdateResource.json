@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "required": [
+    "action_type",
+    "values"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "pattern": "^update-resource$",
+      "example": "update-resource"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "pointer",
+          "value"
+        ],
+        "properties": {
+          "pointer": {
+            "type": "string",
+            "example": "/relationships/service/data/id"
+          },
+          "value": {
+            "type": [
+              "string",
+              "object"
+            ],
+            "example": "175a235f-aff5-4e44-87b5-3657b75c1deb",
+            "description": "In this specific case this could be a DPD Next Day service id."
+          }
+        }
+      }
+    }
+  }
+}

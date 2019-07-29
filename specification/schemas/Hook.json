@@ -38,7 +38,23 @@
               "$ref": "#/components/schemas/HookTrigger"
             },
             "action": {
-              "$ref": "#/components/schemas/HookAction"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/HookActionTriggerWebhook"
+                },
+                {
+                  "$ref": "#/components/schemas/HookActionUpdateResource"
+                }
+              ],
+              "example": {
+                "action_type": "update-resource",
+                "values": [
+                  {
+                    "pointer": "/relationships/service/data/id",
+                    "value": "175a235f-aff5-4e44-87b5-3657b75c1deb"
+                  }
+                ]
+              }
             }
           }
         },
