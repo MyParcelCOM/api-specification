@@ -14,7 +14,8 @@
           "required": [
             "name",
             "code",
-            "credentials_format"
+            "credentials_format",
+            "label_mime_types"
           ],
           "additionalProperties": false,
           "properties": {
@@ -45,6 +46,14 @@
                 }
               },
               "description": "JSON Schema specification of the credentials required to communicate with the carrier."
+            },
+            "label_mime_types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "application/pdf"
+              },
+              "description": "The mime types the carrier offers shipment labels in."
             }
           }
         },
