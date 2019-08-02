@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "required": [
+    "action_type",
+    "values"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "pattern": "^trigger-webhook$",
+      "example": "trigger-webhook"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "properties": {
+          "secret": {
+            "type": "string",
+            "example": "some.secret.string.only.the.endpoint.holder.knows"
+          },
+          "includes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "status"
+            }
+          },
+          "url": {
+            "type": "string",
+            "example": "https://foo.bar"
+          }
+        }
+      }
+    }
+  }
+}
