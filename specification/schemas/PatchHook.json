@@ -40,7 +40,7 @@
         "action": {
           "oneOf": [
             {
-              "$ref": "#/components/schemas/HookActionTriggerWebhook"
+              "$ref": "#/components/schemas/HookActionSendResource"
             },
             {
               "$ref": "#/components/schemas/HookActionUpdateResource"
