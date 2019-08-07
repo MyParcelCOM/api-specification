@@ -83,11 +83,11 @@
   "HookAction": {
     "$ref": "./schemas/HookAction.json"
   },
+  "HookActionSendResource": {
+    "$ref": "./schemas/HookActionSendResource.json"
+  },
   "HookActionUpdateResource": {
     "$ref": "./schemas/HookActionUpdateResource.json"
-  },
-  "HookActionTriggerWebhook": {
-    "$ref": "./schemas/HookActionTriggerWebhook.json"
   },
   "HookLog": {
     "$ref": "./schemas/HookLog.json"
