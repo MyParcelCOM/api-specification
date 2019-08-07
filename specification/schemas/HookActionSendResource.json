@@ -8,8 +8,8 @@
   "properties": {
     "action_type": {
       "type": "string",
-      "pattern": "^trigger-webhook$",
-      "example": "trigger-webhook"
+      "pattern": "^send-resource$",
+      "example": "send-resource"
     },
     "values": {
       "type": "array",
