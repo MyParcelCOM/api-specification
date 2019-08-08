@@ -18,6 +18,7 @@
         "required": [
           "url"
         ],
+        "additionalProperties": false,
         "properties": {
           "secret": {
             "type": "string",
