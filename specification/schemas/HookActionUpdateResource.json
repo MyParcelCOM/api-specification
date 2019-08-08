@@ -19,6 +19,7 @@
           "pointer",
           "value"
         ],
+        "additionalProperties": false,
         "properties": {
           "pointer": {
             "type": "string",
