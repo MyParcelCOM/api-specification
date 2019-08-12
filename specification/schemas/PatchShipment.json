@@ -55,7 +55,7 @@
               "description": "Name of the application used to create the shipment."
             },
             "total_value": {
-              "$ref": "#/components/schemas/Price"
+              "$ref": "#/components/schemas/BasePrice"
             },
             "physical_properties": {
               "$ref": "#/components/schemas/BasePhysicalProperties"
