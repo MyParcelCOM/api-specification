@@ -49,6 +49,14 @@
               ],
               "example": "Order #8008135"
             },
+            "channel": {
+              "type": "string",
+              "example": "MyParcel.com backoffice",
+              "description": "Name of the application used to create the shipment."
+            },
+            "total_value": {
+              "$ref": "#/components/schemas/Price"
+            },
             "physical_properties": {
               "$ref": "#/components/schemas/BasePhysicalProperties"
             },
