@@ -146,6 +146,9 @@
             "service_options": {
               "$ref": "#/components/schemas/ServiceOptionsRelationship"
             },
+            "parent": {
+              "$ref": "#/components/schemas/ShipmentRelationship"
+            },
             "service": {
               "$ref": "#/components/schemas/ServiceRelationship"
             },

@@ -20,6 +20,10 @@
         ],
         "additionalProperties": false,
         "properties": {
+          "url": {
+            "type": "string",
+            "example": "https://foo.bar"
+          },
           "secret": {
             "type": "string",
             "example": "some.secret.string.only.the.endpoint.holder.knows"
@@ -30,10 +34,6 @@
               "type": "string",
               "example": "status"
             }
-          },
-          "url": {
-            "type": "string",
-            "example": "https://foo.bar"
           }
         }
       }
