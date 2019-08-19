@@ -21,7 +21,7 @@ RUN apt update \
     && ./node_modules/.bin/gulp html \
     && ./node_modules/.bin/gulp swagger-ui
 
-FROM nginx:1.15-alpine
+FROM nginx:1.16-alpine
 
 COPY --from=build /build/dist /usr/share/nginx/html/api-specification
 
