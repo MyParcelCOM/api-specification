@@ -103,6 +103,12 @@
               "example": "https://tracker.carrier.com/3SABCD0123456789",
               "description": "URL used to view tracking status updates."
             },
+            "sync_active": {
+              "readOnly": true,
+              "type": "boolean",
+              "example": true,
+              "description": "Indicates whether status updates will be performed for this shipment."
+            },
             "physical_properties": {
               "$ref": "#/components/schemas/PhysicalProperties"
             },

@@ -110,6 +110,7 @@
                               "return_address",
                               "sender_address",
                               "physical_properties",
+                              "sync_active",
                               "created_at",
                               "updated_at"
                             ]
