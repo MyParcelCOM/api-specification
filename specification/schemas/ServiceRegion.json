@@ -9,6 +9,11 @@
     },
     "region_code": {
       "$ref": "#/components/schemas/RegionCode"
+    },
+    "postal_code": {
+      "type": "string",
+      "example": "^((GY|JE).*|TR2[1-5]) ?[0-9]{1}[A-Z]{2}$",
+      "description": "Regular expression matching postal code areas."
     }
   }
 }
