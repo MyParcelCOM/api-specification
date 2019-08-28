@@ -37,8 +37,7 @@
                 "shipment-failed",
                 "shipment-processing",
                 "shipment-registered",
-                "shipment-registration-failed",
-                "shipment-tracking-expired"
+                "shipment-registration-failed"
               ],
               "example": "shipment-delivered"
             },
