@@ -30,12 +30,12 @@
       "properties": {
         "name": {
           "type": "string",
-          "example": "eBay",
+          "example": "Marketplace",
           "description": "The name of the integration."
         },
         "code": {
           "type": "string",
-          "example": "ebay",
+          "example": "marketplace",
           "description": "A unique lowercase code for the integration."
         },
         "credentials_format": {
@@ -43,14 +43,14 @@
           "example": {
             "additionalProperties": false,
             "required": [
-              "ebay_username",
-              "ebay_password"
+              "marketplace_username",
+              "marketplace_password"
             ],
             "properties": {
-              "ebay_username": {
+              "marketplace_username": {
                 "type": "string"
               },
-              "ebay_password": {
+              "marketplace_password": {
                 "type": "string"
               }
             }
@@ -59,7 +59,7 @@
         },
         "description": {
           "type": "string",
-          "example": "eBay integration to import your eBay orders into the MyParcel.com API.",
+          "example": "Marketplace integration to import your Marketplace orders into the MyParcel.com API.",
           "description": "A description of what the integration is used for."
         },
         "created_at": {
