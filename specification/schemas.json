@@ -101,6 +101,9 @@
   "HookTrigger": {
     "$ref": "./schemas/HookTrigger.json"
   },
+  "Integration": {
+    "$ref": "./schemas/Integration.json"
+  },
   "Invitation": {
     "$ref": "./schemas/Invitation.json"
   },

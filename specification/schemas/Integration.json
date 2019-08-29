@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "id",
+    "attributes",
+    "links"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^integrations$",
+      "example": "integrations"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "eb527d60-fc26-4aff-ac58-f2661b0e7e9b"
+    },
+    "attributes": {
+      "type": "object",
+      "required": [
+        "name",
+        "code",
+        "credentials_format",
+        "description",
+        "created_at"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "eBay",
+          "description": "The name of the integration."
+        },
+        "code": {
+          "type": "string",
+          "example": "ebay",
+          "description": "A unique lowercase code for the integration."
+        },
+        "credentials_format": {
+          "type": "object",
+          "example": {
+            "additionalProperties": false,
+            "required": [
+              "ebay_username",
+              "ebay_password"
+            ],
+            "properties": {
+              "ebay_username": {
+                "type": "string"
+              },
+              "ebay_password": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "JSON Schema specification of the credentials required to communicate with the integration."
+        },
+        "description": {
+          "type": "string",
+          "example": "eBay integration to import your eBay orders into the MyParcel.com API.",
+          "description": "A description of what the integration is used for."
+        },
+        "created_at": {
+          "$ref": "#/components/schemas/Timestamp"
+        }
+      }
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "self"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "self": {
+          "type": "string",
+          "format": "url",
+          "example": "$API_HOST/integrations/eb527d60-fc26-4aff-ac58-f2661b0e7e9b"
+        }
+      }
+    }
+  }
+}

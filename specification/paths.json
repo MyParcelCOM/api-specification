@@ -47,6 +47,12 @@
   "/hook-logs/{hook_log_id}": {
     "$ref": "./paths/HookLogs-hook_log_id.json"
   },
+  "/integrations": {
+    "$ref": "./paths/Integrations.json"
+  },
+  "/integrations/{integration_id}": {
+    "$ref": "./paths/Integrations-integration_id.json"
+  },
   "/invitations": {
     "$ref": "./paths/Invitations.json"
   },
