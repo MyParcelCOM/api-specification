@@ -188,6 +188,9 @@
   "MinimalShipmentStatus": {
     "$ref": "./schemas/MinimalShipmentStatus.json"
   },
+  "MinimalShipmentSurcharge": {
+    "$ref": "./schemas/MinimalShipmentSurcharge.json"
+  },
   "MinimalShop": {
     "$ref": "./schemas/MinimalShop.json"
   },
@@ -304,6 +307,12 @@
   },
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/ShipmentStatusRelationship.json"
+  },
+  "ShipmentSurcharge": {
+    "$ref": "./schemas/ShipmentSurcharge.json"
+  },
+  "PatchShipmentSurcharge": {
+    "$ref": "./schemas/PatchShipmentSurcharge.json"
   },
   "Shop": {
     "$ref": "./schemas/Shop.json"

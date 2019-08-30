@@ -1,0 +1,68 @@
+{
+  "post": {
+    "tags": [
+      "ShipmentSurcharges"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "finance.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new shipment surcharge.",
+    "description": "This endpoint creates a new shipment surcharge with the posted data. It is required that a shipment relationship is always provided when creating a shipment surcharge.",
+    "requestBody": {
+      "description": "The shipment surcharge object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ShipmentSurcharge"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The shipment surcharge is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ShipmentSurcharge"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

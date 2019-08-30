@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalShipmentSurcharge"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "amount",
+            "currency"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Re-labeling surcharge"
+            },
+            "description": {
+              "type": "string",
+              "example": "A carrier-specific (carrier_code) re-labeling surcharge"
+            },
+            "amount": {
+              "type": "integer",
+              "example": 523,
+              "description": "Surcharge amount in cents/pence."
+            },
+            "currency": {
+              "$ref": "#/components/schemas/Currency"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "updated_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "shipment"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "shipment": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentRelationship"
+                },
+                {
+                  "readOnly": false
+                }
+              ]
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/surcharges/385446dg-34e1-42a1-n832-bcc209450ea9"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
