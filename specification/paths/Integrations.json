@@ -45,23 +45,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/invitations?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/integrations?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/invitations?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/integrations?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/invitations?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/integrations?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/invitations?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/integrations?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/invitations?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/integrations?page[number]=13&page[size]=30"
                     }
                   }
                 }
