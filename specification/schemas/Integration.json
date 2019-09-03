@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/MinimalIntegration"
+      "$ref": "#/components/schemas/MinimalIntegration"
     },
     {
       "required": [

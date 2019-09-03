@@ -121,7 +121,7 @@
     },
     "responses": {
       "204": {
-        "description": "The integration relationship has been added."
+        "description": "The integration relationships have been added."
       }
     }
   },
@@ -185,7 +185,7 @@
     },
     "responses": {
       "204": {
-        "description": "The integration relationship have been set."
+        "description": "The integration relationships have been set."
       }
     }
   },
@@ -220,7 +220,7 @@
     },
     "responses": {
       "204": {
-        "description": "The integration relationship have been set."
+        "description": "The integration relationships have been deleted."
       }
     }
   }
