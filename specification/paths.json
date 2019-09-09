@@ -134,6 +134,12 @@
   "/shops/{shop_id}": {
     "$ref": "./paths/Shops-shop_id.json"
   },
+  "/shops/{shop_id}/integrations": {
+    "$ref": "./paths/Shops-shop_id-integrations.json"
+  },
+  "/shops/{shop_id}/relationships/integrations": {
+    "$ref": "./paths/Shops-shop_id-relationships-integrations.json"
+  },
   "/statuses": {
     "$ref": "./paths/Statuses.json"
   },

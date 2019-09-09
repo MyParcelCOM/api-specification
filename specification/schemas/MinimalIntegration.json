@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "id"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^integrations$",
+      "example": "integrations"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "example": "eb527d60-fc26-4aff-ac58-f2661b0e7e9b"
+    }
+  }
+}
