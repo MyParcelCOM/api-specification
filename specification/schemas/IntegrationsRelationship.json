@@ -3,7 +3,6 @@
   "required": [
     "data"
   ],
-  "additionalProperties": false,
   "properties": {
     "data": {
       "type": "array",
