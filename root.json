@@ -29,6 +29,7 @@
               "organizations.manage": "Manage organization related resources on behalf of a single organization or all organizations belonging to a broker.",
               "shipments.manage": "Manage shipments on behalf of all shops belonging to a single organization or all shops belonging to a broker.",
               "system.manage": "Manage all system related resources.",
+              "finance.manage": "Manage all finance related resources.",
               "experimental": "This scope contains all permissions for experimental endpoints."
             }
           }

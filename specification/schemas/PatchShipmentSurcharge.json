@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalShipmentSurcharge"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Re-labeling surcharge"
+            },
+            "description": {
+              "type": "string",
+              "example": "A carrier-specific (carrier_code) re-labeling surcharge"
+            },
+            "fee": {
+              "$ref": "#/components/schemas/BasePrice"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

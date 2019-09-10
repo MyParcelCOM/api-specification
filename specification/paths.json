@@ -128,6 +128,18 @@
   "/shipments/{shipment_id}/statuses/{shipment_status_id}": {
     "$ref": "./paths/Shipments-shipment_id-Statuses-shipment_status_id.json"
   },
+  "/shipments/{shipment_id}/surcharges": {
+    "$ref": "./paths/Shipments-shipment_id-Surcharges.json"
+  },
+  "/shipments/{shipment_id}/surcharges/{shipment_surcharge_id}": {
+    "$ref": "./paths/Shipments-shipment_id-Surcharges-shipment_surcharge_id.json"
+  },
+  "/shipment-surcharges": {
+    "$ref": "./paths/ShipmentSurcharges.json"
+  },
+  "/shipment-surcharges/{shipment_surcharge_id}": {
+    "$ref": "./paths/ShipmentSurcharges-shipment_surcharge_id.json"
+  },
   "/shops": {
     "$ref": "./paths/Shops.json"
   },

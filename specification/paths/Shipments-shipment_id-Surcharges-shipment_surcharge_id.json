@@ -1,0 +1,52 @@
+{
+  "get": {
+    "tags": [
+      "Shipments"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get a shipment surcharge by id.",
+    "description": "This endpoint retrieves the shipment surcharge with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-shipment_id"
+      },
+      {
+        "$ref": "#/components/parameters/path-shipment_surcharge_id"
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are:<ul><li>`shipment`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the shipment surcharge.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ShipmentSurcharge"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
