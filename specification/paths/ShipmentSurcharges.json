@@ -77,7 +77,7 @@
       }
     ],
     "summary": "Get all surcharges across all shipments.",
-    "description": "This endpoint retrieves surcharges for the supplied shipment.",
+    "description": "This endpoint retrieves all surcharges for all shipments.",
     "parameters": [
       {
         "name": "include",
