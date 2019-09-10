@@ -11,10 +11,6 @@
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "amount",
-            "currency"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
@@ -25,13 +21,8 @@
               "type": "string",
               "example": "A carrier-specific (carrier_code) re-labeling surcharge"
             },
-            "amount": {
-              "type": "integer",
-              "example": 523,
-              "description": "Surcharge amount in cents/pence."
-            },
-            "currency": {
-              "$ref": "#/components/schemas/Currency"
+            "fee": {
+              "$ref": "#/components/schemas/BasePrice"
             }
           }
         }
