@@ -1,0 +1,10 @@
+{
+  "name": "shipment_surcharge_id",
+  "in": "path",
+  "description": "Id of the shipment surcharge.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}

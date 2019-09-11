@@ -29,6 +29,9 @@
   "path-hook-log_id": {
     "$ref": "./parameters/path-hook-log_id.json"
   },
+  "path-integration_id": {
+    "$ref": "./parameters/path-integration_id.json"
+  },
   "path-invitation_id": {
     "$ref": "./parameters/path-invitation_id.json"
   },
@@ -67,6 +70,9 @@
   },
   "path-shipment_status_id": {
     "$ref": "./parameters/path-shipment_status_id.json"
+  },
+  "path-shipment_surcharge_id": {
+    "$ref": "./parameters/path-shipment_surcharge_id.json"
   },
   "path-shop_id": {
     "$ref": "./parameters/path-shop_id.json"

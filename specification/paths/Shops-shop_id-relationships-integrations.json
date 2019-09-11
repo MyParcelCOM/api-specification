@@ -1,0 +1,227 @@
+{
+  "get": {
+    "tags": [
+      "Shops"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Get the integration relationships for a shop id.",
+    "description": "This endpoint retrieves the integration relationships for the supplied shop id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the integration relationships.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/IntegrationsRelationship"
+                },
+                {
+                  "required": [
+                    "links"
+                  ],
+                  "properties": {
+                    "links": {
+                      "type": "object",
+                      "required": [
+                        "self",
+                        "related"
+                      ],
+                      "properties": {
+                        "self": {
+                          "type": "string",
+                          "format": "url",
+                          "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/relationships/integrations"
+                        },
+                        "related": {
+                          "type": "string",
+                          "format": "url",
+                          "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/integrations"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Shops"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Add an integration relationships to the shop.",
+    "description": "This endpoint adds an integration relationships for the shop with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The integration relationships to be added to the shop.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IntegrationsRelationship"
+              },
+              {
+                "properties": {
+                  "data": {
+                    "items": {
+                      "properties": {
+                        "meta": {
+                          "required": [
+                            "credentials"
+                          ],
+                          "properties": {
+                            "credentials": {
+                              "type": "object",
+                              "example": {
+                                "username": "your_username",
+                                "password": "your_password"
+                              },
+                              "description": "The credentials required to communicate with the integration as defined by the `credentials_format` of the integration."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The integration relationships have been added."
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Shops"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Update the integration relationships for a shop.",
+    "description": "This endpoint updates integration relationships for the shop with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The integration relationships to be set on the shop.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/IntegrationsRelationship"
+              },
+              {
+                "properties": {
+                  "data": {
+                    "items": {
+                      "properties": {
+                        "meta": {
+                          "required": [
+                            "credentials"
+                          ],
+                          "properties": {
+                            "credentials": {
+                              "type": "object",
+                              "example": {
+                                "username": "your_username",
+                                "password": "your_password"
+                              },
+                              "description": "The credentials required to communicate with the integration as defined by the `credentials_format` of the integration."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The integration relationships have been set."
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Shops"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Delete integration relationships from a shop.",
+    "description": "This endpoint deletes integration relationships from the shop with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The integration relationships to be deleted from the shop.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/IntegrationsRelationship"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The integration relationships have been deleted."
+      }
+    }
+  }
+}

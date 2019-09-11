@@ -47,6 +47,12 @@
   "/hook-logs/{hook_log_id}": {
     "$ref": "./paths/HookLogs-hook_log_id.json"
   },
+  "/integrations": {
+    "$ref": "./paths/Integrations.json"
+  },
+  "/integrations/{integration_id}": {
+    "$ref": "./paths/Integrations-integration_id.json"
+  },
   "/invitations": {
     "$ref": "./paths/Invitations.json"
   },
@@ -122,11 +128,29 @@
   "/shipments/{shipment_id}/statuses/{shipment_status_id}": {
     "$ref": "./paths/Shipments-shipment_id-Statuses-shipment_status_id.json"
   },
+  "/shipments/{shipment_id}/surcharges": {
+    "$ref": "./paths/Shipments-shipment_id-Surcharges.json"
+  },
+  "/shipments/{shipment_id}/surcharges/{shipment_surcharge_id}": {
+    "$ref": "./paths/Shipments-shipment_id-Surcharges-shipment_surcharge_id.json"
+  },
+  "/shipment-surcharges": {
+    "$ref": "./paths/ShipmentSurcharges.json"
+  },
+  "/shipment-surcharges/{shipment_surcharge_id}": {
+    "$ref": "./paths/ShipmentSurcharges-shipment_surcharge_id.json"
+  },
   "/shops": {
     "$ref": "./paths/Shops.json"
   },
   "/shops/{shop_id}": {
     "$ref": "./paths/Shops-shop_id.json"
+  },
+  "/shops/{shop_id}/integrations": {
+    "$ref": "./paths/Shops-shop_id-integrations.json"
+  },
+  "/shops/{shop_id}/relationships/integrations": {
+    "$ref": "./paths/Shops-shop_id-relationships-integrations.json"
   },
   "/statuses": {
     "$ref": "./paths/Statuses.json"

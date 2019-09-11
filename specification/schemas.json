@@ -101,6 +101,12 @@
   "HookTrigger": {
     "$ref": "./schemas/HookTrigger.json"
   },
+  "Integration": {
+    "$ref": "./schemas/Integration.json"
+  },
+  "IntegrationsRelationship": {
+    "$ref": "./schemas/IntegrationsRelationship.json"
+  },
   "Invitation": {
     "$ref": "./schemas/Invitation.json"
   },
@@ -136,6 +142,9 @@
   },
   "MinimalHook": {
     "$ref": "./schemas/MinimalHook.json"
+  },
+  "MinimalIntegration": {
+    "$ref": "./schemas/MinimalIntegration.json"
   },
   "MinimalInvitation": {
     "$ref": "./schemas/MinimalInvitation.json"
@@ -178,6 +187,9 @@
   },
   "MinimalShipmentStatus": {
     "$ref": "./schemas/MinimalShipmentStatus.json"
+  },
+  "MinimalShipmentSurcharge": {
+    "$ref": "./schemas/MinimalShipmentSurcharge.json"
   },
   "MinimalShop": {
     "$ref": "./schemas/MinimalShop.json"
@@ -295,6 +307,12 @@
   },
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/ShipmentStatusRelationship.json"
+  },
+  "ShipmentSurcharge": {
+    "$ref": "./schemas/ShipmentSurcharge.json"
+  },
+  "PatchShipmentSurcharge": {
+    "$ref": "./schemas/PatchShipmentSurcharge.json"
   },
   "Shop": {
     "$ref": "./schemas/Shop.json"

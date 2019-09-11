@@ -1,0 +1,41 @@
+{
+  "get": {
+    "tags": [
+      "Invitations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
+    "summary": "Get an integration by id.",
+    "description": "This endpoint retrieves the integration with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-integration_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the integration.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Integration"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

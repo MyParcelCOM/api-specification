@@ -54,6 +54,14 @@
         }
       },
       {
+        "name": "filter[has_active_contract]",
+        "in": "query",
+        "description": "Boolean value.<ul><li>`true` Only service-rates with active contract associations.</li><li>`false` Only service-rates without active contract associations.</li></ul>",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      {
         "name": "include",
         "in": "query",
         "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`service`</li><li>`service_options`</li></ul>",
