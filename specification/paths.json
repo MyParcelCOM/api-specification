@@ -158,6 +158,9 @@
   "/statuses/{status_id}": {
     "$ref": "./paths/Statuses-status_id.json"
   },
+  "/synchronize-integration": {
+    "$ref": "./paths/SynchronizeIntegration.json"
+  },
   "/system-messages": {
     "$ref": "./paths/SystemMessages.json"
   },
