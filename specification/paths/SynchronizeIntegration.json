@@ -1,0 +1,56 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Synchronize shipments with the provided integration.",
+    "description": "This endpoint allows a user to manually trigger synchronization of shipments for a particular shop integration.",
+    "requestBody": {
+      "description": "The shop and integration ids to perform synchronization for.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "shop_id",
+                  "integration_id"
+                ],
+                "properties": {
+                  "shop_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "35eddf50-1d84-47a3-8479-6bfda729cd99"
+                  },
+                  "integration_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "example": "eb527d60-fc26-4aff-ac58-f2661b0e7e9b"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The synchronization process has started."
+      }
+    }
+  }
+}
