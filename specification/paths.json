@@ -158,9 +158,6 @@
   "/statuses/{status_id}": {
     "$ref": "./paths/Statuses-status_id.json"
   },
-  "/synchronize-integration": {
-    "$ref": "./paths/SynchronizeIntegration.json"
-  },
   "/system-messages": {
     "$ref": "./paths/SystemMessages.json"
   },
@@ -175,6 +172,9 @@
   },
   "/suggest-address": {
     "$ref": "./paths/SuggestAddress.json"
+  },
+  "/synchronize-integration": {
+    "$ref": "./paths/SynchronizeIntegration.json"
   },
   "/update-shipment-status": {
     "$ref": "./paths/UpdateShipmentStatus.json"
