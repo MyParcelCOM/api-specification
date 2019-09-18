@@ -8,9 +8,6 @@
   "BaseCustoms": {
     "$ref": "./schemas/BaseCustoms.json"
   },
-  "BaseShipment": {
-    "$ref": "./schemas/BaseShipment.json"
-  },
   "BaseShipmentItem": {
     "$ref": "./schemas/BaseShipmentItem.json"
   },
@@ -32,11 +29,11 @@
   "CarrierRelationship": {
     "$ref": "./schemas/CarrierRelationship.json"
   },
+  "CarrierSurcharge": {
+    "$ref": "./schemas/CarrierSurcharge.json"
+  },
   "Client": {
     "$ref": "./schemas/Client.json"
-  },
-  "ClientRelationship": {
-    "$ref": "./schemas/ClientRelationship.json"
   },
   "Contract": {
     "$ref": "./schemas/Contract.json"
@@ -124,6 +121,9 @@
   },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
+  },
+  "MinimalCarrierSurcharge": {
+    "$ref": "./schemas/MinimalCarrierSurcharge.json"
   },
   "MinimalClient": {
     "$ref": "./schemas/MinimalClient.json"
@@ -313,6 +313,9 @@
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"
+  },
+  "PatchCarrierSurcharge": {
+    "$ref": "./schemas/PatchCarrierSurcharge.json"
   },
   "Shop": {
     "$ref": "./schemas/Shop.json"
