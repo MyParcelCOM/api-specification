@@ -1,0 +1,10 @@
+{
+  "name": "carrier_surcharge_id",
+  "in": "path",
+  "description": "Id of the carrier surcharge.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}
