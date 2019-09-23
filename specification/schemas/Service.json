@@ -38,10 +38,10 @@
               "example": [
                 {
                   "type": "notice",
-                  "text": "Volumetric weight may be applied."
+                  "body": "Volumetric weight may be applied."
                 }
               ],
-              "description": "Additional information about the service"
+              "description": "Additional information about the service."
             },
             "package_type": {
               "type": "string",
