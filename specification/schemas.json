@@ -119,6 +119,9 @@
   "LiabilityCoverage": {
     "$ref": "./schemas/LiabilityCoverage.json"
   },
+  "LiabilityCoveragesRelationship": {
+    "$ref": "./schemas/LiabilityCoveragesRelationship.json"
+  },
   "MinimalBroker": {
     "$ref": "./schemas/MinimalBroker.json"
   },
