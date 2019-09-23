@@ -33,6 +33,16 @@
               "example": "spring-pap",
               "description": "Slug of the service"
             },
+            "information": {
+              "type": "array",
+              "example": [
+                {
+                  "type": "notice",
+                  "body": "Volumetric weight may be applied."
+                }
+              ],
+              "description": "Additional information about the service."
+            },
             "package_type": {
               "type": "string",
               "enum": [
