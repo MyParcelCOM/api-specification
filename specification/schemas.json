@@ -116,6 +116,9 @@
   "Language": {
     "$ref": "./schemas/Language.json"
   },
+  "LiabilityCoverage": {
+    "$ref": "./schemas/LiabilityCoverage.json"
+  },
   "MinimalBroker": {
     "$ref": "./schemas/MinimalBroker.json"
   },
@@ -151,6 +154,9 @@
   },
   "MinimalInvoice": {
     "$ref": "./schemas/MinimalInvoice.json"
+  },
+  "MinimalLiabilityCoverage": {
+    "$ref": "./schemas/MinimalLiabilityCoverage.json"
   },
   "MinimalOrganization": {
     "$ref": "./schemas/MinimalOrganization.json"
