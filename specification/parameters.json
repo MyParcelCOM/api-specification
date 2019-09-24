@@ -38,6 +38,9 @@
   "path-invoice_id": {
     "$ref": "./parameters/path-invoice_id.json"
   },
+  "path-liability_coverage_id": {
+    "$ref": "./parameters/path-liability_coverage_id.json"
+  },
   "path-organization_id": {
     "$ref": "./parameters/path-organization_id.json"
   },

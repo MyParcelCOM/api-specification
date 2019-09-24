@@ -1,0 +1,10 @@
+{
+  "name": "liability_coverage_id",
+  "in": "path",
+  "description": "Id of the liability coverage.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "format": "uuid"
+  }
+}
