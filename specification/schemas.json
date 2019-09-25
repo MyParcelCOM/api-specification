@@ -35,14 +35,14 @@
   "Client": {
     "$ref": "./schemas/Client.json"
   },
+  "CombinedFile": {
+    "$ref": "./schemas/CombinedFile.json"
+  },
   "Contract": {
     "$ref": "./schemas/Contract.json"
   },
   "ContractRelationship": {
     "$ref": "./schemas/ContractRelationship.json"
-  },
-  "CombinedFile": {
-    "$ref": "./schemas/CombinedFile.json"
   },
   "CountryCode": {
     "$ref": "./schemas/CountryCode.json"
@@ -173,9 +173,6 @@
   "MinimalPaymentIdentity": {
     "$ref": "./schemas/MinimalPaymentIdentity.json"
   },
-  "PaymentIdentityRelationship": {
-    "$ref": "./schemas/PaymentIdentityRelationship.json"
-  },
   "MinimalPickupDropoffLocation": {
     "$ref": "./schemas/MinimalPickupDropoffLocation.json"
   },
@@ -221,6 +218,9 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
+  "PatchCarrierSurcharge": {
+    "$ref": "./schemas/PatchCarrierSurcharge.json"
+  },
   "PatchContract": {
     "$ref": "./schemas/PatchContract.json"
   },
@@ -242,6 +242,9 @@
   "PatchShipment": {
     "$ref": "./schemas/PatchShipment.json"
   },
+  "PatchShipmentSurcharge": {
+    "$ref": "./schemas/PatchShipmentSurcharge.json"
+  },
   "PatchShop": {
     "$ref": "./schemas/PatchShop.json"
   },
@@ -256,6 +259,9 @@
   },
   "PaymentIdentity": {
     "$ref": "./schemas/PaymentIdentity.json"
+  },
+  "PaymentIdentityRelationship": {
+    "$ref": "./schemas/PaymentIdentityRelationship.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
@@ -319,12 +325,6 @@
   },
   "ShipmentSurcharge": {
     "$ref": "./schemas/ShipmentSurcharge.json"
-  },
-  "PatchShipmentSurcharge": {
-    "$ref": "./schemas/PatchShipmentSurcharge.json"
-  },
-  "PatchCarrierSurcharge": {
-    "$ref": "./schemas/PatchCarrierSurcharge.json"
   },
   "Shop": {
     "$ref": "./schemas/Shop.json"

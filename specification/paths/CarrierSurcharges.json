@@ -32,7 +32,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved all of the carrier surcharges.",
+        "description": "Retrieved the carrier surcharges.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -58,6 +58,8 @@
                         "properties": {
                           "attributes": {
                             "required": [
+                              "name",
+                              "fee",
                               "created_at",
                               "updated_at"
                             ]
@@ -165,7 +167,27 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CarrierSurcharge"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierSurcharge"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "fee",
+                            "created_at",
+                            "updated_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }

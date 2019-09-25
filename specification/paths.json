@@ -17,6 +17,12 @@
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code.json"
   },
+  "/carrier-surcharges": {
+    "$ref": "./paths/CarrierSurcharges.json"
+  },
+  "/carrier-surcharges/{carrier_surcharge_id}": {
+    "$ref": "./paths/CarrierSurcharges-carrier_surcharge_id.json"
+  },
   "/clients": {
     "$ref": "./paths/Clients.json"
   },
@@ -142,12 +148,6 @@
   },
   "/shipment-surcharges/{shipment_surcharge_id}": {
     "$ref": "./paths/ShipmentSurcharges-shipment_surcharge_id.json"
-  },
-  "/carrier-surcharges": {
-    "$ref": "./paths/CarrierSurcharges.json"
-  },
-  "/carrier-surcharges/{carrier_surcharge_id}": {
-    "$ref": "./paths/CarrierSurcharges-carrier_surcharge_id.json"
   },
   "/shops": {
     "$ref": "./paths/Shops.json"
