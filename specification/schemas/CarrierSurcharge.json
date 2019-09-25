@@ -13,6 +13,7 @@
         "attributes": {
           "type": "object",
           "required": [
+            "name",
             "fee"
           ],
           "additionalProperties": false,
@@ -26,7 +27,7 @@
               "example": "A carrier-specific (carrier_code) re-labeling surcharge"
             },
             "fee": {
-              "$ref": "#/components/schemas/BasePrice"
+              "$ref": "#/components/schemas/Price"
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
@@ -44,14 +45,7 @@
           "additionalProperties": false,
           "properties": {
             "carrier": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/CarrierRelationship"
-                },
-                {
-                  "readOnly": false
-                }
-              ]
+              "$ref": "#/components/schemas/CarrierRelationship"
             }
           }
         },

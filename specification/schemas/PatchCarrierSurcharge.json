@@ -6,7 +6,7 @@
     },
     {
       "required": [
-        "attributes"
+        "id"
       ],
       "properties": {
         "attributes": {
