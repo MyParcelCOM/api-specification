@@ -66,6 +66,9 @@
                   "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
                 }
               }
+            },
+            "liability_coverages": {
+                "$ref": "#/components/schemas/LiabilityCoveragesRelationship"
             }
           }
         },

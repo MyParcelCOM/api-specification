@@ -17,6 +17,12 @@
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code.json"
   },
+  "/carrier-surcharges": {
+    "$ref": "./paths/CarrierSurcharges.json"
+  },
+  "/carrier-surcharges/{carrier_surcharge_id}": {
+    "$ref": "./paths/CarrierSurcharges-carrier_surcharge_id.json"
+  },
   "/clients": {
     "$ref": "./paths/Clients.json"
   },
@@ -64,6 +70,9 @@
   },
   "/invoices/{invoice_id}": {
     "$ref": "./paths/Invoices-invoice_id.json"
+  },
+  "/liability-coverages/{liability_coverage_id}": {
+    "$ref": "./paths/LiabilityCoverage-liability_coverage_id.json"
   },
   "/organizations": {
     "$ref": "./paths/Organizations.json"
@@ -172,6 +181,9 @@
   },
   "/suggest-address": {
     "$ref": "./paths/SuggestAddress.json"
+  },
+  "/synchronize-integration": {
+    "$ref": "./paths/SynchronizeIntegration.json"
   },
   "/update-shipment-status": {
     "$ref": "./paths/UpdateShipmentStatus.json"

@@ -2,11 +2,11 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalShipmentSurcharge"
+      "$ref": "#/components/schemas/MinimalCarrierSurcharge"
     },
     {
       "required": [
-        "attributes"
+        "id"
       ],
       "properties": {
         "attributes": {

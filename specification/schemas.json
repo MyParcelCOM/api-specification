@@ -8,9 +8,6 @@
   "BaseCustoms": {
     "$ref": "./schemas/BaseCustoms.json"
   },
-  "BaseShipment": {
-    "$ref": "./schemas/BaseShipment.json"
-  },
   "BaseShipmentItem": {
     "$ref": "./schemas/BaseShipmentItem.json"
   },
@@ -32,20 +29,20 @@
   "CarrierRelationship": {
     "$ref": "./schemas/CarrierRelationship.json"
   },
+  "CarrierSurcharge": {
+    "$ref": "./schemas/CarrierSurcharge.json"
+  },
   "Client": {
     "$ref": "./schemas/Client.json"
   },
-  "ClientRelationship": {
-    "$ref": "./schemas/ClientRelationship.json"
+  "CombinedFile": {
+    "$ref": "./schemas/CombinedFile.json"
   },
   "Contract": {
     "$ref": "./schemas/Contract.json"
   },
   "ContractRelationship": {
     "$ref": "./schemas/ContractRelationship.json"
-  },
-  "CombinedFile": {
-    "$ref": "./schemas/CombinedFile.json"
   },
   "CountryCode": {
     "$ref": "./schemas/CountryCode.json"
@@ -119,11 +116,20 @@
   "Language": {
     "$ref": "./schemas/Language.json"
   },
+  "LiabilityCoverage": {
+    "$ref": "./schemas/LiabilityCoverage.json"
+  },
+  "LiabilityCoveragesRelationship": {
+    "$ref": "./schemas/LiabilityCoveragesRelationship.json"
+  },
   "MinimalBroker": {
     "$ref": "./schemas/MinimalBroker.json"
   },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
+  },
+  "MinimalCarrierSurcharge": {
+    "$ref": "./schemas/MinimalCarrierSurcharge.json"
   },
   "MinimalClient": {
     "$ref": "./schemas/MinimalClient.json"
@@ -152,6 +158,9 @@
   "MinimalInvoice": {
     "$ref": "./schemas/MinimalInvoice.json"
   },
+  "MinimalLiabilityCoverage": {
+    "$ref": "./schemas/MinimalLiabilityCoverage.json"
+  },
   "MinimalOrganization": {
     "$ref": "./schemas/MinimalOrganization.json"
   },
@@ -163,9 +172,6 @@
   },
   "MinimalPaymentIdentity": {
     "$ref": "./schemas/MinimalPaymentIdentity.json"
-  },
-  "PaymentIdentityRelationship": {
-    "$ref": "./schemas/PaymentIdentityRelationship.json"
   },
   "MinimalPickupDropoffLocation": {
     "$ref": "./schemas/MinimalPickupDropoffLocation.json"
@@ -212,6 +218,9 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
+  "PatchCarrierSurcharge": {
+    "$ref": "./schemas/PatchCarrierSurcharge.json"
+  },
   "PatchContract": {
     "$ref": "./schemas/PatchContract.json"
   },
@@ -233,6 +242,9 @@
   "PatchShipment": {
     "$ref": "./schemas/PatchShipment.json"
   },
+  "PatchShipmentSurcharge": {
+    "$ref": "./schemas/PatchShipmentSurcharge.json"
+  },
   "PatchShop": {
     "$ref": "./schemas/PatchShop.json"
   },
@@ -247,6 +259,9 @@
   },
   "PaymentIdentity": {
     "$ref": "./schemas/PaymentIdentity.json"
+  },
+  "PaymentIdentityRelationship": {
+    "$ref": "./schemas/PaymentIdentityRelationship.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
@@ -310,9 +325,6 @@
   },
   "ShipmentSurcharge": {
     "$ref": "./schemas/ShipmentSurcharge.json"
-  },
-  "PatchShipmentSurcharge": {
-    "$ref": "./schemas/PatchShipmentSurcharge.json"
   },
   "Shop": {
     "$ref": "./schemas/Shop.json"

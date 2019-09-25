@@ -1,0 +1,68 @@
+{
+  "get": {
+    "tags": [
+      "LiabilityCoverages"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Get a liability coverage by id.",
+    "description": "This endpoint retrieves a liability coverage for the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-liability_coverage_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the liability coverage.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/LiabilityCoverage"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "name",
+                            "price",
+                            "coverage_max"
+                          ]
+                        },
+                        "relationships": {
+                          "contract": {
+                            "$ref": "#/components/schemas/ContractRelationship"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

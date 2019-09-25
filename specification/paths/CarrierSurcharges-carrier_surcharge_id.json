@@ -1,0 +1,176 @@
+{
+  "get": {
+    "tags": [
+      "CarrierSurcharges"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "finance.manage"
+        ]
+      }
+    ],
+    "summary": "Get a carrier surcharge by id.",
+    "description": "This endpoint retrieves the carrier surcharge with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-carrier_surcharge_id"
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br> The relationships that can be included are:<ul><li>`carrier`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the carrier surcharge.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierSurcharge"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "fee",
+                            "created_at",
+                            "updated_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "CarrierSurcharges"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "finance.manage"
+        ]
+      }
+    ],
+    "summary": "Update a carrier surcharge by id.",
+    "description": "This endpoint updates the carrier surcharge with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-carrier_surcharge_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The carrier surcharge object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/PatchCarrierSurcharge"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The carrier surcharge is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CarrierSurcharge"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "required": [
+                            "name",
+                            "fee",
+                            "created_at",
+                            "updated_at"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "CarrierSurcharges"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "finance.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a carrier surcharge by id.",
+    "description": "This endpoint deletes the carrier surcharge with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-carrier_surcharge_id"
+      }
+    ],
+    "responses": {
+      "202": {
+        "description": "The carrier surcharge will be deleted."
+      },
+      "204": {
+        "description": "The carrier surcharge is deleted."
+      }
+    }
+  }
+}

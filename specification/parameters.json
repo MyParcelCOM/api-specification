@@ -8,14 +8,17 @@
   "path-carrier_id": {
     "$ref": "./parameters/path-carrier_id.json"
   },
+  "path-carrier_surcharge_id": {
+    "$ref": "./parameters/path-carrier_surcharge_id.json"
+  },
   "path-client_id": {
     "$ref": "./parameters/path-client_id.json"
   },
-  "path-contract_id": {
-    "$ref": "./parameters/path-contract_id.json"
-  },
   "path-combined_file_id": {
     "$ref": "./parameters/path-combined_file_id.json"
+  },
+  "path-contract_id": {
+    "$ref": "./parameters/path-contract_id.json"
   },
   "path-country_code": {
     "$ref": "./parameters/path-country_code.json"
@@ -38,6 +41,9 @@
   "path-invoice_id": {
     "$ref": "./parameters/path-invoice_id.json"
   },
+  "path-liability_coverage_id": {
+    "$ref": "./parameters/path-liability_coverage_id.json"
+  },
   "path-organization_id": {
     "$ref": "./parameters/path-organization_id.json"
   },
@@ -59,11 +65,11 @@
   "path-service_id": {
     "$ref": "./parameters/path-service_id.json"
   },
-  "path-service_rate_id": {
-    "$ref": "./parameters/path-service_rate_id.json"
-  },
   "path-service_option_id": {
     "$ref": "./parameters/path-service_option_id.json"
+  },
+  "path-service_rate_id": {
+    "$ref": "./parameters/path-service_rate_id.json"
   },
   "path-shipment_id": {
     "$ref": "./parameters/path-shipment_id.json"
