@@ -67,7 +67,7 @@
                 }
               }
             },
-            "liability-coverages": {
+            "liability_coverages": {
                 "$ref": "#/components/schemas/LiabilityCoveragesRelationship"
             }
           }
