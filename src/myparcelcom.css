@@ -14,7 +14,8 @@ a:hover {
   text-decoration: underline;
 }
 
-input:disabled {
+input:disabled,
+select:disabled {
   display: none;
 }
 
