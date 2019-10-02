@@ -39,6 +39,10 @@
                     "type": "string",
                     "format": "uuid",
                     "example": "eb527d60-fc26-4aff-ac58-f2661b0e7e9b"
+                  },
+                  "num_days": {
+                    "type": "integer",
+                    "example": 0
                   }
                 }
               }
