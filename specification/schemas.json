@@ -119,6 +119,9 @@
   "LiabilityCoverage": {
     "$ref": "./schemas/LiabilityCoverage.json"
   },
+  "LiabilityCoverageRelationship": {
+    "$ref": "./schemas/LiabilityCoverageRelationship.json"
+  },
   "LiabilityCoveragesRelationship": {
     "$ref": "./schemas/LiabilityCoveragesRelationship.json"
   },
@@ -295,9 +298,6 @@
   },
   "ServiceOption": {
     "$ref": "./schemas/ServiceOption.json"
-  },
-  "ServiceOptionRelationship": {
-    "$ref": "./schemas/ServiceOptionRelationship.json"
   },
   "ServiceOptionsRelationship": {
     "$ref": "./schemas/ServiceOptionsRelationship.json"

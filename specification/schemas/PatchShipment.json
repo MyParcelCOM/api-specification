@@ -106,10 +106,13 @@
         "relationships": {
           "type": "object",
           "properties": {
-            "service_options": {
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
+            },
+            "liability_coverage": {
               "oneOf": [
                 {
-                  "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                  "$ref": "#/components/schemas/LiabilityCoverageRelationship"
                 },
                 {
                   "type": "null"
@@ -119,8 +122,15 @@
             "service": {
               "$ref": "#/components/schemas/ServiceRelationship"
             },
-            "contract": {
-              "$ref": "#/components/schemas/ContractRelationship"
+            "service_options": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }

@@ -8,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalServiceOption"
+          "$ref": "#/components/schemas/MinimalLiabilityCoverage"
         },
         {
           "required": [
@@ -28,7 +28,7 @@
         "related": {
           "type": "string",
           "format": "url",
-          "example": "$API_HOST/service-options/4c675b1a-516c-4410-abff-d237fd45bcd0"
+          "example": "$API_HOST/liability-coverages/5a7ef73a-ddea-11e9-8a34-2a2ae2dbcce4"
         }
       }
     }
