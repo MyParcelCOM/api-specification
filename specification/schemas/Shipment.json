@@ -149,42 +149,8 @@
             "shop"
           ],
           "properties": {
-            "service_options": {
-              "$ref": "#/components/schemas/ServiceOptionsRelationship"
-            },
-            "parent": {
-              "$ref": "#/components/schemas/ShipmentRelationship"
-            },
-            "service": {
-              "$ref": "#/components/schemas/ServiceRelationship"
-            },
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
-            },
-            "shop": {
-              "$ref": "#/components/schemas/ShopRelationship"
-            },
-            "shipment_status": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ShipmentStatusRelationship"
-                },
-                {
-                  "properties": {
-                    "data": {
-                      "readOnly": true,
-                      "properties": {
-                        "id": {
-                          "readOnly": true
-                        },
-                        "type": {
-                          "readOnly": true
-                        }
-                      }
-                    }
-                  }
-                }
-              ]
             },
             "files": {
               "allOf": [
@@ -233,6 +199,43 @@
                   }
                 }
               ]
+            },
+            "liability_coverage": {
+              "$ref": "#/components/schemas/LiabilityCoverageRelationship"
+            },
+            "parent": {
+              "$ref": "#/components/schemas/ShipmentRelationship"
+            },
+            "service": {
+              "$ref": "#/components/schemas/ServiceRelationship"
+            },
+            "service_options": {
+              "$ref": "#/components/schemas/ServiceOptionsRelationship"
+            },
+            "shipment_status": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentStatusRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "properties": {
+                        "id": {
+                          "readOnly": true
+                        },
+                        "type": {
+                          "readOnly": true
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
             }
           }
         },

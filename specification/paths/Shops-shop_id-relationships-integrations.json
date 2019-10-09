@@ -159,9 +159,6 @@
                     "items": {
                       "properties": {
                         "meta": {
-                          "required": [
-                            "credentials"
-                          ],
                           "properties": {
                             "credentials": {
                               "type": "object",
@@ -213,7 +210,18 @@
       "content": {
         "application/vnd.api+json": {
           "schema": {
-            "$ref": "#/components/schemas/IntegrationsRelationship"
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MinimalIntegration"
+                }
+              }
+            }
           }
         }
       }

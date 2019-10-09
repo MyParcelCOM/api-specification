@@ -1,5 +1,7 @@
 {
+  "deprecated": true,
   "get": {
+    "deprecated": true,
     "tags": [
       "Regions"
     ],

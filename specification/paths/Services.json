@@ -29,17 +29,19 @@
         }
       },
       {
+        "deprecated": true,
         "name": "filter[region_from]",
         "in": "query",
-        "description": "Comma separated string of region ids to filter by.",
+        "description": "`DEPRECATED` <s>Comma separated string of region ids to filter by.</s>",
         "schema": {
           "type": "string"
         }
       },
       {
+        "deprecated": true,
         "name": "filter[region_to]",
         "in": "query",
-        "description": "Comma separated string of region ids to filter by.",
+        "description": "`DEPRECATED` <s>Comma separated string of region ids to filter by.</s>",
         "schema": {
           "type": "string"
         }
@@ -47,15 +49,16 @@
       {
         "name": "filter[address_from][country_code]",
         "in": "query",
-        "description": "Country code of origin location to filter by. May be used instead of region_from and can be combined with filter[address_from][region_code] and filter[address_from][postal_code] for more accurate results.",
+        "description": "Country code of origin location to filter by. Combine with `filter[address_from][postal_code]` for more accurate results.",
         "schema": {
           "$ref": "#/components/schemas/CountryCode"
         }
       },
       {
+        "deprecated": true,
         "name": "filter[address_from][region_code]",
         "in": "query",
-        "description": "Region code of origin location to filter by. May be used instead of region_from and can be combined with filter[address_from][country_code] and filter[address_from][postal_code] for more accurate results.",
+        "description": "`DEPRECATED` <s>Region code of origin location to filter by.</s>",
         "schema": {
           "$ref": "#/components/schemas/RegionCode"
         }
@@ -63,7 +66,7 @@
       {
         "name": "filter[address_from][postal_code]",
         "in": "query",
-        "description": "Postal code of origin location to filter by. May be used instead of region_from and can be combined with filter[address_from][country_code] and filter[address_from][region_code] for more accurate results.",
+        "description": "Postal code of origin location to filter by. Combine with `filter[address_from][country_code]` for more accurate results.",
         "schema": {
           "type": "string"
         }
@@ -71,15 +74,16 @@
       {
         "name": "filter[address_to][country_code]",
         "in": "query",
-        "description": "Country code of destination location to filter by. May be used instead of region_to and can be combined with filter[address_to][region_code] and filter[address_to][postal_code] for more accurate results.",
+        "description": "Country code of destination location to filter by. Combine with `filter[address_to][postal_code]` for more accurate results.",
         "schema": {
           "$ref": "#/components/schemas/CountryCode"
         }
       },
       {
+        "deprecated": true,
         "name": "filter[address_to][region_code]",
         "in": "query",
-        "description": "Region code of destination location to filter by. May be used instead of region_to and can be combined with filter[address_to][country_code] and filter[address_to][postal_code] for more accurate results.",
+        "description": "`DEPRECATED` <s>Region code of destination location to filter by.</s>",
         "schema": {
           "$ref": "#/components/schemas/RegionCode"
         }
@@ -87,7 +91,7 @@
       {
         "name": "filter[address_to][postal_code]",
         "in": "query",
-        "description": "Postal code of destination location to filter by. May be used instead of region_to and can be combined with filter[address_to][country_code] and filter[address_to][region_code] for more accurate results.",
+        "description": "Postal code of destination location to filter by. Combine with `filter[address_to][country_code]` for more accurate results.",
         "schema": {
           "type": "string"
         }
