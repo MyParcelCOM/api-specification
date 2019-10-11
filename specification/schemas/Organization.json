@@ -27,6 +27,11 @@
               "example": "123456789MVA",
               "description": "Value Added Tax identification number."
             },
+            "eori_number": {
+              "type": "string",
+              "example": "GB123456123456",
+              "description": "Economic Operators Registration and Identification number."
+            },
             "currency": {
               "$ref": "#/components/schemas/Currency"
             },
