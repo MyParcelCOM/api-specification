@@ -41,6 +41,13 @@
               ],
               "example": "123456789MVA"
             },
+            "eori_number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "GB123456123456"
+            },
             "currency": {
               "oneOf": [
                 {
