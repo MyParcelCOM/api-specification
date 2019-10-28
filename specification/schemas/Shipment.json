@@ -118,6 +118,11 @@
                 "$ref": "#/components/schemas/ShipmentItem"
               }
             },
+            "is_consolidation": {
+              "type": "boolean",
+              "example": true,
+              "description": "Indicates whether this shipment is a consolidation shipment."
+            },
             "customs": {
               "$ref": "#/components/schemas/BaseCustoms"
             },
@@ -151,6 +156,9 @@
           "properties": {
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
+            },
+            "consolidation_shipment": {
+              "$ref": "#/components/schemas/ShipmentRelationship"
             },
             "files": {
               "allOf": [
