@@ -118,6 +118,12 @@
                 "$ref": "#/components/schemas/ShipmentItem"
               }
             },
+            "is_consolidation": {
+              "readOnly": true,
+              "type": "boolean",
+              "example": true,
+              "description": "Indicates whether this shipment is a consolidation shipment."
+            },
             "customs": {
               "$ref": "#/components/schemas/BaseCustoms"
             },
