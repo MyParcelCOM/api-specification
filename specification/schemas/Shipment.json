@@ -152,6 +152,9 @@
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
             },
+            "consolidation_shipment": {
+              "$ref": "#/components/schemas/ShipmentRelationship"
+            },
             "files": {
               "allOf": [
                 {
