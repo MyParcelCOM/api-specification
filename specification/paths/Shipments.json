@@ -201,6 +201,11 @@
                   "label_mime_type": {
                     "type": "string",
                     "example": "application/pdf"
+                  },
+                  "service_code": {
+                    "type": "string",
+                    "example": "spring-pap",
+                    "description": "If an applicable service is found, it will be set as relationship. If no contract relationship is defined, the cheapest contract for this service will be applied."
                   }
                 }
               }
