@@ -204,7 +204,7 @@
                   },
                   "service_code": {
                     "type": "string",
-                    "example": "spring-pap",
+                    "example": "carrier-parcel-next-day",
                     "description": "If an applicable service is found, it will be set as relationship. If no contract relationship is defined, the cheapest contract for this service will be applied."
                   }
                 }
