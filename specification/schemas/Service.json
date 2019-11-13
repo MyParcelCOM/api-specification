@@ -30,7 +30,7 @@
             },
             "code": {
               "type": "string",
-              "example": "spring-pap",
+              "example": "carrier-parcel-next-day",
               "description": "Slug of the service"
             },
             "information": {
