@@ -1,6 +1,6 @@
 # MyParcel.com API specification
 
-[![Packagist](https://img.shields.io/packagist/v/MyParcelCOM/api-specification.svg)](https://packagist.org/packages/myparcelcom/api-specification)
+[![Packagist](https://img.shields.io/packagist/v/myparcelcom/api-specification.svg)](https://packagist.org/packages/myparcelcom/api-specification)
 [![OpenAPI Specification](https://img.shields.io/badge/OpenAPI-3.0-brightgreen.svg)](https://github.com/OAI/OpenAPI-Specification)
 
 Description of the API specification used by MyParcel.com located at [https://docs.myparcel.com/api-specification](https://docs.myparcel.com/api-specification). This specification adheres to the [OpenApi 3.0 specification](https://github.com/OAI/OpenAPI-Specification) and implements the [JSON API specification](http://jsonapi.org).
