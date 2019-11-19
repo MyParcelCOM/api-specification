@@ -41,6 +41,9 @@
             "content": {
               "type": "string",
               "example": "Information regarding shipments"
+            },
+            "country_code": {
+              "$ref": "#/components/schemas/CountryCode"
             }
           }
         }
