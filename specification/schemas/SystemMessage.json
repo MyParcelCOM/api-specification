@@ -24,12 +24,19 @@
               "example": "info"
             },
             "resource_type": {
-              "type": "string",
-              "enum": [
-                "shipments",
-                "carriers"
-              ],
-              "example": "shipments"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "shipments",
+                    "carriers"
+                  ],
+                  "example": "shipments",
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "content": {
               "type": "string",
