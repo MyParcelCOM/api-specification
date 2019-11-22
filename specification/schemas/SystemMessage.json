@@ -13,6 +13,20 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "content": {
+              "type": "string",
+              "example": "Information regarding shipments"
+            },
+            "country_code": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CountryCode"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "level": {
               "type": "string",
               "enum": [
@@ -31,19 +45,12 @@
                     "shipments",
                     "carriers"
                   ],
-                  "example": "shipments",
+                  "example": "shipments"
                 },
                 {
                   "type": "null"
                 }
               ]
-            },
-            "content": {
-              "type": "string",
-              "example": "Information regarding shipments"
-            },
-            "country_code": {
-              "$ref": "#/components/schemas/CountryCode"
             }
           }
         },
