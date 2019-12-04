@@ -13,6 +13,16 @@
     ],
     "summary": "Get all the system messages.",
     "description": "This endpoint retrieves system messages. These are informative messages about our system or a specific type of resource.",
+    "parameters": [
+      {
+        "name": "filter[country]",
+        "in": "query",
+        "description": "Country code of system messages to filter by. Using this filter will also include system-wide messages.",
+        "schema": {
+          "$ref": "#/components/schemas/CountryCode"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the system messages.",
