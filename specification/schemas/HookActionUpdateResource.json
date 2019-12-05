@@ -32,6 +32,14 @@
             ],
             "example": "175a235f-aff5-4e44-87b5-3657b75c1deb",
             "description": "In this specific case this could be a DPD Next Day service id."
+          },
+          "converter": {
+            "type": "string",
+            "enum": [
+              "code-to-id"
+            ],
+            "description": "Attempts to convert the 'value' property according to a valid converter.",
+            "example": "code-to-id"
           }
         }
       }
