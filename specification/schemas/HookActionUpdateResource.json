@@ -36,10 +36,10 @@
           "converter": {
             "type": "string",
             "enum": [
-              "code-to-id"
+              "service-code-to-id"
             ],
             "description": "Attempts to convert the 'value' property according to a valid converter.",
-            "example": "code-to-id"
+            "example": "service-code-to-id"
           }
         }
       }
