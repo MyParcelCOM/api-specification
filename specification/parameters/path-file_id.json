@@ -4,7 +4,6 @@
   "description": "Id of the file.",
   "required": true,
   "schema": {
-    "type": "string",
-    "format": "uuid"
+    "$ref": "#/components/schemas/Uuid"
   }
 }
