@@ -12,6 +12,7 @@
     "id": {
       "type": "string",
       "format": "uuid",
+      "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
       "example": "e6bb8463-2551-469b-94cc-6d861e364621"
     }
   }

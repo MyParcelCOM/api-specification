@@ -4,7 +4,6 @@
   "description": "Id of the integration.",
   "required": true,
   "schema": {
-    "type": "string",
-    "format": "uuid"
+    "$ref": "#/components/schemas/Uuid"
   }
 }
