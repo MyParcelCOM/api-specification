@@ -54,7 +54,7 @@
                 "string",
                 "null"
               ],
-              "example": "MyParcel.com backoffice",
+              "example": "Your integration name",
               "description": "Name of the application used to create the shipment."
             },
             "total_value": {

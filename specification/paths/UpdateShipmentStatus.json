@@ -33,11 +33,13 @@
                   "shipment_id": {
                     "type": "string",
                     "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
                     "example": "ea002ef2-0c0f-432a-8263-c8dcb191e728"
                   },
                   "status_id": {
                     "type": "string",
                     "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
                     "example": "be1c7cb5-e8d4-494a-9637-edb27ecab7c1"
                   }
                 }

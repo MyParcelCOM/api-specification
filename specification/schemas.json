@@ -350,6 +350,9 @@
   "User": {
     "$ref": "./schemas/User.json"
   },
+  "Uuid": {
+    "$ref": "./schemas/Uuid.json"
+  },
   "UserRelationship": {
     "$ref": "./schemas/UserRelationship.json"
   }
