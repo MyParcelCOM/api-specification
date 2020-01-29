@@ -179,6 +179,9 @@
   "/users/{user_id}": {
     "$ref": "./paths/Users-user_id.json"
   },
+  "/import-service-rates": {
+    "$ref": "./paths/ImportServiceRates.json"
+  },
   "/suggest-address": {
     "$ref": "./paths/SuggestAddress.json"
   },
