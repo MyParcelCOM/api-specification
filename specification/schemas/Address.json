@@ -7,7 +7,6 @@
       "required": [
         "street_1",
         "city",
-        "postal_code",
         "country_code"
       ]
     }
