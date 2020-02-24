@@ -12,6 +12,16 @@
     ],
     "summary": "Get all available hooks for your API client.",
     "description": "This endpoint retrieves available hooks for your API client.",
+    "parameters": [
+      {
+        "name": "filter[owner]",
+        "in": "query",
+        "description": "Comma separated string of owner ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the hooks.",
