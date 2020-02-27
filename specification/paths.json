@@ -190,5 +190,8 @@
   },
   "/update-shipment-status": {
     "$ref": "./paths/UpdateShipmentStatus.json"
+  },
+  "/void-shipment": {
+    "$ref": "./paths/VoidShipment.json"
   }
 }
