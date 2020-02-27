@@ -46,7 +46,7 @@
       "204": {
         "description": "The shipment has been voided."
       },
-      "422": {
+      "423": {
         "description": "The shipment could not be voided."
       }
     }

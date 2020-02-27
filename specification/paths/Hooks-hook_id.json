@@ -138,9 +138,6 @@
       }
     ],
     "responses": {
-      "202": {
-        "description": "The hook will be deleted."
-      },
       "204": {
         "description": "The hook is deleted."
       }

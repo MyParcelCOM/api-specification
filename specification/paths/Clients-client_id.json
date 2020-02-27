@@ -106,9 +106,6 @@
       }
     ],
     "responses": {
-      "202": {
-        "description": "The client will be deleted."
-      },
       "204": {
         "description": "The client is deleted."
       }

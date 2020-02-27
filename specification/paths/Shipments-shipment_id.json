@@ -186,11 +186,11 @@
       }
     ],
     "responses": {
-      "202": {
-        "description": "The shipment will be deleted."
-      },
       "204": {
         "description": "The shipment is deleted."
+      },
+      "423": {
+        "description": "The shipment could not be deleted."
       }
     }
   }
