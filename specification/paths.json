@@ -80,6 +80,12 @@
   "/organizations/{organization_id}": {
     "$ref": "./paths/Organizations-organization_id.json"
   },
+  "/organizations/{organization_id}/contracts": {
+    "$ref": "./paths/Organizations-organization_id-contracts.json"
+  },
+  "/organizations/{organization_id}/relationships/contracts": {
+    "$ref": "./paths/Organizations-organization_id-relationships-contracts.json"
+  },
   "/password-resets": {
     "$ref": "./paths/PasswordResets.json"
   },

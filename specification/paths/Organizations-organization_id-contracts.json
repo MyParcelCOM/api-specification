@@ -1,0 +1,76 @@
+{
+  "get": {
+    "tags": [
+      "Organizations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Get the available contracts for a specific organization.",
+    "description": "This endpoint retrieves available contracts for an organization with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-organization_id"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the available contracts for the organization.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Contract"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ],
+                        "properties": {
+                          "attributes": {
+                            "required": [
+                              "status",
+                              "currency",
+                              "name",
+                              "created_at"
+                            ]
+                          },
+                          "relationships": {
+                            "properties": {
+                              "owner": {
+                                "example": {
+                                  "links": {
+                                    "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
