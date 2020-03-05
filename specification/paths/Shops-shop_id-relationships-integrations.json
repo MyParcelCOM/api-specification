@@ -72,8 +72,8 @@
         ]
       }
     ],
-    "summary": "Add an integration relationships to the shop.",
-    "description": "This endpoint adds an integration relationships for the shop with the supplied id.",
+    "summary": "Add integration relationships to the shop.",
+    "description": "This endpoint adds integration relationships for the shop with the supplied id.",
     "parameters": [
       {
         "$ref": "#/components/parameters/path-shop_id"

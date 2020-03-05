@@ -1,0 +1,74 @@
+{
+  "post": {
+    "tags": [
+      "Organizations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "contracts.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Add contract relationships to the organization.",
+    "description": "This endpoint adds contract relationships to the organization with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-organization_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The contract relationships to be added to the organization.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/ContractsRelationship"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The contract relationships have been added."
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Organizations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "contracts.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Delete contract relationships from an organization.",
+    "description": "This endpoint deletes contract relationships from the organization with the supplied id.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-organization_id"
+      }
+    ],
+    "requestBody": {
+      "description": "The contract relationships to be deleted from the organization.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/ContractsRelationship"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The contract relationships have been deleted."
+      }
+    }
+  }
+}
