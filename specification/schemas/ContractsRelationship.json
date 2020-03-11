@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MinimalContract"
+          },
+          {
+            "required": [
+              "id"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

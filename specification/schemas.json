@@ -44,6 +44,9 @@
   "ContractRelationship": {
     "$ref": "./schemas/ContractRelationship.json"
   },
+  "ContractsRelationship": {
+    "$ref": "./schemas/ContractsRelationship.json"
+  },
   "CountryCode": {
     "$ref": "./schemas/CountryCode.json"
   },

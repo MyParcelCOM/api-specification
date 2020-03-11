@@ -151,9 +151,6 @@
       }
     ],
     "responses": {
-      "202": {
-        "description": "The system message will be deleted."
-      },
       "204": {
         "description": "The system message is deleted."
       }

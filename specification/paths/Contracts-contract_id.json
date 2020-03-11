@@ -190,9 +190,6 @@
       }
     ],
     "responses": {
-      "202": {
-        "description": "The contract will be deleted."
-      },
       "204": {
         "description": "The contract is deleted."
       }

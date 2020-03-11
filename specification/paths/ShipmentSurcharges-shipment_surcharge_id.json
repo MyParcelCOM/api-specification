@@ -125,9 +125,6 @@
       }
     ],
     "responses": {
-      "202": {
-        "description": "The shipment surcharge will be deleted."
-      },
       "204": {
         "description": "The shipment surcharge is deleted."
       }

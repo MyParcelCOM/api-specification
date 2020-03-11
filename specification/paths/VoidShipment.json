@@ -10,10 +10,10 @@
         ]
       }
     ],
-    "summary": "Manually update a shipment's status.",
-    "description": "This endpoint allows a user to manually update a shipment's status.",
+    "summary": "Void a registered shipment whose label is not going to be used.",
+    "description": "This endpoint allows a user to void a registered shipment if it's label is not going to be used. This will avoid unused labels to be invoiced by the carrier.",
     "requestBody": {
-      "description": "The shipment id to be updated and the status id to update it with.",
+      "description": "The shipment id to be voided.",
       "required": true,
       "content": {
         "application/json": {
@@ -26,8 +26,7 @@
               "data": {
                 "type": "object",
                 "required": [
-                  "shipment_id",
-                  "status_id"
+                  "shipment_id"
                 ],
                 "properties": {
                   "shipment_id": {
@@ -35,12 +34,6 @@
                     "format": "uuid",
                     "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
                     "example": "7b808eee-bf1c-40cd-98f2-3c335a06417e"
-                  },
-                  "status_id": {
-                    "type": "string",
-                    "format": "uuid",
-                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
-                    "example": "5c868557-0827-4d21-a7f4-9820f01769f4"
                   }
                 }
               }
@@ -51,7 +44,10 @@
     },
     "responses": {
       "204": {
-        "description": "The status has been added to the shipment."
+        "description": "The shipment has been voided."
+      },
+      "423": {
+        "description": "The shipment could not be voided."
       }
     }
   }
