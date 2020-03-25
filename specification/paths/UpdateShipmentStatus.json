@@ -10,10 +10,10 @@
         ]
       }
     ],
-    "summary": "Manually update a shipment's status.",
-    "description": "This endpoint allows a user to manually update a shipment's status.",
+    "summary": "Update the status of a shipment.",
+    "description": "This endpoint allows a user to trigger a status update for a shipment. The shipment will be queued for a synchronization with the carrier.<br><br>Since our **sandbox environment** does not provide real shipments, a `status_id` can be provided to simulate a shipment status update.",
     "requestBody": {
-      "description": "The shipment id to be updated and the status id to update it with.",
+      "description": "The shipment id to be updated. And (only on our sandbox environment) the status id to update it with.",
       "required": true,
       "content": {
         "application/json": {
@@ -26,8 +26,7 @@
               "data": {
                 "type": "object",
                 "required": [
-                  "shipment_id",
-                  "status_id"
+                  "shipment_id"
                 ],
                 "properties": {
                   "shipment_id": {
@@ -44,6 +43,11 @@
                   }
                 }
               }
+            },
+            "example": {
+              "data": {
+                "shipment_id": "7b808eee-bf1c-40cd-98f2-3c335a06417e"
+              }
             }
           }
         }
@@ -51,7 +55,7 @@
     },
     "responses": {
       "204": {
-        "description": "The status has been added to the shipment."
+        "description": "The shipment is queued for a synchronization with the carrier."
       }
     }
   }
