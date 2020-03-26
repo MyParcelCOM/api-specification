@@ -51,7 +51,16 @@
                 "string",
                 "null"
               ],
-              "example": "Order #8008135"
+              "example": "Fidget spinners",
+              "description": "Description of the shipment (contents). This field is communicated to the carrier and may be put on the shipment's label."
+            },
+            "customer_reference": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "#8008135",
+              "description": "Internal reference for the customer to recognize the shipment by."
             },
             "channel": {
               "type": [
