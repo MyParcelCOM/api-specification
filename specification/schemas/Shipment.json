@@ -77,7 +77,7 @@
                 "string",
                 "null"
               ],
-              "example": "Order #8008135",
+              "example": "#8008135",
               "description": "Internal reference for the customer to recognize the shipment by."
             },
             "channel": {

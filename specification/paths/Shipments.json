@@ -32,7 +32,7 @@
       {
         "name": "filter[customer_reference]",
         "in": "query",
-        "description": "Search for a shipment by its customer reference attribute. If a shipments `customer_reference` attribute contains the search string, it is returned in the response.",
+        "description": "Search for a shipment by its customer reference attribute. This is a strict search, meaning that only if the search string matches the `customer_reference` attribute of a shipment completely, will the shipment be returned.",
         "schema": {
           "type": "string"
         }
