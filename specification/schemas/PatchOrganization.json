@@ -48,6 +48,13 @@
               ],
               "example": "GB123456123456"
             },
+            "voec_number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "1234567"
+            },
             "currency": {
               "oneOf": [
                 {
