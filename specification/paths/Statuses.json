@@ -3,6 +3,12 @@
     "tags": [
       "Statuses"
     ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
     "summary": "Get all the statuses.",
     "description": "This endpoint retrieves all available statuses. Statuses can be attached to resources, for example shipment-statuses.",
     "responses": {
