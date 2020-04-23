@@ -15,7 +15,6 @@
           "required": [
             "name",
             "code",
-            "credentials_format",
             "description",
             "created_at"
           ],
