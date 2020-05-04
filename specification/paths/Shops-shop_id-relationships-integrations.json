@@ -95,9 +95,6 @@
                     "items": {
                       "properties": {
                         "meta": {
-                          "required": [
-                            "credentials"
-                          ],
                           "properties": {
                             "credentials": {
                               "type": "object",
@@ -106,6 +103,13 @@
                                 "password": "your_password"
                               },
                               "description": "The credentials required to communicate with the integration as defined by the `credentials_format` of the integration."
+                            },
+                            "client_id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                              "example": "6a4baca2-7b94-4987-9e4e-2283c22bac1d",
+                              "description": "A client to allow the integration to communicate with the MyParcel.com API. If not specified, a new client will be created."
                             }
                           }
                         }
@@ -167,6 +171,13 @@
                                 "password": "your_password"
                               },
                               "description": "The credentials required to communicate with the integration as defined by the `credentials_format` of the integration."
+                            },
+                            "client_id": {
+                              "type": "string",
+                              "format": "uuid",
+                              "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                              "example": "6a4baca2-7b94-4987-9e4e-2283c22bac1d",
+                              "description": "A client to allow the integration to communicate with the MyParcel.com API. If not specified, a new client will be created."
                             }
                           }
                         }
