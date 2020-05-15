@@ -68,7 +68,10 @@
               }
             },
             "liability_coverages": {
-                "$ref": "#/components/schemas/LiabilityCoveragesRelationship"
+              "$ref": "#/components/schemas/LiabilityCoveragesRelationship"
+            },
+            "template": {
+              "$ref": "#/components/schemas/ContractRelationship"
             }
           }
         },
