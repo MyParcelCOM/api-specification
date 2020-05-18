@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "unit_type": {
+      "type": "string",
+      "example": "percentage",
+      "enum": [
+        "percentage"
+      ]
+    },
+    "labels": {
+      "type": "array",
+      "description": "List of all chart labels on the X axis",
+      "items": {
+        "type": "string",
+        "example": "January"
+      }
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "example": "Delivery < 1 day"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "float",
+              "example": "93.56"
+            }
+          }
+        }
+      }
+    }
+  }
+}

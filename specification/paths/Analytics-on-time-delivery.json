@@ -1,0 +1,91 @@
+{
+  "get": {
+    "tags": [
+      "Analytics"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get analytics report for delivered shipments on time.",
+    "description": "This endpoint retrieves the rate by which shipments are successfully delivered on time on intervals.",
+    "parameters": [
+      {
+        "name": "interval",
+        "in": "path",
+        "description": "Interval by which to arrange the dataset.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "example": "month",
+          "enum": [
+            "month"
+          ]
+        }
+      },
+      {
+        "name": "filter[date_from]",
+        "in": "query",
+        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[date_to]",
+        "in": "query",
+        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at <= this date will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[shop]",
+        "in": "query",
+        "description": "Comma separated string of shop ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[organization]",
+        "in": "query",
+        "description": "Comma separated string of organization ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[carrier]",
+        "in": "query",
+        "description": "Comma separated string of carrier ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the analytics data in timeseries.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Analytics"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
