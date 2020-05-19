@@ -202,5 +202,8 @@
   },
   "/void-shipment": {
     "$ref": "./paths/VoidShipment.json"
+  },
+  "/analytics/on-time-delivery/{interval}": {
+    "$ref": "./paths/Analytics-on-time-delivery.json"
   }
 }
