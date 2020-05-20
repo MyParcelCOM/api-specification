@@ -358,5 +358,8 @@
   },
   "UserRelationship": {
     "$ref": "./schemas/UserRelationship.json"
+  },
+  "Analytics": {
+    "$ref": "./schemas/Analytics.json"
   }
 }

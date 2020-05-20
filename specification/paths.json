@@ -197,7 +197,13 @@
   "/update-shipment-status": {
     "$ref": "./paths/UpdateShipmentStatus.json"
   },
+  "/export-shipments": {
+    "$ref": "./paths/ExportShipments.json"
+  },
   "/void-shipment": {
     "$ref": "./paths/VoidShipment.json"
+  },
+  "/analytics/on-time-delivery/{interval}": {
+    "$ref": "./paths/Analytics-on-time-delivery.json"
   }
 }
