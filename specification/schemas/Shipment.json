@@ -125,6 +125,33 @@
             "physical_properties": {
               "$ref": "#/components/schemas/PhysicalProperties"
             },
+            "verified": {
+              "type": "object",
+              "readOnly": true,
+              "properties": {
+                "price": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Price"
+                    },
+                    {
+                      "readOnly": true
+                    }
+                  ]
+                },
+                "physical_properties": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PhysicalProperties"
+                    },
+                    {
+                      "readOnly": true,
+                      "required": null
+                    }
+                  ]
+                }
+              }
+            },
             "items": {
               "type": "array",
               "items": {
