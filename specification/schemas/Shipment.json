@@ -145,8 +145,7 @@
                       "$ref": "#/components/schemas/PhysicalProperties"
                     },
                     {
-                      "readOnly": true,
-                      "required": null
+                      "readOnly": true
                     }
                   ]
                 }
