@@ -1,0 +1,69 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Create a contract from a template and copy rates for given services.",
+    "description": "This endpoint creates a duplicate of the template contract with a new name and copies service-rates for given service ids.",
+    "requestBody": {
+      "description": "The template and contract details to create the new contract.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "template_id",
+                  "contract_name",
+                  "services"
+                ],
+                "properties": {
+                  "template_id": {
+                    "type": "string",
+                    "example": "2cb32706-5762-4b96-9212-327e6afaeeff"
+                  },
+                  "contract_name": {
+                    "type": "string",
+                    "example": "New contract for Carrier X"
+                  },
+                  "services": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": "175a235f-aff5-4e44-87b5-3657b75c1deb"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The contract has been created.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Contract"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -35,6 +35,9 @@
   "/contracts/{contract_id}": {
     "$ref": "./paths/Contracts-contract_id.json"
   },
+  "/contract-from-template": {
+    "$ref": "./paths/ContractFromTemplate.json"
+  },
   "/combined-files": {
     "$ref": "./paths/CombinedFiles.json"
   },
