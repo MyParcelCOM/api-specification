@@ -2,7 +2,6 @@
 
 echo -e "\033[0;30;47m Starting containers \033[0m"
 
-${ROOT_DIR}/mp/bundle
 ${COMPOSE} up -d redoc
 
 echo -e "\033[0;30;47m Redoc running on \033[0m http://localhost:${REDOC_PORT}"
