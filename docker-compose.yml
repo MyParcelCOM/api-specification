@@ -16,12 +16,12 @@ services:
       dockerfile: docker/build/Dockerfile
     image: myparcelcom/api-specification:v1-dev
     volumes:
-      - ./generated:/usr/share/nginx/html/generated/
+      - ./dist:/usr/share/nginx/html/dist/
       - ./src/index.html:/usr/share/nginx/html/index.html
       - ./src/myparcelcom.css:/usr/share/nginx/html/myparcelcom.css
       - ./src/myparcelcom.js:/usr/share/nginx/html/myparcelcom.js
     environment:
-      SPEC_URL: /generated/specification.json
+      SPEC_URL: /dist/swagger.json
       PAGE_FAVICON: favicon-16x16.png
     ports:
       - ${REDOC_PORT}:80

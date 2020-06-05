@@ -12,7 +12,6 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && npm install -g json-refs \
-    && npm install --quiet \
     && mkdir -p dist \
     && json-refs resolve root.json -f > dist/swagger.template.json \
     && API_HOST=${API_HOST} AUTH_HOST=${AUTH_HOST} envsubst "\${API_HOST} \${AUTH_HOST}" < \
@@ -20,10 +19,10 @@ RUN apt-get update \
 
 FROM redocly/redoc:v2.0.0-rc.30
 
-ENV SPEC_URL="/generated/specification.json"
+ENV SPEC_URL="/dist/swagger.json"
 ENV PAGE_FAVICON="favicon-16x16.png"
 
-COPY --from=build /build/dist/swagger.json /usr/share/nginx/html/generated/specification.json
+COPY --from=build /build/dist/swagger.json /usr/share/nginx/html/dist/swagger.json
 COPY ./src/index.html /usr/share/nginx/html/index.html
 COPY ./src/myparcelcom.css /usr/share/nginx/html/myparcelcom.css
 COPY ./src/myparcelcom.js /usr/share/nginx/html/myparcelcom.js
