@@ -18,10 +18,28 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx-${NS}"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/rewrite-target: /api-specification
 spec:
   rules:
     - host: ${APP_DOMAIN}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: ${CIRCLE_PROJECT_REPONAME}-svc
+              servicePort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ${CIRCLE_PROJECT_REPONAME}-redir-ingress
+  namespace: ${NS}
+  annotations:
+    kubernetes.io/ingress.class: "nginx-${NS}"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/permanent-redirect: "https://${APP_DOMAIN}"
+spec:
+  rules:
+    - host: ${DOCS_DOMAIN}
       http:
         paths:
           - path: /api-specification

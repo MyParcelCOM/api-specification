@@ -11,5 +11,8 @@
     "name": "MyParcel.com general terms and conditions",
     "url": "https://www.myparcel.com/terms"
   },
-  "version": "1.17.0"
+  "version": "1.17.0",
+  "x-logo": {
+    "url": "https://cdn.myparcel.com/images/myparcelcom-black.svg"
+  }
 }
