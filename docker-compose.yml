@@ -3,18 +3,25 @@ version: '3'
 services:
   bundler:
     build:
-      context: ./docker/json-bundler
-      dockerfile: Dockerfile
-    image: myparcelcom/json-bundler:v1-dev
+      context: .
+      dockerfile: docker/json-bundler/Dockerfile
+    image: myparcelcom/json-bundler:v2-dev
     working_dir: /opt/spec
     volumes:
       - .:/opt/spec
 
-  node:
-    image: node:12
-    working_dir: /opt/spec
-    command: ./node_modules/.bin/gulp watch --port $GULP_PORT --api-host $API_HOST --auth-host $AUTH_HOST
+  redoc:
+    build:
+      context: .
+      dockerfile: docker/build/Dockerfile
+    image: myparcelcom/api-specification:v1-dev
     volumes:
-      - .:/opt/spec
+      - ./generated:/usr/share/nginx/html/generated/
+      - ./src/index.html:/usr/share/nginx/html/index.html
+      - ./src/myparcelcom.css:/usr/share/nginx/html/myparcelcom.css
+      - ./src/myparcelcom.js:/usr/share/nginx/html/myparcelcom.js
+    environment:
+      SPEC_URL: /generated/specification.json
+      PAGE_FAVICON: favicon-16x16.png
     ports:
-      - $GULP_PORT:$GULP_PORT
+      - ${REDOC_PORT}:80

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 echo -e "\033[0;30;47m Starting containers \033[0m"
-${COMPOSE} up -d node
 
-echo -e "\033[0;30;47m Browsersync running on \033[0m https://localhost:${GULP_PORT}"
+${ROOT_DIR}/mp/bundle
+${COMPOSE} up -d redoc
+
+echo -e "\033[0;30;47m Redoc running on \033[0m http://localhost:${REDOC_PORT}"
