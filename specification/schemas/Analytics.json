@@ -31,7 +31,7 @@
             "items": {
               "type": "number",
               "format": "float",
-              "example": "93.56"
+              "example": 93.56
             }
           }
         }

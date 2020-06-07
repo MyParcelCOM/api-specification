@@ -6,11 +6,6 @@ mkdir -p dist
 json-refs resolve root.json -f > dist/swagger.json
 "
 
-if [ "$(uname -s)" == "Linux" ]; then
-  echo -e "\033[0;30;47m Fixing file ownership for Linux \033[0m"
-  ${COMPOSE} run --rm bundler chown -R $(id -u):$(id -g) dist
-fi
-
 echo -e "\033[0;30;47m Injecting vars \033[0m"
 # Escape "/" characters to avoid conflict with sed.
 API_HOST=${API_HOST//\//\\/}

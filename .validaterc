@@ -1,0 +1,15 @@
+{
+  "shared": {
+    "operations": {
+      "no_operation_id": "off"
+    },
+    "schemas": {
+      "no_schema_description": "off",
+      "no_property_description": "off",
+      "inconsistent_property_type": "off"
+    },
+    "walker": {
+      "no_empty_descriptions": "off"
+    }
+  }
+}

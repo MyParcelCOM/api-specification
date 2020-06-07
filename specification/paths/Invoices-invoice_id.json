@@ -10,7 +10,7 @@
       }
     ],
     "summary": "Get one invoice.",
-    "description": "",
+    "description": "This endpoint retrieves the invoice with the supplied id.",
     "parameters": [
       {
         "$ref": "#/components/parameters/path-invoice_id"
