@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
-${ROOT_DIR}/mp/bundle
-
 echo -e "\033[0;30;47m Validating spec \033[0m"
-docker run --rm -v ${ROOT_DIR}:/project -w /project usabillabv/openapi3-validator ./dist/swagger.json
+docker run --rm -v ${ROOT_DIR}:/data jamescooke/openapi-validator ./dist/swagger.json

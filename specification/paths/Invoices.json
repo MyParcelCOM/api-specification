@@ -10,7 +10,7 @@
       }
     ],
     "summary": "Get all available invoices.",
-    "description": "",
+    "description": "This endpoint retrieves all invoices available to your API client.",
     "responses": {
       "200": {
         "description": "Retrieved the invoices.",

@@ -1,4 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 img[alt=logo] {
   width: 220px !important;
   margin: 20px 0 !important;
+}
+
+redoc {
+  display: block;
 }

@@ -107,12 +107,12 @@
                 "latitude": {
                   "type": "number",
                   "format": "double",
-                  "example": "51.5237758"
+                  "example": 51.5237758
                 },
                 "longitude": {
                   "type": "number",
                   "format": "double",
-                  "example": "-0.1606707"
+                  "example": -0.1606707
                 }
               }
             }
@@ -125,7 +125,7 @@
             "distance": {
               "type": "number",
               "description": "Distance from the specified postal code to the location in meters.",
-              "example": "1337"
+              "example": 1337
             }
           }
         },
