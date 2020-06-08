@@ -1,6 +1,5 @@
-/dist/
-/node_modules/
 /.circleci/
+/.env/
 /.github/
 /.gitignore/
-/.env/
+/dist/

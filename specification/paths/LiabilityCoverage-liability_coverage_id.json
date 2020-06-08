@@ -39,22 +39,7 @@
                       "required": [
                         "id",
                         "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "name",
-                            "price",
-                            "coverage_max"
-                          ]
-                        },
-                        "relationships": {
-                          "contract": {
-                            "$ref": "#/components/schemas/ContractRelationship"
-                          }
-                        }
-                      }
+                      ]
                     }
                   ]
                 }

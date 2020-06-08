@@ -10,7 +10,7 @@
       }
     ],
     "summary": "Get all available payment identities.",
-    "description": "",
+    "description": "This endpoint retrieves all payment identities available to your API client.",
     "responses": {
       "200": {
         "description": "Retrieved the payment identities.",
