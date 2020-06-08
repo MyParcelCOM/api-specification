@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-organization_id"
+    }
+  ],
   "get": {
     "tags": [
       "Organizations"
@@ -12,11 +17,6 @@
     ],
     "summary": "Get an organization by id.",
     "description": "This endpoint retrieves the organization with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-organization_id"
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the organization.",
@@ -89,11 +89,6 @@
     ],
     "summary": "Update an organization by id.",
     "description": "This endpoint updates the organization with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-organization_id"
-      }
-    ],
     "requestBody": {
       "description": "The organization object with attributes to be updated.",
       "required": true,

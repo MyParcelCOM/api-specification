@@ -1,4 +1,12 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-shipment_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-shipment_status_id"
+    }
+  ],
   "get": {
     "tags": [
       "Shipments"
@@ -13,12 +21,6 @@
     "summary": "Get a shipment status by id.",
     "description": "This endpoint retrieves the shipment status with the supplied id.",
     "parameters": [
-      {
-        "$ref": "#/components/parameters/path-shipment_id"
-      },
-      {
-        "$ref": "#/components/parameters/path-shipment_status_id"
-      },
       {
         "name": "include",
         "in": "query",

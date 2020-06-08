@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-invitation_id"
+    }
+  ],
   "get": {
     "tags": [
       "Invitations"
@@ -11,11 +16,6 @@
     ],
     "summary": "Get an invitation by id.",
     "description": "This endpoint retrieves the invitation with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-invitation_id"
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the invitation.",

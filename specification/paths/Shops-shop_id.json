@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-shop_id"
+    }
+  ],
   "get": {
     "tags": [
       "Shops"
@@ -14,9 +19,6 @@
     "summary": "Get a shop by id.",
     "description": "This endpoint retrieves the shop with the supplied id.",
     "parameters": [
-      {
-        "$ref": "#/components/parameters/path-shop_id"
-      },
       {
         "name": "include",
         "in": "query",
@@ -78,11 +80,6 @@
     ],
     "summary": "Update a shop by id.",
     "description": "This endpoint updates the shop with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-shop_id"
-      }
-    ],
     "requestBody": {
       "description": "The shop object with attributes to be updated.",
       "required": true,
