@@ -8,6 +8,12 @@ img[alt=logo] {
   margin: 20px 0 !important;
 }
 
-redoc {
-  display: block;
+/* avoid long regex to overlap the right area */
+.api-content > div > div:first-child > div:first-child {
+  overflow-x: scroll;
+}
+
+.experimental h1:after,
+.experimental h2:after {
+  content: " ⚠";
 }

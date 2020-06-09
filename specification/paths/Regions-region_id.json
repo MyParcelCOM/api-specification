@@ -1,5 +1,4 @@
 {
-  "deprecated": true,
   "parameters": [
     {
       "$ref": "#/components/parameters/path-region_id"
