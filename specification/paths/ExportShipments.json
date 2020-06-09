@@ -22,6 +22,14 @@
         }
       },
       {
+        "name": "filter[description]",
+        "in": "query",
+        "description": "Search for a shipment by its description attribute. This is a strict search, meaning that only if the search string matches the `description` attribute of a shipment completely, will the shipment be returned.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "filter[customer_reference]",
         "in": "query",
         "description": "Search for a shipment by its customer reference attribute. This is a strict search, meaning that only if the search string matches the `customer_reference` attribute of a shipment completely, will the shipment be returned.",
