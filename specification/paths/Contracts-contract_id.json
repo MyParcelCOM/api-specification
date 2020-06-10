@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-contract_id"
+    }
+  ],
   "get": {
     "tags": [
       "Contracts"
@@ -14,9 +19,6 @@
     "summary": "Get a contract by id.",
     "description": "This endpoint retrieves a contract for the supplied id.",
     "parameters": [
-      {
-        "$ref": "#/components/parameters/path-contract_id"
-      },
       {
         "name": "include",
         "in": "query",
@@ -87,17 +89,12 @@
     "security": [
       {
         "OAuth2": [
-          "organization.manage"
+          "organizations.manage"
         ]
       }
     ],
     "summary": "Update a contract by id.",
     "description": "This endpoint updates the contract with the supplied id. The status will be `pending` until our system has checked if the credentials are valid.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-contract_id"
-      }
-    ],
     "requestBody": {
       "description": "The contract object with attributes to be updated.",
       "required": true,
@@ -178,17 +175,12 @@
     "security": [
       {
         "OAuth2": [
-          "organization.manage"
+          "organizations.manage"
         ]
       }
     ],
     "summary": "Delete a contract by id.",
     "description": "This endpoint deletes the contract with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-contract_id"
-      }
-    ],
     "responses": {
       "204": {
         "description": "The contract is deleted."

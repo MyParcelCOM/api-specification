@@ -1,5 +1,9 @@
 {
-  "deprecated": true,
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-region_id"
+    }
+  ],
   "get": {
     "deprecated": true,
     "tags": [
@@ -13,11 +17,6 @@
     ],
     "summary": "Get a region by id.",
     "description": "This endpoint retrieves the region with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-region_id"
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the region.",

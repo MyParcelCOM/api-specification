@@ -35,6 +35,9 @@
             },
             "information": {
               "type": "array",
+              "items": {
+                "type": "object"
+              },
               "example": [
                 {
                   "type": "notice",

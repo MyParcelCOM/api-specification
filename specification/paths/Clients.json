@@ -128,7 +128,7 @@
     "security": [
       {
         "OAuth2": [
-          "organization.manage"
+          "organizations.manage"
         ]
       }
     ],

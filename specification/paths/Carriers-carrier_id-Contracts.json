@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-carrier_id"
+    }
+  ],
   "get": {
     "tags": [
       "Carriers"
@@ -13,9 +18,6 @@
     "summary": "Get all the contracts for a carrier.",
     "description": "This endpoint retrieves contracts for the supplied carrier. Only active contracts with a verified status can be used to create shipments.",
     "parameters": [
-      {
-        "$ref": "#/components/parameters/path-carrier_id"
-      },
       {
         "name": "include",
         "in": "query",
