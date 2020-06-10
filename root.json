@@ -21,11 +21,17 @@
     "securitySchemes": {
       "OAuth2": {
         "type": "oauth2",
+        "description": "[\uD83D\uDD17 API documentation](https://docs.myparcel.com/api/authentication)",
+        "name": "Authorization",
+        "in": "header",
+        "scheme": "Bearer",
         "flows": {
           "clientCredentials": {
             "tokenUrl": "$AUTH_HOST",
             "scopes": {
+              "addresses.suggest": "Retrieve address suggestions.",
               "broker.member": "Retrieve broker related resources and create organizations for that broker.",
+              "contracts.manage": "Manage contract resources.",
               "organizations.manage": "Manage organization related resources on behalf of a single organization or all organizations belonging to a broker.",
               "shipments.manage": "Manage shipments on behalf of all shops belonging to an organization or broker.",
               "system.manage": "Manage all system related resources.",
@@ -36,6 +42,9 @@
         }
       }
     }
+  },
+  "tags": {
+    "$ref": "./specification/tags.json"
   },
   "externalDocs": {
     "url": "https://docs.myparcel.com",

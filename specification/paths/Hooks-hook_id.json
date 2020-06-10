@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-hook_id"
+    }
+  ],
   "get": {
     "tags": [
       "Hooks"
@@ -12,11 +17,6 @@
     ],
     "summary": "Get a hook by id.",
     "description": "This endpoint retrieves the hook with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-hook_id"
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the hook.",
@@ -62,11 +62,6 @@
     ],
     "summary": "Update a hook by id.",
     "description": "This endpoint updates the hook with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-hook_id"
-      }
-    ],
     "requestBody": {
       "description": "The hook object with attributes to be updated.",
       "required": true,
@@ -132,11 +127,6 @@
     ],
     "summary": "Delete a hook by id.",
     "description": "This endpoint deletes the hook with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-hook_id"
-      }
-    ],
     "responses": {
       "204": {
         "description": "The hook is deleted."

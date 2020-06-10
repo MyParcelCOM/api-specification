@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-carrier_id"
+    }
+  ],
   "get": {
     "tags": [
       "Carriers"
@@ -11,11 +16,6 @@
     ],
     "summary": "Get a carrier by id.",
     "description": "This endpoint retrieves the carrier with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-carrier_id"
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the carrier.",

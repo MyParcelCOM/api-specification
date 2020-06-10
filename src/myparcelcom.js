@@ -1,20 +1,63 @@
 (function () {
-  document.addEventListener('DOMContentLoaded', function () {
-    // Wait for the swagger.json to be processed.
-    var swaggerInterval = setInterval(function () {
-      var ready = document.getElementsByClassName('api-content')[0]
-      if (typeof ready !== 'undefined') {
-        clearInterval(swaggerInterval)
+  // Redoc options: https://github.com/Redocly/redoc#redoc-options-object
+  Redoc.init(
+    'dist/swagger.json',
+    {
+      expandSingleSchemaField: true,
+      hideDownloadButton: true,
+      jsonSampleExpandLevel: 'all',
+      lazyRendering: true
+    },
+    document.getElementById('redoc'),
+    function () {
+      requestAnimationFrame(function () {
+        // Open external links in a new tab.
+        var links = document.querySelectorAll('.api-content a')
 
-        // Open external information links in a new tab.
-        var links = document.querySelectorAll('.api-info a');
-
-        for (var i = 0, linksLength = links.length; i < linksLength; i++) {
-          if (links[i].href.substr(0, 4) === 'http' && links[i].hostname !== window.location.hostname) {
-            links[i].target = '_blank';
+        for (var l = 0; l < links.length; l++) {
+          if (links[l].href.substr(0, 4) === 'http' && links[l].hostname !== window.location.hostname) {
+            links[l].target = '_blank'
           }
         }
-      }
-    }, 137)
-  })
+
+        // Mark experimental endpoints.
+        var experimental = [
+          'HookLogs',
+          'Users',
+          'Webhooks'
+        ]
+        for (var x = 0; x < experimental.length; x++) {
+          var elements = document.querySelectorAll([
+            '[id^="tag/' + experimental[x] + '"]'
+          ].join(','))
+
+          for (var e = 0; e < elements.length; e++) {
+            elements[e].classList.add('experimental')
+          }
+        }
+
+        // Hide internal endpoints.
+        var internal = [
+          'CombinedFiles',
+          'Invitations',
+          'Invoices',
+          'PasswordResets',
+          'Payments',
+          'PaymentIdentities',
+          'ShipmentSurcharges',
+          'SystemMessages'
+        ]
+        for (var i = 0; i < internal.length; i++) {
+          var sections = document.querySelectorAll([
+            '[data-item-id="tag/' + internal[i] + '"]',
+            '[id^="tag/' + internal[i] + '"]'
+          ].join(','))
+
+          for (var s = 0; s < sections.length; s++) {
+            sections[s].remove()
+          }
+        }
+      })
+    }
+  )
 })()

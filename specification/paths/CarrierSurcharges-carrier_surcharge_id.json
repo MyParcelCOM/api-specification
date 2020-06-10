@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-carrier_surcharge_id"
+    }
+  ],
   "get": {
     "tags": [
       "CarrierSurcharges"
@@ -13,9 +18,6 @@
     "summary": "Get a carrier surcharge by id.",
     "description": "This endpoint retrieves the carrier surcharge with the supplied id.",
     "parameters": [
-      {
-        "$ref": "#/components/parameters/path-carrier_surcharge_id"
-      },
       {
         "name": "include",
         "in": "query",
@@ -79,11 +81,6 @@
     ],
     "summary": "Update a carrier surcharge by id.",
     "description": "This endpoint updates the carrier surcharge with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-carrier_surcharge_id"
-      }
-    ],
     "requestBody": {
       "description": "The carrier surcharge object with attributes to be updated.",
       "required": true,
@@ -159,11 +156,6 @@
     ],
     "summary": "Delete a carrier surcharge by id.",
     "description": "This endpoint deletes the carrier surcharge with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-carrier_surcharge_id"
-      }
-    ],
     "responses": {
       "204": {
         "description": "The carrier surcharge is deleted."

@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-integration_id"
+    }
+  ],
   "get": {
     "tags": [
       "Integrations"
@@ -11,11 +16,6 @@
     ],
     "summary": "Get an integration by id.",
     "description": "This endpoint retrieves the integration with the supplied id.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/path-integration_id"
-      }
-    ],
     "responses": {
       "200": {
         "description": "Retrieved the integration.",

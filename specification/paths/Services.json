@@ -32,7 +32,7 @@
         "deprecated": true,
         "name": "filter[region_from]",
         "in": "query",
-        "description": "`DEPRECATED` <s>Comma separated string of region ids to filter by.</s>",
+        "description": "<s>Comma separated string of region ids to filter by.</s>",
         "schema": {
           "type": "string"
         }
@@ -41,7 +41,7 @@
         "deprecated": true,
         "name": "filter[region_to]",
         "in": "query",
-        "description": "`DEPRECATED` <s>Comma separated string of region ids to filter by.</s>",
+        "description": "<s>Comma separated string of region ids to filter by.</s>",
         "schema": {
           "type": "string"
         }
@@ -58,7 +58,7 @@
         "deprecated": true,
         "name": "filter[address_from][region_code]",
         "in": "query",
-        "description": "`DEPRECATED` <s>Region code of origin location to filter by.</s>",
+        "description": "<s>Region code of origin location to filter by.</s>",
         "schema": {
           "$ref": "#/components/schemas/RegionCode"
         }
@@ -83,7 +83,7 @@
         "deprecated": true,
         "name": "filter[address_to][region_code]",
         "in": "query",
-        "description": "`DEPRECATED` <s>Region code of destination location to filter by.</s>",
+        "description": "<s>Region code of destination location to filter by.</s>",
         "schema": {
           "$ref": "#/components/schemas/RegionCode"
         }
