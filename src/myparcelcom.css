@@ -10,7 +10,7 @@ img[alt=logo] {
 
 /* avoid long regex to overlap the right area */
 .api-content > div > div:first-child > div:first-child {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .experimental h1:after,
