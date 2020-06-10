@@ -6,7 +6,6 @@
   },
   {
     "name": "Carriers",
-    "description": "okok",
     "externalDocs": {
       "url": "https://docs.myparcel.com/api/resources/carriers",
       "description": "\uD83D\uDD17 API documentation"
