@@ -4,6 +4,5 @@
     "string",
     "null"
   ],
-  "pattern": "^[A-Z]{2,3}$",
   "example": "ENG"
 }
