@@ -12,13 +12,37 @@
         "attributes": {
           "type": "object",
           "required": [
-            "name"
+            "name",
+            "style"
           ],
           "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
-              "example": "MyParcel.com - UK"
+              "example": "MyParcel.com"
+            },
+            "style": {
+              "type": "object",
+              "required": [
+                "primary_color",
+                "secondary_color",
+                "accent_color"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "primary_color": {
+                  "type": "string",
+                  "example": "#3a2efe"
+                },
+                "secondary_color": {
+                  "type": "string",
+                  "example": "#192832"
+                },
+                "accent_color": {
+                  "type": "string",
+                  "example": "#fdb915"
+                }
+              }
             }
           }
         },
