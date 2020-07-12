@@ -53,6 +53,16 @@
                 "nl-NL"
               ],
               "example": "en-GB"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "active",
+                "blocked"
+              ],
+              "example": "active",
+              "description": "Can only be updated when your access token contains the `users.manage` scope on the broker."
             }
           }
         }

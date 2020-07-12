@@ -11,7 +11,7 @@
     "security": [
       {
         "OAuth2": [
-          "experimental"
+          "users.manage"
         ]
       }
     ],
@@ -62,6 +62,7 @@
     "security": [
       {
         "OAuth2": [
+          "users.manage"
         ]
       }
     ],

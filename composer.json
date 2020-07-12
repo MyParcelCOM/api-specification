@@ -1,6 +1,6 @@
 {
   "name": "myparcelcom/api-specification",
   "description": "MyParcel.com API specification based on the OpenAPI Specification.",
-  "homepage": "https://docs.myparcel.com/api-specification",
+  "homepage": "https://api-specification.myparcel.com",
   "type": "library"
 }
