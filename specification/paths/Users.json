@@ -6,12 +6,22 @@
     "security": [
       {
         "OAuth2": [
-          "experimental"
+          "users.manage"
         ]
       }
     ],
     "summary": "Get all the users.",
     "description": "This endpoint retrieves users.",
+    "parameters": [
+      {
+        "name": "filter[search]",
+        "in": "query",
+        "description": "String of characters you want to look for in a users attributes. Available fields to look in are:<ul><li>`Username`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the users.",
