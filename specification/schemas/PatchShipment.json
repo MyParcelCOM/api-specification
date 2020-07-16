@@ -116,6 +116,21 @@
                   "type": "null"
                 }
               ]
+            },
+            "tags": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Any custom tag to give to a shipment. Used for reference purposes.",
+                    "example": "my-shipping-method"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
