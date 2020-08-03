@@ -185,6 +185,9 @@
   "MinimalRegion": {
     "$ref": "./schemas/MinimalRegion.json"
   },
+  "MinimalScope": {
+    "$ref": "./schemas/MinimalScope.json"
+  },
   "MinimalService": {
     "$ref": "./schemas/MinimalService.json"
   },
@@ -289,6 +292,9 @@
   },
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
+  },
+  "ScopesRelationship": {
+    "$ref": "./schemas/ScopesRelationship.json"
   },
   "Service": {
     "$ref": "./schemas/Service.json"

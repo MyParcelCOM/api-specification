@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MinimalScope"
+          },
+          {
+            "required": [
+              "meta"
+            ],
+            "properties": {
+              "meta": {
+                "type": "object",
+                "properties": {
+                  "resources": {
+                    "type": "array",
+                    "items": {
+                      "oneOf": [
+                        {
+                          "$ref": "#/components/schemas/MinimalBroker"
+                        },
+                        {
+                          "$ref": "#/components/schemas/MinimalOrganization"
+                        },
+                        {
+                          "$ref": "#/components/schemas/MinimalShop"
+                        }
+                      ]
+                    },
+                    "description": "An array of resources which this scope is given on."
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
