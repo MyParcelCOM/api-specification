@@ -185,6 +185,9 @@
   "/users/{user_id}": {
     "$ref": "./paths/Users-user_id.json"
   },
+  "/users/{user_id}/relationships/scopes": {
+    "$ref": "./paths/Users-user_id-relationships-scopes.json"
+  },
   "/import-service-rates": {
     "$ref": "./paths/ImportServiceRates.json"
   },
