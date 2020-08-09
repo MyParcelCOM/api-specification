@@ -293,6 +293,9 @@
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
   },
+  "Scope": {
+    "$ref": "./schemas/Scope.json"
+  },
   "ScopesRelationship": {
     "$ref": "./schemas/ScopesRelationship.json"
   },

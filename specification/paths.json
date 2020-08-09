@@ -110,6 +110,12 @@
   "/regions/{region_id}": {
     "$ref": "./paths/Regions-region_id.json"
   },
+  "/scopes": {
+    "$ref": "./paths/Scopes.json"
+  },
+  "/scopes/{scope_id}": {
+    "$ref": "./paths/Scopes-scope_id.json"
+  },
   "/services": {
     "$ref": "./paths/Services.json"
   },

@@ -1,0 +1,51 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-scope_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Scopes"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
+    "summary": "Get a scope by id.",
+    "description": "This endpoint retrieves the scope with the supplied id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the scope.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Scope"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
