@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalScope"
+    },
+    {
+      "required": [
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "slug",
+            "title",
+            "description"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "slug": {
+              "type": "string",
+              "example": "broker.member"
+            },
+            "title": {
+              "type": "string",
+              "example": "Member of broker"
+            },
+            "description": {
+              "type": "string",
+              "example": "Read broker details and create organizations for that broker."
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/scopes/2103ad2b-815e-48d3-bb77-cf8482666dd6"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

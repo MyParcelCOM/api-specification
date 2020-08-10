@@ -1,0 +1,9 @@
+{
+  "name": "scope_id",
+  "in": "path",
+  "description": "Id of the scope.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}
