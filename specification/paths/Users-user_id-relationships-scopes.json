@@ -1,0 +1,57 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-user_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Users"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "users.manage"
+        ]
+      }
+    ],
+    "summary": "Get the scope relationships for a user id.",
+    "description": "This endpoint retrieves the scope relationships for the supplied user id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the scope relationships.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ScopesRelationship"
+                },
+                {
+                  "required": [
+                    "links"
+                  ],
+                  "properties": {
+                    "links": {
+                      "type": "object",
+                      "required": [
+                        "self"
+                      ],
+                      "properties": {
+                        "self": {
+                          "type": "string",
+                          "format": "url",
+                          "example": "$API_HOST/users/6b341b44-f2f8-4c8b-b066-b8aa5c78ef6b/relationships/scopes"
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

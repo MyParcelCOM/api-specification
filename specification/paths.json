@@ -110,6 +110,12 @@
   "/regions/{region_id}": {
     "$ref": "./paths/Regions-region_id.json"
   },
+  "/scopes": {
+    "$ref": "./paths/Scopes.json"
+  },
+  "/scopes/{scope_id}": {
+    "$ref": "./paths/Scopes-scope_id.json"
+  },
   "/services": {
     "$ref": "./paths/Services.json"
   },
@@ -184,6 +190,9 @@
   },
   "/users/{user_id}": {
     "$ref": "./paths/Users-user_id.json"
+  },
+  "/users/{user_id}/relationships/scopes": {
+    "$ref": "./paths/Users-user_id-relationships-scopes.json"
   },
   "/import-service-rates": {
     "$ref": "./paths/ImportServiceRates.json"
