@@ -20,6 +20,14 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[action_type]",
+        "in": "query",
+        "description": "[Action type](https://docs.myparcel.com/api/resources/hooks/action/) to filter the hooks by.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
