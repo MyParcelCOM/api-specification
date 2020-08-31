@@ -53,5 +53,46 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Users"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "users.manage"
+        ]
+      }
+    ],
+    "summary": "Delete scope relationships from a user.",
+    "description": "This endpoint deletes scope relationships from the user with the supplied id.",
+    "requestBody": {
+      "description": "The scope relationships to be deleted from the user.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MinimalScope"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The scope relationships have been deleted."
+      }
+    }
   }
 }
