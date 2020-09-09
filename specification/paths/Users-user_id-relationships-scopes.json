@@ -68,7 +68,7 @@
     "summary": "Delete scope relationships from a user.",
     "description": "This endpoint deletes scope relationships from the user with the supplied id.",
     "requestBody": {
-      "description": "The scope relationships to be deleted from the user.",
+      "description": "The scope relationships to be deleted from the user. Optionally limited to the resource(s) in the supplied meta.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -81,7 +81,36 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/MinimalScope"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/MinimalScope"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "meta": {
+                          "type": "object",
+                          "properties": {
+                            "resources": {
+                              "type": "array",
+                              "items": {
+                                "oneOf": [
+                                  {
+                                    "$ref": "#/components/schemas/MinimalBroker"
+                                  },
+                                  {
+                                    "$ref": "#/components/schemas/MinimalOrganization"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
