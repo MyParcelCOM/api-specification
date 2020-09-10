@@ -53,5 +53,75 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Users"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "users.manage"
+        ]
+      }
+    ],
+    "summary": "Delete scope relationships from a user.",
+    "description": "This endpoint deletes scope relationships from the user with the supplied id.",
+    "requestBody": {
+      "description": "The scope relationships to be deleted from the user. Optionally limited to the resource(s) in the supplied meta.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/MinimalScope"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "meta": {
+                          "type": "object",
+                          "properties": {
+                            "resources": {
+                              "type": "array",
+                              "items": {
+                                "oneOf": [
+                                  {
+                                    "$ref": "#/components/schemas/MinimalBroker"
+                                  },
+                                  {
+                                    "$ref": "#/components/schemas/MinimalOrganization"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The scope relationships have been deleted."
+      }
+    }
   }
 }
