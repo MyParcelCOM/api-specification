@@ -2,5 +2,5 @@
   "readOnly": true,
   "type": "integer",
   "example": 1504801719,
-  "description": "Unix timestamp."
+  "description": "Unix timestamp (UTC)."
 }

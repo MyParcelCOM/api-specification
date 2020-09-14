@@ -41,7 +41,7 @@
                   "assigned_at": {
                     "type": "integer",
                     "example": 1504801719,
-                    "description": "Unix timestamp when the carrier registered this status."
+                    "description": "Unix timestamp (UTC) when the carrier registered this status."
                   }
                 }
               }
@@ -55,7 +55,7 @@
             "created_at": {
               "type": "integer",
               "example": 1504801719,
-              "description": "Unix timestamp when the status was created."
+              "description": "Unix timestamp (UTC) when the status was created."
             }
           }
         },
