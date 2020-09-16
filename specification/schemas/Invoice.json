@@ -26,7 +26,7 @@
                 "null"
               ],
               "example": 1517443200,
-              "description": "Start of the billing term this invoice is created for as a Unix timestamp."
+              "description": "Start of the billing term this invoice is created for as a Unix timestamp (UTC)."
             },
             "billing_term_end_at": {
               "type": [
@@ -34,7 +34,7 @@
                 "null"
               ],
               "example": 1519862399,
-              "description": "End of the billing term this invoice is created for as a Unix timestamp."
+              "description": "End of the billing term this invoice is created for as a Unix timestamp (UTC)."
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
