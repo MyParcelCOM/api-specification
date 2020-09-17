@@ -16,7 +16,7 @@
         ]
       }
     ],
-    "summary": "Add contract relationships to the organization.",
+    "summary": "Add contract relationships to an organization.",
     "description": "This endpoint adds contract relationships to the organization with the supplied id.",
     "requestBody": {
       "description": "The contract relationships to be added to the organization.",
