@@ -54,6 +54,36 @@
       }
     }
   },
+  "post": {
+    "tags": [
+      "Users"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "users.manage"
+        ]
+      }
+    ],
+    "summary": "Add scope relationships to a user.",
+    "description": "This endpoint adds scope relationships to the user with the supplied id.",
+    "requestBody": {
+      "description": "The scope relationships to be added to the user.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/ScopesRelationship"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The scope relationships have been added."
+      }
+    }
+  },
   "delete": {
     "tags": [
       "Users"
@@ -73,47 +103,7 @@
       "content": {
         "application/vnd.api+json": {
           "schema": {
-            "type": "object",
-            "required": [
-              "data"
-            ],
-            "properties": {
-              "data": {
-                "type": "array",
-                "items": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/MinimalScope"
-                    },
-                    {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "meta": {
-                          "type": "object",
-                          "properties": {
-                            "resources": {
-                              "type": "array",
-                              "items": {
-                                "oneOf": [
-                                  {
-                                    "$ref": "#/components/schemas/MinimalBroker"
-                                  },
-                                  {
-                                    "$ref": "#/components/schemas/MinimalOrganization"
-                                  }
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            }
+            "$ref": "#/components/schemas/ScopesRelationship"
           }
         }
       }
