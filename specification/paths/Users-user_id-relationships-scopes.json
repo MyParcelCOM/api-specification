@@ -98,7 +98,7 @@
     "summary": "Delete scope relationships from a user.",
     "description": "This endpoint deletes scope relationships from the user with the supplied id.",
     "requestBody": {
-      "description": "The scope relationships to be deleted from the user. Optionally limited to the resource(s) in the supplied meta.",
+      "description": "The scope relationships to be deleted from the user. Optionally limited to the resource(s) in the supplied meta.<br>Please note the `broker.member` scope cannot be deleted from a user (you can delete the user resource instead).",
       "required": true,
       "content": {
         "application/vnd.api+json": {
