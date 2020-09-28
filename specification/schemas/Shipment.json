@@ -159,7 +159,7 @@
             },
             "is_consolidation": {
               "type": "boolean",
-              "example": true,
+              "example": false,
               "description": "Indicates whether this shipment is a consolidation shipment."
             },
             "customs": {
