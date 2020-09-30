@@ -255,6 +255,30 @@
                 }
               ]
             },
+            "shipment_surcharges": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentSurchargeRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          },
+                          "type": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
             "liability_coverage": {
               "$ref": "#/components/schemas/LiabilityCoverageRelationship"
             },

@@ -335,6 +335,9 @@
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/ShipmentStatusRelationship.json"
   },
+  "ShipmentSurchargeRelationship": {
+    "$ref": "./schemas/ShipmentSurchargeRelationship.json"
+  },
   "ShipmentSurcharge": {
     "$ref": "./schemas/ShipmentSurcharge.json"
   },
