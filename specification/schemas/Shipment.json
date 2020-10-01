@@ -258,7 +258,7 @@
             "shipment_surcharges": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/ShipmentSurchargeRelationship"
+                  "$ref": "#/components/schemas/ShipmentSurchargesRelationship"
                 },
                 {
                   "properties": {
