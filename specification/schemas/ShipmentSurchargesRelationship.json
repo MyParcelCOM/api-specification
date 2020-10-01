@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MinimalShipmentSurcharge"
+          },
+          {
+            "required": [
+              "id"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
