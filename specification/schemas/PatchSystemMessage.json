@@ -36,21 +36,6 @@
                 "error"
               ],
               "example": "info"
-            },
-            "resource_type": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "shipments",
-                    "carriers"
-                  ],
-                  "example": "shipments"
-                },
-                {
-                  "type": "null"
-                }
-              ]
             }
           }
         }
