@@ -5,9 +5,6 @@
       "$ref": "#/components/schemas/MinimalSystemMessage"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
@@ -36,6 +33,17 @@
                 "error"
               ],
               "example": "info"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "broker"
+          ],
+          "properties": {
+            "broker": {
+              "$ref": "#/components/schemas/BrokerRelationship"
             }
           }
         },

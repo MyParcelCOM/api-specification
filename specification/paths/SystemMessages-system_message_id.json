@@ -35,10 +35,13 @@
                       "$ref": "#/components/schemas/SystemMessage"
                     },
                     {
-                      "type": "object",
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships"
+                      ],
                       "properties": {
                         "attributes": {
-                          "type": "object",
                           "required": [
                             "level",
                             "content"
@@ -81,7 +84,16 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchSystemMessage"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/SystemMessage"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ]
+                  }
+                ]
               }
             }
           }
@@ -106,10 +118,13 @@
                       "$ref": "#/components/schemas/SystemMessage"
                     },
                     {
-                      "type": "object",
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships"
+                      ],
                       "properties": {
                         "attributes": {
-                          "type": "object",
                           "required": [
                             "level",
                             "content"

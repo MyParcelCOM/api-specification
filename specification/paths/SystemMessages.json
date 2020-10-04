@@ -44,10 +44,13 @@
                         "$ref": "#/components/schemas/SystemMessage"
                       },
                       {
-                        "type": "object",
+                        "required": [
+                          "id",
+                          "attributes",
+                          "relationships"
+                        ],
                         "properties": {
                           "attributes": {
-                            "type": "object",
                             "required": [
                               "level",
                               "content"
@@ -130,13 +133,15 @@
                     "$ref": "#/components/schemas/SystemMessage"
                   },
                   {
-                    "type": "object",
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
                       },
                       "attributes": {
-                        "type": "object",
                         "required": [
                           "level",
                           "content"
@@ -169,10 +174,13 @@
                       "$ref": "#/components/schemas/SystemMessage"
                     },
                     {
-                      "type": "object",
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships"
+                      ],
                       "properties": {
                         "attributes": {
-                          "type": "object",
                           "required": [
                             "level",
                             "content"
