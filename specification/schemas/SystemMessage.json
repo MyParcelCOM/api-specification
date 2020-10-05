@@ -5,9 +5,6 @@
       "$ref": "#/components/schemas/MinimalSystemMessage"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
@@ -36,21 +33,17 @@
                 "error"
               ],
               "example": "info"
-            },
-            "resource_type": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "shipments",
-                    "carriers"
-                  ],
-                  "example": "shipments"
-                },
-                {
-                  "type": "null"
-                }
-              ]
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "broker"
+          ],
+          "properties": {
+            "broker": {
+              "$ref": "#/components/schemas/BrokerRelationship"
             }
           }
         },

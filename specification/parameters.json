@@ -23,6 +23,9 @@
   "path-country_code": {
     "$ref": "./parameters/path-country_code.json"
   },
+  "path-enterprise_id": {
+    "$ref": "./parameters/path-enterprise_id.json"
+  },
   "path-file_id": {
     "$ref": "./parameters/path-file_id.json"
   },

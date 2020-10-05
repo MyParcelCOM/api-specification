@@ -38,6 +38,7 @@
 
         // Hide internal endpoints.
         var internal = [
+          'Enterprises',
           'CombinedFiles',
           'Invitations',
           'Invoices',
