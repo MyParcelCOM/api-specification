@@ -24,6 +24,9 @@
                     "items": {
                       "oneOf": [
                         {
+                          "$ref": "#/components/schemas/MinimalEnterprise"
+                        },
+                        {
                           "$ref": "#/components/schemas/MinimalBroker"
                         },
                         {
