@@ -16,15 +16,20 @@
       "minLength": 1,
       "example": "OnePlus X"
     },
+    "image_url": {
+      "type": "string",
+      "example": "https://myparcel.com/product.png",
+      "description": "A link to an image of the item."
+    },
     "item_value": {
       "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
         {
           "required": [
             "amount"
           ]
-        },
-        {
-          "$ref": "#/components/schemas/Price"
         }
       ]
     },
