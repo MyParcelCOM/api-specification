@@ -13,6 +13,8 @@
           "type": "object",
           "required": [
             "name",
+            "logo_url",
+            "favicon_url",
             "style"
           ],
           "additionalProperties": false,
@@ -20,6 +22,26 @@
             "name": {
               "type": "string",
               "example": "MyParcel.com"
+            },
+            "logo_url": {
+              "type": "string",
+              "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
+              "description": "Logo image URL"
+            },
+            "favicon_url": {
+              "type": "string",
+              "example": "https://cdn.myparcel.com/images/favicon.png",
+              "description": "Favicon image URL"
+            },
+            "support_url": {
+              "type": "string",
+              "example": "https://help.myparcel.com/support/home",
+              "description": "URL to knowledge base or FAQ"
+            },
+            "contact_url": {
+              "type": "string",
+              "example": "mailto:info@myparcel.com",
+              "description": "URL to create a new support ticket or mailto: link with email address"
             },
             "style": {
               "type": "object",

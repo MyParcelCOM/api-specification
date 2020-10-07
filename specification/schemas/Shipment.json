@@ -159,7 +159,7 @@
             },
             "is_consolidation": {
               "type": "boolean",
-              "example": true,
+              "example": false,
               "description": "Indicates whether this shipment is a consolidation shipment."
             },
             "customs": {
@@ -235,6 +235,30 @@
               "allOf": [
                 {
                   "$ref": "#/components/schemas/HookLogsRelationship"
+                },
+                {
+                  "properties": {
+                    "data": {
+                      "readOnly": true,
+                      "items": {
+                        "properties": {
+                          "id": {
+                            "readOnly": true
+                          },
+                          "type": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "shipment_surcharges": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentSurchargesRelationship"
                 },
                 {
                   "properties": {

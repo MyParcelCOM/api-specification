@@ -1,0 +1,52 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-enterprise_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Enterprises"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "experimental"
+        ]
+      }
+    ],
+    "summary": "Get an enterprise by id.",
+    "description": "This endpoint retrieves the enterprise with the supplied id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the enterprise.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Enterprise"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

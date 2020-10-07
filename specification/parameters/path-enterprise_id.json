@@ -1,0 +1,9 @@
+{
+  "name": "enterprise_id",
+  "in": "path",
+  "description": "Id of the enterprise.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}
