@@ -23,6 +23,14 @@
         }
       },
       {
+        "name": "filter[organization]",
+        "in": "query",
+        "description": "Comma seperated string of organization ids to filter the shops by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "include",
         "in": "query",
         "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`organization`</li></ul>",
