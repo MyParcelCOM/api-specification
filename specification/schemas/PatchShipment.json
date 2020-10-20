@@ -138,7 +138,14 @@
           "type": "object",
           "properties": {
             "contract": {
-              "$ref": "#/components/schemas/ContractRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ContractRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "consolidation_shipment": {
               "$ref": "#/components/schemas/ShipmentRelationship"
@@ -154,7 +161,14 @@
               ]
             },
             "service": {
-              "$ref": "#/components/schemas/ServiceRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ServiceRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "service_options": {
               "oneOf": [
