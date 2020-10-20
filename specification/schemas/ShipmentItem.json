@@ -17,7 +17,10 @@
       "example": "OnePlus X"
     },
     "image_url": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "https://myparcel.com/product.png",
       "description": "A link to an image of the item."
     },
