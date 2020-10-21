@@ -5,9 +5,6 @@
       "$ref": "#/components/schemas/MinimalUser"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
@@ -22,14 +19,20 @@
               "example": "Holmes"
             },
             "company": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "Holmes Investigations"
             },
             "email": {
               "$ref": "#/components/schemas/Email"
             },
             "phone_number": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "+31 234 567 890"
             },
             "locale": {
@@ -43,7 +46,6 @@
               "example": "en-GB"
             },
             "status": {
-              "readOnly": true,
               "type": "string",
               "enum": [
                 "pending",

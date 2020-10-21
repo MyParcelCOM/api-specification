@@ -44,13 +44,19 @@
                         "$ref": "#/components/schemas/User"
                       },
                       {
+                        "required": [
+                          "id",
+                          "attributes"
+                        ],
                         "properties": {
                           "attributes": {
-                            "type": "object",
                             "required": [
                               "first_name",
                               "last_name",
-                              "email"
+                              "email",
+                              "locale",
+                              "status",
+                              "created_at"
                             ]
                           }
                         }
@@ -124,17 +130,24 @@
                     "$ref": "#/components/schemas/User"
                   },
                   {
+                    "required": [
+                      "attributes"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
                       },
                       "attributes": {
-                        "type": "object",
                         "required": [
                           "first_name",
                           "last_name",
                           "email"
-                        ]
+                        ],
+                        "properties": {
+                          "status": {
+                            "readOnly": true
+                          }
+                        }
                       }
                     }
                   }

@@ -257,9 +257,6 @@
   "PatchShop": {
     "$ref": "./schemas/PatchShop.json"
   },
-  "PatchUser": {
-    "$ref": "./schemas/PatchUser.json"
-  },
   "Payment": {
     "$ref": "./schemas/Payment.json"
   },
