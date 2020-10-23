@@ -1,20 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalShop"
+      "$ref": "#/components/schemas/ShopResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "name"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
@@ -22,32 +14,10 @@
               "example": "MyParcel.com"
             },
             "return_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "sender_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "website": {
               "type": [

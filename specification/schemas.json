@@ -206,9 +206,6 @@
   "MinimalShipmentSurcharge": {
     "$ref": "./schemas/MinimalShipmentSurcharge.json"
   },
-  "MinimalShop": {
-    "$ref": "./schemas/MinimalShop.json"
-  },
   "MinimalStatus": {
     "$ref": "./schemas/MinimalStatus.json"
   },
@@ -253,9 +250,6 @@
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"
-  },
-  "PatchShop": {
-    "$ref": "./schemas/PatchShop.json"
   },
   "Payment": {
     "$ref": "./schemas/Payment.json"
@@ -340,6 +334,12 @@
   },
   "ShopRelationship": {
     "$ref": "./schemas/ShopRelationship.json"
+  },
+  "ShopResource": {
+    "$ref": "./schemas/ShopResource.json"
+  },
+  "ShopResponse": {
+    "$ref": "./schemas/ShopResponse.json"
   },
   "Status": {
     "$ref": "./schemas/Status.json"

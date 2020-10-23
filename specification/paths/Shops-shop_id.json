@@ -11,8 +11,8 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage",
-          "organizations.manage"
+          "organizations.manage",
+          "shipments.manage"
         ]
       }
     ],
@@ -40,25 +40,7 @@
               ],
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shop"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "name",
-                            "created_at"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShopResponse"
                 }
               }
             }
@@ -93,7 +75,21 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchShop"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shop"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "relationships": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -113,25 +109,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shop"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "name",
-                            "created_at"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShopResponse"
                 }
               }
             }

@@ -1,0 +1,39 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Shop"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "created_at"
+          ],
+          "properties": {
+            "return_address": {
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ]
+            },
+            "sender_address": {
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
