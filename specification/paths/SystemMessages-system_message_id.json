@@ -30,26 +30,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/SystemMessage"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "level",
-                            "content"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/SystemMessageResponse"
                 }
               }
             }
@@ -113,26 +94,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/SystemMessage"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "level",
-                            "content"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/SystemMessageResponse"
                 }
               }
             }

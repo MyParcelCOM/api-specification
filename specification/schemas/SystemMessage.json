@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalSystemMessage"
+      "$ref": "#/components/schemas/SystemMessageResource"
     },
     {
       "properties": {

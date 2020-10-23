@@ -209,12 +209,6 @@
   "MinimalStatus": {
     "$ref": "./schemas/MinimalStatus.json"
   },
-  "MinimalSystemMessage": {
-    "$ref": "./schemas/MinimalSystemMessage.json"
-  },
-  "MinimalUser": {
-    "$ref": "./schemas/MinimalUser.json"
-  },
   "Organization": {
     "$ref": "./schemas/Organization.json"
   },
@@ -350,6 +344,12 @@
   "SystemMessage": {
     "$ref": "./schemas/SystemMessage.json"
   },
+  "SystemMessageResource": {
+    "$ref": "./schemas/SystemMessageResource.json"
+  },
+  "SystemMessageResponse": {
+    "$ref": "./schemas/SystemMessageResponse.json"
+  },
   "Time": {
     "$ref": "./schemas/Time.json"
   },
@@ -359,11 +359,17 @@
   "User": {
     "$ref": "./schemas/User.json"
   },
-  "Uuid": {
-    "$ref": "./schemas/Uuid.json"
-  },
   "UserRelationship": {
     "$ref": "./schemas/UserRelationship.json"
+  },
+  "UserResource": {
+    "$ref": "./schemas/UserResource.json"
+  },
+  "UserResponse": {
+    "$ref": "./schemas/UserResponse.json"
+  },
+  "Uuid": {
+    "$ref": "./schemas/Uuid.json"
   },
   "Analytics": {
     "$ref": "./schemas/Analytics.json"

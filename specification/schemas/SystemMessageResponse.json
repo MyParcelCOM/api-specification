@@ -1,0 +1,22 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/SystemMessage"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "level",
+            "content"
+          ]
+        }
+      }
+    }
+  ]
+}

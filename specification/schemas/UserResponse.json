@@ -1,0 +1,25 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/User"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "first_name",
+            "last_name",
+            "email",
+            "locale",
+            "status",
+            "created_at"
+          ]
+        }
+      }
+    }
+  ]
+}

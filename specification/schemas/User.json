@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalUser"
+      "$ref": "#/components/schemas/UserResource"
     },
     {
       "properties": {

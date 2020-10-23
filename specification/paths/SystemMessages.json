@@ -39,26 +39,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/SystemMessage"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "attributes",
-                          "relationships"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "required": [
-                              "level",
-                              "content"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/SystemMessageResponse"
                   }
                 },
                 "meta": {
@@ -130,22 +111,12 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/SystemMessage"
+                    "$ref": "#/components/schemas/SystemMessageResponse"
                   },
                   {
-                    "required": [
-                      "attributes",
-                      "relationships"
-                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
-                      },
-                      "attributes": {
-                        "required": [
-                          "level",
-                          "content"
-                        ]
                       }
                     }
                   }
@@ -169,26 +140,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/SystemMessage"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "level",
-                            "content"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/SystemMessageResponse"
                 }
               }
             }
