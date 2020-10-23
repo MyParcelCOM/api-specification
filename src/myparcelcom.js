@@ -5,8 +5,10 @@
     {
       expandSingleSchemaField: true,
       hideDownloadButton: true,
+      hideSingleRequestSampleTab: true,
       jsonSampleExpandLevel: 'all',
-      lazyRendering: true
+      lazyRendering: true,
+      nativeScrollbars: true
     },
     document.getElementById('redoc'),
     function () {
