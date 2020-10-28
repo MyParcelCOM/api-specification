@@ -12,7 +12,7 @@
           "properties": {
             "content": {
               "type": "string",
-              "example": "Information regarding shipments"
+              "example": "Houston, we've had a problem."
             },
             "country_code": {
               "oneOf": [
@@ -44,21 +44,6 @@
           "properties": {
             "broker": {
               "$ref": "#/components/schemas/BrokerRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/system-messages/e6bb8463-2551-469b-94cc-6d861e364621"
             }
           }
         }
