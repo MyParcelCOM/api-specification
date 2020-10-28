@@ -127,12 +127,37 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ShopResponse"
+                    "$ref": "#/components/schemas/Shop"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name"
+                        ],
+                        "properties": {
+                          "return_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          }
+                        }
                       }
                     }
                   }

@@ -111,12 +111,22 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/SystemMessageResponse"
+                    "$ref": "#/components/schemas/SystemMessage"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "level",
+                          "content"
+                        ]
                       }
                     }
                   }
