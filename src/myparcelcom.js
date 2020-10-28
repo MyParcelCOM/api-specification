@@ -60,6 +60,28 @@
             sections[s].remove()
           }
         }
+
+        // Fix ReDoc bug https://github.com/Redocly/redoc/issues/1238
+        // 1. Find all POST examples
+        document.querySelectorAll('[id$="post"] h3').forEach(function (element) {
+          // 2. Filter on Request examples
+          if (element.innerText.includes('Request samples')) {
+            // 3. Find all properties
+            element.nextSibling.querySelectorAll('.property.token.string').forEach(function (element) {
+              // 4. Find the "attributes" property
+              if (element.innerText.includes('"attributes"')) {
+                // 5. Find the preceding "id" property
+                var id = element.parentNode.parentNode.previousSibling
+                if (id.innerText.includes('"id"')) {
+                  // 6. Hide it, this filter makes sure we do not hide "id" properties of RPC endpoints or relationships
+                  id.style.display = 'none'
+                }
+              }
+            })
+            // 7. Hide the copy button, because this still copies a POST example including the "id".
+            element.nextSibling.querySelector('button').style.display = 'none'
+          }
+        })
       })
     }
   )
