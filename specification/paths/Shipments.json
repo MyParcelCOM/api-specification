@@ -264,7 +264,6 @@
               "required": [
                 "data"
               ],
-              "additionalProperties": false,
               "properties": {
                 "data": {
                   "allOf": [
