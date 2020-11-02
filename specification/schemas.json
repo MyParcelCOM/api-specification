@@ -206,9 +206,6 @@
   "MinimalShipmentSurcharge": {
     "$ref": "./schemas/MinimalShipmentSurcharge.json"
   },
-  "MinimalStatus": {
-    "$ref": "./schemas/MinimalStatus.json"
-  },
   "Organization": {
     "$ref": "./schemas/Organization.json"
   },
@@ -337,6 +334,9 @@
   },
   "Status": {
     "$ref": "./schemas/Status.json"
+  },
+  "StatusResource": {
+    "$ref": "./schemas/StatusResource.json"
   },
   "StatusRelationship": {
     "$ref": "./schemas/StatusRelationship.json"

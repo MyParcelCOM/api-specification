@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalStatus"
+      "$ref": "#/components/schemas/StatusResource"
     },
     {
       "required": [
@@ -28,26 +28,28 @@
                 "payment-pending",
                 "payment-rejected",
                 "payment-succeeded",
-                "shipment-received-by-carrier",
-                "shipment-with-courier",
                 "shipment-at-sorting",
-                "shipment-created-without-tracking",
                 "shipment-concept",
+                "shipment-created-without-tracking",
                 "shipment-delivered",
                 "shipment-failed",
+                "shipment-on-the-way-to-hub",
                 "shipment-processing",
+                "shipment-received-by-carrier",
                 "shipment-registered",
                 "shipment-registration-failed",
-                "shipment-returned-to-sender"
+                "shipment-returned-to-sender",
+                "shipment-voided",
+                "shipment-with-courier",
               ],
               "example": "shipment-delivered"
             },
             "resource_type": {
               "type": "string",
               "enum": [
-                "shipments",
                 "invoices",
-                "payments"
+                "payments",
+                "shipments"
               ],
               "example": "shipments",
               "description": "Resource type this status can be applied to."
@@ -55,10 +57,10 @@
             "level": {
               "type": "string",
               "enum": [
-                "pending",
-                "success",
                 "failed",
-                "in-progress"
+                "in-progress",
+                "pending",
+                "success"
               ],
               "example": "success"
             },
