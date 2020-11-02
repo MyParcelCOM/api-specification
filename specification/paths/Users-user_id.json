@@ -29,23 +29,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/User"
-                    },
-                    {
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "first_name",
-                            "last_name",
-                            "email"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/UserResponse"
                 }
               }
             }
@@ -79,7 +63,26 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchUser"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/User"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "properties": {
+                          "status": {
+                            "example": "blocked",
+                            "description": "Can only be updated when your access token contains the `users.manage` scope on the broker."
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -99,23 +102,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/User"
-                    },
-                    {
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "first_name",
-                            "last_name",
-                            "email"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/UserResponse"
                 }
               }
             }

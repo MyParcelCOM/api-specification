@@ -2,12 +2,9 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalUser"
+      "$ref": "#/components/schemas/UserResource"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
@@ -22,14 +19,20 @@
               "example": "Holmes"
             },
             "company": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "Holmes Investigations"
             },
             "email": {
               "$ref": "#/components/schemas/Email"
             },
             "phone_number": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "+31 234 567 890"
             },
             "locale": {
@@ -43,7 +46,6 @@
               "example": "en-GB"
             },
             "status": {
-              "readOnly": true,
               "type": "string",
               "enum": [
                 "pending",
@@ -54,21 +56,6 @@
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/users/6b341b44-f2f8-4c8b-b066-b8aa5c78ef6b"
             }
           }
         }
