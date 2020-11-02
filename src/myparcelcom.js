@@ -3,12 +3,66 @@
   Redoc.init(
     'dist/swagger.json',
     {
+      disableSearch: true,
       expandSingleSchemaField: true,
       hideDownloadButton: true,
       hideSingleRequestSampleTab: true,
       jsonSampleExpandLevel: 'all',
       lazyRendering: true,
-      nativeScrollbars: true
+      nativeScrollbars: true,
+      theme: {
+        colors: {
+          primary: {
+            main: '#3a2efe'
+          },
+          success: {
+            main: '#4caf50'
+          },
+          warning: {
+            main: '#fb8c00'
+          },
+          error: {
+            main: '#ff5252'
+          },
+          text: {
+            primary: '#080c0c'
+          },
+          responses: {
+            info: {
+              color: '#2196f3'
+            }
+          },
+          http: {
+            get: '#4caf50',
+            post: '#2196f3',
+            patch: '#fb8c00',
+            delete: '#ff5252'
+          },
+        },
+        typography: {
+          fontSize: '16px',
+          headings: {
+            fontFamily: 'Gilroy, helvetica neue, sans-serif'
+          },
+          links: {
+            visited: '#3a2efe',
+            hover: '#3a2efe'
+          }
+        },
+        sidebar: {
+          width: '300px',
+          backgroundColor: '#fafafa'
+        },
+        logo: {
+          gutter: '20px 0'
+        },
+        rightPanel: {
+          backgroundColor: '#080c0c'
+        },
+        codeBlock: {
+          backgroundColor: '#202323'
+        },
+      }
     },
     document.getElementById('redoc'),
     function () {

@@ -10,7 +10,7 @@
       }
     ],
     "summary": "Get all available carriers for your API client.",
-    "description": "This endpoint retrieves all carriers available to your API client. The availability of carriers depends on the broker your client is connected to. For example the broker `MyParcel.com` will only return carriers active in the `United Kingdom`.",
+    "description": "This endpoint retrieves all carriers available to your API client. The availability of carriers depends on the broker your client is connected to.",
     "responses": {
       "200": {
         "description": "Retrieved the carriers.",
