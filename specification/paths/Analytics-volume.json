@@ -14,6 +14,21 @@
     "description": "This endpoint retrieves the amount of shipments delivered organized by carrier over time.",
     "parameters": [
       {
+        "name": "group_by",
+        "in": "path",
+        "description": "Field by which to group data series by. Set `combined` to ignore grouping.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "example": "carrier",
+          "enum": [
+            "carrier",
+            "service",
+            "combined"
+          ]
+        }
+      },
+      {
         "name": "interval",
         "in": "path",
         "description": "Interval by which to arrange the dataset.",
