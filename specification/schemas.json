@@ -206,17 +206,8 @@
   "MinimalShipmentSurcharge": {
     "$ref": "./schemas/MinimalShipmentSurcharge.json"
   },
-  "MinimalShop": {
-    "$ref": "./schemas/MinimalShop.json"
-  },
   "MinimalStatus": {
     "$ref": "./schemas/MinimalStatus.json"
-  },
-  "MinimalSystemMessage": {
-    "$ref": "./schemas/MinimalSystemMessage.json"
-  },
-  "MinimalUser": {
-    "$ref": "./schemas/MinimalUser.json"
   },
   "Organization": {
     "$ref": "./schemas/Organization.json"
@@ -253,12 +244,6 @@
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"
-  },
-  "PatchShop": {
-    "$ref": "./schemas/PatchShop.json"
-  },
-  "PatchUser": {
-    "$ref": "./schemas/PatchUser.json"
   },
   "Payment": {
     "$ref": "./schemas/Payment.json"
@@ -344,6 +329,12 @@
   "ShopRelationship": {
     "$ref": "./schemas/ShopRelationship.json"
   },
+  "ShopResource": {
+    "$ref": "./schemas/ShopResource.json"
+  },
+  "ShopResponse": {
+    "$ref": "./schemas/ShopResponse.json"
+  },
   "Status": {
     "$ref": "./schemas/Status.json"
   },
@@ -352,6 +343,12 @@
   },
   "SystemMessage": {
     "$ref": "./schemas/SystemMessage.json"
+  },
+  "SystemMessageResource": {
+    "$ref": "./schemas/SystemMessageResource.json"
+  },
+  "SystemMessageResponse": {
+    "$ref": "./schemas/SystemMessageResponse.json"
   },
   "Time": {
     "$ref": "./schemas/Time.json"
@@ -362,11 +359,17 @@
   "User": {
     "$ref": "./schemas/User.json"
   },
-  "Uuid": {
-    "$ref": "./schemas/Uuid.json"
-  },
   "UserRelationship": {
     "$ref": "./schemas/UserRelationship.json"
+  },
+  "UserResource": {
+    "$ref": "./schemas/UserResource.json"
+  },
+  "UserResponse": {
+    "$ref": "./schemas/UserResponse.json"
+  },
+  "Uuid": {
+    "$ref": "./schemas/Uuid.json"
   },
   "Analytics": {
     "$ref": "./schemas/Analytics.json"

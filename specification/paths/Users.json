@@ -39,23 +39,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/User"
-                      },
-                      {
-                        "properties": {
-                          "attributes": {
-                            "type": "object",
-                            "required": [
-                              "first_name",
-                              "last_name",
-                              "email"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/UserResponse"
                   }
                 },
                 "meta": {
@@ -124,17 +108,24 @@
                     "$ref": "#/components/schemas/User"
                   },
                   {
+                    "required": [
+                      "attributes"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
                       },
                       "attributes": {
-                        "type": "object",
                         "required": [
                           "first_name",
                           "last_name",
                           "email"
-                        ]
+                        ],
+                        "properties": {
+                          "status": {
+                            "readOnly": true
+                          }
+                        }
                       }
                     }
                   }

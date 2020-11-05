@@ -3,9 +3,9 @@
   "required": [
     "id",
     "type",
-    "links",
     "attributes",
-    "relationships"
+    "relationships",
+    "links"
   ],
   "properties": {
     "type": {

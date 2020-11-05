@@ -6,8 +6,8 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage",
-          "organizations.manage"
+          "organizations.manage",
+          "shipments.manage"
         ]
       }
     ],
@@ -25,7 +25,7 @@
       {
         "name": "filter[organization]",
         "in": "query",
-        "description": "Comma seperated string of organization ids to filter the shops by.",
+        "description": "Comma separated string of organization ids to filter the shops by.",
         "schema": {
           "type": "string"
         }
@@ -55,25 +55,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Shop"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "required": [
-                              "name",
-                              "created_at"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ShopResponse"
                   }
                 },
                 "meta": {
@@ -148,9 +130,34 @@
                     "$ref": "#/components/schemas/Shop"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name"
+                        ],
+                        "properties": {
+                          "return_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          }
+                        }
                       }
                     }
                   }
@@ -174,25 +181,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shop"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "name",
-                            "created_at"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShopResponse"
                 }
               }
             }

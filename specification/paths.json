@@ -217,5 +217,8 @@
   },
   "/analytics/on-time-delivery/{interval}": {
     "$ref": "./paths/Analytics-on-time-delivery.json"
+  },
+  "/analytics/volume/{group_by}/{interval}": {
+    "$ref": "./paths/Analytics-volume.json"
   }
 }

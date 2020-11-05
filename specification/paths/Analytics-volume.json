@@ -1,0 +1,162 @@
+{
+  "get": {
+    "tags": [
+      "Analytics"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get analytics report for volumes per carrier.",
+    "description": "This endpoint retrieves the amount of shipments delivered organized by carrier over time.",
+    "parameters": [
+      {
+        "name": "group_by",
+        "in": "path",
+        "description": "Field by which to group data series by. Set `combined` to ignore grouping.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "example": "carrier",
+          "enum": [
+            "carrier",
+            "service",
+            "combined"
+          ]
+        }
+      },
+      {
+        "name": "interval",
+        "in": "path",
+        "description": "Interval by which to arrange the dataset.",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "example": "month",
+          "enum": [
+            "month"
+          ]
+        }
+      },
+      {
+        "name": "filter[search]",
+        "in": "query",
+        "description": "String of characters you want to look for in a shipment's attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD). <strong>Deprecated</strong> use `filter[date_from]` and `filter[date_to]` instead.</li><li>`description`</li><li>`customer_reference`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[description]",
+        "in": "query",
+        "description": "Search for a shipment by its description attribute. This is a strict search, meaning that only if the search string matches the `description` attribute of a shipment completely, will the shipment be returned.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[customer_reference]",
+        "in": "query",
+        "description": "Search for a shipment by its customer reference attribute. This is a strict search, meaning that only if the search string matches the `customer_reference` attribute of a shipment completely, will the shipment be returned.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[date_from]",
+        "in": "query",
+        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[date_to]",
+        "in": "query",
+        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at <= this date will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[shop]",
+        "in": "query",
+        "description": "Comma separated string of shop ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[organization]",
+        "in": "query",
+        "description": "Comma separated string of organization ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[carrier]",
+        "in": "query",
+        "description": "Comma separated string of carrier ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[current_status_code]",
+        "in": "query",
+        "description": "Comma separated string of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[service_code]",
+        "in": "query",
+        "description": "Comma separated string of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[recipient_address][country_code]",
+        "in": "query",
+        "description": "Two letter ISO 3166-1 alpha-2 country code of the recipient address to filter the shipments by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[sender_address][country_code]",
+        "in": "query",
+        "description": "Two letter ISO 3166-1 alpha-2 country code of the sender address to filter the shipments by.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the analytics data in timeseries.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Analytics"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -33,7 +33,7 @@
                           "$ref": "#/components/schemas/MinimalOrganization"
                         },
                         {
-                          "$ref": "#/components/schemas/MinimalShop"
+                          "$ref": "#/components/schemas/ShopResource"
                         }
                       ]
                     },
