@@ -1,0 +1,125 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReportResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "filters",
+            "name"
+          ],
+          "properties": {
+            "filters": {
+              "type": "object",
+              "required": [
+                "date_from",
+                "date_to"
+              ],
+              "properties": {
+                "date_from": {
+                  "type": "string",
+                  "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the report.",
+                  "example": "2020-01-01"
+                },
+                "date_to": {
+                  "type": "string",
+                  "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at <= this date will be in the response.",
+                  "example": "2020-03-31"
+                },
+                "search": {
+                  "type": "string",
+                  "description": "String of characters you want to look for in shipment attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD). <strong>Deprecated</strong> use `filter[date_from]` and `filter[date_to]` instead.</li><li>`description`</li><li>`customer_reference`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
+                  "example": ""
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Filter shipments by their description attribute. This is a strict search, meaning that only if the search string matches the `description` attribute of a shipment completely, will the shipment be included."
+                },
+                "customer_reference": {
+                  "type": "string",
+                  "description": "Filter shipments by their customer reference attribute. This is a strict search, meaning that only if the search string matches the `customer_reference` attribute of a shipment completely, will the shipment be included."
+                },
+                "shops": {
+                  "type": "array",
+                  "description": "Array of shop ids to filter included shipments by.",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "35eddf50-1d84-47a3-8479-6bfda729cd99"
+                  }
+                },
+                "organizations": {
+                  "type": "array",
+                  "description": "Array of organization ids to filter included shipments by.",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                  }
+                },
+                "carriers": {
+                  "type": "array",
+                  "description": "Array of carrier ids to filter included shipments by.",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "be7f6752-34e0-49a1-a832-bcc209450ea9"
+                  }
+                },
+                "current_status_code": {
+                  "type": "array",
+                  "description": "Comma separated string of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the report.",
+                  "items": {
+                    "type": "string",
+                    "example": "shipment-delivered"
+                  }
+                },
+                "service_code": {
+                  "type": "array",
+                  "description": "Comma separated string of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the report.",
+                  "items": {
+                    "type": "string",
+                    "example": "dpd-next-day"
+                  }
+                },
+                "recipient_country_code": {
+                  "type": "string",
+                  "description": "Two letter ISO 3166-1 alpha-2 country code of the recipient address to filter the shipments by.",
+                  "example": "GB"
+                },
+                "sender_country_code": {
+                  "type": "string",
+                  "description": "Two letter ISO 3166-1 alpha-2 country code of the sender address to filter the shipments by.",
+                  "example": "GB"
+                }
+              }
+            },
+            "name": {
+              "type": "string",
+              "example": "2020 Q1 UK shipment report"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

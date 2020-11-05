@@ -275,6 +275,12 @@
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
   },
+  "Report": {
+    "$ref": "./schemas/Report.json"
+  },
+  "ReportResource": {
+    "$ref": "./schemas/ReportResource.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
