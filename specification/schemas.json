@@ -197,9 +197,6 @@
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
   },
-  "MinimalShipment": {
-    "$ref": "./schemas/MinimalShipment.json"
-  },
   "MinimalShipmentStatus": {
     "$ref": "./schemas/MinimalShipmentStatus.json"
   },
@@ -235,9 +232,6 @@
   },
   "PatchServiceRate": {
     "$ref": "./schemas/PatchServiceRate.json"
-  },
-  "PatchShipment": {
-    "$ref": "./schemas/PatchShipment.json"
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"
@@ -308,6 +302,12 @@
   "ShipmentRelationship": {
     "$ref": "./schemas/ShipmentRelationship.json"
   },
+  "ShipmentResource": {
+    "$ref": "./schemas/ShipmentResource.json"
+  },
+  "ShipmentResponse": {
+    "$ref": "./schemas/ShipmentResponse.json"
+  },
   "ShipmentStatus": {
     "$ref": "./schemas/ShipmentStatus.json"
   },
@@ -335,11 +335,14 @@
   "Status": {
     "$ref": "./schemas/Status.json"
   },
+  "StatusRelationship": {
+    "$ref": "./schemas/StatusRelationship.json"
+  },
   "StatusResource": {
     "$ref": "./schemas/StatusResource.json"
   },
-  "StatusRelationship": {
-    "$ref": "./schemas/StatusRelationship.json"
+  "StatusResponse": {
+    "$ref": "./schemas/StatusResponse.json"
   },
   "SystemMessage": {
     "$ref": "./schemas/SystemMessage.json"

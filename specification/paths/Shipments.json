@@ -134,36 +134,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Shipment"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "required": [
-                              "recipient_address",
-                              "return_address",
-                              "sender_address",
-                              "physical_properties",
-                              "sync_active",
-                              "created_at",
-                              "updated_at"
-                            ]
-                          },
-                          "relationships": {
-                            "required": [
-                              "shop",
-                              "shipment_status"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ShipmentResponse"
                   }
                 },
                 "meta": {
@@ -233,7 +204,83 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/Shipment"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "recipient_address",
+                          "return_address",
+                          "sender_address",
+                          "physical_properties"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "return_address": {
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "pickup_location": {
+                            "required": [
+                              "code",
+                              "address"
+                            ]
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          },
+                          "items": {
+                            "items": {
+                              "required": [
+                                "description",
+                                "quantity"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "required": [
+                          "shop"
+                        ]
+                      }
+                    }
+                  }
+                ]
               },
               "meta":  {
                 "type": "object",
@@ -266,17 +313,7 @@
               ],
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shipment"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShipmentResponse"
                 }
               }
             }

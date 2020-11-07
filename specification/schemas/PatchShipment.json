@@ -2,7 +2,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalShipment"
+      "$ref": "#/components/schemas/ShipmentResource"
     },
     {
       "required": [

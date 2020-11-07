@@ -1,0 +1,39 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Status"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "code",
+            "resource_type",
+            "name",
+            "description",
+            "level"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/statuses/5c868557-0827-4d21-a7f4-9820f01769f4"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

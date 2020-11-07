@@ -11,3 +11,7 @@ img[alt=logo] {
 .experimental h2:after {
   content: " ⚠";
 }
+
+#redoc .security-details p {
+  display: inline;
+}

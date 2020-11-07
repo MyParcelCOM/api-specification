@@ -30,7 +30,7 @@
                   "items": {
                     "allOf": [
                       {
-                        "$ref": "#/components/schemas/Status"
+                        "$ref": "#/components/schemas/StatusResponse"
                       },
                       {
                         "required": [

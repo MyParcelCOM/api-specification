@@ -49,11 +49,11 @@
     },
     "relationships": {
       "type": "object",
-      "additionalProperties": false,
       "required": [
         "hook",
         "resource"
       ],
+      "additionalProperties": false,
       "properties": {
         "hook": {
           "$ref": "#/components/schemas/HookRelationship"
