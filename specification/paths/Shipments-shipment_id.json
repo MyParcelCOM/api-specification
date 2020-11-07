@@ -89,7 +89,7 @@
                   }
                 ]
               },
-              "meta":  {
+              "meta": {
                 "type": "object",
                 "properties": {
                   "label_mime_type": {

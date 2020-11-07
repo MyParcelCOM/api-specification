@@ -29,7 +29,7 @@
                 "shipment-registration-failed",
                 "shipment-returned-to-sender",
                 "shipment-voided",
-                "shipment-with-courier",
+                "shipment-with-courier"
               ],
               "example": "shipment-delivered"
             },

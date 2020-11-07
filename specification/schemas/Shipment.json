@@ -265,12 +265,12 @@
               ]
             },
             "parent": {
-              "allOf": [
+              "oneOf": [
                 {
                   "$ref": "#/components/schemas/ShipmentRelationship"
                 },
                 {
-                  "readOnly": true
+                  "type": "null"
                 }
               ]
             },
