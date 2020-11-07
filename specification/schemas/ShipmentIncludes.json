@@ -1,0 +1,46 @@
+{
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "#/components/schemas/Carrier"
+      },
+      {
+        "$ref": "#/components/schemas/Contract"
+      },
+      {
+        "$ref": "#/components/schemas/File"
+      },
+      {
+        "$ref": "#/components/schemas/HookLog"
+      },
+      {
+        "$ref": "#/components/schemas/LiabilityCoverage"
+      },
+      {
+        "$ref": "#/components/schemas/Organization"
+      },
+      {
+        "$ref": "#/components/schemas/Service"
+      },
+      {
+        "$ref": "#/components/schemas/ServiceOption"
+      },
+      {
+        "$ref": "#/components/schemas/Shipment"
+      },
+      {
+        "$ref": "#/components/schemas/ShipmentStatus"
+      },
+      {
+        "$ref": "#/components/schemas/ShipmentSurcharge"
+      },
+      {
+        "$ref": "#/components/schemas/Shop"
+      },
+      {
+        "$ref": "#/components/schemas/Status"
+      }
+    ]
+  }
+}

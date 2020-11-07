@@ -33,8 +33,6 @@
             },
             "return_address": {
               "required": [
-                "first_name",
-                "last_name",
                 "street_1",
                 "city",
                 "country_code"
@@ -42,8 +40,6 @@
             },
             "sender_address": {
               "required": [
-                "first_name",
-                "last_name",
                 "street_1",
                 "city",
                 "country_code"

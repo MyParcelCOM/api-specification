@@ -296,6 +296,9 @@
   "ShipmentFilesRelationship": {
     "$ref": "./schemas/ShipmentFilesRelationship.json"
   },
+  "ShipmentIncludes": {
+    "$ref": "./schemas/ShipmentIncludes.json"
+  },
   "ShipmentItem": {
     "$ref": "./schemas/ShipmentItem.json"
   },
@@ -322,6 +325,9 @@
   },
   "Shop": {
     "$ref": "./schemas/Shop.json"
+  },
+  "ShopIncludes": {
+    "$ref": "./schemas/ShopIncludes.json"
   },
   "ShopRelationship": {
     "$ref": "./schemas/ShopRelationship.json"

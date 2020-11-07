@@ -140,6 +140,9 @@
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
                 },
+                "included": {
+                  "$ref": "#/components/schemas/ShipmentIncludes"
+                },
                 "links": {
                   "type": "object",
                   "required": [
@@ -236,8 +239,6 @@
                           },
                           "return_address": {
                             "required": [
-                              "first_name",
-                              "last_name",
                               "street_1",
                               "city",
                               "country_code"
@@ -245,8 +246,6 @@
                           },
                           "sender_address": {
                             "required": [
-                              "first_name",
-                              "last_name",
                               "street_1",
                               "city",
                               "country_code"

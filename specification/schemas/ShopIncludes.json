@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "#/components/schemas/Organization"
+      }
+    ]
+  }
+}

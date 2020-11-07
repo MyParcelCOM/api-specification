@@ -41,6 +41,9 @@
               "properties": {
                 "data": {
                   "$ref": "#/components/schemas/ShipmentResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ShipmentIncludes"
                 }
               }
             }

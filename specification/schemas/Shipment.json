@@ -130,10 +130,17 @@
               }
             },
             "items": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/BaseShipmentItem"
-              }
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BaseShipmentItem"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "is_consolidation": {
               "type": "boolean",
@@ -141,7 +148,14 @@
               "description": "Indicates whether this shipment is a consolidation shipment."
             },
             "customs": {
-              "$ref": "#/components/schemas/BaseCustoms"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BaseCustoms"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "register_at": {
               "oneOf": [
@@ -171,12 +185,19 @@
               "$ref": "#/components/schemas/Timestamp"
             },
             "tags": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "description": "Any custom tag to give to a shipment. Used for reference purposes.",
-                "example": "my-shipping-method"
-              }
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Any custom tag to give to a shipment. Used for reference purposes.",
+                    "example": "my-shipping-method"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
@@ -264,7 +285,14 @@
               ]
             },
             "service_options": {
-              "$ref": "#/components/schemas/ServiceOptionsRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "shipment_status": {
               "allOf": [
