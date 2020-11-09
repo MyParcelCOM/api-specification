@@ -48,7 +48,7 @@
     },
     "responses": {
       "201": {
-        "description": "The report is queued for creation.",
+        "description": "The report is created and the file will be available for download shortly.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -59,7 +59,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShopResponse"
+                  "$ref": "#/components/schemas/ReportResponse"
                 }
               }
             }

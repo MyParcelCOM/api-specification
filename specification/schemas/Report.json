@@ -13,6 +13,9 @@
             "name"
           ],
           "properties": {
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
             "filters": {
               "type": "object",
               "required": [
@@ -33,15 +36,17 @@
                 "search": {
                   "type": "string",
                   "description": "String of characters you want to look for in shipment attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD). <strong>Deprecated</strong> use `filter[date_from]` and `filter[date_to]` instead.</li><li>`description`</li><li>`customer_reference`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
-                  "example": ""
+                  "example": "some search string"
                 },
                 "description": {
                   "type": "string",
-                  "description": "Filter shipments by their description attribute. This is a strict search, meaning that only if the search string matches the `description` attribute of a shipment completely, will the shipment be included."
+                  "description": "Filter shipments by their description attribute. This is a strict search, meaning that only if the search string matches the `description` attribute of a shipment completely, will the shipment be included.",
+                  "example": "Detective kit"
                 },
                 "customer_reference": {
                   "type": "string",
-                  "description": "Filter shipments by their customer reference attribute. This is a strict search, meaning that only if the search string matches the `customer_reference` attribute of a shipment completely, will the shipment be included."
+                  "description": "Filter shipments by their customer reference attribute. This is a strict search, meaning that only if the search string matches the `customer_reference` attribute of a shipment completely, will the shipment be included.",
+                  "example": "Order nr #1254232"
                 },
                 "shops": {
                   "type": "array",
@@ -89,15 +94,31 @@
                     "example": "dpd-next-day"
                   }
                 },
-                "recipient_country_code": {
-                  "type": "string",
-                  "description": "Two letter ISO 3166-1 alpha-2 country code of the recipient address to filter the shipments by.",
-                  "example": "GB"
+                "recipient_address": {
+                  "type": "object",
+                  "required": [
+                    "country_code"
+                  ],
+                  "properties": {
+                    "country_code": {
+                      "type": "string",
+                      "description": "Two letter ISO 3166-1 alpha-2 country code of the recipient address to filter the shipments by.",
+                      "example": "GB"
+                    }
+                  }
                 },
-                "sender_country_code": {
-                  "type": "string",
-                  "description": "Two letter ISO 3166-1 alpha-2 country code of the sender address to filter the shipments by.",
-                  "example": "GB"
+                "sender_address": {
+                  "type": "object",
+                  "required": [
+                    "country_code"
+                  ],
+                  "properties": {
+                    "country_code": {
+                      "type": "string",
+                      "description": "Two letter ISO 3166-1 alpha-2 country code of the sender address to filter the shipments by.",
+                      "example": "GB"
+                    }
+                  }
                 }
               }
             },
@@ -109,11 +130,15 @@
         },
         "relationships": {
           "type": "object",
+          "readOnly": true,
           "required": [
             "status"
           ],
           "additionalProperties": false,
           "properties": {
+            "file": {
+              "$ref": "#/components/schemas/FileRelationship"
+            },
             "status": {
               "$ref": "#/components/schemas/StatusRelationship"
             }

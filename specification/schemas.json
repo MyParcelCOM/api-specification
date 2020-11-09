@@ -281,6 +281,9 @@
   "ReportResource": {
     "$ref": "./schemas/ReportResource.json"
   },
+  "ReportResponse": {
+    "$ref": "./schemas/ReportResponse.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
