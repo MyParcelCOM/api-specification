@@ -37,38 +37,13 @@
               "required": [
                 "data"
               ],
+              "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shipment"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "recipient_address",
-                            "return_address",
-                            "sender_address",
-                            "physical_properties",
-                            "sync_active",
-                            "created_at",
-                            "updated_at"
-                          ]
-                        },
-                        "relationships": {
-                          "required": [
-                            "shop",
-                            "shipment_status"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShipmentResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ShipmentIncludes"
                 }
               }
             }
@@ -103,9 +78,18 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchShipment"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ]
+                  }
+                ]
               },
-              "meta":  {
+              "meta": {
                 "type": "object",
                 "properties": {
                   "label_mime_type": {
@@ -137,25 +121,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shipment"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "relationships": {
-                          "required": [
-                            "shop",
-                            "shipment_status"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShipmentResponse"
                 }
               }
             }

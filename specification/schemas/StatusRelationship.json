@@ -8,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalStatus"
+          "$ref": "#/components/schemas/StatusResource"
         },
         {
           "required": [

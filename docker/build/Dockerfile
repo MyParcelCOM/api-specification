@@ -1,4 +1,4 @@
-FROM node:12 as build
+FROM node:14 as build
 
 ARG API_HOST
 ARG AUTH_HOST
@@ -17,7 +17,7 @@ RUN apt-get update \
     && API_HOST=${API_HOST} AUTH_HOST=${AUTH_HOST} envsubst "\${API_HOST} \${AUTH_HOST}" < \
         dist/swagger.template.json > dist/swagger.json
 
-FROM redocly/redoc:v2.0.0-rc.45
+FROM redocly/redoc:v2.0.0-rc.46
 
 ENV SPEC_URL="/dist/swagger.json"
 ENV PAGE_FAVICON="favicon-16x16.png"

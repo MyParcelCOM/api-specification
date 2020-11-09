@@ -44,14 +44,7 @@
           "additionalProperties": false,
           "properties": {
             "shipment": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ShipmentRelationship"
-                },
-                {
-                  "readOnly": false
-                }
-              ]
+              "$ref": "#/components/schemas/ShipmentRelationship"
             }
           }
         },

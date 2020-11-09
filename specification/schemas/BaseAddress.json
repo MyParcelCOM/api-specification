@@ -28,7 +28,10 @@
       "example": "B"
     },
     "postal_code": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "NW1 6XE"
     },
     "city": {
@@ -68,7 +71,10 @@
       "example": "s.holmes@holmesinvestigations.com"
     },
     "phone_number": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "example": "+31 234 567 890"
     }
   }

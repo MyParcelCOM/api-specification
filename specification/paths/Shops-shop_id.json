@@ -41,6 +41,9 @@
               "properties": {
                 "data": {
                   "$ref": "#/components/schemas/ShopResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ShopIncludes"
                 }
               }
             }

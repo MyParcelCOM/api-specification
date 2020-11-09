@@ -1,5 +1,4 @@
 {
-  "readOnly": true,
   "type": "object",
   "required": [
     "data"
@@ -9,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalShipment"
+          "$ref": "#/components/schemas/ShipmentResource"
         },
         {
           "required": [

@@ -1,13 +1,11 @@
 {
-  "readOnly": true,
   "type": "object",
-  "additionalProperties": false,
   "required": [
     "data"
   ],
+  "additionalProperties": false,
   "properties": {
     "data": {
-      "readOnly": true,
       "type": "array",
       "items": {
         "allOf": [
