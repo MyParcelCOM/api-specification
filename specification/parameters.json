@@ -65,6 +65,9 @@
   "path-region_id": {
     "$ref": "./parameters/path-region_id.json"
   },
+  "path-report_id": {
+    "$ref": "./parameters/path-report_id.json"
+  },
   "path-scope_id": {
     "$ref": "./parameters/path-scope_id.json"
   },

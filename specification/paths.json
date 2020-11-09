@@ -116,6 +116,9 @@
   "/reports": {
     "$ref": "./paths/Reports.json"
   },
+  "/reports/{report_id}": {
+    "$ref": "./paths/Reports-report_id.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },

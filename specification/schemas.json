@@ -278,6 +278,9 @@
   "Report": {
     "$ref": "./schemas/Report.json"
   },
+  "ReportIncludes": {
+    "$ref": "./schemas/ReportIncludes.json"
+  },
   "ReportResource": {
     "$ref": "./schemas/ReportResource.json"
   },
