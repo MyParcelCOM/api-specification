@@ -50,5 +50,27 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Reports"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a report by id.",
+    "description": "This endpoint deletes the report with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The report is deleted."
+      },
+      "423": {
+        "description": "The report could not be deleted."
+      }
+    }
   }
 }
