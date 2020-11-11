@@ -1,7 +1,7 @@
 {
   "post": {
     "tags": [
-      "RPC"
+      "Shipments"
     ],
     "security": [
       {
@@ -66,7 +66,18 @@
                       "required": [
                         "id",
                         "links"
-                      ]
+                      ],
+                      "properties": {
+                        "relationships": {
+                          "required": [
+                            "contract",
+                            "files",
+                            "service",
+                            "shipment_status",
+                            "shop"
+                          ]
+                        }
+                      }
                     }
                   ]
                 }
