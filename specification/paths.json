@@ -113,6 +113,9 @@
   "/regions/{region_id}": {
     "$ref": "./paths/Regions-region_id.json"
   },
+  "/register-shipment": {
+    "$ref": "./paths/RegisterShipment.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },

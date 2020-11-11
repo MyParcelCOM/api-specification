@@ -1,0 +1,83 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new shipment which is immediately registered with the carrier.",
+    "description": "This endpoint creates a new shipment with the posted data, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "requestBody": {
+      "description": "The shipment object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/Shipment"
+              },
+              "meta":  {
+                "type": "object",
+                "properties": {
+                  "label_mime_type": {
+                    "type": "string",
+                    "example": "application/pdf"
+                  },
+                  "service_code": {
+                    "type": "string",
+                    "example": "carrier-parcel-next-day",
+                    "description": "If an applicable service is found, it will be set as relationship. If no contract relationship is defined, the cheapest contract for this service will be applied."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The shipment is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Shipment"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "422": {
+        "description": "The shipment could not be created because the carrier did not accept the supplied information."
+      }
+    }
+  }
+}
