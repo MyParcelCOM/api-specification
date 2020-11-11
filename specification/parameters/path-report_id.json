@@ -1,0 +1,9 @@
+{
+  "name": "report_id",
+  "in": "path",
+  "description": "Id of the report.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}

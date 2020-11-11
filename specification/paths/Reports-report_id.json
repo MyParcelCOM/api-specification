@@ -1,0 +1,76 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-report_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Reports"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get a report by id.",
+    "description": "This endpoint retrieves the report with the supplied id.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`status`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the report.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReportResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ReportIncludes"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Reports"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a report by id.",
+    "description": "This endpoint deletes the report with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The report is deleted."
+      },
+      "423": {
+        "description": "The report could not be deleted."
+      }
+    }
+  }
+}
