@@ -101,6 +101,9 @@
   "path-user_id": {
     "$ref": "./parameters/path-user_id.json"
   },
+  "query-city": {
+    "$ref": "./parameters/query-city.json"
+  },
   "query-street": {
     "$ref": "./parameters/query-street.json"
   },
