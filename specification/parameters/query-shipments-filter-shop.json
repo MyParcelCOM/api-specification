@@ -1,0 +1,8 @@
+{
+  "name": "filter[shop]",
+  "in": "query",
+  "description": "Comma separated string of shop ids to filter by.",
+  "schema": {
+    "type": "string"
+  }
+}

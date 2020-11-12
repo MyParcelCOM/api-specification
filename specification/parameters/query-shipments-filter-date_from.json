@@ -1,0 +1,9 @@
+{
+  "deprecated": true,
+  "name": "filter[date_from]",
+  "in": "query",
+  "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the response. <strong>Deprecated</strong> use `filter[created_at][date_from]` instead.",
+  "schema": {
+    "type": "string"
+  }
+}

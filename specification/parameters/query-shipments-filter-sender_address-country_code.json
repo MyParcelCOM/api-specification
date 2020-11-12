@@ -1,0 +1,8 @@
+{
+  "name": "filter[sender_address][country_code]",
+  "in": "query",
+  "description": "Two letter ISO 3166-1 alpha-2 country code of the sender address to filter the shipments by.",
+  "schema": {
+    "type": "string"
+  }
+}

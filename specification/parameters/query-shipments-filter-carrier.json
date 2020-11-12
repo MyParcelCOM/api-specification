@@ -1,0 +1,8 @@
+{
+  "name": "filter[carrier]",
+  "in": "query",
+  "description": "Comma separated string of carrier ids to filter by.",
+  "schema": {
+    "type": "string"
+  }
+}
