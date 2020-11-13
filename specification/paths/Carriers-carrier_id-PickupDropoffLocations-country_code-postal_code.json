@@ -21,7 +21,7 @@
       }
     ],
     "summary": "Get all the locations from a carrier.",
-    "description": "This endpoint retrieves pick-up and drop-off locations offered by the supplied carrier. Locations of the type `pick-up` can be used with services offering this as their `delivery_method`. Locations of the type `drop-off` can be used with services offering this as their `handover_method`.",
+    "description": "This endpoint retrieves pick-up and drop-off locations offered by the supplied carrier.<ul><li>Locations of the type `pick-up` can be used with services offering this as their `delivery_method`.</li><li>Locations of the type `drop-off` can be used with services offering this as their `handover_method`.</li></ul>",
     "parameters": [
       {
         "$ref": "#/components/parameters/query-street"
@@ -30,9 +30,12 @@
         "$ref": "#/components/parameters/query-street_number"
       },
       {
+        "$ref": "#/components/parameters/query-city"
+      },
+      {
         "name": "filter[categories]",
         "in": "query",
-        "description": "Comma separated list of what kind of locations to return. Possible values are:<ul><li>`pick-up`</li><li>`drop-off`</li></ul>",
+        "description": "Comma separated list of location categories to return. Possible options are:<ul><li>`pick-up`</li><li>`drop-off`</li></ul>",
         "schema": {
           "type": "string"
         }

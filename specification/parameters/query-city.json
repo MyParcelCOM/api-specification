@@ -1,0 +1,8 @@
+{
+  "name": "city",
+  "in": "query",
+  "description": "City of the address to search nearby.",
+  "schema": {
+    "type": "string"
+  }
+}

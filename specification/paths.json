@@ -113,9 +113,6 @@
   "/regions/{region_id}": {
     "$ref": "./paths/Regions-region_id.json"
   },
-  "/registered-shipments": {
-    "$ref": "./paths/RegisteredShipments.json"
-  },
   "/reports": {
     "$ref": "./paths/Reports.json"
   },
@@ -148,6 +145,9 @@
   },
   "/shipments": {
     "$ref": "./paths/Shipments.json"
+  },
+  "/registered-shipments": {
+    "$ref": "./paths/RegisteredShipments.json"
   },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
