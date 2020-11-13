@@ -38,7 +38,7 @@
           }
         }
 
-        // Hide internal endpoints.
+        // Hide internal endpoints on production (mark as experimental on other environments).
         var internal = [
           'Enterprises',
           'CombinedFiles',
@@ -58,7 +58,11 @@
           ].join(','))
 
           for (var s = 0; s < sections.length; s++) {
-            sections[s].remove()
+            if (window.location.hostname === 'api-specification.myparcel.com') {
+              sections[s].remove()
+            } else {
+              sections[s].classList.add('experimental')
+            }
           }
         }
 
@@ -80,7 +84,10 @@
               }
             })
             // 7. Hide the copy button, because this still copies a POST example including the "id".
-            element.nextSibling.querySelector('button').style.display = 'none'
+            var copyButton = element.nextSibling.querySelector('button')
+            if (copyButton) {
+              copyButton.style.display = 'none'
+            }
           }
         })
       })
