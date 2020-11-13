@@ -14,108 +14,55 @@
     "description": "This endpoint retrieves all shipments available to your API client.",
     "parameters": [
       {
-        "name": "include",
-        "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`consolidation_shipment`</li><li>`contract`</li><li>`files`</li><li>`hook_logs`</li><li>`liability_coverage`</li><li>`service`</li><li>`service.carrier`</li><li>`service_options`</li><li>`shipment_status`</li><li>`shipment_status.status`</li><li>`shop`</li><li>`shop.organization`</li><li>`shipment_surcharges`</li></ul>",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-include"
       },
       {
-        "name": "filter[search]",
-        "in": "query",
-        "description": "String of characters you want to look for in a shipment's attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD). <strong>Deprecated</strong> use `filter[date_from]` and `filter[date_to]` instead.</li><li>`description`</li><li>`customer_reference`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-search"
       },
       {
-        "name": "filter[description]",
-        "in": "query",
-        "description": "Search for a shipment by its description attribute. This is a strict search, meaning that only if the search string matches the `description` attribute of a shipment completely, will the shipment be returned.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-description"
       },
       {
-        "name": "filter[customer_reference]",
-        "in": "query",
-        "description": "Search for a shipment by its customer reference attribute. This is a strict search, meaning that only if the search string matches the `customer_reference` attribute of a shipment completely, will the shipment be returned.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-customer_reference"
       },
       {
-        "name": "filter[date_from]",
-        "in": "query",
-        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the response.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-date_from"
       },
       {
-        "name": "filter[date_to]",
-        "in": "query",
-        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at <= this date will be in the response.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-date_to"
       },
       {
-        "name": "filter[shop]",
-        "in": "query",
-        "description": "Comma separated string of shop ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-created_at-date_from"
       },
       {
-        "name": "filter[organization]",
-        "in": "query",
-        "description": "Comma separated string of organization ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-created_at-date_to"
       },
       {
-        "name": "filter[carrier]",
-        "in": "query",
-        "description": "Comma separated string of carrier ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-register_at-date_from"
       },
       {
-        "name": "filter[current_status_code]",
-        "in": "query",
-        "description": "Comma separated string of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the response.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-register_at-date_to"
       },
       {
-        "name": "filter[service_code]",
-        "in": "query",
-        "description": "Comma separated string of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the response.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-shop"
       },
       {
-        "name": "filter[recipient_address][country_code]",
-        "in": "query",
-        "description": "Two letter ISO 3166-1 alpha-2 country code of the recipient address to filter the shipments by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-organization"
       },
       {
-        "name": "filter[sender_address][country_code]",
-        "in": "query",
-        "description": "Two letter ISO 3166-1 alpha-2 country code of the sender address to filter the shipments by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-filter-carrier"
+      },
+      {
+        "$ref": "#/components/parameters/query-shipments-filter-current_status_code"
+      },
+      {
+        "$ref": "#/components/parameters/query-shipments-filter-service_code"
+      },
+      {
+        "$ref": "#/components/parameters/query-shipments-filter-recipient_address-country_code"
+      },
+      {
+        "$ref": "#/components/parameters/query-shipments-filter-sender_address-country_code"
       }
     ],
     "responses": {

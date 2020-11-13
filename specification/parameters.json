@@ -106,5 +106,56 @@
   },
   "query-street_number": {
     "$ref": "./parameters/query-street_number.json"
+  },
+  "query-shipments-include": {
+    "$ref": "./parameters/query-shipments-include.json"
+  },
+  "query-shipments-filter-search": {
+    "$ref": "./parameters/query-shipments-filter-search.json"
+  },
+  "query-shipments-filter-description": {
+    "$ref": "./parameters/query-shipments-filter-description.json"
+  },
+  "query-shipments-filter-customer_reference": {
+    "$ref": "./parameters/query-shipments-filter-customer_reference.json"
+  },
+  "query-shipments-filter-date_from": {
+    "$ref": "./parameters/query-shipments-filter-date_from.json"
+  },
+  "query-shipments-filter-date_to": {
+    "$ref": "./parameters/query-shipments-filter-date_to.json"
+  },
+  "query-shipments-filter-created_at-date_from": {
+    "$ref": "./parameters/query-shipments-filter-created_at-date_from.json"
+  },
+  "query-shipments-filter-created_at-date_to": {
+    "$ref": "./parameters/query-shipments-filter-created_at-date_to.json"
+  },
+  "query-shipments-filter-register_at-date_from": {
+    "$ref": "./parameters/query-shipments-filter-register_at-date_from.json"
+  },
+  "query-shipments-filter-register_at-date_to": {
+    "$ref": "./parameters/query-shipments-filter-register_at-date_to.json"
+  },
+  "query-shipments-filter-shop": {
+    "$ref": "./parameters/query-shipments-filter-shop.json"
+  },
+  "query-shipments-filter-organization": {
+    "$ref": "./parameters/query-shipments-filter-organization.json"
+  },
+  "query-shipments-filter-carrier": {
+    "$ref": "./parameters/query-shipments-filter-carrier.json"
+  },
+  "query-shipments-filter-current_status_code": {
+    "$ref": "./parameters/query-shipments-filter-current_status_code.json"
+  },
+  "query-shipments-filter-service_code": {
+    "$ref": "./parameters/query-shipments-filter-service_code.json"
+  },
+  "query-shipments-filter-recipient_address-country_code": {
+    "$ref": "./parameters/query-shipments-filter-recipient_address-country_code.json"
+  },
+  "query-shipments-filter-sender_address-country_code": {
+    "$ref": "./parameters/query-shipments-filter-sender_address-country_code.json"
   }
 }
