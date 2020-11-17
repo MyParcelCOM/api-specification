@@ -17,6 +17,10 @@
                 "payment-pending",
                 "payment-rejected",
                 "payment-succeeded",
+                "report-failed",
+                "report-finished",
+                "report-in-progress",
+                "report-queued",
                 "shipment-at-sorting",
                 "shipment-concept",
                 "shipment-created-without-tracking",
@@ -38,6 +42,7 @@
               "enum": [
                 "invoices",
                 "payments",
+                "reports",
                 "shipments"
               ],
               "example": "shipments",
