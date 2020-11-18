@@ -4,16 +4,14 @@ body {
 }
 
 img[alt=logo] {
-  width: 220px !important;
-  margin: 20px 0 !important;
-}
-
-/* avoid long regex to overlap the right area */
-.api-content > div > div:first-child > div:first-child {
-  overflow-x: auto;
+  width: 200px;
 }
 
 .experimental h1:after,
 .experimental h2:after {
   content: " ⚠";
+}
+
+#redoc .security-details p {
+  display: inline;
 }

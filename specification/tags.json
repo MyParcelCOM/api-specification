@@ -111,6 +111,13 @@
     }
   },
   {
+    "name": "Reports",
+    "externalDocs": {
+      "url": "https://docs.myparcel.com/api/resources/reports",
+      "description": "\uD83D\uDD17 API documentation"
+    }
+  },
+  {
     "name": "Scopes",
     "externalDocs": {
     }

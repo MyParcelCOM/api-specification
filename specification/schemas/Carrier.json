@@ -31,11 +31,11 @@
             "credentials_format": {
               "type": "object",
               "example": {
-                "additionalProperties": false,
                 "required": [
                   "api_user",
                   "api_password"
                 ],
+                "additionalProperties": false,
                 "properties": {
                   "api_user": {
                     "type": "string"

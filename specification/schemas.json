@@ -197,17 +197,11 @@
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
   },
-  "MinimalShipment": {
-    "$ref": "./schemas/MinimalShipment.json"
-  },
   "MinimalShipmentStatus": {
     "$ref": "./schemas/MinimalShipmentStatus.json"
   },
   "MinimalShipmentSurcharge": {
     "$ref": "./schemas/MinimalShipmentSurcharge.json"
-  },
-  "MinimalStatus": {
-    "$ref": "./schemas/MinimalStatus.json"
   },
   "Organization": {
     "$ref": "./schemas/Organization.json"
@@ -238,9 +232,6 @@
   },
   "PatchServiceRate": {
     "$ref": "./schemas/PatchServiceRate.json"
-  },
-  "PatchShipment": {
-    "$ref": "./schemas/PatchShipment.json"
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"
@@ -275,6 +266,18 @@
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
   },
+  "Report": {
+    "$ref": "./schemas/Report.json"
+  },
+  "ReportIncludes": {
+    "$ref": "./schemas/ReportIncludes.json"
+  },
+  "ReportResource": {
+    "$ref": "./schemas/ReportResource.json"
+  },
+  "ReportResponse": {
+    "$ref": "./schemas/ReportResponse.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
@@ -305,11 +308,20 @@
   "ShipmentFilesRelationship": {
     "$ref": "./schemas/ShipmentFilesRelationship.json"
   },
+  "ShipmentIncludes": {
+    "$ref": "./schemas/ShipmentIncludes.json"
+  },
   "ShipmentItem": {
     "$ref": "./schemas/ShipmentItem.json"
   },
   "ShipmentRelationship": {
     "$ref": "./schemas/ShipmentRelationship.json"
+  },
+  "ShipmentResource": {
+    "$ref": "./schemas/ShipmentResource.json"
+  },
+  "ShipmentResponse": {
+    "$ref": "./schemas/ShipmentResponse.json"
   },
   "ShipmentStatus": {
     "$ref": "./schemas/ShipmentStatus.json"
@@ -326,6 +338,9 @@
   "Shop": {
     "$ref": "./schemas/Shop.json"
   },
+  "ShopIncludes": {
+    "$ref": "./schemas/ShopIncludes.json"
+  },
   "ShopRelationship": {
     "$ref": "./schemas/ShopRelationship.json"
   },
@@ -340,6 +355,12 @@
   },
   "StatusRelationship": {
     "$ref": "./schemas/StatusRelationship.json"
+  },
+  "StatusResource": {
+    "$ref": "./schemas/StatusResource.json"
+  },
+  "StatusResponse": {
+    "$ref": "./schemas/StatusResponse.json"
   },
   "SystemMessage": {
     "$ref": "./schemas/SystemMessage.json"

@@ -1,68 +1,50 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalShipment"
+      "$ref": "#/components/schemas/ShipmentResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
-        "id": {
-          "readOnly": true
-        },
         "attributes": {
           "type": "object",
-          "required": [
-            "recipient_address",
-            "return_address",
-            "sender_address",
-            "physical_properties"
-          ],
           "additionalProperties": false,
           "properties": {
             "recipient_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Address"
-                },
-                {
-                  "required": [
-                    "first_name",
-                    "last_name"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "recipient_tax_number": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "H111111-11"
             },
             "return_address": {
-              "$ref": "#/components/schemas/Address"
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "sender_address": {
-              "$ref": "#/components/schemas/Address"
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "pickup_location": {
-              "type": "object",
-              "required": [
-                "code",
-                "address"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "code": {
-                  "type": "string",
-                  "example": "205604"
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": "205604"
+                    },
+                    "address": {
+                      "$ref": "#/components/schemas/BaseAddress"
+                    }
+                  },
+                  "description": "Required if the service delivery method is `pick-up`."
                 },
-                "address": {
-                  "$ref": "#/components/schemas/Address"
+                {
+                  "type": "null"
                 }
-              },
-              "description": "Required if the service delivery method is `pick-up`."
+              ]
             },
             "description": {
               "type": [
@@ -81,12 +63,22 @@
               "description": "Internal reference for the customer to recognize the shipment by."
             },
             "channel": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "Your integration name",
               "description": "Name of the application used to create the shipment."
             },
             "total_value": {
-              "$ref": "#/components/schemas/Price"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Price"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "price": {
               "allOf": [
@@ -123,39 +115,32 @@
               "description": "Indicates whether status updates will be performed for this shipment."
             },
             "physical_properties": {
-              "$ref": "#/components/schemas/PhysicalProperties"
+              "$ref": "#/components/schemas/BasePhysicalProperties"
             },
             "verified": {
-              "type": "object",
               "readOnly": true,
+              "type": "object",
               "properties": {
                 "price": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Price"
-                    },
-                    {
-                      "readOnly": true
-                    }
-                  ]
+                  "$ref": "#/components/schemas/Price"
                 },
                 "physical_properties": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/PhysicalProperties"
-                    },
-                    {
-                      "readOnly": true
-                    }
-                  ]
+                  "$ref": "#/components/schemas/PhysicalProperties"
                 }
               }
             },
             "items": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ShipmentItem"
-              }
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BaseShipmentItem"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "is_consolidation": {
               "type": "boolean",
@@ -163,16 +148,30 @@
               "description": "Indicates whether this shipment is a consolidation shipment."
             },
             "customs": {
-              "$ref": "#/components/schemas/BaseCustoms"
-            },
-            "register_at": {
-              "allOf": [
+              "oneOf": [
                 {
-                  "$ref": "#/components/schemas/Timestamp"
+                  "$ref": "#/components/schemas/BaseCustoms"
                 },
                 {
-                  "readOnly": false,
-                  "description": "This shipment will be registered with the carrier when this time has been reached. While this is `null` or a time in the future, the shipment will stay in concept."
+                  "type": "null"
+                }
+              ]
+            },
+            "register_at": {
+              "oneOf": [
+                {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Timestamp"
+                    },
+                    {
+                      "readOnly": false,
+                      "description": "This shipment will be registered with the carrier when this time has been reached. While this is `null` or a time in the future, the shipment will stay in concept."
+                    }
+                  ]
+                },
+                {
+                  "type": "null"
                 }
               ]
             },
@@ -186,26 +185,44 @@
               "$ref": "#/components/schemas/Timestamp"
             },
             "tags": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "description": "Any custom tag to give to a shipment. Used for reference purposes.",
-                "example": "my-shipping-method"
-              }
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Any custom tag to give to a shipment. Used for reference purposes.",
+                    "example": "my-shipping-method"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "shop"
-          ],
           "properties": {
             "contract": {
-              "$ref": "#/components/schemas/ContractRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ContractRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "consolidation_shipment": {
-              "$ref": "#/components/schemas/ShipmentRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "files": {
               "allOf": [
@@ -213,21 +230,7 @@
                   "$ref": "#/components/schemas/ShipmentFilesRelationship"
                 },
                 {
-                  "properties": {
-                    "data": {
-                      "readOnly": true,
-                      "items": {
-                        "properties": {
-                          "id": {
-                            "readOnly": true
-                          },
-                          "type": {
-                            "readOnly": true
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "readOnly": true
                 }
               ]
             },
@@ -237,21 +240,7 @@
                   "$ref": "#/components/schemas/HookLogsRelationship"
                 },
                 {
-                  "properties": {
-                    "data": {
-                      "readOnly": true,
-                      "items": {
-                        "properties": {
-                          "id": {
-                            "readOnly": true
-                          },
-                          "type": {
-                            "readOnly": true
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "readOnly": true
                 }
               ]
             },
@@ -261,35 +250,49 @@
                   "$ref": "#/components/schemas/ShipmentSurchargesRelationship"
                 },
                 {
-                  "properties": {
-                    "data": {
-                      "readOnly": true,
-                      "items": {
-                        "properties": {
-                          "id": {
-                            "readOnly": true
-                          },
-                          "type": {
-                            "readOnly": true
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "readOnly": true
                 }
               ]
             },
             "liability_coverage": {
-              "$ref": "#/components/schemas/LiabilityCoverageRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/LiabilityCoverageRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "parent": {
-              "$ref": "#/components/schemas/ShipmentRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "service": {
-              "$ref": "#/components/schemas/ServiceRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ServiceRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "service_options": {
-              "$ref": "#/components/schemas/ServiceOptionsRelationship"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "shipment_status": {
               "allOf": [
@@ -297,45 +300,12 @@
                   "$ref": "#/components/schemas/ShipmentStatusRelationship"
                 },
                 {
-                  "properties": {
-                    "data": {
-                      "readOnly": true,
-                      "properties": {
-                        "id": {
-                          "readOnly": true
-                        },
-                        "type": {
-                          "readOnly": true
-                        }
-                      }
-                    }
-                  }
+                  "readOnly": true
                 }
               ]
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self",
-            "files"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
-            },
-            "files": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/files"
             }
           }
         }

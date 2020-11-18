@@ -19,12 +19,7 @@
     "description": "This endpoint retrieves the shipment with the supplied id.",
     "parameters": [
       {
-        "name": "include",
-        "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`consolidation_shipment`</li><li>`contract`</li><li>`files`</li><li>`hook_logs`</li><li>`liability_coverage`</li><li>`service`</li><li>`service.carrier`</li><li>`service_options`</li><li>`shipment_status`</li><li>`shipment_status.status`</li><li>`shop`</li><li>`shop.organization`</li><li>`shipment_surcharges`</li></ul>",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-shipments-include"
       }
     ],
     "responses": {
@@ -37,38 +32,13 @@
               "required": [
                 "data"
               ],
+              "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shipment"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "recipient_address",
-                            "return_address",
-                            "sender_address",
-                            "physical_properties",
-                            "sync_active",
-                            "created_at",
-                            "updated_at"
-                          ]
-                        },
-                        "relationships": {
-                          "required": [
-                            "shop",
-                            "shipment_status"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShipmentResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ShipmentIncludes"
                 }
               }
             }
@@ -103,9 +73,18 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchShipment"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ]
+                  }
+                ]
               },
-              "meta":  {
+              "meta": {
                 "type": "object",
                 "properties": {
                   "label_mime_type": {
@@ -137,25 +116,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Shipment"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "relationships": {
-                          "required": [
-                            "shop",
-                            "shipment_status"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ShipmentResponse"
                 }
               }
             }

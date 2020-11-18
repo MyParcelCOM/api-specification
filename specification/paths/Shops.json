@@ -61,6 +61,9 @@
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
                 },
+                "included": {
+                  "$ref": "#/components/schemas/ShopIncludes"
+                },
                 "links": {
                   "type": "object",
                   "required": [

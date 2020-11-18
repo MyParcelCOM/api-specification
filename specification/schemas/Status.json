@@ -1,23 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalStatus"
+      "$ref": "#/components/schemas/StatusResource"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "code",
-            "resource_type",
-            "name",
-            "description",
-            "level"
-          ],
           "additionalProperties": false,
           "properties": {
             "code": {
@@ -28,26 +17,33 @@
                 "payment-pending",
                 "payment-rejected",
                 "payment-succeeded",
-                "shipment-received-by-carrier",
-                "shipment-with-courier",
+                "report-failed",
+                "report-finished",
+                "report-in-progress",
+                "report-queued",
                 "shipment-at-sorting",
-                "shipment-created-without-tracking",
                 "shipment-concept",
+                "shipment-created-without-tracking",
                 "shipment-delivered",
                 "shipment-failed",
+                "shipment-on-the-way-to-hub",
                 "shipment-processing",
+                "shipment-received-by-carrier",
                 "shipment-registered",
                 "shipment-registration-failed",
-                "shipment-returned-to-sender"
+                "shipment-returned-to-sender",
+                "shipment-voided",
+                "shipment-with-courier"
               ],
               "example": "shipment-delivered"
             },
             "resource_type": {
               "type": "string",
               "enum": [
-                "shipments",
                 "invoices",
-                "payments"
+                "payments",
+                "reports",
+                "shipments"
               ],
               "example": "shipments",
               "description": "Resource type this status can be applied to."
@@ -55,10 +51,10 @@
             "level": {
               "type": "string",
               "enum": [
-                "pending",
-                "success",
                 "failed",
-                "in-progress"
+                "in-progress",
+                "pending",
+                "success"
               ],
               "example": "success"
             },
@@ -69,21 +65,6 @@
             "description": {
               "type": "string",
               "example": "The shipment was delivered successfully."
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/statuses/5c868557-0827-4d21-a7f4-9820f01769f4"
             }
           }
         }

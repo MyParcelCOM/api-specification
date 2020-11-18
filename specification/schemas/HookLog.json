@@ -26,11 +26,11 @@
         "resource_diff": {
           "type": "object",
           "example": {
-            "relationships" : {
+            "relationships": {
               "service": {
                 "data": {
-                  "type" : "services",
-                  "id" : "175a235f-aff5-4e44-87b5-3657b75c1deb"
+                  "type": "services",
+                  "id": "175a235f-aff5-4e44-87b5-3657b75c1deb"
                 }
               }
             }
@@ -49,11 +49,11 @@
     },
     "relationships": {
       "type": "object",
-      "additionalProperties": false,
       "required": [
         "hook",
         "resource"
       ],
+      "additionalProperties": false,
       "properties": {
         "hook": {
           "$ref": "#/components/schemas/HookRelationship"
