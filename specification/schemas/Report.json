@@ -18,24 +18,50 @@
             },
             "filters": {
               "type": "object",
-              "required": [
-                "date_from",
-                "date_to"
-              ],
               "properties": {
-                "date_from": {
-                  "type": "string",
-                  "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the report.",
-                  "example": "2020-01-01"
+                "created_at": {
+                  "type": "object",
+                  "description": "Either the `created_at` filter or the `register_at` filter is required for creating a report.",
+                  "required": [
+                    "date_from",
+                    "date_to"
+                  ],
+                  "properties": {
+                    "date_from": {
+                      "type": "string",
+                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the report.",
+                      "example": "2020-01-01"
+                    },
+                    "date_to": {
+                      "type": "string",
+                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at <= this date will be in the response.",
+                      "example": "2020-03-31"
+                    }
+                  }
                 },
-                "date_to": {
-                  "type": "string",
-                  "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at <= this date will be in the response.",
-                  "example": "2020-03-31"
+                "register_at": {
+                  "type": "object",
+                  "description": "Either the `created_at` filter or the `register_at` filter is required for creating a report.",
+                  "required": [
+                    "date_from",
+                    "date_to"
+                  ],
+                  "properties": {
+                    "date_from": {
+                      "type": "string",
+                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments registered at >= this date will be in the report.",
+                      "example": "2020-01-01"
+                    },
+                    "date_to": {
+                      "type": "string",
+                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments registered at <= this date will be in the response.",
+                      "example": "2020-03-31"
+                    }
+                  }
                 },
                 "search": {
                   "type": "string",
-                  "description": "String of characters you want to look for in shipment attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD). <strong>Deprecated</strong> use `filter[date_from]` and `filter[date_to]` instead.</li><li>`description`</li><li>`customer_reference`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
+                  "description": "String of characters you want to look for in shipment attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD). <strong>Deprecated</strong> use `filter[created_at][date_from]` or `filter[created_at][date_to]` instead.</li><li>`description`</li><li>`customer_reference`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
                   "example": "some search string"
                 },
                 "description": {
