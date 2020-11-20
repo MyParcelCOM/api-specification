@@ -350,6 +350,9 @@
   "ShopResponse": {
     "$ref": "./schemas/ShopResponse.json"
   },
+  "StateCode": {
+    "$ref": "./schemas/StateCode.json"
+  },
   "Status": {
     "$ref": "./schemas/Status.json"
   },
