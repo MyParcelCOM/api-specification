@@ -3,6 +3,9 @@
   "items": {
     "anyOf": [
       {
+        "$ref": "#/components/schemas/File"
+      },
+      {
         "$ref": "#/components/schemas/Status"
       }
     ]
