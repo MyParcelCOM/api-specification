@@ -80,6 +80,37 @@
                       }
                     }
                   ]
+                },
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "files": {
+                      "type": "array",
+                      "description": "This array holds objects holding the extension, mime type and contents (base-64 encoded) of attached files",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "extension",
+                          "mime_type",
+                          "contents"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "extension": {
+                            "type": "string",
+                            "example": "pdf"
+                          },
+                          "mime_type": {
+                            "type": "string",
+                            "example": "application/pdf"
+                          },
+                          "contents": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
