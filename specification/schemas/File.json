@@ -18,37 +18,14 @@
           "additionalProperties": false,
           "properties": {
             "document_type": {
-              "type": "string",
-              "enum": [
-                "label",
-                "printcode",
-                "combined-label",
-                "customs-declaration-form",
-                "commercial-invoice"
-              ],
-              "example": "label"
+              "$ref": "#/components/schemas/DocumentType"
             },
             "formats": {
               "type": "array",
               "items": {
-                "type": "object",
-                "description": "This array holds objects describing the type of formats this file is available in.",
-                "required": [
-                  "extension",
-                  "mime_type"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "extension": {
-                    "type": "string",
-                    "example": "pdf"
-                  },
-                  "mime_type": {
-                    "type": "string",
-                    "example": "application/pdf"
-                  }
-                }
+                "$ref": "#/components/schemas/FileFormat"
               },
+              "description": "This array holds objects describing the type of formats this file is available in.",
               "example": [
                 {
                   "extension": "pdf",

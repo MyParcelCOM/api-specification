@@ -56,6 +56,9 @@
   "Day": {
     "$ref": "./schemas/Day.json"
   },
+  "DocumentType": {
+    "$ref": "./schemas/DocumentType.json"
+  },
   "Email": {
     "$ref": "./schemas/Email.json"
   },
@@ -70,6 +73,9 @@
   },
   "File": {
     "$ref": "./schemas/File.json"
+  },
+  "FileFormat": {
+    "$ref": "./schemas/FileFormat.json"
   },
   "FileRelationship": {
     "$ref": "./schemas/FileRelationship.json"
