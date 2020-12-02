@@ -4,7 +4,6 @@
     "extension",
     "mime_type"
   ],
-  "additionalProperties": false,
   "properties": {
     "extension": {
       "type": "string",
