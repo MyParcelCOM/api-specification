@@ -18,13 +18,13 @@
         ]
       }
     ],
-    "summary": "Get file related to a report.",
-    "description": "This endpoint retrieves a file for the supplied report. All successfully completed reports will have attached reports file.",
+    "summary": "Get a file related to a report.",
+    "description": "This endpoint retrieves the file of the supplied report. All successfully completed reports will have an attached CSV file.",
     "parameters": [
       {
         "name": "Accept",
         "in": "header",
-        "description": "You can set the accept header to either receive a JSON response, or the files in given format. Possible options are: <ul><li>`text/csv`</li></ul>",
+        "description": "You must set the accept header to retrieve the file in the given format. Possible options are: <ul><li>`text/csv`</li></ul>",
         "required": true,
         "schema": {
           "type": "string",
@@ -41,7 +41,7 @@
           "text/csv": {
             "schema": {
               "type": "string",
-              "description": "Contents of the CSV file"
+              "description": "Base64 encoded contents of the CSV file."
             }
           }
         }
