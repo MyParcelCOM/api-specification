@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "extension",
+    "mime_type"
+  ],
+  "properties": {
+    "extension": {
+      "type": "string",
+      "example": "pdf"
+    },
+    "mime_type": {
+      "type": "string",
+      "example": "application/pdf"
+    }
+  }
+}

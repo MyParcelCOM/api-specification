@@ -25,6 +25,13 @@
             "sender_address": {
               "$ref": "#/components/schemas/BaseAddress"
             },
+            "sender_tax_number": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "G666666-66"
+            },
             "pickup_location": {
               "oneOf": [
                 {

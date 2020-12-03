@@ -80,6 +80,37 @@
                       }
                     }
                   ]
+                },
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "files": {
+                      "type": "array",
+                      "description": "An array of objects holding the attributes and contents (Base64 encoded) of attached files",
+                      "items": {
+                        "allOf": [
+                          {
+                            "$ref": "#/components/schemas/FileFormat"
+                          },
+                          {
+                            "required": [
+                              "document_type",
+                              "contents"
+                            ],
+                            "properties": {
+                              "document_type": {
+                                "$ref": "#/components/schemas/DocumentType"
+                              },
+                              "contents": {
+                                "type": "string",
+                                "description": "Base64 encoded file data"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
                 }
               }
             }
