@@ -1,0 +1,51 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-report_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-file_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Reports"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get a file related to a report.",
+    "description": "This endpoint retrieves the file of the supplied report. All successfully completed reports will have an attached CSV file.",
+    "parameters": [
+      {
+        "name": "Accept",
+        "in": "header",
+        "description": "You must set the accept header to retrieve the file in the given format. Possible options are: <ul><li>`text/csv`</li></ul>",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "text/csv"
+          ]
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the file.",
+        "content": {
+          "text/csv": {
+            "schema": {
+              "type": "string",
+              "description": "Base64 encoded contents of the CSV file."
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "Accept",
   "in": "header",
-  "description": "You can set the accept header to either receive a JSON response, or the files in given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`application/zpl`</li><li>`image/png`</li><li>`text/csv`</li></ul>",
+  "description": "You must set the accept header to retrieve the file in the given format. Possible options are: <ul><li>`application/vnd.api+json`</li><li>`application/pdf`</li><li>`application/zpl`</li><li>`image/png`</li><li>`text/csv`</li></ul>",
   "required": true,
   "schema": {
     "type": "string",
