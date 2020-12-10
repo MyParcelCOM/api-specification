@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: ${CIRCLE_PROJECT_REPONAME}
-          image: myparcelcom/api-specification:${IMAGE_TAG}
+          image: ${ECR_REGISTRY}/myparcelcom/api-specification:${IMAGE_TAG}
           imagePullPolicy: Always
           ports:
             - containerPort: 80
