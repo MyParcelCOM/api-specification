@@ -403,5 +403,8 @@
   },
   "Analytics": {
     "$ref": "./schemas/Analytics.json"
+  },
+  "TaxIdentificationNumber": {
+    "$ref": "./schemas/TaxIdentificationNumber.json"
   }
 }
