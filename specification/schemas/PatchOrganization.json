@@ -74,6 +74,19 @@
                   "type": "null"
                 }
               ]
+            },
+            "tax_identification_numbers": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TaxIdentificationNumber"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           }
         }
