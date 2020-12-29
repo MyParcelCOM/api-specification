@@ -54,6 +54,19 @@
                 }
               ]
             },
+            "tax_identification_numbers": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TaxIdentificationNumber"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }
