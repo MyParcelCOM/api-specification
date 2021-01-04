@@ -21,29 +21,7 @@
             "carrier_statuses": {
               "type": "array",
               "items": {
-                "type": "object",
-                "required": [
-                  "code",
-                  "description",
-                  "assigned_at"
-                ],
-                "properties": {
-                  "code": {
-                    "type": "string",
-                    "example": "9001",
-                    "description": "The code used by the carrier for this status."
-                  },
-                  "description": {
-                    "type": "string",
-                    "example": "Confirmed at destination",
-                    "description": "Description of the code used by the carrier."
-                  },
-                  "assigned_at": {
-                    "type": "integer",
-                    "example": 1504801719,
-                    "description": "Unix timestamp (UTC) when the carrier registered this status."
-                  }
-                }
+                "$ref": "#/components/schemas/CarrierStatus"
               }
             },
             "errors": {
