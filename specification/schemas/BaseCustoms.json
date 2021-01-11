@@ -43,7 +43,7 @@
               "$ref": "#/components/schemas/Price"
             },
             {
-              "description": "The cost of shipping for this shipment."
+              "description": "The shipping cost paid by the customer, for tax and duty purposes."
             }
           ]
         },
