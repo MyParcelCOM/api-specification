@@ -35,6 +35,23 @@
       "example": "DAP",
       "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid)."
     },
+    "shipping_value": {
+      "oneOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/Price"
+            },
+            {
+              "description": "The shipping cost paid by the customer, for tax and duty purposes."
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "license_number": {
       "type": [
         "null",

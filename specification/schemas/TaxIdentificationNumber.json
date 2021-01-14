@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "country_code",
+    "number",
+    "type"
+  ],
+  "properties": {
+    "country_code": {
+      "$ref": "#/components/schemas/CountryCode"
+    },
+    "number": {
+      "type": "string",
+      "example": "XI123456789",
+      "description": "Eori XI number"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "example": "Eori XI number for Northern Ireland"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "eori"
+      ],
+      "example": "eori"
+    }
+  }
+}
