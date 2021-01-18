@@ -21,6 +21,9 @@
     },
     "attributes": {
       "type": "object",
+      "required": [
+        "created_at"
+      ],
       "additionalProperties": false,
       "properties": {
         "resource_diff": {
@@ -44,6 +47,9 @@
             "example": "Applying the hook failed because the desired service was not available for the shipment contract."
           },
           "description": "An array of errors encountered when trying to run this hook."
+        },
+        "created_at": {
+          "$ref": "#/components/schemas/Timestamp"
         }
       }
     },

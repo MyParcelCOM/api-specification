@@ -1,0 +1,96 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-hook_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Hooks"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Get all the logs for a hook.",
+    "description": "This endpoint retrieves logs for the supplied hook.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_from"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_to"
+      },
+      {
+        "name": "filter[has_errors]",
+        "in": "query",
+        "description": "Boolean value.<ul><li>`true` Only logs with errors.</li><li>`false` Only logs without errors.</li></ul>",
+        "schema": {
+          "type": "boolean"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the log(s).",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HookLog"
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332/logs?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332/logs?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332/logs?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332/logs?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332/logs?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
