@@ -104,6 +104,12 @@
   "query-city": {
     "$ref": "./parameters/query-city.json"
   },
+  "query-filter-created_at-date_from": {
+    "$ref": "./parameters/query-filter-created_at-date_from.json"
+  },
+  "query-filter-created_at-date_to": {
+    "$ref": "./parameters/query-filter-created_at-date_to.json"
+  },
   "query-street": {
     "$ref": "./parameters/query-street.json"
   },
@@ -127,12 +133,6 @@
   },
   "query-shipments-filter-date_to": {
     "$ref": "./parameters/query-shipments-filter-date_to.json"
-  },
-  "query-shipments-filter-created_at-date_from": {
-    "$ref": "./parameters/query-shipments-filter-created_at-date_from.json"
-  },
-  "query-shipments-filter-created_at-date_to": {
-    "$ref": "./parameters/query-shipments-filter-created_at-date_to.json"
   },
   "query-shipments-filter-register_at-date_from": {
     "$ref": "./parameters/query-shipments-filter-register_at-date_from.json"
