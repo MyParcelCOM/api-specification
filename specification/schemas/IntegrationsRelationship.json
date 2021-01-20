@@ -12,9 +12,6 @@
             "$ref": "#/components/schemas/MinimalIntegration"
           },
           {
-            "required": [
-              "meta"
-            ],
             "properties": {
               "meta": {
                 "type": "object",
