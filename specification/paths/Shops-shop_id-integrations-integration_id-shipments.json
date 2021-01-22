@@ -23,8 +23,7 @@
       {
         "OAuth2": [
           "shipments.manage",
-          "organizations.manage",
-          "experimental"
+          "organizations.manage"
         ]
       }
     ],
@@ -130,23 +129,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/shipments?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/shops/9531c3a9-e5cc-43ac-83cb-04dee6e8cd39/integrations/1dd3757c-71c7-4d6e-8c27-86a3cebe3597/shipments?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/shipments?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/shops/9531c3a9-e5cc-43ac-83cb-04dee6e8cd39/integrations/1dd3757c-71c7-4d6e-8c27-86a3cebe3597/shipments?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/shipments?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/shops/9531c3a9-e5cc-43ac-83cb-04dee6e8cd39/integrations/1dd3757c-71c7-4d6e-8c27-86a3cebe3597/shipments?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/shipments?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/shops/9531c3a9-e5cc-43ac-83cb-04dee6e8cd39/integrations/1dd3757c-71c7-4d6e-8c27-86a3cebe3597/shipments?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/shipments?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/shops/9531c3a9-e5cc-43ac-83cb-04dee6e8cd39/integrations/1dd3757c-71c7-4d6e-8c27-86a3cebe3597/shipments?page[number]=13&page[size]=30"
                     }
                   }
                 }
