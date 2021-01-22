@@ -1,0 +1,160 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-shop_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-integration_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Shops"
+    ],
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_from"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_to"
+      }
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "organizations.manage",
+          "experimental"
+        ]
+      }
+    ],
+    "summary": "Get shipments from integration",
+    "description": "This endpoint connects to an external integration and requests shipment data for a specified time period.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the shipments.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Shipment"
+                      },
+                      {
+                        "required": [
+                          "attributes",
+                          "relationships",
+                          "links"
+                        ],
+                        "properties": {
+                          "attributes": {
+                            "required": [
+                              "recipient_address",
+                              "customer_reference",
+                              "description",
+                              "channel",
+                              "items"
+                            ],
+                            "properties": {
+                              "recipient_address": {
+                                "required": [
+                                  "first_name",
+                                  "last_name",
+                                  "street_1",
+                                  "city",
+                                  "country_code"
+                                ]
+                              },
+                              "items": {
+                                "items": {
+                                  "required": [
+                                    "description",
+                                    "quantity"
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "relationships": {
+                            "required": [
+                              "shop"
+                            ]
+                          },
+                          "links": {
+                            "readOnly": true,
+                            "type": "object",
+                            "required": [
+                              "self",
+                              "files"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "self": {
+                                "type": "string",
+                                "format": "url",
+                                "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e"
+                              },
+                              "files": {
+                                "type": "string",
+                                "format": "url",
+                                "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/files"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/shipments?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
