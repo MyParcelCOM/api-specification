@@ -9,7 +9,8 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
-      - setup_remote_docker
+      - setup_remote_docker:
+          version: 19.03.13
       - run:
           name: Authenticate AWS ECR
           command: ecr-login

@@ -38,19 +38,14 @@
     "shipping_value": {
       "oneOf": [
         {
-          "allOf": [
-            {
-              "$ref": "#/components/schemas/Price"
-            },
-            {
-              "description": "The shipping cost paid by the customer, for tax and duty purposes."
-            }
-          ]
+          "$ref": "#/components/schemas/Price"
         },
         {
-          "type": "null"
+          "type": "null",
+          "description": ""
         }
-      ]
+      ],
+      "description": "The shipping cost paid by the customer, for tax and duty purposes."
     },
     "license_number": {
       "type": [
@@ -65,6 +60,30 @@
         "string"
       ],
       "example": "2112211"
+    },
+    "total_tax": {
+      "readOnly": true,
+      "oneOf": [
+        {
+          "readOnly": true,
+          "type": "null"
+        },
+        {
+          "$ref": "#/components/schemas/Price"
+        }
+      ]
+    },
+    "total_duty": {
+      "readOnly": true,
+      "oneOf": [
+        {
+          "readOnly": true,
+          "type": "null"
+        },
+        {
+          "$ref": "#/components/schemas/Price"
+        }
+      ]
     }
   }
 }

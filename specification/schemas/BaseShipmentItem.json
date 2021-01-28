@@ -26,7 +26,7 @@
     "item_value": {
       "oneOf": [
         {
-          "$ref": "#/components/schemas/BasePrice"
+          "$ref": "#/components/schemas/Price"
         },
         {
           "type": "null"
@@ -61,6 +61,30 @@
         },
         {
           "type": "null"
+        }
+      ]
+    },
+    "tax": {
+      "readOnly": true,
+      "oneOf": [
+        {
+          "readOnly": true,
+          "type": "null"
+        },
+        {
+          "$ref": "#/components/schemas/Price"
+        }
+      ]
+    },
+    "duty": {
+      "readOnly": true,
+      "oneOf": [
+        {
+          "readOnly": true,
+          "type": "null"
+        },
+        {
+          "$ref": "#/components/schemas/Price"
         }
       ]
     }

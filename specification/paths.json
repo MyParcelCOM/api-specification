@@ -53,6 +53,9 @@
   "/hooks/{hook_id}": {
     "$ref": "./paths/Hooks-hook_id.json"
   },
+  "/hooks/{hook_id}/logs": {
+    "$ref": "./paths/Hooks-hook_id-logs.json"
+  },
   "/hook-logs/{hook_log_id}": {
     "$ref": "./paths/HookLogs-hook_log_id.json"
   },
@@ -184,6 +187,9 @@
   },
   "/shops/{shop_id}/integrations": {
     "$ref": "./paths/Shops-shop_id-integrations.json"
+  },
+  "/shops/{shop_id}/integrations/{integration_id}/shipments": {
+    "$ref": "./paths/Shops-shop_id-integrations-integration_id-shipments.json"
   },
   "/shops/{shop_id}/relationships/integrations": {
     "$ref": "./paths/Shops-shop_id-relationships-integrations.json"

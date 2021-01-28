@@ -28,6 +28,18 @@
             "type": "string",
             "example": "some.secret.string.only.the.endpoint.holder.knows"
           },
+          "tries": {
+            "type": "integer",
+            "example": 3,
+            "description": "Indicator for how often the action should be attempted. Max: 24 tries.",
+            "default": 3
+          },
+          "retry_delay": {
+            "type": "integer",
+            "example": 600,
+            "description": "Number of seconds before the action should be tried again after failing. Max: 3600 seconds (1 hour).",
+            "default": 600
+          },
           "includes": {
             "type": "array",
             "items": {

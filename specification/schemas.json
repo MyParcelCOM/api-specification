@@ -320,9 +320,6 @@
   "ShipmentIncludes": {
     "$ref": "./schemas/ShipmentIncludes.json"
   },
-  "ShipmentItem": {
-    "$ref": "./schemas/ShipmentItem.json"
-  },
   "ShipmentRelationship": {
     "$ref": "./schemas/ShipmentRelationship.json"
   },
