@@ -64,7 +64,7 @@
         }
       ]
     },
-    "item_tax": {
+    "tax": {
       "readOnly": true,
       "oneOf": [
         {
@@ -76,7 +76,7 @@
         }
       ]
     },
-    "item_duty": {
+    "duty": {
       "readOnly": true,
       "oneOf": [
         {
