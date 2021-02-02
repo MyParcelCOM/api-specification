@@ -62,7 +62,30 @@
       "additionalProperties": false,
       "properties": {
         "hook": {
-          "$ref": "#/components/schemas/HookRelationship"
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/HookRelationship"
+            },
+            {
+              "properties": {
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "DPD Next Day for medium packages"
+                    },
+                    "trigger": {
+                      "$ref": "#/components/schemas/HookTrigger"
+                    },
+                    "action": {
+                      "$ref": "#/components/schemas/HookAction"
+                    }
+                  }
+                }
+              }
+            }
+          ]
         },
         "resource": {
           "type": "object",
