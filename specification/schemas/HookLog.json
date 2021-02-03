@@ -68,12 +68,16 @@
             },
             {
               "properties": {
-                "meta": {
-                  "type": "object",
+                "data": {
                   "properties": {
-                    "name": {
-                      "type": "string",
-                      "example": "DPD Next Day for medium packages"
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "example": "DPD Next Day for medium packages"
+                        }
+                      }
                     }
                   }
                 }
