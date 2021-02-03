@@ -74,12 +74,6 @@
                     "name": {
                       "type": "string",
                       "example": "DPD Next Day for medium packages"
-                    },
-                    "trigger": {
-                      "$ref": "#/components/schemas/HookTrigger"
-                    },
-                    "action": {
-                      "$ref": "#/components/schemas/HookAction"
                     }
                   }
                 }
