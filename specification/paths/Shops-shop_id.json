@@ -12,7 +12,8 @@
       {
         "OAuth2": [
           "organizations.manage",
-          "shipments.manage"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
