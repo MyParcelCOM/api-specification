@@ -6,8 +6,9 @@
     "security": [
       {
         "OAuth2": [
+          "organizations.manage",
           "shipments.manage",
-          "organizations.manage"
+          "shipments.view"
         ]
       }
     ],

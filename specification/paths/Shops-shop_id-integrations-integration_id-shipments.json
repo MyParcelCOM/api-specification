@@ -22,8 +22,8 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage",
-          "organizations.manage"
+          "organizations.manage",
+          "shipments.manage"
         ]
       }
     ],

@@ -11,7 +11,8 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
@@ -58,7 +59,8 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
