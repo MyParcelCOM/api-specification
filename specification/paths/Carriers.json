@@ -11,6 +11,16 @@
     ],
     "summary": "Get all available carriers for your API client.",
     "description": "This endpoint retrieves all carriers available to your API client. The availability of carriers depends on the broker your client is connected to.",
+    "parameters": [
+      {
+        "name": "filter[has_active_contract]",
+        "in": "query",
+        "description": "Boolean value.<ul><li>`true` Only carriers with active contract associations.</li><li>`false` Only carriers without active contract associations.</li></ul>",
+        "schema": {
+          "type": "boolean"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the carriers.",
