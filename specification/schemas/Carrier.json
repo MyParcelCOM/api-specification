@@ -14,6 +14,7 @@
           "required": [
             "name",
             "code",
+            "logo_url",
             "credentials_format",
             "label_mime_types"
           ],
@@ -27,6 +28,11 @@
               "type": "string",
               "example": "my-parcel-com",
               "description": "Unique slugified version of the carrier name to identify a carrier."
+            },
+            "logo_url": {
+              "type": "string",
+              "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
+              "description": "Logo image URL"
             },
             "credentials_format": {
               "type": "object",
