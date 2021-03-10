@@ -34,6 +34,7 @@
               "contracts.manage": "Manage contract resources.",
               "organizations.manage": "Manage organization related resources on behalf of a single organization or all organizations belonging to a broker.",
               "shipments.manage": "Manage shipments on behalf of all shops belonging to an organization or broker.",
+              "shipments.view": "Retrieve shipments on behalf of all shops belonging to an organization or broker.",
               "system.manage": "Manage all system related resources.",
               "users.manage": "Manage user resources.",
               "finance.manage": "Manage all finance related resources.",
