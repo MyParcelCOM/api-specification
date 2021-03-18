@@ -52,6 +52,9 @@
             },
             "purchase_price": {
               "$ref": "#/components/schemas/Price"
+            },
+            "fuel_surcharge": {
+              "$ref": "#/components/schemas/Price"
             }
           }
         },
