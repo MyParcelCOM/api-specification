@@ -17,14 +17,9 @@ jobs:
       - run:
           name: Building and Pushing Docker images
           command: |
-            NS=$(env_namespace)
-            eval $(aws-ssm-params ${NS})
             IMAGE_NAME="${ECR_REGISTRY}/myparcelcom/api-specification:$(image_tag --next-gen)"
             docker build \
               -t ${IMAGE_NAME} \
-              --build-arg REGISTRY=${ECR_REGISTRY} \
-              --build-arg API_HOST=${API_HOST} \
-              --build-arg AUTH_HOST=${AUTH_HOST} \
               -f docker/build/Dockerfile .
             docker push ${IMAGE_NAME}
 
