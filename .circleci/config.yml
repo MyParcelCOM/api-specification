@@ -17,66 +17,17 @@ jobs:
       - run:
           name: Building and Pushing Docker images
           command: |
-            NS=$(env_namespace)
-            eval $(aws-ssm-params ${NS})
-            IMAGE_NAME="${ECR_REGISTRY}/myparcelcom/api-specification:$(image_tag)"
+            IMAGE_NAME="${ECR_REGISTRY}/myparcelcom/api-specification:$(image_tag --next-gen)"
             docker build \
               -t ${IMAGE_NAME} \
-              --build-arg REGISTRY=${ECR_REGISTRY} \
-              --build-arg API_HOST=${API_HOST} \
-              --build-arg AUTH_HOST=${AUTH_HOST} \
               -f docker/build/Dockerfile .
             docker push ${IMAGE_NAME}
 
-  deploy:
-    docker:
-      - image: myparcelcom/build-utils
-        auth:
-          username: ${DOCKER_CLOUD_USER}
-          password: ${DOCKER_CLOUD_PASSWORD}
-    parameters:
-      is_sandbox:
-        type: string
-        default: "false"
-    environment:
-      IS_SANDBOX: <<parameters.is_sandbox>>
-    steps:
-      - checkout
-      - run:
-          name: Bootstrap AWS EKS and kubectl
-          command: kubectl-config
-      - run:
-          name: Process templates
-          command: |
-            export NS=$(env_namespace)
-            export IMAGE_TAG=$(image_tag)
-
-            eval $(aws-ssm-params ${NS}/${CIRCLE_PROJECT_REPONAME}) # fetch project settings
-
-            envsubst < kube/deployment.template.yaml > kube/deployment.yaml
-            envsubst < kube/service.template.yaml > kube/service.yaml
-      - run:
-          name: Deploy
-          command: |
-            kubectl apply -f kube/deployment.yaml
-            kubectl apply -f kube/service.yaml
-
 workflows:
-  deploy:
+  build:
     jobs:
       - build:
           context: [ "aws", "docker_cloud" ]
-          filters:
-            branches:
-              only:
-                - master
-                - develop
-            tags:
-              only: /^v\d+\.\d+\.\d+$/
-      - deploy:
-          context: [ "aws", "docker_cloud" ]
-          requires:
-            - build
           filters:
             branches:
               only:
