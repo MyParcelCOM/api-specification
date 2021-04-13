@@ -1,0 +1,36 @@
+{
+  "get": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "experimental"
+        ]
+      }
+    ],
+    "summary": "Export login attempts logs in CSV format",
+    "description": "This endpoint retrieves all broker-related login attempt logs in a CSV format.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_from"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_to"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the CSV containing login attempt logs",
+        "content": {
+          "text/csv": {
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

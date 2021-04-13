@@ -230,6 +230,9 @@
   "/export-shipments": {
     "$ref": "./paths/ExportShipments.json"
   },
+  "/export-login-attempts": {
+    "$ref": "./paths/ExportLoginAttempts.json"
+  },
   "/void-shipment": {
     "$ref": "./paths/VoidShipment.json"
   },

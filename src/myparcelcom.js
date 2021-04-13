@@ -103,7 +103,8 @@
           'PaymentIdentities',
           'Shipments/paths/~1registered-shipments/post',
           'ShipmentSurcharges',
-          'SystemMessages'
+          'SystemMessages',
+          'ExportLoginAttempts'
         ]
         for (var i = 0; i < internal.length; i++) {
           var sections = document.querySelectorAll([
