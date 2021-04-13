@@ -51,6 +51,7 @@
             "level": {
               "type": "string",
               "enum": [
+                "cancelled",
                 "failed",
                 "in-progress",
                 "pending",
