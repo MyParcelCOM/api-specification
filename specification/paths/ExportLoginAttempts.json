@@ -6,7 +6,6 @@
     "security": [
       {
         "OAuth2": [
-          "experimental",
           "logs.view"
         ]
       }
