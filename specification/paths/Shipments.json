@@ -236,7 +236,7 @@
                     "type": "string",
                     "example": "application/pdf",
                     "deprecated": true,
-                    "description": "Use `label.mime_type` instead. In case both are used, `label.mime_type` will get priority."
+                    "description": "Deprecated, use `label.mime_type` instead. In case both are used, `label.mime_type` will get priority."
                   },
                   "label": {
                     "type": "object",

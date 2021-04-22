@@ -16,7 +16,8 @@
             "code",
             "logo_url",
             "credentials_format",
-            "label_mime_types"
+            "label_mime_types",
+            "label_formats"
           ],
           "additionalProperties": false,
           "properties": {
@@ -53,13 +54,34 @@
               },
               "description": "JSON Schema specification of the credentials required to communicate with the carrier."
             },
+            "label_formats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "mime_type",
+                  "size"
+                ],
+                "properties": {
+                  "mime_type": {
+                    "type": "string",
+                    "example": "application/pdf"
+                  },
+                  "size": {
+                    "type": "string",
+                    "example": "A6"
+                  }
+                }
+              }
+            },
             "label_mime_types": {
               "type": "array",
+              "deprecated": true,
               "items": {
                 "type": "string",
                 "example": "application/pdf"
               },
-              "description": "The mime types the carrier offers shipment labels in."
+              "description": "Deprecated, use label_formats instead."
             }
           }
         },
