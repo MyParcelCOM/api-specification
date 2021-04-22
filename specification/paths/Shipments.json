@@ -234,7 +234,26 @@
                 "properties": {
                   "label_mime_type": {
                     "type": "string",
-                    "example": "application/pdf"
+                    "example": "application/pdf",
+                    "deprecated": true,
+                    "description": "Use `label.mime_type` instead. In case both are used, `label.mime_type` will get priority."
+                  },
+                  "label": {
+                    "type": "object",
+                    "properties": {
+                      "mime_type": {
+                        "type": "string",
+                        "example": "application/pdf",
+                        "default": "application/pdf",
+                        "description": "Requested `mime_type` for the label of this shipment. Available mime_types can be found on the carrier resource related to the chosen service/contract."
+                      },
+                      "size": {
+                        "type": "string",
+                        "example": "A6",
+                        "default": "A6",
+                        "description": "Requested size for the label of this shipment. Available label sizes can be found on the carrier resource related to the chosen service/contract."
+                      }
+                    }
                   },
                   "service_code": {
                     "type": "string",
