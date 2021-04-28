@@ -215,8 +215,14 @@
   "/users/{user_id}/relationships/scopes": {
     "$ref": "./paths/Users-user_id-relationships-scopes.json"
   },
+  "/export-login-attempts": {
+    "$ref": "./paths/ExportLoginAttempts.json"
+  },
   "/import-service-rates": {
     "$ref": "./paths/ImportServiceRates.json"
+  },
+  "/register-multi-colli-shipment": {
+    "$ref": "./paths/RegisterMultiColliShipment.json"
   },
   "/suggest-address": {
     "$ref": "./paths/SuggestAddress.json"
@@ -226,9 +232,6 @@
   },
   "/update-shipment-status": {
     "$ref": "./paths/UpdateShipmentStatus.json"
-  },
-  "/export-login-attempts": {
-    "$ref": "./paths/ExportLoginAttempts.json"
   },
   "/void-shipment": {
     "$ref": "./paths/VoidShipment.json"
