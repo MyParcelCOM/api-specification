@@ -147,8 +147,38 @@
       }
     },
     "responses": {
-      "204": {
-        "description": "The multi-colli shipment has been created."
+      "201": {
+        "description": "The multi-colli shipment is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ShipmentResponse"
+                    },
+                    {
+                      "properties": {
+                        "relationships": {
+                          "required": [
+                            "colli",
+                            "contract",
+                            "service"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
