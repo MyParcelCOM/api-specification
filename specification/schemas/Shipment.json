@@ -220,7 +220,7 @@
             "colli": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/ShipmentRelationship"
+                  "$ref": "#/components/schemas/ShipmentColliRelationship"
                 },
                 {
                   "readOnly": true
