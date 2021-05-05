@@ -1,0 +1,185 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Create and register a multi-colli shipment.",
+    "description": "This endpoint creates a new shipment consisting of multiple parcels to the same address, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "requestBody": {
+      "description": "The address and data to create the multi-colli shipment.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "recipient_address",
+                  "sender_address",
+                  "return_address",
+                  "colli",
+                  "contract_id",
+                  "service_id",
+                  "shop_id"
+                ],
+                "properties": {
+                  "recipient_address": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/BaseAddress"
+                      },
+                      {
+                        "required": [
+                          "street_1",
+                          "city",
+                          "country_code",
+                          "first_name",
+                          "last_name"
+                        ]
+                      }
+                    ]
+                  },
+                  "sender_address": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/BaseAddress"
+                      },
+                      {
+                        "required": [
+                          "street_1",
+                          "city",
+                          "country_code"
+                        ]
+                      }
+                    ]
+                  },
+                  "return_address": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/BaseAddress"
+                      },
+                      {
+                        "required": [
+                          "street_1",
+                          "city",
+                          "country_code"
+                        ]
+                      }
+                    ]
+                  },
+                  "colli": {
+                    "type": "array",
+                    "items": {
+                      "required": [
+                        "physical_properties"
+                      ],
+                      "properties": {
+                        "physical_properties": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/BasePhysicalProperties"
+                            },
+                            {
+                              "required": [
+                                "weight"
+                              ]
+                            }
+                          ]
+                        },
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/BaseShipmentItem"
+                              },
+                              {
+                                "required": [
+                                  "description",
+                                  "quantity"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "description": {
+                          "type": "string",
+                          "example": "Fidget spinners",
+                          "description": "Description of the shipment (contents). This field is communicated to the carrier and may be put on the shipment's label."
+                        },
+                        "customer_reference": {
+                          "type": "string",
+                          "example": "#8008135",
+                          "description": "Internal reference for the customer to recognize the shipment by."
+                        },
+                        "total_value": {
+                          "$ref": "#/components/schemas/Price"
+                        }
+                      }
+                    }
+                  },
+                  "contract_id": {
+                    "$ref": "#/components/schemas/Uuid"
+                  },
+                  "service_id": {
+                    "$ref": "#/components/schemas/Uuid"
+                  },
+                  "shop_id": {
+                    "$ref": "#/components/schemas/Uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The multi-colli shipment is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ShipmentResponse"
+                    },
+                    {
+                      "properties": {
+                        "relationships": {
+                          "required": [
+                            "colli",
+                            "contract",
+                            "service"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

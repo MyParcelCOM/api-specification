@@ -205,12 +205,28 @@
                   "type": "null"
                 }
               ]
+            },
+            "collo_number": {
+              "readOnly": true,
+              "type": "integer",
+              "example": 1,
+              "description": "Sequence number when this shipment is part of a multi-colli shipment."
             }
           }
         },
         "relationships": {
           "type": "object",
           "properties": {
+            "colli": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentColliRelationship"
+                },
+                {
+                  "readOnly": true
+                }
+              ]
+            },
             "contract": {
               "oneOf": [
                 {

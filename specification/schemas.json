@@ -314,6 +314,9 @@
   "Shipment": {
     "$ref": "./schemas/Shipment.json"
   },
+  "ShipmentColliRelationship": {
+    "$ref": "./schemas/ShipmentColliRelationship.json"
+  },
   "ShipmentFilesRelationship": {
     "$ref": "./schemas/ShipmentFilesRelationship.json"
   },
