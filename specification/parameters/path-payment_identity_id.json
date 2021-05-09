@@ -1,9 +1,0 @@
-{
-  "name": "payment_identity_id",
-  "in": "path",
-  "description": "Id of the payment identity.",
-  "required": true,
-  "schema": {
-    "$ref": "#/components/schemas/Uuid"
-  }
-}
