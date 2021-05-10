@@ -186,16 +186,6 @@
                     }
                   }
                 ]
-              },
-              "meta": {
-                "type": "object",
-                "properties": {
-                  "estimated_shipment_volume": {
-                    "type": "integer",
-                    "example": 1000,
-                    "description": "Estimated amount of yearly shipments"
-                  }
-                }
               }
             }
           }

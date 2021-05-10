@@ -182,12 +182,6 @@
   "MinimalPasswordReset": {
     "$ref": "./schemas/MinimalPasswordReset.json"
   },
-  "MinimalPayment": {
-    "$ref": "./schemas/MinimalPayment.json"
-  },
-  "MinimalPaymentIdentity": {
-    "$ref": "./schemas/MinimalPaymentIdentity.json"
-  },
   "MinimalPickupDropoffLocation": {
     "$ref": "./schemas/MinimalPickupDropoffLocation.json"
   },
@@ -233,26 +227,11 @@
   "PatchOrganization": {
     "$ref": "./schemas/PatchOrganization.json"
   },
-  "PatchPayment": {
-    "$ref": "./schemas/PatchPayment.json"
-  },
-  "PatchPaymentIdentity": {
-    "$ref": "./schemas/PatchPaymentIdentity.json"
-  },
   "PatchServiceRate": {
     "$ref": "./schemas/PatchServiceRate.json"
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"
-  },
-  "Payment": {
-    "$ref": "./schemas/Payment.json"
-  },
-  "PaymentIdentity": {
-    "$ref": "./schemas/PaymentIdentity.json"
-  },
-  "PaymentIdentityRelationship": {
-    "$ref": "./schemas/PaymentIdentityRelationship.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
