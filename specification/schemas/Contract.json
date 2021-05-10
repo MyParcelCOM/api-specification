@@ -37,6 +37,9 @@
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
+            },
+            "updated_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },
