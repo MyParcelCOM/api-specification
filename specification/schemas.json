@@ -2,6 +2,9 @@
   "Address": {
     "$ref": "./schemas/Address.json"
   },
+  "Barcode": {
+    "$ref": "./schemas/Barcode.json"
+  },
   "BaseAddress": {
     "$ref": "./schemas/BaseAddress.json"
   },
@@ -37,6 +40,9 @@
   },
   "Client": {
     "$ref": "./schemas/Client.json"
+  },
+  "ColloNumber": {
+    "$ref": "./schemas/ColloNumber.json"
   },
   "CombinedFile": {
     "$ref": "./schemas/CombinedFile.json"
@@ -367,6 +373,12 @@
   },
   "Timestamp": {
     "$ref": "./schemas/Timestamp.json"
+  },
+  "TrackingCode": {
+    "$ref": "./schemas/TrackingCode.json"
+  },
+  "TrackingUrl": {
+    "$ref": "./schemas/TrackingUrl.json"
   },
   "User": {
     "$ref": "./schemas/User.json"
