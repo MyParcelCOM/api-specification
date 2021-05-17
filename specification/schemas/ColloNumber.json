@@ -1,0 +1,6 @@
+{
+  "readOnly": true,
+  "type": "integer",
+  "example": 1,
+  "description": "Sequence number when this shipment is part of a multi-colli shipment."
+}

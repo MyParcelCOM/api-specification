@@ -98,22 +98,13 @@
               ]
             },
             "barcode": {
-              "readOnly": true,
-              "type": "string",
-              "example": "3SABCD0123456789",
-              "description": "Textual representation of the barcode present on the label."
+              "$ref": "#/components/schemas/Barcode"
             },
             "tracking_code": {
-              "readOnly": true,
-              "type": "string",
-              "example": "3SABCD0123456789",
-              "description": "Code used to request tracking status from the carrier. This is not necessarily the same as the shipment barcode."
+              "$ref": "#/components/schemas/TrackingCode"
             },
             "tracking_url": {
-              "readOnly": true,
-              "type": "string",
-              "example": "https://tracker.carrier.com/3SABCD0123456789",
-              "description": "URL used to view tracking status updates."
+              "$ref": "#/components/schemas/TrackingUrl"
             },
             "sync_active": {
               "readOnly": true,
@@ -207,10 +198,7 @@
               ]
             },
             "collo_number": {
-              "readOnly": true,
-              "type": "integer",
-              "example": 1,
-              "description": "Sequence number when this shipment is part of a multi-colli shipment."
+              "$ref": "#/components/schemas/ColloNumber"
             }
           }
         },

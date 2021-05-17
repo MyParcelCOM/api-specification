@@ -105,7 +105,7 @@
                   "properties": {
                     "files": {
                       "type": "array",
-                      "description": "An array of objects holding the attributes and contents (Base64 encoded) of attached files",
+                      "description": "An array of objects holding the attributes and contents (Base64 encoded) of created files",
                       "items": {
                         "allOf": [
                           {

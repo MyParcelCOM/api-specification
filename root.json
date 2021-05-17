@@ -27,7 +27,7 @@
         "scheme": "Bearer",
         "flows": {
           "clientCredentials": {
-            "tokenUrl": "$AUTH_HOST",
+            "tokenUrl": "$AUTH_HOST/access-token",
             "scopes": {
               "addresses.suggest": "Retrieve address suggestions.",
               "broker.member": "Retrieve broker related resources and create organizations for that broker.",
