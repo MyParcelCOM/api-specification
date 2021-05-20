@@ -94,16 +94,6 @@
     }
   },
   {
-    "name": "Payments",
-    "externalDocs": {
-    }
-  },
-  {
-    "name": "PaymentIdentities",
-    "externalDocs": {
-    }
-  },
-  {
     "name": "Regions",
     "externalDocs": {
       "url": "https://docs.myparcel.com/api/resources/regions",

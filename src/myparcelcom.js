@@ -99,8 +99,6 @@
           'Invitations',
           'Invoices',
           'PasswordResets',
-          'Payments',
-          'PaymentIdentities',
           'Shipments/paths/~1registered-shipments/post',
           'ShipmentSurcharges',
           'SystemMessages',
