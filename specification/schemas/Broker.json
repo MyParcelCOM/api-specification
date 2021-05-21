@@ -46,12 +46,22 @@
             "style": {
               "type": "object",
               "required": [
+                "background_color",
+                "foreground_color",
                 "primary_color",
                 "secondary_color",
                 "accent_color"
               ],
               "additionalProperties": false,
               "properties": {
+                "background_color": {
+                  "type": "string",
+                  "example": "#fafafa"
+                },
+                "foreground_color": {
+                  "type": "string",
+                  "example": "#ffffff"
+                },
                 "primary_color": {
                   "type": "string",
                   "example": "#3a2efe"
