@@ -6,6 +6,7 @@
       "type": "string",
       "example": "percentage",
       "enum": [
+        "amount",
         "percentage"
       ]
     },
