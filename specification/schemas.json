@@ -122,9 +122,6 @@
   "IntegrationsRelationship": {
     "$ref": "./schemas/IntegrationsRelationship.json"
   },
-  "Invitation": {
-    "$ref": "./schemas/Invitation.json"
-  },
   "Invoice": {
     "$ref": "./schemas/Invoice.json"
   },
@@ -172,9 +169,6 @@
   },
   "MinimalIntegration": {
     "$ref": "./schemas/MinimalIntegration.json"
-  },
-  "MinimalInvitation": {
-    "$ref": "./schemas/MinimalInvitation.json"
   },
   "MinimalInvoice": {
     "$ref": "./schemas/MinimalInvoice.json"
