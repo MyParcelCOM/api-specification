@@ -142,10 +142,6 @@
                     "format": "uuid",
                     "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
                     "example": "a294ee55-bc94-4890-b734-afd56c158f95"
-                  },
-                  "invitation_code": {
-                    "type": "string",
-                    "example": "15317471056093"
                   }
                 }
               }

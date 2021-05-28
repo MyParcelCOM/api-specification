@@ -38,9 +38,6 @@
   "path-integration_id": {
     "$ref": "./parameters/path-integration_id.json"
   },
-  "path-invitation_id": {
-    "$ref": "./parameters/path-invitation_id.json"
-  },
   "path-invoice_id": {
     "$ref": "./parameters/path-invoice_id.json"
   },

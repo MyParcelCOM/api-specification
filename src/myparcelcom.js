@@ -96,7 +96,6 @@
         var internal = [
           'Enterprises',
           'CombinedFiles',
-          'Invitations',
           'Invoices',
           'PasswordResets',
           'Shipments/paths/~1registered-shipments/post',
