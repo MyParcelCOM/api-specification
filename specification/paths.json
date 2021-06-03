@@ -65,12 +65,6 @@
   "/integrations/{integration_id}": {
     "$ref": "./paths/Integrations-integration_id.json"
   },
-  "/invitations": {
-    "$ref": "./paths/Invitations.json"
-  },
-  "/invitations/{invitation_id}": {
-    "$ref": "./paths/Invitations-invitation_id.json"
-  },
   "/invoices": {
     "$ref": "./paths/Invoices.json"
   },

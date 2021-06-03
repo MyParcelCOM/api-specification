@@ -1,9 +1,0 @@
-{
-  "name": "invitation_id",
-  "in": "path",
-  "description": "Id of the invitation.",
-  "required": true,
-  "schema": {
-    "$ref": "#/components/schemas/Uuid"
-  }
-}

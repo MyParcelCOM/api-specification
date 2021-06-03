@@ -94,7 +94,7 @@
       "200": {
         "description": "Retrieved the analytics data in timeseries.",
         "content": {
-          "application/vnd.api+json": {
+          "application/json": {
             "schema": {
               "type": "object",
               "required": [
