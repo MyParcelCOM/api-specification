@@ -2,93 +2,94 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalBroker"
+      "$ref": "#/components/schemas/BrokerResource"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "name",
-            "logo_url",
-            "favicon_url",
-            "style"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "MyParcel.com"
             },
             "logo_url": {
               "type": "string",
+              "maxLength": 255,
               "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
               "description": "Logo image URL"
             },
             "favicon_url": {
               "type": "string",
+              "maxLength": 255,
               "example": "https://cdn.myparcel.com/images/favicon.png",
               "description": "Favicon image URL"
             },
             "support_url": {
               "type": "string",
+              "maxLength": 255,
               "example": "https://myparcel-com.odoo.com",
               "description": "URL to knowledge base or FAQ"
             },
             "contact_url": {
               "type": "string",
+              "maxLength": 255,
               "example": "mailto:info@myparcel.com",
               "description": "URL to create a new support ticket or mailto: link with email address"
             },
             "style": {
               "type": "object",
-              "required": [
-                "background_color",
-                "foreground_color",
-                "primary_color",
-                "secondary_color",
-                "accent_color"
-              ],
               "additionalProperties": false,
               "properties": {
                 "background_color": {
                   "type": "string",
-                  "example": "#fafafa"
+                  "minLength": 7,
+                  "maxLength": 7,
+                  "example": "#fafafa",
+                  "description": "RGB color code in #-hexadecimal notation."
                 },
                 "foreground_color": {
                   "type": "string",
-                  "example": "#ffffff"
+                  "minLength": 7,
+                  "maxLength": 7,
+                  "example": "#ffffff",
+                  "description": "RGB color code in #-hexadecimal notation."
                 },
                 "primary_color": {
                   "type": "string",
-                  "example": "#3a2efe"
+                  "minLength": 7,
+                  "maxLength": 7,
+                  "example": "#3a2efe",
+                  "description": "RGB color code in #-hexadecimal notation."
                 },
                 "secondary_color": {
                   "type": "string",
-                  "example": "#192832"
+                  "minLength": 7,
+                  "maxLength": 7,
+                  "example": "#192832",
+                  "description": "RGB color code in #-hexadecimal notation."
                 },
                 "accent_color": {
                   "type": "string",
-                  "example": "#fdb915"
+                  "minLength": 7,
+                  "maxLength": 7,
+                  "example": "#fdb915",
+                  "description": "RGB color code in #-hexadecimal notation."
                 }
               }
             }
           }
         },
-        "links": {
-          "readOnly": true,
+        "relationships": {
           "type": "object",
           "required": [
-            "self"
+            "enterprise"
           ],
-          "additionalProperties": false,
           "properties": {
-            "self": {
-              "type": "string",
-              "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95"
+            "enterprise": {
+              "$ref": "#/components/schemas/EnterpriseRelationship"
             }
           }
         }

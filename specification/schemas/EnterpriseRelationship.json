@@ -8,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalEnterprise"
+          "$ref": "#/components/schemas/EnterpriseResource"
         },
         {
           "required": [

@@ -1,0 +1,50 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Broker"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "logo_url",
+            "favicon_url",
+            "style"
+          ],
+          "properties": {
+            "style": {
+              "required": [
+                "background_color",
+                "foreground_color",
+                "primary_color",
+                "secondary_color",
+                "accent_color"
+              ]
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

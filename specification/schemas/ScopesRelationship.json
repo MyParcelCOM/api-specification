@@ -24,10 +24,10 @@
                     "items": {
                       "oneOf": [
                         {
-                          "$ref": "#/components/schemas/MinimalEnterprise"
+                          "$ref": "#/components/schemas/EnterpriseResource"
                         },
                         {
-                          "$ref": "#/components/schemas/MinimalBroker"
+                          "$ref": "#/components/schemas/BrokerResource"
                         },
                         {
                           "$ref": "#/components/schemas/MinimalOrganization"
