@@ -116,6 +116,7 @@
                       "attributes": {
                         "required": [
                           "name",
+                          "portal_url",
                           "logo_url",
                           "favicon_url",
                           "style"

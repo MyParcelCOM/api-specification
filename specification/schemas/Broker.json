@@ -15,6 +15,11 @@
               "maxLength": 255,
               "example": "MyParcel.com"
             },
+            "portal_url": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "app.sendmyparcel.com"
+            },
             "logo_url": {
               "type": "string",
               "maxLength": 255,
