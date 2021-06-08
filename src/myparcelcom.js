@@ -78,6 +78,7 @@
 
         // Mark experimental endpoints.
         var experimental = [
+          'Enterprises',
           'HookLogs',
           'Users',
           'Webhooks'
@@ -94,7 +95,6 @@
 
         // Hide internal endpoints on production (mark as experimental on other environments).
         var internal = [
-          'Enterprises',
           'CombinedFiles',
           'Invoices',
           'PasswordResets',
