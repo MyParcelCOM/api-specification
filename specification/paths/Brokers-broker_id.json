@@ -11,7 +11,8 @@
     "security": [
       {
         "OAuth2": [
-          "broker.member"
+          "broker.member",
+          "enterprises.manage"
         ]
       }
     ],
@@ -30,17 +31,71 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Broker"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/BrokerResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Brokers"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "enterprises.manage"
+        ]
+      }
+    ],
+    "summary": "Update a broker by id.",
+    "description": "This endpoint updates the broker with the supplied id.",
+    "requestBody": {
+      "description": "The broker object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Broker"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The broker is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/BrokerResponse"
                 }
               }
             }

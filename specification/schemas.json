@@ -26,6 +26,12 @@
   "BrokerRelationship": {
     "$ref": "./schemas/BrokerRelationship.json"
   },
+  "BrokerResource": {
+    "$ref": "./schemas/BrokerResource.json"
+  },
+  "BrokerResponse": {
+    "$ref": "./schemas/BrokerResponse.json"
+  },
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
   },
@@ -76,6 +82,12 @@
   },
   "EnterpriseRelationship": {
     "$ref": "./schemas/EnterpriseRelationship.json"
+  },
+  "EnterpriseResource": {
+    "$ref": "./schemas/EnterpriseResource.json"
+  },
+  "EnterpriseResponse": {
+    "$ref": "./schemas/EnterpriseResponse.json"
   },
   "Error": {
     "$ref": "./schemas/Error.json"
@@ -140,9 +152,6 @@
   "LiabilityCoveragesRelationship": {
     "$ref": "./schemas/LiabilityCoveragesRelationship.json"
   },
-  "MinimalBroker": {
-    "$ref": "./schemas/MinimalBroker.json"
-  },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
   },
@@ -157,9 +166,6 @@
   },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
-  },
-  "MinimalEnterprise": {
-    "$ref": "./schemas/MinimalEnterprise.json"
   },
   "MinimalFile": {
     "$ref": "./schemas/MinimalFile.json"
