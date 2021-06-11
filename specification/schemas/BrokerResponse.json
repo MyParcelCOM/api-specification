@@ -13,7 +13,7 @@
         "attributes": {
           "required": [
             "name",
-            "portal_url",
+            "domain",
             "logo_url",
             "favicon_url",
             "style"
