@@ -10,8 +10,8 @@
         ]
       }
     ],
-    "summary": "Get all available service rates for your API client.",
-    "description": "This endpoint retrieves all service rates available to your API client.",
+    "summary": "Get all available service rates.",
+    "description": "This endpoint retrieves service rates available to your API client.",
     "parameters": [
       {
         "name": "filter[contract]",

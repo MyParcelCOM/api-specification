@@ -12,7 +12,7 @@
         ]
       }
     ],
-    "summary": "Get all available contracts for your API client.",
+    "summary": "Get all available contracts.",
     "description": "This endpoint retrieves contracts available to your API client. Only active contracts with a verified status can be used to create shipments.",
     "parameters": [
       {
