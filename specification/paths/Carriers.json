@@ -9,8 +9,8 @@
         ]
       }
     ],
-    "summary": "Get all available carriers for your API client.",
-    "description": "This endpoint retrieves all carriers available to your API client. The availability of carriers depends on the broker your client is connected to.",
+    "summary": "Get all available carriers.",
+    "description": "This endpoint retrieves carriers available to your API client. The availability of carriers depends on the broker your client is connected to.",
     "responses": {
       "200": {
         "description": "Retrieved the carriers.",

@@ -10,7 +10,7 @@
         ]
       }
     ],
-    "summary": "Get all available enterprises for your API client.",
+    "summary": "Get all available enterprises.",
     "description": "This endpoint retrieves enterprises available to your API client.",
     "responses": {
       "200": {

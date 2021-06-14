@@ -11,8 +11,8 @@
         ]
       }
     ],
-    "summary": "Get all available shipments for your API client.",
-    "description": "This endpoint retrieves all shipments available to your API client.",
+    "summary": "Get all available shipments.",
+    "description": "This endpoint retrieves shipments available to your API client.",
     "parameters": [
       {
         "$ref": "#/components/parameters/query-shipments-include"
