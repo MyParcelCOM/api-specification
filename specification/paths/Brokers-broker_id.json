@@ -73,7 +73,12 @@
                   {
                     "required": [
                       "id"
-                    ]
+                    ],
+                    "properties": {
+                      "relationships": {
+                        "readOnly": true
+                      }
+                    }
                   }
                 ]
               }
