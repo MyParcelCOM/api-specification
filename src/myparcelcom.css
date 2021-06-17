@@ -12,6 +12,17 @@ img[alt=logo] {
   content: " ⚠";
 }
 
+/* Less whitespace for OAuth2 table content */
 #redoc .security-details p {
   display: inline;
+}
+
+/* Less visual emphasis on length limitations */
+#redoc div > div > span > span {
+  background: initial;
+  border: initial;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  color: rgb(14, 124, 134);
 }

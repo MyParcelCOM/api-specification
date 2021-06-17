@@ -9,8 +9,8 @@
         ]
       }
     ],
-    "summary": "Get all available services for your API client.",
-    "description": "This endpoint retrieves all services available to your API client.",
+    "summary": "Get all available services.",
+    "description": "This endpoint retrieves services available to your API client.",
     "parameters": [
       {
         "name": "filter[package_type]",

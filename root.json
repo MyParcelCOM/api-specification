@@ -32,6 +32,7 @@
               "addresses.suggest": "Retrieve address suggestions.",
               "broker.member": "Retrieve broker related resources and create organizations for that broker.",
               "contracts.manage": "Manage contract resources.",
+              "enterprises.manage": "Manage enterprise related resources.",
               "organizations.manage": "Manage organization related resources on behalf of a single organization or all organizations belonging to a broker.",
               "shipments.manage": "Manage shipments on behalf of all shops belonging to an organization or broker.",
               "shipments.view": "Retrieve shipments on behalf of all shops belonging to an organization or broker.",

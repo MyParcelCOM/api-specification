@@ -6,12 +6,13 @@
     "security": [
       {
         "OAuth2": [
-          "broker.member"
+          "broker.member",
+          "enterprises.manage"
         ]
       }
     ],
-    "summary": "Get all available brokers for your API client.",
-    "description": "This endpoint retrieves all brokers available to your API client. If your client is created within our `MyParcel.com` portal, it will be connected to 1 broker, for example `MyParcel.com`.",
+    "summary": "Get all available brokers.",
+    "description": "This endpoint retrieves brokers available to your API client. If your client is created within our `MyParcel.com` portal, it will be connected to 1 broker, for example `MyParcel.com`.",
     "responses": {
       "200": {
         "description": "Retrieved the brokers.",
@@ -29,17 +30,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Broker"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ]
-                      }
-                    ]
+                    "$ref": "#/components/schemas/BrokerResponse"
                   }
                 },
                 "meta": {
@@ -75,6 +66,96 @@
                       "example": "$API_HOST/brokers?page[number]=13&page[size]=30"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Brokers"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "enterprises.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new broker.",
+    "description": "This endpoint creates a new broker with the posted data.",
+    "requestBody": {
+      "description": "The broker object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Broker"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name",
+                          "domain",
+                          "logo_url",
+                          "favicon_url",
+                          "style"
+                        ],
+                        "properties": {
+                          "style": {
+                            "required": [
+                              "background_color",
+                              "foreground_color",
+                              "primary_color",
+                              "secondary_color",
+                              "accent_color"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The broker is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/BrokerResponse"
                 }
               }
             }

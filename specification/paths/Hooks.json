@@ -12,8 +12,8 @@
         ]
       }
     ],
-    "summary": "Get all available hooks for your API client.",
-    "description": "This endpoint retrieves available hooks for your API client.",
+    "summary": "Get all available hooks.",
+    "description": "This endpoint retrieves hooks available to your API client.",
     "parameters": [
       {
         "name": "filter[owner]",

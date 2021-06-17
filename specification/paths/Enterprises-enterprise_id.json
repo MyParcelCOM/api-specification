@@ -11,7 +11,7 @@
     "security": [
       {
         "OAuth2": [
-          "experimental"
+          "enterprises.manage"
         ]
       }
     ],
@@ -30,17 +30,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Enterprise"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/EnterpriseResponse"
                 }
               }
             }
