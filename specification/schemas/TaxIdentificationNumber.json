@@ -22,7 +22,9 @@
     "type": {
       "type": "string",
       "enum": [
-        "eori"
+        "eori",
+        "ioss",
+        "vat"
       ],
       "example": "eori"
     }
