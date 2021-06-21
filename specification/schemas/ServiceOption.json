@@ -36,7 +36,7 @@
               "type": "string",
               "example": "delivery-window:sunday"
             },
-            "meta-format": {
+            "meta_format": {
               "type": "object",
               "example": {
                 "required": [
