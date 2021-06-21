@@ -96,7 +96,7 @@
       "min": 0,
       "max": 100,
       "example": 19,
-      "description": "The VAT percentage on a product."
+      "description": "The VAT rate applied to the `item_value` amount."
     }
   }
 }
