@@ -35,6 +35,25 @@
             "code": {
               "type": "string",
               "example": "delivery-window:sunday"
+            },
+            "meta-format": {
+              "type": "object",
+              "example": {
+                "required": [
+                  "amount",
+                  "currency"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "description": "JSON Schema specification of optional meta information for this service option. This meta information should be specified in the meta of the relationship when posting a shipment."
             }
           }
         },
