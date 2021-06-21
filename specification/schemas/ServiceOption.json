@@ -53,7 +53,7 @@
                   }
                 }
               },
-              "description": "JSON Schema specification of optional meta information for this service option. This meta information should be specified in the meta of the relationship when posting a shipment."
+              "description": "JSON Schema specification of optional meta information for this service option. This meta information should be specified in the meta of the `service_options` relationship when posting a shipment."
             }
           }
         },
