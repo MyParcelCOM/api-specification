@@ -312,14 +312,19 @@
                             ],
                             "properties": {
                               "meta": {
-                                "type": [
-                                  "object",
-                                  "null"
+                                "type": "object",
+                                "required": [
+                                  "values"
                                 ],
-                                "description": "Optional meta information specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `meta_format` property for specific requirements per service option.",
-                                "example": {
-                                  "amount": "1200",
-                                  "currency": "EUR"
+                                "properties": {
+                                  "values": {
+                                    "type": "object",
+                                    "description": "Optional meta values specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `values_format` meta property for specific requirements per service option.",
+                                    "example": {
+                                      "amount": "1200",
+                                      "currency": "EUR"
+                                    }
+                                  }
                                 }
                               }
                             }
