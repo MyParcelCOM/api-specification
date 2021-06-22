@@ -298,7 +298,36 @@
             "service_options": {
               "oneOf": [
                 {
-                  "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ServiceOptionsRelationship"
+                    },
+                    {
+                      "properties": {
+                        "data": {
+                          "items": {
+                            "required": [
+                              "id",
+                              "type"
+                            ],
+                            "properties": {
+                              "meta": {
+                                "type": [
+                                  "object",
+                                  "null"
+                                ],
+                                "description": "Optional meta information specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `meta_format` property for specific requirements per service option.",
+                                "example": {
+                                  "amount": "1200",
+                                  "currency": "EUR"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
                 },
                 {
                   "type": "null"
