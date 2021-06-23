@@ -12,12 +12,19 @@
             "recipient_address": {
               "$ref": "#/components/schemas/BaseAddress"
             },
+            "recipient_tax_identification_numbers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/TaxIdentificationNumber"
+              }
+            },
             "recipient_tax_number": {
               "type": [
                 "string",
                 "null"
               ],
-              "example": "H111111-11"
+              "example": "H111111-11",
+              "deprecated": true
             },
             "return_address": {
               "$ref": "#/components/schemas/BaseAddress"
@@ -25,12 +32,20 @@
             "sender_address": {
               "$ref": "#/components/schemas/BaseAddress"
             },
+            "sender_tax_identification_numbers": {
+              "type": "array",
+              "description": "Sender tax numbers provided with a shipment will overwrite any tax identification numbers of the same `type` and `country_code` that are defined on the parent Organization resource of the Shop related to the Shipment.",
+              "items": {
+                "$ref": "#/components/schemas/TaxIdentificationNumber"
+              }
+            },
             "sender_tax_number": {
               "type": [
                 "string",
                 "null"
               ],
-              "example": "G666666-66"
+              "example": "G666666-66",
+              "deprecated": true
             },
             "pickup_location": {
               "oneOf": [
