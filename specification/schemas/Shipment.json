@@ -23,7 +23,7 @@
                 "string",
                 "null"
               ],
-              "example": "H111111-11",
+              "description": "Use `recipient_tax_identification_numbers` instead.",
               "deprecated": true
             },
             "return_address": {
@@ -34,7 +34,7 @@
             },
             "sender_tax_identification_numbers": {
               "type": "array",
-              "description": "Sender tax numbers provided with a shipment will overwrite any tax identification numbers of the same `type` and `country_code` that are defined on the parent Organization resource of the Shop related to the Shipment.",
+              "description": "Sender tax numbers provided with a shipment will overwrite any tax identification numbers of the same `type` and `country_code` defined on the organization of the shop related to this shipment.",
               "items": {
                 "$ref": "#/components/schemas/TaxIdentificationNumber"
               }
@@ -44,7 +44,7 @@
                 "string",
                 "null"
               ],
-              "example": "G666666-66",
+              "description": "Use `sender_tax_identification_numbers` instead.",
               "deprecated": true
             },
             "pickup_location": {
