@@ -23,19 +23,22 @@
               "$ref": "#/components/schemas/Language"
             },
             "vat_number": {
+              "deprecated": true,
               "type": "string",
               "example": "123456789MVA",
-              "description": "Value Added Tax identification number."
+              "description": "Value Added Tax identification number.<br><strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "eori_number": {
+              "deprecated": true,
               "type": "string",
               "example": "GB123456123456",
-              "description": "Economic Operators Registration and Identification number."
+              "description": "Economic Operators Registration and Identification number.<br><strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "voec_number": {
+              "deprecated": true,
               "type": "string",
               "example": "1234567",
-              "description": "VAT On E-Commerce number (Norway)."
+              "description": "VAT On E-Commerce number (Norway).<br><strong>Deprecated</strong> use `tax_identification_numbers` instead (use `vat` + `NO`)."
             },
             "currency": {
               "$ref": "#/components/schemas/Currency"
