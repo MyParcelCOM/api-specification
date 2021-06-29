@@ -35,25 +35,31 @@
               ]
             },
             "vat_number": {
+              "deprecated": true,
               "type": [
                 "string",
                 "null"
               ],
-              "example": "123456789MVA"
+              "example": "123456789MVA",
+              "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "eori_number": {
+              "deprecated": true,
               "type": [
                 "string",
                 "null"
               ],
-              "example": "GB123456123456"
+              "example": "GB123456123456",
+              "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "voec_number": {
+              "deprecated": true,
               "type": [
                 "string",
                 "null"
               ],
-              "example": "1234567"
+              "example": "1234567",
+              "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead (use `vat` + `NO`)."
             },
             "currency": {
               "oneOf": [
