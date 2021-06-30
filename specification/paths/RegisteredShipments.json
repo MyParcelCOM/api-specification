@@ -27,7 +27,7 @@
               "data": {
                 "$ref": "#/components/schemas/Shipment"
               },
-              "meta":  {
+              "meta": {
                 "type": "object",
                 "properties": {
                   "label_mime_type": {
