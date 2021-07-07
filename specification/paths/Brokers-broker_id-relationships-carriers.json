@@ -1,0 +1,67 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-broker_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "Brokers"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "enterprise.manage"
+        ]
+      }
+    ],
+    "summary": "Add carrier relationships to a broker.",
+    "description": "This endpoint adds carrier relationships to the broker with the supplied id.",
+    "requestBody": {
+      "description": "The carrier relationships to be added to the broker.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/CarrierRelationship"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The carrier relationships have been added."
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Brokers"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "enterprise.manage"
+        ]
+      }
+    ],
+    "summary": "Delete carrier relationships from a broker.",
+    "description": "This endpoint deletes carrier relationships from the broker with the supplied id.",
+    "requestBody": {
+      "description": "The carrier relationships to be deleted from the broker.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/CarrierRelationship"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The contract relationships have been deleted."
+      }
+    }
+  }
+}
