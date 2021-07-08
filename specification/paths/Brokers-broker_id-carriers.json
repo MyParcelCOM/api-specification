@@ -49,17 +49,6 @@
                               "name",
                               "created_at"
                             ]
-                          },
-                          "relationships": {
-                            "properties": {
-                              "owner": {
-                                "example": {
-                                  "links": {
-                                    "related": "$API_HOST/carriers/9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                                  }
-                                }
-                              }
-                            }
                           }
                         }
                       }
