@@ -23,7 +23,7 @@
       "content": {
         "application/vnd.api+json": {
           "schema": {
-            "$ref": "#/components/schemas/CarrierRelationship"
+            "$ref": "#/components/schemas/CarriersRelationship"
           }
         }
       }
@@ -53,7 +53,7 @@
       "content": {
         "application/vnd.api+json": {
           "schema": {
-            "$ref": "#/components/schemas/CarrierRelationship"
+            "$ref": "#/components/schemas/CarriersRelationship"
           }
         }
       }
