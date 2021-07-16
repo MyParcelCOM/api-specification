@@ -40,17 +40,7 @@
                         "required": [
                           "id",
                           "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "required": [
-                              "status",
-                              "currency",
-                              "name",
-                              "created_at"
-                            ]
-                          }
-                        }
+                        ]
                       }
                     ]
                   }
