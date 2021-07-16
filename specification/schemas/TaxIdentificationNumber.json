@@ -12,12 +12,14 @@
     },
     "number": {
       "type": "string",
-      "example": "XI123456789",
-      "description": "Eori XI number"
+      "example": "XI123456789"
     },
     "description": {
-      "type": ["string", "null"],
-      "example": "Eori XI number for Northern Ireland"
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "Eori number for Northern Ireland"
     },
     "type": {
       "type": "string",

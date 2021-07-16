@@ -38,6 +38,9 @@
   "CarrierRelationship": {
     "$ref": "./schemas/CarrierRelationship.json"
   },
+  "CarriersRelationship": {
+    "$ref": "./schemas/CarriersRelationship.json"
+  },
   "CarrierStatus": {
     "$ref": "./schemas/CarrierStatus.json"
   },

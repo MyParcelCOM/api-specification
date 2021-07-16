@@ -5,6 +5,12 @@
   "/brokers/{broker_id}": {
     "$ref": "./paths/Brokers-broker_id.json"
   },
+  "/brokers/{broker_id}/carriers": {
+    "$ref": "./paths/Brokers-broker_id-carriers.json"
+  },
+  "/brokers/{broker_id}/relationships/carriers": {
+    "$ref": "./paths/Brokers-broker_id-relationships-carriers.json"
+  },
   "/carriers": {
     "$ref": "./paths/Carriers.json"
   },

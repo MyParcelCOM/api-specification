@@ -1,0 +1,88 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-broker_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Brokers"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "enterprise.manage"
+        ]
+      }
+    ],
+    "summary": "Get the available carriers for a specific broker.",
+    "description": "This endpoint retrieves available carriers for a broker with the supplied id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the available carriers for the broker.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Carrier"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

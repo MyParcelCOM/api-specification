@@ -41,7 +41,7 @@
                     "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
                     "example": "5c868557-0827-4d21-a7f4-9820f01769f4"
                   },
-                  "carrier_statuses":  {
+                  "carrier_statuses": {
                     "type": "array",
                     "items": {
                       "$ref": "#/components/schemas/CarrierStatus"
