@@ -11,6 +11,9 @@
   "/brokers/{broker_id}/relationships/carriers": {
     "$ref": "./paths/Brokers-broker_id-relationships-carriers.json"
   },
+  "/calculate-landed-cost": {
+    "$ref": "./paths/CalculateLandedCosts.json"
+  },
   "/carriers": {
     "$ref": "./paths/Carriers.json"
   },
