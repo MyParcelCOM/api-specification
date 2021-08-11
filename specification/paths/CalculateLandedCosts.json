@@ -1,0 +1,99 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "landed_cost"
+        ]
+      }
+    ],
+    "summary": "Calculate landed costs.",
+    "description": "This endpoint returns the landed costs for the supplied products.",
+    "requestBody": {
+      "description": "The shipment containing the products.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "attributes"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "required": [
+                          "recipient_address",
+                          "sender_address",
+                          "physical_properties",
+                          "items"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "country_code"
+                            ]
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          },
+                          "items": {
+                            "items": {
+                              "required": [
+                                "description",
+                                "item_value"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Landed costs have been added to the shipment items and customs.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Shipment"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
