@@ -1,0 +1,104 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "landed_cost"
+        ]
+      }
+    ],
+    "summary": "Get hs code suggestion.",
+    "description": "This endpoint returns the hs code suggestions for the supplied product.",
+    "requestBody": {
+      "description": "The required fields for the suggestion",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "required": [
+                  "clientSKU",
+                  "clientDescription"
+                ],
+                "properties": {
+                  "clientSKU": {
+                    "type": "string"
+                  },
+                  "clientDescription": {
+                    "type": "string"
+                  },
+                  "sourceLanguage": {
+                    "type": "string"
+                  },
+                  "sourceCountry": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Landed costs have been added to the shipment items and customs.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "hurricaneUUID",
+                      "hsCode",
+                      "commodityCode",
+                      "vectorWeight",
+                      "productDescription"
+                    ],
+                    "properties": {
+                      "hurricaneUUID": {
+                        "type": "string",
+                        "example": "13822608-3a7e-494f-8bbf-c89245641bbe"
+                      },
+                      "hsCode": {
+                        "type": "string",
+                        "example": "611521"
+                      },
+                      "commodityCode": {
+                        "type": "string",
+                        "example": "6115210000"
+                      },
+                      "vectorWeight": {
+                        "type": "float",
+                        "example": 83.45
+                      },
+                      "productDescription": {
+                        "type": "string",
+                        "example": "Bottle of water"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
