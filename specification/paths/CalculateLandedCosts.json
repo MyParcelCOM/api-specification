@@ -35,28 +35,26 @@
                     "properties": {
                       "attributes": {
                         "required": [
-                          "recipient_country_code",
-                          "recipient_postal_code",
-                          "sender_country_code",
-                          "sender_postal_code",
-                          "weight",
+                          "recipient_address",
+                          "sender_address",
+                          "physical_properties",
                           "items"
                         ],
                         "properties": {
-                          "recipient_country_code": {
-                            "type": "string"
+                          "recipient_address": {
+                            "required": [
+                              "country_code"
+                            ]
                           },
-                          "recipient_postal_code": {
-                            "type": "string"
+                          "sender_address": {
+                            "required": [
+                              "country_code"
+                            ]
                           },
-                          "sender_country_code": {
-                            "type": "string"
-                          },
-                          "sender_postal_code": {
-                            "type": "string"
-                          },
-                          "weight": {
-                            "type": "integer"
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
                           },
                           "items": {
                             "items": {
