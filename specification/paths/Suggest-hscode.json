@@ -61,30 +61,30 @@
                   "items": {
                     "type": "object",
                     "required": [
-                      "hurricaneUUID",
-                      "hsCode",
-                      "commodityCode",
-                      "vectorWeight",
-                      "productDescription"
+                      "external_id",
+                      "hs_code",
+                      "commodity_code",
+                      "vector_weight",
+                      "product_description"
                     ],
                     "properties": {
-                      "hurricaneUUID": {
+                      "external_id": {
                         "type": "string",
                         "example": "13822608-3a7e-494f-8bbf-c89245641bbe"
                       },
-                      "hsCode": {
+                      "hs_code": {
                         "type": "string",
                         "example": "611521"
                       },
-                      "commodityCode": {
+                      "commodity_code": {
                         "type": "string",
                         "example": "6115210000"
                       },
-                      "vectorWeight": {
+                      "vector_weight": {
                         "type": "float",
                         "example": 83.45
                       },
-                      "productDescription": {
+                      "product_description": {
                         "type": "string",
                         "example": "Bottle of water"
                       }
