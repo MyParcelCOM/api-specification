@@ -25,21 +25,18 @@
             "properties": {
               "data": {
                 "required": [
-                  "clientSKU",
-                  "clientDescription"
+                  "sku",
+                  "description"
                 ],
                 "properties": {
-                  "clientSKU": {
+                  "sku": {
                     "type": "string"
                   },
-                  "clientDescription": {
+                  "description": {
                     "type": "string"
                   },
-                  "sourceLanguage": {
-                    "type": "string"
-                  },
-                  "sourceCountry": {
-                    "type": "string"
+                  "origin_country_code": {
+                    "$ref": "#/components/schemas/CountryCode"
                   }
                 }
               }
