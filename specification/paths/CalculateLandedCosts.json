@@ -89,7 +89,19 @@
               ],
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Shipment"
+                  "type": "object",
+                  "required": [
+                    "total_tax",
+                    "total_duty"
+                  ],
+                  "properties": {
+                    "total_tax": {
+                      "$ref": "#/components/schemas/Currency"
+                    },
+                    "total_duty": {
+                      "$ref": "#/components/schemas/Currency"
+                    }
+                  }
                 }
               }
             }
