@@ -26,9 +26,6 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/Shipment"
-                  },
-                  {
                     "required": [
                       "attributes"
                     ],
@@ -59,8 +56,15 @@
                             "type": "integer"
                           },
                           "items": {
+                            "type": "array",
                             "items": {
+                              "allOf": [
+                                {
+                                  "$ref": "#/components/schemas/BaseShipmentItem"
+                                }
+                              ],
                               "required": [
+                                "sku",
                                 "description",
                                 "item_value"
                               ]
@@ -92,7 +96,8 @@
                   "type": "object",
                   "required": [
                     "total_tax",
-                    "total_duty"
+                    "total_duty",
+                    "items"
                   ],
                   "properties": {
                     "total_tax": {
@@ -100,6 +105,12 @@
                     },
                     "total_duty": {
                       "$ref": "#/components/schemas/Currency"
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/BaseShipmentItem"
+                      }
                     }
                   }
                 }
