@@ -11,8 +11,26 @@
         ]
       }
     ],
-    "summary": "Get all addresses in address books.",
+    "summary": "Get all addresses for a user.",
     "description": "This endpoint retrieves all address entries that the requesting user has access to.",
+    "parameters": [
+      {
+        "name": "filter[search]",
+        "in": "query",
+        "description": "String of characters you want to look for in an address.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[organization]",
+        "in": "query",
+        "description": "Comma separated string of organization ids to filter by.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the addresses.",
@@ -95,10 +113,10 @@
         ]
       }
     ],
-    "summary": "Create a new address book entry.",
-    "description": "This endpoint creates a new entry in the address book for the post data.",
+    "summary": "Create a new address entry.",
+    "description": "This endpoint creates a new address from the posted data.",
     "requestBody": {
-      "description": "The address book entry to be created.",
+      "description": "The address entry to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
