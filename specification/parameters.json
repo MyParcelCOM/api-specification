@@ -2,6 +2,9 @@
   "header-files": {
     "$ref": "./parameters/header-files.json"
   },
+  "path-address_id": {
+    "$ref": "./parameters/path-address_id.json"
+  },
   "path-broker_id": {
     "$ref": "./parameters/path-broker_id.json"
   },

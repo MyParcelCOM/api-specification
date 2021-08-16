@@ -2,6 +2,9 @@
   "/addresses": {
     "$ref": "./paths/Addresses.json"
   },
+  "/addresses/{address_id}": {
+    "$ref": "./paths/Addresses-address_id.json"
+  },
   "/brokers": {
     "$ref": "./paths/Brokers.json"
   },
