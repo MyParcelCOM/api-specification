@@ -2,6 +2,9 @@
   "Address": {
     "$ref": "./schemas/Address.json"
   },
+  "AddressResource": {
+    "$ref": "./schemas/AddressResource.json"
+  },
   "Barcode": {
     "$ref": "./schemas/Barcode.json"
   },

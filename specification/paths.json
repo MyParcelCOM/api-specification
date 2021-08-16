@@ -1,4 +1,7 @@
 {
+  "/addresses": {
+    "$ref": "./paths/Addresses.json"
+  },
   "/brokers": {
     "$ref": "./paths/Brokers.json"
   },

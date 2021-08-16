@@ -1,14 +1,55 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/BaseAddress"
+      "$ref": "#/components/schemas/AddressResource"
     },
     {
       "required": [
-        "street_1",
-        "city",
-        "country_code"
-      ]
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "allOf": [
+            {
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ]
+            },
+            {
+              "$ref": "#/components/schemas/BaseAddress"
+            }
+          ]
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "organization"
+          ],
+          "properties": {
+            "organization": {
+              "$ref": "#/components/schemas/OrganizationRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/addresses/1154bfbc-322b-48d9-8f78-be0b467f258d"
+            }
+          }
+        }
+      }
     }
   ]
 }
