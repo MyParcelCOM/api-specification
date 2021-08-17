@@ -20,7 +20,7 @@
     "description": "This endpoint retrieves the address with the supplied id.",
     "responses": {
       "200": {
-        "description": "Retrieved the shop.",
+        "description": "Retrieved the address.",
         "content": {
           "application/vnd.api+json": {
             "schema": {

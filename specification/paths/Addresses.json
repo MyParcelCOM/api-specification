@@ -23,12 +23,7 @@
         }
       },
       {
-        "name": "filter[organization]",
-        "in": "query",
-        "description": "Comma separated string of organization ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-organization"
       }
     ],
     "responses": {

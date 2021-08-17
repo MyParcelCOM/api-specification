@@ -137,8 +137,8 @@
   "query-shipments-filter-shop": {
     "$ref": "./parameters/query-shipments-filter-shop.json"
   },
-  "query-shipments-filter-organization": {
-    "$ref": "./parameters/query-shipments-filter-organization.json"
+  "query-filter-organization": {
+    "$ref": "./parameters/query-filter-organization.json"
   },
   "query-shipments-filter-carrier": {
     "$ref": "./parameters/query-shipments-filter-carrier.json"
