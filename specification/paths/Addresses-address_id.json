@@ -1,0 +1,151 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-address_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Addresses"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage",
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get an address by id.",
+    "description": "This endpoint retrieves the address with the supplied id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the address.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Address"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Addresses"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Update an address by id.",
+    "description": "This endpoint updates the address with the supplied id.",
+    "requestBody": {
+      "description": "The address object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AddressResource"
+                  },
+                  {
+                    "required": [
+                      "id",
+                      "attributes"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "$ref": "#/components/schemas/BaseAddress"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The address is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Address"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Addresses"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Delete an address by id.",
+    "description": "This endpoint deletes the address with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The address has been deleted."
+      }
+    }
+  }
+}

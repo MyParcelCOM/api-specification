@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^addresses$",
+      "example": "addresses"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+      "example": "1154bfbc-322b-48d9-8f78-be0b467f258d"
+    }
+  }
+}

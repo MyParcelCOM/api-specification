@@ -1,0 +1,176 @@
+{
+  "get": {
+    "tags": [
+      "Addresses"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage",
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get all addresses for a user.",
+    "description": "This endpoint retrieves all address entries that the requesting user has access to.",
+    "parameters": [
+      {
+        "name": "filter[search]",
+        "in": "query",
+        "description": "String of characters you want to look for in an address.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-organization"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the addresses.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Address"
+                      },
+                      {
+                        "required": [
+                          "id",
+                          "links"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/addresses?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Addresses"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new address entry.",
+    "description": "This endpoint creates a new address from the posted data.",
+    "requestBody": {
+      "description": "The address entry to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Address"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The address entry is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Address"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

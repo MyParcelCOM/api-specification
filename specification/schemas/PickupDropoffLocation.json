@@ -37,7 +37,7 @@
             "address": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Address"
+                  "$ref": "#/components/schemas/BaseAddress"
                 },
                 {
                   "required": [
