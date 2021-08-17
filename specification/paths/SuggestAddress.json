@@ -27,8 +27,7 @@
                 "type": "object",
                 "properties": {
                   "country_code": {
-                    "type": "string",
-                    "example": "NL"
+                    "$ref": "#/components/schemas/CountryCode"
                   },
                   "postal_code": {
                     "type": "string",
@@ -81,8 +80,7 @@
                         "example": "Hoofddorp"
                       },
                       "country_code": {
-                        "type": "string",
-                        "example": "NL"
+                        "$ref": "#/components/schemas/CountryCode"
                       },
                       "postal_code": {
                         "type": "string",
