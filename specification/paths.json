@@ -194,6 +194,9 @@
   "/statuses/{status_id}": {
     "$ref": "./paths/Statuses-status_id.json"
   },
+  "/suggest-hscode": {
+    "$ref": "./paths/Suggest-hscode.json"
+  },
   "/system-messages": {
     "$ref": "./paths/SystemMessages.json"
   },

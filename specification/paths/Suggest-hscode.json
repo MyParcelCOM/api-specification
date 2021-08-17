@@ -1,0 +1,98 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "landed_cost"
+        ]
+      }
+    ],
+    "summary": "Get HS code suggestions.",
+    "description": "This endpoint returns Harmonized System code suggestions for the supplied product.",
+    "requestBody": {
+      "description": "The required fields for the suggestion",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "required": [
+                  "sku",
+                  "description"
+                ],
+                "properties": {
+                  "sku": {
+                    "type": "string",
+                    "example": "123456789"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Water bottle"
+                  },
+                  "origin_country_code": {
+                    "$ref": "#/components/schemas/CountryCode"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Harmonized System code suggestions have been returned.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "hs_code",
+                      "commodity_code",
+                      "vector_weight",
+                      "product_description"
+                    ],
+                    "properties": {
+                      "hs_code": {
+                        "type": "string",
+                        "example": "611521"
+                      },
+                      "commodity_code": {
+                        "type": "string",
+                        "example": "6115210000"
+                      },
+                      "vector_weight": {
+                        "type": "float",
+                        "example": 83.45
+                      },
+                      "product_description": {
+                        "type": "string",
+                        "example": "Bottle of water"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
