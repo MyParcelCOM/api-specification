@@ -10,8 +10,8 @@
         ]
       }
     ],
-    "summary": "Get hs code suggestion.",
-    "description": "This endpoint returns the hs code suggestions for the supplied product.",
+    "summary": "Get HS code suggestions.",
+    "description": "This endpoint returns Harmonized System code suggestions for the supplied product.",
     "requestBody": {
       "description": "The required fields for the suggestion",
       "required": true,
@@ -30,10 +30,12 @@
                 ],
                 "properties": {
                   "sku": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "123456789"
                   },
                   "description": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Water bottle"
                   },
                   "origin_country_code": {
                     "$ref": "#/components/schemas/CountryCode"
@@ -47,7 +49,7 @@
     },
     "responses": {
       "200": {
-        "description": "Landed costs have been added to the shipment items and customs.",
+        "description": "Harmonized System code suggestions have been returned.",
         "content": {
           "application/json": {
             "schema": {
@@ -61,17 +63,12 @@
                   "items": {
                     "type": "object",
                     "required": [
-                      "external_id",
                       "hs_code",
                       "commodity_code",
                       "vector_weight",
                       "product_description"
                     ],
                     "properties": {
-                      "external_id": {
-                        "type": "string",
-                        "example": "13822608-3a7e-494f-8bbf-c89245641bbe"
-                      },
                       "hs_code": {
                         "type": "string",
                         "example": "611521"
