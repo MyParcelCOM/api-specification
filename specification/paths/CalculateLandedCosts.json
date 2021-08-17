@@ -24,57 +24,85 @@
             ],
             "properties": {
               "data": {
-                "allOf": [
-                  {
-                    "required": [
-                      "attributes"
-                    ],
-                    "properties": {
-                      "attributes": {
-                        "required": [
-                          "recipient_country_code",
-                          "recipient_postal_code",
-                          "sender_country_code",
-                          "sender_postal_code",
-                          "weight",
-                          "items"
-                        ],
-                        "properties": {
-                          "recipient_country_code": {
-                            "type": "string"
-                          },
-                          "recipient_postal_code": {
-                            "type": "string"
-                          },
-                          "sender_country_code": {
-                            "type": "string"
-                          },
-                          "sender_postal_code": {
-                            "type": "string"
-                          },
-                          "weight": {
-                            "type": "integer"
-                          },
-                          "items": {
-                            "type": "array",
-                            "items": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/components/schemas/BaseShipmentItem"
-                                }
-                              ],
-                              "required": [
-                                "sku",
-                                "description",
-                                "item_value"
-                              ]
+                "type": "object",
+                "required": [
+                  "recipient_country_code",
+                  "recipient_postal_code",
+                  "sender_country_code",
+                  "sender_postal_code",
+                  "weight",
+                  "items"
+                ],
+                "properties": {
+                  "recipient_country_code": {
+                    "$ref": "#/components/schemas/CountryCode"
+                  },
+                  "recipient_postal_code": {
+                    "type": "string",
+                    "example": "NW1 6XE"
+                  },
+                  "sender_country_code": {
+                    "$ref": "#/components/schemas/CountryCode"
+                  },
+                  "sender_postal_code": {
+                    "type": "string",
+                    "example": "NW1 6XE"
+                  },
+                  "weight": {
+                    "type": "integer",
+                    "example": 5000,
+                    "description": "Weight in grams."
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "oneOf": [
+                        {
+                          "required": [
+                            "description",
+                            "item_value",
+                            "hs_code"
+                          ],
+                          "properties": {
+                            "description": {
+                              "type": "string",
+                              "example": "OnePlus X"
+                            },
+                            "item_value": {
+                              "$ref": "#/components/schemas/Price"
+                            },
+                            "hs_code": {
+                              "type": "string",
+                              "pattern": "^[0-9.]+$",
+                              "example": "8517.12.00"
+                            }
+                          }
+                        },
+                        {
+                          "required": [
+                            "description",
+                            "item_value",
+                            "sku"
+                          ],
+                          "properties": {
+                            "description": {
+                              "type": "string",
+                              "example": "OnePlus X"
+                            },
+                            "item_value": {
+                              "$ref": "#/components/schemas/Price"
+                            },
+                            "sku": {
+                              "type": "string",
+                              "example": "123456789"
                             }
                           }
                         }
-                      }
-                    }
+                      ]
+                    },
+                    "description": "Shipment items containing `description`, `item_value` and `hs_code`. If the `hs_code` is not supplied, the `sku` is required and an HS code suggestion request will be triggered on your behalf, to determine the best matching HS code."
                   }
-                ]
+                }
               }
             }
           }
@@ -83,7 +111,7 @@
     },
     "responses": {
       "200": {
-        "description": "Landed costs have been added to the shipment items and customs.",
+        "description": "Landed costs have been calculated.",
         "content": {
           "application/json": {
             "schema": {
@@ -100,17 +128,43 @@
                     "items"
                   ],
                   "properties": {
-                    "total_tax": {
-                      "$ref": "#/components/schemas/Currency"
-                    },
-                    "total_duty": {
-                      "$ref": "#/components/schemas/Currency"
-                    },
                     "items": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/BaseShipmentItem"
+                        "required": [
+                          "description",
+                          "item_value",
+                          "hs_code",
+                          "tax",
+                          "duty"
+                        ],
+                        "properties": {
+                          "description": {
+                            "type": "string",
+                            "example": "OnePlus X"
+                          },
+                          "item_value": {
+                            "$ref": "#/components/schemas/Price"
+                          },
+                          "hs_code": {
+                            "type": "string",
+                            "pattern": "^[0-9.]+$",
+                            "example": "8517.12.00"
+                          },
+                          "tax": {
+                            "$ref": "#/components/schemas/Price"
+                          },
+                          "duty": {
+                            "$ref": "#/components/schemas/Price"
+                          }
+                        }
                       }
+                    },
+                    "total_tax": {
+                      "$ref": "#/components/schemas/Price"
+                    },
+                    "total_duty": {
+                      "$ref": "#/components/schemas/Price"
                     }
                   }
                 }
