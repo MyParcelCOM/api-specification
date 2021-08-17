@@ -53,6 +53,9 @@
                     "example": 5000,
                     "description": "Weight in grams."
                   },
+                  "shipping_value": {
+                    "$ref": "#/components/schemas/Price"
+                  },
                   "items": {
                     "type": "array",
                     "items": {
