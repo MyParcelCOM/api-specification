@@ -1,0 +1,9 @@
+{
+  "name": "address_id",
+  "in": "path",
+  "description": "Id of the address.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}

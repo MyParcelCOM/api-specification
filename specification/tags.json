@@ -1,5 +1,10 @@
 [
   {
+    "name": "Addresses",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "Brokers",
     "externalDocs": {
     }
