@@ -10,8 +10,8 @@
         ]
       }
     ],
-    "summary": "Update given shipments with the provided consolidation shipment id.",
-    "description": "This endpoint updated provided shipment ids with the consolidation shipment id.",
+    "summary": "Consolidate shipments.",
+    "description": "This endpoint links the provided shipments to a consolidation shipment.",
     "requestBody": {
       "description": "The consolidation shipment id and the shipment ids.",
       "required": true,
