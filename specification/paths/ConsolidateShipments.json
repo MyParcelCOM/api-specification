@@ -28,7 +28,7 @@
                   "consolidation_shipment_id": {
                     "$ref": "#/components/schemas/Uuid"
                   },
-                  "shipments": {
+                  "shipment_ids": {
                     "type": "array",
                     "items": {
                       "$ref": "#/components/schemas/Uuid"
