@@ -66,7 +66,7 @@
         "$ref": "#/components/parameters/query-shipments-filter-sender_address-country_code"
       },
       {
-        "$ref": "#/components/parameters/query-shipments-filter-consolidation_shipment.json"
+        "$ref": "#/components/parameters/query-shipments-filter-consolidation_shipment"
       }
     ],
     "responses": {
