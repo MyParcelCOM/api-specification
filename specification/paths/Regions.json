@@ -59,8 +59,7 @@
         "description": "Comma separated string of categories to filter by.",
         "schema": {
           "type": "string"
-        },
-        "example": "$API_HOST/regions?filter[category]=country,continent"
+        }
       }
     ],
     "responses": {

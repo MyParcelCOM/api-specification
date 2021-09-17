@@ -55,12 +55,11 @@
         }
       },
       {
-        "deprecated": true,
-        "name": "filter[address_from][region_code]",
+        "name": "filter[address_from][state_code]",
         "in": "query",
-        "description": "<s>Region code of origin location to filter by.</s>",
+        "description": "State code of origin location to filter by.",
         "schema": {
-          "$ref": "#/components/schemas/RegionCode"
+          "$ref": "#/components/schemas/StateCode"
         }
       },
       {
@@ -80,12 +79,11 @@
         }
       },
       {
-        "deprecated": true,
-        "name": "filter[address_to][region_code]",
+        "name": "filter[address_to][state_code]",
         "in": "query",
-        "description": "<s>Region code of destination location to filter by.</s>",
+        "description": "State code of destination location to filter by.",
         "schema": {
-          "$ref": "#/components/schemas/RegionCode"
+          "$ref": "#/components/schemas/StateCode"
         }
       },
       {
