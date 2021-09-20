@@ -1,4 +1,5 @@
 {
+  "deprecated": true,
   "type": "object",
   "required": [
     "data"

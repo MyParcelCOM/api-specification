@@ -20,7 +20,6 @@
         "required": true,
         "schema": {
           "type": "string",
-          "example": "month",
           "enum": [
             "month"
           ]
