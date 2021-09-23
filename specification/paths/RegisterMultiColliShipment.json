@@ -138,6 +138,12 @@
                   },
                   "shop_id": {
                     "$ref": "#/components/schemas/Uuid"
+                  },
+                  "service_option_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Uuid"
+                    }
                   }
                 }
               }
