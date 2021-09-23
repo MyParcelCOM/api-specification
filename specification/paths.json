@@ -44,6 +44,9 @@
   "/clients/{client_id}": {
     "$ref": "./paths/Clients-client_id.json"
   },
+  "/consolidate-shipments": {
+    "$ref": "./paths/ConsolidateShipments.json"
+  },
   "/contracts": {
     "$ref": "./paths/Contracts.json"
   },

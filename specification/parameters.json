@@ -154,5 +154,8 @@
   },
   "query-shipments-filter-sender_address-country_code": {
     "$ref": "./parameters/query-shipments-filter-sender_address-country_code.json"
+  },
+  "query-shipments-filter-consolidation_shipment": {
+    "$ref": "./parameters/query-shipments-filter-consolidation_shipment.json"
   }
 }

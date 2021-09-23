@@ -7,8 +7,15 @@
     "country_code": {
       "$ref": "#/components/schemas/CountryCode"
     },
-    "region_code": {
-      "$ref": "#/components/schemas/RegionCode"
+    "state_code": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/StateCode"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "postal_code": {
       "type": "string",

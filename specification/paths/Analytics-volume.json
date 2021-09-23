@@ -20,7 +20,6 @@
         "required": true,
         "schema": {
           "type": "string",
-          "example": "carrier",
           "enum": [
             "carrier",
             "service",
@@ -35,7 +34,6 @@
         "required": true,
         "schema": {
           "type": "string",
-          "example": "month",
           "enum": [
             "month"
           ]
@@ -88,6 +86,9 @@
       },
       {
         "$ref": "#/components/parameters/query-shipments-filter-sender_address-country_code"
+      },
+      {
+        "$ref": "#/components/parameters/query-shipments-filter-consolidation_shipment"
       }
     ],
     "responses": {

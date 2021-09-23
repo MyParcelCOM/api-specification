@@ -1,0 +1,56 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "experimental"
+        ]
+      }
+    ],
+    "summary": "Consolidate shipments.",
+    "description": "This endpoint links the provided shipments to a consolidation shipment.",
+    "requestBody": {
+      "description": "The consolidation shipment id and the shipment ids.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "properties": {
+                  "consolidation_shipment_id": {
+                    "$ref": "#/components/schemas/Uuid"
+                  },
+                  "shipment_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Uuid"
+                    },
+                    "example": [
+                      "d2eef012-f2fe-4f5f-af05-1acd86c51c3b",
+                      "170cbede-2401-40f5-aaea-7b0d2986a250",
+                      "883a89b1-40b9-44ab-9d71-f47ea5e0ca98"
+                    ],
+                    "description": "Uuids of shipments that need updating."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The consolidation id has been added to the shipments."
+      }
+    }
+  }
+}
