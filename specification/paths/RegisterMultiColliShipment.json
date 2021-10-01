@@ -144,8 +144,7 @@
                     "items": {
                       "type": "object",
                       "required": [
-                        "id",
-                        "values"
+                        "id"
                       ],
                       "properties": {
                         "id": {
