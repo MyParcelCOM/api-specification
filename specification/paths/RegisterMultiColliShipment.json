@@ -139,7 +139,7 @@
                   "shop_id": {
                     "$ref": "#/components/schemas/Uuid"
                   },
-                  "service_option_ids": {
+                  "service_options": {
                     "type": "array",
                     "items": {
                       "type": "object",
