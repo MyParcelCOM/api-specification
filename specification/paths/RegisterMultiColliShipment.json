@@ -142,7 +142,30 @@
                   "service_option_ids": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/Uuid"
+                      "type": "object",
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "format": "uuid",
+                          "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                          "example": "1154bfbc-322b-48d9-8f78-be0b467f258d"
+                        },
+                        "values": {
+                          "properties": {
+                            "values": {
+                              "type": "object",
+                              "description": "Optional values specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `values_format` meta property for specific requirements per service option.",
+                              "example": {
+                                "amount": 1200,
+                                "currency": "EUR"
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
