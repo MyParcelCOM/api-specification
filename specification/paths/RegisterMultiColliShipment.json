@@ -154,15 +154,11 @@
                           "example": "1154bfbc-322b-48d9-8f78-be0b467f258d"
                         },
                         "values": {
-                          "properties": {
-                            "values": {
-                              "type": "object",
-                              "description": "Optional values specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `values_format` meta property for specific requirements per service option.",
-                              "example": {
-                                "amount": 1200,
-                                "currency": "EUR"
-                              }
-                            }
+                          "type": "object",
+                          "description": "Optional values specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `values_format` meta property for specific requirements per service option.",
+                          "example": {
+                            "amount": 1200,
+                            "currency": "EUR"
                           }
                         }
                       }
