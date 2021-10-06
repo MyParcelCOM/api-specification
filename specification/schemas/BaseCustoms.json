@@ -14,7 +14,11 @@
       "example": "sample_merchandise"
     },
     "invoice_number": {
-      "type": "string",
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Required when `content_type` is either `merchandise`, `sample_merchandise` or `returned_merchandise`.",
       "example": "9000"
     },
     "non_delivery": {
