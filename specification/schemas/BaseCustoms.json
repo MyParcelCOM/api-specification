@@ -3,15 +3,22 @@
   "additionalProperties": false,
   "properties": {
     "content_type": {
-      "type": "string",
-      "enum": [
-        "merchandise",
-        "sample_merchandise",
-        "returned_merchandise",
-        "gifts",
-        "documents"
-      ],
-      "example": "sample_merchandise"
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "merchandise",
+            "sample_merchandise",
+            "returned_merchandise",
+            "gifts",
+            "documents"
+          ],
+          "example": "sample_merchandise"
+        },
+        {
+          "type": null
+        }
+      ]
     },
     "invoice_number": {
       "type": [
@@ -22,22 +29,36 @@
       "example": "9000"
     },
     "non_delivery": {
-      "type": "string",
-      "enum": [
-        "return",
-        "abandon"
-      ],
-      "example": "return",
-      "description": "Action when the parcel cannot be delivered."
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "return",
+            "abandon"
+          ],
+          "example": "return",
+          "description": "Action when the parcel cannot be delivered."
+        },
+        {
+          "type": null
+        }
+      ]
     },
     "incoterm": {
-      "type": "string",
-      "enum": [
-        "DAP",
-        "DDP"
-      ],
-      "example": "DAP",
-      "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid)."
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "DAP",
+            "DDP"
+          ],
+          "example": "DAP",
+          "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid)."
+        },
+        {
+          "type": null
+        }
+      ]
     },
     "shipping_value": {
       "oneOf": [
