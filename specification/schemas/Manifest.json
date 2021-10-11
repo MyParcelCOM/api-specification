@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MinimalManifest"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Oktober manifest"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "file": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/FileRelationship"
+                },
+                {
+                  "readOnly": true
+                }
+              ]
+            },
+            "organization": {
+              "$ref": "#/components/schemas/OrganizationRelationship"
+            },
+            "shipments": {
+              "$ref": "#/components/schemas/ShipmentsRelationship"
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/manifests/ce7f6752-34e0-49a1-a832-bcc209450ea8"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

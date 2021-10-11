@@ -158,6 +158,9 @@
   "LiabilityCoveragesRelationship": {
     "$ref": "./schemas/LiabilityCoveragesRelationship.json"
   },
+  "Manifest": {
+    "$ref": "./schemas/Manifest.json"
+  },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
   },
@@ -187,6 +190,9 @@
   },
   "MinimalLiabilityCoverage": {
     "$ref": "./schemas/MinimalLiabilityCoverage.json"
+  },
+  "MinimalManifest": {
+    "$ref": "./schemas/MinimalManifest.json"
   },
   "MinimalOrganization": {
     "$ref": "./schemas/MinimalOrganization.json"
@@ -316,6 +322,9 @@
   },
   "ShipmentRelationship": {
     "$ref": "./schemas/ShipmentRelationship.json"
+  },
+  "ShipmentsRelationship": {
+    "$ref": "./schemas/ShipmentsRelationship.json"
   },
   "ShipmentResource": {
     "$ref": "./schemas/ShipmentResource.json"

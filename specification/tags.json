@@ -82,6 +82,11 @@
     }
   },
   {
+    "name": "Manifests",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "Organizations",
     "externalDocs": {
     }

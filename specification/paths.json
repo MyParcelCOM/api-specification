@@ -95,6 +95,9 @@
   "/liability-coverages/{liability_coverage_id}": {
     "$ref": "./paths/LiabilityCoverage-liability_coverage_id.json"
   },
+  "/manifests": {
+    "$ref": "./paths/Manifests.json"
+  },
   "/organizations": {
     "$ref": "./paths/Organizations.json"
   },
