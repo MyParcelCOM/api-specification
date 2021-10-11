@@ -1,0 +1,73 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-manifest_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Manifests"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Get a manifest by id.",
+    "description": "This endpoint retrieves the manifest with the supplied id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the manifest.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Manifest"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "attributes",
+                        "relationships",
+                        "links"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "created_at"
+                          ]
+                        },
+                        "relationships": {
+                          "required": [
+                            "organization",
+                            "shipments"
+                          ]
+                        },
+                        "links": {
+                          "required": [
+                            "self"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
