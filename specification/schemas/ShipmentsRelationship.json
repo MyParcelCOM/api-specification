@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ShipmentResource"
+          },
+          {
+            "required": [
+              "id"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
