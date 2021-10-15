@@ -7,30 +7,7 @@
     "data": {
       "type": "array",
       "items": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/MinimalIntegration"
-          },
-          {
-            "properties": {
-              "meta": {
-                "type": "object",
-                "properties": {
-                  "sync_at": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Time"
-                      },
-                      {
-                        "description": "Exact time when the MyParcel.com API should synchronise shipments with the integration."
-                      }
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        ]
+        "$ref": "#/components/schemas/MinimalIntegration"
       }
     }
   }
