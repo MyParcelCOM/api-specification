@@ -91,14 +91,6 @@
                       "properties": {
                         "meta": {
                           "properties": {
-                            "credentials": {
-                              "type": "object",
-                              "example": {
-                                "username": "your_username",
-                                "password": "your_password"
-                              },
-                              "description": "The credentials required to communicate with the integration as defined by the `credentials_format` of the integration."
-                            },
                             "client_id": {
                               "type": "string",
                               "format": "uuid",
