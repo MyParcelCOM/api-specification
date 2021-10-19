@@ -26,10 +26,10 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "file": {
+            "files": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/FileRelationship"
+                  "$ref": "#/components/schemas/FilesRelationship"
                 },
                 {
                   "readOnly": true
