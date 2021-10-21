@@ -30,25 +30,6 @@
               "example": "marketplace",
               "description": "A unique lowercase code for the integration."
             },
-            "credentials_format": {
-              "type": "object",
-              "example": {
-                "additionalProperties": false,
-                "required": [
-                  "marketplace_username",
-                  "marketplace_password"
-                ],
-                "properties": {
-                  "marketplace_username": {
-                    "type": "string"
-                  },
-                  "marketplace_password": {
-                    "type": "string"
-                  }
-                }
-              },
-              "description": "JSON Schema specification of the credentials required to communicate with the integration."
-            },
             "description": {
               "type": "string",
               "example": "Marketplace integration to import your Marketplace orders into the MyParcel.com API.",
@@ -63,6 +44,21 @@
               "type": "string",
               "example": "https://myparcel.com/logo.png",
               "description": "A link to a logo of the integration platform."
+            },
+            "tags": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Any custom tag. Used to indicate meta-data about the integration.",
+                    "example": "plugin"
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"

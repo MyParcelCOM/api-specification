@@ -290,6 +290,17 @@
                 }
               ]
             },
+            "multi_colli_shipment": {
+              "readOnly": true,
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentRelationship"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "parent": {
               "oneOf": [
                 {

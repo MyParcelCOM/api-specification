@@ -1,0 +1,9 @@
+{
+  "name": "manifest_id",
+  "in": "path",
+  "description": "Id of the manifest.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}
