@@ -50,8 +50,8 @@
                           "relationships": {
                             "type": "object",
                             "required": [
-                              "organization",
-                              "shipments"
+                              "shipments",
+                              "shop"
                             ]
                           },
                           "links": {
@@ -147,8 +147,8 @@
                       "relationships": {
                         "type": "object",
                         "required": [
-                          "organization",
-                          "shipments"
+                          "shipments",
+                          "shop"
                         ]
                       }
                     }
@@ -194,8 +194,8 @@
                         "relationships": {
                           "type": "object",
                           "required": [
-                            "organization",
-                            "shipments"
+                            "shipments",
+                            "shop"
                           ]
                         },
                         "links": {

@@ -51,8 +51,8 @@
                         },
                         "relationships": {
                           "required": [
-                            "organization",
-                            "shipments"
+                            "shipments",
+                            "shop"
                           ]
                         },
                         "links": {

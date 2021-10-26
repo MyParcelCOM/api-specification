@@ -36,11 +36,11 @@
                 }
               ]
             },
-            "organization": {
-              "$ref": "#/components/schemas/OrganizationRelationship"
-            },
             "shipments": {
               "$ref": "#/components/schemas/ShipmentsRelationship"
+            },
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
             }
           }
         },
