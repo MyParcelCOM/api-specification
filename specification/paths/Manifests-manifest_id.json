@@ -11,7 +11,8 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
@@ -50,8 +51,8 @@
                         },
                         "relationships": {
                           "required": [
-                            "organization",
-                            "shipments"
+                            "shipments",
+                            "shop"
                           ]
                         },
                         "links": {
