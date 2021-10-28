@@ -101,6 +101,9 @@
   "/manifests/{manifest_id}": {
     "$ref": "./paths/Manifests-manifest_id.json"
   },
+  "/manifests/{manifest_id}/files/{file_id}": {
+    "$ref": "./paths/Manifests-manifest_id-Files-file_id.json"
+  },
   "/organizations": {
     "$ref": "./paths/Organizations.json"
   },
