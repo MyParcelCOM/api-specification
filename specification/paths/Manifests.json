@@ -13,6 +13,16 @@
     ],
     "summary": "Get all available manifests.",
     "description": "This endpoint retrieves manifests available to your API client.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`files`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the manifests.",
@@ -66,6 +76,9 @@
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ManifestIncludes"
                 },
                 "links": {
                   "type": "object",
