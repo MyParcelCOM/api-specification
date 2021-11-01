@@ -8,6 +8,7 @@
         "null"
       ],
       "minimum": 1,
+      "maximum": 2147483647,
       "example": 150,
       "description": "Height in millimeters."
     },
@@ -17,6 +18,7 @@
         "null"
       ],
       "minimum": 1,
+      "maximum": 2147483647,
       "example": 300,
       "description": "Width in millimeters."
     },
@@ -26,6 +28,7 @@
         "null"
       ],
       "minimum": 1,
+      "maximum": 2147483647,
       "example": 500,
       "description": "Length in millimeters."
     },
@@ -35,12 +38,14 @@
         "null"
       ],
       "minimum": 0.01,
+      "maximum": 2147483647,
       "example": 22.5,
       "description": "Volume in liters. (dm3)"
     },
     "weight": {
       "type": "integer",
       "minimum": 1,
+      "maximum": 2147483647,
       "example": 5000,
       "description": "Weight in grams."
     },
@@ -51,6 +56,7 @@
         "null"
       ],
       "minimum": 1,
+      "maximum": 2147483647,
       "example": 4500,
       "description": "Volumetric weight in grams. Calculated by the API by multiplying shipment dimensions (if present) and dividing them by 5000: (height in mm * length in mm * width in mm) / 5000."
     }
