@@ -6,12 +6,23 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
     "summary": "Get all available manifests.",
     "description": "This endpoint retrieves manifests available to your API client.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`files`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the manifests.",
@@ -49,8 +60,8 @@
                           "relationships": {
                             "type": "object",
                             "required": [
-                              "organization",
-                              "shipments"
+                              "shipments",
+                              "shop"
                             ]
                           },
                           "links": {
@@ -65,6 +76,9 @@
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ManifestIncludes"
                 },
                 "links": {
                   "type": "object",
@@ -146,8 +160,8 @@
                       "relationships": {
                         "type": "object",
                         "required": [
-                          "organization",
-                          "shipments"
+                          "shipments",
+                          "shop"
                         ]
                       }
                     }
@@ -193,8 +207,8 @@
                         "relationships": {
                           "type": "object",
                           "required": [
-                            "organization",
-                            "shipments"
+                            "shipments",
+                            "shop"
                           ]
                         },
                         "links": {

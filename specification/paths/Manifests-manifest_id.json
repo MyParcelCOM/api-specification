@@ -11,12 +11,23 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
     "summary": "Get a manifest by id.",
     "description": "This endpoint retrieves the manifest with the supplied id.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`files`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the manifest.",
@@ -50,8 +61,8 @@
                         },
                         "relationships": {
                           "required": [
-                            "organization",
-                            "shipments"
+                            "shipments",
+                            "shop"
                           ]
                         },
                         "links": {
@@ -62,6 +73,9 @@
                       }
                     }
                   ]
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ManifestIncludes"
                 }
               }
             }

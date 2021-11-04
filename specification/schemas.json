@@ -161,6 +161,9 @@
   "Manifest": {
     "$ref": "./schemas/Manifest.json"
   },
+  "ManifestIncludes": {
+    "$ref": "./schemas/ManifestIncludes.json"
+  },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
   },
