@@ -39,7 +39,8 @@
               "<",
               ">=",
               "<=",
-              "contains"
+              "contains",
+              "in"
             ],
             "example": "=="
           },
@@ -50,7 +51,8 @@
           "value": {
             "type": [
               "string",
-              "number"
+              "number",
+              "array"
             ],
             "example": 1000
           }
