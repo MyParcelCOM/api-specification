@@ -47,6 +47,11 @@
               "example": 12.5,
               "description": "Volume in liters. (dm3)"
             },
+            "is_dynamic": {
+              "type": "boolean",
+              "default": false,
+              "description": "When a service rate is dynamic, it's price depends on complicated carrier logic. You can use the <a href='#tag/RPC/paths/~1get-dynamic-service-rates/post'>/get-dynamic-service-rates</a> RPC endpoint to retrieve the current rates from the carrier."
+            },
             "price": {
               "$ref": "#/components/schemas/Price"
             },

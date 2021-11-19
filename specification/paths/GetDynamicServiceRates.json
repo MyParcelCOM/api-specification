@@ -1,0 +1,142 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Get dynamic service rates.",
+    "description": "This endpoint retrieves service rates from the carrier using the specified shipment. A service and contract are required to know which carrier to communicate with.",
+    "requestBody": {
+      "description": "The shipment object with a service and contract.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "recipient_address",
+                          "sender_address",
+                          "physical_properties"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "required": [
+                          "contract",
+                          "service"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Retrieved the service rates.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ServiceRate"
+                      },
+                      {
+                        "properties": {
+                          "relationships": {
+                            "properties": {
+                              "service_options": {
+                                "properties": {
+                                  "data": {
+                                    "items": {
+                                      "required": [
+                                        "id",
+                                        "type",
+                                        "meta"
+                                      ],
+                                      "properties": {
+                                        "meta": {
+                                          "required": [
+                                            "included"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
