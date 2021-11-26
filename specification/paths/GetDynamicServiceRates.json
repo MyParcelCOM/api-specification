@@ -86,7 +86,7 @@
       "200": {
         "description": "Retrieved the service rates.",
         "content": {
-          "application/vnd.api+json": {
+          "application/json": {
             "schema": {
               "type": "object",
               "required": [
