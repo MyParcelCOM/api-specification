@@ -17,7 +17,7 @@
       "description": "The shipment object with a service and contract.",
       "required": true,
       "content": {
-        "application/vnd.api+json": {
+        "application/json": {
           "schema": {
             "type": "object",
             "required": [
