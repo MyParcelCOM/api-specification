@@ -1,7 +1,7 @@
 {
   "name": "filter[created_at][date_from]",
   "in": "query",
-  "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only resources created at >= this date will be in the response.",
+  "description": "Date string in ISO 8601 date format (YYYY-MM-DD) or unix timestamp. Only resources created at >= this date will be in the response.",
   "schema": {
     "type": "string"
   }
