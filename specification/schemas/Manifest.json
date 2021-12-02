@@ -41,6 +41,9 @@
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
             }
           }
         },
@@ -56,6 +59,18 @@
               "type": "string",
               "format": "url",
               "example": "$API_HOST/manifests/ce7f6752-34e0-49a1-a832-bcc209450ea8"
+            }
+          }
+        },
+        "meta": {
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "errors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         }

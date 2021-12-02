@@ -68,6 +68,9 @@
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
   },
+  "/get-dynamic-service-rates": {
+    "$ref": "./paths/GetDynamicServiceRates.json"
+  },
   "/hooks": {
     "$ref": "./paths/Hooks.json"
   },
