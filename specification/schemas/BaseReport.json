@@ -15,6 +15,10 @@
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             },
+            "name": {
+              "type": "string",
+              "example": "2020 Q1 UK shipment report"
+            },
             "filters": {
               "type": "object",
               "properties": {

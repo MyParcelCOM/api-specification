@@ -10,13 +10,7 @@
           "additionalProperties": false,
           "required": [
             "name"
-          ],
-          "properties": {
-            "name": {
-              "type": "string",
-              "example": "2020 Q1 UK shipment report"
-            }
-          }
+          ]
         },
         "relationships": {
           "type": "object",
