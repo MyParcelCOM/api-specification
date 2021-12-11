@@ -124,6 +124,12 @@
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name",
+                          "filters"
+                        ]
                       }
                     }
                   }
