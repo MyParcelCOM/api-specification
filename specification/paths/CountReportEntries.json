@@ -28,7 +28,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/BaseReport"
+                    "$ref": "#/components/schemas/Report"
                   },
                   {
                     "required": [

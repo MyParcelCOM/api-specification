@@ -23,9 +23,6 @@
   "BasePrice": {
     "$ref": "./schemas/BasePrice.json"
   },
-  "BaseReport": {
-    "$ref": "./schemas/BaseReport.json"
-  },
   "Broker": {
     "$ref": "./schemas/Broker.json"
   },
