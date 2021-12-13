@@ -28,7 +28,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/BaseReport"
+                    "$ref": "#/components/schemas/Report"
                   },
                   {
                     "required": [
@@ -37,6 +37,11 @@
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "filters"
+                        ]
                       }
                     }
                   }
@@ -60,6 +65,9 @@
               "properties": {
                 "data": {
                   "type": "object",
+                  "required": [
+                    "total_entries"
+                  ],
                   "properties": {
                     "total_entries": {
                       "type": "integer",
