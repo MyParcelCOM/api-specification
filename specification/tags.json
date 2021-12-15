@@ -185,5 +185,10 @@
     "name": "Analytics",
     "externalDocs": {
     }
+  },
+  {
+    "name": "Zones",
+    "externalDocs": {
+    }
   }
 ]

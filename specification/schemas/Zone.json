@@ -1,0 +1,67 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ZoneResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "postal_code",
+            "country_code",
+            "code",
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "postal_code": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "2131 BC"
+              }
+            },
+            "country_code": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CountryCode"
+              }
+            },
+            "state_code": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/StateCode"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "code": {
+              "type": "string",
+              "example": "EU_TERRITORY_1A",
+              "description": "The code used by the system to identify the resource."
+            },
+            "name": {
+              "type": "string",
+              "example": "EU territory 1A",
+              "description": "The name of the resource."
+            },
+            "description": {
+              "type": "string",
+              "example": "Countries in Europe that aren't part of the European Union",
+              "description": "A description of the resource."
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

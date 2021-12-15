@@ -1,0 +1,9 @@
+{
+  "name": "zone_id",
+  "in": "path",
+  "description": "Id of the zone.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}
