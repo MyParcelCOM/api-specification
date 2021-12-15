@@ -233,6 +233,9 @@
   "/users/{user_id}/relationships/scopes": {
     "$ref": "./paths/Users-user_id-relationships-scopes.json"
   },
+  "/count-report-entries": {
+    "$ref": "./paths/CountReportEntries.json"
+  },
   "/export-login-attempts": {
     "$ref": "./paths/ExportLoginAttempts.json"
   },

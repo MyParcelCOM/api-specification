@@ -8,13 +8,10 @@
         "attributes": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "filters",
-            "name"
-          ],
           "properties": {
-            "created_at": {
-              "$ref": "#/components/schemas/Timestamp"
+            "name": {
+              "type": "string",
+              "example": "2020 Q1 UK shipment report"
             },
             "filters": {
               "type": "object",
@@ -28,13 +25,19 @@
                   ],
                   "properties": {
                     "date_from": {
-                      "type": "string",
-                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at >= this date will be in the report.",
+                      "type": [
+                        "string",
+                        "number"
+                      ],
+                      "description": "Date string in ISO 8601 format or unix timestamp. Only shipments created at >= this date will be in the report.",
                       "example": "2020-01-01"
                     },
                     "date_to": {
-                      "type": "string",
-                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments created at <= this date will be in the response.",
+                      "type": [
+                        "string",
+                        "number"
+                      ],
+                      "description": "Date string in ISO 8601 format or unix timestamp. Only shipments created at <= this date will be in the response.",
                       "example": "2020-03-31"
                     }
                   }
@@ -48,13 +51,19 @@
                   ],
                   "properties": {
                     "date_from": {
-                      "type": "string",
-                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments registered at >= this date will be in the report.",
+                      "type": [
+                        "string",
+                        "number"
+                      ],
+                      "description": "Date string in ISO 8601 format or unix timestamp. Only shipments registered at >= this date will be in the report.",
                       "example": "2020-01-01"
                     },
                     "date_to": {
-                      "type": "string",
-                      "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only shipments registered at <= this date will be in the response.",
+                      "type": [
+                        "string",
+                        "number"
+                      ],
+                      "description": "Date string in ISO 8601 format or unix timestamp. Only shipments registered at <= this date will be in the response.",
                       "example": "2020-03-31"
                     }
                   }
@@ -144,9 +153,8 @@
                 }
               }
             },
-            "name": {
-              "type": "string",
-              "example": "2020 Q1 UK shipment report"
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },

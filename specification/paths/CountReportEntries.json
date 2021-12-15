@@ -1,0 +1,86 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "shipments.view"
+        ]
+      }
+    ],
+    "summary": "Get report size",
+    "description": "This endpoint retrieves the total number of entries that will be included in a report.",
+    "requestBody": {
+      "description": "The reports object with corresponding filters.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Report"
+                  },
+                  {
+                    "required": [
+                      "attributes"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "filters"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Retrieved the total amount of records.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "total_entries"
+                  ],
+                  "properties": {
+                    "total_entries": {
+                      "type": "integer",
+                      "description": "Number of entries that will be generated in the report",
+                      "example": 3012
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

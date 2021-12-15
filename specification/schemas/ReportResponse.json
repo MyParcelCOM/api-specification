@@ -13,9 +13,9 @@
       "properties": {
         "attributes": {
           "required": [
+            "name",
             "filters",
-            "created_at",
-            "name"
+            "created_at"
           ]
         },
         "links": {
