@@ -1,0 +1,116 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-zone_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Zones"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "contracts.manage"
+        ]
+      }
+    ],
+    "summary": "Get a zone by id.",
+    "description": "This endpoint retrieves the zone with the supplied id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the zone.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ZoneResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Zones"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "zones.manage"
+        ]
+      }
+    ],
+    "summary": "Update a zone by id.",
+    "description": "This endpoint updates the zone with the supplied id.",
+    "requestBody": {
+      "description": "The zone object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Zone"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "properties": {
+                          "status": {
+                            "example": "blocked",
+                            "description": "Can only be updated when your access token contains the `zones.manage` scope on the broker."
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The zone is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ZoneResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

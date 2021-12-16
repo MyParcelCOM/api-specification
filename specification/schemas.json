@@ -418,5 +418,14 @@
   },
   "TaxIdentificationNumber": {
     "$ref": "./schemas/TaxIdentificationNumber.json"
+  },
+  "Zone": {
+    "$ref": "./schemas/Zone.json"
+  },
+  "ZoneResource": {
+    "$ref": "./schemas/ZoneResource.json"
+  },
+  "ZoneResponse": {
+    "$ref": "./schemas/ZoneResponse.json"
   }
 }

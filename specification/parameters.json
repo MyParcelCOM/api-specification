@@ -98,6 +98,9 @@
   "path-user_id": {
     "$ref": "./parameters/path-user_id.json"
   },
+  "path-zone_id": {
+    "$ref": "./parameters/path-zone_id.json"
+  },
   "query-city": {
     "$ref": "./parameters/query-city.json"
   },

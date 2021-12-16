@@ -1,0 +1,39 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Zone"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "country_codes",
+            "code",
+            "name",
+            "description",
+            "created_at"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/zones/57d04744-1eef-4347-a462-708319b11417"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

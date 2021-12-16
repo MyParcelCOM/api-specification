@@ -40,7 +40,8 @@
               "system.manage": "Manage all system related resources.",
               "users.manage": "Manage user resources.",
               "finance.manage": "Manage all finance related resources.",
-              "experimental": "Access to experimental endpoints."
+              "experimental": "Access to experimental endpoints.",
+              "zones.manage": "Manage zone resources."
             }
           }
         }
