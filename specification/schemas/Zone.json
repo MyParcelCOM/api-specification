@@ -8,26 +8,24 @@
         "attributes": {
           "type": "object",
           "required": [
-            "country_code",
+            "country_codes",
             "code",
             "name"
           ],
           "additionalProperties": false,
           "properties": {
             "postal_code": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "2131 BC"
-              }
+              "type": "string",
+              "example": "^((GY|JE).*|TR2[1-5]) ?[0-9]{1}[A-Z]{2}$",
+              "description": "Regular expression matching postal code areas."
             },
-            "country_code": {
+            "country_codes": {
               "type": "array",
               "items": {
                 "$ref": "#/components/schemas/CountryCode"
               }
             },
-            "state_code": {
+            "state_codes": {
               "type": "array",
               "items": {
                 "oneOf": [
