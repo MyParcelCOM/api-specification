@@ -8,7 +8,6 @@
         "attributes": {
           "type": "object",
           "required": [
-            "postal_code",
             "country_code",
             "code",
             "name"

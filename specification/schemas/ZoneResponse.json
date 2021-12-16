@@ -11,12 +11,11 @@
       "properties": {
         "attributes": {
           "required": [
-            "postal_code",
             "country_code",
-            "state_code",
             "code",
             "name",
-            "description"
+            "description",
+            "created_at"
           ]
         },
         "links": {

@@ -123,7 +123,6 @@
                       },
                       "attributes": {
                         "required": [
-                          "postal_code",
                           "country_code",
                           "code",
                           "name",

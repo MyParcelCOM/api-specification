@@ -263,7 +263,7 @@
   "/zones": {
     "$ref": "./paths/Zones.json"
   },
-  "/zones/{zones_id}": {
+  "/zones/{zone_id}": {
     "$ref": "./paths/Zones-zone_id.json"
   }
 }
