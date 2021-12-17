@@ -13,7 +13,8 @@
           "required": [
             "country_codes",
             "code",
-            "name"
+            "name",
+            "created_at"
           ]
         },
         "links": {
