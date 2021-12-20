@@ -140,7 +140,7 @@
     },
     "responses": {
       "201": {
-        "description": "Retrieved the zone.",
+        "description": "The zone is created.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
