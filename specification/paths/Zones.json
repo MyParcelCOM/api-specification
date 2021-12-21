@@ -125,8 +125,7 @@
                         "required": [
                           "country_codes",
                           "code",
-                          "name",
-                          "description"
+                          "name"
                         ]
                       }
                     }

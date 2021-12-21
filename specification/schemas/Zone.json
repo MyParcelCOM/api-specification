@@ -7,11 +7,6 @@
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "country_codes",
-            "code",
-            "name"
-          ],
           "additionalProperties": false,
           "properties": {
             "postal_code": {
