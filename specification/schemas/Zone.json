@@ -10,7 +10,10 @@
           "additionalProperties": false,
           "properties": {
             "postal_code": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "^((GY|JE).*|TR2[1-5]) ?[0-9]{1}[A-Z]{2}$",
               "description": "Regular expression matching postal code areas."
             },
@@ -44,7 +47,10 @@
               "description": "The name of the resource."
             },
             "description": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "Countries in Europe that aren't part of the European Union",
               "description": "A description of the resource."
             },
