@@ -70,7 +70,8 @@
                       "relationships": {
                         "required": [
                           "contract",
-                          "service"
+                          "service",
+                          "shop"
                         ]
                       }
                     }
