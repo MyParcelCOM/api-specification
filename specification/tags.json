@@ -175,6 +175,11 @@
     }
   },
   {
+    "name": "Zones",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "RPC",
     "externalDocs": {
       "url": "https://docs.myparcel.com/api/rpc-endpoints",
@@ -183,11 +188,6 @@
   },
   {
     "name": "Analytics",
-    "externalDocs": {
-    }
-  },
-  {
-    "name": "Zones",
     "externalDocs": {
     }
   }
