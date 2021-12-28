@@ -16,7 +16,7 @@
       {
         "name": "filter[search]",
         "in": "query",
-        "description": "String of characters you want to look for in a zone's attributes. Available fields to look in are:<ul><li>`name`</li><li>`description`</li><li>`code`</li></ul>",
+        "description": "String of characters you want to look for in a zone's attributes. Available fields to look in are:<ul><li>`name`</li><li>`code`</li><li>`description`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -123,9 +123,9 @@
                       },
                       "attributes": {
                         "required": [
-                          "country_codes",
+                          "name",
                           "code",
-                          "name"
+                          "country_codes"
                         ]
                       }
                     }
