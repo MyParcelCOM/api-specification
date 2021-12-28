@@ -11,9 +11,9 @@
       "properties": {
         "attributes": {
           "required": [
-            "country_codes",
-            "code",
             "name",
+            "code",
+            "country_codes",
             "created_at"
           ]
         },

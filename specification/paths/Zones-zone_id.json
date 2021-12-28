@@ -72,17 +72,7 @@
                   {
                     "required": [
                       "id"
-                    ],
-                    "properties": {
-                      "attributes": {
-                        "properties": {
-                          "status": {
-                            "example": "blocked",
-                            "description": "Can only be updated when your access token contains the `zones.manage` scope on the broker."
-                          }
-                        }
-                      }
-                    }
+                    ]
                   }
                 ]
               }
