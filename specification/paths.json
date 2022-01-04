@@ -259,5 +259,11 @@
   },
   "/analytics/volume/{group_by}/{interval}": {
     "$ref": "./paths/Analytics-volume.json"
+  },
+  "/zones": {
+    "$ref": "./paths/Zones.json"
+  },
+  "/zones/{zone_id}": {
+    "$ref": "./paths/Zones-zone_id.json"
   }
 }
