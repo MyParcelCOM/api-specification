@@ -164,6 +164,12 @@
   "ManifestIncludes": {
     "$ref": "./schemas/ManifestIncludes.json"
   },
+  "ManifestResource": {
+    "$ref": "./schemas/ManifestResource.json"
+  },
+  "ManifestResponse": {
+    "$ref": "./schemas/ManifestResponse.json"
+  },
   "MinimalCarrier": {
     "$ref": "./schemas/MinimalCarrier.json"
   },
@@ -193,9 +199,6 @@
   },
   "MinimalLiabilityCoverage": {
     "$ref": "./schemas/MinimalLiabilityCoverage.json"
-  },
-  "MinimalManifest": {
-    "$ref": "./schemas/MinimalManifest.json"
   },
   "MinimalOrganization": {
     "$ref": "./schemas/MinimalOrganization.json"
