@@ -102,5 +102,30 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Zones"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "zones.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a zone by id.",
+    "description": "This endpoint deletes the zone with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The zone is deleted."
+      },
+      "404": {
+        "description": "The requested zone resource could not be found."
+      },
+      "403": {
+        "description": "The requesting access token does not have the correct permissions to delete this zone."
+      }
+    }
   }
 }

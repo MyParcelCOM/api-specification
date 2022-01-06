@@ -17,6 +17,16 @@
         "name": "filter[search]",
         "in": "query",
         "description": "String of characters you want to look for in a zone's attributes. Available fields to look in are:<ul><li>`name`</li><li>`code`</li><li>`description`</li></ul>",
+        "example": "Europe",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[country_code]",
+        "in": "query",
+        "description": "Comma separated list of two letter ISO 3166-1 alpha-2 country codes to filter the zones by. Only zones that contain all of these countries will be returned.",
+        "example": "BE,NL,LU",
         "schema": {
           "type": "string"
         }
