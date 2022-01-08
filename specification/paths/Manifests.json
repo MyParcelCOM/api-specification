@@ -172,11 +172,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/ManifestResponse"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ManifestResponse"
                 }
               }
             }
