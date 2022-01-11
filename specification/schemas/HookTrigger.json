@@ -16,8 +16,7 @@
         "create",
         "update",
         "delete"
-      ],
-      "example": "create"
+      ]
     },
     "predicates": {
       "type": "array",
@@ -41,8 +40,7 @@
               "<=",
               "contains",
               "in"
-            ],
-            "example": "=="
+            ]
           },
           "pointer": {
             "type": "string",

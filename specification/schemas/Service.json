@@ -91,7 +91,6 @@
                 "drop-off",
                 "collection"
               ],
-              "example": "drop-off",
               "description": "How the parcel can enter the network of the carrier."
             },
             "delivery_method": {
@@ -100,7 +99,6 @@
                 "delivery",
                 "pick-up"
               ],
-              "example": "pick-up",
               "description": "Where the parcel will be delivered to the customer. In case of `pick-up`, a carrier location of type pick-up must be sent with the shipment request."
             },
             "regions_from": {

@@ -65,7 +65,7 @@ specification/schemas/CountryCode.json
 
 ### Path file naming
 The files in `specification/paths` are named after their corresponding API endpoints. Where resources start with an uppercase letter and path variables with a lowercase letter. For example, the definition of the following route:
- 
+
 ```
 carriers/{carrier_id}/services
 ```

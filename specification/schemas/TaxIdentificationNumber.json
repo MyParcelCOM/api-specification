@@ -27,8 +27,7 @@
         "eori",
         "ioss",
         "vat"
-      ],
-      "example": "eori"
+      ]
     }
   }
 }
