@@ -377,6 +377,9 @@
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "manifest":  {
+              "$ref": "#/components/schemas/ManifestRelationship"
             }
           }
         }
