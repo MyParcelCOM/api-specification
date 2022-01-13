@@ -12,8 +12,7 @@
             "returned_merchandise",
             "gifts",
             "documents"
-          ],
-          "example": "sample_merchandise"
+          ]
         },
         {
           "type": "null"
@@ -36,7 +35,6 @@
             "return",
             "abandon"
           ],
-          "example": "return",
           "description": "Action when the parcel cannot be delivered."
         },
         {
@@ -52,7 +50,6 @@
             "DAP",
             "DDP"
           ],
-          "example": "DAP",
           "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid)."
         },
         {

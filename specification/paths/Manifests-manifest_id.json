@@ -43,34 +43,7 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/Manifest"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "created_at"
-                          ]
-                        },
-                        "relationships": {
-                          "required": [
-                            "shipments",
-                            "shop"
-                          ]
-                        },
-                        "links": {
-                          "required": [
-                            "self"
-                          ]
-                        }
-                      }
+                      "$ref": "#/components/schemas/ManifestResponse"
                     }
                   ]
                 },

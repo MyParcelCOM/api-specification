@@ -1,21 +1,20 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalManifest"
+      "$ref": "#/components/schemas/ManifestResource"
     },
     {
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "name"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
-              "example": "Oktober manifest"
+              "example": "Batch week 1"
+            },
+            "address": {
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
@@ -44,33 +43,6 @@
             },
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/manifests/ce7f6752-34e0-49a1-a832-bcc209450ea8"
-            }
-          }
-        },
-        "meta": {
-          "readOnly": true,
-          "type": "object",
-          "properties": {
-            "errors": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
             }
           }
         }

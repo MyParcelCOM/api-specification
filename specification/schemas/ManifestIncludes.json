@@ -3,6 +3,12 @@
   "items": {
     "anyOf": [
       {
+        "$ref": "#/components/schemas/Carrier"
+      },
+      {
+        "$ref": "#/components/schemas/Contract"
+      },
+      {
         "$ref": "#/components/schemas/File"
       }
     ]

@@ -26,8 +26,7 @@
                 "enum": [
                   "pick-up",
                   "drop-off"
-                ],
-                "example": "pick-up"
+                ]
               }
             },
             "code": {
@@ -70,8 +69,7 @@
                       "Friday",
                       "Saturday",
                       "Sunday"
-                    ],
-                    "example": "Monday"
+                    ]
                   },
                   "open": {
                     "allOf": [
@@ -123,7 +121,7 @@
           "additionalProperties": false,
           "properties": {
             "distance": {
-              "type": "number",
+              "type": "integer",
               "description": "Distance from the specified postal code to the location in meters.",
               "example": 1337
             }
