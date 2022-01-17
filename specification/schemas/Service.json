@@ -20,7 +20,8 @@
             "delivery_method",
             "regions_from",
             "regions_to",
-            "uses_volumetric_weight"
+            "uses_volumetric_weight",
+            "strict_consolidation"
           ],
           "additionalProperties": false,
           "properties": {
@@ -117,6 +118,11 @@
               "type": "boolean",
               "example": true,
               "description": "Whether the volumetric weight of a shipment is taken into account when determining the price for a service."
+            },
+            "strict_consolidation": {
+              "type": "boolean",
+              "example": true,
+              "description": "Indicates whether the service is only used for consolidation purposes."
             }
           }
         },
