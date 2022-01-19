@@ -6,7 +6,8 @@
     "security": [
       {
         "OAuth2": [
-          "experimental"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
@@ -80,7 +81,8 @@
     "security": [
       {
         "OAuth2": [
-          "experimental"
+          "shipments.manage",
+          "shipments.view"
         ]
       }
     ],
