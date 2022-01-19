@@ -28,19 +28,10 @@
               "required": [
                 "data"
               ],
+              "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Address"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/AddressResponse"
                 }
               }
             }
@@ -77,16 +68,15 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/AddressResource"
+                    "$ref": "#/components/schemas/Address"
                   },
                   {
                     "required": [
-                      "id",
-                      "attributes"
+                      "id"
                     ],
                     "properties": {
-                      "attributes": {
-                        "$ref": "#/components/schemas/BaseAddress"
+                      "relationships": {
+                        "readOnly": true
                       }
                     }
                   }
@@ -110,17 +100,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Address"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/AddressResponse"
                 }
               }
             }

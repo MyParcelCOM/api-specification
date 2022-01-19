@@ -43,17 +43,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Address"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ]
-                      }
-                    ]
+                    "$ref": "#/components/schemas/AddressResponse"
                   }
                 },
                 "meta": {
@@ -128,9 +118,20 @@
                     "$ref": "#/components/schemas/Address"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "street_1",
+                          "city",
+                          "country_code"
+                        ]
                       }
                     }
                   }
@@ -154,17 +155,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Address"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/AddressResponse"
                 }
               }
             }
