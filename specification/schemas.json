@@ -5,6 +5,9 @@
   "AddressResource": {
     "$ref": "./schemas/AddressResource.json"
   },
+  "AddressResponse": {
+    "$ref": "./schemas/AddressResponse.json"
+  },
   "Barcode": {
     "$ref": "./schemas/Barcode.json"
   },
@@ -163,6 +166,9 @@
   },
   "ManifestIncludes": {
     "$ref": "./schemas/ManifestIncludes.json"
+  },
+  "ManifestRelationship": {
+    "$ref": "./schemas/ManifestRelationship.json"
   },
   "ManifestResource": {
     "$ref": "./schemas/ManifestResource.json"
