@@ -30,6 +30,19 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[trigger][resource_action]",
+        "in": "query",
+        "description": "[Resource action](https://docs.myparcel.com/api/resources/hooks/trigger/) to filter the hooks by.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "import"
+          ]
+        }
       }
     ],
     "responses": {
