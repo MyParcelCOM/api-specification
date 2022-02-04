@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "readOnly": true,
+  "required": [
+    "name",
+    "tracking_url",
+    "country_code"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the final mile carrier"
+    },
+    "tracking_url": {
+      "type": "string",
+      "example": "https://tracker.carrier.com/3SABCD0123456789",
+      "description": "URL used to view tracking status updates."
+    },
+    "country_code": {
+      "$ref": "#/components/schemas/CountryCode"
+    }
+  }
+}
