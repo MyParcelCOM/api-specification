@@ -24,11 +24,24 @@
         }
       },
       {
-        "name": "filter[action_type]",
+        "name": "filter[action][action_type]",
         "in": "query",
         "description": "[Action type](https://docs.myparcel.com/api/resources/hooks/action/) to filter the hooks by.",
         "schema": {
           "type": "string"
+        }
+      },
+      {
+        "name": "filter[trigger][resource_action]",
+        "in": "query",
+        "description": "[Resource action](https://docs.myparcel.com/api/resources/hooks/trigger/) to filter the hooks by.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "import"
+          ]
         }
       }
     ],
