@@ -47,6 +47,12 @@
               "example": 12.5,
               "description": "Volume in liters. (dm3)"
             },
+            "volumetric_weight_divisor": {
+              "type": "number",
+              "example": 5000,
+              "description": "The volumetric weight divisor is used to calculate the volumetric weight of a shipment. Multiplying the length (mm) x width (mm) x height (mm) of a shipment and dividing it by this number will result in the volumetric weight (g). See <a href=\"https://docs.myparcel.com/api/resources/shipments/physical-properties/volumetric-weight\"/>the documentation</a> for more information.",
+              "default": 5000
+            },
             "is_dynamic": {
               "type": "boolean",
               "default": false,
