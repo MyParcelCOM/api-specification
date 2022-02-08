@@ -113,6 +113,9 @@
   "FilesRelationship": {
     "$ref": "./schemas/FilesRelationship.json"
   },
+  "FinalMileCarrier": {
+    "$ref": "./schemas/FinalMileCarrier.json"
+  },
   "Hook": {
     "$ref": "./schemas/Hook.json"
   },
