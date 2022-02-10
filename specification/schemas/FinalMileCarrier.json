@@ -3,8 +3,7 @@
   "readOnly": true,
   "required": [
     "name",
-    "tracking_url",
-    "country_code"
+    "tracking_url"
   ],
   "properties": {
     "name": {
@@ -15,9 +14,6 @@
       "type": "string",
       "example": "https://tracker.carrier.com/3SABCD0123456789",
       "description": "URL used to view tracking status updates."
-    },
-    "country_code": {
-      "$ref": "#/components/schemas/CountryCode"
     }
   }
 }
