@@ -15,7 +15,7 @@
       "enum": [
         "create",
         "update",
-        "delete"
+        "import"
       ]
     },
     "predicates": {

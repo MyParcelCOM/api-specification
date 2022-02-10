@@ -121,6 +121,9 @@
             "tracking_url": {
               "$ref": "#/components/schemas/TrackingUrl"
             },
+            "final_mile_carrier": {
+              "$ref": "#/components/schemas/FinalMileCarrier"
+            },
             "sync_active": {
               "readOnly": true,
               "type": "boolean",
