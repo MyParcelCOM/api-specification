@@ -117,6 +117,14 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[strict_consolidation]",
+        "in": "query",
+        "description": "Boolean value.<ul><li>`true` Services that only handle consolidated shipments.</li><li>`false` Only services without strict consolidation.</li></ul>",
+        "schema": {
+          "type": "boolean"
+        }
       }
     ],
     "responses": {
