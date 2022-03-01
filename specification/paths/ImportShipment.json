@@ -55,7 +55,7 @@
     },
     "responses": {
       "204": {
-        "description": "The consolidation id has been added to the shipments."
+        "description": "The shipment has been imported."
       }
     }
   }
