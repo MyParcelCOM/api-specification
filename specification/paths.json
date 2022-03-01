@@ -242,6 +242,9 @@
   "/import-service-rates": {
     "$ref": "./paths/ImportServiceRates.json"
   },
+  "/import-shipment": {
+    "$ref": "./paths/ImportShipment.json"
+  },
   "/register-multi-colli-shipment": {
     "$ref": "./paths/RegisterMultiColliShipment.json"
   },
