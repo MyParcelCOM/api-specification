@@ -242,8 +242,8 @@
   "/import-service-rates": {
     "$ref": "./paths/ImportServiceRates.json"
   },
-  "/import-shipment": {
-    "$ref": "./paths/ImportShipment.json"
+  "/import-registered-shipment": {
+    "$ref": "./paths/ImportRegisteredShipment.json"
   },
   "/register-multi-colli-shipment": {
     "$ref": "./paths/RegisterMultiColliShipment.json"

@@ -10,7 +10,7 @@
         ]
       }
     ],
-    "summary": "Import shipment.",
+    "summary": "Import registered shipment.",
     "description": "This endpoint is used to import externally registered shipments to provide tracking information.",
     "requestBody": {
       "description": "The shipment that should be imported.",
@@ -24,15 +24,27 @@
             ],
             "properties": {
               "data": {
-                "required": [
-                  "tracking_code"
-                ],
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/Shipment"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
+                      "attributes": {
+                        "required": [
+                          "tracking_code"
+                        ],
+                        "properties": {
+                          "tracking_code": {
+                            "type": "string",
+                            "description": "The tracking code of the shipment."
+                          }
+                        }
+                      },
                       "relationships": {
                         "required": [
                           "contract"
@@ -40,13 +52,7 @@
                       }
                     }
                   }
-                ],
-                "properties": {
-                  "tracking_code": {
-                    "type": "string",
-                    "description": "The tracking code of the shipment."
-                  }
-                }
+                ]
               }
             }
           }
