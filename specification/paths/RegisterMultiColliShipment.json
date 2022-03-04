@@ -211,7 +211,14 @@
                                             "$ref": "#/components/schemas/Barcode"
                                           },
                                           "tracking_code": {
-                                            "$ref": "#/components/schemas/TrackingCode"
+                                            "allOf": [
+                                              {
+                                                "$ref": "#/components/schemas/TrackingCode"
+                                              },
+                                              {
+                                                "readonly": true
+                                              }
+                                            ]
                                           },
                                           "tracking_url": {
                                             "$ref": "#/components/schemas/TrackingUrl"

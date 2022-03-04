@@ -40,8 +40,14 @@
                         ],
                         "properties": {
                           "tracking_code": {
-                            "type": "string",
-                            "description": "The tracking code of the shipment."
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/TrackingCode"
+                              },
+                              {
+                                "readonly": false
+                              }
+                            ]
                           }
                         }
                       },
