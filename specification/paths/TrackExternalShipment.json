@@ -10,10 +10,10 @@
         ]
       }
     ],
-    "summary": "Import registered shipment.",
-    "description": "This endpoint is used to import externally registered shipments to provide tracking information.",
+    "summary": "Track external shipment.",
+    "description": "This endpoint is used to track externally registered shipments to provide tracking information.",
     "requestBody": {
-      "description": "The shipment that should be imported.",
+      "description": "The shipment that should be tracked.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
