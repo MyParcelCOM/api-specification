@@ -30,6 +30,31 @@
               "meta": {
                 "type": "object",
                 "properties": {
+                  "collection": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "collection_date": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "collection_time": {
+                        "type": "object",
+                        "properties": {
+                          "from": {
+                            "type": "string",
+                            "format": "time"
+                          },
+                          "to": {
+                            "type": "string",
+                            "format": "time"
+                          }
+                        }
+                      }
+                    }
+                  },
                   "label_mime_type": {
                     "type": "string",
                     "example": "application/pdf",
