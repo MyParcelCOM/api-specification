@@ -41,6 +41,8 @@
                       "attributes": {
                         "required": [
                           "recipient_address",
+                          "return_address",
+                          "sender_address",
                           "tracking_code",
                           "physical_properties"
                         ],
