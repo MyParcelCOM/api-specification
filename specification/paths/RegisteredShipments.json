@@ -38,18 +38,18 @@
                       },
                       "collection_date": {
                         "type": "string",
-                        "format": "date-time"
+                        "example": "2022-04-04"
                       },
                       "collection_time": {
                         "type": "object",
                         "properties": {
                           "from": {
                             "type": "string",
-                            "format": "time"
+                            "example": "12:00"
                           },
                           "to": {
                             "type": "string",
-                            "format": "time"
+                            "format": "16:00"
                           }
                         }
                       }
