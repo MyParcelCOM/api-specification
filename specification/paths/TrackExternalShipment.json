@@ -1,0 +1,112 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Track external shipment.",
+    "description": "This endpoint is used to track externally registered shipments to provide tracking information.",
+    "requestBody": {
+      "description": "The shipment that should be tracked.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "recipient_address",
+                          "return_address",
+                          "sender_address",
+                          "tracking_code",
+                          "physical_properties"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "return_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "tracking_code": {
+                            "readonly": false
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          },
+                          "items": {
+                            "items": {
+                              "required": [
+                                "description",
+                                "quantity"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "required": [
+                          "shop",
+                          "contract"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The shipment has been imported."
+      }
+    }
+  }
+}
