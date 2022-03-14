@@ -208,6 +208,9 @@
                               "address"
                             ]
                           },
+                          "tracking_code": {
+                            "readOnly": true
+                          },
                           "physical_properties": {
                             "required": [
                               "weight"

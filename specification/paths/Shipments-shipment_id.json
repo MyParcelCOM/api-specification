@@ -81,7 +81,16 @@
                   {
                     "required": [
                       "id"
-                    ]
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "properties": {
+                          "tracking_code": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
                   }
                 ]
               },
