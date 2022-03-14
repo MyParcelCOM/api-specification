@@ -70,9 +70,6 @@
                               "country_code"
                             ]
                           },
-                          "tracking_code": {
-                            "readonly": false
-                          },
                           "physical_properties": {
                             "required": [
                               "weight"
