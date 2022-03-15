@@ -26,6 +26,14 @@
       {
         "name": "filter[contract]",
         "in": "query",
+        "description": "Specific contract (id) to use for authentication with the carrier. If none is specified then the first active contract will be used.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[radius]",
+        "in": "query",
         "description": "Specific contract (id) to use for authentication with the carrier.",
         "schema": {
           "type": "string"
