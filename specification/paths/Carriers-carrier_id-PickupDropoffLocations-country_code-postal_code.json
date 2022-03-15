@@ -33,6 +33,14 @@
         "$ref": "#/components/parameters/query-city"
       },
       {
+        "name": "filter[contract]",
+        "in": "query",
+        "description": "Specific contract (id) to use for authentication with the carrier.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "filter[categories]",
         "in": "query",
         "description": "Comma separated list of location categories to return. Possible options are:<ul><li>`pick-up`</li><li>`drop-off`</li></ul>",
