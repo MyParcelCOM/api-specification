@@ -4,6 +4,8 @@
   "description": "Geolocation latitude.",
   "required": true,
   "schema": {
-    "type": "float"
+    "type": "string",
+    "pattern": "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?)$",
+    "example": "52.359686"
   }
 }
