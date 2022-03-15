@@ -34,9 +34,9 @@
       {
         "name": "filter[radius]",
         "in": "query",
-        "description": "Specific contract (id) to use for authentication with the carrier.",
+        "description": "Filters out office locations outside the specified radius (in meters).",
         "schema": {
-          "type": "string"
+          "type": "integer"
         }
       },
       {
