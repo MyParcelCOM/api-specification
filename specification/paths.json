@@ -29,6 +29,9 @@
   "/carriers/{carrier_id}/contracts": {
     "$ref": "./paths/Carriers-carrier_id-Contracts.json"
   },
+  "/carriers/{carrier_id}/pickup-dropoff-locations/{latitude}/{longitude}": {
+    "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-latitude-longitude.json"
+  },
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code.json"
   },

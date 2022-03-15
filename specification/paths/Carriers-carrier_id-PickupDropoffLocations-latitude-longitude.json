@@ -4,10 +4,10 @@
       "$ref": "#/components/parameters/path-carrier_id"
     },
     {
-      "$ref": "#/components/parameters/path-country_code"
+      "$ref": "#/components/parameters/path-latitude"
     },
     {
-      "$ref": "#/components/parameters/path-postal_code"
+      "$ref": "#/components/parameters/path-longitude"
     }
   ],
   "get": {
@@ -20,24 +20,23 @@
         ]
       }
     ],
-    "summary": "Get office locations from a carrier by country and postal code.",
-    "description": "This endpoint retrieves pick-up and drop-off locations by country code and postal code offered by the supplied carrier.<ul><li>Locations of the type `pick-up` can be used with services offering this as their `delivery_method`.</li><li>Locations of the type `drop-off` can be used with services offering this as their `handover_method`.</li></ul>",
+    "summary": "Get office locations from a carrier by geolocation.",
+    "description": "This endpoint retrieves pick-up and drop-off locations by geolocation offered by the supplied carrier.<ul><li>Locations of the type `pick-up` can be used with services offering this as their `delivery_method`.</li><li>Locations of the type `drop-off` can be used with services offering this as their `handover_method`.</li></ul>",
     "parameters": [
-      {
-        "$ref": "#/components/parameters/query-street"
-      },
-      {
-        "$ref": "#/components/parameters/query-street_number"
-      },
-      {
-        "$ref": "#/components/parameters/query-city"
-      },
       {
         "name": "filter[contract]",
         "in": "query",
         "description": "Specific contract (id) to use for authentication with the carrier. If none is specified then the first active contract will be used.",
         "schema": {
           "type": "string"
+        }
+      },
+      {
+        "name": "filter[radius]",
+        "in": "query",
+        "description": "Filters out office locations outside the specified radius (in meters).",
+        "schema": {
+          "type": "integer"
         }
       },
       {
@@ -92,23 +91,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/GB/NW1%206XE?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/52.354078/4.903159?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/GB/NW1%206XE?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/52.354078/4.903159?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/GB/NW1%206XE?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/52.354078/4.903159?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/GB/NW1%206XE?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/52.354078/4.903159?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/GB/NW1%206XE?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/52.354078/4.903159?page[number]=13&page[size]=30"
                     }
                   }
                 }

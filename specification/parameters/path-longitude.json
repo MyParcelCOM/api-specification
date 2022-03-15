@@ -1,0 +1,9 @@
+{
+  "name": "longitude",
+  "in": "path",
+  "description": "Geolocation longitude.",
+  "required": true,
+  "schema": {
+    "type": "float"
+  }
+}
