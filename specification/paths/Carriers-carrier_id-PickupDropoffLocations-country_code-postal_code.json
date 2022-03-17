@@ -33,7 +33,7 @@
         "$ref": "#/components/parameters/query-city"
       },
       {
-        "name": "filter[contract]",
+        "name": "contract",
         "in": "query",
         "description": "Specific contract (id) to use for authentication with the carrier. If none is specified then the first active contract will be used.",
         "schema": {
