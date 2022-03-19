@@ -74,7 +74,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`service`</li><li>`service_options`</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`contract.carrier`</li><li>`service`</li><li>`service.carrier`</li><li>`service_options`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -96,47 +96,14 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/ServiceRate"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ],
-                        "properties": {
-                          "relationships": {
-                            "properties": {
-                              "service_options": {
-                                "properties": {
-                                  "data": {
-                                    "items": {
-                                      "required": [
-                                        "id",
-                                        "type",
-                                        "meta"
-                                      ],
-                                      "properties": {
-                                        "meta": {
-                                          "required": [
-                                            "included"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ServiceRateResponse"
                   }
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ServiceRateIncludes"
                 },
                 "links": {
                   "type": "object",
@@ -207,37 +174,25 @@
                     "$ref": "#/components/schemas/ServiceRate"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
                       },
                       "attributes": {
-                        "properties": {
-                          "purchase_price": {
-                            "$ref": "#/components/schemas/Price"
-                          }
-                        }
+                        "required": [
+                          "weight_min",
+                          "weight_max"
+                        ]
                       },
                       "relationships": {
-                        "properties": {
-                          "service_options": {
-                            "properties": {
-                              "data": {
-                                "items": {
-                                  "properties": {
-                                    "meta": {
-                                      "properties": {
-                                        "purchase_price": {
-                                          "$ref": "#/components/schemas/Price"
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
+                        "required": [
+                          "contract",
+                          "service"
+                        ]
                       }
                     }
                   }
@@ -261,43 +216,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/ServiceRate"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "relationships": {
-                          "properties": {
-                            "service_options": {
-                              "properties": {
-                                "data": {
-                                  "items": {
-                                    "required": [
-                                      "id",
-                                      "type",
-                                      "meta"
-                                    ],
-                                    "properties": {
-                                      "meta": {
-                                        "required": [
-                                          "included"
-                                        ]
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ServiceRateResponse"
                 }
               }
             }

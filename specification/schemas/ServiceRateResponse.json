@@ -1,0 +1,66 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ServiceRate"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "weight_min",
+            "weight_max"
+          ]
+        },
+        "relationships": {
+          "required": [
+            "contract",
+            "service"
+          ],
+          "properties": {
+            "service_options": {
+              "properties": {
+                "data": {
+                  "items": {
+                    "required": [
+                      "id",
+                      "type",
+                      "meta"
+                    ],
+                    "properties": {
+                      "meta": {
+                        "required": [
+                          "included"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/service-rates/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

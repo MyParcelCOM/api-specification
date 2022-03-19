@@ -1,21 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalServiceRate"
+      "$ref": "#/components/schemas/ServiceRateResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "weight_min",
-            "weight_max"
-          ],
           "properties": {
             "weight_min": {
               "type": "integer",
@@ -71,10 +62,6 @@
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "contract",
-            "service"
-          ],
           "additionalProperties": false,
           "properties": {
             "contract": {
@@ -122,22 +109,6 @@
                   }
                 }
               ]
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "readOnly": true,
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/service-rates/c9ce29a4-6325-11e7-907b-a6006ad3dba0"
             }
           }
         }
