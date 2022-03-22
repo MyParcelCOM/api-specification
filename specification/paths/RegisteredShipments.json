@@ -111,20 +111,24 @@
                       "name": {
                         "type": "string"
                       },
-                      "collection_date": {
-                        "type": "string",
-                        "example": "2022-04-04"
-                      },
                       "collection_time": {
                         "type": "object",
                         "properties": {
                           "from": {
-                            "type": "string",
-                            "example": "12:00"
+                            "type": [
+                              "number",
+                              "string"
+                            ],
+                            "example": 1647878216,
+                            "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
                           },
                           "to": {
-                            "type": "string",
-                            "format": "16:00"
+                            "type": [
+                              "number",
+                              "string"
+                            ],
+                            "example": "2022-03-22T20:00:00+01:00",
+                            "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
                           }
                         }
                       }
