@@ -22,7 +22,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`service`</li><li>`service_options`</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`contract.carrier`</li><li>`service`</li><li>`service.carrier`</li><li>`service_options`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -40,42 +40,10 @@
               ],
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/ServiceRate"
-                    },
-                    {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "relationships": {
-                          "properties": {
-                            "service_options": {
-                              "properties": {
-                                "data": {
-                                  "items": {
-                                    "required": [
-                                      "id",
-                                      "type",
-                                      "meta"
-                                    ],
-                                    "properties": {
-                                      "meta": {
-                                        "required": [
-                                          "included"
-                                        ]
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ServiceRateResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ServiceRateIncludes"
                 }
               }
             }
@@ -110,7 +78,16 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchServiceRate"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ServiceRate"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ]
+                  }
+                ]
               }
             }
           }
@@ -130,43 +107,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/ServiceRate"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "relationships": {
-                          "properties": {
-                            "service_options": {
-                              "properties": {
-                                "data": {
-                                  "items": {
-                                    "required": [
-                                      "id",
-                                      "type",
-                                      "meta"
-                                    ],
-                                    "properties": {
-                                      "meta": {
-                                        "required": [
-                                          "included"
-                                        ]
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ServiceRateResponse"
                 }
               }
             }

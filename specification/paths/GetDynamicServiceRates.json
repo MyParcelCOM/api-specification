@@ -104,8 +104,22 @@
                         "$ref": "#/components/schemas/ServiceRate"
                       },
                       {
+                        "required": [
+                          "attributes",
+                          "relationships"
+                        ],
                         "properties": {
+                          "attributes": {
+                            "required": [
+                              "weight_min",
+                              "weight_max"
+                            ]
+                          },
                           "relationships": {
+                            "required": [
+                              "contract",
+                              "service"
+                            ],
                             "properties": {
                               "service_options": {
                                 "properties": {
