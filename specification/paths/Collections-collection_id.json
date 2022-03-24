@@ -81,7 +81,7 @@
       }
     ],
     "summary": "Update a collection by id.",
-    "description": "This endpoint updates the collection with the supplied id. The collection can be registered with the carrier through this endpoint by using the `register` attribute.",
+    "description": "This endpoint updates the collection with the supplied id. <br> The collection can be registered with the carrier through this endpoint by using the `register` attribute. <br> No further updates are possible after registration.",
     "requestBody": {
       "description": "The collection object with attributes to be updated.",
       "required": true,
@@ -104,6 +104,15 @@
                       "id"
                     ],
                     "properties": {
+                      "attributes": {
+                        "properties": {
+                          "register": {
+                            "type": "boolean",
+                            "example": true,
+                            "description": "Indicates whether the collection should be registered with the carrier. Further updates are no longer possible after a successful registration."
+                          }
+                        }
+                      },
                       "relationships": {
                         "properties": {
                           "shop": {
@@ -122,7 +131,7 @@
     },
     "responses": {
       "200": {
-        "description": "The contract is updated.",
+        "description": "The collection is updated.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -135,30 +144,15 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/Contract"
+                      "$ref": "#/components/schemas/CollectionResponse"
                     },
                     {
-                      "required": [
-                        "id"
-                      ],
                       "properties": {
                         "attributes": {
-                          "type": "object",
-                          "required": [
-                            "status",
-                            "currency",
-                            "name",
-                            "created_at"
-                          ]
-                        },
-                        "relationships": {
                           "properties": {
-                            "owner": {
-                              "example": {
-                                "links": {
-                                  "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                                }
-                              }
+                            "tracking_code": {
+                              "type": "string",
+                              "example": "TRC123456"
                             }
                           }
                         }
@@ -175,20 +169,20 @@
   },
   "delete": {
     "tags": [
-      "Contracts"
+      "Collections"
     ],
     "security": [
       {
         "OAuth2": [
-          "organizations.manage"
+          "shipments.manage"
         ]
       }
     ],
-    "summary": "Delete a contract by id.",
-    "description": "This endpoint deletes the contract with the supplied id.",
+    "summary": "Delete a collection by id.",
+    "description": "This endpoint deletes the collection with the supplied id.",
     "responses": {
       "204": {
-        "description": "The contract is deleted."
+        "description": "The collection is deleted."
       }
     }
   }
