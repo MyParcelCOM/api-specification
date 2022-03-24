@@ -50,6 +50,9 @@
   "/collections": {
     "$ref": "./paths/Collections.json"
   },
+  "/collections/{collection_id}": {
+    "$ref": "./paths/Collections-collection_id.json"
+  },
   "/consolidate-shipments": {
     "$ref": "./paths/ConsolidateShipments.json"
   },
