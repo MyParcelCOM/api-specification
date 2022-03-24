@@ -1,0 +1,108 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/CollectionResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "First Collection"
+            },
+            "address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "collection_time": {
+              "type": "object",
+              "required": [
+                "from",
+                "to"
+              ],
+              "properties": {
+                "from": {
+                  "oneOf": [
+                    {
+                      "type": "integer",
+                      "description": "Unix timestamp (UTC) indicating the earliest requested time for this collection.",
+                      "example": 1648110600
+                    },
+                    {
+                      "type": "string",
+                      "pattern": "/^\\d{4}-(?:0[1-9]|1[0-2])-(?:[0-2][0-9]|3[0-1])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](?:\\.\\d{3})?(Z|\\+\\d{2}:?\\d{2})$/",
+                      "example": "2022-03-24T09:30:00+01:00",
+                      "description": "ISO 8601 formatted datetime string indicating the earliest requested time for this collection."
+                    }
+                  ]
+                },
+                "to": {
+                  "oneOf": [
+                    {
+                      "type": "integer",
+                      "example": 1648114200,
+                      "description": "Unix timestamp (UTC) indicating the latest requested time for this collection."
+                    },
+                    {
+                      "type": "string",
+                      "pattern": "/^\\d{4}-(?:0[1-9]|1[0-2])-(?:[0-2][0-9]|3[0-1])T(?:[0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](?:\\.\\d{3})?(Z|\\+\\d{2}:?\\d{2})$/",
+                      "example": "2022-03-24T10:30:00+01:00",
+                      "description": "ISO 8601 formatted datetime string indicating the latest requested time for this collection."
+                    }
+                  ]
+                }
+              }
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "contract",
+            "shop"
+          ],
+          "properties": {
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
+            },
+            "files": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/FilesRelationship"
+                },
+                {
+                  "readOnly": true
+                }
+              ]
+            },
+            "manifest": {
+              "$ref": "#/components/schemas/ManifestRelationship"
+            },
+            "shipments": {
+              "$ref": "#/components/schemas/ShipmentsRelationship"
+            },
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "status": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/StatusRelationship"
+                },
+                {
+                  "readOnly": true
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
