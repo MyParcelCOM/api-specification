@@ -82,7 +82,14 @@
               ]
             },
             "manifest": {
-              "$ref": "#/components/schemas/ManifestRelationship"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ManifestRelationship"
+                },
+                {
+                  "readOnly": true
+                }
+              ]
             },
             "shipments": {
               "$ref": "#/components/schemas/ShipmentsRelationship"
