@@ -59,6 +59,12 @@
   "path-postal_code": {
     "$ref": "./parameters/path-postal_code.json"
   },
+  "path-latitude": {
+    "$ref": "./parameters/path-latitude.json"
+  },
+  "path-longitude": {
+    "$ref": "./parameters/path-longitude.json"
+  },
   "path-region_id": {
     "$ref": "./parameters/path-region_id.json"
   },

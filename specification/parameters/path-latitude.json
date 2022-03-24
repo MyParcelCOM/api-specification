@@ -1,0 +1,11 @@
+{
+  "name": "latitude",
+  "in": "path",
+  "description": "Geolocation latitude.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "pattern": "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?)$",
+    "example": "52.359686"
+  }
+}

@@ -227,9 +227,6 @@
   "MinimalService": {
     "$ref": "./schemas/MinimalService.json"
   },
-  "MinimalServiceRate": {
-    "$ref": "./schemas/MinimalServiceRate.json"
-  },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
   },
@@ -259,9 +256,6 @@
   },
   "PatchOrganization": {
     "$ref": "./schemas/PatchOrganization.json"
-  },
-  "PatchServiceRate": {
-    "$ref": "./schemas/PatchServiceRate.json"
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"
@@ -310,6 +304,15 @@
   },
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
+  },
+  "ServiceRateIncludes": {
+    "$ref": "./schemas/ServiceRateIncludes.json"
+  },
+  "ServiceRateResource": {
+    "$ref": "./schemas/ServiceRateResource.json"
+  },
+  "ServiceRateResponse": {
+    "$ref": "./schemas/ServiceRateResponse.json"
   },
   "ServiceRegion": {
     "$ref": "./schemas/ServiceRegion.json"

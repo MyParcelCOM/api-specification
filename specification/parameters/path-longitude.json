@@ -1,0 +1,11 @@
+{
+  "name": "longitude",
+  "in": "path",
+  "description": "Geolocation longitude.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "pattern": "^[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$",
+    "example": "4.884573"
+  }
+}
