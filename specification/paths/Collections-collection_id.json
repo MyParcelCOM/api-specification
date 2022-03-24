@@ -68,5 +68,128 @@
         }
       }
     }
+  },
+  "patch": {
+    "tags": [
+      "Collections"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Update a collection by id.",
+    "description": "This endpoint updates the collection with the supplied id. The collection can be registered with the carrier through this endpoint by using the `register` attribute.",
+    "requestBody": {
+      "description": "The collection object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Collection"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "relationships": {
+                        "properties": {
+                          "shop": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The contract is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Contract"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "attributes": {
+                          "type": "object",
+                          "required": [
+                            "status",
+                            "currency",
+                            "name",
+                            "created_at"
+                          ]
+                        },
+                        "relationships": {
+                          "properties": {
+                            "owner": {
+                              "example": {
+                                "links": {
+                                  "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Contracts"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a contract by id.",
+    "description": "This endpoint deletes the contract with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The contract is deleted."
+      }
+    }
   }
 }

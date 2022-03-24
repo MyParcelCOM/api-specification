@@ -63,10 +63,6 @@
         "relationships": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "contract",
-            "shop"
-          ],
           "properties": {
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
