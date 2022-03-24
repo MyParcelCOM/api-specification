@@ -59,8 +59,14 @@
   "Collection": {
     "$ref": "./schemas/Collection.json"
   },
+  "CollectionIncludes": {
+    "$ref": "./schemas/CollectionIncludes.json"
+  },
   "CollectionResource": {
     "$ref": "./schemas/CollectionResource.json"
+  },
+  "CollectionResponse": {
+    "$ref": "./schemas/CollectionResponse.json"
   },
   "ColloNumber": {
     "$ref": "./schemas/ColloNumber.json"

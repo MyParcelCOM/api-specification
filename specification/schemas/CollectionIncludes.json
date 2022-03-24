@@ -1,0 +1,85 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Contract"
+          },
+          {
+            "required": [
+              "type",
+              "id",
+              "attributes",
+              "relationships",
+              "links"
+            ]
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Carrier"
+          },
+          {
+            "required": [
+              "type",
+              "id",
+              "attributes",
+              "links"
+            ]
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Manifest"
+          },
+          {
+            "required": [
+              "type",
+              "id",
+              "attributes",
+              "relationships",
+              "links"
+            ]
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Shop"
+          },
+          {
+            "required": [
+              "type",
+              "id",
+              "attributes",
+              "relationships",
+              "links"
+            ]
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Status"
+          },
+          {
+            "required": [
+              "type",
+              "id",
+              "attributes",
+              "links"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
