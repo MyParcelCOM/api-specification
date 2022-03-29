@@ -55,6 +55,11 @@
                 }
               }
             },
+            "tracking_code": {
+              "readOnly": true,
+              "type": "string",
+              "example": "TRC123456"
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }
@@ -88,7 +93,14 @@
               ]
             },
             "shipments": {
-              "$ref": "#/components/schemas/ShipmentsRelationship"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShipmentsRelationship"
+                },
+                {
+                  "readOnly": true
+                }
+              ]
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"

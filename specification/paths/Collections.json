@@ -39,23 +39,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/CollectionResponse"
-                      },
-                      {
-                        "properties": {
-                          "attributes": {
-                            "properties": {
-                              "tracking_code": {
-                                "type": "string",
-                                "example": "TRC123456"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/CollectionResponse"
                   }
                 },
                 "meta": {

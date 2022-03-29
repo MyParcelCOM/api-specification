@@ -41,23 +41,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/CollectionResponse"
-                    },
-                    {
-                      "properties": {
-                        "attributes": {
-                          "properties": {
-                            "tracking_code": {
-                              "type": "string",
-                              "example": "TRC123456"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/CollectionResponse"
                 },
                 "included": {
                   "$ref": "#/components/schemas/CollectionIncludes"
@@ -142,23 +126,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/CollectionResponse"
-                    },
-                    {
-                      "properties": {
-                        "attributes": {
-                          "properties": {
-                            "tracking_code": {
-                              "type": "string",
-                              "example": "TRC123456"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/CollectionResponse"
                 }
               }
             }
