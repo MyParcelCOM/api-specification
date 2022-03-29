@@ -97,7 +97,7 @@
         ]
       }
     ],
-    "summary": "Create a new collecton.",
+    "summary": "Create a new collection.",
     "description": "This endpoint creates a new collection with the posted data.",
     "requestBody": {
       "description": "The collection object to be created.",
