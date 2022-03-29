@@ -62,6 +62,9 @@
   "CollectionIncludes": {
     "$ref": "./schemas/CollectionIncludes.json"
   },
+  "CollectionRelationship": {
+    "$ref": "./schemas/CollectionRelationship.json"
+  },
   "CollectionResource": {
     "$ref": "./schemas/CollectionResource.json"
   },
