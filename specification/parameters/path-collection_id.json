@@ -1,0 +1,9 @@
+{
+  "name": "collection_id",
+  "in": "path",
+  "description": "Id of the Collection.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}

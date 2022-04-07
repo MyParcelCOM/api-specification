@@ -1,0 +1,56 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Collection"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "address",
+            "collection_time",
+            "created_at"
+          ],
+          "properties": {
+            "address": {
+              "required": [
+                "street_1",
+                "city",
+                "country_code"
+              ]
+            }
+          }
+        },
+        "relationships": {
+          "required": [
+            "contract",
+            "status",
+            "shop"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/collections/e26d781b-6c56-4be5-ae72-505db793d2bd"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
