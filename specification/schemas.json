@@ -41,6 +41,9 @@
   "Carrier": {
     "$ref": "./schemas/Carrier.json"
   },
+  "CarrierExceptionalStatus": {
+    "$ref": "./schemas/CarrierExceptionalStatus.json"
+  },
   "CarrierRelationship": {
     "$ref": "./schemas/CarrierRelationship.json"
   },

@@ -6,6 +6,9 @@
     "assigned_at"
   ],
   "properties": {
+    "category": {
+      "$ref": "#/components/schemas/CarrierExceptionalStatus"
+    },
     "code": {
       "type": "string",
       "example": "9001",
