@@ -7,7 +7,7 @@
   ],
   "properties": {
     "category": {
-      "$ref": "#/components/schemas/CarrierExceptionalStatus"
+      "$ref": "#/components/schemas/CarrierStatusCategory"
     },
     "code": {
       "type": "string",
