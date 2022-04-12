@@ -19,6 +19,6 @@
     "change-in-flight"
   ],
   "example": "failed-delivery-attempt",
-  "default": "failed-delivery-attempt",
+  "default": "default",
   "description": "Driver has physically tried to deliver the shipment but the customer is not home."
 }
