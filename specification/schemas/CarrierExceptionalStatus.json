@@ -16,7 +16,8 @@
     "relabelling",
     "partial-collection",
     "partial-delivery",
-    "change-in-flight"
+    "change-in-flight",
+    "default"
   ],
   "example": "failed-delivery-attempt",
   "default": "default",
