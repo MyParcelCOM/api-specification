@@ -50,6 +50,9 @@
   "CarrierStatus": {
     "$ref": "./schemas/CarrierStatus.json"
   },
+  "CarrierStatusCategory": {
+    "$ref": "./schemas/CarrierStatusCategory.json"
+  },
   "CarrierSurcharge": {
     "$ref": "./schemas/CarrierSurcharge.json"
   },

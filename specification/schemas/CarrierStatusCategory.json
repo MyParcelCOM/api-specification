@@ -1,0 +1,25 @@
+{
+  "type": "string",
+  "enum": [
+    "change-in-flight",
+    "delay",
+    "default",
+    "failed-cash-on-delivery",
+    "failed-collection",
+    "failed-customs-clearance",
+    "failed-delivery-attempt",
+    "failed-miscellaneous",
+    "failed-pre-advice",
+    "failed-refused-delivery",
+    "failed-shipment-damaged",
+    "failed-shipment-missing",
+    "partial-collection",
+    "partial-delivery",
+    "relabelling",
+    "require-delivery-instructions",
+    "security-alert"
+  ],
+  "example": "failed-delivery-attempt",
+  "default": "default",
+  "description": "Driver has physically tried to deliver the shipment but the customer is not home."
+}
