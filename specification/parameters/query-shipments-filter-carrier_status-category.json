@@ -1,7 +1,7 @@
 {
   "name": "filter[carrier_status][category]",
   "in": "query",
-  "description": "Comma separated string of status categories to filter by. Only shipments with a status that corresponds with one of the categories will be in the response.",
+  "description": "Comma separated string of status categories to filter by. Only shipments with a current status that corresponds with one of the categories will be in the response.",
   "schema": {
     "$ref": "#/components/schemas/CarrierStatusCategory"
   }
