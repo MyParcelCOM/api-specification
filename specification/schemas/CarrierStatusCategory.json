@@ -2,8 +2,8 @@
   "type": "string",
   "enum": [
     "change-in-flight",
-    "delay",
     "default",
+    "delay",
     "failed-cash-on-delivery",
     "failed-collection",
     "failed-customs-clearance",
@@ -21,5 +21,5 @@
   ],
   "example": "failed-delivery-attempt",
   "default": "default",
-  "description": "Driver has physically tried to deliver the shipment but the customer is not home."
+  "description": "The category code of this status update. If the value is not `default`, some action might be required by the sender or recipient."
 }
