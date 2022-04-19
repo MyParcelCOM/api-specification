@@ -172,5 +172,8 @@
   },
   "query-shipments-filter-consolidation_shipment": {
     "$ref": "./parameters/query-shipments-filter-consolidation_shipment.json"
+  },
+  "query-shipments-filter-carrier_status-category": {
+    "$ref": "./parameters/query-shipments-filter-carrier_status-category.json"
   }
 }
