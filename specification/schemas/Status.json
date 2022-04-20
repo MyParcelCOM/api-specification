@@ -12,6 +12,9 @@
             "code": {
               "type": "string",
               "enum": [
+                "collection-concept",
+                "collection-registered",
+                "collection-registration-failed",
                 "invoice-paid",
                 "invoice-pending",
                 "payment-pending",
@@ -21,9 +24,11 @@
                 "report-finished",
                 "report-in-progress",
                 "report-queued",
+                "shipment-at-parcel-shop",
                 "shipment-at-sorting",
                 "shipment-concept",
                 "shipment-created-without-tracking",
+                "shipment-created-without-label",
                 "shipment-delivered",
                 "shipment-failed",
                 "shipment-on-the-way-to-hub",

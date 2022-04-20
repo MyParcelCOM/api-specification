@@ -27,6 +27,11 @@
     }
   },
   {
+    "name": "Collections",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "CombinedFiles",
     "externalDocs": {
     }

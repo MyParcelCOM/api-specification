@@ -223,6 +223,9 @@
         "relationships": {
           "type": "object",
           "properties": {
+            "collection": {
+              "$ref": "#/components/schemas/CollectionRelationship"
+            },
             "colli": {
               "allOf": [
                 {
@@ -381,7 +384,7 @@
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
             },
-            "manifest":  {
+            "manifest": {
               "$ref": "#/components/schemas/ManifestRelationship"
             }
           }

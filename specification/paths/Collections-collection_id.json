@@ -1,0 +1,157 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-collection_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Collections"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "shipments.view"
+        ]
+      }
+    ],
+    "summary": "Get a collection by id.",
+    "description": "This endpoint retrieves the collection with the supplied id.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`contract.carrier`</li><li>`manifest`</li><li>`shop`</li><li>`status`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the collection.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/CollectionResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/CollectionIncludes"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "patch": {
+    "tags": [
+      "Collections"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Update a collection by id.",
+    "description": "This endpoint updates the collection with the supplied id. <br> The collection can be registered with the carrier through this endpoint by using the `register` attribute. <br> No further updates are possible after registration.",
+    "requestBody": {
+      "description": "The collection object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Collection"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "properties": {
+                          "register": {
+                            "type": "boolean",
+                            "example": true,
+                            "description": "Indicates whether the collection should be registered with the carrier. Further updates are no longer possible after a successful registration."
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "properties": {
+                          "shop": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The collection is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/CollectionResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Collections"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a collection by id.",
+    "description": "This endpoint deletes the collection with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The collection is deleted."
+      }
+    }
+  }
+}

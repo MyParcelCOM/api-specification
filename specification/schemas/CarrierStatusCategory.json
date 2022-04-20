@@ -1,0 +1,25 @@
+{
+  "type": "string",
+  "enum": [
+    "change-in-flight",
+    "default",
+    "delay",
+    "failed-cash-on-delivery",
+    "failed-collection",
+    "failed-customs-clearance",
+    "failed-delivery-attempt",
+    "failed-miscellaneous",
+    "failed-pre-advice",
+    "failed-refused-delivery",
+    "failed-shipment-damaged",
+    "failed-shipment-missing",
+    "partial-collection",
+    "partial-delivery",
+    "relabelling",
+    "require-delivery-instructions",
+    "security-alert"
+  ],
+  "example": "failed-delivery-attempt",
+  "default": "default",
+  "description": "The category code of this status update. If the value is not `default`, some action might be required by the sender or recipient."
+}

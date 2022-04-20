@@ -50,11 +50,29 @@
   "CarrierStatus": {
     "$ref": "./schemas/CarrierStatus.json"
   },
+  "CarrierStatusCategory": {
+    "$ref": "./schemas/CarrierStatusCategory.json"
+  },
   "CarrierSurcharge": {
     "$ref": "./schemas/CarrierSurcharge.json"
   },
   "Client": {
     "$ref": "./schemas/Client.json"
+  },
+  "Collection": {
+    "$ref": "./schemas/Collection.json"
+  },
+  "CollectionIncludes": {
+    "$ref": "./schemas/CollectionIncludes.json"
+  },
+  "CollectionRelationship": {
+    "$ref": "./schemas/CollectionRelationship.json"
+  },
+  "CollectionResource": {
+    "$ref": "./schemas/CollectionResource.json"
+  },
+  "CollectionResponse": {
+    "$ref": "./schemas/CollectionResponse.json"
   },
   "ColloNumber": {
     "$ref": "./schemas/ColloNumber.json"
