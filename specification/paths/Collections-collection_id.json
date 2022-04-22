@@ -94,12 +94,21 @@
                             "type": "boolean",
                             "example": true,
                             "description": "Indicates whether the collection should be registered with the carrier. Further updates are no longer possible after a successful registration."
+                          },
+                          "address": {
+                            "readOnly": true
+                          },
+                          "collection_time": {
+                            "readOnly": true
                           }
                         }
                       },
                       "relationships": {
                         "properties": {
                           "shop": {
+                            "readOnly": true
+                          },
+                          "contract": {
                             "readOnly": true
                           }
                         }
