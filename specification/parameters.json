@@ -2,6 +2,9 @@
   "header-files": {
     "$ref": "./parameters/header-files.json"
   },
+  "header-idempotency-key": {
+    "$ref": "./parameters/header-idempotency-key.json"
+  },
   "path-address_id": {
     "$ref": "./parameters/path-address_id.json"
   },

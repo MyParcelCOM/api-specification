@@ -276,9 +276,22 @@
         }
       }
     },
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-idempotency-key"
+      }
+    ],
     "responses": {
       "201": {
         "description": "The shipment is created.",
+        "headers": {
+          "Idempotency-Replay": {
+            "description": "Present with value `true` when the response is replayed based on the provided `Idempotency-Key` header.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
         "content": {
           "application/vnd.api+json": {
             "schema": {
