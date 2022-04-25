@@ -96,9 +96,6 @@
               "allOf": [
                 {
                   "$ref": "#/components/schemas/ShipmentsRelationship"
-                },
-                {
-                  "readOnly": true
                 }
               ]
             },
