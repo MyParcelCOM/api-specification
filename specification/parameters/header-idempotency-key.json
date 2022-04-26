@@ -1,0 +1,8 @@
+{
+  "name": "Idempotency-Key",
+  "in": "header",
+  "description": "Populate this header with a value <strong>unique to the request data</strong> if you want to prevent duplicate resources when you call this endpoint multiple times, for example due to network issues.",
+  "schema": {
+    "type": "string"
+  }
+}
