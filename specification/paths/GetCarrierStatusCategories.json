@@ -1,0 +1,53 @@
+{
+  "get": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "shipments.view"
+        ]
+      }
+    ],
+    "summary": "Get carrier status categories.",
+    "description": "This endpoint retrieves a list of all possible categories of carrier-statuses. The codes can be used to populate the `filter[carrier_status][category]` query parameter on the shipments endpoint.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the carrier status categories.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "code",
+                      "description"
+                    ],
+                    "properties": {
+                      "code": {
+                        "$ref": "#/components/schemas/CarrierStatusCategory"
+                      },
+                      "description": {
+                        "type": "string",
+                        "example": "Driver has physically tried to deliver the shipment but the customer was not home."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
