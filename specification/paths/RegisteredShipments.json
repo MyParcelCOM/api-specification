@@ -12,6 +12,11 @@
     ],
     "summary": "Create a new shipment which is immediately registered with the carrier.",
     "description": "This endpoint creates a new shipment with the posted data, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-idempotency-key"
+      }
+    ],
     "requestBody": {
       "description": "The shipment object to be created.",
       "required": true,
@@ -169,11 +174,6 @@
         }
       }
     },
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/header-idempotency-key"
-      }
-    ],
     "responses": {
       "201": {
         "description": "The shipment is created.",

@@ -148,6 +148,11 @@
     ],
     "summary": "Create a new shipment.",
     "description": "This endpoint creates a new shipment with the posted data.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-idempotency-key"
+      }
+    ],
     "requestBody": {
       "description": "The shipment object to be created.",
       "required": true,
@@ -276,11 +281,6 @@
         }
       }
     },
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/header-idempotency-key"
-      }
-    ],
     "responses": {
       "201": {
         "description": "The shipment is created.",
