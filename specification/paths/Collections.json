@@ -138,6 +138,9 @@
                               "city",
                               "country_code"
                             ]
+                          },
+                          "register": {
+                            "readOnly": true
                           }
                         }
                       },
