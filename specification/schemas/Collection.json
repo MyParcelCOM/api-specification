@@ -16,6 +16,12 @@
             "address": {
               "$ref": "#/components/schemas/BaseAddress"
             },
+            "register": {
+              "type": "boolean",
+              "example": true,
+              "description": "Indicates whether the collection should be registered with the carrier. Further updates are no longer possible after a successful registration.",
+              "readOnly": true
+            },
             "collection_time": {
               "type": "object",
               "required": [
