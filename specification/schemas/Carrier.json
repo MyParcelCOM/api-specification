@@ -17,8 +17,7 @@
             "logo_url",
             "credentials_format",
             "label_mime_types",
-            "label_formats",
-            "voids_registered_collections"
+            "label_formats"
           ],
           "additionalProperties": false,
           "properties": {
@@ -83,11 +82,6 @@
                 "example": "application/pdf"
               },
               "description": "Deprecated, use label_formats instead."
-            },
-            "voids_registered_collections": {
-              "type": "boolean",
-              "example": false,
-              "description": "Whether the carrier supports voiding of registered collections."
             }
           }
         },
