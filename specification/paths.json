@@ -77,6 +77,9 @@
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
   },
+  "/get-carrier-status-categories": {
+    "$ref": "./paths/GetCarrierStatusCategories.json"
+  },
   "/get-dynamic-service-rates": {
     "$ref": "./paths/GetDynamicServiceRates.json"
   },

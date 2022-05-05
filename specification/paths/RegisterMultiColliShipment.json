@@ -12,6 +12,11 @@
     ],
     "summary": "Create and register a multi-colli shipment.",
     "description": "This endpoint creates a new shipment consisting of multiple parcels to the same address, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-idempotency-key"
+      }
+    ],
     "requestBody": {
       "description": "The address and data to create the multi-colli shipment.",
       "required": true,
@@ -174,6 +179,14 @@
     "responses": {
       "201": {
         "description": "The multi-colli shipment is created.",
+        "headers": {
+          "Idempotency-Replay": {
+            "description": "Present with value `true` when the response is replayed based on the provided `Idempotency-Key` header.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
         "content": {
           "application/json": {
             "schema": {

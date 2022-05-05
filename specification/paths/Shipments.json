@@ -148,6 +148,11 @@
     ],
     "summary": "Create a new shipment.",
     "description": "This endpoint creates a new shipment with the posted data.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-idempotency-key"
+      }
+    ],
     "requestBody": {
       "description": "The shipment object to be created.",
       "required": true,
@@ -279,6 +284,14 @@
     "responses": {
       "201": {
         "description": "The shipment is created.",
+        "headers": {
+          "Idempotency-Replay": {
+            "description": "Present with value `true` when the response is replayed based on the provided `Idempotency-Key` header.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
         "content": {
           "application/vnd.api+json": {
             "schema": {

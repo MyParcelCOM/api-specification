@@ -12,6 +12,11 @@
     ],
     "summary": "Create a new shipment which is immediately registered with the carrier.",
     "description": "This endpoint creates a new shipment with the posted data, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-idempotency-key"
+      }
+    ],
     "requestBody": {
       "description": "The shipment object to be created.",
       "required": true,
@@ -172,6 +177,14 @@
     "responses": {
       "201": {
         "description": "The shipment is created.",
+        "headers": {
+          "Idempotency-Replay": {
+            "description": "Present with value `true` when the response is replayed based on the provided `Idempotency-Key` header.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
         "content": {
           "application/vnd.api+json": {
             "schema": {
