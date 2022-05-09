@@ -15,6 +15,7 @@
                 "collection-concept",
                 "collection-registered",
                 "collection-registration-failed",
+                "collection-voided",
                 "invoice-paid",
                 "invoice-pending",
                 "payment-pending",
