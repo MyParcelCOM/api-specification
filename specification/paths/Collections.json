@@ -21,6 +21,28 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[collection_date]",
+        "in": "query",
+        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only collections with a collection date that matches this date will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-shop"
+      },
+      {
+        "name": "filter[status]",
+        "in": "query",
+        "description": "Comma separated string of status codes to filter by. Only Collections with the a current status that corresponds with one of the status codes will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-carrier"
       }
     ],
     "responses": {
