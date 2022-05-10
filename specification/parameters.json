@@ -152,14 +152,14 @@
   "query-shipments-filter-register_at-date_to": {
     "$ref": "./parameters/query-shipments-filter-register_at-date_to.json"
   },
-  "query-shipments-filter-shop": {
-    "$ref": "./parameters/query-shipments-filter-shop.json"
+  "query-filter-shop": {
+    "$ref": "./parameters/query-filter-shop.json"
   },
   "query-filter-organization": {
     "$ref": "./parameters/query-filter-organization.json"
   },
-  "query-shipments-filter-carrier": {
-    "$ref": "./parameters/query-shipments-filter-carrier.json"
+  "query-filter-carrier": {
+    "$ref": "./parameters/query-filter-carrier.json"
   },
   "query-shipments-filter-current_status_code": {
     "$ref": "./parameters/query-shipments-filter-current_status_code.json"
@@ -176,7 +176,7 @@
   "query-shipments-filter-consolidation_shipment": {
     "$ref": "./parameters/query-shipments-filter-consolidation_shipment.json"
   },
-  "query-shipments-filter-carrier_status-category": {
-    "$ref": "./parameters/query-shipments-filter-carrier_status-category.json"
+  "query-filter-carrier_status-category": {
+    "$ref": "./parameters/query-filter-carrier_status-category.json"
   }
 }
