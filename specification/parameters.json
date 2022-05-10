@@ -178,5 +178,8 @@
   },
   "query-filter-carrier_status-category": {
     "$ref": "./parameters/query-filter-carrier_status-category.json"
+  },
+  "query-filter-status": {
+    "$ref": "./parameters/query-filter-status.json"
   }
 }

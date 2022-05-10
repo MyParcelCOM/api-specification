@@ -34,12 +34,7 @@
         "$ref": "#/components/parameters/query-filter-shop"
       },
       {
-        "name": "filter[status]",
-        "in": "query",
-        "description": "Comma separated string of status codes to filter by. Only Collections with the a current status that corresponds with one of the status codes will be in the response.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-status"
       },
       {
         "$ref": "#/components/parameters/query-filter-carrier"
