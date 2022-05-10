@@ -1,0 +1,8 @@
+{
+  "name": "filter[status]",
+  "in": "query",
+  "description": "Comma separated string of status codes to filter by. Only resources with the a current status that corresponds with one of the status codes will be in the response.",
+  "schema": {
+    "type": "string"
+  }
+}

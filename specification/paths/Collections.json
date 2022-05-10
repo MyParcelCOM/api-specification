@@ -21,6 +21,23 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[collection_date]",
+        "in": "query",
+        "description": "Date string in ISO 8601 date format (YYYY-MM-DD). Only collections with a collection date that matches this date will be in the response.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-shop"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-status"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-carrier"
       }
     ],
     "responses": {
