@@ -69,7 +69,7 @@
         "$ref": "#/components/parameters/query-shipments-filter-consolidation_shipment"
       },
       {
-        "$ref": "#/components/parameters/query-filter-carrier_status-category"
+        "$ref": "#/components/parameters/query-shipments-filter-carrier_status-category"
       }
     ],
     "responses": {
