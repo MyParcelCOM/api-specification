@@ -45,13 +45,13 @@
         "$ref": "#/components/parameters/query-shipments-filter-register_at-date_to"
       },
       {
-        "$ref": "#/components/parameters/query-shipments-filter-shop"
+        "$ref": "#/components/parameters/query-filter-shop"
       },
       {
         "$ref": "#/components/parameters/query-filter-organization"
       },
       {
-        "$ref": "#/components/parameters/query-shipments-filter-carrier"
+        "$ref": "#/components/parameters/query-filter-carrier"
       },
       {
         "$ref": "#/components/parameters/query-shipments-filter-current_status_code"

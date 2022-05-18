@@ -84,6 +84,9 @@
                       }
                     ]
                   },
+                  "customs": {
+                    "$ref": "#/components/schemas/BaseCustoms"
+                  },
                   "colli": {
                     "type": "array",
                     "items": {

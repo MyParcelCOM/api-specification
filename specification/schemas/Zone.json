@@ -36,17 +36,17 @@
               "description": "Regular expression matching postal code areas."
             },
             "state_codes": {
-              "type": "array",
-              "items": {
-                "oneOf": [
-                  {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
                     "$ref": "#/components/schemas/StateCode"
-                  },
-                  {
-                    "type": "null"
                   }
-                ]
-              }
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "country_codes": {
               "type": "array",
