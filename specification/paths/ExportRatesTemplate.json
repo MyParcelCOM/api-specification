@@ -6,12 +6,12 @@
     "security": [
       {
         "OAuth2": [
-          "organizations.manage"
+          "contracts.manage"
         ]
       }
     ],
     "summary": "Export service rates template.",
-    "description": "This endpoint retrieves a template based on existing service rates, this can then be used to edit and add existing and new service rates into the system.",
+    "description": "This endpoint retrieves a template based on existing service rates, this can then be used to edit existing and add new service rates into the system.",
     "requestBody": {
       "description": "The object containing a contract id and optional service codes.",
       "required": true,
