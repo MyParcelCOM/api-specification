@@ -1,0 +1,281 @@
+{
+  "post": {
+    "tags": [
+      "Shipments"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Create and register a multi-colli shipment.",
+    "description": "This endpoint creates a new shipment consisting of multiple parcels to the same address, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-idempotency-key"
+      }
+    ],
+    "requestBody": {
+      "description": "The shipment object to be created, including it's colli in the meta.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data",
+              "meta"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Shipment"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "recipient_address",
+                          "return_address",
+                          "sender_address",
+                          "physical_properties"
+                        ],
+                        "properties": {
+                          "recipient_address": {
+                            "required": [
+                              "first_name",
+                              "last_name",
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "return_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "sender_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
+                          },
+                          "pickup_location": {
+                            "required": [
+                              "code",
+                              "address"
+                            ]
+                          },
+                          "tracking_code": {
+                            "readOnly": true
+                          },
+                          "physical_properties": {
+                            "required": [
+                              "weight"
+                            ]
+                          },
+                          "items": {
+                            "items": {
+                              "required": [
+                                "description",
+                                "quantity"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "required": [
+                          "shop"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "meta": {
+                "type": "object",
+                "required": [
+                  "colli"
+                ],
+                "properties": {
+                  "colli": {
+                    "type": "array",
+                    "items": {
+                      "required": [
+                        "physical_properties"
+                      ],
+                      "properties": {
+                        "physical_properties": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/BasePhysicalProperties"
+                            },
+                            {
+                              "required": [
+                                "weight"
+                              ]
+                            }
+                          ]
+                        },
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/BaseShipmentItem"
+                              },
+                              {
+                                "required": [
+                                  "description",
+                                  "quantity"
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "description": {
+                          "type": "string",
+                          "example": "Fidget spinners",
+                          "description": "Description of the shipment (contents). This field is communicated to the carrier and may be put on the shipment's label."
+                        },
+                        "customer_reference": {
+                          "type": "string",
+                          "example": "#8008135",
+                          "description": "Internal reference for the customer to recognize the shipment by."
+                        },
+                        "total_value": {
+                          "$ref": "#/components/schemas/Price"
+                        }
+                      }
+                    }
+                  },
+                  "label": {
+                    "type": "object",
+                    "properties": {
+                      "mime_type": {
+                        "type": "string",
+                        "example": "application/pdf",
+                        "default": "application/pdf",
+                        "description": "Requested `mime_type` for the label of this shipment. Available mime_types can be found on the carrier resource related to the chosen service/contract."
+                      },
+                      "size": {
+                        "type": "string",
+                        "example": "A6",
+                        "default": "A6",
+                        "description": "Requested size for the label of this shipment. Available label sizes can be found on the carrier resource related to the chosen service/contract."
+                      }
+                    }
+                  },
+                  "service_code": {
+                    "type": "string",
+                    "example": "carrier-parcel-next-day",
+                    "description": "If an applicable service is found, it will be set as relationship. If no contract relationship is defined, the cheapest contract for this service will be applied."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The shipment is created and registered.",
+        "headers": {
+          "Idempotency-Replay": {
+            "description": "Present with value `true` when the response is replayed based on the provided `Idempotency-Key` header.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Shipment"
+                    },
+                    {
+                      "required": [
+                        "id",
+                        "links"
+                      ],
+                      "properties": {
+                        "relationships": {
+                          "required": [
+                            "contract",
+                            "files",
+                            "service",
+                            "shipment_status",
+                            "shop"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "meta": {
+                  "type": "object",
+                  "properties": {
+                    "files": {
+                      "type": "array",
+                      "description": "An array of objects holding the attributes and contents (Base64 encoded) of created files",
+                      "items": {
+                        "allOf": [
+                          {
+                            "$ref": "#/components/schemas/FileFormat"
+                          },
+                          {
+                            "required": [
+                              "document_type",
+                              "contents"
+                            ],
+                            "properties": {
+                              "document_type": {
+                                "$ref": "#/components/schemas/DocumentType"
+                              },
+                              "contents": {
+                                "type": "string",
+                                "description": "Base64 encoded file data"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "422": {
+        "description": "The shipment could not be created because the carrier did not accept the supplied information."
+      }
+    }
+  }
+}
