@@ -216,57 +216,75 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/Shipment"
+                      "$ref": "#/components/schemas/ShipmentResponse"
                     },
                     {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
                       "properties": {
                         "relationships": {
                           "required": [
+                            "colli",
                             "contract",
-                            "files",
-                            "service",
-                            "shipment_status",
-                            "shop"
-                          ]
+                            "service"
+                          ],
+                          "properties": {
+                            "colli": {
+                              "properties": {
+                                "data": {
+                                  "items": {
+                                    "properties": {
+                                      "meta": {
+                                        "type": "object",
+                                        "properties": {
+                                          "collo_number": {
+                                            "$ref": "#/components/schemas/ColloNumber"
+                                          },
+                                          "barcode": {
+                                            "$ref": "#/components/schemas/Barcode"
+                                          },
+                                          "tracking_code": {
+                                            "$ref": "#/components/schemas/TrackingCode"
+                                          },
+                                          "tracking_url": {
+                                            "$ref": "#/components/schemas/TrackingUrl"
+                                          },
+                                          "files": {
+                                            "type": "array",
+                                            "description": "An array of objects holding the attributes and contents (Base64 encoded) of created files",
+                                            "items": {
+                                              "allOf": [
+                                                {
+                                                  "$ref": "#/components/schemas/FileFormat"
+                                                },
+                                                {
+                                                  "required": [
+                                                    "document_type",
+                                                    "contents"
+                                                  ],
+                                                  "properties": {
+                                                    "document_type": {
+                                                      "$ref": "#/components/schemas/DocumentType"
+                                                    },
+                                                    "contents": {
+                                                      "type": "string",
+                                                      "description": "Base64 encoded file data"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   ]
-                },
-                "meta": {
-                  "type": "object",
-                  "properties": {
-                    "files": {
-                      "type": "array",
-                      "description": "An array of objects holding the attributes and contents (Base64 encoded) of created files",
-                      "items": {
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/FileFormat"
-                          },
-                          {
-                            "required": [
-                              "document_type",
-                              "contents"
-                            ],
-                            "properties": {
-                              "document_type": {
-                                "$ref": "#/components/schemas/DocumentType"
-                              },
-                              "contents": {
-                                "type": "string",
-                                "description": "Base64 encoded file data"
-                              }
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  }
                 }
               }
             }
