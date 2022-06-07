@@ -18,6 +18,7 @@
             "credentials_format",
             "label_mime_types",
             "label_formats",
+            "collections",
             "voids_registered_collections"
           ],
           "additionalProperties": false,
@@ -84,10 +85,24 @@
               },
               "description": "Deprecated, use label_formats instead."
             },
-            "voids_registered_collections": {
-              "type": "boolean",
-              "example": false,
-              "description": "Whether the carrier supports voiding of registered collections."
+            "collections": {
+              "type": "object",
+              "required": [
+                "offers_collections",
+                "voids_registered_collections"
+              ],
+              "properties": {
+                "offers_collections": {
+                  "type": "boolean",
+                  "default": false,
+                  "example": false
+                },
+                "voids_registered_collections": {
+                  "type": "boolean",
+                  "description": "Whether the carrier supports voiding of registered collections.",
+                  "example": false
+                }
+              }
             }
           }
         },
