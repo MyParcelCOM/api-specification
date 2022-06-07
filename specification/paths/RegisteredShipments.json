@@ -190,27 +190,22 @@
             "schema": {
               "type": "object",
               "required": [
-                "data"
+                "data",
+                "meta"
               ],
               "properties": {
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/Shipment"
+                      "$ref": "#/components/schemas/ShipmentResponse"
                     },
                     {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
                       "properties": {
                         "relationships": {
                           "required": [
                             "contract",
                             "files",
-                            "service",
-                            "shipment_status",
-                            "shop"
+                            "service"
                           ]
                         }
                       }
