@@ -1,5 +1,6 @@
 {
   "post": {
+    "deprecated": true,
     "tags": [
       "RPC"
     ],
@@ -11,7 +12,7 @@
       }
     ],
     "summary": "Create and register a multi-colli shipment.",
-    "description": "This endpoint creates a new shipment consisting of multiple parcels to the same address, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "description": "Use the <a href='#tag/Shipments/paths/~1multi-colli-shipments/post'>POST /multi-colli-shipments</a> endpoint instead.",
     "parameters": [
       {
         "$ref": "#/components/parameters/header-idempotency-key"
@@ -29,6 +30,7 @@
             ],
             "properties": {
               "data": {
+                "deprecated": true,
                 "type": "object",
                 "required": [
                   "recipient_address",
@@ -204,6 +206,7 @@
                       "$ref": "#/components/schemas/ShipmentResponse"
                     },
                     {
+                      "deprecated": true,
                       "properties": {
                         "relationships": {
                           "required": [

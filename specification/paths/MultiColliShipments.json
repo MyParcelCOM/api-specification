@@ -10,22 +10,23 @@
         ]
       }
     ],
-    "summary": "Create a new shipment which is immediately registered with the carrier.",
-    "description": "This endpoint creates a new shipment with the posted data, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
+    "summary": "Create and register a multi-colli shipment.",
+    "description": "This endpoint creates a new shipment consisting of multiple parcels to the same address, which is then immediately communicated to the carrier. The carrier response is processed before your request is completed, so files will be available.",
     "parameters": [
       {
         "$ref": "#/components/parameters/header-idempotency-key"
       }
     ],
     "requestBody": {
-      "description": "The shipment object to be created.",
+      "description": "The shipment object to be created, including it's colli in the meta.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
           "schema": {
             "type": "object",
             "required": [
-              "data"
+              "data",
+              "meta"
             ],
             "additionalProperties": false,
             "properties": {
@@ -109,41 +110,60 @@
               },
               "meta": {
                 "type": "object",
+                "required": [
+                  "colli"
+                ],
                 "properties": {
-                  "collection": {
-                    "type": "object",
-                    "properties": {
-                      "name": {
-                        "type": "string"
-                      },
-                      "collection_time": {
-                        "type": "object",
-                        "properties": {
-                          "from": {
-                            "type": [
-                              "number",
-                              "string"
-                            ],
-                            "example": 1647878216,
-                            "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
-                          },
-                          "to": {
-                            "type": [
-                              "number",
-                              "string"
-                            ],
-                            "example": "2022-03-22T20:00:00+01:00",
-                            "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
+                  "colli": {
+                    "type": "array",
+                    "items": {
+                      "required": [
+                        "physical_properties"
+                      ],
+                      "properties": {
+                        "physical_properties": {
+                          "allOf": [
+                            {
+                              "$ref": "#/components/schemas/BasePhysicalProperties"
+                            },
+                            {
+                              "required": [
+                                "weight"
+                              ]
+                            }
+                          ]
+                        },
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/BaseShipmentItem"
+                              },
+                              {
+                                "required": [
+                                  "description",
+                                  "quantity"
+                                ]
+                              }
+                            ]
                           }
+                        },
+                        "description": {
+                          "type": "string",
+                          "example": "Fidget spinners",
+                          "description": "Description of the shipment (contents). This field is communicated to the carrier and may be put on the shipment's label."
+                        },
+                        "customer_reference": {
+                          "type": "string",
+                          "example": "#8008135",
+                          "description": "Internal reference for the customer to recognize the shipment by."
+                        },
+                        "total_value": {
+                          "$ref": "#/components/schemas/Price"
                         }
                       }
                     }
-                  },
-                  "label_mime_type": {
-                    "type": "string",
-                    "example": "application/pdf",
-                    "deprecated": true,
-                    "description": "Deprecated, use `label.mime_type` instead. In case both are used, `label.mime_type` will get priority."
                   },
                   "label": {
                     "type": "object",
@@ -176,7 +196,7 @@
     },
     "responses": {
       "201": {
-        "description": "The shipment is created.",
+        "description": "The shipment is created and registered.",
         "headers": {
           "Idempotency-Replay": {
             "description": "Present with value `true` when the response is replayed based on the provided `Idempotency-Key` header.",
@@ -190,8 +210,7 @@
             "schema": {
               "type": "object",
               "required": [
-                "data",
-                "meta"
+                "data"
               ],
               "properties": {
                 "data": {
@@ -203,45 +222,69 @@
                       "properties": {
                         "relationships": {
                           "required": [
+                            "colli",
                             "contract",
-                            "files",
                             "service"
-                          ]
+                          ],
+                          "properties": {
+                            "colli": {
+                              "properties": {
+                                "data": {
+                                  "items": {
+                                    "properties": {
+                                      "meta": {
+                                        "type": "object",
+                                        "properties": {
+                                          "collo_number": {
+                                            "$ref": "#/components/schemas/ColloNumber"
+                                          },
+                                          "barcode": {
+                                            "$ref": "#/components/schemas/Barcode"
+                                          },
+                                          "tracking_code": {
+                                            "$ref": "#/components/schemas/TrackingCode"
+                                          },
+                                          "tracking_url": {
+                                            "$ref": "#/components/schemas/TrackingUrl"
+                                          },
+                                          "files": {
+                                            "type": "array",
+                                            "description": "An array of objects holding the attributes and contents (Base64 encoded) of created files",
+                                            "items": {
+                                              "allOf": [
+                                                {
+                                                  "$ref": "#/components/schemas/FileFormat"
+                                                },
+                                                {
+                                                  "required": [
+                                                    "document_type",
+                                                    "contents"
+                                                  ],
+                                                  "properties": {
+                                                    "document_type": {
+                                                      "$ref": "#/components/schemas/DocumentType"
+                                                    },
+                                                    "contents": {
+                                                      "type": "string",
+                                                      "description": "Base64 encoded file data"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   ]
-                },
-                "meta": {
-                  "type": "object",
-                  "properties": {
-                    "files": {
-                      "type": "array",
-                      "description": "An array of objects holding the attributes and contents (Base64 encoded) of created files",
-                      "items": {
-                        "allOf": [
-                          {
-                            "$ref": "#/components/schemas/FileFormat"
-                          },
-                          {
-                            "required": [
-                              "document_type",
-                              "contents"
-                            ],
-                            "properties": {
-                              "document_type": {
-                                "$ref": "#/components/schemas/DocumentType"
-                              },
-                              "contents": {
-                                "type": "string",
-                                "description": "Base64 encoded file data"
-                              }
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  }
                 }
               }
             }
