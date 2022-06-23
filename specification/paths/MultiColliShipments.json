@@ -48,8 +48,7 @@
                         "required": [
                           "recipient_address",
                           "return_address",
-                          "sender_address",
-                          "physical_properties"
+                          "sender_address"
                         ],
                         "properties": {
                           "recipient_address": {
@@ -83,11 +82,6 @@
                           },
                           "tracking_code": {
                             "readOnly": true
-                          },
-                          "physical_properties": {
-                            "required": [
-                              "weight"
-                            ]
                           },
                           "items": {
                             "items": {
