@@ -46,6 +46,14 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[features]",
+        "in": "query",
+        "description": "Comma separated list of features to return. Possible options are:<ul><li>`print-label-in-store`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
