@@ -39,44 +39,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Organization"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "attributes",
-                          "relationships",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "type": "object",
-                            "required": [
-                              "name",
-                              "created_at"
-                            ]
-                          },
-                          "relationships": {
-                            "type": "object",
-                            "required": [
-                              "broker"
-                            ],
-                            "properties": {
-                              "broker": {
-                                "$ref": "#/components/schemas/BrokerRelationship"
-                              }
-                            }
-                          },
-                          "links": {
-                            "required": [
-                              "self"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/OrganizationResponse"
                   }
                 },
                 "meta": {
@@ -160,26 +123,16 @@
                         "readOnly": true
                       },
                       "attributes": {
-                        "type": "object",
                         "required": [
                           "name"
-                        ]
-                      },
-                      "relationships": {
-                        "type": "object",
-                        "required": [
-                          "broker"
                         ],
                         "properties": {
-                          "broker": {
-                            "$ref": "#/components/schemas/BrokerRelationship"
-                          }
-                        }
-                      },
-                      "links": {
-                        "properties": {
-                          "self": {
-                            "readOnly": true
+                          "billing_address": {
+                            "required": [
+                              "street_1",
+                              "city",
+                              "country_code"
+                            ]
                           }
                         }
                       }
@@ -205,44 +158,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Organization"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "name",
-                            "created_at"
-                          ]
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "broker"
-                          ],
-                          "properties": {
-                            "broker": {
-                              "$ref": "#/components/schemas/BrokerRelationship"
-                            }
-                          }
-                        },
-                        "links": {
-                          "required": [
-                            "self"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/OrganizationResponse"
                 }
               }
             }

@@ -26,6 +26,9 @@
   "BasePrice": {
     "$ref": "./schemas/BasePrice.json"
   },
+  "Branding": {
+    "$ref": "./schemas/Branding.json"
+  },
   "Broker": {
     "$ref": "./schemas/Broker.json"
   },
@@ -227,9 +230,6 @@
   "MinimalLiabilityCoverage": {
     "$ref": "./schemas/MinimalLiabilityCoverage.json"
   },
-  "MinimalOrganization": {
-    "$ref": "./schemas/MinimalOrganization.json"
-  },
   "MinimalPasswordReset": {
     "$ref": "./schemas/MinimalPasswordReset.json"
   },
@@ -260,6 +260,12 @@
   "OrganizationRelationship": {
     "$ref": "./schemas/OrganizationRelationship.json"
   },
+  "OrganizationResource": {
+    "$ref": "./schemas/OrganizationResource.json"
+  },
+  "OrganizationResponse": {
+    "$ref": "./schemas/OrganizationResponse.json"
+  },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
@@ -271,9 +277,6 @@
   },
   "PatchHook": {
     "$ref": "./schemas/PatchHook.json"
-  },
-  "PatchOrganization": {
-    "$ref": "./schemas/PatchOrganization.json"
   },
   "PatchShipmentSurcharge": {
     "$ref": "./schemas/PatchShipmentSurcharge.json"

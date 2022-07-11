@@ -1,8 +1,7 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalOrganization"
+      "$ref": "#/components/schemas/OrganizationResource"
     },
     {
       "properties": {
@@ -12,50 +11,65 @@
           "properties": {
             "name": {
               "type": "string",
-              "example": "Holmes investigation inc. 🕵"
+              "example": "Holmes investigation inc."
             },
             "company_registration_number": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "63190133",
               "description": "Chamber of Commerce number."
             },
             "language": {
-              "$ref": "#/components/schemas/Language"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Language"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "vat_number": {
               "deprecated": true,
-              "type": "string",
-              "example": "123456789MVA",
-              "description": "Value Added Tax identification number.<br><strong>Deprecated</strong> use `tax_identification_numbers` instead."
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "eori_number": {
               "deprecated": true,
-              "type": "string",
-              "example": "GB123456123456",
-              "description": "Economic Operators Registration and Identification number.<br><strong>Deprecated</strong> use `tax_identification_numbers` instead."
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "voec_number": {
               "deprecated": true,
-              "type": "string",
-              "example": "1234567",
-              "description": "VAT On E-Commerce number (Norway).<br><strong>Deprecated</strong> use `tax_identification_numbers` instead (use `vat` + `NO`)."
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead (use `vat` + `NO`)."
             },
             "currency": {
-              "$ref": "#/components/schemas/Currency"
-            },
-            "billing_address": {
-              "allOf": [
+              "oneOf": [
                 {
-                  "$ref": "#/components/schemas/BaseAddress"
+                  "$ref": "#/components/schemas/Currency"
                 },
                 {
-                  "required": [
-                    "street_1",
-                    "city",
-                    "country_code"
-                  ]
+                  "type": "null"
                 }
               ]
+            },
+            "billing_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "style": {
+              "$ref": "#/components/schemas/Branding"
             },
             "tax_identification_numbers": {
               "oneOf": [
@@ -75,18 +89,15 @@
             }
           }
         },
-        "links": {
-          "readOnly": true,
+        "relationships": {
           "type": "object",
           "required": [
-            "self"
+            "broker"
           ],
           "additionalProperties": false,
           "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
+            "broker": {
+              "$ref": "#/components/schemas/BrokerRelationship"
             }
           }
         }
