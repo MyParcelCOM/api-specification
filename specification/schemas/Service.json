@@ -143,6 +143,9 @@
             },
             "region_to": {
               "$ref": "#/components/schemas/RegionRelationship"
+            },
+            "service_options": {
+              "$ref": "#/components/schemas/ServiceOptionsRelationship"
             }
           }
         },
