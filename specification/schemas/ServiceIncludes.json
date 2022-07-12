@@ -1,0 +1,13 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "#/components/schemas/Carrier"
+      },
+      {
+        "$ref": "#/components/schemas/ServiceOption"
+      }
+    ]
+  }
+}

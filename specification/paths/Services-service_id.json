@@ -16,6 +16,16 @@
     ],
     "summary": "Get a service by id.",
     "description": "This endpoint retrieves the service with the supplied id.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`service_options`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the service.",
@@ -29,17 +39,10 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Service"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ServiceResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ServiceIncludes"
                 }
               }
             }

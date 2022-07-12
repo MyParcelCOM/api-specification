@@ -242,9 +242,6 @@
   "MinimalScope": {
     "$ref": "./schemas/MinimalScope.json"
   },
-  "MinimalService": {
-    "$ref": "./schemas/MinimalService.json"
-  },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
   },
@@ -319,6 +316,15 @@
   },
   "Service": {
     "$ref": "./schemas/Service.json"
+  },
+  "ServiceIncludes": {
+    "$ref": "./schemas/ServiceIncludes.json"
+  },
+  "ServiceResource": {
+    "$ref": "./schemas/ServiceResource.json"
+  },
+  "ServiceResponse": {
+    "$ref": "./schemas/ServiceResponse.json"
   },
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"

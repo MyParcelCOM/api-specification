@@ -125,6 +125,14 @@
         "schema": {
           "type": "boolean"
         }
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`service_options`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
@@ -144,21 +152,14 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Service"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ]
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ServiceResponse"
                   }
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ServiceIncludes"
                 },
                 "links": {
                   "type": "object",

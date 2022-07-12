@@ -1,28 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalService"
+      "$ref": "#/components/schemas/ServiceResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "name",
-            "code",
-            "package_type",
-            "handover_method",
-            "delivery_method",
-            "regions_from",
-            "regions_to",
-            "uses_volumetric_weight",
-            "strict_consolidation"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
@@ -128,11 +112,6 @@
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "carrier",
-            "region_from",
-            "region_to"
-          ],
           "additionalProperties": false,
           "properties": {
             "carrier": {
@@ -146,20 +125,6 @@
             },
             "service_options": {
               "$ref": "#/components/schemas/ServiceOptionsRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb"
             }
           }
         }
