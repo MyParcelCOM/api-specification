@@ -31,44 +31,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Organization"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "name",
-                            "created_at"
-                          ]
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "broker"
-                          ],
-                          "properties": {
-                            "broker": {
-                              "$ref": "#/components/schemas/BrokerRelationship"
-                            }
-                          }
-                        },
-                        "links": {
-                          "required": [
-                            "self"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/OrganizationResponse"
                 }
               }
             }
@@ -103,7 +66,21 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchOrganization"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Organization"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "relationships": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -123,44 +100,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Organization"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "name",
-                            "created_at"
-                          ]
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "broker"
-                          ],
-                          "properties": {
-                            "broker": {
-                              "$ref": "#/components/schemas/BrokerRelationship"
-                            }
-                          }
-                        },
-                        "links": {
-                          "required": [
-                            "self"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/OrganizationResponse"
                 }
               }
             }
