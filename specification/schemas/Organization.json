@@ -7,7 +7,6 @@
       "properties": {
         "attributes": {
           "type": "object",
-          "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
@@ -20,16 +19,6 @@
               ],
               "example": "63190133",
               "description": "Chamber of Commerce number."
-            },
-            "language": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Language"
-                },
-                {
-                  "type": "null"
-                }
-              ]
             },
             "vat_number": {
               "deprecated": true,
@@ -54,16 +43,6 @@
                 "null"
               ],
               "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead (use `vat` + `NO`)."
-            },
-            "currency": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Currency"
-                },
-                {
-                  "type": "null"
-                }
-              ]
             },
             "billing_address": {
               "$ref": "#/components/schemas/BaseAddress"
