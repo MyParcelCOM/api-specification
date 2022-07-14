@@ -113,6 +113,16 @@
                   "example": -0.1606707
                 }
               }
+            },
+            "features": {
+              "type": "array",
+              "description": "A list of features that are available at this location.",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "print-label-in-store"
+                ]
+              }
             }
           }
         },

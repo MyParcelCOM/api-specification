@@ -30,7 +30,7 @@
                           "$ref": "#/components/schemas/BrokerResource"
                         },
                         {
-                          "$ref": "#/components/schemas/MinimalOrganization"
+                          "$ref": "#/components/schemas/OrganizationResource"
                         },
                         {
                           "$ref": "#/components/schemas/ShopResource"

@@ -44,45 +44,7 @@
               "description": "URL to create a new support ticket or mailto: link with email address"
             },
             "style": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "background_color": {
-                  "type": "string",
-                  "minLength": 4,
-                  "maxLength": 7,
-                  "example": "#fafafa",
-                  "description": "RGB color code in #-hexadecimal notation."
-                },
-                "foreground_color": {
-                  "type": "string",
-                  "minLength": 4,
-                  "maxLength": 7,
-                  "example": "#fff",
-                  "description": "RGB color code in #-hexadecimal notation."
-                },
-                "primary_color": {
-                  "type": "string",
-                  "minLength": 4,
-                  "maxLength": 7,
-                  "example": "#3a2efe",
-                  "description": "RGB color code in #-hexadecimal notation."
-                },
-                "secondary_color": {
-                  "type": "string",
-                  "minLength": 4,
-                  "maxLength": 7,
-                  "example": "#192832",
-                  "description": "RGB color code in #-hexadecimal notation."
-                },
-                "accent_color": {
-                  "type": "string",
-                  "minLength": 4,
-                  "maxLength": 7,
-                  "example": "#fdb915",
-                  "description": "RGB color code in #-hexadecimal notation."
-                }
-              }
+              "$ref": "#/components/schemas/Branding"
             }
           }
         },
