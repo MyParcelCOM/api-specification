@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^service-rate-imports$",
+      "example": "service-rate-imports"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+      "example": "9be9e22f-45c8-4fe6-b6f2-2c1ecb92b266"
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "sheet_contents": {
+          "type": "string",
+          "description": "CSV file contents of the service rates to be imported."
+        },
+        "sheet_url": {
+          "type": "string",
+          "description": "URL of the CSV file with service rates to be imported."
+        },
+        "state": {
+          "type": "string",
+          "description": "State of the import.",
+          "example": "pending",
+          "readonly": true,
+          "enum": [
+            "pending",
+            "in-progress",
+            "success",
+            "failed"
+          ]
+        },
+        "error": {
+          "type": "string",
+          "description": "Error message if the import failed.",
+          "example": "Import failed due to invalid data.",
+          "readonly": true
+        },
+        "total_rates": {
+          "type": "integer",
+          "description": "Total number of rates to be imported.",
+          "example": 1,
+          "readonly": true
+        }
+      }
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "contract": {
+          "$ref": "#/components/schemas/ContractRelationship"
+        }
+      }
+    }
+  }
+}
