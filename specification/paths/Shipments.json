@@ -246,6 +246,11 @@
               "meta": {
                 "type": "object",
                 "properties": {
+                  "add_to_latest_collection": {
+                    "type": "boolean",
+                    "example": true,
+                    "description": "Adds the shipment to the latest collection. Does nothing if combined with collection relationship."
+                  },
                   "label_mime_type": {
                     "type": "string",
                     "example": "application/pdf",
