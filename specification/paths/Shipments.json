@@ -246,10 +246,10 @@
               "meta": {
                 "type": "object",
                 "properties": {
-                  "add_to_latest_collection": {
+                  "add_to_next_collection": {
                     "type": "boolean",
                     "example": true,
-                    "description": "Adds the shipment to the latest collection. Does nothing if combined with collection relationship."
+                    "description": "Adds the shipment to the next collection (collection_time.from is closest to now in the future). Does nothing if combined with collection relationship."
                   },
                   "label_mime_type": {
                     "type": "string",
