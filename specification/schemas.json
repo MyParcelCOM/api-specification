@@ -332,8 +332,8 @@
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
   },
-  "ServiceRateImport": {
-    "$ref": "./schemas/ServiceRateImport.json"
+  "RatesImport": {
+    "$ref": "./schemas/RatesImport.json"
   },
   "ServiceRateIncludes": {
     "$ref": "./schemas/ServiceRateIncludes.json"
