@@ -68,7 +68,7 @@
   "/combined-files/{combined_file_id}": {
     "$ref": "./paths/CombinedFiles-combined_file_id.json"
   },
-  "/create-manifest-for-collectoin": {
+  "/create-manifest-for-collection": {
     "$ref": "./paths/CreateManifestForCollection.json"
   },
   "/enterprises": {
