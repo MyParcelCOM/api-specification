@@ -1,0 +1,68 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Generate a manifest for a collection.",
+    "description": "This endpoint generates a manifest for the collection given in the request body.",
+    "requestBody": {
+      "description": "The object containing a collection id.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "collection_id"
+                ],
+                "properties": {
+                  "collection_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "e26d781b-6c56-4be5-ae72-505db793d2bd"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "The created manifest resource, represented in JSON.",
+          "content": {
+            "application/vnd.api+json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "data"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "data": {
+                    "$ref": "#/components/schemas/ManifestResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
