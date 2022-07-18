@@ -47,6 +47,15 @@
             "billing_address": {
               "$ref": "#/components/schemas/BaseAddress"
             },
+            "logo_url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 255,
+              "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
+              "description": "Logo image URL"
+            },
             "style": {
               "$ref": "#/components/schemas/Branding"
             },
