@@ -11,14 +11,10 @@
       "description": "The name of the final mile carrier"
     },
     "tracking_url": {
-      "type": "string",
-      "example": "https://tracker.carrier.com/3SABCD0123456789",
-      "description": "URL used to view tracking status updates."
+      "$ref": "#/components/schemas/TrackingUrl"
     },
     "tracking_code": {
-        "type": "string",
-        "example": "3SABCD0123456789",
-        "description": "Tracking code used to track the shipment."
+      "$ref": "#/components/schemas/TrackingCode"
     }
   }
 }
