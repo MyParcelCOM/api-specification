@@ -254,6 +254,9 @@
   "Organization": {
     "$ref": "./schemas/Organization.json"
   },
+  "OrganizationMeta": {
+    "$ref": "./schemas/OrganizationMeta.json"
+  },
   "OrganizationRelationship": {
     "$ref": "./schemas/OrganizationRelationship.json"
   },

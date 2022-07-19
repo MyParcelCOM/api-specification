@@ -81,6 +81,9 @@
                     }
                   }
                 ]
+              },
+              "meta": {
+                "$ref": "#/components/schemas/OrganizationMeta"
               }
             }
           }
