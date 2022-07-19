@@ -14,6 +14,11 @@
       "type": "string",
       "example": "https://tracker.carrier.com/3SABCD0123456789",
       "description": "URL used to view tracking status updates."
+    },
+    "tracking_code": {
+        "type": "string",
+        "example": "3SABCD0123456789",
+        "description": "Tracking code used to track the shipment."
     }
   }
 }
