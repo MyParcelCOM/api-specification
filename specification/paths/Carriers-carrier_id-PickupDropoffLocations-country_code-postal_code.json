@@ -55,6 +55,14 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[location_types]",
+        "in": "query",
+        "description": "Comma separated list of location types to filter the locations by. Possible options are:<ul><li>`office`</li><li>`locker`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
