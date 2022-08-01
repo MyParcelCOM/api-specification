@@ -48,16 +48,16 @@
             }
           }
         }
-      },
-      "responses": {
-        "200": {
-          "description": "Retrieved the CSV service rates template.",
-          "content": {
-            "text/csv": {
-              "schema": {
-                "type": "string",
-                "description": "Base64 encoded contents of the CSV file."
-              }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Retrieved the CSV service rates template.",
+        "content": {
+          "text/csv": {
+            "schema": {
+              "type": "string",
+              "description": "Base64 encoded contents of the CSV file."
             }
           }
         }
