@@ -52,7 +52,7 @@
             },
             "location_type":{
               "type": "string",
-              "default": "Office",
+              "default": "office",
               "enum": [
                 "office",
                 "locker"
