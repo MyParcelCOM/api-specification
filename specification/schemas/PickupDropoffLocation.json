@@ -15,7 +15,8 @@
           "required": [
             "categories",
             "code",
-            "address"
+            "address",
+            "location_type"
           ],
           "additionalProperties": false,
           "properties": {
@@ -47,6 +48,14 @@
                     "country_code"
                   ]
                 }
+              ]
+            },
+            "location_type":{
+              "type": "string",
+              "default": "office",
+              "enum": [
+                "office",
+                "locker"
               ]
             },
             "opening_hours": {
