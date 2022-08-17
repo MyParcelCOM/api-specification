@@ -71,6 +71,9 @@
   "path-longitude": {
     "$ref": "./parameters/path-longitude.json"
   },
+  "path-rates_import_id": {
+    "$ref": "./parameters/path-rates_import_id.json"
+  },
   "path-region_id": {
     "$ref": "./parameters/path-region_id.json"
   },

@@ -1,0 +1,67 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/RatesImport"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "properties": {
+            "sheet_url": {
+              "type": "string",
+              "format": "uri",
+              "example": "https://www.example.com/rates.csv"
+            },
+            "state": {
+              "type": "string",
+              "example": "in-progress"
+            },
+            "total_rates": {
+              "type": "integer",
+              "example": 100
+            },
+            "error": {
+              "type": "string",
+              "example": "Error message"
+            },
+            "imported_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "updated_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "required": [
+            "contract"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/rate-imports/82827d54-04ca-4d8a-a69f-3390fcd94546"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

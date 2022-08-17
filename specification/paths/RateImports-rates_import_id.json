@@ -1,0 +1,52 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-rates_import_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Rate-imports"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "contracts.manage"
+        ]
+      }
+    ],
+    "summary": "Get a rates-import by id.",
+    "description": "This endpoint retrieves the rates-import with the supplied id.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`contract.carrier`</li><li>`file`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the rates-import.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/RatesImportResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
