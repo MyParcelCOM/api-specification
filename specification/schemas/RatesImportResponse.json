@@ -12,34 +12,10 @@
       ],
       "properties": {
         "attributes": {
-          "properties": {
-            "sheet_url": {
-              "type": "string",
-              "format": "uri",
-              "example": "https://www.example.com/rates.csv"
-            },
-            "state": {
-              "type": "string",
-              "example": "in-progress"
-            },
-            "total_rates": {
-              "type": "integer",
-              "example": 100
-            },
-            "error": {
-              "type": "string",
-              "example": "Error message"
-            },
-            "imported_at": {
-              "$ref": "#/components/schemas/Timestamp"
-            },
-            "created_at": {
-              "$ref": "#/components/schemas/Timestamp"
-            },
-            "updated_at": {
-              "$ref": "#/components/schemas/Timestamp"
-            }
-          }
+          "required": [
+            "state",
+            "total_rates"
+          ]
         },
         "relationships": {
           "required": [
