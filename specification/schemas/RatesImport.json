@@ -58,10 +58,10 @@
         "contract": {
           "$ref": "#/components/schemas/ContractRelationship"
         },
-        "files": {
+        "file": {
           "allOf": [
             {
-              "$ref": "#/components/schemas/FilesRelationship"
+              "$ref": "#/components/schemas/FileRelationship"
             },
             {
               "readOnly": true
