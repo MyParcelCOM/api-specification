@@ -132,7 +132,7 @@
                         "customer_reference": {
                           "type": "string",
                           "example": "#8008135",
-                          "description": "Internal reference for the customer to recognize the shipment by."
+                          "description": "Reference for the customer to recognize the shipment by."
                         },
                         "total_value": {
                           "$ref": "#/components/schemas/Price"
