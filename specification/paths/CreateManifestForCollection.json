@@ -47,7 +47,7 @@
       "200": {
         "description": "The created manifest resource, represented in JSON.",
         "content": {
-          "application/vnd.api+json": {
+          "application/json": {
             "schema": {
               "type": "object",
               "required": [
