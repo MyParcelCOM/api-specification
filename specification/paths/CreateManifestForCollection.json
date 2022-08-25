@@ -41,22 +41,22 @@
             }
           }
         }
-      },
-      "responses": {
-        "200": {
-          "description": "The created manifest resource, represented in JSON.",
-          "content": {
-            "application/vnd.api+json": {
-              "schema": {
-                "type": "object",
-                "required": [
-                  "data"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/ManifestResponse"
-                  }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The created manifest resource, represented in JSON.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ManifestResponse"
                 }
               }
             }

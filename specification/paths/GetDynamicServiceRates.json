@@ -17,7 +17,7 @@
       "description": "The shipment object with a service and contract.",
       "required": true,
       "content": {
-        "application/json": {
+        "application/vnd.api+json": {
           "schema": {
             "type": "object",
             "required": [
@@ -87,7 +87,7 @@
       "200": {
         "description": "Retrieved the service rates.",
         "content": {
-          "application/json": {
+          "application/vnd.api+json": {
             "schema": {
               "type": "object",
               "required": [
