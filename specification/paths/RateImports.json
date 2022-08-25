@@ -152,7 +152,7 @@
     },
     "responses": {
       "201": {
-        "description": "The collection has been created.",
+        "description": "The rates import has been created.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -163,7 +163,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/CollectionResponse"
+                  "$ref": "#/components/schemas/RatesImportResponse"
                 }
               }
             }
