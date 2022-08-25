@@ -293,6 +293,12 @@
   "PriceAmount": {
     "$ref": "./schemas/PriceAmount.json"
   },
+  "RatesImport": {
+    "$ref": "./schemas/RatesImport.json"
+  },
+  "RatesImportResponse": {
+    "$ref": "./schemas/RatesImportResponse.json"
+  },
   "Region": {
     "$ref": "./schemas/Region.json"
   },
@@ -334,9 +340,6 @@
   },
   "ServiceRate": {
     "$ref": "./schemas/ServiceRate.json"
-  },
-  "RatesImport": {
-    "$ref": "./schemas/RatesImport.json"
   },
   "ServiceRateIncludes": {
     "$ref": "./schemas/ServiceRateIncludes.json"

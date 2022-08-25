@@ -143,6 +143,12 @@
   "/password-resets/{password_reset_id}": {
     "$ref": "./paths/PasswordResets-password_reset_id.json"
   },
+  "/rate-imports": {
+    "$ref": "./paths/RateImports.json"
+  },
+  "/rate-imports/{rates_import_id}": {
+    "$ref": "./paths/RateImports-rates_import_id.json"
+  },
   "/regions": {
     "$ref": "./paths/Regions.json"
   },

@@ -57,6 +57,16 @@
       "properties": {
         "contract": {
           "$ref": "#/components/schemas/ContractRelationship"
+        },
+        "file": {
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/FileRelationship"
+            },
+            {
+              "readOnly": true
+            }
+          ]
         }
       }
     }

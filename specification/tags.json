@@ -104,6 +104,11 @@
     }
   },
   {
+    "name": "Rate-imports",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "Regions",
     "externalDocs": {
       "url": "https://docs.myparcel.com/api/resources/regions",
