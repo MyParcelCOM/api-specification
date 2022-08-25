@@ -16,7 +16,7 @@
       "description": "The shipment that should be tracked.",
       "required": true,
       "content": {
-        "application/vnd.api+json": {
+        "application/json": {
           "schema": {
             "type": "object",
             "required": [
