@@ -137,7 +137,7 @@
                         "properties": {
                           "sheet_contents": {
                             "type": "string",
-                            "description": "CSV file contents of the service rates to be imported."
+                            "description": "Base64 encoded csv file contents of the service rates to be imported."
                           }
                         }
                       }
