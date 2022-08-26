@@ -13,8 +13,7 @@
       "properties": {
         "attributes": {
           "required": [
-            "state",
-            "total_rates"
+            "state"
           ]
         },
         "relationships": {

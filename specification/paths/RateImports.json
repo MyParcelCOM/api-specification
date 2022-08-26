@@ -71,5 +71,105 @@
         }
       }
     }
+  },
+  "post": {
+    "tags": [
+      "Rate-imports"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "contracts.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new rates import.",
+    "description": "This endpoint creates a new rates import with the posted data.",
+    "requestBody": {
+      "description": "The rates import object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/RatesImport"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "properties": {
+                          "state": {
+                            "readOnly": true
+                          },
+                          "error": {
+                            "readOnly": true
+                          },
+                          "total_rates": {
+                            "readOnly": true
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "required": [
+                          "contract"
+                        ]
+                      },
+                      "meta": {
+                        "type": "object",
+                        "required": [
+                          "sheet_contents"
+                        ],
+                        "properties": {
+                          "sheet_contents": {
+                            "type": "string",
+                            "description": "Base64 encoded csv file contents of the service rates to be imported."
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The rates import has been created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/RatesImportResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
