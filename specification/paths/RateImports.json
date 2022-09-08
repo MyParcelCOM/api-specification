@@ -128,7 +128,7 @@
                       },
                       "attributes": {
                         "properties": {
-                          "state": {
+                          "status": {
                             "readOnly": true
                           },
                           "error": {
