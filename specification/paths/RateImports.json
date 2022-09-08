@@ -23,6 +23,9 @@
       },
       {
         "$ref": "#/components/parameters/query-filter-status"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-carrier"
       }
     ],
     "responses": {
