@@ -98,7 +98,6 @@
           'CombinedFiles',
           'Invoices',
           'PasswordResets',
-          'Shipments/paths/~1registered-shipments/post',
           'ShipmentSurcharges',
           'SystemMessages',
           'ExportLoginAttempts'
