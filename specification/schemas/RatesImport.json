@@ -22,9 +22,9 @@
           "type": "string",
           "description": "URL of the CSV file with service rates to be imported."
         },
-        "state": {
+        "status": {
           "type": "string",
-          "description": "State of the import.",
+          "description": "Status of the import.",
           "example": "pending",
           "readonly": true,
           "enum": [

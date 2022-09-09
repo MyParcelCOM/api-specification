@@ -12,6 +12,22 @@
     ],
     "summary": "Get all rate imports.",
     "description": "This endpoint retrieves rate imports available to your API client.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`contract.carrier`</li><li>`file`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-status"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-carrier"
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the rate imports.",
@@ -112,7 +128,7 @@
                       },
                       "attributes": {
                         "properties": {
-                          "state": {
+                          "status": {
                             "readOnly": true
                           },
                           "error": {
