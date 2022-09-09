@@ -50,6 +50,9 @@
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
                 },
+                "included": {
+                  "$ref": "#/components/schemas/RatesImportIncludes"
+                },
                 "links": {
                   "type": "object",
                   "required": [
