@@ -296,6 +296,9 @@
   "RatesImport": {
     "$ref": "./schemas/RatesImport.json"
   },
+  "RatesImportIncludes": {
+    "$ref": "./schemas/RatesImportIncludes.json"
+  },
   "RatesImportResponse": {
     "$ref": "./schemas/RatesImportResponse.json"
   },

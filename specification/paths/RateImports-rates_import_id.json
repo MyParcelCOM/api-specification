@@ -41,6 +41,9 @@
               "properties": {
                 "data": {
                   "$ref": "#/components/schemas/RatesImportResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/RatesImportIncludes"
                 }
               }
             }
