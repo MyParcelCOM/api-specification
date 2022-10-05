@@ -145,7 +145,6 @@
                       "attributes": {
                         "required": [
                           "address",
-                          "name",
                           "collection_time"
                         ],
                         "properties": {
