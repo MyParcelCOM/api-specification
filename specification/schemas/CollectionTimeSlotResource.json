@@ -6,12 +6,12 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^pickup-dropoff-locations$",
-      "example": "pickup-dropoff-locations"
+      "pattern": "^collection-time-slots$",
+      "example": "collection-time-slots"
     },
     "id": {
       "type": "string",
-      "description": "The carrier id and the location's code separated by an underscore (_).",
+      "description": "The carrier id and the time slot's datetime separated by an underscore (_).",
       "example": "be7f6752-34e0-49a1-a832-bcc209450ea9_205604"
     }
   }

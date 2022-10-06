@@ -1,0 +1,11 @@
+{
+  "name": "date_to",
+  "in": "query",
+  "description": "Date string in ISO 8601 format or unix timestamp.",
+  "schema": {
+    "type": [
+      "string",
+      "number"
+    ]
+  }
+}

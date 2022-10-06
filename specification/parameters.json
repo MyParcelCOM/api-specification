@@ -116,6 +116,12 @@
   "path-zone_id": {
     "$ref": "./parameters/path-zone_id.json"
   },
+  "query-date_from": {
+    "$ref": "./parameters/query-date_from.json"
+  },
+  "query-date_to": {
+    "$ref": "./parameters/query-date_to.json"
+  },
   "query-city": {
     "$ref": "./parameters/query-city.json"
   },

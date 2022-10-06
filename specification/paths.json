@@ -35,6 +35,9 @@
   "/carriers/{carrier_id}/pickup-dropoff-locations/{country_code}/{postal_code}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-country_code-postal_code.json"
   },
+  "/carriers/{carrier_id}/collection-time-slots/{country_code}/{postal_code}": {
+    "$ref": "./paths/Carriers-carrier_id-CollectionTimeSlots-country_code-postal_code.json"
+  },
   "/carrier-surcharges": {
     "$ref": "./paths/CarrierSurcharges.json"
   },

@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/CollectionTimeSlotResource"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "date"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "date": {
+              "type": "string",
+              "description": "Date string in ISO 8601 format.",
+              "example": "2022-10-01"
+            },
+            "collection_times": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CollectionTime"
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "carrier"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "carrier": {
+              "$ref": "#/components/schemas/CarrierRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
