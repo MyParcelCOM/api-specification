@@ -10,7 +10,18 @@
           "additionalProperties": false,
           "properties": {
             "name": {
-              "type": "string",
+              "deprecated": true,
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": null
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
               "example": "First Collection"
             },
             "address": {

@@ -13,7 +13,6 @@
       "properties": {
         "attributes": {
           "required": [
-            "name",
             "address",
             "collection_time",
             "created_at"
