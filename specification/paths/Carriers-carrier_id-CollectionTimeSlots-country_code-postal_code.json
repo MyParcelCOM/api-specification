@@ -21,7 +21,7 @@
       }
     ],
     "summary": "Get collection time slots from a carrier by country and postal code.",
-    "description": "This endpoint retrieves collection time slots by country code and postal code offered by the supplied carrier.",
+    "description": "This endpoint retrieves collection time slots by country code and postal code offered by the supplied carrier. These time slots can be used as `collection_time` of a collection.",
     "parameters": [
       {
         "$ref": "#/components/parameters/query-date_from"
