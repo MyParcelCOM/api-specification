@@ -13,8 +13,6 @@
       "properties": {
         "attributes": {
           "required": [
-            "address",
-            "collection_time",
             "created_at"
           ],
           "properties": {
@@ -29,7 +27,6 @@
         },
         "relationships": {
           "required": [
-            "contract",
             "status",
             "shop"
           ]

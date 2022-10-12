@@ -143,10 +143,6 @@
                         "readOnly": true
                       },
                       "attributes": {
-                        "required": [
-                          "address",
-                          "collection_time"
-                        ],
                         "properties": {
                           "address": {
                             "required": [
@@ -162,7 +158,6 @@
                       },
                       "relationships": {
                         "required": [
-                          "contract",
                           "shop"
                         ]
                       }
