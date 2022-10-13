@@ -116,14 +116,17 @@
   "path-zone_id": {
     "$ref": "./parameters/path-zone_id.json"
   },
+  "query-city": {
+    "$ref": "./parameters/query-city.json"
+  },
+  "query-country_code": {
+    "$ref": "./parameters/query-country_code.json"
+  },
   "query-date_from": {
     "$ref": "./parameters/query-date_from.json"
   },
   "query-date_to": {
     "$ref": "./parameters/query-date_to.json"
-  },
-  "query-city": {
-    "$ref": "./parameters/query-city.json"
   },
   "query-filter-created_at-date_from": {
     "$ref": "./parameters/query-filter-created_at-date_from.json"
@@ -169,6 +172,9 @@
   },
   "query-filter-carrier": {
     "$ref": "./parameters/query-filter-carrier.json"
+  },
+  "query-postal_code": {
+    "$ref": "./parameters/query-postal_code.json"
   },
   "query-shipments-filter-current_status_code": {
     "$ref": "./parameters/query-shipments-filter-current_status_code.json"
