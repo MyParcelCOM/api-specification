@@ -162,7 +162,6 @@
                       },
                       "relationships": {
                         "required": [
-                          "contract",
                           "shop"
                         ]
                       }
