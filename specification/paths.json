@@ -26,6 +26,9 @@
   "/carriers/{carrier_id}": {
     "$ref": "./paths/Carriers-carrier_id.json"
   },
+  "/carriers/{carrier_id}/collection-time-slots": {
+    "$ref": "./paths/Carriers-carrier_id-CollectionTimeSlots.json"
+  },
   "/carriers/{carrier_id}/contracts": {
     "$ref": "./paths/Carriers-carrier_id-Contracts.json"
   },

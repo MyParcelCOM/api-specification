@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/CollectionTimeSlotResource"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "$ref": "#/components/schemas/CollectionTime"
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "carrier"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "carrier": {
+              "$ref": "#/components/schemas/CarrierRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

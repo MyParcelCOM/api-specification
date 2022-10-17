@@ -1,0 +1,9 @@
+{
+  "name": "postal_code",
+  "in": "query",
+  "description": "Postal code of the address to search nearby.",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}
