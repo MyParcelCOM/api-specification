@@ -28,6 +28,14 @@
       },
       {
         "$ref": "#/components/parameters/query-date_to"
+      },
+      {
+        "name": "service_code",
+        "in": "query",
+        "description": "Service code to limit the time slots by (required by some carriers).",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
