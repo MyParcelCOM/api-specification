@@ -50,8 +50,14 @@
   "path-invoice_id": {
     "$ref": "./parameters/path-invoice_id.json"
   },
+  "path-latitude": {
+    "$ref": "./parameters/path-latitude.json"
+  },
   "path-liability_coverage_id": {
     "$ref": "./parameters/path-liability_coverage_id.json"
+  },
+  "path-longitude": {
+    "$ref": "./parameters/path-longitude.json"
   },
   "path-manifest_id": {
     "$ref": "./parameters/path-manifest_id.json"
@@ -64,12 +70,6 @@
   },
   "path-postal_code": {
     "$ref": "./parameters/path-postal_code.json"
-  },
-  "path-latitude": {
-    "$ref": "./parameters/path-latitude.json"
-  },
-  "path-longitude": {
-    "$ref": "./parameters/path-longitude.json"
   },
   "path-rates_import_id": {
     "$ref": "./parameters/path-rates_import_id.json"
@@ -128,26 +128,35 @@
   "query-date_to": {
     "$ref": "./parameters/query-date_to.json"
   },
+  "query-filter-carrier": {
+    "$ref": "./parameters/query-filter-carrier.json"
+  },
   "query-filter-created_at-date_from": {
     "$ref": "./parameters/query-filter-created_at-date_from.json"
   },
   "query-filter-created_at-date_to": {
     "$ref": "./parameters/query-filter-created_at-date_to.json"
   },
-  "query-street": {
-    "$ref": "./parameters/query-street.json"
+  "query-filter-organization": {
+    "$ref": "./parameters/query-filter-organization.json"
   },
-  "query-street_number": {
-    "$ref": "./parameters/query-street_number.json"
+  "query-filter-shop": {
+    "$ref": "./parameters/query-filter-shop.json"
   },
-  "query-shipments-include": {
-    "$ref": "./parameters/query-shipments-include.json"
+  "query-filter-status": {
+    "$ref": "./parameters/query-filter-status.json"
   },
-  "query-shipments-filter-search": {
-    "$ref": "./parameters/query-shipments-filter-search.json"
+  "query-postal_code": {
+    "$ref": "./parameters/query-postal_code.json"
   },
-  "query-shipments-filter-description": {
-    "$ref": "./parameters/query-shipments-filter-description.json"
+  "query-shipments-filter-carrier_status-category": {
+    "$ref": "./parameters/query-shipments-filter-carrier_status-category.json"
+  },
+  "query-shipments-filter-consolidation_shipment": {
+    "$ref": "./parameters/query-shipments-filter-consolidation_shipment.json"
+  },
+  "query-shipments-filter-current_status_code": {
+    "$ref": "./parameters/query-shipments-filter-current_status_code.json"
   },
   "query-shipments-filter-customer_reference": {
     "$ref": "./parameters/query-shipments-filter-customer_reference.json"
@@ -158,43 +167,34 @@
   "query-shipments-filter-date_to": {
     "$ref": "./parameters/query-shipments-filter-date_to.json"
   },
+  "query-shipments-filter-description": {
+    "$ref": "./parameters/query-shipments-filter-description.json"
+  },
+  "query-shipments-filter-recipient_address-country_code": {
+    "$ref": "./parameters/query-shipments-filter-recipient_address-country_code.json"
+  },
   "query-shipments-filter-register_at-date_from": {
     "$ref": "./parameters/query-shipments-filter-register_at-date_from.json"
   },
   "query-shipments-filter-register_at-date_to": {
     "$ref": "./parameters/query-shipments-filter-register_at-date_to.json"
   },
-  "query-filter-shop": {
-    "$ref": "./parameters/query-filter-shop.json"
-  },
-  "query-filter-organization": {
-    "$ref": "./parameters/query-filter-organization.json"
-  },
-  "query-filter-carrier": {
-    "$ref": "./parameters/query-filter-carrier.json"
-  },
-  "query-postal_code": {
-    "$ref": "./parameters/query-postal_code.json"
-  },
-  "query-shipments-filter-current_status_code": {
-    "$ref": "./parameters/query-shipments-filter-current_status_code.json"
-  },
-  "query-shipments-filter-service_code": {
-    "$ref": "./parameters/query-shipments-filter-service_code.json"
-  },
-  "query-shipments-filter-recipient_address-country_code": {
-    "$ref": "./parameters/query-shipments-filter-recipient_address-country_code.json"
+  "query-shipments-filter-search": {
+    "$ref": "./parameters/query-shipments-filter-search.json"
   },
   "query-shipments-filter-sender_address-country_code": {
     "$ref": "./parameters/query-shipments-filter-sender_address-country_code.json"
   },
-  "query-shipments-filter-consolidation_shipment": {
-    "$ref": "./parameters/query-shipments-filter-consolidation_shipment.json"
+  "query-shipments-filter-service_code": {
+    "$ref": "./parameters/query-shipments-filter-service_code.json"
   },
-  "query-shipments-filter-carrier_status-category": {
-    "$ref": "./parameters/query-shipments-filter-carrier_status-category.json"
+  "query-shipments-include": {
+    "$ref": "./parameters/query-shipments-include.json"
   },
-  "query-filter-status": {
-    "$ref": "./parameters/query-filter-status.json"
+  "query-street": {
+    "$ref": "./parameters/query-street.json"
+  },
+  "query-street_number": {
+    "$ref": "./parameters/query-street_number.json"
   }
 }
