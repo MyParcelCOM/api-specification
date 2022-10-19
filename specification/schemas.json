@@ -77,6 +77,15 @@
   "CollectionResponse": {
     "$ref": "./schemas/CollectionResponse.json"
   },
+  "CollectionTime": {
+    "$ref": "./schemas/CollectionTime.json"
+  },
+  "CollectionTimeSlot": {
+    "$ref": "./schemas/CollectionTimeSlot.json"
+  },
+  "CollectionTimeSlotResource": {
+    "$ref": "./schemas/CollectionTimeSlotResource.json"
+  },
   "ColloNumber": {
     "$ref": "./schemas/ColloNumber.json"
   },

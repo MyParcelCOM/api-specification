@@ -1,0 +1,12 @@
+{
+  "name": "date_from",
+  "in": "query",
+  "description": "Date string in ISO 8601 format or unix timestamp.",
+  "required": true,
+  "schema": {
+    "type": [
+      "string",
+      "number"
+    ]
+  }
+}

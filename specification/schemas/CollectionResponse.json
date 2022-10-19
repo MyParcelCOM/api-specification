@@ -29,7 +29,6 @@
         },
         "relationships": {
           "required": [
-            "contract",
             "status",
             "shop"
           ]

@@ -14,7 +14,7 @@ services:
     build:
       context: .
       dockerfile: docker/build/Dockerfile
-    image: myparcelcom/api-specification:v5-dev
+    image: myparcelcom/api-specification:v6-dev
     volumes:
       - ./dist:/usr/share/nginx/html/dist/
       - ./src/index.html:/usr/share/nginx/html/index.html
