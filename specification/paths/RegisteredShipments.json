@@ -113,7 +113,7 @@
                   "collection": {
                     "type": "object",
                     "properties": {
-                      "name": {
+                      "description": {
                         "type": "string"
                       },
                       "collection_time": {
