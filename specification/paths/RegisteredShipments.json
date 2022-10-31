@@ -113,6 +113,10 @@
                   "collection": {
                     "type": "object",
                     "properties": {
+                      "name": {
+                        "deprecated": true,
+                        "type": "string"
+                      },
                       "description": {
                         "type": "string"
                       },
