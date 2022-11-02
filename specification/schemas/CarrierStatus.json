@@ -23,6 +23,11 @@
       "type": "integer",
       "example": 1504801719,
       "description": "Unix timestamp (UTC) when the carrier registered this status."
+    },
+    "tracking_code": {
+      "type": "string",
+      "example": "3SABCD0123456789",
+      "description": "The tracking code of the shipment that was used to get this status from the carrier."
     }
   }
 }
