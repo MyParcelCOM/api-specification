@@ -4,7 +4,7 @@
 /docker-entrypoint.sh
 
 # replace API host and auth server host with assigned env values
-envsubst "\${API_HOST} \${AUTH_HOST}" < \
+envsubst "\${API_HOST} \${AUTH_HOST} \${RELEASE_VERSION}" < \
         /usr/share/nginx/html/dist/swagger.template.json > /usr/share/nginx/html/dist/swagger.json
 
 rm /usr/share/nginx/html/dist/swagger.template.json
