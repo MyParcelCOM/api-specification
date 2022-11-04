@@ -112,34 +112,22 @@
                 "properties": {
                   "collection": {
                     "type": "object",
+                    "required": [
+                      "collection_time"
+                    ],
                     "properties": {
                       "name": {
                         "deprecated": true,
                         "type": "string"
                       },
                       "description": {
-                        "type": "string"
+                        "type": [
+                          "string",
+                          "null"
+                        ]
                       },
                       "collection_time": {
-                        "type": "object",
-                        "properties": {
-                          "from": {
-                            "type": [
-                              "number",
-                              "string"
-                            ],
-                            "example": 1647878216,
-                            "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested minimum collection time."
-                          },
-                          "to": {
-                            "type": [
-                              "number",
-                              "string"
-                            ],
-                            "example": "2022-03-22T20:00:00+01:00",
-                            "description": "Unix timestamp (UTC) or ISO 8601 formatted time string of the requested maximum collection time."
-                          }
-                        }
+                        "$ref": "#/components/schemas/CollectionTime"
                       }
                     }
                   },
