@@ -104,6 +104,7 @@
                         }
                       },
                       "relationships": {
+                        "readOnly": true,
                         "properties": {
                           "shop": {
                             "readOnly": true
