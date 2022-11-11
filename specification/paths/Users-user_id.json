@@ -11,6 +11,7 @@
     "security": [
       {
         "OAuth2": [
+          "users.manage"
         ]
       }
     ],
@@ -45,6 +46,7 @@
     "security": [
       {
         "OAuth2": [
+          "users.manage"
         ]
       }
     ],
