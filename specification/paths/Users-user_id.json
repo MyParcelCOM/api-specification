@@ -11,12 +11,11 @@
     "security": [
       {
         "OAuth2": [
-          "users.manage"
         ]
       }
     ],
     "summary": "Get a user by id.",
-    "description": "This endpoint retrieves the user with the supplied id.",
+    "description": "This endpoint retrieves the user with the supplied id. You can always retrieve your own user, but you need the `users.manage` scope to retrieve other users.",
     "responses": {
       "200": {
         "description": "Retrieved the user.",
