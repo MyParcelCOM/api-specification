@@ -144,7 +144,9 @@
                       },
                       "attributes": {
                         "required": [
-                          "name"
+                          "name",
+                          "return_address",
+                          "sender_address"
                         ],
                         "properties": {
                           "return_address": {
