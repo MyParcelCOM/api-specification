@@ -10,13 +10,13 @@
         ]
       }
     ],
-    "summary": "Get all the users.",
-    "description": "This endpoint retrieves users.",
+    "summary": "Get all available users.",
+    "description": "This endpoint retrieves users available to your API client.",
     "parameters": [
       {
         "name": "filter[search]",
         "in": "query",
-        "description": "String of characters you want to look for in a users attributes. Available fields to look in are:<ul><li>`Username`</li></ul>",
+        "description": "String of characters you want to look for in a users attributes. Available fields to look in are:<ul><li>`Name`</li><li>`Email`</li><li>`Phone`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -87,8 +87,15 @@
     "tags": [
       "Users"
     ],
+    "security": [
+      {
+        "OAuth2": [
+          "users.manage"
+        ]
+      }
+    ],
     "summary": "Create a new user.",
-    "description": "This endpoint creates a new user with the posted data. <strong>A registration confirmation will be sent via email.</strong>",
+    "description": "This endpoint creates a new user with the posted data.",
     "requestBody": {
       "description": "The user object to be created.",
       "required": true,
@@ -141,7 +148,8 @@
                     "type": "string",
                     "format": "uuid",
                     "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
-                    "example": "a294ee55-bc94-4890-b734-afd56c158f95"
+                    "example": "a294ee55-bc94-4890-b734-afd56c158f95",
+                    "description": "The user will become a member of this broker."
                   }
                 }
               }
@@ -151,8 +159,30 @@
       }
     },
     "responses": {
-      "204": {
-        "description": "The user is created."
+      "201": {
+        "description": "The user is created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "The broker resource could not be found."
+      },
+      "409": {
+        "description": "A user with this email already exists."
       }
     }
   }

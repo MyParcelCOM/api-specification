@@ -60,7 +60,7 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage"
+          "collections.manage"
         ]
       }
     ],
@@ -104,11 +104,15 @@
                         }
                       },
                       "relationships": {
+                        "readOnly": true,
                         "properties": {
                           "shop": {
                             "readOnly": true
                           },
                           "contract": {
+                            "readOnly": true
+                          },
+                          "shipments": {
                             "readOnly": true
                           }
                         }
