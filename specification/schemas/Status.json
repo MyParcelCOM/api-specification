@@ -12,6 +12,7 @@
             "code": {
               "type": "string",
               "enum": [
+                "collection-collected",
                 "collection-concept",
                 "collection-registered",
                 "collection-registration-failed",
