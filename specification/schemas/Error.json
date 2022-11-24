@@ -70,6 +70,11 @@
               }
             }
           }
+        },
+        "trace_id": {
+          "type": "string",
+          "example": "db01fdf7-a5b2-4bb9-8a33-4686c4a11580",
+          "description": "A reference to communicate to the MyParcel.com support team when requesting help with this issue."
         }
       }
     }
