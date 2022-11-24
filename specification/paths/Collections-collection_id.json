@@ -106,14 +106,8 @@
                       "relationships": {
                         "properties": {
                           "status": {
-                            "allOf": [
-                              {
-                                "$ref": "#/components/schemas/StatusRelationship"
-                              },
-                              {
-                                "description": "An untracked collection can be manually updated to indicate the collection has been collected."
-                              }
-                            ]
+                            "$ref": "#/components/schemas/StatusRelationship",
+                            "description": "An untracked collection can be manually updated to indicate the collection has been collected."
                           },
                           "shop": {
                             "readOnly": true
