@@ -83,14 +83,7 @@
               "$ref": "#/components/schemas/ShopRelationship"
             },
             "status": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/StatusRelationship"
-                },
-                {
-                  "readOnly": true
-                }
-              ]
+              "$ref": "#/components/schemas/StatusRelationship"
             }
           }
         }
