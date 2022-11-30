@@ -167,6 +167,9 @@
                         "properties": {
                           "shipments": {
                             "readOnly": true
+                          },
+                          "status": {
+                            "readOnly": true
                           }
                         }
                       }
