@@ -17,7 +17,7 @@
       {
         "name": "filter[search]",
         "in": "query",
-        "description": "String of characters you want to look for in a organizations attributes. Available fields to look in are:<ul><li>`Name`</li><li>`Address`</li><li>`Email`</li><li>`Phone`</li></ul>",
+        "description": "String of characters you want to look for in a organizations attributes. Available fields to look in are:<ul><li>`Name`</li><li>`Address`</li><li>`Email`</li><li>`Phone`</li><li>`Reference`</li></ul>",
         "schema": {
           "type": "string"
         }
