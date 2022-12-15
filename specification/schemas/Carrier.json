@@ -88,7 +88,8 @@
               "type": "object",
               "required": [
                 "offers_collections",
-                "voids_registered_collections"
+                "voids_registered_collections",
+                "allows_adding_registered_shipments_to_collection"
               ],
               "properties": {
                 "offers_collections": {
@@ -99,6 +100,12 @@
                 "voids_registered_collections": {
                   "type": "boolean",
                   "description": "Whether the carrier supports voiding of registered collections.",
+                  "example": false
+                },
+                "allows_adding_registered_shipments_to_collection": {
+                  "type": "boolean",
+                  "description": "Whether the carrier supports adding registered shipments to a concept collection.",
+                  "default": false,
                   "example": false
                 }
               }

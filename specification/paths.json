@@ -1,4 +1,7 @@
 {
+  "/add-shipments-to-collection": {
+    "$ref": "./paths/AddShipmentsToCollection.json"
+  },
   "/addresses": {
     "$ref": "./paths/Addresses.json"
   },
