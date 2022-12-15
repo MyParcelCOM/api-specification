@@ -52,6 +52,15 @@
       "example": 135,
       "description": "Weight in grams of a single item within item resource. Should be multiplied by quantity to get total weight."
     },
+    "item_weight_unit": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "mg",
+      "description": "Unit of measurement for item_weight. Options are: mg, g, kg, oz, lb.",
+      "default": "g"
+    },
     "origin_country_code": {
       "oneOf": [
         {
