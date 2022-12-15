@@ -25,6 +25,10 @@
             ],
             "properties": {
               "data": {
+                "required": [
+                  "collection_id",
+                  "shipment_ids"
+                ],
                 "properties": {
                   "collection_id": {
                     "$ref": "#/components/schemas/Uuid"
