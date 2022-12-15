@@ -74,14 +74,6 @@
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
-            },
-            "reference": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "example": "674864928466",
-              "description": "Any reference to identify the organization."
             }
           }
         },
