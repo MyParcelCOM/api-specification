@@ -57,9 +57,16 @@
         "string",
         "null"
       ],
-      "example": "mg",
-      "description": "Unit of measurement for item_weight. Options are: mg, g, kg, oz, lb.",
-      "default": "g"
+      "example": "g",
+      "description": "Unit of measurement for item_weight.",
+      "default": "g",
+      "enum": [
+        "mg",
+        "g",
+        "kg",
+        "oz",
+        "lb"
+      ]
     },
     "origin_country_code": {
       "oneOf": [
