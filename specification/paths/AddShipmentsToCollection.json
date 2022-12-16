@@ -54,7 +54,7 @@
     },
     "responses": {
       "204": {
-        "description": "The collection id has been added to the shipments."
+        "description": "The shipments have been added to the collection."
       }
     }
   }
