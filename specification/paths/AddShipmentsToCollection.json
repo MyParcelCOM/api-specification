@@ -1,0 +1,61 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "collections.manage"
+        ]
+      }
+    ],
+    "summary": "Add shipments to collection.",
+    "description": "This endpoint can add multiple shipments to a concept collection.",
+    "requestBody": {
+      "description": "The collection id and the shipment ids.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "required": [
+                  "collection_id",
+                  "shipment_ids"
+                ],
+                "properties": {
+                  "collection_id": {
+                    "$ref": "#/components/schemas/Uuid"
+                  },
+                  "shipment_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Uuid"
+                    },
+                    "example": [
+                      "d2eef012-f2fe-4f5f-af05-1acd86c51c3b",
+                      "170cbede-2401-40f5-aaea-7b0d2986a250",
+                      "883a89b1-40b9-44ab-9d71-f47ea5e0ca98"
+                    ],
+                    "description": "Uuids of shipments that need to be added to the collection."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The shipments have been added to the collection."
+      }
+    }
+  }
+}
