@@ -121,5 +121,24 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "Shops"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a shop by id.",
+    "description": "This endpoint deletes the shop with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The shop is deleted."
+      }
+    }
   }
 }
