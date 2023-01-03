@@ -51,6 +51,7 @@
         "relationships": {
           "type": "object",
           "required": [
+            "shop",
             "source_files"
           ],
           "additionalProperties": false,
