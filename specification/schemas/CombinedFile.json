@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "deprecated": true,
   "allOf": [
     {
       "$ref": "#/components/schemas/MinimalCombinedFile"
@@ -50,7 +51,6 @@
         "relationships": {
           "type": "object",
           "required": [
-            "shop",
             "source_files"
           ],
           "additionalProperties": false,
