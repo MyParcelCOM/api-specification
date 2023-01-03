@@ -13,7 +13,7 @@
       }
     ],
     "summary": "Get all the combined files.",
-    "description": "Deprecated, please use the POST combined-files endpoint",
+    "description": "This endpoint retrieves all the combined files you have requested.",
     "responses": {
       "200": {
         "description": "Retrieved the combined files.",
@@ -76,8 +76,9 @@
     }
   },
   "post": {
+    "deprecated": true,
     "tags": [
-      "RPC"
+      "CombinedFiles"
     ],
     "security": [
       {
@@ -93,49 +94,27 @@
       "description": "The combined file object to be created.",
       "required": true,
       "content": {
-        "application/json": {
+        "application/vnd.api+json": {
           "schema": {
             "type": "object",
             "required": [
               "data"
             ],
+            "additionalProperties": false,
             "properties": {
               "data": {
-                "required": [
-                  "file_ids"
-                ],
-                "properties": {
-                  "file_ids": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/Uuid"
-                    },
-                    "example": [
-                      "d2eef012-f2fe-4f5f-af05-1acd86c51c3b",
-                      "170cbede-2401-40f5-aaea-7b0d2986a250",
-                      "883a89b1-40b9-44ab-9d71-f47ea5e0ca98"
-                    ],
-                    "description": "Uuids of files that need to be combined."
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CombinedFile"
                   },
-                  "page_size": {
-                    "type": "string",
-                    "description": "One of the available page sizes, `A6` or `A4` depending on your printer.",
-                    "enum": [
-                      "A6",
-                      "A4"
-                    ]
-                  },
-                  "starting_position": {
-                    "type": "string",
-                    "description": "Position on the first page to start printing labels. All positions before this one will be left empty.",
-                    "enum": [
-                      "top-left",
-                      "top-right",
-                      "bottom-left",
-                      "bottom-right"
-                    ]
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
                   }
-                }
+                ]
               }
             }
           }
@@ -144,12 +123,20 @@
     },
     "responses": {
       "201": {
-        "description": "Created the combined file.",
+        "description": "The combined file has been created",
         "content": {
-          "text/csv": {
+          "application/vnd.api+json": {
             "schema": {
-              "type": "string",
-              "description": "Base64 encoded contents of the combined file."
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/CombinedFile"
+                }
+              }
             }
           }
         }
