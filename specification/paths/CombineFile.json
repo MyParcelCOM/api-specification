@@ -67,7 +67,7 @@
       }
     },
     "responses": {
-      "201": {
+      "200": {
         "description": "Created the combined file.",
         "content": {
           "text/csv": {
