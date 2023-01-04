@@ -1,0 +1,83 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage",
+          "shipments.view"
+        ]
+      }
+    ],
+    "summary": "Create a combined file.",
+    "description": "This endpoint creates a new combined file with the posted data and files.",
+    "requestBody": {
+      "description": "The combined file object to be created.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "required": [
+                  "file_ids"
+                ],
+                "properties": {
+                  "file_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Uuid"
+                    },
+                    "example": [
+                      "d2eef012-f2fe-4f5f-af05-1acd86c51c3b",
+                      "170cbede-2401-40f5-aaea-7b0d2986a250",
+                      "883a89b1-40b9-44ab-9d71-f47ea5e0ca98"
+                    ],
+                    "description": "Uuids of files that need to be combined."
+                  },
+                  "page_size": {
+                    "type": "string",
+                    "description": "One of the available page sizes, `A6` or `A4` depending on your printer.",
+                    "enum": [
+                      "A6",
+                      "A4"
+                    ]
+                  },
+                  "starting_position": {
+                    "type": "string",
+                    "description": "Position on the first page to start printing labels. All positions before this one will be left empty.",
+                    "enum": [
+                      "top-left",
+                      "top-right",
+                      "bottom-left",
+                      "bottom-right"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Created the combined file.",
+        "content": {
+          "text/csv": {
+            "schema": {
+              "type": "string",
+              "description": "Base64 encoded contents of the combined file."
+            }
+          }
+        }
+      }
+    }
+  }
+}

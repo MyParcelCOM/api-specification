@@ -5,6 +5,7 @@
     }
   ],
   "get": {
+    "deprecated": true,
     "tags": [
       "CombinedFiles"
     ],

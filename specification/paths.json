@@ -68,6 +68,9 @@
   "/contracts/{contract_id}": {
     "$ref": "./paths/Contracts-contract_id.json"
   },
+  "/combine-files": {
+    "$ref": "./paths/CombineFiles.json"
+  },
   "/combined-files": {
     "$ref": "./paths/CombinedFiles.json"
   },
