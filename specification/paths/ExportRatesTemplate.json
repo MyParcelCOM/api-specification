@@ -54,7 +54,7 @@
       "200": {
         "description": "Retrieved the CSV service rates template.",
         "content": {
-          "text/csv": {
+          "application/pdf": {
             "schema": {
               "type": "string",
               "description": "Base64 encoded contents of the CSV file."
