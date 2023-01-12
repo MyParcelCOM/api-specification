@@ -1,5 +1,6 @@
 {
   "get": {
+    "deprecated": true,
     "tags": [
       "CombinedFiles"
     ],
@@ -75,6 +76,7 @@
     }
   },
   "post": {
+    "deprecated": true,
     "tags": [
       "CombinedFiles"
     ],

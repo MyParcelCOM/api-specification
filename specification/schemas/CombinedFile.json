@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "deprecated": true,
   "allOf": [
     {
       "$ref": "#/components/schemas/MinimalCombinedFile"
