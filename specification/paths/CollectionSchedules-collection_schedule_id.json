@@ -46,5 +46,24 @@
         }
       }
     }
+  },
+  "delete": {
+    "tags": [
+      "CollectionSchedules"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "collections.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a collection schedule by id.",
+    "description": "This endpoint deletes a collection schedule by id.",
+    "responses": {
+      "204": {
+        "description": "Deleted the collection schedule."
+      }
+    }
   }
 }
