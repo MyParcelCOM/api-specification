@@ -1,0 +1,50 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-collection_schedule_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "CollectionSchedules"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "collections.manage"
+        ]
+      }
+    ],
+    "summary": "Get a collection schedule by id.",
+    "description": "This endpoint retrieves a collection schedule by id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the collection schedule.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/CollectionSchedule"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

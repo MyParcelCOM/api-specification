@@ -1,0 +1,9 @@
+{
+  "name": "collection_schedule_id",
+  "in": "path",
+  "description": "Id of the collection schedule resource.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}
