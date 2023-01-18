@@ -32,6 +32,11 @@
     }
   },
   {
+    "name": "CollectionSchedules",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "CombinedFiles",
     "externalDocs": {
     }
