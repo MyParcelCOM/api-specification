@@ -45,7 +45,7 @@
                   "description": "A description that is given to the created collections."
                 },
                 "time": {
-                  "$ref": "#/components/schemas/CollectionTime"
+                  "$ref": "#/components/schemas/CollectionScheduleTime"
                 },
                 "address": {
                   "allOf": [
