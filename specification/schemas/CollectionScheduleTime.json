@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "from",
+    "to"
+  ],
+  "properties": {
+    "from": {
+      "type": "string",
+      "description": "Time in H:i format indicating the earliest requested time for this collection.",
+      "example": "09:00"
+    },
+    "to":{
+      "type": "string",
+      "description": "Time in H:i format indicating the latest requested time for this collection.",
+      "example": "12:00"
+    }
+  }
+}

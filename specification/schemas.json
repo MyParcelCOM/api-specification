@@ -83,6 +83,9 @@
   "CollectionScheduleResource": {
     "$ref": "./schemas/CollectionScheduleResource.json"
   },
+  "CollectionScheduleTime": {
+    "$ref": "./schemas/CollectionScheduleTime.json"
+  },
   "CollectionTime": {
     "$ref": "./schemas/CollectionTime.json"
   },
