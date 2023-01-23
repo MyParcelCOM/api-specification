@@ -7,13 +7,15 @@
   "properties": {
     "from": {
       "type": "string",
-      "description": "Time in H:i format indicating the earliest requested time for this collection.",
-      "example": "09:00"
+      "description": "Time string in ISO 8601 format indicating the earliest requested time for this collection. Omitting a timezone will result in UTC time.",
+      "example": "09:00+02:00",
+      "pattern": "^([0-1]\\d|2[0-3]):[0-5]\\d(Z|(\\+|-)\\d?\\d?(:\\d\\d)?)?$"
     },
     "to":{
       "type": "string",
-      "description": "Time in H:i format indicating the latest requested time for this collection.",
-      "example": "12:00"
+      "description": "Time string in ISO 8601 format indicating the latest requested time for this collection. Omitting a timezone will result in UTC time.",
+      "example": "12:00+02:00",
+      "pattern": "^([0-1]\\d|2[0-3]):[0-5]\\d(Z|(\\+|-)\\d?\\d?(:\\d\\d)?)?$"
     }
   }
 }

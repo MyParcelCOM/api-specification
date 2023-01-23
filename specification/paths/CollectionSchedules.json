@@ -12,6 +12,24 @@
     ],
     "summary": "Get all available collection schedules.",
     "description": "This endpoint retrieves collection schedules.",
+    "parameters": [
+      {
+        "name": "filter[shop]",
+        "in": "query",
+        "description": "Shop id to filter the results by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[carrier]",
+        "in": "query",
+        "description": "Carrier id to filter the results by. Results are filtered by the contract's carrier relationship.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the collection schedules.",
