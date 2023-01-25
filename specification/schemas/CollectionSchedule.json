@@ -1,0 +1,85 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/CollectionScheduleResource"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "days",
+            "collection"
+          ],
+          "properties": {
+            "days": {
+              "type": "array",
+              "description": "Days of the week the collections should be created for.",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "monday",
+                  "tuesday",
+                  "wednesday",
+                  "thursday",
+                  "friday",
+                  "saturday",
+                  "sunday"
+                ]
+              }
+            },
+            "collection": {
+              "type": "object",
+              "required": [
+                "time",
+                "address"
+              ],
+              "properties": {
+                "description": {
+                  "type": "string",
+                  "example": "Collection for my hub.",
+                  "description": "A description that is given to the created collections."
+                },
+                "time": {
+                  "$ref": "#/components/schemas/CollectionScheduleTime"
+                },
+                "address": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/BaseAddress"
+                    },
+                    {
+                      "required": [
+                        "street_1",
+                        "city",
+                        "country_code"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "shop"
+          ],
+          "properties": {
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

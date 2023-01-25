@@ -59,6 +59,12 @@
   "/collections/{collection_id}": {
     "$ref": "./paths/Collections-collection_id.json"
   },
+  "/collection-schedules": {
+    "$ref": "./paths/CollectionSchedules.json"
+  },
+  "/collection-schedules/{collection_schedule_id}": {
+    "$ref": "./paths/CollectionSchedules-collection_schedule_id.json"
+  },
   "/consolidate-shipments": {
     "$ref": "./paths/ConsolidateShipments.json"
   },

@@ -1,0 +1,167 @@
+{
+  "get": {
+    "tags": [
+      "CollectionSchedules"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "collections.manage"
+        ]
+      }
+    ],
+    "summary": "Get all available collection schedules.",
+    "description": "This endpoint retrieves collection schedules.",
+    "parameters": [
+      {
+        "name": "filter[shop]",
+        "in": "query",
+        "description": "Shop id to filter the results by.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[carrier]",
+        "in": "query",
+        "description": "Carrier id to filter the results by. Results are filtered by the contract's carrier relationship.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the collection schedules.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/CollectionSchedule"
+                      },
+                      {
+                        "required": [
+                          "id"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/collection-schedules?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/collection-schedules?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/collection-schedules?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/collection-schedules?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/collection-schedules?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "CollectionSchedules"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "collections.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new collection schedules.",
+    "description": "This endpoint creates a new collection schedules.",
+    "requestBody": {
+      "description": "The collection schedule to create.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CollectionSchedule"
+                  },
+                  {
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The collection schedule has been created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/CollectionSchedule"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
