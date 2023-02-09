@@ -111,6 +111,12 @@
       "max": 100,
       "example": 19,
       "description": "The VAT rate applied to the `item_value` amount."
+    },
+    "is_preferential_origin": {
+      "type": "boolean",
+      "example": false,
+      "description": "Whether the item is from a preferential origin country. (see http://ptadb.wto.org/)",
+      "default": false
     }
   }
 }
