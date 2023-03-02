@@ -149,9 +149,6 @@
                       },
                       "meta": {
                         "type": "object",
-                        "required": [
-                          "sheet_contents"
-                        ],
                         "properties": {
                           "sheet_contents": {
                             "type": "string",
