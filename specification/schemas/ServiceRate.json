@@ -30,7 +30,7 @@
                 "start": {
                   "type": "integer",
                   "example": 6000,
-                  "description": "Weight in grams."
+                  "description": "The starting weight in grams of this bracket, for which the `start_amount` will be charged. Once a shipment exceeds this weight, the bracket `size` and `size_amount` determine the price of this rate."
                 },
                 "start_amount": {
                   "type": "integer",
@@ -40,7 +40,7 @@
                 "size": {
                   "type": "integer",
                   "example": 2000,
-                  "description": "Weight in grams."
+                  "description": "The incremental weight in grams of this bracket, for which the `size_amount` will be charged each time it needs to be applied, until the entire shipment weight is covered."
                 },
                 "size_amount": {
                   "type": "integer",
@@ -48,7 +48,7 @@
                   "description": "The bracket price will be increased with this amount for as many times as you need to add the bracket `size` to the `start` weight, to cover the weight of the shipment. For this example rate: a shipment of 9 kg would cost 500 + 50 + 50 = 600 cents."
                 }
               },
-              "description": "Rates with a weight bracket do not have a fixed price between `weight_min` and `weight_max` because their price depends on the actual weight of the parcel. Their price is set to `null` and should be calculated using the bracket attributes (in the same currency as the contract). If you provide `filter[weight]` in the request, you can find the calculated bracket price in the `meta` of this rate."
+              "description": "Rates with a weight bracket do not have a fixed price between `weight_min` and `weight_max` because their price depends on the actual weight of the parcel. Their price is set to `null` and should be calculated using the bracket attributes (in the same currency as the contract). If you provide `filter[weight]` in the `GET /service-rates` request, you can find the calculated bracket price in the `meta` of each rate."
             },
             "length_max": {
               "type": "integer",
