@@ -96,7 +96,23 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ServiceRateResponse"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ServiceRateResponse"
+                      },
+                      {
+                        "properties": {
+                          "meta": {
+                            "type": "object",
+                            "properties": {
+                              "bracket_price": {
+                                "$ref": "#/components/schemas/Price"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
                   }
                 },
                 "meta": {
