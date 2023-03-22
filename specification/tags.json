@@ -12,7 +12,7 @@
   {
     "name": "Carriers",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/carriers",
+      "url": "https://docs.myparcel.com/api/resources/carriers.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
@@ -44,7 +44,7 @@
   {
     "name": "Contracts",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/contracts",
+      "url": "https://docs.myparcel.com/api/resources/contracts.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
@@ -56,21 +56,21 @@
   {
     "name": "Files",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/files",
+      "url": "https://docs.myparcel.com/api/resources/files.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
     "name": "Hooks",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/hooks",
+      "url": "https://docs.myparcel.com/api/resources/hooks.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
     "name": "HookLogs",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/hooks/logs",
+      "url": "https://docs.myparcel.com/api/resources/hooks/logs.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
@@ -87,7 +87,7 @@
   {
     "name": "LiabilityCoverages",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/liability-coverages",
+      "url": "https://docs.myparcel.com/api/resources/liability-coverages.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
@@ -104,8 +104,6 @@
   {
     "name": "PasswordResets",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/password-resets",
-      "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
@@ -116,14 +114,14 @@
   {
     "name": "Regions",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/regions",
+      "url": "https://docs.myparcel.com/api/resources/regions.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
     "name": "Reports",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/reports",
+      "url": "https://docs.myparcel.com/api/resources/reports.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
@@ -135,28 +133,28 @@
   {
     "name": "Services",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/services",
+      "url": "https://docs.myparcel.com/api/resources/services.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
     "name": "ServiceOptions",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/service-options",
+      "url": "https://docs.myparcel.com/api/resources/service-options.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
     "name": "ServiceRates",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/service-rates",
+      "url": "https://docs.myparcel.com/api/resources/service-rates.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
     "name": "Shipments",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/shipments",
+      "url": "https://docs.myparcel.com/api/resources/shipments.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
@@ -168,14 +166,14 @@
   {
     "name": "Shops",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/shops",
+      "url": "https://docs.myparcel.com/api/resources/shops.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
   {
     "name": "Statuses",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/resources/statuses",
+      "url": "https://docs.myparcel.com/api/resources/statuses.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },
@@ -197,7 +195,7 @@
   {
     "name": "RPC",
     "externalDocs": {
-      "url": "https://docs.myparcel.com/api/rpc-endpoints",
+      "url": "https://docs.myparcel.com/api/rpc-endpoints.html",
       "description": "\uD83D\uDD17 API documentation"
     }
   },

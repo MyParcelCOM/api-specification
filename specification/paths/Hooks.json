@@ -26,7 +26,7 @@
       {
         "name": "filter[action][action_type]",
         "in": "query",
-        "description": "[Action type](https://docs.myparcel.com/api/resources/hooks/action/) to filter the hooks by.",
+        "description": "[Action type](https://docs.myparcel.com/api/resources/hooks/action.html) to filter the hooks by.",
         "schema": {
           "type": "string"
         }
@@ -34,7 +34,7 @@
       {
         "name": "filter[trigger][resource_action]",
         "in": "query",
-        "description": "[Resource action](https://docs.myparcel.com/api/resources/hooks/trigger/) to filter the hooks by.",
+        "description": "[Resource action](https://docs.myparcel.com/api/resources/hooks/trigger.html) to filter the hooks by.",
         "schema": {
           "type": "string",
           "enum": [
