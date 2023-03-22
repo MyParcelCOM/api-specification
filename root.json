@@ -21,7 +21,7 @@
     "securitySchemes": {
       "OAuth2": {
         "type": "oauth2",
-        "description": "[\uD83D\uDD17 API documentation](https://docs.myparcel.com/api/authentication)",
+        "description": "[\uD83D\uDD17 API documentation](https://docs.myparcel.com/api/authentication.html)",
         "name": "Authorization",
         "in": "header",
         "scheme": "Bearer",
