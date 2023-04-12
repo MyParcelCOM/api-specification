@@ -154,9 +154,6 @@
                               "city",
                               "country_code"
                             ]
-                          },
-                          "register": {
-                            "readOnly": true
                           }
                         }
                       },
@@ -165,11 +162,6 @@
                           "shop"
                         ],
                         "properties": {
-                          "register": {
-                            "type": "boolean",
-                            "example": false,
-                            "description": "Setting this to true will register the collection with the carrier."
-                          },
                           "status": {
                             "readOnly": true
                           }
