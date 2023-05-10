@@ -38,8 +38,24 @@
             "shipments": {
               "$ref": "#/components/schemas/ShipmentsRelationship"
             },
-            "shop": {
-              "$ref": "#/components/schemas/ShopRelationship"
+            "owner": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/BrokerRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/OrganizationRelationship"
+                },
+                {
+                  "$ref": "#/components/schemas/ShopRelationship"
+                }
+              ],
+              "example": {
+                "data": {
+                  "type": "organizations",
+                  "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
+                }
+              }
             },
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
