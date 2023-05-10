@@ -57,7 +57,14 @@
               "description": "Logo image URL"
             },
             "style": {
-              "$ref": "#/components/schemas/Branding"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Branding"
+                },
+                {
+                  "deprecated": true
+                }
+              ]
             },
             "tax_identification_numbers": {
               "oneOf": [

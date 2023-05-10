@@ -425,6 +425,9 @@
   "ShopIncludes": {
     "$ref": "./schemas/ShopIncludes.json"
   },
+  "ShopMeta": {
+    "$ref": "./schemas/ShopMeta.json"
+  },
   "ShopRelationship": {
     "$ref": "./schemas/ShopRelationship.json"
   },
