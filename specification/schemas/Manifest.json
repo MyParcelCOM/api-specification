@@ -38,6 +38,16 @@
             "shipments": {
               "$ref": "#/components/schemas/ShipmentsRelationship"
             },
+            "shop": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShopRelationship"
+                },
+                {
+                  "deprecated": true
+                }
+              ]
+            },
             "owner": {
               "oneOf": [
                 {
