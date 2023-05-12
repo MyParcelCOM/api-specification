@@ -148,8 +148,7 @@
                         "oneOf": [
                           {
                             "required": [
-                              "shipments",
-                              "shop"
+                              "shipments"
                             ]
                           },
                           {
