@@ -148,13 +148,14 @@
                         "oneOf": [
                           {
                             "required": [
-                              "shipments"
+                              "shipments",
+                              "owner"
                             ]
                           },
                           {
                             "required": [
                               "shipments",
-                              "owner"
+                              "shop"
                             ]
                           }
                         ]
