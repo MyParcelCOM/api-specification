@@ -30,7 +30,7 @@
         "relationships": {
           "required": [
             "shipments",
-            "owner"
+            "shop"
           ]
         },
         "links": {
