@@ -10,15 +10,6 @@
       },
       {
         "$ref": "#/components/schemas/File"
-      },
-      {
-        "$ref": "#/components/schemas/Broker"
-      },
-      {
-        "$ref": "#/components/schemas/Organization"
-      },
-      {
-        "$ref": "#/components/schemas/Shop"
       }
     ]
   }
