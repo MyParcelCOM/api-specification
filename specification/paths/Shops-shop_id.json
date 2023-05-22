@@ -94,6 +94,9 @@
                     }
                   }
                 ]
+              },
+              "meta": {
+                "$ref": "#/components/schemas/ShopMeta"
               }
             }
           }
