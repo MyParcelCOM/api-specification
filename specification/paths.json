@@ -287,9 +287,6 @@
   "/track-external-shipment": {
     "$ref": "./paths/TrackExternalShipment.json"
   },
-  "/register-multi-colli-shipment": {
-    "$ref": "./paths/RegisterMultiColliShipment.json"
-  },
   "/suggest-address": {
     "$ref": "./paths/SuggestAddress.json"
   },
