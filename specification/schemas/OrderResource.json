@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type",
+    "id"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^orders$",
+      "example": "orders"
+    },
+    "id": {
+      "type": "string",
+      "example": "#this-is-my-reference-001",
+      "description": "The reference by which this order can be retrieved from its source."
+    }
+  }
+}
