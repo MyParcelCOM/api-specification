@@ -35,19 +35,6 @@
                 }
               ]
             },
-            "shipments": {
-              "$ref": "#/components/schemas/ShipmentsRelationship"
-            },
-            "shop": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/ShopRelationship"
-                },
-                {
-                  "deprecated": true
-                }
-              ]
-            },
             "owner": {
               "oneOf": [
                 {
@@ -66,6 +53,19 @@
                   "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
                 }
               }
+            },
+            "shipments": {
+              "$ref": "#/components/schemas/ShipmentsRelationship"
+            },
+            "shop": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/ShopRelationship"
+                },
+                {
+                  "deprecated": true
+                }
+              ]
             },
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
