@@ -179,6 +179,9 @@
   "/reports/{report_id}/files/{file_id}": {
     "$ref": "./paths/Reports-report_id-Files-file_id.json"
   },
+  "/returns/v1/shops/{shop_id}/orders/{reference}/{email}": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-orders-reference-email.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },

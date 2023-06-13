@@ -269,6 +269,15 @@
   "MinimalShipmentSurcharge": {
     "$ref": "./schemas/MinimalShipmentSurcharge.json"
   },
+  "Order": {
+    "$ref": "./schemas/Order.json"
+  },
+  "OrderItem": {
+    "$ref": "./schemas/OrderItem.json"
+  },
+  "OrderResource": {
+    "$ref": "./schemas/OrderResource.json"
+  },
   "Organization": {
     "$ref": "./schemas/Organization.json"
   },

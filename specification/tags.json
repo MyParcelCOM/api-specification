@@ -126,6 +126,10 @@
     }
   },
   {
+    "name": "Returns",
+    "externalDocs": {}
+  },
+  {
     "name": "Scopes",
     "externalDocs": {
     }

@@ -1,0 +1,63 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/OrderResource"
+    },
+    {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "required": [
+            "created_at",
+            "recipient_address",
+            "items"
+          ],
+          "properties": {
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "recipient_address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/BaseAddress"
+                },
+                {
+                  "required": [
+                    "first_name",
+                    "last_name",
+                    "street_1",
+                    "city",
+                    "country_code",
+                    "email"
+                  ]
+                }
+              ]
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/OrderItem"
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "shop"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

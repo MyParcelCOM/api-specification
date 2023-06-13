@@ -1,0 +1,63 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-shop_id"
+    },
+    {
+      "name": "reference",
+      "in": "path",
+      "description": "Order reference to retrieve the order by.",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "email",
+      "in": "path",
+      "description": "Email address of the receiver of the order.",
+      "required": true,
+      "schema": {
+        "$ref": "#/components/schemas/Email"
+      }
+    }
+  ],
+  "get": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get an order resource.",
+    "description": "This endpoint retrieves an order resource by the specified reference and email address.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the order.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Order"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No order was found for the given reference and email address."
+      }
+    }
+  }
+}
