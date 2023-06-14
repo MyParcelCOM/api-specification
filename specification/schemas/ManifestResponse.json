@@ -28,9 +28,19 @@
           }
         },
         "relationships": {
-          "required": [
-            "shipments",
-            "owner"
+          "oneOf": [
+            {
+              "required": [
+                "shipments",
+                "owner"
+              ]
+            },
+            {
+              "required": [
+                "shipments",
+                "shop"
+              ]
+            }
           ]
         },
         "links": {
