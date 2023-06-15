@@ -17,7 +17,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`files`</li><li>`contract`</li><li>`contract.carrier`</li><li>`owner`</li><li><strike>`shop`</strike></li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`files`</li><li>`contract`</li><li>`contract.carrier`</li><li>`owner`</li></ul>",
         "schema": {
           "type": "string"
         }
