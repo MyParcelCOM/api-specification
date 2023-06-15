@@ -28,7 +28,7 @@
           }
         },
         "relationships": {
-          "oneOf": [
+          "anyOf": [
             {
               "required": [
                 "shipments",
