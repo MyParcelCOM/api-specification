@@ -12,6 +12,12 @@ set -o allexport
 }
 set +o allexport
 
+if [ "$(docker network ls -q -f name=proxynet)" = "" ]; then
+  echo ""
+  echo "Creating proxynet network"
+  docker network create proxynet
+fi
+
 # run commands
 if [ $# -gt 0 ]; then
   if [ -f "mp/$1" ]; then
