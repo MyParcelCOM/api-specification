@@ -162,7 +162,12 @@
                             "required": [
                               "shipments",
                               "shop"
-                            ]
+                            ],
+                            "properties": {
+                              "owner": {
+                                "readOnly": true
+                              }
+                            }
                           }
                         ]
                       }
