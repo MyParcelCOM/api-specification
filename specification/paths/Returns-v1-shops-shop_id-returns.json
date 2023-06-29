@@ -137,7 +137,7 @@
                       },
                       "attributes": {
                         "required": [
-                          "reference",
+                          "order_reference",
                           "items",
                           "consumer_address"
                         ],
