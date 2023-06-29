@@ -182,6 +182,12 @@
   "/returns/v1/shops/{shop_id}/orders/{reference}/{email}": {
     "$ref": "./paths/Returns-v1-shops-shop_id-orders-reference-email.json"
   },
+  "/returns/v1/shops/{shop_id}/returns": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-returns-return_id.json"
+  },
+  "/returns/v1/shops/{shop_id}/returns/{return_id}": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-returns.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },

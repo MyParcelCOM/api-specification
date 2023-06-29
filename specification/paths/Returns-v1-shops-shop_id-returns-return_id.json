@@ -1,0 +1,48 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-shop_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get a return resource.",
+    "description": "This endpoint retrieves a return resource by the specified id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the return.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/Return"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No return was found for the given id."
+      }
+    }
+  }
+}

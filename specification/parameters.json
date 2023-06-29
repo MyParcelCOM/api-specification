@@ -83,6 +83,9 @@
   "path-report_id": {
     "$ref": "./parameters/path-report_id.json"
   },
+  "path-return_id": {
+    "$ref": "./parameters/path-return_id.json"
+  },
   "path-scope_id": {
     "$ref": "./parameters/path-scope_id.json"
   },
