@@ -69,23 +69,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/collections?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/returns?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/collections?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/returns?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/collections?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/returns?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/collections?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/returns?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/collections?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/returns?page[number]=13&page[size]=30"
                     }
                   }
                 }
