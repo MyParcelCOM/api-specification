@@ -1,0 +1,38 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Shop"
+          },
+          {
+            "required": [
+              "type",
+              "id",
+              "attributes",
+              "relationships",
+              "links"
+            ]
+          }
+        ]
+      },
+      {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Status"
+          },
+          {
+            "required": [
+              "type",
+              "id",
+              "attributes",
+              "links"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
