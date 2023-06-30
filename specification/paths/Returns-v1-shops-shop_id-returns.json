@@ -128,8 +128,7 @@
                   },
                   {
                     "required": [
-                      "attributes",
-                      "relationships"
+                      "attributes"
                     ],
                     "properties": {
                       "id": {
@@ -152,14 +151,7 @@
                         }
                       },
                       "relationships": {
-                        "required": [
-                          "shop"
-                        ],
-                        "properties": {
-                          "status": {
-                            "readOnly": true
-                          }
-                        }
+                        "readOnly": true
                       }
                     }
                   }
