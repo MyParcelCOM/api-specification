@@ -9,7 +9,7 @@
         "$ref": "#/components/schemas/Contract"
       },
       {
-        "$ref": "#/components/schemas/Service"
+        "$ref": "#/components/schemas/ServiceResponse"
       },
       {
         "$ref": "#/components/schemas/ServiceOption"

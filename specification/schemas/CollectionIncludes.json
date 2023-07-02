@@ -3,82 +3,19 @@
   "items": {
     "anyOf": [
       {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Contract"
-          },
-          {
-            "required": [
-              "type",
-              "id",
-              "attributes",
-              "relationships",
-              "links"
-            ]
-          }
-        ]
+        "$ref": "#/components/schemas/Carrier"
       },
       {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Carrier"
-          },
-          {
-            "required": [
-              "type",
-              "id",
-              "attributes",
-              "links"
-            ]
-          }
-        ]
+        "$ref": "#/components/schemas/Contract"
       },
       {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Manifest"
-          },
-          {
-            "required": [
-              "type",
-              "id",
-              "attributes",
-              "relationships",
-              "links"
-            ]
-          }
-        ]
+        "$ref": "#/components/schemas/ManifestResponse"
       },
       {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Shop"
-          },
-          {
-            "required": [
-              "type",
-              "id",
-              "attributes",
-              "relationships",
-              "links"
-            ]
-          }
-        ]
+        "$ref": "#/components/schemas/ShopResponse"
       },
       {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Status"
-          },
-          {
-            "required": [
-              "type",
-              "id",
-              "attributes",
-              "links"
-            ]
-          }
-        ]
+        "$ref": "#/components/schemas/StatusResponse"
       }
     ]
   }

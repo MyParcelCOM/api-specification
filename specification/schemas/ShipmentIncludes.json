@@ -18,16 +18,16 @@
         "$ref": "#/components/schemas/LiabilityCoverage"
       },
       {
-        "$ref": "#/components/schemas/Organization"
+        "$ref": "#/components/schemas/OrganizationResponse"
       },
       {
-        "$ref": "#/components/schemas/Service"
+        "$ref": "#/components/schemas/ServiceResponse"
       },
       {
         "$ref": "#/components/schemas/ServiceOption"
       },
       {
-        "$ref": "#/components/schemas/Shipment"
+        "$ref": "#/components/schemas/ShipmentResponse"
       },
       {
         "$ref": "#/components/schemas/ShipmentStatus"
@@ -36,10 +36,10 @@
         "$ref": "#/components/schemas/ShipmentSurcharge"
       },
       {
-        "$ref": "#/components/schemas/Shop"
+        "$ref": "#/components/schemas/ShopResponse"
       },
       {
-        "$ref": "#/components/schemas/Status"
+        "$ref": "#/components/schemas/StatusResponse"
       }
     ]
   }

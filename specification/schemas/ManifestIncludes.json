@@ -12,13 +12,13 @@
         "$ref": "#/components/schemas/File"
       },
       {
-        "$ref": "#/components/schemas/Broker"
+        "$ref": "#/components/schemas/BrokerResponse"
       },
       {
-        "$ref": "#/components/schemas/Organization"
+        "$ref": "#/components/schemas/OrganizationResponse"
       },
       {
-        "$ref": "#/components/schemas/Shop"
+        "$ref": "#/components/schemas/ShopResponse"
       }
     ]
   }
