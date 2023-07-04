@@ -51,6 +51,14 @@
                 "address"
               ]
             },
+            "tracking_page_url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "$TRACKING_PAGE_HOST/shop_name/tracking_code/postal_code",
+              "description": "Tracking page url."
+            },
             "physical_properties": {
               "required": [
                 "weight"
