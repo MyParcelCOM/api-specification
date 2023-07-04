@@ -13,8 +13,9 @@
       "properties": {
         "attributes": {
           "required": [
-            "name",
-            "filters",
+            "order_reference",
+            "consumer_address",
+            "items",
             "created_at"
           ]
         },
