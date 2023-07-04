@@ -121,6 +121,15 @@
             "tracking_url": {
               "$ref": "#/components/schemas/TrackingUrl"
             },
+            "tracking_page_url": {
+              "readOnly": true,
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "$TRACKING_PAGE_HOST/shop_name/tracking_code/postal_code",
+              "description": "Tracking page url."
+            },
             "final_mile_carrier": {
               "$ref": "#/components/schemas/FinalMileCarrier"
             },
