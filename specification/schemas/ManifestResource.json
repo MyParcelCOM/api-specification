@@ -3,6 +3,7 @@
   "required": [
     "type"
   ],
+  "additionalProperties": false,
   "properties": {
     "type": {
       "type": "string",

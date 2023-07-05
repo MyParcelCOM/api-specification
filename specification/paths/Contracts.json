@@ -22,6 +22,28 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[search]",
+        "in": "query",
+        "description": "String of characters you want to look for in a contract's attributes.<br>Contracts that have the string in their `name` attribute or their `owner`'s `name` attribute will be returned.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-carrier"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-owner"
+      },
+      {
+        "name": "filter[status]",
+        "in": "query",
+        "description": "Comma separated string of the status of the contract you want to filter on.<br>The statuses that can be filtered on are:<ul><li>`active`</li><li>`inactive`</li><li>`inactive`</li><li>`pending`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
