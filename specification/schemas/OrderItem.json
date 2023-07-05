@@ -2,11 +2,16 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "id",
     "quantity",
     "name",
     "description"
   ],
   "properties": {
+    "id": {
+      "type": "string",
+      "example": "7fac478b-b3c4-46e6-b29e-a31599d27a7a"
+    },
     "sku": {
       "type": [
         "string",
