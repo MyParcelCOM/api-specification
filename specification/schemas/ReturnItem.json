@@ -9,7 +9,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "example": "7fac478b-b3c4-46e6-b29e-a31599d27a7a"
+      "example": "380e31a1-cf15-46d6-b131-7ca0ff0a4013"
     },
     "sku": {
       "type": [
