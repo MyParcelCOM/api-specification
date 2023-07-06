@@ -11,9 +11,11 @@ echo -e "\033[0;30;47m Injecting vars \033[0m"
 API_HOST=${API_HOST//\//\\/}
 AUTH_HOST=${AUTH_HOST//\//\\/}
 RELEASE_VERSION=${RELEASE_VERSION//\//\\/}
+TRACKING_PAGE_HOST=${TRACKING_PAGE_HOST//\//\\/}
 
 ${COMPOSE} run --rm bundler bash -c "
 sed -i 's/\$API_HOST/${API_HOST}/' dist/swagger.json
 sed -i 's/\$AUTH_HOST/${AUTH_HOST}/' dist/swagger.json
 sed -i 's/\$RELEASE_VERSION/${RELEASE_VERSION}/' dist/swagger.json
+sed -i 's/\$TRACKING_PAGE_HOST/${TRACKING_PAGE_HOST}/' dist/swagger.json
 "
