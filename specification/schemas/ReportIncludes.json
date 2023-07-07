@@ -6,7 +6,7 @@
         "$ref": "#/components/schemas/File"
       },
       {
-        "$ref": "#/components/schemas/Status"
+        "$ref": "#/components/schemas/StatusResponse"
       }
     ]
   }
