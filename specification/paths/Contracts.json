@@ -40,7 +40,7 @@
       {
         "name": "filter[status]",
         "in": "query",
-        "description": "Comma separated string of the status of the contract you want to filter on.<br>The statuses that can be filtered on are:<ul><li>`active`</li><li>`inactive`</li><li>`inactive`</li><li>`pending`</li></ul>",
+        "description": "Comma separated string of the status of the contract you want to filter on.<br>The statuses that can be filtered on are:<ul><li>`active`</li><li>`inactive`</li><li>`invalid`</li><li>`pending`</li></ul>",
         "schema": {
           "type": "string"
         }
