@@ -3,7 +3,7 @@
   "items": {
     "anyOf": [
       {
-        "$ref": "#/components/schemas/Organization"
+        "$ref": "#/components/schemas/OrganizationResponse"
       }
     ]
   }

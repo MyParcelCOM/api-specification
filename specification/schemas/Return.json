@@ -1,0 +1,59 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "order_reference": {
+              "type": "string",
+              "example": "#0001-my-order-reference"
+            },
+            "consumer_address": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/BaseAddress"
+                },
+                {
+                  "required": [
+                    "first_name",
+                    "last_name",
+                    "street_1",
+                    "city",
+                    "country_code",
+                    "email"
+                  ]
+                }
+              ]
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReturnItem"
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            },
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

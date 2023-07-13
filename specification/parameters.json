@@ -83,6 +83,9 @@
   "path-report_id": {
     "$ref": "./parameters/path-report_id.json"
   },
+  "path-return_id": {
+    "$ref": "./parameters/path-return_id.json"
+  },
   "path-scope_id": {
     "$ref": "./parameters/path-scope_id.json"
   },
@@ -133,6 +136,9 @@
   },
   "query-filter-carrier": {
     "$ref": "./parameters/query-filter-carrier.json"
+  },
+  "query-filter-owner": {
+    "$ref": "./parameters/query-filter-owner.json"
   },
   "query-filter-created_at-date_from": {
     "$ref": "./parameters/query-filter-created_at-date_from.json"

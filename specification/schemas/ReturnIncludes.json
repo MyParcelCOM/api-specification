@@ -3,7 +3,7 @@
   "items": {
     "anyOf": [
       {
-        "$ref": "#/components/schemas/File"
+        "$ref": "#/components/schemas/ShopResponse"
       },
       {
         "$ref": "#/components/schemas/StatusResponse"

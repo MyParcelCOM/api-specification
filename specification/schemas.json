@@ -350,6 +350,21 @@
   "ReportResponse": {
     "$ref": "./schemas/ReportResponse.json"
   },
+  "Return": {
+    "$ref": "./schemas/Return.json"
+  },
+  "ReturnIncludes": {
+    "$ref": "./schemas/ReturnIncludes.json"
+  },
+  "ReturnItem": {
+    "$ref": "./schemas/ReturnItem.json"
+  },
+  "ReturnResource": {
+    "$ref": "./schemas/ReturnResource.json"
+  },
+  "ReturnResponse": {
+    "$ref": "./schemas/ReturnResponse.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
