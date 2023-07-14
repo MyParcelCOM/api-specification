@@ -73,6 +73,11 @@
                   "description": "String of characters you want to look for in shipment attributes. Available fields to look in are:<ul><li>`date_created` (YYYY-MM-DD). <strong>Deprecated</strong> use `filter[created_at][date_from]` or `filter[created_at][date_to]` instead.</li><li>`description`</li><li>`customer_reference`</li><li>`recipient_address`</li><li>`tracking_code`</li></ul>",
                   "example": "some search string"
                 },
+                "channel": {
+                  "type": "string",
+                  "description": "String of characters you want to look for in shipment channels.",
+                  "example": "some channel string"
+                },
                 "description": {
                   "type": "string",
                   "description": "Filter shipments by their description attribute. This is a strict search, meaning that only if the search string matches the `description` attribute of a shipment completely, will the shipment be included.",
