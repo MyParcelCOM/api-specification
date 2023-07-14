@@ -1,0 +1,39 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Integration"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "code",
+            "description",
+            "created_at"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/integrations/eb527d60-fc26-4aff-ac58-f2661b0e7e9b"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,23 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalIntegration"
+      "$ref": "#/components/schemas/IntegrationResource"
     },
     {
-      "required": [
-        "attributes",
-        "links"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "name",
-            "code",
-            "description",
-            "created_at"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
@@ -62,21 +51,6 @@
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/integrations/eb527d60-fc26-4aff-ac58-f2661b0e7e9b"
             }
           }
         }
