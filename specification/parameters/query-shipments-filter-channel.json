@@ -1,0 +1,8 @@
+{
+  "name": "filter[channel]",
+  "in": "query",
+  "description": "String of characters you want to look for in a shipment's channel.",
+  "schema": {
+    "type": "string"
+  }
+}
