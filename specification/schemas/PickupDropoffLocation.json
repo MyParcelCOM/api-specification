@@ -50,7 +50,7 @@
                 }
               ]
             },
-            "location_type":{
+            "location_type": {
               "type": "string",
               "default": "office",
               "enum": [
