@@ -90,7 +90,18 @@
                     "items": {
                       "properties": {
                         "meta": {
+                          "required": [
+                            "settings"
+                          ],
                           "properties": {
+                            "settings": {
+                              "type": "object",
+                              "example": {
+                                "webshop_url": "https://your_shop.com",
+                                "api_key": "your_api_key"
+                              },
+                              "description": "The settings required to communicate with the integration platform as defined by the `settings_format` of the integration."
+                            },
                             "client_id": {
                               "type": "string",
                               "format": "uuid",
@@ -143,7 +154,16 @@
               "data": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/MinimalIntegration"
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/IntegrationResource"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ]
+                    }
+                  ]
                 }
               }
             }

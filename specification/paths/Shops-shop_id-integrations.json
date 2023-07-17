@@ -35,7 +35,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Integration"
+                    "$ref": "#/components/schemas/IntegrationResponse"
                   }
                 },
                 "meta": {

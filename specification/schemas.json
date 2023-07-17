@@ -182,6 +182,12 @@
   "Integration": {
     "$ref": "./schemas/Integration.json"
   },
+  "IntegrationResource": {
+    "$ref": "./schemas/IntegrationResource.json"
+  },
+  "IntegrationResponse": {
+    "$ref": "./schemas/IntegrationResponse.json"
+  },
   "IntegrationsRelationship": {
     "$ref": "./schemas/IntegrationsRelationship.json"
   },
@@ -238,9 +244,6 @@
   },
   "MinimalHook": {
     "$ref": "./schemas/MinimalHook.json"
-  },
-  "MinimalIntegration": {
-    "$ref": "./schemas/MinimalIntegration.json"
   },
   "MinimalInvoice": {
     "$ref": "./schemas/MinimalInvoice.json"

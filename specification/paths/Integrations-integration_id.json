@@ -29,7 +29,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Integration"
+                  "$ref": "#/components/schemas/IntegrationResponse"
                 }
               }
             }
