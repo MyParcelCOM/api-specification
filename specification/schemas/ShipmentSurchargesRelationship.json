@@ -10,7 +10,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/MinimalShipmentSurcharge"
+            "$ref": "#/components/schemas/ShipmentSurchargeResource"
           },
           {
             "required": [

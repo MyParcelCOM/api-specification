@@ -39,7 +39,7 @@
               ],
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShipmentSurcharge"
+                  "$ref": "#/components/schemas/ShipmentSurchargeResponse"
                 }
               }
             }
@@ -74,7 +74,21 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchShipmentSurcharge"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ShipmentSurcharge"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "relationships": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -94,7 +108,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShipmentSurcharge"
+                  "$ref": "#/components/schemas/ShipmentSurchargeResponse"
                 }
               }
             }

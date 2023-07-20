@@ -46,27 +46,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/CarrierSurcharge"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "required": [
-                              "name",
-                              "fee",
-                              "created_at",
-                              "updated_at"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/CarrierSurchargeResponse"
                   }
                 },
                 "meta": {
@@ -141,9 +121,19 @@
                     "$ref": "#/components/schemas/CarrierSurcharge"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name",
+                          "fee"
+                        ]
                       }
                     }
                   }
@@ -167,27 +157,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/CarrierSurcharge"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "required": [
-                            "name",
-                            "fee",
-                            "created_at",
-                            "updated_at"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/CarrierSurchargeResponse"
                 }
               }
             }
