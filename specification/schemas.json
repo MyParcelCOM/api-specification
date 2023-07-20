@@ -68,6 +68,12 @@
   "Client": {
     "$ref": "./schemas/Client.json"
   },
+  "ClientResource": {
+    "$ref": "./schemas/ClientResource.json"
+  },
+  "ClientResponse": {
+    "$ref": "./schemas/ClientResponse.json"
+  },
   "Collection": {
     "$ref": "./schemas/Collection.json"
   },
@@ -241,9 +247,6 @@
   },
   "MinimalCarrierSurcharge": {
     "$ref": "./schemas/MinimalCarrierSurcharge.json"
-  },
-  "MinimalClient": {
-    "$ref": "./schemas/MinimalClient.json"
   },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
