@@ -1,0 +1,47 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Contract"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "currency",
+            "name",
+            "status",
+            "created_at",
+            "updated_at"
+          ]
+        },
+        "relationships": {
+          "required": [
+            "carrier",
+            "owner"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

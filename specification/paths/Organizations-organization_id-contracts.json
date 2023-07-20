@@ -32,38 +32,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Contract"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "required": [
-                              "status",
-                              "currency",
-                              "name",
-                              "created_at"
-                            ]
-                          },
-                          "relationships": {
-                            "properties": {
-                              "owner": {
-                                "example": {
-                                  "links": {
-                                    "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ContractResponse"
                   }
                 },
                 "meta": {
