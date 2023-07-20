@@ -8,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalCarrier"
+          "$ref": "#/components/schemas/CarrierResource"
         },
         {
           "required": [

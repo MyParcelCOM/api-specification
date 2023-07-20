@@ -50,6 +50,12 @@
   "CarriersRelationship": {
     "$ref": "./schemas/CarriersRelationship.json"
   },
+  "CarrierResource": {
+    "$ref": "./schemas/CarrierResource.json"
+  },
+  "CarrierResponse": {
+    "$ref": "./schemas/CarrierResponse.json"
+  },
   "CarrierStatus": {
     "$ref": "./schemas/CarrierStatus.json"
   },
@@ -223,9 +229,6 @@
   },
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
-  },
-  "MinimalCarrier": {
-    "$ref": "./schemas/MinimalCarrier.json"
   },
   "MinimalCarrierSurcharge": {
     "$ref": "./schemas/MinimalCarrierSurcharge.json"
