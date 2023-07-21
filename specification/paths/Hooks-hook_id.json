@@ -32,17 +32,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Hook"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HookResponse"
                 }
               }
             }
@@ -78,7 +68,21 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchHook"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Hook"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "relationships": {
+                        "readOnly": true
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -98,17 +102,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Hook"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/HookResponse"
                 }
               }
             }

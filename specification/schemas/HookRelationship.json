@@ -8,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalHook"
+          "$ref": "#/components/schemas/HookResource"
         },
         {
           "required": [
