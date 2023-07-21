@@ -260,9 +260,6 @@
   "MinimalRegion": {
     "$ref": "./schemas/MinimalRegion.json"
   },
-  "MinimalScope": {
-    "$ref": "./schemas/MinimalScope.json"
-  },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
   },
@@ -370,6 +367,12 @@
   },
   "Scope": {
     "$ref": "./schemas/Scope.json"
+  },
+  "ScopeResource": {
+    "$ref": "./schemas/ScopeResource.json"
+  },
+  "ScopeResponse": {
+    "$ref": "./schemas/ScopeResponse.json"
   },
   "ScopesRelationship": {
     "$ref": "./schemas/ScopesRelationship.json"
