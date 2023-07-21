@@ -119,6 +119,12 @@
   "CombinedFile": {
     "$ref": "./schemas/CombinedFile.json"
   },
+  "CombinedFileResource": {
+    "$ref": "./schemas/CombinedFileResource.json"
+  },
+  "CombinedFileResponse": {
+    "$ref": "./schemas/CombinedFileResponse.json"
+  },
   "Contract": {
     "$ref": "./schemas/Contract.json"
   },
@@ -175,6 +181,12 @@
   },
   "FileRelationship": {
     "$ref": "./schemas/FileRelationship.json"
+  },
+  "FileResource": {
+    "$ref": "./schemas/FileResource.json"
+  },
+  "FileResponse": {
+    "$ref": "./schemas/FileResponse.json"
   },
   "FilesRelationship": {
     "$ref": "./schemas/FilesRelationship.json"
@@ -259,12 +271,6 @@
   },
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
-  },
-  "MinimalCombinedFile": {
-    "$ref": "./schemas/MinimalCombinedFile.json"
-  },
-  "MinimalFile": {
-    "$ref": "./schemas/MinimalFile.json"
   },
   "MinimalInvoice": {
     "$ref": "./schemas/MinimalInvoice.json"

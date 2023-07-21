@@ -45,7 +45,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/File"
+                    "$ref": "#/components/schemas/FileResponse"
                   }
                 },
                 "meta": {
