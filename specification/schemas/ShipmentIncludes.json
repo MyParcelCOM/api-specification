@@ -30,7 +30,7 @@
         "$ref": "#/components/schemas/ShipmentResponse"
       },
       {
-        "$ref": "#/components/schemas/ShipmentStatus"
+        "$ref": "#/components/schemas/ShipmentStatusResponse"
       },
       {
         "$ref": "#/components/schemas/ShipmentSurchargeResponse"

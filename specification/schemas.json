@@ -287,9 +287,6 @@
   "MinimalRegion": {
     "$ref": "./schemas/MinimalRegion.json"
   },
-  "MinimalShipmentStatus": {
-    "$ref": "./schemas/MinimalShipmentStatus.json"
-  },
   "Order": {
     "$ref": "./schemas/Order.json"
   },
@@ -460,6 +457,12 @@
   },
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/ShipmentStatusRelationship.json"
+  },
+  "ShipmentStatusResource": {
+    "$ref": "./schemas/ShipmentStatusResource.json"
+  },
+  "ShipmentStatusResponse": {
+    "$ref": "./schemas/ShipmentStatusResponse.json"
   },
   "ShipmentSurchargesRelationship": {
     "$ref": "./schemas/ShipmentSurchargesRelationship.json"

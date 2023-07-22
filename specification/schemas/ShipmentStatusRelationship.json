@@ -8,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalShipmentStatus"
+          "$ref": "#/components/schemas/ShipmentStatusResource"
         },
         {
           "required": [
