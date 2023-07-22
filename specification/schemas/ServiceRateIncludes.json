@@ -12,7 +12,7 @@
         "$ref": "#/components/schemas/ServiceResponse"
       },
       {
-        "$ref": "#/components/schemas/ServiceOption"
+        "$ref": "#/components/schemas/ServiceOptionResponse"
       }
     ]
   }
