@@ -281,9 +281,6 @@
   "MinimalLiabilityCoverage": {
     "$ref": "./schemas/MinimalLiabilityCoverage.json"
   },
-  "MinimalPasswordReset": {
-    "$ref": "./schemas/MinimalPasswordReset.json"
-  },
   "MinimalPickupDropoffLocation": {
     "$ref": "./schemas/MinimalPickupDropoffLocation.json"
   },
@@ -319,6 +316,9 @@
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
+  },
+  "PasswordResetResource": {
+    "$ref": "./schemas/PasswordResetResource.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
