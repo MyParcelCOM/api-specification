@@ -1,23 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalPickupDropoffLocation"
+      "$ref": "#/components/schemas/PickupDropoffLocationResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "categories",
-            "code",
-            "address",
-            "location_type"
-          ],
           "additionalProperties": false,
           "properties": {
             "categories": {
@@ -35,20 +24,7 @@
               "example": "205604"
             },
             "address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/BaseAddress"
-                },
-                {
-                  "required": [
-                    "company",
-                    "street_1",
-                    "street_number",
-                    "city",
-                    "country_code"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "location_type": {
               "type": "string",
@@ -135,22 +111,8 @@
             }
           }
         },
-        "meta": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "distance": {
-              "type": "integer",
-              "description": "Distance from the specified postal code to the location in meters.",
-              "example": 1337
-            }
-          }
-        },
         "relationships": {
           "type": "object",
-          "required": [
-            "carrier"
-          ],
           "additionalProperties": false,
           "properties": {
             "carrier": {

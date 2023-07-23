@@ -284,9 +284,6 @@
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
   },
-  "MinimalPickupDropoffLocation": {
-    "$ref": "./schemas/MinimalPickupDropoffLocation.json"
-  },
   "MinimalRegion": {
     "$ref": "./schemas/MinimalRegion.json"
   },
@@ -328,6 +325,12 @@
   },
   "PickupDropoffLocation": {
     "$ref": "./schemas/PickupDropoffLocation.json"
+  },
+  "PickupDropoffLocationResource": {
+    "$ref": "./schemas/PickupDropoffLocationResource.json"
+  },
+  "PickupDropoffLocationResponse": {
+    "$ref": "./schemas/PickupDropoffLocationResponse.json"
   },
   "Price": {
     "$ref": "./schemas/Price.json"
