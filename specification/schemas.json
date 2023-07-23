@@ -242,6 +242,12 @@
   "InvoiceRelationship": {
     "$ref": "./schemas/InvoiceRelationship.json"
   },
+  "InvoiceResource": {
+    "$ref": "./schemas/InvoiceResource.json"
+  },
+  "InvoiceResponse": {
+    "$ref": "./schemas/InvoiceResponse.json"
+  },
   "ItemFeature": {
     "$ref": "./schemas/ItemFeature.json"
   },
@@ -271,9 +277,6 @@
   },
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
-  },
-  "MinimalInvoice": {
-    "$ref": "./schemas/MinimalInvoice.json"
   },
   "MinimalLiabilityCoverage": {
     "$ref": "./schemas/MinimalLiabilityCoverage.json"
