@@ -260,6 +260,12 @@
   "LiabilityCoverageRelationship": {
     "$ref": "./schemas/LiabilityCoverageRelationship.json"
   },
+  "LiabilityCoverageResource": {
+    "$ref": "./schemas/LiabilityCoverageResource.json"
+  },
+  "LiabilityCoverageResponse": {
+    "$ref": "./schemas/LiabilityCoverageResponse.json"
+  },
   "LiabilityCoveragesRelationship": {
     "$ref": "./schemas/LiabilityCoveragesRelationship.json"
   },
@@ -277,9 +283,6 @@
   },
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
-  },
-  "MinimalLiabilityCoverage": {
-    "$ref": "./schemas/MinimalLiabilityCoverage.json"
   },
   "MinimalPickupDropoffLocation": {
     "$ref": "./schemas/MinimalPickupDropoffLocation.json"
