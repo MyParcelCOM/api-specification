@@ -284,9 +284,6 @@
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
   },
-  "MinimalRegion": {
-    "$ref": "./schemas/MinimalRegion.json"
-  },
   "Order": {
     "$ref": "./schemas/Order.json"
   },
@@ -355,6 +352,12 @@
   },
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
+  },
+  "RegionResource": {
+    "$ref": "./schemas/RegionResource.json"
+  },
+  "RegionResponse": {
+    "$ref": "./schemas/RegionResponse.json"
   },
   "Report": {
     "$ref": "./schemas/Report.json"
