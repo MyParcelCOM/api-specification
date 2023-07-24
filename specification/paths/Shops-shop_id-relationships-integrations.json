@@ -90,9 +90,6 @@
                     "items": {
                       "properties": {
                         "meta": {
-                          "required": [
-                            "settings"
-                          ],
                           "properties": {
                             "settings": {
                               "type": "object",
