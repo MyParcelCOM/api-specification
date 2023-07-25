@@ -33,17 +33,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Carrier"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ]
-                      }
-                    ]
+                    "$ref": "#/components/schemas/CarrierResponse"
                   }
                 },
                 "meta": {

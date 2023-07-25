@@ -1,25 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalCarrier"
+      "$ref": "#/components/schemas/CarrierResource"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "name",
-            "code",
-            "logo_url",
-            "credentials_format",
-            "label_mime_types",
-            "label_formats",
-            "collections"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
@@ -109,21 +96,6 @@
                   "example": false
                 }
               }
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9"
             }
           }
         }
