@@ -28,56 +28,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Client"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "relationships",
-                          "links"
-                        ],
-                        "properties": {
-                          "relationships": {
-                            "type": "object",
-                            "required": [
-                              "owner"
-                            ],
-                            "additionalProperties": false,
-                            "properties": {
-                              "owner": {
-                                "allOf": [
-                                  {
-                                    "$ref": "#/components/schemas/UserRelationship"
-                                  },
-                                  {
-                                    "required": [
-                                      "links"
-                                    ]
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          "links": {
-                            "readOnly": true,
-                            "type": "object",
-                            "required": [
-                              "self"
-                            ],
-                            "additionalProperties": false,
-                            "properties": {
-                              "self": {
-                                "type": "string",
-                                "format": "url",
-                                "example": "$API_HOST/clients/6a4baca2-7b94-4987-9e4e-2283c22bac1d"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ClientResponse"
                   }
                 },
                 "meta": {
@@ -133,7 +84,7 @@
       }
     ],
     "summary": "Create a new client.",
-    "description": "This endpoint creates a new client with the posted data.",
+    "description": "This endpoint creates a new client with the posted data. The `owner` relationship will be automatically set to your user.",
     "requestBody": {
       "description": "The client object to be created.",
       "required": true,
@@ -152,8 +103,19 @@
                     "$ref": "#/components/schemas/Client"
                   },
                   {
+                    "required": [
+                      "attributes"
+                    ],
                     "properties": {
                       "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name"
+                        ]
+                      },
+                      "relationships": {
                         "readOnly": true
                       }
                     }
@@ -180,7 +142,7 @@
                 "data": {
                   "allOf": [
                     {
-                      "$ref": "#/components/schemas/Client"
+                      "$ref": "#/components/schemas/ClientResponse"
                     },
                     {
                       "properties": {
@@ -195,46 +157,10 @@
                               "example": "KTT3sjoErkVj4uRQL3o8n276Tz29Ei5t"
                             }
                           }
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "owner"
-                          ],
-                          "additionalProperties": false,
-                          "properties": {
-                            "owner": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/components/schemas/UserRelationship"
-                                },
-                                {
-                                  "required": [
-                                    "links"
-                                  ]
-                                }
-                              ]
-                            }
-                          }
                         }
                       }
                     }
                   ]
-                },
-                "links": {
-                  "readOnly": true,
-                  "type": "object",
-                  "required": [
-                    "self"
-                  ],
-                  "additionalProperties": false,
-                  "properties": {
-                    "self": {
-                      "type": "string",
-                      "format": "url",
-                      "example": "$API_HOST/clients/6a4baca2-7b94-4987-9e4e-2283c22bac1d"
-                    }
-                  }
                 }
               }
             }
