@@ -21,7 +21,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`owner`</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`owner`</li><li>`liability_coverages`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -44,43 +44,14 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Contract"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "type": "object",
-                            "required": [
-                              "status",
-                              "currency",
-                              "name",
-                              "created_at"
-                            ]
-                          },
-                          "relationships": {
-                            "properties": {
-                              "owner": {
-                                "example": {
-                                  "links": {
-                                    "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ContractResponse"
                   }
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ContractIncludes"
                 },
                 "links": {
                   "type": "object",

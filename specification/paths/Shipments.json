@@ -21,6 +21,9 @@
         "$ref": "#/components/parameters/query-shipments-filter-search"
       },
       {
+        "$ref": "#/components/parameters/query-shipments-filter-channel"
+      },
+      {
         "$ref": "#/components/parameters/query-shipments-filter-description"
       },
       {

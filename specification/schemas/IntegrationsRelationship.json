@@ -7,7 +7,16 @@
     "data": {
       "type": "array",
       "items": {
-        "$ref": "#/components/schemas/MinimalIntegration"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/IntegrationResource"
+          },
+          {
+            "required": [
+              "id"
+            ]
+          }
+        ]
       }
     }
   }

@@ -1,0 +1,38 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Scope"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "slug",
+            "title",
+            "description"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/scopes/2103ad2b-815e-48d3-bb77-cf8482666dd6"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

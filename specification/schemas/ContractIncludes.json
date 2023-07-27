@@ -6,16 +6,16 @@
         "$ref": "#/components/schemas/CarrierResponse"
       },
       {
-        "$ref": "#/components/schemas/ContractResponse"
+        "$ref": "#/components/schemas/BrokerResponse"
       },
       {
-        "$ref": "#/components/schemas/ManifestResponse"
+        "$ref": "#/components/schemas/OrganizationResponse"
       },
       {
         "$ref": "#/components/schemas/ShopResponse"
       },
       {
-        "$ref": "#/components/schemas/StatusResponse"
+        "$ref": "#/components/schemas/LiabilityCoverage"
       }
     ]
   }

@@ -3,10 +3,10 @@
   "items": {
     "anyOf": [
       {
-        "$ref": "#/components/schemas/Carrier"
+        "$ref": "#/components/schemas/CarrierResponse"
       },
       {
-        "$ref": "#/components/schemas/Contract"
+        "$ref": "#/components/schemas/ContractResponse"
       },
       {
         "$ref": "#/components/schemas/ServiceResponse"

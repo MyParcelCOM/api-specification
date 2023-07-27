@@ -50,6 +50,12 @@
   "CarriersRelationship": {
     "$ref": "./schemas/CarriersRelationship.json"
   },
+  "CarrierResource": {
+    "$ref": "./schemas/CarrierResource.json"
+  },
+  "CarrierResponse": {
+    "$ref": "./schemas/CarrierResponse.json"
+  },
   "CarrierStatus": {
     "$ref": "./schemas/CarrierStatus.json"
   },
@@ -104,8 +110,17 @@
   "Contract": {
     "$ref": "./schemas/Contract.json"
   },
+  "ContractIncludes": {
+    "$ref": "./schemas/ContractIncludes.json"
+  },
   "ContractRelationship": {
     "$ref": "./schemas/ContractRelationship.json"
+  },
+  "ContractResource": {
+    "$ref": "./schemas/ContractResource.json"
+  },
+  "ContractResponse": {
+    "$ref": "./schemas/ContractResponse.json"
   },
   "ContractsRelationship": {
     "$ref": "./schemas/ContractsRelationship.json"
@@ -182,6 +197,12 @@
   "Integration": {
     "$ref": "./schemas/Integration.json"
   },
+  "IntegrationResource": {
+    "$ref": "./schemas/IntegrationResource.json"
+  },
+  "IntegrationResponse": {
+    "$ref": "./schemas/IntegrationResponse.json"
+  },
   "IntegrationsRelationship": {
     "$ref": "./schemas/IntegrationsRelationship.json"
   },
@@ -218,17 +239,11 @@
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
   },
-  "MinimalCarrier": {
-    "$ref": "./schemas/MinimalCarrier.json"
-  },
   "MinimalCarrierSurcharge": {
     "$ref": "./schemas/MinimalCarrierSurcharge.json"
   },
   "MinimalClient": {
     "$ref": "./schemas/MinimalClient.json"
-  },
-  "MinimalContract": {
-    "$ref": "./schemas/MinimalContract.json"
   },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
@@ -238,9 +253,6 @@
   },
   "MinimalHook": {
     "$ref": "./schemas/MinimalHook.json"
-  },
-  "MinimalIntegration": {
-    "$ref": "./schemas/MinimalIntegration.json"
   },
   "MinimalInvoice": {
     "$ref": "./schemas/MinimalInvoice.json"
@@ -256,9 +268,6 @@
   },
   "MinimalRegion": {
     "$ref": "./schemas/MinimalRegion.json"
-  },
-  "MinimalScope": {
-    "$ref": "./schemas/MinimalScope.json"
   },
   "MinimalServiceOption": {
     "$ref": "./schemas/MinimalServiceOption.json"
@@ -298,9 +307,6 @@
   },
   "PatchCarrierSurcharge": {
     "$ref": "./schemas/PatchCarrierSurcharge.json"
-  },
-  "PatchContract": {
-    "$ref": "./schemas/PatchContract.json"
   },
   "PatchHook": {
     "$ref": "./schemas/PatchHook.json"
@@ -367,6 +373,12 @@
   },
   "Scope": {
     "$ref": "./schemas/Scope.json"
+  },
+  "ScopeResource": {
+    "$ref": "./schemas/ScopeResource.json"
+  },
+  "ScopeResponse": {
+    "$ref": "./schemas/ScopeResponse.json"
   },
   "ScopesRelationship": {
     "$ref": "./schemas/ScopesRelationship.json"

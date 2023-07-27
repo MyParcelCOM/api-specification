@@ -9,7 +9,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/MinimalScope"
+            "$ref": "#/components/schemas/ScopeResource"
           },
           {
             "required": [

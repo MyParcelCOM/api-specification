@@ -34,7 +34,7 @@
             "support_url": {
               "type": "string",
               "maxLength": 255,
-              "example": "https://myparcel-com.odoo.com",
+              "example": "https://help.myparcel.com",
               "description": "URL to knowledge base or FAQ"
             },
             "contact_url": {

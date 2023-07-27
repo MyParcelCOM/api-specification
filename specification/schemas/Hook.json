@@ -51,21 +51,15 @@
             "owner": {
               "oneOf": [
                 {
-                  "$ref": "#/components/schemas/BrokerRelationship"
+                  "$ref": "#/components/schemas/ShopRelationship"
                 },
                 {
                   "$ref": "#/components/schemas/OrganizationRelationship"
                 },
                 {
-                  "$ref": "#/components/schemas/ShopRelationship"
+                  "$ref": "#/components/schemas/BrokerRelationship"
                 }
-              ],
-              "example": {
-                "data": {
-                  "type": "organizations",
-                  "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                }
-              }
+              ]
             }
           }
         },
