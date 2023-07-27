@@ -188,6 +188,12 @@
   "/returns/v1/shops/{shop_id}/returns/{return_id}": {
     "$ref": "./paths/Returns-v1-shops-shop_id-returns-return_id.json"
   },
+  "/returns/v1/shops/{shop_id}/returns/{return_id}/approve": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-returns-return_id-approve.json"
+  },
+  "/returns/v1/shops/{shop_id}/returns/{return_id}/reject": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-returns-return_id-reject.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },
