@@ -18,6 +18,9 @@
       },
       "404": {
         "description": "No return was found for the given id."
+      },
+      "422": {
+        "description": "This modification is not allowed on this return."
       }
     }
   }
