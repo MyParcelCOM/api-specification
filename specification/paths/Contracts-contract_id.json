@@ -23,7 +23,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`owner`</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`carrier`</li><li>`owner`</li><li>`liability_coverages`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -42,39 +42,10 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Contract"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "status",
-                            "currency",
-                            "name",
-                            "created_at"
-                          ]
-                        },
-                        "relationships": {
-                          "properties": {
-                            "owner": {
-                              "example": {
-                                "links": {
-                                  "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ContractResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ContractIncludes"
                 }
               }
             }
@@ -109,7 +80,41 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "$ref": "#/components/schemas/PatchContract"
+                "type": "object",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Contract"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "properties": {
+                          "credentials": {
+                            "type": "object",
+                            "example": {
+                              "api_username": "your_api_username",
+                              "api_password": "your_api_password"
+                            },
+                            "description": "The credentials required to communicate with the carrier as defined by the `credentials_format` of the carrier."
+                          }
+                        }
+                      },
+                      "relationships": {
+                        "properties": {
+                          "carrier": {
+                            "readOnly": true
+                          },
+                          "template": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -129,38 +134,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Contract"
-                    },
-                    {
-                      "required": [
-                        "id"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "status",
-                            "currency",
-                            "name",
-                            "created_at"
-                          ]
-                        },
-                        "relationships": {
-                          "properties": {
-                            "owner": {
-                              "example": {
-                                "links": {
-                                  "related": "$API_HOST/organizations/9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ContractResponse"
                 }
               }
             }

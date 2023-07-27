@@ -110,8 +110,17 @@
   "Contract": {
     "$ref": "./schemas/Contract.json"
   },
+  "ContractIncludes": {
+    "$ref": "./schemas/ContractIncludes.json"
+  },
   "ContractRelationship": {
     "$ref": "./schemas/ContractRelationship.json"
+  },
+  "ContractResource": {
+    "$ref": "./schemas/ContractResource.json"
+  },
+  "ContractResponse": {
+    "$ref": "./schemas/ContractResponse.json"
   },
   "ContractsRelationship": {
     "$ref": "./schemas/ContractsRelationship.json"
@@ -236,9 +245,6 @@
   "MinimalClient": {
     "$ref": "./schemas/MinimalClient.json"
   },
-  "MinimalContract": {
-    "$ref": "./schemas/MinimalContract.json"
-  },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
   },
@@ -301,9 +307,6 @@
   },
   "PatchCarrierSurcharge": {
     "$ref": "./schemas/PatchCarrierSurcharge.json"
-  },
-  "PatchContract": {
-    "$ref": "./schemas/PatchContract.json"
   },
   "PatchHook": {
     "$ref": "./schemas/PatchHook.json"

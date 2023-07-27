@@ -1,21 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalContract"
+      "$ref": "#/components/schemas/ContractResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "currency",
-            "name"
-          ],
           "properties": {
             "currency": {
               "$ref": "#/components/schemas/Currency"
@@ -44,10 +35,6 @@
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "carrier",
-            "owner"
-          ],
           "additionalProperties": false,
           "properties": {
             "carrier": {
@@ -56,39 +43,18 @@
             "owner": {
               "oneOf": [
                 {
-                  "$ref": "#/components/schemas/BrokerRelationship"
+                  "$ref": "#/components/schemas/OrganizationRelationship"
                 },
                 {
-                  "$ref": "#/components/schemas/OrganizationRelationship"
+                  "$ref": "#/components/schemas/BrokerRelationship"
                 }
-              ],
-              "example": {
-                "data": {
-                  "type": "organizations",
-                  "id": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
-                }
-              }
+              ]
             },
             "liability_coverages": {
               "$ref": "#/components/schemas/LiabilityCoveragesRelationship"
             },
             "template": {
               "$ref": "#/components/schemas/ContractRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/contracts/2cb32706-5762-4b96-9212-327e6afaeeff"
             }
           }
         }
