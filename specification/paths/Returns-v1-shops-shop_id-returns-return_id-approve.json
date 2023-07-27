@@ -1,0 +1,27 @@
+{
+  "post": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Approve a return.",
+    "description": "This endpoint modifies the status of a return resource to `return-approved`",
+    "responses": {
+      "204": {
+        "description": "The return is approved."
+      },
+      "404": {
+        "description": "No return was found for the given id."
+      },
+      "422": {
+        "description": "This modification is not allowed on this return."
+      }
+    }
+  }
+}
