@@ -7,7 +7,16 @@
     "data": {
       "type": "array",
       "items": {
-        "$ref": "#/components/schemas/ContractResponse"
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ContractResource"
+          },
+          {
+            "required": [
+              "id"
+            ]
+          }
+        ]
       }
     }
   }
