@@ -19,6 +19,12 @@
             "created_at"
           ]
         },
+        "relationships": {
+          "required": [
+            "shop",
+            "status"
+          ]
+        },
         "links": {
           "readOnly": true,
           "type": "object",
