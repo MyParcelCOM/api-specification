@@ -18,7 +18,17 @@
             "status",
             "created_at",
             "updated_at"
-          ]
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "invalid",
+                "pending"
+              ],
+              "description": "A new contract is pending until the `credentials` have been verified. The verification process is done automatically."
+            }
+          }
         },
         "relationships": {
           "required": [

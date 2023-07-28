@@ -19,11 +19,8 @@
               "type": "string",
               "enum": [
                 "active",
-                "inactive",
-                "invalid",
-                "pending"
-              ],
-              "description": "A new contract is pending until the `credentials` have been verified. The verification process is done automatically."
+                "inactive"
+              ]
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
