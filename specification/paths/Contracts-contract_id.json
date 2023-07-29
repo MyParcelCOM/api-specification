@@ -92,6 +92,12 @@
                     "properties": {
                       "attributes": {
                         "properties": {
+                          "status": {
+                            "enum": [
+                              "active",
+                              "inactive"
+                            ]
+                          },
                           "credentials": {
                             "type": "object",
                             "example": {
