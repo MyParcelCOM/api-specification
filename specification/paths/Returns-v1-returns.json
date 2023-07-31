@@ -31,6 +31,9 @@
       },
       {
         "$ref": "#/components/parameters/query-filter-status"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-shop"
       }
     ],
     "responses": {
