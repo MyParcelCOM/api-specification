@@ -1,0 +1,50 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Order"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "created_at",
+            "recipient_address",
+            "items"
+          ],
+          "properties": {
+            "recipient_address": {
+              "required": [
+                "first_name",
+                "last_name",
+                "street_1",
+                "city",
+                "country_code",
+                "email"
+              ]
+            },
+            "items": {
+              "items": {
+                "required": [
+                  "id",
+                  "quantity",
+                  "name",
+                  "description"
+                ]
+              }
+            }
+          }
+        },
+        "relationships": {
+          "required": [
+            "shop"
+          ]
+        }
+      }
+    }
+  ]
+}

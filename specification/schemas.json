@@ -290,6 +290,9 @@
   "OrderResource": {
     "$ref": "./schemas/OrderResource.json"
   },
+  "OrderResponse": {
+    "$ref": "./schemas/OrderResponse.json"
+  },
   "Organization": {
     "$ref": "./schemas/Organization.json"
   },
