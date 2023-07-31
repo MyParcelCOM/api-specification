@@ -1,4 +1,9 @@
 {
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    }
+  ],
   "post": {
     "tags": [
       "Returns"
@@ -10,11 +15,11 @@
         ]
       }
     ],
-    "summary": "Reject a return.",
-    "description": "This endpoint modifies the status of a return resource to `return-rejected`",
+    "summary": "Approve a return.",
+    "description": "This endpoint modifies the status of a return resource to `return-approved`",
     "responses": {
       "204": {
-        "description": "The return is rejected."
+        "description": "The return is approved."
       },
       "404": {
         "description": "No return was found for the given id."

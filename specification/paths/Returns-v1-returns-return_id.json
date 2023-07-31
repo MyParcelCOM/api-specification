@@ -1,9 +1,6 @@
 {
   "parameters": [
     {
-      "$ref": "#/components/parameters/path-shop_id"
-    },
-    {
       "$ref": "#/components/parameters/path-return_id"
     }
   ],
