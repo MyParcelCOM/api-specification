@@ -4,7 +4,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "example": "7fac478b-b3c4-46e6-b29e-a31599d27a7a"
+      "example": "external-item-reference-001"
     },
     "sku": {
       "type": [
@@ -33,6 +33,9 @@
       "type": "integer",
       "example": 2
     },
+    "item_price": {
+      "$ref": "#/components/schemas/Price"
+    },
     "item_weight": {
       "type": [
         "integer",
@@ -56,6 +59,13 @@
         "oz",
         "lb"
       ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ItemFeature"
+      },
+      "description": "List of features of this item, such as the color or size."
     }
   }
 }

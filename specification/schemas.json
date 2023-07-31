@@ -218,6 +218,9 @@
   "InvoiceRelationship": {
     "$ref": "./schemas/InvoiceRelationship.json"
   },
+  "ItemFeature": {
+    "$ref": "./schemas/ItemFeature.json"
+  },
   "Language": {
     "$ref": "./schemas/Language.json"
   },

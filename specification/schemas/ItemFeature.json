@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "key": {
+      "type": "string",
+      "example": "colour"
+    },
+    "value": {
+      "type": [
+        "string",
+        "number",
+        "boolean"
+      ],
+      "example": "red"
+    },
+    "annotation": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "color"
+      ]
+    }
+  }
+}

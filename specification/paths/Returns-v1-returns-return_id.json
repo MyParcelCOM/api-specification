@@ -30,7 +30,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Return"
+                  "$ref": "#/components/schemas/ReturnResponse"
                 }
               }
             }

@@ -31,9 +31,10 @@
               "items": {
                 "required": [
                   "id",
-                  "quantity",
                   "name",
-                  "description"
+                  "description",
+                  "quantity",
+                  "item_value"
                 ]
               }
             }
