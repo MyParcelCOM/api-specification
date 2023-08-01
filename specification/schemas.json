@@ -533,6 +533,9 @@
   "Uuid": {
     "$ref": "./schemas/Uuid.json"
   },
+  "Weight": {
+    "$ref": "./schemas/Weight.json"
+  },
   "Analytics": {
     "$ref": "./schemas/Analytics.json"
   },

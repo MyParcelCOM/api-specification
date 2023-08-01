@@ -34,30 +34,23 @@
       "example": 2
     },
     "item_price": {
-      "$ref": "#/components/schemas/Price"
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
+        {
+          "description": "Price of a single item. Should be multiplied by quantity to get total price."
+        }
+      ]
     },
     "item_weight": {
-      "type": [
-        "integer",
-        "null"
-      ],
-      "example": 135,
-      "description": "Weight in grams of a single item within item resource. Should be multiplied by quantity to get total weight."
-    },
-    "item_weight_unit": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "example": "g",
-      "description": "Unit of measurement for item_weight.",
-      "default": "g",
-      "enum": [
-        "mg",
-        "g",
-        "kg",
-        "oz",
-        "lb"
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Weight"
+        },
+        {
+          "description": "Weight of a single item. Should be multiplied by quantity to get total weight."
+        }
       ]
     },
     "features": {
