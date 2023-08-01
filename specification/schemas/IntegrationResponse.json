@@ -15,9 +15,7 @@
             "name",
             "code",
             "description",
-            "created_at",
-            "provides_single_order_fetch",
-            "provides_outbound_shipments"
+            "created_at"
           ]
         },
         "links": {
