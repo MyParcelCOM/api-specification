@@ -1,5 +1,9 @@
 {
   "type": "object",
+  "required": [
+    "key",
+    "value"
+  ],
   "additionalProperties": false,
   "properties": {
     "key": {
