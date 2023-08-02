@@ -7,7 +7,7 @@ set -o allexport
   ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   ${ROOT_DIR}/mp/helpers/check-env
   export $(cat ${ROOT_DIR}/.env | xargs)
-  COMPOSE="docker-compose --project-name ${PROJECT_NAME}"
+  COMPOSE="docker compose --project-name ${PROJECT_NAME}"
   RUNNING=$(${COMPOSE} ps -q)
 }
 set +o allexport
