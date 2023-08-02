@@ -48,7 +48,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/OrderResponse"
                 }
               }
             }

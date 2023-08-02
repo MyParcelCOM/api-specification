@@ -218,6 +218,9 @@
   "InvoiceRelationship": {
     "$ref": "./schemas/InvoiceRelationship.json"
   },
+  "ItemFeature": {
+    "$ref": "./schemas/ItemFeature.json"
+  },
   "Language": {
     "$ref": "./schemas/Language.json"
   },
@@ -289,6 +292,9 @@
   },
   "OrderResource": {
     "$ref": "./schemas/OrderResource.json"
+  },
+  "OrderResponse": {
+    "$ref": "./schemas/OrderResponse.json"
   },
   "Organization": {
     "$ref": "./schemas/Organization.json"
@@ -526,6 +532,9 @@
   },
   "Uuid": {
     "$ref": "./schemas/Uuid.json"
+  },
+  "Weight": {
+    "$ref": "./schemas/Weight.json"
   },
   "Analytics": {
     "$ref": "./schemas/Analytics.json"

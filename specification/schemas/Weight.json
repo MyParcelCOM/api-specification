@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": [
+    "amount",
+    "unit"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "amount": {
+      "type": "integer",
+      "example": 135,
+      "description": "Weight amount in the unit specified below."
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measurement for the weight amount.",
+      "default": "g",
+      "enum": [
+        "mg",
+        "g",
+        "kg",
+        "oz",
+        "lb"
+      ]
+    }
+  }
+}
