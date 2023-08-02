@@ -34,7 +34,7 @@
                   "name",
                   "description",
                   "quantity",
-                  "item_value"
+                  "item_price"
                 ]
               }
             }
