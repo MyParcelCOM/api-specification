@@ -43,7 +43,7 @@
               ],
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShipmentSurcharge"
+                  "$ref": "#/components/schemas/ShipmentSurchargeResponse"
                 }
               }
             }

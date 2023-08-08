@@ -38,25 +38,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/ShipmentSurcharge"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "required": [
-                              "created_at",
-                              "updated_at"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ShipmentSurchargeResponse"
                   }
                 },
                 "meta": {
@@ -131,9 +113,18 @@
                     "$ref": "#/components/schemas/ShipmentSurcharge"
                   },
                   {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
                     "properties": {
                       "id": {
                         "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "fee"
+                        ]
                       }
                     }
                   }
@@ -157,7 +148,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShipmentSurcharge"
+                  "$ref": "#/components/schemas/ShipmentSurchargeResponse"
                 }
               }
             }

@@ -65,6 +65,12 @@
   "CarrierSurcharge": {
     "$ref": "./schemas/CarrierSurcharge.json"
   },
+  "CarrierSurchargeResource": {
+    "$ref": "./schemas/CarrierSurchargeResource.json"
+  },
+  "CarrierSurchargeResponse": {
+    "$ref": "./schemas/CarrierSurchargeResponse.json"
+  },
   "Client": {
     "$ref": "./schemas/Client.json"
   },
@@ -248,9 +254,6 @@
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
   },
-  "MinimalCarrierSurcharge": {
-    "$ref": "./schemas/MinimalCarrierSurcharge.json"
-  },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
   },
@@ -280,9 +283,6 @@
   },
   "MinimalShipmentStatus": {
     "$ref": "./schemas/MinimalShipmentStatus.json"
-  },
-  "MinimalShipmentSurcharge": {
-    "$ref": "./schemas/MinimalShipmentSurcharge.json"
   },
   "Order": {
     "$ref": "./schemas/Order.json"
@@ -314,14 +314,8 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
-  "PatchCarrierSurcharge": {
-    "$ref": "./schemas/PatchCarrierSurcharge.json"
-  },
   "PatchHook": {
     "$ref": "./schemas/PatchHook.json"
-  },
-  "PatchShipmentSurcharge": {
-    "$ref": "./schemas/PatchShipmentSurcharge.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
@@ -463,6 +457,12 @@
   },
   "ShipmentSurcharge": {
     "$ref": "./schemas/ShipmentSurcharge.json"
+  },
+  "ShipmentSurchargeResource": {
+    "$ref": "./schemas/ShipmentSurchargeResource.json"
+  },
+  "ShipmentSurchargeResponse": {
+    "$ref": "./schemas/ShipmentSurchargeResponse.json"
   },
   "Shop": {
     "$ref": "./schemas/Shop.json"

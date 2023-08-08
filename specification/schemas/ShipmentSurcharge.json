@@ -1,20 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalShipmentSurcharge"
+      "$ref": "#/components/schemas/ShipmentSurchargeResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "fee"
-          ],
           "additionalProperties": false,
           "properties": {
             "name": {
@@ -26,7 +18,7 @@
               "example": "A carrier-specific (carrier_code) re-labeling surcharge"
             },
             "fee": {
-              "$ref": "#/components/schemas/BasePrice"
+              "$ref": "#/components/schemas/Price"
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
@@ -45,21 +37,6 @@
           "properties": {
             "shipment": {
               "$ref": "#/components/schemas/ShipmentRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/shipment-surcharges/385446dg-34e1-42a1-n832-bcc209450ea9"
             }
           }
         }
