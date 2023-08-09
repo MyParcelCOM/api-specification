@@ -1,0 +1,58 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-carrier_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-pudo_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Carriers"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+        ]
+      }
+    ],
+    "summary": "Get an office location from a carrier by ID.",
+    "description": "This endpoint retrieves the pick-up and drop-off location with the supplied ID.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the location.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/PickupDropoffLocation"
+                    },
+                    {
+                      "required": [
+                        "id"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No location was found for the given ID. Does this carrier support getting PUDO by ID?"
+      }
+    }
+  }
+}
