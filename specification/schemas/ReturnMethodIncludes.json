@@ -1,0 +1,16 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "#/components/schemas/ContractResponse"
+      },
+      {
+        "$ref": "#/components/schemas/ShopResponse"
+      },
+      {
+        "$ref": "#/components/schemas/ServiceResponse"
+      }
+    ]
+  }
+}

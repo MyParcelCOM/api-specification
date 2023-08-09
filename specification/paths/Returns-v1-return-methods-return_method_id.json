@@ -1,0 +1,64 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_method_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "ReturnMethods"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get a return method resource.",
+    "description": "This endpoint retrieves a return method resource by the specified id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the return method.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReturnMethodResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No return method was found for the given id."
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "ReturnMethods"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a return method by id.",
+    "description": "This endpoint deletes the return method with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The return method is deleted."
+      }
+    }
+  }
+}

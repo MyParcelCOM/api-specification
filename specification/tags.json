@@ -130,6 +130,10 @@
     "externalDocs": {}
   },
   {
+    "name": "ReturnMethods",
+    "externalDocs": {}
+  },
+  {
     "name": "Scopes",
     "externalDocs": {
     }

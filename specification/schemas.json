@@ -374,6 +374,18 @@
   "ReturnResponse": {
     "$ref": "./schemas/ReturnResponse.json"
   },
+  "ReturnMethod": {
+    "$ref": "./schemas/ReturnMethod.json"
+  },
+  "ReturnMethodIncludes": {
+    "$ref": "./schemas/ReturnMethodIncludes.json"
+  },
+  "ReturnMethodResource": {
+    "$ref": "./schemas/ReturnMethodResource.json"
+  },
+  "ReturnMethodResponse": {
+    "$ref": "./schemas/ReturnMethodResponse.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },

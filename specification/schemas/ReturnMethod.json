@@ -1,0 +1,40 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnMethodResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "return_type": {
+              "type": "string",
+              "enum": [
+                "self-shipment",
+                "self-service",
+                "shipment"
+              ]
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
+            },
+            "service": {
+              "$ref": "#/components/schemas/ServiceRelationship"
+            },
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
