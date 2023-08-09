@@ -81,19 +81,29 @@
               "properties": {
                 "offers_collections": {
                   "type": "boolean",
-                  "default": false,
-                  "example": false
+                  "default": false
                 },
                 "voids_registered_collections": {
                   "type": "boolean",
                   "description": "Whether the carrier supports voiding of registered collections.",
-                  "example": false
+                  "default": false
                 },
                 "allows_adding_registered_shipments_to_collection": {
                   "type": "boolean",
                   "description": "Whether the carrier supports adding registered shipments to a concept collection.",
-                  "default": false,
-                  "example": false
+                  "default": false
+                }
+              }
+            },
+            "pudo": {
+              "type": "object",
+              "required": [
+                "can_get_pudo_by_id"
+              ],
+              "properties": {
+                "can_get_pudo_by_id": {
+                  "type": "boolean",
+                  "default": false
                 }
               }
             }

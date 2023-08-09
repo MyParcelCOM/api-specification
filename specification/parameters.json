@@ -74,6 +74,9 @@
   "path-postal_code": {
     "$ref": "./parameters/path-postal_code.json"
   },
+  "path-pudo_id": {
+    "$ref": "./parameters/path-pudo_id.json"
+  },
   "path-rates_import_id": {
     "$ref": "./parameters/path-rates_import_id.json"
   },

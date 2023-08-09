@@ -157,6 +157,21 @@
               "$ref": "#/components/schemas/CarrierRelationship"
             }
           }
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/be7f6752-34e0-49a1-a832-bcc209450ea9_205604"
+            }
+          }
         }
       }
     }
