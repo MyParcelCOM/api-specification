@@ -65,8 +65,20 @@
   "CarrierSurcharge": {
     "$ref": "./schemas/CarrierSurcharge.json"
   },
+  "CarrierSurchargeResource": {
+    "$ref": "./schemas/CarrierSurchargeResource.json"
+  },
+  "CarrierSurchargeResponse": {
+    "$ref": "./schemas/CarrierSurchargeResponse.json"
+  },
   "Client": {
     "$ref": "./schemas/Client.json"
+  },
+  "ClientResource": {
+    "$ref": "./schemas/ClientResource.json"
+  },
+  "ClientResponse": {
+    "$ref": "./schemas/ClientResponse.json"
   },
   "Collection": {
     "$ref": "./schemas/Collection.json"
@@ -212,6 +224,9 @@
   "InvoiceRelationship": {
     "$ref": "./schemas/InvoiceRelationship.json"
   },
+  "ItemFeature": {
+    "$ref": "./schemas/ItemFeature.json"
+  },
   "Language": {
     "$ref": "./schemas/Language.json"
   },
@@ -238,12 +253,6 @@
   },
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
-  },
-  "MinimalCarrierSurcharge": {
-    "$ref": "./schemas/MinimalCarrierSurcharge.json"
-  },
-  "MinimalClient": {
-    "$ref": "./schemas/MinimalClient.json"
   },
   "MinimalCombinedFile": {
     "$ref": "./schemas/MinimalCombinedFile.json"
@@ -275,9 +284,6 @@
   "MinimalShipmentStatus": {
     "$ref": "./schemas/MinimalShipmentStatus.json"
   },
-  "MinimalShipmentSurcharge": {
-    "$ref": "./schemas/MinimalShipmentSurcharge.json"
-  },
   "Order": {
     "$ref": "./schemas/Order.json"
   },
@@ -286,6 +292,9 @@
   },
   "OrderResource": {
     "$ref": "./schemas/OrderResource.json"
+  },
+  "OrderResponse": {
+    "$ref": "./schemas/OrderResponse.json"
   },
   "Organization": {
     "$ref": "./schemas/Organization.json"
@@ -305,14 +314,8 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
-  "PatchCarrierSurcharge": {
-    "$ref": "./schemas/PatchCarrierSurcharge.json"
-  },
   "PatchHook": {
     "$ref": "./schemas/PatchHook.json"
-  },
-  "PatchShipmentSurcharge": {
-    "$ref": "./schemas/PatchShipmentSurcharge.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
@@ -455,6 +458,12 @@
   "ShipmentSurcharge": {
     "$ref": "./schemas/ShipmentSurcharge.json"
   },
+  "ShipmentSurchargeResource": {
+    "$ref": "./schemas/ShipmentSurchargeResource.json"
+  },
+  "ShipmentSurchargeResponse": {
+    "$ref": "./schemas/ShipmentSurchargeResponse.json"
+  },
   "Shop": {
     "$ref": "./schemas/Shop.json"
   },
@@ -523,6 +532,9 @@
   },
   "Uuid": {
     "$ref": "./schemas/Uuid.json"
+  },
+  "Weight": {
+    "$ref": "./schemas/Weight.json"
   },
   "Analytics": {
     "$ref": "./schemas/Analytics.json"

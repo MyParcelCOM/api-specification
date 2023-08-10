@@ -21,6 +21,10 @@
       "example": "https://myparcel.com/product.png",
       "description": "A link to an image of the item."
     },
+    "quantity": {
+      "type": "integer",
+      "example": 2
+    },
     "item_value": {
       "oneOf": [
         {
@@ -30,19 +34,6 @@
           "type": "null"
         }
       ]
-    },
-    "quantity": {
-      "type": "integer",
-      "example": 2
-    },
-    "hs_code": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "pattern": "^[0-9.]+$",
-      "example": "8517.12.00",
-      "description": "Harmonized System code used by customs."
     },
     "item_weight": {
       "type": [
@@ -67,6 +58,15 @@
         "oz",
         "lb"
       ]
+    },
+    "hs_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9.]+$",
+      "example": "8517.12.00",
+      "description": "Harmonized System code used by customs."
     },
     "origin_country_code": {
       "oneOf": [

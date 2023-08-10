@@ -35,6 +35,9 @@
   "/carriers/{carrier_id}/contracts": {
     "$ref": "./paths/Carriers-carrier_id-Contracts.json"
   },
+  "/carriers/{carrier_id}/pickup-dropoff-locations/{pudo_id}": {
+    "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-pudo_id.json"
+  },
   "/carriers/{carrier_id}/pickup-dropoff-locations/{latitude}/{longitude}": {
     "$ref": "./paths/Carriers-carrier_id-PickupDropoffLocations-latitude-longitude.json"
   },
@@ -182,11 +185,17 @@
   "/returns/v1/shops/{shop_id}/orders/{reference}/{email}": {
     "$ref": "./paths/Returns-v1-shops-shop_id-orders-reference-email.json"
   },
-  "/returns/v1/shops/{shop_id}/returns": {
-    "$ref": "./paths/Returns-v1-shops-shop_id-returns.json"
+  "/returns/v1/returns": {
+    "$ref": "./paths/Returns-v1-returns.json"
   },
-  "/returns/v1/shops/{shop_id}/returns/{return_id}": {
-    "$ref": "./paths/Returns-v1-shops-shop_id-returns-return_id.json"
+  "/returns/v1/returns/{return_id}": {
+    "$ref": "./paths/Returns-v1-returns-return_id.json"
+  },
+  "/returns/v1/returns/{return_id}/approve": {
+    "$ref": "./paths/Returns-v1-returns-return_id-approve.json"
+  },
+  "/returns/v1/returns/{return_id}/reject": {
+    "$ref": "./paths/Returns-v1-returns-return_id-reject.json"
   },
   "/scopes": {
     "$ref": "./paths/Scopes.json"

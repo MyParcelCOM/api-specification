@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/Return"
+      "$ref": "#/components/schemas/ShipmentSurcharge"
     },
     {
       "required": [
@@ -13,16 +13,9 @@
       "properties": {
         "attributes": {
           "required": [
-            "order_reference",
-            "consumer_address",
-            "items",
-            "created_at"
-          ]
-        },
-        "relationships": {
-          "required": [
-            "shop",
-            "status"
+            "fee",
+            "created_at",
+            "updated_at"
           ]
         },
         "links": {
@@ -36,7 +29,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/reports/74a4a60c-cbc7-4552-9df6-b29953fd9028"
+              "example": "$API_HOST/shipment-surcharges/385446dg-34e1-42a1-n832-bcc209450ea9"
             }
           }
         }

@@ -1,9 +1,6 @@
 {
   "parameters": [
     {
-      "$ref": "#/components/parameters/path-shop_id"
-    },
-    {
       "$ref": "#/components/parameters/path-return_id"
     }
   ],
@@ -33,7 +30,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/Return"
+                  "$ref": "#/components/schemas/ReturnResponse"
                 }
               }
             }

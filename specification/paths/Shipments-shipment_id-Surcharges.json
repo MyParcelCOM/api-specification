@@ -44,7 +44,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipmentSurcharge"
+                    "$ref": "#/components/schemas/ShipmentSurchargeResponse"
                   }
                 },
                 "meta": {

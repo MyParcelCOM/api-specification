@@ -1,19 +1,12 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalClient"
+      "$ref": "#/components/schemas/ClientResource"
     },
     {
-      "required": [
-        "attributes"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "name"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -25,6 +18,18 @@
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "owner"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "owner": {
+              "$ref": "#/components/schemas/UserRelationship"
             }
           }
         }

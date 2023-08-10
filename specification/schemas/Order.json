@@ -4,38 +4,16 @@
       "$ref": "#/components/schemas/OrderResource"
     },
     {
-      "required": [
-        "attributes",
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
-          "required": [
-            "created_at",
-            "recipient_address",
-            "items"
-          ],
+          "additionalProperties": false,
           "properties": {
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             },
             "recipient_address": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/BaseAddress"
-                },
-                {
-                  "required": [
-                    "first_name",
-                    "last_name",
-                    "street_1",
-                    "city",
-                    "country_code",
-                    "email"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/BaseAddress"
             },
             "items": {
               "type": "array",
@@ -47,9 +25,6 @@
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "shop"
-          ],
           "additionalProperties": false,
           "properties": {
             "shop": {
@@ -61,3 +36,4 @@
     }
   ]
 }
+

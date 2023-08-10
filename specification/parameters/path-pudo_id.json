@@ -1,0 +1,11 @@
+{
+  "name": "pudo_id",
+  "in": "path",
+  "description": "ID of the PickupDropoffLocation.",
+  "required": true,
+  "schema": {
+    "type": "string",
+    "description": "The carrier id and the location's code separated by an underscore (_).",
+    "example": "be7f6752-34e0-49a1-a832-bcc209450ea9_205604"
+  }
+}

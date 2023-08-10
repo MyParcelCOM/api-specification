@@ -1,16 +1,10 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "id",
-    "quantity",
-    "name",
-    "description"
-  ],
   "properties": {
     "id": {
       "type": "string",
-      "example": "7fac478b-b3c4-46e6-b29e-a31599d27a7a"
+      "example": "external-item-reference-001"
     },
     "sku": {
       "type": [
@@ -39,29 +33,32 @@
       "type": "integer",
       "example": 2
     },
-    "item_weight": {
-      "type": [
-        "integer",
-        "null"
-      ],
-      "example": 135,
-      "description": "Weight in grams of a single item within item resource. Should be multiplied by quantity to get total weight."
-    },
-    "item_weight_unit": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "example": "g",
-      "description": "Unit of measurement for item_weight.",
-      "default": "g",
-      "enum": [
-        "mg",
-        "g",
-        "kg",
-        "oz",
-        "lb"
+    "item_price": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
+        {
+          "description": "Price of a single item. Should be multiplied by quantity to get total price."
+        }
       ]
+    },
+    "item_weight": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Weight"
+        },
+        {
+          "description": "Weight of a single item. Should be multiplied by quantity to get total weight."
+        }
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ItemFeature"
+      },
+      "description": "List of features of this item, such as the color or size."
     }
   }
 }

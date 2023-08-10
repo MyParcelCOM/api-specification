@@ -33,7 +33,7 @@
         "$ref": "#/components/schemas/ShipmentStatus"
       },
       {
-        "$ref": "#/components/schemas/ShipmentSurcharge"
+        "$ref": "#/components/schemas/ShipmentSurchargeResponse"
       },
       {
         "$ref": "#/components/schemas/ShopResponse"
