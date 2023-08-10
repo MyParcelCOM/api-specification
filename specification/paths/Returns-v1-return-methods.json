@@ -1,0 +1,171 @@
+{
+  "get": {
+    "tags": [
+      "ReturnMethods"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get all available return methods.",
+    "description": "This endpoint retrieves return methods available to your API client.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/query-filter-shop"
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`shop`</li><li>`service`</li><li>`contract`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the return methods.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReturnMethodResponse"
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ReturnMethodIncludes"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/return-methods?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/return-methods?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/return-methods?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/return-methods?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/return-methods?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "ReturnMethods"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new return method.",
+    "description": "This endpoint creates a new return method with the posted data.",
+    "requestBody": {
+      "description": "The return method object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReturnMethod"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "return_type"
+                        ]
+                      },
+                      "relationships": {
+                        "required": [
+                          "shop"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The return method has been created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReturnMethodResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
