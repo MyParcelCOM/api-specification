@@ -14,9 +14,6 @@
     "description": "This endpoint retrieves return methods available to your API client.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/query-filter-service"
-      },
-      {
         "$ref": "#/components/parameters/query-filter-shop"
       },
       {
