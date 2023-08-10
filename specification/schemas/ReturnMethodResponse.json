@@ -18,8 +18,6 @@
         },
         "relationships": {
           "required": [
-            "contract",
-            "service",
             "shop"
           ]
         },
@@ -34,7 +32,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/reports/74a4a60c-cbc7-4552-9df6-b29953fd9028"
+              "example": "$API_HOST/returns/v1/return-methods/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
             }
           }
         }

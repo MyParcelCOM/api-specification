@@ -13,7 +13,7 @@
               "type": "string",
               "enum": [
                 "self-shipment",
-                "self-service",
+                "store-drop-off",
                 "shipment"
               ]
             }
