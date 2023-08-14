@@ -203,6 +203,12 @@
   "HookRelationship": {
     "$ref": "./schemas/HookRelationship.json"
   },
+  "HookResource": {
+    "$ref": "./schemas/HookResource.json"
+  },
+  "HookResponse": {
+    "$ref": "./schemas/HookResponse.json"
+  },
   "HookTrigger": {
     "$ref": "./schemas/HookTrigger.json"
   },
@@ -260,9 +266,6 @@
   "MinimalFile": {
     "$ref": "./schemas/MinimalFile.json"
   },
-  "MinimalHook": {
-    "$ref": "./schemas/MinimalHook.json"
-  },
   "MinimalInvoice": {
     "$ref": "./schemas/MinimalInvoice.json"
   },
@@ -313,9 +316,6 @@
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
-  },
-  "PatchHook": {
-    "$ref": "./schemas/PatchHook.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
