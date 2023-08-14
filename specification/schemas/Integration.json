@@ -24,9 +24,14 @@
               "example": "Marketplace integration to import your Marketplace orders into the MyParcel.com API.",
               "description": "A description of what the integration is used for."
             },
+            "connect_url": {
+              "type": "string",
+              "example": "https://api.myparcel.com/integrations/marketplace/init-auth",
+              "description": "A link to perform OAuth 2.0 authentication with the integration platform."
+            },
             "readme_url": {
               "type": "string",
-              "example": "https://myparcel.com/integration/readme",
+              "example": "https://help.myparcel.com/home/integrations",
               "description": "A link to get more more information on the integration platform."
             },
             "logo_url": {
