@@ -1,14 +1,10 @@
 {
-  "type": "object",
   "deprecated": true,
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalCombinedFile"
+      "$ref": "#/components/schemas/CombinedFileResource"
     },
     {
-      "required": [
-        "relationships"
-      ],
       "properties": {
         "attributes": {
           "type": "object",
@@ -50,10 +46,6 @@
         },
         "relationships": {
           "type": "object",
-          "required": [
-            "shop",
-            "source_files"
-          ],
           "additionalProperties": false,
           "properties": {
             "shop": {
@@ -71,21 +63,6 @@
             },
             "source_files": {
               "$ref": "#/components/schemas/FilesRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/combined-files/1624e8f8-8b00-413c-a684-fd4337ccb66b"
             }
           }
         }

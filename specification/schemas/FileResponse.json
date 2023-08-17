@@ -1,0 +1,38 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/File"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "document_type",
+            "formats",
+            "created_at"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/files/0f621db6-d239-4ae9-b85d-8e97469b10ce"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
