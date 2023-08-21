@@ -392,6 +392,9 @@
   "ReturnMethodResponse": {
     "$ref": "./schemas/ReturnMethodResponse.json"
   },
+  "ReturnMethodRelationship": {
+    "$ref": "./schemas/ReturnMethodRelationship.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
