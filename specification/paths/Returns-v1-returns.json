@@ -156,8 +156,7 @@
                       },
                       "relationships": {
                         "required": [
-                          "shop",
-                          "return_method"
+                          "shop"
                         ],
                         "properties": {
                           "status": {
