@@ -18,7 +18,8 @@
         },
         "relationships": {
           "required": [
-            "shop"
+            "shop",
+            "return_method"
           ]
         },
         "links": {
