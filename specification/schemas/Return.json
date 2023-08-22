@@ -50,6 +50,9 @@
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "return_method": {
+              "$ref": "#/components/schemas/ReturnMethodRelationship"
             }
           }
         }

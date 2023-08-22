@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReturnMethodResource"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "related"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "type": "string",
+          "format": "url",
+          "example": "$API_HOST/returns/v1/return-methods/6e384059-1784-4954-b993-b3fe3260b02f"
+        }
+      }
+    }
+  }
+}
