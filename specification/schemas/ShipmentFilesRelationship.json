@@ -10,7 +10,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/MinimalFile"
+            "$ref": "#/components/schemas/FileResource"
           },
           {
             "required": [

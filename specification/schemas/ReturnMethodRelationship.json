@@ -8,7 +8,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/HookResource"
+          "$ref": "#/components/schemas/ReturnMethodResource"
         },
         {
           "required": [
@@ -28,7 +28,7 @@
         "related": {
           "type": "string",
           "format": "url",
-          "example": "$API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332"
+          "example": "$API_HOST/returns/v1/return-methods/6e384059-1784-4954-b993-b3fe3260b02f"
         }
       }
     }

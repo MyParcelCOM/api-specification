@@ -45,11 +45,14 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "status": {
-              "$ref": "#/components/schemas/StatusRelationship"
+            "return_method": {
+              "$ref": "#/components/schemas/ReturnMethodRelationship"
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
+            },
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
             }
           }
         }

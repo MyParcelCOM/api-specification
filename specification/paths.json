@@ -197,6 +197,12 @@
   "/returns/v1/returns/{return_id}/reject": {
     "$ref": "./paths/Returns-v1-returns-return_id-reject.json"
   },
+  "/returns/v1/return-methods": {
+    "$ref": "./paths/Returns-v1-return-methods.json"
+  },
+  "/returns/v1/return-methods/{return_method_id}": {
+    "$ref": "./paths/Returns-v1-return-methods-return_method_id.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },

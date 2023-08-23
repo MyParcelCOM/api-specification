@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/Return"
+      "$ref": "#/components/schemas/Hook"
     },
     {
       "required": [
@@ -13,17 +13,11 @@
       "properties": {
         "attributes": {
           "required": [
-            "order_reference",
-            "consumer_address",
-            "items",
-            "created_at"
-          ]
-        },
-        "relationships": {
-          "required": [
-            "return_method",
-            "shop",
-            "status"
+            "name",
+            "order",
+            "active",
+            "trigger",
+            "action"
           ]
         },
         "links": {
@@ -37,7 +31,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/returns/v1/returns/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
+              "example": "$API_HOST/hooks/99c2917a-8cbe-4e04-b4ce-e43263b20332"
             }
           }
         }

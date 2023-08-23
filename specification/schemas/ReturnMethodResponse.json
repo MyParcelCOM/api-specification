@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/Return"
+      "$ref": "#/components/schemas/ReturnMethod"
     },
     {
       "required": [
@@ -13,17 +13,12 @@
       "properties": {
         "attributes": {
           "required": [
-            "order_reference",
-            "consumer_address",
-            "items",
-            "created_at"
+            "return_type"
           ]
         },
         "relationships": {
           "required": [
-            "return_method",
-            "shop",
-            "status"
+            "shop"
           ]
         },
         "links": {
@@ -37,7 +32,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/returns/v1/returns/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
+              "example": "$API_HOST/returns/v1/return-methods/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
             }
           }
         }

@@ -1,29 +1,20 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/Return"
+      "$ref": "#/components/schemas/File"
     },
     {
       "required": [
         "id",
         "attributes",
-        "relationships",
         "links"
       ],
       "properties": {
         "attributes": {
           "required": [
-            "order_reference",
-            "consumer_address",
-            "items",
+            "document_type",
+            "formats",
             "created_at"
-          ]
-        },
-        "relationships": {
-          "required": [
-            "return_method",
-            "shop",
-            "status"
           ]
         },
         "links": {
@@ -37,7 +28,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/returns/v1/returns/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
+              "example": "$API_HOST/files/0f621db6-d239-4ae9-b85d-8e97469b10ce"
             }
           }
         }
