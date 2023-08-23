@@ -21,6 +21,7 @@
         },
         "relationships": {
           "required": [
+            "return_method",
             "shop",
             "status"
           ]
