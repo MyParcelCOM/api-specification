@@ -107,6 +107,11 @@
     }
   },
   {
+    "name": "Payments",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "Rate-imports",
     "externalDocs": {
     }

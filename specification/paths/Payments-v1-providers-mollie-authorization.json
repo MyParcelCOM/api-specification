@@ -1,0 +1,131 @@
+{
+  "post": {
+    "tags": [
+      "Payments"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Request an authorization url from Mollie.",
+    "description": "This endpoint returns an authorization url to connect Mollie to your shop.",
+    "requestBody": {
+      "description": "The shop id to connect with.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "shop_id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "shop_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "4067e35b-09cc-42b9-8553-6eaf1788df35"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The Mollie authorization url.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "authorization_url"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "authorization_url": {
+                      "type": "string",
+                      "format": "uri",
+                      "example": "https://www.mollie.com/oauth2/authorize?client_id=app_12345678&redirect_uri=https%3A%2F%2Fexample.com%2Fmollie%2Foauth%2Fcallback&response_type=code"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "Payments"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Disconnect your shop from Mollie.",
+    "description": "This endpoint revokes access to from your shop to Mollie.",
+    "requestBody": {
+      "description": "The shop id to disconnect.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "shop_id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "shop_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "4067e35b-09cc-42b9-8553-6eaf1788df35"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "Disconnected the shop from Mollie."
+      }
+    }
+  }
+}
