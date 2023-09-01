@@ -98,6 +98,7 @@
           'CombinedFiles',
           'Invoices',
           'PasswordResets',
+          'Payments',
           'ShipmentSurcharges',
           'SystemMessages',
           'ExportLoginAttempts',
