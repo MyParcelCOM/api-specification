@@ -11,9 +11,9 @@
       }
     ],
     "summary": "Download rates template export.",
-    "description": "This endpoint retrieves a rates template (CSV), this can then be used to edit existing and add new service rates into the system.",
+    "description": "This endpoint retrieves a rates template (CSV), which can be used to edit existing and add new service rates into the system.",
     "requestBody": {
-      "description": "The object containing a request id.",
+      "description": "The object containing a request id, which is returned by the `/request-rates-template` endpoint.",
       "required": true,
       "content": {
         "application/json": {
@@ -51,6 +51,34 @@
             "schema": {
               "type": "string",
               "description": "Base64 encoded contents of the CSV file."
+            }
+          }
+        }
+      },
+      "202": {
+        "description": "The rates template CSV is still being generated",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "message"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "File not ready. Please wait for the file generation to complete."
+                    }
+                  }
+                }
+              }
             }
           }
         }

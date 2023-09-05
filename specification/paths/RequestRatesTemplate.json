@@ -11,7 +11,7 @@
       }
     ],
     "summary": "Request rates template export.",
-    "description": "This endpoint queues a job to create a rates template (CSV) based on existing service rates. The template can be downloaded on completion.",
+    "description": "This endpoint queues a job to create a rates template (CSV) based on existing service rates. The template can be downloaded on completion using the `/download-rates-template` endpoint.",
     "requestBody": {
       "description": "The object containing a contract id and optional service codes.",
       "required": true,
