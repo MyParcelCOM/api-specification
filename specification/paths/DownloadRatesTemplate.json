@@ -1,0 +1,88 @@
+{
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "contracts.manage"
+        ]
+      }
+    ],
+    "summary": "Download rates template export.",
+    "description": "This endpoint retrieves a rates template (CSV), which can be used to edit existing and add new service rates into the system.",
+    "requestBody": {
+      "description": "The object containing a request id, which is returned by the `/request-rates-template` endpoint.",
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "request_id"
+                ],
+                "properties": {
+                  "request_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "2cb32706-5762-4b96-9212-327e6afaeeff"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Retrieved the rates template CSV.",
+        "content": {
+          "application/pdf": {
+            "schema": {
+              "type": "string",
+              "description": "Base64 encoded contents of the CSV file."
+            }
+          }
+        }
+      },
+      "202": {
+        "description": "The rates template CSV is still being generated",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "message"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "File not ready. Please wait for the file generation to complete."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -48,6 +48,11 @@
               ],
               "example": "7467",
               "description": "Any reference to identify the shop."
+            },
+            "mollie_connected": {
+              "type": "boolean",
+              "example": false,
+              "description": "Whether the shop is connected to Mollie."
             }
           }
         },
