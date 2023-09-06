@@ -10,8 +10,8 @@
         ]
       }
     ],
-    "summary": "Export service rates template.",
-    "description": "This endpoint retrieves a template based on existing service rates, this can then be used to edit existing and add new service rates into the system.",
+    "summary": "Request rates template export.",
+    "description": "This endpoint queues a job to create a rates template (CSV) based on existing service rates. The template can be downloaded on completion using the `/download-rates-template` endpoint.",
     "requestBody": {
       "description": "The object containing a contract id and optional service codes.",
       "required": true,
@@ -52,12 +52,31 @@
     },
     "responses": {
       "200": {
-        "description": "Retrieved the CSV service rates template.",
+        "description": "The rates template export is queued to be created.",
         "content": {
-          "application/pdf": {
+          "application/vnd.api+json": {
             "schema": {
-              "type": "string",
-              "description": "Base64 encoded contents of the CSV file."
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "request_id"
+                  ],
+                  "properties": {
+                    "request_id": {
+                      "type": "string",
+                      "format": "uuid",
+                      "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                      "example": "2cb32706-5762-4b96-9212-327e6afaeeff"
+                    }
+                  }
+                }
+              }
             }
           }
         }
