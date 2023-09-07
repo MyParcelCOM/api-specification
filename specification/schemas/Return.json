@@ -44,11 +44,6 @@
         "relationships": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "return_method",
-            "shop",
-            "status"
-          ],
           "properties": {
             "return_method": {
               "$ref": "#/components/schemas/ReturnMethodRelationship"
