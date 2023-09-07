@@ -23,6 +23,7 @@
     },
     "quantity": {
       "type": "integer",
+      "minimum": 1,
       "example": 2
     },
     "item_value": {
@@ -40,6 +41,7 @@
         "integer",
         "null"
       ],
+      "minimum": 1,
       "example": 135,
       "description": "Weight in grams of a single item within item resource. Should be multiplied by quantity to get total weight."
     },
@@ -107,8 +109,8 @@
         "integer",
         "null"
       ],
-      "min": 0,
-      "max": 100,
+      "minimum": 0,
+      "maximum": 100,
       "example": 19,
       "description": "The VAT rate applied to the `item_value` amount."
     },
