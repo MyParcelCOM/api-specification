@@ -32,6 +32,14 @@
         }
       },
       {
+        "name": "filter[name]",
+        "in": "query",
+        "description": "Find shop by exact name match",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "include",
         "in": "query",
         "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`organization`</li></ul>",
