@@ -13,7 +13,8 @@
       "properties": {
         "attributes": {
           "required": [
-            "return_type"
+            "return_type",
+            "created_at"
           ]
         },
         "relationships": {
