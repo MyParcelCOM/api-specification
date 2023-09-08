@@ -16,6 +16,9 @@
                 "store-drop-off",
                 "shipment"
               ]
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },
