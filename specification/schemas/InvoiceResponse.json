@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/Service"
+      "$ref": "#/components/schemas/Invoice"
     },
     {
       "required": [
@@ -13,22 +13,15 @@
       "properties": {
         "attributes": {
           "required": [
-            "name",
-            "code",
-            "package_type",
-            "handover_method",
-            "delivery_method",
-            "regions_from",
-            "regions_to",
-            "uses_volumetric_weight",
-            "strict_consolidation"
+            "price",
+            "updated_at",
+            "created_at"
           ]
         },
         "relationships": {
           "required": [
-            "carrier",
-            "region_from",
-            "region_to"
+            "organization",
+            "status"
           ]
         },
         "links": {
@@ -42,7 +35,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb"
+              "example": "$API_HOST/invoices/c93c4bd6-9dc9-4560-be08-915b58fab3f0"
             }
           }
         }

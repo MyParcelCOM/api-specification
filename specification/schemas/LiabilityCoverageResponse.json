@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/Service"
+      "$ref": "#/components/schemas/LiabilityCoverage"
     },
     {
       "required": [
@@ -14,21 +14,13 @@
         "attributes": {
           "required": [
             "name",
-            "code",
-            "package_type",
-            "handover_method",
-            "delivery_method",
-            "regions_from",
-            "regions_to",
-            "uses_volumetric_weight",
-            "strict_consolidation"
+            "price",
+            "coverage_max"
           ]
         },
         "relationships": {
           "required": [
-            "carrier",
-            "region_from",
-            "region_to"
+            "contract"
           ]
         },
         "links": {
@@ -42,7 +34,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/services/175a235f-aff5-4e44-87b5-3657b75c1deb"
+              "example": "$API_HOST/liability-coverages/5a7ef73a-ddea-11e9-8a34-2a2ae2dbcce4"
             }
           }
         }

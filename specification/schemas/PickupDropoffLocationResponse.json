@@ -1,0 +1,51 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/PickupDropoffLocation"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "categories",
+            "code",
+            "address",
+            "location_type"
+          ],
+          "properties": {
+            "address": {
+              "required": [
+                "company",
+                "street_1",
+                "street_number",
+                "city",
+                "country_code"
+              ]
+            }
+          }
+        },
+        "meta": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "distance": {
+              "type": "integer",
+              "description": "Distance from the specified postal code to the location in meters.",
+              "example": 1337
+            }
+          }
+        },
+        "relationships": {
+          "required": [
+            "carrier"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -28,45 +28,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Invoice"
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "attributes",
-                          "relationships",
-                          "links"
-                        ],
-                        "properties": {
-                          "attributes": {
-                            "type": "object",
-                            "required": [
-                              "price",
-                              "updated_at",
-                              "created_at"
-                            ],
-                            "properties": {
-                              "price": {
-                                "required": [
-                                  "amount",
-                                  "currency"
-                                ]
-                              }
-                            }
-                          },
-                          "relationships": {
-                            "type": "object",
-                            "required": [
-                              "organization",
-                              "status"
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/InvoiceResponse"
                   }
                 },
                 "meta": {
@@ -149,21 +111,11 @@
                         "readOnly": true
                       },
                       "attributes": {
-                        "type": "object",
                         "required": [
                           "price"
-                        ],
-                        "properties": {
-                          "price": {
-                            "required": [
-                              "amount",
-                              "currency"
-                            ]
-                          }
-                        }
+                        ]
                       },
                       "relationships": {
-                        "type": "object",
                         "required": [
                           "organization"
                         ]
@@ -190,44 +142,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Invoice"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "price",
-                            "updated_at",
-                            "created_at"
-                          ],
-                          "properties": {
-                            "price": {
-                              "required": [
-                                "amount",
-                                "currency"
-                              ]
-                            }
-                          }
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "organization",
-                            "status"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/InvoiceResponse"
                 }
               }
             }

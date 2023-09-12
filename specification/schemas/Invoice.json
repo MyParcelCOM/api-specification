@@ -1,8 +1,7 @@
 {
-  "type": "object",
   "allOf": [
     {
-      "$ref": "#/components/schemas/MinimalInvoice"
+      "$ref": "#/components/schemas/InvoiceResource"
     },
     {
       "properties": {
@@ -18,7 +17,7 @@
               "example": "Invoice for February 2018"
             },
             "price": {
-              "$ref": "#/components/schemas/BasePrice"
+              "$ref": "#/components/schemas/Price"
             },
             "billing_term_start_at": {
               "type": [
@@ -53,21 +52,6 @@
             },
             "status": {
               "$ref": "#/components/schemas/StatusRelationship"
-            }
-          }
-        },
-        "links": {
-          "readOnly": true,
-          "type": "object",
-          "required": [
-            "self"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "self": {
-              "type": "string",
-              "format": "url",
-              "example": "$API_HOST/invoices/c93c4bd6-9dc9-4560-be08-915b58fab3f0"
             }
           }
         }

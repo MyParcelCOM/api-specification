@@ -9,7 +9,7 @@
     "data": {
       "allOf": [
         {
-          "$ref": "#/components/schemas/MinimalRegion"
+          "$ref": "#/components/schemas/RegionResource"
         },
         {
           "required": [

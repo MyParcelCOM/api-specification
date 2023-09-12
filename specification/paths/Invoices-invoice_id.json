@@ -29,45 +29,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Invoice"
-                    },
-                    {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "price",
-                            "updated_at",
-                            "created_at"
-                          ],
-                          "properties": {
-                            "price": {
-                              "required": [
-                                "amount",
-                                "currency"
-                              ]
-                            }
-                          }
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "organization",
-                            "status"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/InvoiceResponse"
                 }
               }
             }
@@ -106,7 +68,6 @@
                     "$ref": "#/components/schemas/Invoice"
                   },
                   {
-                    "type": "object",
                     "required": [
                       "id"
                     ]
@@ -131,44 +92,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/Invoice"
-                    },
-                    {
-                      "required": [
-                        "id",
-                        "attributes",
-                        "relationships",
-                        "links"
-                      ],
-                      "properties": {
-                        "attributes": {
-                          "type": "object",
-                          "required": [
-                            "price",
-                            "updated_at",
-                            "created_at"
-                          ],
-                          "properties": {
-                            "price": {
-                              "required": [
-                                "amount",
-                                "currency"
-                              ]
-                            }
-                          }
-                        },
-                        "relationships": {
-                          "type": "object",
-                          "required": [
-                            "organization",
-                            "status"
-                          ]
-                        }
-                      }
-                    }
-                  ]
+                  "$ref": "#/components/schemas/InvoiceResponse"
                 }
               }
             }
