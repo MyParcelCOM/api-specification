@@ -287,12 +287,6 @@
   "MinimalRegion": {
     "$ref": "./schemas/MinimalRegion.json"
   },
-  "MinimalServiceOption": {
-    "$ref": "./schemas/MinimalServiceOption.json"
-  },
-  "MinimalShipmentStatus": {
-    "$ref": "./schemas/MinimalShipmentStatus.json"
-  },
   "Order": {
     "$ref": "./schemas/Order.json"
   },
@@ -413,6 +407,18 @@
   "ServiceIncludes": {
     "$ref": "./schemas/ServiceIncludes.json"
   },
+  "ServiceOption": {
+    "$ref": "./schemas/ServiceOption.json"
+  },
+  "ServiceOptionResource": {
+    "$ref": "./schemas/ServiceOptionResource.json"
+  },
+  "ServiceOptionResponse": {
+    "$ref": "./schemas/ServiceOptionResponse.json"
+  },
+  "ServiceOptionsRelationship": {
+    "$ref": "./schemas/ServiceOptionsRelationship.json"
+  },
   "ServiceResource": {
     "$ref": "./schemas/ServiceResource.json"
   },
@@ -433,12 +439,6 @@
   },
   "ServiceRegion": {
     "$ref": "./schemas/ServiceRegion.json"
-  },
-  "ServiceOption": {
-    "$ref": "./schemas/ServiceOption.json"
-  },
-  "ServiceOptionsRelationship": {
-    "$ref": "./schemas/ServiceOptionsRelationship.json"
   },
   "ServiceRelationship": {
     "$ref": "./schemas/ServiceRelationship.json"
@@ -472,6 +472,12 @@
   },
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/ShipmentStatusRelationship.json"
+  },
+  "ShipmentStatusResource": {
+    "$ref": "./schemas/ShipmentStatusResource.json"
+  },
+  "ShipmentStatusResponse": {
+    "$ref": "./schemas/ShipmentStatusResponse.json"
   },
   "ShipmentSurchargesRelationship": {
     "$ref": "./schemas/ShipmentSurchargesRelationship.json"

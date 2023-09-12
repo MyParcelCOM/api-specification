@@ -44,7 +44,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipmentStatus"
+                    "$ref": "#/components/schemas/ShipmentStatusResponse"
                   }
                 },
                 "meta": {

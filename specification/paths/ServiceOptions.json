@@ -28,16 +28,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/ServiceOption"
-                      },
-                      {
-                        "required": [
-                          "id"
-                        ]
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ServiceOptionResponse"
                   }
                 },
                 "meta": {
