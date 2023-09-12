@@ -58,7 +58,7 @@
       "minimum": 1,
       "maximum": 2147483647,
       "example": 4500,
-      "description": "Volumetric weight in grams. Calculated by the API by multiplying shipment dimensions (if present) and dividing them by 5000: (height in mm * length in mm * width in mm) / 5000."
+      "description": "Volumetric weight in grams. Calculated by the API by multiplying shipment dimensions (if present) and dividing them by 4000: (height in mm * length in mm * width in mm) / 4000."
     }
   }
 }
