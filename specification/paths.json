@@ -200,6 +200,9 @@
   "/returns/v1/returns/{return_id}/reject": {
     "$ref": "./paths/Returns-v1-returns-return_id-reject.json"
   },
+  "/returns/v1/returns/{return_id}/request-payment": {
+    "$ref": "./paths/Returns-v1-returns-return_id-request-payment.json"
+  },
   "/returns/v1/return-methods": {
     "$ref": "./paths/Returns-v1-return-methods.json"
   },
