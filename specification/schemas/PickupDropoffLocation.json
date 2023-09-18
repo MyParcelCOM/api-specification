@@ -36,7 +36,6 @@
             },
             "opening_hours": {
               "type": "array",
-              "maxItems": 7,
               "items": {
                 "type": "object",
                 "required": [
