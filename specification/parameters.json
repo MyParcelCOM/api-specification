@@ -143,9 +143,6 @@
   "query-filter-carrier": {
     "$ref": "./parameters/query-filter-carrier.json"
   },
-  "query-filter-owner": {
-    "$ref": "./parameters/query-filter-owner.json"
-  },
   "query-filter-created_at-date_from": {
     "$ref": "./parameters/query-filter-created_at-date_from.json"
   },
@@ -154,6 +151,12 @@
   },
   "query-filter-organization": {
     "$ref": "./parameters/query-filter-organization.json"
+  },
+  "query-filter-owner": {
+    "$ref": "./parameters/query-filter-owner.json"
+  },
+  "query-filter-service": {
+    "$ref": "./parameters/query-filter-service.json"
   },
   "query-filter-shop": {
     "$ref": "./parameters/query-filter-shop.json"
