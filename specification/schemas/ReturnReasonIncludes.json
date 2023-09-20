@@ -1,0 +1,10 @@
+{
+  "type": "array",
+  "items": {
+    "allOf": [
+      {
+        "$ref": "#/components/schemas/ShopResponse"
+      }
+    ]
+  }
+}

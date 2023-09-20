@@ -103,7 +103,8 @@
           'SystemMessages',
           'ExportLoginAttempts',
           "Returns",
-          "ReturnMethods"
+          "ReturnMethods",
+          "ReturnReasons",
         ]
         for (var i = 0; i < internal.length; i++) {
           var sections = document.querySelectorAll([
