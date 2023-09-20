@@ -98,16 +98,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/ReturnReasonResponse"
-                    },
-                    {
-                      "required": [
-                        "relationships"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ReturnReasonResponse"
                 }
               }
             }

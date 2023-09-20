@@ -92,6 +92,9 @@
   "path-return_method_id": {
     "$ref": "./parameters/path-return_method_id.json"
   },
+  "path-return_reason_id": {
+    "$ref": "./parameters/path-return_reason_id.json"
+  },
   "path-scope_id": {
     "$ref": "./parameters/path-scope_id.json"
   },

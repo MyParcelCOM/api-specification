@@ -1,7 +1,7 @@
 {
   "type": "array",
   "items": {
-    "allOf": [
+    "anyOf": [
       {
         "$ref": "#/components/schemas/ShopResponse"
       }

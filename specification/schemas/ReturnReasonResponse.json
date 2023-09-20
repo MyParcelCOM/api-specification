@@ -12,9 +12,9 @@
       "properties": {
         "attributes": {
           "required": [
-            "return_type",
-            "default_weight",
-            "created_at"
+            "description",
+            "accepts_attachments",
+            "requires_attachments",
           ]
         },
 

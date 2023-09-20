@@ -130,7 +130,6 @@
                       "attributes": {
                         "required": [
                           "description",
-                          "tags",
                           "accepts_attachments",
                           "requires_attachments"
                         ]

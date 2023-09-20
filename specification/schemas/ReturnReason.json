@@ -29,15 +29,6 @@
               "example": true
             }
           }
-        },
-        "relationships": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "shop": {
-              "$ref": "#/components/schemas/ShopRelationship"
-            }
-          }
         }
       }
     }
