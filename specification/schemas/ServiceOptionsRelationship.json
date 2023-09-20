@@ -10,7 +10,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/MinimalServiceOption"
+            "$ref": "#/components/schemas/ServiceOptionResource"
           },
           {
             "required": [

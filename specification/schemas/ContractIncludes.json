@@ -15,7 +15,7 @@
         "$ref": "#/components/schemas/ShopResponse"
       },
       {
-        "$ref": "#/components/schemas/LiabilityCoverage"
+        "$ref": "#/components/schemas/LiabilityCoverageResponse"
       }
     ]
   }

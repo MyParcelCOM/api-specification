@@ -6,7 +6,7 @@
         "$ref": "#/components/schemas/CarrierResponse"
       },
       {
-        "$ref": "#/components/schemas/ServiceOption"
+        "$ref": "#/components/schemas/ServiceOptionResponse"
       }
     ]
   }

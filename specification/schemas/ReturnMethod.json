@@ -16,6 +16,12 @@
                 "store-drop-off",
                 "shipment"
               ]
+            },
+            "default_weight": {
+              "$ref": "#/components/schemas/Weight"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },

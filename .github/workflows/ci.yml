@@ -8,17 +8,20 @@ jobs:
     if: github.ref_name == 'develop' || github.ref_name == 'master' || github.ref_type == 'tag'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           aws-access-key-id: ${{ secrets.AWS_PUBLIC_REPO_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_PUBLIC_REPO_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+          mask-aws-account-id: 'true'
 
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v1
+        with:
+          mask-password: 'true'
 
       - name: Prepare lowercase repository name
         run: echo "REPOSITORY=${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"

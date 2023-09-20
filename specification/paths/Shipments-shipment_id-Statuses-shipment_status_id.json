@@ -43,7 +43,7 @@
               ],
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShipmentStatus"
+                  "$ref": "#/components/schemas/ShipmentStatusResponse"
                 }
               }
             }

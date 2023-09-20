@@ -29,16 +29,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/ServiceOption"
-                    },
-                    {
-                      "required": [
-                        "id"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/ServiceOptionResponse"
                 }
               }
             }

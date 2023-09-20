@@ -53,6 +53,9 @@
             },
             "status": {
               "$ref": "#/components/schemas/StatusRelationship"
+            },
+            "shipment": {
+              "$ref": "#/components/schemas/ShipmentRelationship"
             }
           }
         }

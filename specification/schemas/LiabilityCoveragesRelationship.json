@@ -10,7 +10,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/MinimalLiabilityCoverage"
+            "$ref": "#/components/schemas/LiabilityCoverageResource"
           },
           {
             "required": [

@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/ReturnMethod"
+      "$ref": "#/components/schemas/ShipmentStatus"
     },
     {
       "required": [
@@ -13,14 +13,13 @@
       "properties": {
         "attributes": {
           "required": [
-            "return_type",
-            "default_weight",
             "created_at"
           ]
         },
         "relationships": {
           "required": [
-            "shop"
+            "status",
+            "shipment"
           ]
         },
         "links": {
@@ -34,7 +33,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/returns/v1/return-methods/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
+              "example": "$API_HOST/shipments/7b808eee-bf1c-40cd-98f2-3c335a06417e/statuses/9e6d8dba-7c45-4351-a9fc-b55a0cbafbad"
             }
           }
         }

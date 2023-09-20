@@ -15,7 +15,7 @@
         "$ref": "#/components/schemas/HookLog"
       },
       {
-        "$ref": "#/components/schemas/LiabilityCoverage"
+        "$ref": "#/components/schemas/LiabilityCoverageResponse"
       },
       {
         "$ref": "#/components/schemas/OrganizationResponse"
@@ -24,13 +24,13 @@
         "$ref": "#/components/schemas/ServiceResponse"
       },
       {
-        "$ref": "#/components/schemas/ServiceOption"
+        "$ref": "#/components/schemas/ServiceOptionResponse"
       },
       {
         "$ref": "#/components/schemas/ShipmentResponse"
       },
       {
-        "$ref": "#/components/schemas/ShipmentStatus"
+        "$ref": "#/components/schemas/ShipmentStatusResponse"
       },
       {
         "$ref": "#/components/schemas/ShipmentSurchargeResponse"

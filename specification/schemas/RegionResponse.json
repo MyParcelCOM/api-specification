@@ -1,26 +1,19 @@
 {
+  "deprecated": true,
   "allOf": [
     {
-      "$ref": "#/components/schemas/ReturnMethod"
+      "$ref": "#/components/schemas/Region"
     },
     {
       "required": [
         "id",
         "attributes",
-        "relationships",
         "links"
       ],
       "properties": {
         "attributes": {
           "required": [
-            "return_type",
-            "default_weight",
-            "created_at"
-          ]
-        },
-        "relationships": {
-          "required": [
-            "shop"
+            "name"
           ]
         },
         "links": {
@@ -34,7 +27,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/returns/v1/return-methods/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
+              "example": "$API_HOST/regions/0b6ecd39-6072-4529-a031-f21247a91296"
             }
           }
         }

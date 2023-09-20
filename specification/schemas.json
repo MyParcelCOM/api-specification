@@ -242,6 +242,12 @@
   "InvoiceRelationship": {
     "$ref": "./schemas/InvoiceRelationship.json"
   },
+  "InvoiceResource": {
+    "$ref": "./schemas/InvoiceResource.json"
+  },
+  "InvoiceResponse": {
+    "$ref": "./schemas/InvoiceResponse.json"
+  },
   "ItemFeature": {
     "$ref": "./schemas/ItemFeature.json"
   },
@@ -253,6 +259,12 @@
   },
   "LiabilityCoverageRelationship": {
     "$ref": "./schemas/LiabilityCoverageRelationship.json"
+  },
+  "LiabilityCoverageResource": {
+    "$ref": "./schemas/LiabilityCoverageResource.json"
+  },
+  "LiabilityCoverageResponse": {
+    "$ref": "./schemas/LiabilityCoverageResponse.json"
   },
   "LiabilityCoveragesRelationship": {
     "$ref": "./schemas/LiabilityCoveragesRelationship.json"
@@ -271,27 +283,6 @@
   },
   "ManifestResponse": {
     "$ref": "./schemas/ManifestResponse.json"
-  },
-  "MinimalInvoice": {
-    "$ref": "./schemas/MinimalInvoice.json"
-  },
-  "MinimalLiabilityCoverage": {
-    "$ref": "./schemas/MinimalLiabilityCoverage.json"
-  },
-  "MinimalPasswordReset": {
-    "$ref": "./schemas/MinimalPasswordReset.json"
-  },
-  "MinimalPickupDropoffLocation": {
-    "$ref": "./schemas/MinimalPickupDropoffLocation.json"
-  },
-  "MinimalRegion": {
-    "$ref": "./schemas/MinimalRegion.json"
-  },
-  "MinimalServiceOption": {
-    "$ref": "./schemas/MinimalServiceOption.json"
-  },
-  "MinimalShipmentStatus": {
-    "$ref": "./schemas/MinimalShipmentStatus.json"
   },
   "Order": {
     "$ref": "./schemas/Order.json"
@@ -323,11 +314,20 @@
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
+  "PasswordResetResource": {
+    "$ref": "./schemas/PasswordResetResource.json"
+  },
   "PhysicalProperties": {
     "$ref": "./schemas/PhysicalProperties.json"
   },
   "PickupDropoffLocation": {
     "$ref": "./schemas/PickupDropoffLocation.json"
+  },
+  "PickupDropoffLocationResource": {
+    "$ref": "./schemas/PickupDropoffLocationResource.json"
+  },
+  "PickupDropoffLocationResponse": {
+    "$ref": "./schemas/PickupDropoffLocationResponse.json"
   },
   "Price": {
     "$ref": "./schemas/Price.json"
@@ -352,6 +352,12 @@
   },
   "RegionRelationship": {
     "$ref": "./schemas/RegionRelationship.json"
+  },
+  "RegionResource": {
+    "$ref": "./schemas/RegionResource.json"
+  },
+  "RegionResponse": {
+    "$ref": "./schemas/RegionResponse.json"
   },
   "Report": {
     "$ref": "./schemas/Report.json"
@@ -413,6 +419,18 @@
   "ServiceIncludes": {
     "$ref": "./schemas/ServiceIncludes.json"
   },
+  "ServiceOption": {
+    "$ref": "./schemas/ServiceOption.json"
+  },
+  "ServiceOptionResource": {
+    "$ref": "./schemas/ServiceOptionResource.json"
+  },
+  "ServiceOptionResponse": {
+    "$ref": "./schemas/ServiceOptionResponse.json"
+  },
+  "ServiceOptionsRelationship": {
+    "$ref": "./schemas/ServiceOptionsRelationship.json"
+  },
   "ServiceResource": {
     "$ref": "./schemas/ServiceResource.json"
   },
@@ -433,12 +451,6 @@
   },
   "ServiceRegion": {
     "$ref": "./schemas/ServiceRegion.json"
-  },
-  "ServiceOption": {
-    "$ref": "./schemas/ServiceOption.json"
-  },
-  "ServiceOptionsRelationship": {
-    "$ref": "./schemas/ServiceOptionsRelationship.json"
   },
   "ServiceRelationship": {
     "$ref": "./schemas/ServiceRelationship.json"
@@ -472,6 +484,12 @@
   },
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/ShipmentStatusRelationship.json"
+  },
+  "ShipmentStatusResource": {
+    "$ref": "./schemas/ShipmentStatusResource.json"
+  },
+  "ShipmentStatusResponse": {
+    "$ref": "./schemas/ShipmentStatusResponse.json"
   },
   "ShipmentSurchargesRelationship": {
     "$ref": "./schemas/ShipmentSurchargesRelationship.json"

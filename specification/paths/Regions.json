@@ -79,17 +79,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/Region"
-                      },
-                      {
-                        "required": [
-                          "id",
-                          "links"
-                        ]
-                      }
-                    ]
+                    "$ref": "#/components/schemas/RegionResponse"
                   }
                 },
                 "meta": {
