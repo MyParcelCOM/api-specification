@@ -6,8 +6,16 @@
     "security": [
       {
         "OAuth2": [
-          "organizations.manage",
-          "shipments.manage",
+          "organizations.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "shipments.view"
         ]
       }
@@ -113,7 +121,11 @@
     "security": [
       {
         "OAuth2": [
-          "organizations.manage",
+          "organizations.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "shipments.manage"
         ]
       }

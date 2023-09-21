@@ -6,7 +6,11 @@
     "security": [
       {
         "OAuth2": [
-          "returns.manage",
+          "returns.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "return_reasons.manage"
         ]
       }

@@ -6,7 +6,11 @@
     "security": [
       {
         "OAuth2": [
-          "collections.manage",
+          "collections.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "collections.view"
         ]
       }
