@@ -48,6 +48,9 @@
         "$ref": "#/components/parameters/query-filter-organization"
       },
       {
+        "$ref": "#/components/parameters/query-filter-broker"
+      },
+      {
         "$ref": "#/components/parameters/query-filter-carrier"
       },
       {
