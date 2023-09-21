@@ -4,6 +4,49 @@
       "$ref": "#/components/parameters/path-return_reason_id"
     }
   ],
+  "get": {
+    "tags": [
+      "ReturnReasons"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "return_reasons.manage"
+        ]
+      }
+    ],
+    "summary": "Retrieve a return reason by id.",
+    "description": "This endpoint retrieves the return reason with the supplied id.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the return reason.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReturnReasonResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No return reason was found for the given id."
+      }
+    }
+  },
   "patch": {
     "tags": [
       "ReturnReasons"
