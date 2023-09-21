@@ -17,7 +17,6 @@
             "requires_attachments",
           ]
         },
-
         "links": {
           "readOnly": true,
           "type": "object",
