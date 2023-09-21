@@ -11,11 +11,13 @@
     "security": [
       {
         "OAuth2": [
+          "broker.member",
           "shipments.manage"
         ]
       },
       {
         "OAuth2": [
+          "broker.member",
           "shipments.view"
         ]
       }

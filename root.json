@@ -42,7 +42,7 @@
               "finance.manage": "Manage all finance related resources.",
               "experimental": "Access to experimental endpoints.",
               "zones.manage": "Manage zone resources.",
-              "returns.manage": "Manage return resources and related resources."
+              "returns.manage": "Manage all return related resources."
             }
           }
         }

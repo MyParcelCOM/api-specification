@@ -90,6 +90,7 @@
     "security": [
       {
         "OAuth2": [
+          "broker.member",
           "system.manage"
         ]
       }
