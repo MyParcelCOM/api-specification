@@ -149,6 +149,9 @@
   "query-filter-created_at-date_to": {
     "$ref": "./parameters/query-filter-created_at-date_to.json"
   },
+  "query-filter-location_type": {
+    "$ref": "./parameters/query-filter-location_type.json"
+  },
   "query-filter-organization": {
     "$ref": "./parameters/query-filter-organization.json"
   },
