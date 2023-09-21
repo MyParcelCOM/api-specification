@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^return-reasons$",
+      "example": "return-reasons"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+      "example": "090b1a04-8f22-440e-930c-e72e6ce36b56"
+    }
+  }
+}

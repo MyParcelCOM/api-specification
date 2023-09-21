@@ -1,0 +1,36 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnReasonResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string",
+              "example": "The item isn't what I expected it to be."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "shoes"
+              }
+            },
+            "accepts_attachments": {
+              "type": "boolean",
+              "example": true
+            },
+            "requires_attachments": {
+              "type": "boolean",
+              "example": true
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_reason_id"
+    }
+  ],
+  "patch": {
+    "tags": [
+      "ReturnReasons"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "return_reasons.manage"
+        ]
+      }
+    ],
+    "summary": "Update a return reason by id.",
+    "description": "This endpoint updates the return reason with the supplied id.",
+    "requestBody": {
+      "description": "The return reason object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReturnReason"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "relationships": {
+                        "properties": {
+                          "shop": {
+                            "readOnly": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The return reason is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReturnReasonResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "ReturnReasons"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "return_reasons.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a return reason by id.",
+    "description": "This endpoint deletes the return reason with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The return reason is deleted."
+      }
+    }
+  }
+}

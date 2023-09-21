@@ -1,0 +1,38 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnReason"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "description",
+            "accepts_attachments",
+            "requires_attachments",
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/returns/v1/reasons/090b1a04-8f22-440e-930c-e72e6ce36b56"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
