@@ -69,11 +69,11 @@
               "data": {
                 "type": "object",
                 "required": [
-                  "reason_ids"
+                  "return_reason_ids"
                 ],
                 "additionalProperties": false,
                 "properties": {
-                  "reason_ids": {
+                  "return_reason_ids": {
                     "type": "array",
                     "items": {
                       "$ref": "#/components/schemas/Uuid"
