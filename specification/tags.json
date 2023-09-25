@@ -139,10 +139,6 @@
     "externalDocs": {}
   },
   {
-    "name": "ReturnPaymentRequests",
-    "externalDocs": {}
-  },
-  {
     "name": "Scopes",
     "externalDocs": {
     }

@@ -6,7 +6,7 @@
   ],
   "post": {
     "tags": [
-      "ReturnPaymentRequests"
+      "Returns"
     ],
     "security": [
       {
