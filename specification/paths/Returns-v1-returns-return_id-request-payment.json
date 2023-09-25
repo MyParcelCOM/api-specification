@@ -1,0 +1,62 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Request a payment for a return.",
+    "description": "This endpoint requests a payment for a return through the connected payment provider",
+    "requestBody": {
+      "description": "The return payment request object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "required": [
+                  "requested_payment"
+                ],
+                "properties": {
+                  "requested_payment": {
+                    "$ref": "#/components/schemas/Price"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The return payment request is created."
+      },
+      "403": {
+        "description": "The payment provider does not allow the return payment request to be created."
+      },
+      "422": {
+        "description": "This modification is not allowed on this return payment request."
+      },
+      "500": {
+        "description": "The payment provider returned an error."
+      }
+    }
+  }
+}
