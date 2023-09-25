@@ -15,14 +15,6 @@
     "description": "This endpoint retrieves returns reasons available to your API client.",
     "parameters": [
       {
-        "name": "include",
-        "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`shop`</li></ul>",
-        "schema": {
-          "type": "string"
-        }
-      },
-      {
         "$ref": "#/components/parameters/query-filter-tags"
       }
     ],
@@ -134,11 +126,6 @@
                           "requires_attachments"
                         ]
                       },
-                      "relationships": {
-                        "required": [
-                          "shop"
-                        ]
-                      }
                     }
                   }
                 ]
