@@ -121,8 +121,7 @@
                   },
                   {
                     "required": [
-                      "attributes",
-                      "relationships"
+                      "attributes"
                     ],
                     "properties": {
                       "id": {
