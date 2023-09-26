@@ -53,7 +53,7 @@
         ]
       }
     ],
-    "summary": "Link return reason's to the given shop.",
+    "summary": "Link return reasons to the given shop.",
     "description": "This endpoint links return reasons to the specified shop.",
     "requestBody": {
       "description": "The return reason id's to link to the shop",
