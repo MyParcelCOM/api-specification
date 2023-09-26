@@ -44,9 +44,6 @@
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
                 },
-                "included": {
-                  "$ref": "#/components/schemas/ReturnReasonIncludes"
-                },
                 "links": {
                   "type": "object",
                   "required": [

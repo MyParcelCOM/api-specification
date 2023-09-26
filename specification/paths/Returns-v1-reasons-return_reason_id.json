@@ -80,16 +80,7 @@
                   {
                     "required": [
                       "id"
-                    ],
-                    "properties": {
-                      "relationships": {
-                        "properties": {
-                          "shop": {
-                            "readOnly": true
-                          }
-                        }
-                      }
-                    }
+                    ]
                   }
                 ]
               }
