@@ -53,10 +53,10 @@
         ]
       }
     ],
-    "summary": "Link a return reason to the given shop.",
-    "description": "This endpoint links a return reason to the specified shop.",
+    "summary": "Link return reasons to the given shop.",
+    "description": "This endpoint links return reasons to the specified shop.",
     "requestBody": {
-      "description": "The return reason to link to the shop",
+      "description": "The return reason id's to link to the shop",
       "content": {
         "application/vnd.api+json": {
           "schema": {
@@ -69,14 +69,21 @@
               "data": {
                 "type": "object",
                 "required": [
-                  "reason_id"
+                  "return_reason_ids"
                 ],
                 "additionalProperties": false,
                 "properties": {
-                  "reason_id": {
-                    "type": "string",
-                    "description": "The ID of the return reason to link to the shop.",
-                    "example": "090b1a04-8f22-440e-930c-e72e6ce36b56"
+                  "return_reason_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Uuid"
+                    },
+                    "example": [
+                      "c6f82140-bfc8-4dff-97e4-9865f29c4ef3",
+                      "bafef74c-b3dd-42b7-a92f-88f027f4db2b",
+                      "0b058152-f822-4abf-be43-8ee22ed23379"
+                    ],
+                    "description": "Uuids of return reasons that need to be added to the shop."
                   }
                 }
               }
@@ -84,30 +91,11 @@
           }
         }
       }
-    },
-    "responses": {
-      "201": {
-        "description": "Linked the return reason for this shop.",
-        "content": {
-          "application/vnd.api+json": {
-            "schema": {
-              "type": "object",
-              "required": [
-                "data"
-              ],
-              "additionalProperties": false,
-              "properties": {
-                "data": {
-                  "$ref": "#/components/schemas/ReturnReasonResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "409": {
-        "description": "A return reason with the given return reason and shop already exists."
-      }
+    }
+  },
+  "responses": {
+    "204": {
+      "description": "The return reasons have been added to the shop."
     }
   }
 }
