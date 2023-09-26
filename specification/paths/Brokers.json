@@ -6,7 +6,11 @@
     "security": [
       {
         "OAuth2": [
-          "broker.member",
+          "broker.member"
+        ]
+      },
+      {
+        "OAuth2": [
           "enterprises.manage"
         ]
       }
