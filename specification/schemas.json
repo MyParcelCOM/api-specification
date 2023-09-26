@@ -404,9 +404,6 @@
   "ReturnReason": {
     "$ref": "./schemas/ReturnReason.json"
   },
-  "ReturnReasonIncludes": {
-    "$ref": "./schemas/ReturnReasonIncludes.json"
-  },
   "ReturnReasonResource": {
     "$ref": "./schemas/ReturnReasonResource.json"
   },
