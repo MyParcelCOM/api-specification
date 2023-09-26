@@ -41,12 +41,7 @@
         }
       },
       {
-        "name": "filter[organization]",
-        "in": "query",
-        "description": "Comma separated string of organization ids to filter the shops by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-organization"
       },
       {
         "name": "filter[name]",

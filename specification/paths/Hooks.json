@@ -24,12 +24,7 @@
     "description": "This endpoint retrieves hooks available to your API client.",
     "parameters": [
       {
-        "name": "filter[owner]",
-        "in": "query",
-        "description": "Comma separated string of owner ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-owner"
       },
       {
         "name": "filter[action][action_type]",

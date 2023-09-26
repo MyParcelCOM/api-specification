@@ -143,6 +143,9 @@
   "query-date_to": {
     "$ref": "./parameters/query-date_to.json"
   },
+  "query-filter-broker": {
+    "$ref": "./parameters/query-filter-broker.json"
+  },
   "query-filter-carrier": {
     "$ref": "./parameters/query-filter-carrier.json"
   },

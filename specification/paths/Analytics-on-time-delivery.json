@@ -42,28 +42,16 @@
         }
       },
       {
-        "name": "filter[shop]",
-        "in": "query",
-        "description": "Comma separated string of shop ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-shop"
       },
       {
-        "name": "filter[organization]",
-        "in": "query",
-        "description": "Comma separated string of organization ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-organization"
       },
       {
-        "name": "filter[carrier]",
-        "in": "query",
-        "description": "Comma separated string of carrier ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-broker"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-carrier"
       },
       {
         "name": "filter[service_code]",
