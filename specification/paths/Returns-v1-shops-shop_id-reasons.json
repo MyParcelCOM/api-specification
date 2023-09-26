@@ -33,27 +33,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "allOf": [
-                      {
-                        "$ref": "#/components/schemas/ReturnReasonResponse"
-                      },
-                      {
-                        "required": [
-                          "relationships"
-                        ],
-                        "properties": {
-                          "relationships": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                              "shop": {
-                                "$ref": "#/components/schemas/ShopRelationship"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/components/schemas/ReturnReasonResponse"
                   }
                 },
                 "meta": {
