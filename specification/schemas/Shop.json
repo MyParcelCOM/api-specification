@@ -65,6 +65,9 @@
           "properties": {
             "organization": {
               "$ref": "#/components/schemas/OrganizationRelationship"
+            },
+            "return_reasons": {
+              "$ref": "#/components/schemas/ReturnReasonsRelationship"
             }
           }
         }

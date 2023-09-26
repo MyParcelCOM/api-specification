@@ -14,7 +14,7 @@
           "required": [
             "description",
             "accepts_attachments",
-            "requires_attachments",
+            "requires_attachments"
           ]
         },
         "links": {

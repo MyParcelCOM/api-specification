@@ -413,6 +413,12 @@
   "ReturnReasonResponse": {
     "$ref": "./schemas/ReturnReasonResponse.json"
   },
+  "ReturnReasonRelationship": {
+    "$ref": "./schemas/ReturnReasonRelationship.json"
+  },
+  "ReturnReasonsRelationship": {
+    "$ref": "./schemas/ReturnReasonsRelationship.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
