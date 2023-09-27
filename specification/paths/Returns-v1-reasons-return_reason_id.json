@@ -1,40 +1,30 @@
 {
   "parameters": [
     {
-      "$ref": "#/components/parameters/path-service_rate_id"
+      "$ref": "#/components/parameters/path-return_reason_id"
     }
   ],
   "get": {
     "tags": [
-      "ServiceRates"
+      "ReturnReasons"
     ],
     "security": [
       {
         "OAuth2": [
-          "organizations.manage"
+          "returns.manage"
         ]
       },
       {
         "OAuth2": [
-          "shipments.manage"
+          "return_reasons.manage"
         ]
       }
     ],
-    "summary": "Get a service rate by id.",
-    "description": "This endpoint retrieves a service rate with the supplied id.",
-    "parameters": [
-      {
-        "name": "include",
-        "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`contract`</li><li>`contract.carrier`</li><li>`service`</li><li>`service.carrier`</li><li>`service_options`</li></ul>",
-        "schema": {
-          "type": "string"
-        }
-      }
-    ],
+    "summary": "Retrieve a return reason by id.",
+    "description": "This endpoint retrieves the return reason with the supplied id.",
     "responses": {
       "200": {
-        "description": "Retrieved the service rate.",
+        "description": "Retrieved the return reason.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -42,35 +32,36 @@
               "required": [
                 "data"
               ],
+              "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ServiceRateResponse"
-                },
-                "included": {
-                  "$ref": "#/components/schemas/ServiceRateIncludes"
+                  "$ref": "#/components/schemas/ReturnReasonResponse"
                 }
               }
             }
           }
         }
+      },
+      "404": {
+        "description": "No return reason was found for the given id."
       }
     }
   },
   "patch": {
     "tags": [
-      "ServiceRates"
+      "ReturnReasons"
     ],
     "security": [
       {
         "OAuth2": [
-          "organizations.manage"
+          "return_reasons.manage"
         ]
       }
     ],
-    "summary": "Update a service rate by id.",
-    "description": "This endpoint updates the service rate with the supplied id.",
+    "summary": "Update a return reason by id.",
+    "description": "This endpoint updates the return reason with the supplied id.",
     "requestBody": {
-      "description": "The service rate object with attributes to be updated.",
+      "description": "The return reason object with attributes to be updated.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -84,7 +75,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ServiceRate"
+                    "$ref": "#/components/schemas/ReturnReason"
                   },
                   {
                     "required": [
@@ -100,7 +91,7 @@
     },
     "responses": {
       "200": {
-        "description": "The service rate is updated.",
+        "description": "The return reason is updated.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -111,12 +102,31 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ServiceRateResponse"
+                  "$ref": "#/components/schemas/ReturnReasonResponse"
                 }
               }
             }
           }
         }
+      }
+    }
+  },
+  "delete": {
+    "tags": [
+      "ReturnReasons"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "return_reasons.manage"
+        ]
+      }
+    ],
+    "summary": "Delete a return reason by id.",
+    "description": "This endpoint deletes the return reason with the supplied id.",
+    "responses": {
+      "204": {
+        "description": "The return reason is deleted."
       }
     }
   }

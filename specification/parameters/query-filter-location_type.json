@@ -1,0 +1,8 @@
+{
+  "name": "filter[location_type]",
+  "in": "query",
+  "description": "Comma separated list of location types to filter the locations by. Possible options are:<ul><li>`locker`</li><li>`office`</li><li>`office-agency`</li><li>`office-postal`</li><li>`office-shop`</li></ul>",
+  "schema": {
+    "type": "string"
+  }
+}

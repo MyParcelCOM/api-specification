@@ -1,0 +1,32 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-shop_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-return_reason_id"
+    }
+  ],
+  "delete": {
+    "tags": [
+      "ReturnReasons"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Delete return reason from shop.",
+    "description": "This endpoint deletes a return reason from the shop.",
+    "responses": {
+      "204": {
+        "description": "The return reason is deleted from the shop."
+      },
+      "404": {
+        "description": "No return reason was found with the given return reason and shop."
+      }
+    }
+  }
+}

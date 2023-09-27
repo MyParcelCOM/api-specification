@@ -22,7 +22,11 @@
     "security": [
       {
         "OAuth2": [
-          "organizations.manage",
+          "organizations.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "shipments.manage"
         ]
       }

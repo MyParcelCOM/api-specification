@@ -28,15 +28,18 @@
             },
             "location_type": {
               "type": "string",
-              "default": "office",
               "enum": [
+                "locker",
                 "office",
-                "locker"
-              ]
+                "office-agency",
+                "office-postal",
+                "office-shop"
+              ],
+              "default": "office",
+              "example": "office"
             },
             "opening_hours": {
               "type": "array",
-              "maxItems": 7,
               "items": {
                 "type": "object",
                 "required": [

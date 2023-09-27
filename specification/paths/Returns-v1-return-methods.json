@@ -129,7 +129,8 @@
                       },
                       "attributes": {
                         "required": [
-                          "return_type"
+                          "return_type",
+                          "default_weight"
                         ]
                       },
                       "relationships": {

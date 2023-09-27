@@ -401,6 +401,18 @@
   "ReturnMethodRelationship": {
     "$ref": "./schemas/ReturnMethodRelationship.json"
   },
+  "ReturnReason": {
+    "$ref": "./schemas/ReturnReason.json"
+  },
+  "ReturnReasonResource": {
+    "$ref": "./schemas/ReturnReasonResource.json"
+  },
+  "ReturnReasonResponse": {
+    "$ref": "./schemas/ReturnReasonResponse.json"
+  },
+  "ReturnReasonRelationship": {
+    "$ref": "./schemas/ReturnReasonRelationship.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
