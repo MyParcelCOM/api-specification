@@ -31,10 +31,10 @@
             "properties": {
               "data": {
                 "required": [
-                  "requested_payment"
+                  "return_payment"
                 ],
                 "properties": {
-                  "requested_payment": {
+                  "return_payment": {
                     "$ref": "#/components/schemas/Price"
                   }
                 }
