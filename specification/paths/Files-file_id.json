@@ -11,6 +11,11 @@
     "security": [
       {
         "OAuth2": [
+          "returns.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "shipments.manage"
         ]
       },
