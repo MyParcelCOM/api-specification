@@ -6,7 +6,7 @@
   ],
   "get": {
     "tags": [
-      "Rate-imports"
+      "RateImports"
     ],
     "security": [
       {
@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a rates-import by id.",
-    "description": "This endpoint retrieves the rates-import with the supplied id.",
+    "summary": "Get a rate import by id.",
+    "description": "This endpoint retrieves the rate import with the supplied id.",
     "parameters": [
       {
         "name": "include",
@@ -29,7 +29,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the rates-import.",
+        "description": "Retrieved the rate import.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -40,10 +40,10 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/RatesImportResponse"
+                  "$ref": "#/components/schemas/RateImportResponse"
                 },
                 "included": {
-                  "$ref": "#/components/schemas/RatesImportIncludes"
+                  "$ref": "#/components/schemas/RateImportIncludes"
                 }
               }
             }

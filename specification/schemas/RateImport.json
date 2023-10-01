@@ -25,7 +25,7 @@
         "keep_existing_rates": {
           "type": "boolean",
           "default": false,
-          "description": "If not supplied or `false`, all existing service-rates on the contract will be deleted."
+          "description": "If not supplied or `false`, all existing service rates on the contract will be deleted."
         },
         "status": {
           "type": "string",
