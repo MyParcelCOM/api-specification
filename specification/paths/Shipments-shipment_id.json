@@ -12,6 +12,12 @@
       {
         "OAuth2": [
           "broker.member",
+          "returns.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "broker.member",
           "shipments.manage"
         ]
       },
