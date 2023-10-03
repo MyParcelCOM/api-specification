@@ -143,6 +143,10 @@
     "externalDocs": {}
   },
   {
+    "name": "ReturnReasonsManagement",
+    "externalDocs": {}
+  },
+  {
     "name": "Scopes",
     "externalDocs": {
     }
