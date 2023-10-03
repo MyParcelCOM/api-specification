@@ -22,6 +22,11 @@
           "type": "string",
           "description": "URL of the CSV file with service rates to be imported."
         },
+        "keep_existing_rates": {
+          "type": "boolean",
+          "default": false,
+          "description": "If not supplied or `false`, all existing service rates on the contract will be deleted."
+        },
         "status": {
           "type": "string",
           "description": "Status of the import.",

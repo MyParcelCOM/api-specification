@@ -167,8 +167,8 @@
   "/rate-imports": {
     "$ref": "./paths/RateImports.json"
   },
-  "/rate-imports/{rates_import_id}": {
-    "$ref": "./paths/RateImports-rates_import_id.json"
+  "/rate-imports/{rate_import_id}": {
+    "$ref": "./paths/RateImports-rate_import_id.json"
   },
   "/regions": {
     "$ref": "./paths/Regions.json"

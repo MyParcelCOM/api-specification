@@ -335,14 +335,14 @@
   "PriceAmount": {
     "$ref": "./schemas/PriceAmount.json"
   },
-  "RatesImport": {
-    "$ref": "./schemas/RatesImport.json"
+  "RateImport": {
+    "$ref": "./schemas/RateImport.json"
   },
-  "RatesImportIncludes": {
-    "$ref": "./schemas/RatesImportIncludes.json"
+  "RateImportIncludes": {
+    "$ref": "./schemas/RateImportIncludes.json"
   },
-  "RatesImportResponse": {
-    "$ref": "./schemas/RatesImportResponse.json"
+  "RateImportResponse": {
+    "$ref": "./schemas/RateImportResponse.json"
   },
   "Region": {
     "$ref": "./schemas/Region.json"

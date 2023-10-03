@@ -1,7 +1,7 @@
 {
   "name": "rates_import_id",
   "in": "path",
-  "description": "Id of the Rates-import.",
+  "description": "Id of the rate import.",
   "required": true,
   "schema": {
     "$ref": "#/components/schemas/Uuid"

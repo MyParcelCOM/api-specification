@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "Rate-imports"
+      "RateImports"
     ],
     "security": [
       {
@@ -44,14 +44,14 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/RatesImportResponse"
+                    "$ref": "#/components/schemas/RateImportResponse"
                   }
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
                 },
                 "included": {
-                  "$ref": "#/components/schemas/RatesImportIncludes"
+                  "$ref": "#/components/schemas/RateImportIncludes"
                 },
                 "links": {
                   "type": "object",
@@ -93,7 +93,7 @@
   },
   "post": {
     "tags": [
-      "Rate-imports"
+      "RateImports"
     ],
     "security": [
       {
@@ -102,10 +102,10 @@
         ]
       }
     ],
-    "summary": "Create a new rates import.",
-    "description": "This endpoint creates a new rates import with the posted data.",
+    "summary": "Create a new rate import.",
+    "description": "This endpoint creates a new rate import with the posted data.",
     "requestBody": {
-      "description": "The rates import object to be created.",
+      "description": "The rate import object to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -119,7 +119,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/RatesImport"
+                    "$ref": "#/components/schemas/RateImport"
                   },
                   {
                     "required": [
@@ -167,7 +167,7 @@
     },
     "responses": {
       "201": {
-        "description": "The rates import has been created.",
+        "description": "The rate import has been created.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -178,7 +178,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/RatesImportResponse"
+                  "$ref": "#/components/schemas/RateImportResponse"
                 }
               }
             }
