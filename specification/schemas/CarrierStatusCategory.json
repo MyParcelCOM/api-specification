@@ -9,6 +9,7 @@
     "failed-customs-clearance",
     "failed-delivery-attempt",
     "failed-miscellaneous",
+    "failed-oversized",
     "failed-pre-advice",
     "failed-refused-delivery",
     "failed-shipment-damaged",
