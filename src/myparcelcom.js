@@ -105,6 +105,7 @@
           "Returns",
           "ReturnMethods",
           "ReturnReasons",
+          "ReturnReasonsManagement",
         ]
         for (var i = 0; i < internal.length; i++) {
           var sections = document.querySelectorAll([

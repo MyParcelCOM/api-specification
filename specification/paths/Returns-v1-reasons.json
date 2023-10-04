@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "ReturnReasons"
+      "ReturnReasonsManagement"
     ],
     "security": [
       {
@@ -84,7 +84,7 @@
   },
   "post": {
     "tags": [
-      "ReturnReasons"
+      "ReturnReasonsManagement"
     ],
     "security": [
       {

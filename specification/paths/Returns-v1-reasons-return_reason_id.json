@@ -6,7 +6,7 @@
   ],
   "get": {
     "tags": [
-      "ReturnReasons"
+      "ReturnReasonsManagement"
     ],
     "security": [
       {
@@ -49,7 +49,7 @@
   },
   "patch": {
     "tags": [
-      "ReturnReasons"
+      "ReturnReasonsManagement"
     ],
     "security": [
       {
@@ -113,7 +113,7 @@
   },
   "delete": {
     "tags": [
-      "ReturnReasons"
+      "ReturnReasonsManagement"
     ],
     "security": [
       {
