@@ -27,6 +27,8 @@
                 "report-in-progress",
                 "report-queued",
                 "return-approved",
+                "return-payment-pending",
+                "return-payment-failed",
                 "return-pending",
                 "return-rejected",
                 "shipment-at-parcel-shop",

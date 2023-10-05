@@ -1,7 +1,7 @@
 {
-  "name": "rates_import_id",
+  "name": "return_reason_id",
   "in": "path",
-  "description": "Id of the rate import.",
+  "description": "Id of the Return reason.",
   "required": true,
   "schema": {
     "$ref": "#/components/schemas/Uuid"

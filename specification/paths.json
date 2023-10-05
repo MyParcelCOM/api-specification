@@ -167,8 +167,8 @@
   "/rate-imports": {
     "$ref": "./paths/RateImports.json"
   },
-  "/rate-imports/{rates_import_id}": {
-    "$ref": "./paths/RateImports-rates_import_id.json"
+  "/rate-imports/{rate_import_id}": {
+    "$ref": "./paths/RateImports-rate_import_id.json"
   },
   "/regions": {
     "$ref": "./paths/Regions.json"
@@ -185,9 +185,6 @@
   "/reports/{report_id}/files/{file_id}": {
     "$ref": "./paths/Reports-report_id-Files-file_id.json"
   },
-  "/returns/v1/shops/{shop_id}/orders/{reference}/{email}": {
-    "$ref": "./paths/Returns-v1-shops-shop_id-orders-reference-email.json"
-  },
   "/returns/v1/returns": {
     "$ref": "./paths/Returns-v1-returns.json"
   },
@@ -200,11 +197,29 @@
   "/returns/v1/returns/{return_id}/reject": {
     "$ref": "./paths/Returns-v1-returns-return_id-reject.json"
   },
+  "/returns/v1/returns/{return_id}/request-payment": {
+    "$ref": "./paths/Returns-v1-returns-return_id-request-payment.json"
+  },
   "/returns/v1/return-methods": {
     "$ref": "./paths/Returns-v1-return-methods.json"
   },
   "/returns/v1/return-methods/{return_method_id}": {
     "$ref": "./paths/Returns-v1-return-methods-return_method_id.json"
+  },
+  "/returns/v1/reasons": {
+    "$ref": "./paths/Returns-v1-reasons.json"
+  },
+  "/returns/v1/reasons/{return_reason_id}": {
+    "$ref": "./paths/Returns-v1-reasons-return_reason_id.json"
+  },
+  "/returns/v1/shops/{shop_id}/orders/{reference}/{email}": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-orders-reference-email.json"
+  },
+  "/returns/v1/shops/{shop_id}/reasons": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-reasons.json"
+  },
+  "/returns/v1/shops/{shop_id}/reasons/{return_reason_id}": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-reasons-return_reason_id.json"
   },
   "/scopes": {
     "$ref": "./paths/Scopes.json"

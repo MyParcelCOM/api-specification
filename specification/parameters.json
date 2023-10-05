@@ -92,6 +92,9 @@
   "path-return_method_id": {
     "$ref": "./parameters/path-return_method_id.json"
   },
+  "path-return_reason_id": {
+    "$ref": "./parameters/path-return_reason_id.json"
+  },
   "path-scope_id": {
     "$ref": "./parameters/path-scope_id.json"
   },
@@ -140,6 +143,9 @@
   "query-date_to": {
     "$ref": "./parameters/query-date_to.json"
   },
+  "query-filter-broker": {
+    "$ref": "./parameters/query-filter-broker.json"
+  },
   "query-filter-carrier": {
     "$ref": "./parameters/query-filter-carrier.json"
   },
@@ -148,6 +154,9 @@
   },
   "query-filter-created_at-date_to": {
     "$ref": "./parameters/query-filter-created_at-date_to.json"
+  },
+  "query-filter-location_type": {
+    "$ref": "./parameters/query-filter-location_type.json"
   },
   "query-filter-organization": {
     "$ref": "./parameters/query-filter-organization.json"
@@ -217,5 +226,8 @@
   },
   "query-street_number": {
     "$ref": "./parameters/query-street_number.json"
+  },
+  "query-filter-tags": {
+    "$ref": "./parameters/query-filter-tags.json"
   }
 }

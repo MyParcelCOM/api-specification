@@ -11,7 +11,16 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage",
+          "returns.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "shipments.view"
         ]
       }

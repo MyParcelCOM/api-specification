@@ -6,8 +6,16 @@
     "security": [
       {
         "OAuth2": [
-          "organizations.manage",
-          "shipments.manage",
+          "organizations.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "shipments.view"
         ]
       }
@@ -16,12 +24,7 @@
     "description": "This endpoint retrieves hooks available to your API client.",
     "parameters": [
       {
-        "name": "filter[owner]",
-        "in": "query",
-        "description": "Comma separated string of owner ids to filter by.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-owner"
       },
       {
         "name": "filter[action][action_type]",
@@ -113,7 +116,11 @@
     "security": [
       {
         "OAuth2": [
-          "organizations.manage",
+          "organizations.manage"
+        ]
+      },
+      {
+        "OAuth2": [
           "shipments.manage"
         ]
       }

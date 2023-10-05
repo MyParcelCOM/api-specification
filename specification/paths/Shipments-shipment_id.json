@@ -11,7 +11,19 @@
     "security": [
       {
         "OAuth2": [
-          "shipments.manage",
+          "broker.member",
+          "returns.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "broker.member",
+          "shipments.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "broker.member",
           "shipments.view"
         ]
       }

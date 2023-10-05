@@ -112,7 +112,7 @@
     }
   },
   {
-    "name": "Rate-imports",
+    "name": "RateImports",
     "externalDocs": {
     }
   },
@@ -136,6 +136,14 @@
   },
   {
     "name": "ReturnMethods",
+    "externalDocs": {}
+  },
+  {
+    "name": "ReturnReasons",
+    "externalDocs": {}
+  },
+  {
+    "name": "ReturnReasonsManagement",
     "externalDocs": {}
   },
   {
