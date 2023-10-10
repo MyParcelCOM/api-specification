@@ -110,6 +110,9 @@
             }
           }
         }
+      },
+      "409": {
+        "description": "A user with this username already exists."
       }
     }
   }
