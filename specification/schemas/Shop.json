@@ -11,7 +11,8 @@
           "properties": {
             "name": {
               "type": "string",
-              "example": "MyParcel.com"
+              "example": "MyParcel.com",
+              "description": "Must be unique."
             },
             "return_address": {
               "$ref": "#/components/schemas/BaseAddress"

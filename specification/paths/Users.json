@@ -16,7 +16,7 @@
       {
         "name": "filter[search]",
         "in": "query",
-        "description": "String of characters you want to look for in a users attributes. Available fields to look in are:<ul><li>`Name`</li><li>`Email`</li><li>`Phone`</li></ul>",
+        "description": "String of characters you want to look for in a user's attributes. Available fields to look in are:<ul><li>`username`</li><li>`first_name`</li><li>`last_name`</li><li>`company`</li><li>`email`</li><li>`phone_number`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -124,6 +124,7 @@
                       },
                       "attributes": {
                         "required": [
+                          "username",
                           "first_name",
                           "last_name",
                           "email"
@@ -182,7 +183,7 @@
         "description": "The broker resource could not be found."
       },
       "409": {
-        "description": "A user with this email already exists."
+        "description": "A user with this username already exists."
       }
     }
   }

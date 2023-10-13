@@ -9,6 +9,11 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "username": {
+              "type": "string",
+              "example": "s.holmes@holmesinvestigations.com",
+              "description": "Must be unique."
+            },
             "first_name": {
               "type": "string",
               "example": "Sherlock"
