@@ -26,7 +26,15 @@
             },
             "requires_attachments": {
               "type": "boolean",
+              "example": false
+            },
+            "accepts_comments": {
+              "type": "boolean",
               "example": true
+            },
+            "requires_comments": {
+              "type": "boolean",
+              "example": false
             }
           }
         }
