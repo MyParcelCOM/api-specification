@@ -21,7 +21,15 @@
       {
         "name": "filter[provides_outbound_shipments]",
         "in": "query",
-        "description": "Filter integrations can import orders for outbound shipping.",
+        "description": "Filter integrations that can import orders for outbound shipping.",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      {
+        "name": "filter[provides_single_order_fetch]",
+        "in": "query",
+        "description": "Filter integrations that can fetch a single order by order reference and e-mail.",
         "schema": {
           "type": "boolean"
         }
