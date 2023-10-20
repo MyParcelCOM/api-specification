@@ -17,6 +17,16 @@
     ],
     "summary": "Get all the integrations.",
     "description": "This endpoint retrieves the available integrations in the MyParcel.com API.",
+    "parameters": [
+      {
+        "name": "filter[provides_outbound_shipments]",
+        "in": "query",
+        "description": "Filter integrations can import orders for outbound shipping.",
+        "schema": {
+          "type": "boolean"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the integrations.",
