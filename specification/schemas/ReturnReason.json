@@ -9,6 +9,10 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "code": {
+              "type": "string",
+              "description": "A unique code for the return reason."
+            },
             "description": {
               "type": "string",
               "example": "The item isn't what I expected it to be."
