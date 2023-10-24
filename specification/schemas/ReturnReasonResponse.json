@@ -12,7 +12,6 @@
       "properties": {
         "attributes": {
           "required": [
-            "code",
             "description",
             "accepts_attachments",
             "requires_attachments",
