@@ -244,7 +244,7 @@
         "description": "The shipment could not be created because the carrier did not accept the supplied information."
       },
       "423": {
-        "description": "The previous request with the same IDempotency key is still being processed."
+        "description": "The previous request with the same idempotency key is still being processed."
       }
     }
   }
