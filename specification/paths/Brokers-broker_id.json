@@ -20,8 +20,8 @@
         ]
       }
     ],
-    "summary": "Get a broker by id.",
-    "description": "This endpoint retrieves the broker with the supplied id.",
+    "summary": "Get a broker by ID.",
+    "description": "This endpoint retrieves the broker with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the broker.",
@@ -55,8 +55,8 @@
         ]
       }
     ],
-    "summary": "Update a broker by id.",
-    "description": "This endpoint updates the broker with the supplied id.",
+    "summary": "Update a broker by ID.",
+    "description": "This endpoint updates the broker with the supplied ID.",
     "requestBody": {
       "description": "The broker object with attributes to be updated.",
       "required": true,

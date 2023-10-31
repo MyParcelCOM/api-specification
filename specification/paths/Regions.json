@@ -16,7 +16,7 @@
       {
         "name": "filter[parent]",
         "in": "query",
-        "description": "Comma separated string of parent ids to filter by.",
+        "description": "Comma separated string of parent IDs to filter by.",
         "schema": {
           "type": "string"
         }

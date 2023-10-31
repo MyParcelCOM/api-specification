@@ -21,7 +21,7 @@
       {
         "name": "filter[contract]",
         "in": "query",
-        "description": "Comma separated string of contract ids to filter by.",
+        "description": "Comma separated string of contract IDs to filter by.",
         "schema": {
           "type": "string"
         }

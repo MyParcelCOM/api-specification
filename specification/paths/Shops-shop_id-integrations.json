@@ -21,7 +21,7 @@
       }
     ],
     "summary": "Get the integration resources related to this shop.",
-    "description": "This endpoint retrieves the integration resources related to the shop with the supplied id.",
+    "description": "This endpoint retrieves the integration resources related to the shop with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the integrations.",

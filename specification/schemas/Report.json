@@ -90,7 +90,7 @@
                 },
                 "shops": {
                   "type": "array",
-                  "description": "Array of shop ids to filter included shipments by.",
+                  "description": "Array of shop IDs to filter included shipments by.",
                   "items": {
                     "type": "string",
                     "format": "uuid",
@@ -100,7 +100,7 @@
                 },
                 "organizations": {
                   "type": "array",
-                  "description": "Array of organization ids to filter included shipments by.",
+                  "description": "Array of organization IDs to filter included shipments by.",
                   "items": {
                     "type": "string",
                     "format": "uuid",
@@ -110,7 +110,7 @@
                 },
                 "carriers": {
                   "type": "array",
-                  "description": "Array of carrier ids to filter included shipments by.",
+                  "description": "Array of carrier IDs to filter included shipments by.",
                   "items": {
                     "type": "string",
                     "format": "uuid",

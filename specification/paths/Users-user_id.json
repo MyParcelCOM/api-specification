@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a user by id.",
-    "description": "This endpoint retrieves the user with the supplied id. You can always retrieve your own user, but you need the `users.manage` scope to retrieve other users.",
+    "summary": "Get a user by ID.",
+    "description": "This endpoint retrieves the user with the supplied ID. You can always retrieve your own user, but you need the `users.manage` scope to retrieve other users.",
     "responses": {
       "200": {
         "description": "Retrieved the user.",
@@ -50,8 +50,8 @@
         ]
       }
     ],
-    "summary": "Update a user by id.",
-    "description": "This endpoint updates the user with the supplied id.",
+    "summary": "Update a user by ID.",
+    "description": "This endpoint updates the user with the supplied ID.",
     "requestBody": {
       "description": "The user object with attributes to be updated.",
       "required": true,

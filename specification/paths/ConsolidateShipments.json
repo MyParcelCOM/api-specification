@@ -13,7 +13,7 @@
     "summary": "Consolidate shipments.",
     "description": "This endpoint links the provided shipments to a consolidation shipment.",
     "requestBody": {
-      "description": "The consolidation shipment id and the shipment ids.",
+      "description": "The consolidation shipment ID and the shipment IDs.",
       "required": true,
       "content": {
         "application/json": {
@@ -49,7 +49,7 @@
     },
     "responses": {
       "204": {
-        "description": "The consolidation id has been added to the shipments."
+        "description": "The consolidation ID has been added to the shipments."
       }
     }
   }

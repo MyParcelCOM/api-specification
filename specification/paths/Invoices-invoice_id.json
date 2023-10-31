@@ -15,7 +15,7 @@
       }
     ],
     "summary": "Get one invoice.",
-    "description": "This endpoint retrieves the invoice with the supplied id.",
+    "description": "This endpoint retrieves the invoice with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the invoice.",
@@ -48,8 +48,8 @@
         ]
       }
     ],
-    "summary": "Update an invoice by id.",
-    "description": "This endpoint updates the invoice with the supplied id.",
+    "summary": "Update an invoice by ID.",
+    "description": "This endpoint updates the invoice with the supplied ID.",
     "requestBody": {
       "description": "The invoice object with attributes to be updated.",
       "required": true,

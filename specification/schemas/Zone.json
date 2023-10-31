@@ -17,7 +17,7 @@
             "code": {
               "type": "string",
               "example": "1A",
-              "description": "The code used by the system to identify the resource."
+              "description": "The code used by the system to IDentify the resource."
             },
             "description": {
               "type": [

@@ -94,7 +94,7 @@
     "summary": "Link return reasons to the given shop.",
     "description": "This endpoint links return reasons to the specified shop.",
     "requestBody": {
-      "description": "The return reason id's to link to the shop",
+      "description": "The return reason ID's to link to the shop",
       "content": {
         "application/vnd.api+json": {
           "schema": {

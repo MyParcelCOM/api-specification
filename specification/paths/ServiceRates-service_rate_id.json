@@ -20,8 +20,8 @@
         ]
       }
     ],
-    "summary": "Get a service rate by id.",
-    "description": "This endpoint retrieves a service rate with the supplied id.",
+    "summary": "Get a service rate by ID.",
+    "description": "This endpoint retrieves a service rate with the supplied ID.",
     "parameters": [
       {
         "name": "include",
@@ -67,8 +67,8 @@
         ]
       }
     ],
-    "summary": "Update a service rate by id.",
-    "description": "This endpoint updates the service rate with the supplied id.",
+    "summary": "Update a service rate by ID.",
+    "description": "This endpoint updates the service rate with the supplied ID.",
     "requestBody": {
       "description": "The service rate object with attributes to be updated.",
       "required": true,

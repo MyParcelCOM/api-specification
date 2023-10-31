@@ -1,7 +1,7 @@
 {
   "name": "filter[consolidation_shipment]",
   "in": "query",
-  "description": "Comma separated string of consolidation shipment ids to filter by.",
+  "description": "Comma separated string of consolidation shipment IDs to filter by.",
   "schema": {
     "type": "string"
   }

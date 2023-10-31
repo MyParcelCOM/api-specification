@@ -16,7 +16,7 @@
       }
     ],
     "summary": "Add carrier relationships to a broker.",
-    "description": "This endpoint adds carrier relationships to the broker with the supplied id.",
+    "description": "This endpoint adds carrier relationships to the broker with the supplied ID.",
     "requestBody": {
       "description": "The carrier relationships to be added to the broker.",
       "required": true,
@@ -46,7 +46,7 @@
       }
     ],
     "summary": "Delete carrier relationships from a broker.",
-    "description": "This endpoint deletes carrier relationships from the broker with the supplied id.",
+    "description": "This endpoint deletes carrier relationships from the broker with the supplied ID.",
     "requestBody": {
       "description": "The carrier relationships to be deleted from the broker.",
       "required": true,

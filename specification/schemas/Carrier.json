@@ -16,7 +16,7 @@
             "code": {
               "type": "string",
               "example": "my-parcel-com",
-              "description": "Unique slugified version of the carrier name to identify a carrier."
+              "description": "Unique slugified version of the carrier name to IDentify a carrier."
             },
             "logo_url": {
               "type": "string",

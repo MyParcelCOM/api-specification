@@ -25,8 +25,8 @@
         ]
       }
     ],
-    "summary": "Get a liability coverage by id.",
-    "description": "This endpoint retrieves a liability coverage for the supplied id.",
+    "summary": "Get a liability coverage by ID.",
+    "description": "This endpoint retrieves a liability coverage for the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the liability coverage.",

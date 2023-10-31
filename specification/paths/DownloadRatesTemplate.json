@@ -13,7 +13,7 @@
     "summary": "Download rates template export.",
     "description": "This endpoint retrieves a rates template (CSV), which can be used to edit existing and add new service rates into the system.",
     "requestBody": {
-      "description": "The object containing a request id, which is returned by the `/request-rates-template` endpoint.",
+      "description": "The object containing a request ID, which is returned by the `/request-rates-template` endpoint.",
       "required": true,
       "content": {
         "application/json": {
