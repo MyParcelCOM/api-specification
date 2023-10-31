@@ -47,7 +47,7 @@
                 "null"
               ],
               "example": "7467",
-              "description": "Any reference to iden tify the shop."
+              "description": "Any reference to identify the shop."
             },
             "mollie_connected": {
               "type": "boolean",

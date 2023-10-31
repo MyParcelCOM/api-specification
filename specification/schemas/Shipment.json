@@ -34,7 +34,7 @@
             },
             "sender_tax_identification_numbers": {
               "type": "array",
-              "description": "Sender tax numbers provided with a shipment will overwrite any tax iden tification numbers of the same `type` and `country_code` defined on the organization of the shop related to this shipment.",
+              "description": "Sender tax numbers provided with a shipment will overwrite any tax identification numbers of the same `type` and `country_code` defined on the organization of the shop related to this shipment.",
               "items": {
                 "$ref": "#/components/schemas/TaxIdentificationNumber"
               }
