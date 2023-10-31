@@ -17,7 +17,7 @@
         ]
       }
     ],
-    "summary": "Get an office location from a carrier by ID.",
+    "summary": "Get a location from a carrier by ID.",
     "description": "This endpoint retrieves the pick-up and drop-off location with the supplied ID.",
     "responses": {
       "200": {
