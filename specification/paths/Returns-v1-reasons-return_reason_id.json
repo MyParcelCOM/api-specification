@@ -20,8 +20,8 @@
         ]
       }
     ],
-    "summary": "Retrieve a return reason by id.",
-    "description": "This endpoint retrieves the return reason with the supplied id.",
+    "summary": "Retrieve a return reason by ID.",
+    "description": "This endpoint retrieves the return reason with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the return reason.",
@@ -43,7 +43,7 @@
         }
       },
       "404": {
-        "description": "No return reason was found for the given id."
+        "description": "No return reason was found for the given ID."
       }
     }
   },
@@ -58,8 +58,8 @@
         ]
       }
     ],
-    "summary": "Update a return reason by id.",
-    "description": "This endpoint updates the return reason with the supplied id.",
+    "summary": "Update a return reason by ID.",
+    "description": "This endpoint updates the return reason with the supplied ID.",
     "requestBody": {
       "description": "The return reason object with attributes to be updated.",
       "required": true,
@@ -122,8 +122,8 @@
         ]
       }
     ],
-    "summary": "Delete a return reason by id.",
-    "description": "This endpoint deletes the return reason with the supplied id.",
+    "summary": "Delete a return reason by ID.",
+    "description": "This endpoint deletes the return reason with the supplied ID.",
     "responses": {
       "204": {
         "description": "The return reason is deleted."

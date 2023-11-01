@@ -1,7 +1,7 @@
 {
   "name": "filter[broker]",
   "in": "query",
-  "description": "Comma separated string of broker ids to filter by.",
+  "description": "Comma separated string of broker IDs to filter by.",
   "schema": {
     "type": "string"
   }

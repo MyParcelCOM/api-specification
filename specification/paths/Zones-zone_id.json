@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a zone by id.",
-    "description": "This endpoint retrieves the zone with the supplied id.",
+    "summary": "Get a zone by ID.",
+    "description": "This endpoint retrieves the zone with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the zone.",
@@ -50,8 +50,8 @@
         ]
       }
     ],
-    "summary": "Update a zone by id.",
-    "description": "This endpoint updates the zone with the supplied id.",
+    "summary": "Update a zone by ID.",
+    "description": "This endpoint updates the zone with the supplied ID.",
     "requestBody": {
       "description": "The zone object with attributes to be updated.",
       "required": true,
@@ -114,8 +114,8 @@
         ]
       }
     ],
-    "summary": "Delete a zone by id.",
-    "description": "This endpoint deletes the zone with the supplied id.",
+    "summary": "Delete a zone by ID.",
+    "description": "This endpoint deletes the zone with the supplied ID.",
     "responses": {
       "204": {
         "description": "The zone is deleted."

@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a service by id.",
-    "description": "This endpoint retrieves the service with the supplied id.",
+    "summary": "Get a service by ID.",
+    "description": "This endpoint retrieves the service with the supplied ID.",
     "parameters": [
       {
         "name": "include",

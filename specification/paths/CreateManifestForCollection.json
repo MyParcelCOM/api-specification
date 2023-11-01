@@ -13,7 +13,7 @@
     "summary": "Generate a manifest for a collection.",
     "description": "This endpoint generates a manifest for the collection given in the request body.",
     "requestBody": {
-      "description": "The object containing a collection id.",
+      "description": "The object containing a collection ID.",
       "required": true,
       "content": {
         "application/json": {

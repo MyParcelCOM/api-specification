@@ -21,8 +21,8 @@
         ]
       }
     ],
-    "summary": "Get a combined file  by id.",
-    "description": "This endpoint retrieves a combined file with the supplied id.",
+    "summary": "Get a combined file  by ID.",
+    "description": "This endpoint retrieves a combined file with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the combined file.",

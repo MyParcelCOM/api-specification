@@ -23,8 +23,8 @@
         ]
       }
     ],
-    "summary": "Get a shipment surcharge by id.",
-    "description": "This endpoint retrieves the shipment surcharge with the supplied id.",
+    "summary": "Get a shipment surcharge by ID.",
+    "description": "This endpoint retrieves the shipment surcharge with the supplied ID.",
     "parameters": [
       {
         "name": "include",

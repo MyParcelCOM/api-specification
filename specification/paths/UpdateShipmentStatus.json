@@ -13,7 +13,7 @@
     "summary": "Update the status of a shipment.",
     "description": "This endpoint allows a user to trigger a status update for a shipment. The shipment will be synchronized with the carrier.<br><br>Since our **sandbox environment** does not provide real shipments, a `status_id` can be provided to simulate a shipment status update.",
     "requestBody": {
-      "description": "The shipment id to be updated. And (only on our sandbox environment) the status id to update it with.",
+      "description": "The shipment ID to be updated. And (only on our sandbox environment) the status ID to update it with.",
       "required": true,
       "content": {
         "application/json": {

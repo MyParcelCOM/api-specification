@@ -13,7 +13,7 @@
     "summary": "Import service rates.",
     "description": "This endpoint allows a user to alter the service-rates of a contract by uploading a CSV.",
     "requestBody": {
-      "description": "The contract id to be targeted and the CSV data containing services with rates to import.",
+      "description": "The contract ID to be targeted and the CSV data containing services with rates to import.",
       "required": true,
       "content": {
         "application/json": {

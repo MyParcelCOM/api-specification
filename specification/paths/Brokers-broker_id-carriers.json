@@ -21,7 +21,7 @@
       }
     ],
     "summary": "Get the available carriers for a specific broker.",
-    "description": "This endpoint retrieves available carriers for a broker with the supplied id.",
+    "description": "This endpoint retrieves available carriers for a broker with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the available carriers for the broker.",

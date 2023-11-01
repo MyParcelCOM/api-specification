@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get an integration by id.",
-    "description": "This endpoint retrieves the integration with the supplied id.",
+    "summary": "Get an integration by ID.",
+    "description": "This endpoint retrieves the integration with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the integration.",

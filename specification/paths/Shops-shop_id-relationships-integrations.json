@@ -20,8 +20,8 @@
         ]
       }
     ],
-    "summary": "Get the integration relationships for a shop id.",
-    "description": "This endpoint retrieves the integration relationships for the supplied shop id.",
+    "summary": "Get the integration relationships for a shop ID.",
+    "description": "This endpoint retrieves the integration relationships for the supplied shop ID.",
     "responses": {
       "200": {
         "description": "Retrieved the integration relationships.",
@@ -77,7 +77,7 @@
       }
     ],
     "summary": "Add integration relationships to the shop.",
-    "description": "This endpoint adds integration relationships for the shop with the supplied id.",
+    "description": "This endpoint adds integration relationships for the shop with the supplied ID.",
     "requestBody": {
       "description": "The integration relationships to be added to the shop.",
       "required": true,
@@ -140,7 +140,7 @@
       }
     ],
     "summary": "Delete integration relationships from a shop.",
-    "description": "This endpoint deletes integration relationships from the shop with the supplied id.",
+    "description": "This endpoint deletes integration relationships from the shop with the supplied ID.",
     "requestBody": {
       "description": "The integration relationships to be deleted from the shop.",
       "required": true,

@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a region by id.",
-    "description": "This endpoint retrieves the region with the supplied id.",
+    "summary": "Get a region by ID.",
+    "description": "This endpoint retrieves the region with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the region.",

@@ -11,7 +11,7 @@
     },
     "id": {
       "type": "string",
-      "description": "The carrier id and the from and to timestamp separated by an underscore (_).",
+      "description": "The carrier ID and the from and to timestamp separated by an underscore (_).",
       "example": "be7f6752-34e0-49a1-a832-bcc209450ea9_1648110600_1648114200"
     }
   }

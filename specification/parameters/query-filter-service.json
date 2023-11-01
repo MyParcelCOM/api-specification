@@ -1,7 +1,7 @@
 {
   "name": "filter[service]",
   "in": "query",
-  "description": "Comma separated string of service ids to filter by.",
+  "description": "Comma separated string of service IDs to filter by.",
   "schema": {
     "type": "string"
   }

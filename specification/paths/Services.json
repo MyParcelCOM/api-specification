@@ -28,7 +28,7 @@
         "deprecated": true,
         "name": "filter[region_from]",
         "in": "query",
-        "description": "<s>Comma separated string of region ids to filter by.</s>",
+        "description": "<s>Comma separated string of region IDs to filter by.</s>",
         "schema": {
           "type": "string"
         }
@@ -37,7 +37,7 @@
         "deprecated": true,
         "name": "filter[region_to]",
         "in": "query",
-        "description": "<s>Comma separated string of region ids to filter by.</s>",
+        "description": "<s>Comma separated string of region IDs to filter by.</s>",
         "schema": {
           "type": "string"
         }

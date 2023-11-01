@@ -16,7 +16,7 @@
       }
     ],
     "summary": "Get the available contracts for a specific organization.",
-    "description": "This endpoint retrieves available contracts for an organization with the supplied id.",
+    "description": "This endpoint retrieves available contracts for an organization with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the available contracts for the organization.",

@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a system message by id.",
-    "description": "This endpoint retrieves the system message with the supplied id.",
+    "summary": "Get a system message by ID.",
+    "description": "This endpoint retrieves the system message with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the system message.",
@@ -51,8 +51,8 @@
         ]
       }
     ],
-    "summary": "Update a system message by id.",
-    "description": "This endpoint updates the system message with the supplied id.",
+    "summary": "Update a system message by ID.",
+    "description": "This endpoint updates the system message with the supplied ID.",
     "requestBody": {
       "description": "The system message object with attributes to be updated.",
       "required": true,
@@ -115,8 +115,8 @@
         ]
       }
     ],
-    "summary": "Delete a system message by id.",
-    "description": "This endpoint deletes the system message with the supplied id.",
+    "summary": "Delete a system message by ID.",
+    "description": "This endpoint deletes the system message with the supplied ID.",
     "responses": {
       "204": {
         "description": "The system message is deleted."
