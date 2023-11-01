@@ -28,8 +28,8 @@
         ]
       }
     ],
-    "summary": "Get a shop by id.",
-    "description": "This endpoint retrieves the shop with the supplied id.",
+    "summary": "Get a shop by ID.",
+    "description": "This endpoint retrieves the shop with the supplied ID.",
     "parameters": [
       {
         "name": "include",
@@ -75,8 +75,8 @@
         ]
       }
     ],
-    "summary": "Update a shop by id.",
-    "description": "This endpoint updates the shop with the supplied id.",
+    "summary": "Update a shop by ID.",
+    "description": "This endpoint updates the shop with the supplied ID.",
     "requestBody": {
       "description": "The shop object with attributes to be updated.",
       "required": true,
@@ -147,8 +147,8 @@
         ]
       }
     ],
-    "summary": "Delete a shop by id.",
-    "description": "This endpoint deletes the shop with the supplied id.",
+    "summary": "Delete a shop by ID.",
+    "description": "This endpoint deletes the shop with the supplied ID.",
     "responses": {
       "204": {
         "description": "The shop is deleted."

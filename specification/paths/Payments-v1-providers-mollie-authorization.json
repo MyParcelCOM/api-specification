@@ -13,7 +13,7 @@
     "summary": "Request an authorization url from Mollie.",
     "description": "This endpoint returns an authorization url to connect Mollie to your shop.",
     "requestBody": {
-      "description": "The shop id to connect with.",
+      "description": "The shop ID to connect with.",
       "required": true,
       "content": {
         "application/vnd.api+json": {

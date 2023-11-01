@@ -14,8 +14,8 @@
         ]
       }
     ],
-    "summary": "Get a status by id.",
-    "description": "This endpoint retrieves the status with the supplied id.",
+    "summary": "Get a status by ID.",
+    "description": "This endpoint retrieves the status with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the status.",

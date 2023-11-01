@@ -14,8 +14,8 @@
         ]
       }
     ],
-    "summary": "Get a scope by id.",
-    "description": "This endpoint retrieves the scope with the supplied id.",
+    "summary": "Get a scope by ID.",
+    "description": "This endpoint retrieves the scope with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the scope.",

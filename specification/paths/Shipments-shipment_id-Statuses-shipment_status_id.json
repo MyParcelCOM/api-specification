@@ -28,8 +28,8 @@
         ]
       }
     ],
-    "summary": "Get a shipment status by id.",
-    "description": "This endpoint retrieves the shipment status with the supplied id.",
+    "summary": "Get a shipment status by ID.",
+    "description": "This endpoint retrieves the shipment status with the supplied ID.",
     "parameters": [
       {
         "name": "include",

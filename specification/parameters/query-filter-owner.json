@@ -1,7 +1,7 @@
 {
   "name": "filter[owner]",
   "in": "query",
-  "description": "Comma separated string of owner ids to filter by.",
+  "description": "Comma separated string of owner IDs to filter by.",
   "schema": {
     "type": "string"
   }

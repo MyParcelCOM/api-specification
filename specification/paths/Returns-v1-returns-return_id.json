@@ -16,7 +16,7 @@
       }
     ],
     "summary": "Get a return resource.",
-    "description": "This endpoint retrieves a return resource by the specified id.",
+    "description": "This endpoint retrieves a return resource by the specified ID.",
     "responses": {
       "200": {
         "description": "Retrieved the return.",
@@ -38,7 +38,7 @@
         }
       },
       "404": {
-        "description": "No return was found for the given id."
+        "description": "No return was found for the given ID."
       }
     }
   }

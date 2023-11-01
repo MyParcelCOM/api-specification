@@ -129,14 +129,26 @@
                       },
                       "attributes": {
                         "required": [
-                          "return_type",
-                          "default_weight"
-                        ]
+                          "return_type"
+                        ],
+                        "properties": {
+                          "default_weight": {
+                            "description": "Required if the `return_type` is set to `shipment`."
+                          }
+                        }
                       },
                       "relationships": {
                         "required": [
                           "shop"
-                        ]
+                        ],
+                        "properties": {
+                          "contract": {
+                            "description": "Required if the `return_type` is set to `shipment`."
+                          },
+                          "service": {
+                            "description": "Required if the `return_type` is set to `shipment`."
+                          }
+                        }
                       }
                     }
                   }

@@ -14,7 +14,6 @@
         "attributes": {
           "required": [
             "return_type",
-            "default_weight",
             "created_at"
           ]
         },

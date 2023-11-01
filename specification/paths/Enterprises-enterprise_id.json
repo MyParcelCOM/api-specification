@@ -20,8 +20,8 @@
         ]
       }
     ],
-    "summary": "Get an enterprise by id.",
-    "description": "This endpoint retrieves the enterprise with the supplied id.",
+    "summary": "Get an enterprise by ID.",
+    "description": "This endpoint retrieves the enterprise with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the enterprise.",

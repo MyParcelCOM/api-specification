@@ -17,7 +17,7 @@
       }
     ],
     "summary": "Add contract relationships to an organization.",
-    "description": "This endpoint adds contract relationships to the organization with the supplied id.",
+    "description": "This endpoint adds contract relationships to the organization with the supplied ID.",
     "requestBody": {
       "description": "The contract relationships to be added to the organization.",
       "required": true,
@@ -48,7 +48,7 @@
       }
     ],
     "summary": "Delete contract relationships from an organization.",
-    "description": "This endpoint deletes contract relationships from the organization with the supplied id.",
+    "description": "This endpoint deletes contract relationships from the organization with the supplied ID.",
     "requestBody": {
       "description": "The contract relationships to be deleted from the organization.",
       "required": true,
