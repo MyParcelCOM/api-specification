@@ -17,7 +17,7 @@
             "description",
             "provides_single_order_fetch",
             "provides_outbound_shipments",
-            "creates_client",
+            "requires_client",
             "created_at"
           ]
         },

@@ -49,10 +49,10 @@
               "example": false,
               "description": "A flag to determine if an integration provides fetching of single orders."
             },
-            "creates_client": {
+            "requires_client": {
               "type": "boolean",
               "example": true,
-              "description": "A flag to determine if an integration creates an API client credentials for the MyParcel.com API."
+              "description": "Whether or not it is required to supply a meta.client_id when connecting integration to shop."
             },
             "settings_format": {
               "type": "object",
