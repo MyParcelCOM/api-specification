@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a collection schedule by id.",
-    "description": "This endpoint retrieves a collection schedule by id.",
+    "summary": "Get a collection schedule by ID.",
+    "description": "This endpoint retrieves a collection schedule by ID.",
     "responses": {
       "200": {
         "description": "Retrieved the collection schedule.",
@@ -58,8 +58,8 @@
         ]
       }
     ],
-    "summary": "Delete a collection schedule by id.",
-    "description": "This endpoint deletes a collection schedule by id.",
+    "summary": "Delete a collection schedule by ID.",
+    "description": "This endpoint deletes a collection schedule by ID.",
     "responses": {
       "204": {
         "description": "Deleted the collection schedule."

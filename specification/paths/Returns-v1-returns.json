@@ -30,6 +30,14 @@
         }
       },
       {
+        "name": "filter[search]",
+        "in": "query",
+        "description": "Partial string contained in the order reference, address (street 1, city or postal code) or contact (first name, last name, email or company) information.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "$ref": "#/components/parameters/query-filter-status"
       },
       {

@@ -25,8 +25,8 @@
         ]
       }
     ],
-    "summary": "Get a file by id.",
-    "description": "This endpoint retrieves the file with the supplied id. Accept headers can be used to retrieve the file in a different format.",
+    "summary": "Get a file by ID.",
+    "description": "This endpoint retrieves the file with the supplied ID. Accept headers can be used to retrieve the file in a different format.",
     "parameters": [
       {
         "$ref": "#/components/parameters/header-files"

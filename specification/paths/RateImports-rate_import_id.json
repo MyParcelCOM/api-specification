@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a rate import by id.",
-    "description": "This endpoint retrieves the rate import with the supplied id.",
+    "summary": "Get a rate import by ID.",
+    "description": "This endpoint retrieves the rate import with the supplied ID.",
     "parameters": [
       {
         "name": "include",

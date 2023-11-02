@@ -22,7 +22,7 @@
         "description": "The return is rejected."
       },
       "404": {
-        "description": "No return was found for the given id."
+        "description": "No return was found for the given ID."
       },
       "422": {
         "description": "This modification is not allowed on this return."

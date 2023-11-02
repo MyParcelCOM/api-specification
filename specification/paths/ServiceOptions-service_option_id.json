@@ -14,8 +14,8 @@
         ]
       }
     ],
-    "summary": "Get a service option by id.",
-    "description": "This endpoint retrieves a service option with the supplied id.",
+    "summary": "Get a service option by ID.",
+    "description": "This endpoint retrieves a service option with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the service option.",

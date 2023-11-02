@@ -20,8 +20,8 @@
         ]
       }
     ],
-    "summary": "Get a manifest by id.",
-    "description": "This endpoint retrieves the manifest with the supplied id.",
+    "summary": "Get a manifest by ID.",
+    "description": "This endpoint retrieves the manifest with the supplied ID.",
     "parameters": [
       {
         "name": "include",

@@ -28,8 +28,8 @@
         ]
       }
     ],
-    "summary": "Get a contract by id.",
-    "description": "This endpoint retrieves a contract for the supplied id.",
+    "summary": "Get a contract by ID.",
+    "description": "This endpoint retrieves a contract for the supplied ID.",
     "parameters": [
       {
         "name": "include",
@@ -76,8 +76,8 @@
         ]
       }
     ],
-    "summary": "Update a contract by id.",
-    "description": "This endpoint updates the contract with the supplied id. The status will be `pending` until our system has checked if the credentials are valid.",
+    "summary": "Update a contract by ID.",
+    "description": "This endpoint updates the contract with the supplied ID. The status will be `pending` until our system has checked if the credentials are valid.",
     "requestBody": {
       "description": "The contract object with attributes to be updated.",
       "required": true,
@@ -171,8 +171,8 @@
         ]
       }
     ],
-    "summary": "Delete a contract by id.",
-    "description": "This endpoint deletes the contract with the supplied id.",
+    "summary": "Delete a contract by ID.",
+    "description": "This endpoint deletes the contract with the supplied ID.",
     "responses": {
       "204": {
         "description": "The contract is deleted."

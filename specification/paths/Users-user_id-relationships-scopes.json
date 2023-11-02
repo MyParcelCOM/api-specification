@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get the scope relationships for a user id.",
-    "description": "This endpoint retrieves the scope relationships for the supplied user id.",
+    "summary": "Get the scope relationships for a user ID.",
+    "description": "This endpoint retrieves the scope relationships for the supplied user ID.",
     "responses": {
       "200": {
         "description": "Retrieved the scope relationships.",
@@ -66,7 +66,7 @@
       }
     ],
     "summary": "Add scope relationships to a user.",
-    "description": "This endpoint adds scope relationships to the user with the supplied id.",
+    "description": "This endpoint adds scope relationships to the user with the supplied ID.",
     "requestBody": {
       "description": "The scope relationships to be added to the user.",
       "required": true,
@@ -96,7 +96,7 @@
       }
     ],
     "summary": "Delete scope relationships from a user.",
-    "description": "This endpoint deletes scope relationships from the user with the supplied id.",
+    "description": "This endpoint deletes scope relationships from the user with the supplied ID.",
     "requestBody": {
       "description": "The scope relationships to be deleted from the user. Optionally limited to the resource(s) in the supplied meta.<br>Please note the `broker.member` scope cannot be deleted from a user (you can delete the user resource instead).",
       "required": true,

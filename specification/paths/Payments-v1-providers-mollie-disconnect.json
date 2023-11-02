@@ -13,7 +13,7 @@
     "summary": "Disconnect your shop from Mollie.",
     "description": "This endpoint revokes access to from your shop to Mollie.",
     "requestBody": {
-      "description": "The shop id to disconnect.",
+      "description": "The shop ID to disconnect.",
       "required": true,
       "content": {
         "application/vnd.api+json": {

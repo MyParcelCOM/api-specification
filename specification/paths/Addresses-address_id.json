@@ -20,8 +20,8 @@
         ]
       }
     ],
-    "summary": "Get an address by id.",
-    "description": "This endpoint retrieves the address with the supplied id.",
+    "summary": "Get an address by ID.",
+    "description": "This endpoint retrieves the address with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the address.",
@@ -55,8 +55,8 @@
         ]
       }
     ],
-    "summary": "Update an address by id.",
-    "description": "This endpoint updates the address with the supplied id.",
+    "summary": "Update an address by ID.",
+    "description": "This endpoint updates the address with the supplied ID.",
     "requestBody": {
       "description": "The address object with attributes to be updated.",
       "required": true,
@@ -124,8 +124,8 @@
         ]
       }
     ],
-    "summary": "Delete an address by id.",
-    "description": "This endpoint deletes the address with the supplied id.",
+    "summary": "Delete an address by ID.",
+    "description": "This endpoint deletes the address with the supplied ID.",
     "responses": {
       "204": {
         "description": "The address has been deleted."

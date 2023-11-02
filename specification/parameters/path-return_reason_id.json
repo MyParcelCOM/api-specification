@@ -1,7 +1,7 @@
 {
   "name": "return_reason_id",
   "in": "path",
-  "description": "Id of the Return reason.",
+  "description": "Id of the return reason.",
   "required": true,
   "schema": {
     "$ref": "#/components/schemas/Uuid"

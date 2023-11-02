@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get a carrier by id.",
-    "description": "This endpoint retrieves the carrier with the supplied id.",
+    "summary": "Get a carrier by ID.",
+    "description": "This endpoint retrieves the carrier with the supplied ID.",
     "responses": {
       "200": {
         "description": "Retrieved the carrier.",
