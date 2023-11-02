@@ -41,13 +41,18 @@
             },
             "provides_outbound_shipments": {
               "type": "boolean",
-              "example": "true",
+              "example": true,
               "description": "A flag to determine if an integration provides fetching of shipments."
             },
             "provides_single_order_fetch": {
               "type": "boolean",
-              "example": "false",
+              "example": false,
               "description": "A flag to determine if an integration provides fetching of single orders."
+            },
+            "creates_client": {
+              "type": "boolean",
+              "example": true,
+              "description": "A flag to determine if an integration creates an API client credentials for the MyParcel.com API."
             },
             "settings_format": {
               "type": "object",
