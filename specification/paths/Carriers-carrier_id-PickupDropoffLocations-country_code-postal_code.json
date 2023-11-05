@@ -20,7 +20,7 @@
         ]
       }
     ],
-    "summary": "Get office locations from a carrier by country and postal code.",
+    "summary": "Get locations from a carrier by country and postal code.",
     "description": "This endpoint retrieves pick-up and drop-off locations by country code and postal code offered by the supplied carrier.<ul><li>Locations of the type `pick-up` can be used with services offering this as their `delivery_method`.</li><li>Locations of the type `drop-off` can be used with services offering this as their `handover_method`.</li></ul>",
     "parameters": [
       {
