@@ -55,6 +55,7 @@
                 "invoices",
                 "payments",
                 "reports",
+                "returns",
                 "shipments"
               ],
               "example": "shipments",
