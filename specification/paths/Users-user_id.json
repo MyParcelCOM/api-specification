@@ -13,6 +13,10 @@
         "OAuth2": [
           "users.manage"
         ]
+      },
+      {
+        "OAuth2": [
+        ]
       }
     ],
     "summary": "Get a user by ID.",
@@ -47,6 +51,10 @@
       {
         "OAuth2": [
           "users.manage"
+        ]
+      },
+      {
+        "OAuth2": [
         ]
       }
     ],
