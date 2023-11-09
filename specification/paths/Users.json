@@ -8,6 +8,10 @@
         "OAuth2": [
           "users.manage"
         ]
+      },
+      {
+        "OAuth2": [
+        ]
       }
     ],
     "summary": "Get all available users.",
