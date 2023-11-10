@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": [
+    "action_type",
+    "values"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "pattern": "^approve-return$",
+      "example": "approve-return"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "return_id"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "return_id": {
+            "$ref": "#/components/schemas/Uuid"
+          }
+        }
+      }
+    }
+  }
+}
