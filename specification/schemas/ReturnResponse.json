@@ -17,7 +17,51 @@
             "consumer_address",
             "items",
             "created_at"
-          ]
+          ],
+          "properties": {
+            "shipment_registrations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "invocation",
+                  "status",
+                  "created_at"
+                ],
+                "properties": {
+                  "invocation": {
+                    "type": "string",
+                    "format": "enum",
+                    "enum": [
+                      "manual",
+                      "automatic"
+                    ],
+                    "description": "The way the shipment registration was invoked",
+                    "example": "automatic"
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "pending",
+                      "success",
+                      "failed"
+                    ],
+                    "example": "success"
+                  },
+                  "error": {
+                    "type": "string",
+                    "example": "Carrier API failure",
+                    "description": "Shipment registration failure error message (when applicable)"
+                  },
+                  "created_at": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2019-01-01T00:00:00Z"
+                  }
+                }
+              }
+            }
+          }
         },
         "relationships": {
           "required": [

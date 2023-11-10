@@ -1,0 +1,35 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Retry shipment registration on a return.",
+    "description": "This endpoint allows the API user to manually trigger shipment registration on a return.",
+    "responses": {
+      "204": {
+        "description": "Shipment registration is successful"
+      },
+      "404": {
+        "description": "No return was found for the given ID."
+      },
+      "422": {
+        "description": "Cannot attempt shipment registration on a return that is not approved."
+      },
+      "500": {
+        "description": "Shipment registration failed"
+      }
+    }
+  }
+}
