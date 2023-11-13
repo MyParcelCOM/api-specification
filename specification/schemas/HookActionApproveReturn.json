@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": [
+    "action_type",
+    "values"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "pattern": "^approve-return$",
+      "example": "approve-return"
+    }
+  }
+}
