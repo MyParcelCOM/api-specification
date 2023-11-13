@@ -10,21 +10,6 @@
       "type": "string",
       "pattern": "^reject-return$",
       "example": "reject-return"
-    },
-    "values": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "return_id"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "return_id": {
-            "$ref": "#/components/schemas/Uuid"
-          }
-        }
-      }
     }
   }
 }
