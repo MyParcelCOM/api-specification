@@ -40,7 +40,7 @@
               "example": "+31 234 567 890"
             },
             "locale": {
-              "$ref": "/components/schemas/Locale"
+              "$ref": "#/components/schemas/Locale"
             },
             "status": {
               "type": "string",
