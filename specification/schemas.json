@@ -206,6 +206,12 @@
   "HookActionUpdateResource": {
     "$ref": "./schemas/HookActionUpdateResource.json"
   },
+  "HookActionApproveReturn": {
+    "$ref": "./schemas/HookActionApproveReturn.json"
+  },
+  "HookActionRejectReturn": {
+    "$ref": "./schemas/HookActionRejectReturn.json"
+  },
   "HookLog": {
     "$ref": "./schemas/HookLog.json"
   },

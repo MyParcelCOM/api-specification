@@ -5,6 +5,12 @@
     },
     {
       "$ref": "#/components/schemas/HookActionUpdateResource"
+    },
+    {
+      "$ref": "#/components/schemas/HookActionApproveReturn"
+    },
+    {
+      "$ref": "#/components/schemas/HookActionRejectReturn"
     }
   ]
 }
