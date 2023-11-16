@@ -275,6 +275,9 @@
   "LiabilityCoveragesRelationship": {
     "$ref": "./schemas/LiabilityCoveragesRelationship.json"
   },
+  "Locale": {
+    "$ref": "./schemas/Locale.json"
+  },
   "Manifest": {
     "$ref": "./schemas/Manifest.json"
   },

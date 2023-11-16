@@ -40,14 +40,7 @@
               "example": "+31 234 567 890"
             },
             "locale": {
-              "type": "string",
-              "enum": [
-                "de-DE",
-                "en-GB",
-                "it-IT",
-                "nl-NL"
-              ],
-              "example": "en-GB"
+              "$ref": "/components/schemas/Locale"
             },
             "status": {
               "type": "string",
