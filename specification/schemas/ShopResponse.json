@@ -16,7 +16,8 @@
             "name",
             "return_address",
             "sender_address",
-            "created_at"
+            "created_at",
+            "locale"
           ],
           "properties": {
             "return_address": {

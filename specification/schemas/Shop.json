@@ -50,6 +50,20 @@
               "example": "7467",
               "description": "Any reference to identify the shop."
             },
+            "locale": {
+              "type": [
+                "string"
+              ],
+              "enum": [
+                "en_GB",
+                "nl_NL",
+                "it_IT",
+                "de_DE"
+              ],
+              "default": "en_GB",
+              "example": "nl_NL",
+              "description": "The default language that is used for emails and webpages for this shop."
+            },
             "mollie_connected": {
               "type": "boolean",
               "example": false,
