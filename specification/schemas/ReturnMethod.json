@@ -22,6 +22,9 @@
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
+            },
+            "meta": {
+              "$ref": "#/components/schemas/ReturnMethodMeta"
             }
           }
         },

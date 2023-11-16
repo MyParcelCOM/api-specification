@@ -218,6 +218,9 @@
   "query-shipments-filter-service_code": {
     "$ref": "./parameters/query-shipments-filter-service_code.json"
   },
+  "query-filter-weight": {
+    "$ref": "./parameters/query-filter-weight.json"
+  },
   "query-shipments-include": {
     "$ref": "./parameters/query-shipments-include.json"
   },
