@@ -398,6 +398,9 @@
   "ReturnMethodIncludes": {
     "$ref": "./schemas/ReturnMethodIncludes.json"
   },
+  "ReturnMethodMeta": {
+    "$ref": "./schemas/ReturnMethodMeta.json"
+  },
   "ReturnMethodResource": {
     "$ref": "./schemas/ReturnMethodResource.json"
   },

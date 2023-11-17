@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "price": {
+      "$ref": "#/components/schemas/Price"
+    }
+  }
+}
