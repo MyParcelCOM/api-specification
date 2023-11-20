@@ -50,6 +50,18 @@
               "example": "7467",
               "description": "Any reference to identify the shop."
             },
+            "locale": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Locale"
+                },
+                {
+                  "default": "en-GB",
+                  "example": "nl-NL",
+                  "description": "The default language that is used for emails and webpages for this shop."
+                }
+              ]
+            },
             "mollie_connected": {
               "type": "boolean",
               "example": false,
