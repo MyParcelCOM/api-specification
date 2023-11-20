@@ -123,6 +123,11 @@
         "OAuth2": [
           "shipments.manage"
         ]
+      },
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
       }
     ],
     "summary": "Create a new hook.",
