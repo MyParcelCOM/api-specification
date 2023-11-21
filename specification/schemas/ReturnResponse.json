@@ -54,9 +54,46 @@
                     "description": "Shipment registration failure error message (when applicable)"
                   },
                   "created_at": {
+                    "$ref": "#/components/schemas/Timestamp"
+                  }
+                }
+              }
+            },
+            "registration_retry_after": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "payments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "amount",
+                  "created_at",
+                  "currency",
+                  "id",
+                  "is_expired"
+                ],
+                "properties": {
+                  "id": {
+                    "$ref": "#/components/schemas/Uuid"
+                  },
+                  "created_at": {
+                    "$ref": "#/components/schemas/Timestamp"
+                  },
+                  "amount": {
+                    "$ref": "#/components/schemas/PriceAmount"
+                  },
+                  "currency": {
+                    "$ref": "#/components/schemas/Currency"
+                  },
+                  "expires_at": {
+                    "$ref": "#/components/schemas/Timestamp"
+                  },
+                  "external_payment_id": {
                     "type": "string",
-                    "format": "date-time",
-                    "example": "2019-01-01T00:00:00Z"
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "description": "The UUID of the Payment in Mollie"
                   }
                 }
               }
