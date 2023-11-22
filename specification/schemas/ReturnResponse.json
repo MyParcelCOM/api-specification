@@ -19,6 +19,28 @@
             "created_at"
           ],
           "properties": {
+            "items": {
+              "items": {
+                "type": "object",
+                "properties": {
+                  "reason": {
+                    "properties": {
+                      "attachments": {
+                        "items": {
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "description": "A URL to the location where the image is saved",
+                              "example": "https://cdn.myparcel.com/images/my-broken-return-item.jpg"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "shipment_registrations": {
               "type": "array",
               "items": {

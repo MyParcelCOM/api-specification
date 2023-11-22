@@ -77,6 +77,13 @@
           "type": "string",
           "example": "item-damaged",
           "description": "A code that identifies the reason for the return of this item. See the <a href=\"/#tag/ReturnReasons/paths/~1returns~1v1~1reasons/get\">return-reason</a> `code` attribute."
+        },
+        "comment": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Additional information regarding the reason for the return."
         }
       }
     }
