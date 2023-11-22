@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": [
+    "action_type",
+    "values"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "pattern": "^request-payment$",
+      "example": "request-payment"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "return_payment"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "return_payment": {
+            "$ref": "#/components/schemas/Price"
+          }
+        }
+      }
+    }
+  }
+}
