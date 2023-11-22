@@ -134,7 +134,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/be7f6752-34e0-49a1-a832-bcc209450ea9_205604"
+              "example": "$API_HOST/carriers/be7f6752-34e0-49a1-a832-bcc209450ea9/pickup-dropoff-locations/205604"
             }
           }
         }
