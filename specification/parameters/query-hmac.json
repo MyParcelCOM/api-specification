@@ -1,0 +1,9 @@
+{
+  "name": "hmac",
+  "in": "query",
+  "description": "HMAC signature of the request.",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

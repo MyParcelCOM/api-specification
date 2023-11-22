@@ -1,0 +1,38 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-payment_id"
+    },
+    {
+      "$ref": "#/components/parameters/query-hmac"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get a return payment link",
+    "description": "This endpoint requests a return payment link to a payment provider",
+    "responses": {
+      "302": {
+        "description": "The return payment link is returned in the Location header."
+      },
+      "403": {
+        "description": "The payment provider does not allow the return payment link to be created or HMAC signature is invalid."
+      },
+      "500": {
+        "description": "The payment provider returned an error."
+      }
+    }
+  }
+}
