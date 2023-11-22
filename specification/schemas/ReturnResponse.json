@@ -108,7 +108,7 @@
                   "currency": {
                     "$ref": "#/components/schemas/Currency"
                   },
-                  "expires_at": {
+                  "mollie_checkout_url_expires_at": {
                     "$ref": "#/components/schemas/Timestamp"
                   },
                   "external_payment_id": {

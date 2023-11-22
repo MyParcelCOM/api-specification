@@ -30,6 +30,9 @@
       "403": {
         "description": "The payment provider does not allow the return payment link to be created or HMAC signature is invalid."
       },
+      "422": {
+        "description": "The payment link expired or payment ID was not found."
+      },
       "500": {
         "description": "The payment provider returned an error."
       }
