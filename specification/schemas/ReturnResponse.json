@@ -108,9 +108,6 @@
                   "currency": {
                     "$ref": "#/components/schemas/Currency"
                   },
-                  "mollie_checkout_url_expires_at": {
-                    "$ref": "#/components/schemas/Timestamp"
-                  },
                   "external_payment_id": {
                     "type": "string",
                     "format": "uuid",
