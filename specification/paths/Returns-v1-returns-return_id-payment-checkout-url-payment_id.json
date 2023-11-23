@@ -21,17 +21,28 @@
         ]
       }
     ],
-    "summary": "Get a return payment link",
-    "description": "This endpoint requests a return payment link to a payment provider",
+    "summary": "Get a return payment checkout url",
+    "description": "This endpoint requests a return payment checkout url to a payment provider",
     "responses": {
       "302": {
-        "description": "The return payment link is returned in the Location header."
+        "description": "The return payment checkout url is returned in the Location header.",
+        "headers": {
+          "Location": {
+            "schema": {
+              "type": "string"
+            },
+            "description": "The return payment checkout url"
+          }
+        }
       },
       "403": {
         "description": "The payment provider does not allow the return payment link to be created or HMAC signature is invalid."
       },
       "422": {
-        "description": "The payment link expired or payment ID was not found."
+        "description": "The payment link expired."
+      },
+      "404": {
+        "description": "The payment was not found."
       },
       "500": {
         "description": "The payment provider returned an error."
