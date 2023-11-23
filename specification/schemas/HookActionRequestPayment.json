@@ -16,11 +16,11 @@
       "items": {
         "type": "object",
         "required": [
-          "return_payment"
+          "price"
         ],
         "additionalProperties": false,
         "properties": {
-          "return_payment": {
+          "price": {
             "$ref": "#/components/schemas/Price"
           }
         }
