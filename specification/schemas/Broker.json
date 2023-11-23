@@ -44,7 +44,7 @@
               "description": "URL to create a new support ticket or mailto: link with email address"
             },
             "style": {
-              "$ref": "#/components/schemas/Branding"
+              "$ref": "#/components/schemas/Style"
             }
           }
         },

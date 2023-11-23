@@ -26,9 +26,6 @@
   "BasePrice": {
     "$ref": "./schemas/BasePrice.json"
   },
-  "Branding": {
-    "$ref": "./schemas/Branding.json"
-  },
   "Broker": {
     "$ref": "./schemas/Broker.json"
   },
@@ -277,6 +274,12 @@
   },
   "Locale": {
     "$ref": "./schemas/Locale.json"
+  },
+  "LogoMeta": {
+    "$ref": "./schemas/LogoMeta.json"
+  },
+  "LogoUrl": {
+    "$ref": "./schemas/LogoUrl.json"
   },
   "Manifest": {
     "$ref": "./schemas/Manifest.json"
@@ -559,6 +562,9 @@
   },
   "StatusResponse": {
     "$ref": "./schemas/StatusResponse.json"
+  },
+  "Style": {
+    "$ref": "./schemas/Style.json"
   },
   "SystemMessage": {
     "$ref": "./schemas/SystemMessage.json"
