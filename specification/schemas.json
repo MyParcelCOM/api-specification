@@ -209,6 +209,9 @@
   "HookActionRejectReturn": {
     "$ref": "./schemas/HookActionRejectReturn.json"
   },
+  "HookActionRequestPayment": {
+    "$ref": "./schemas/HookActionRequestPayment.json"
+  },
   "HookLog": {
     "$ref": "./schemas/HookLog.json"
   },
