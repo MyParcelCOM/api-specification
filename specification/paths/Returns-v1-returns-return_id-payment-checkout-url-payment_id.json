@@ -39,7 +39,7 @@
         "description": "The payment provider does not allow the return payment link to be created or HMAC signature is invalid."
       },
       "422": {
-        "description": "The payment link expired."
+        "description": "When not connected to the payment provider, or payment is already paid"
       },
       "404": {
         "description": "The payment was not found."
