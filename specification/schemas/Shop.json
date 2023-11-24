@@ -28,16 +28,69 @@
               "example": "https://www.myparcel.com"
             },
             "logo_url": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "maxLength": 255,
-              "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
-              "description": "Logo image URL"
+              "allOf": [
+                {
+                  "deprecated": true,
+                  "description": "<strong>Deprecated</strong> use `branding.tracking.logo_url` instead."
+                },
+                {
+                  "$ref": "#/components/schemas/LogoUrl"
+                }
+              ]
             },
             "style": {
-              "$ref": "#/components/schemas/Branding"
+              "allOf": [
+                {
+                  "deprecated": true,
+                  "description": "<strong>Deprecated</strong> use `branding.tracking` instead."
+                },
+                {
+                  "$ref": "#/components/schemas/Style"
+                }
+              ]
+            },
+            "branding": {
+              "type": "object",
+              "properties": {
+                "returns": {
+                  "type": "object",
+                  "properties": {
+                    "logo_url": {
+                      "$ref": "#/components/schemas/LogoUrl"
+                    },
+                    "primary_color": {
+                      "type": "string",
+                      "minLength": 4,
+                      "maxLength": 7,
+                      "example": "#3a2efe",
+                      "description": "RGB color code in #-hexadecimal notation."
+                    },
+                    "accent_color": {
+                      "type": "string",
+                      "minLength": 4,
+                      "maxLength": 7,
+                      "example": "#fdb915",
+                      "description": "RGB color code in #-hexadecimal notation."
+                    }
+                  },
+                  "description": "Custom branding for your MyParcel.com return portal."
+                },
+                "tracking": {
+                  "allOf": [
+                    {
+                      "properties": {
+                        "logo_url": {
+                          "$ref": "#/components/schemas/LogoUrl"
+                        }
+                      },
+                      "description": "Custom branding for your MyParcel.com tracking page and emails."
+                    },
+                    {
+                      "$ref": "#/components/schemas/Style"
+                    }
+                  ]
+                }
+              }
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"

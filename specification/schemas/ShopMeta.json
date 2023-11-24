@@ -2,21 +2,34 @@
   "type": "object",
   "properties": {
     "logo": {
-      "type": "object",
-      "description": "Instead of simply populating the `logo_url` attribute with an image URL from your website, you could provide your logo image here. We will upload it and generate a URL which will overwrite the `logo_url` of this shop.",
-      "required": [
-        "mime_type",
-        "contents"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "mime_type": {
-          "type": "string",
-          "example": "image/png"
+      "allOf": [
+        {
+          "deprecated": true,
+          "description": "<strong>Deprecated</strong> use `branding` instead."
         },
-        "contents": {
-          "type": "string",
-          "description": "Base64 encoded image data."
+        {
+          "$ref": "#/components/schemas/LogoMeta"
+        }
+      ]
+    },
+    "branding": {
+      "type": "object",
+      "properties": {
+        "returns": {
+          "type": "object",
+          "properties": {
+            "logo": {
+              "$ref": "#/components/schemas/LogoMeta"
+            }
+          }
+        },
+        "tracking": {
+          "type": "object",
+          "properties": {
+            "logo": {
+              "$ref": "#/components/schemas/LogoMeta"
+            }
+          }
         }
       }
     }
