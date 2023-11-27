@@ -17,11 +17,6 @@
             "created_at"
           ]
         },
-        "relationships": {
-          "required": [
-            "shop"
-          ]
-        },
         "links": {
           "readOnly": true,
           "type": "object",
