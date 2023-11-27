@@ -33,11 +33,11 @@
               "type": "boolean",
               "example": false
             },
-            "accepts_comment": {
+            "accepts_comments": {
               "type": "boolean",
               "example": true
             },
-            "requires_comment": {
+            "requires_comments": {
               "type": "boolean",
               "example": false
             }
