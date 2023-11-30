@@ -16,8 +16,8 @@
             "description",
             "accepts_attachments",
             "requires_attachments",
-            "accepts_comments",
-            "requires_comments"
+            "accepts_comment",
+            "requires_comment"
           ]
         },
         "links": {
