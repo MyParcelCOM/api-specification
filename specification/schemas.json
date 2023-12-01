@@ -26,9 +26,6 @@
   "BasePrice": {
     "$ref": "./schemas/BasePrice.json"
   },
-  "Branding": {
-    "$ref": "./schemas/Branding.json"
-  },
   "Broker": {
     "$ref": "./schemas/Broker.json"
   },
@@ -212,6 +209,9 @@
   "HookActionRejectReturn": {
     "$ref": "./schemas/HookActionRejectReturn.json"
   },
+  "HookActionRequestPayment": {
+    "$ref": "./schemas/HookActionRequestPayment.json"
+  },
   "HookLog": {
     "$ref": "./schemas/HookLog.json"
   },
@@ -274,6 +274,15 @@
   },
   "LiabilityCoveragesRelationship": {
     "$ref": "./schemas/LiabilityCoveragesRelationship.json"
+  },
+  "Locale": {
+    "$ref": "./schemas/Locale.json"
+  },
+  "LogoMeta": {
+    "$ref": "./schemas/LogoMeta.json"
+  },
+  "LogoUrl": {
+    "$ref": "./schemas/LogoUrl.json"
   },
   "Manifest": {
     "$ref": "./schemas/Manifest.json"
@@ -397,6 +406,9 @@
   },
   "ReturnMethodIncludes": {
     "$ref": "./schemas/ReturnMethodIncludes.json"
+  },
+  "ReturnMethodMeta": {
+    "$ref": "./schemas/ReturnMethodMeta.json"
   },
   "ReturnMethodResource": {
     "$ref": "./schemas/ReturnMethodResource.json"
@@ -553,6 +565,9 @@
   },
   "StatusResponse": {
     "$ref": "./schemas/StatusResponse.json"
+  },
+  "Style": {
+    "$ref": "./schemas/Style.json"
   },
   "SystemMessage": {
     "$ref": "./schemas/SystemMessage.json"

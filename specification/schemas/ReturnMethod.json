@@ -25,8 +25,14 @@
             }
           }
         },
+        "meta": {
+          "$ref": "#/components/schemas/ReturnMethodMeta"
+        },
         "relationships": {
           "type": "object",
+          "required": [
+            "shop"
+          ],
           "additionalProperties": false,
           "properties": {
             "contract": {
@@ -34,6 +40,9 @@
             },
             "service": {
               "$ref": "#/components/schemas/ServiceRelationship"
+            },
+            "service_options": {
+              "$ref": "#/components/schemas/ServiceOptionsRelationship"
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"

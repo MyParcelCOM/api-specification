@@ -200,6 +200,9 @@
   "/returns/v1/returns/{return_id}/request-payment": {
     "$ref": "./paths/Returns-v1-returns-return_id-request-payment.json"
   },
+  "/returns/v1/returns/{return_id}/payment-checkout-url/{payment_id}?hmac={hmac}": {
+    "$ref": "./paths/Returns-v1-returns-return_id-payment-checkout-url-payment_id.json"
+  },
   "/returns/v1/returns/{return_id}/retry-shipment": {
     "$ref": "./paths/Returns-v1-returns-return_id-retry-shipment.json"
   },

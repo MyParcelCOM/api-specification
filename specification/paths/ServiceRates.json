@@ -30,12 +30,7 @@
         "$ref": "#/components/parameters/query-filter-service"
       },
       {
-        "name": "filter[weight]",
-        "in": "query",
-        "description": "Weight value in grams to filter by. <br>Only service rates which `weight_min`-`weight_max` range includes the desired weight will be returned.",
-        "schema": {
-          "type": "string"
-        }
+        "$ref": "#/components/parameters/query-filter-weight"
       },
       {
         "name": "filter[volumetric_weight]",

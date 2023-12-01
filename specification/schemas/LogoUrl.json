@@ -1,0 +1,9 @@
+{
+  "type": [
+    "string",
+    "null"
+  ],
+  "maxLength": 255,
+  "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
+  "description": "Logo image URL"
+}

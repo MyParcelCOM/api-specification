@@ -48,21 +48,16 @@
               "$ref": "#/components/schemas/BaseAddress"
             },
             "logo_url": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "maxLength": 255,
-              "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
-              "description": "Logo image URL"
+              "$ref": "#/components/schemas/LogoUrl"
             },
             "style": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Branding"
+                  "$ref": "#/components/schemas/Style"
                 },
                 {
-                  "deprecated": true
+                  "deprecated": true,
+                  "description": "<strong>Deprecated</strong> use the `branding` from the <a href=\"/#tag/Shops/paths/~1shops~1{shop_id}/get\">shop</a> resource instead."
                 }
               ]
             },

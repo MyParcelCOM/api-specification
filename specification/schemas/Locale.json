@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "enum": [
+    "de-DE",
+    "en-GB",
+    "it-IT",
+    "nl-NL"
+  ],
+  "example": "en-GB"
+}

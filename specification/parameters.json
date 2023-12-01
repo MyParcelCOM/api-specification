@@ -89,6 +89,9 @@
   "path-return_id": {
     "$ref": "./parameters/path-return_id.json"
   },
+  "path-payment_id": {
+    "$ref": "./parameters/path-payment_id.json"
+  },
   "path-return_method_id": {
     "$ref": "./parameters/path-return_method_id.json"
   },
@@ -218,6 +221,9 @@
   "query-shipments-filter-service_code": {
     "$ref": "./parameters/query-shipments-filter-service_code.json"
   },
+  "query-filter-weight": {
+    "$ref": "./parameters/query-filter-weight.json"
+  },
   "query-shipments-include": {
     "$ref": "./parameters/query-shipments-include.json"
   },
@@ -229,5 +235,8 @@
   },
   "query-filter-tags": {
     "$ref": "./parameters/query-filter-tags.json"
+  },
+  "query-hmac": {
+    "$ref": "./parameters/query-hmac.json"
   }
 }

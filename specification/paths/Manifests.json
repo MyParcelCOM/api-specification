@@ -178,6 +178,16 @@
                     }
                   }
                 ]
+              },
+              "meta": {
+                "type": "object",
+                "properties": {
+                  "update_shipment_statuses": {
+                    "type": "boolean",
+                    "example": true,
+                    "description": "When set to `true` all related shipments will be updated with a new shipment status containing the status code `shipment-received-by-carrier`."
+                  }
+                }
               }
             }
           }
