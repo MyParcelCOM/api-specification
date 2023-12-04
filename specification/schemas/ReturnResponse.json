@@ -89,16 +89,12 @@
               "items": {
                 "type": "object",
                 "required": [
-                  "id",
                   "created_at",
                   "amount",
                   "currency",
                   "checkout_url"
                 ],
                 "properties": {
-                  "id": {
-                    "$ref": "#/components/schemas/Uuid"
-                  },
                   "created_at": {
                     "$ref": "#/components/schemas/Timestamp"
                   },
