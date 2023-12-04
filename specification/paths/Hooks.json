@@ -46,6 +46,19 @@
             "import"
           ]
         }
+      },
+      {
+        "name": "filter[trigger][resource_type]",
+        "in": "query",
+        "description": "[Resource type](https://docs.myparcel.com/api/resources/hooks/trigger.html) to filter the hooks by.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "shipments",
+            "shipment-statuses",
+            "returns"
+          ]
+        }
       }
     ],
     "responses": {
