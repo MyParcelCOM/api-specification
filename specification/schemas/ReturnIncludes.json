@@ -3,6 +3,12 @@
   "items": {
     "anyOf": [
       {
+        "$ref": "#/components/schemas/ReturnMethodResponse"
+      },
+      {
+        "$ref": "#/components/schemas/ShipmentResponse"
+      },
+      {
         "$ref": "#/components/schemas/ShopResponse"
       },
       {
