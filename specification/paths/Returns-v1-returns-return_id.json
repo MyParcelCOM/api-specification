@@ -17,6 +17,16 @@
     ],
     "summary": "Get a return resource.",
     "description": "This endpoint retrieves a return resource by the specified ID.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`return_method`</li><li>`shipment`</li><li>`shop`</li><li>`status`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the return.",
@@ -31,6 +41,9 @@
               "properties": {
                 "data": {
                   "$ref": "#/components/schemas/ReturnResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ReturnIncludes"
                 }
               }
             }
