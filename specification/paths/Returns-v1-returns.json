@@ -42,6 +42,12 @@
       },
       {
         "$ref": "#/components/parameters/query-filter-shop"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_from"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_to"
       }
     ],
     "responses": {

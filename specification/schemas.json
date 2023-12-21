@@ -431,6 +431,9 @@
   "ReturnReasonRelationship": {
     "$ref": "./schemas/ReturnReasonRelationship.json"
   },
+  "ReturnAnalytics": {
+    "$ref": "./schemas/ReturnAnalytics.json"
+  },
   "Scope": {
     "$ref": "./schemas/Scope.json"
   },
