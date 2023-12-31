@@ -1,279 +1,270 @@
 {
   "Address": {
-    "$ref": "./schemas/Address.json"
+    "$ref": "./schemas/addresses/Address.json"
   },
   "AddressResource": {
-    "$ref": "./schemas/AddressResource.json"
+    "$ref": "./schemas/addresses/AddressResource.json"
   },
   "AddressResponse": {
-    "$ref": "./schemas/AddressResponse.json"
+    "$ref": "./schemas/addresses/AddressResponse.json"
   },
   "Barcode": {
-    "$ref": "./schemas/Barcode.json"
+    "$ref": "./schemas/shipments/Barcode.json"
   },
   "BaseAddress": {
-    "$ref": "./schemas/BaseAddress.json"
+    "$ref": "./schemas/addresses/BaseAddress.json"
   },
   "BaseCustoms": {
-    "$ref": "./schemas/BaseCustoms.json"
+    "$ref": "./schemas/shipments/BaseCustoms.json"
   },
   "BaseShipmentItem": {
-    "$ref": "./schemas/BaseShipmentItem.json"
+    "$ref": "./schemas/shipments/BaseShipmentItem.json"
   },
   "BasePhysicalProperties": {
-    "$ref": "./schemas/BasePhysicalProperties.json"
+    "$ref": "./schemas/shipments/BasePhysicalProperties.json"
   },
   "BasePrice": {
     "$ref": "./schemas/BasePrice.json"
   },
   "Broker": {
-    "$ref": "./schemas/Broker.json"
+    "$ref": "./schemas/brokers/Broker.json"
   },
   "BrokerRelationship": {
-    "$ref": "./schemas/BrokerRelationship.json"
+    "$ref": "./schemas/brokers/BrokerRelationship.json"
   },
   "BrokerResource": {
-    "$ref": "./schemas/BrokerResource.json"
+    "$ref": "./schemas/brokers/BrokerResource.json"
   },
   "BrokerResponse": {
-    "$ref": "./schemas/BrokerResponse.json"
+    "$ref": "./schemas/brokers/BrokerResponse.json"
   },
   "Carrier": {
-    "$ref": "./schemas/Carrier.json"
+    "$ref": "./schemas/carriers/Carrier.json"
   },
   "CarrierRelationship": {
-    "$ref": "./schemas/CarrierRelationship.json"
+    "$ref": "./schemas/carriers/CarrierRelationship.json"
   },
   "CarriersRelationship": {
-    "$ref": "./schemas/CarriersRelationship.json"
+    "$ref": "./schemas/carriers/CarriersRelationship.json"
   },
   "CarrierResource": {
-    "$ref": "./schemas/CarrierResource.json"
+    "$ref": "./schemas/carriers/CarrierResource.json"
   },
   "CarrierResponse": {
-    "$ref": "./schemas/CarrierResponse.json"
+    "$ref": "./schemas/carriers/CarrierResponse.json"
   },
   "CarrierStatus": {
-    "$ref": "./schemas/CarrierStatus.json"
+    "$ref": "./schemas/carriers/CarrierStatus.json"
   },
   "CarrierStatusCategory": {
-    "$ref": "./schemas/CarrierStatusCategory.json"
+    "$ref": "./schemas/carriers/CarrierStatusCategory.json"
   },
   "CarrierSurcharge": {
-    "$ref": "./schemas/CarrierSurcharge.json"
+    "$ref": "./schemas/carrier-surcharges/CarrierSurcharge.json"
   },
   "CarrierSurchargeResource": {
-    "$ref": "./schemas/CarrierSurchargeResource.json"
+    "$ref": "./schemas/carrier-surcharges/CarrierSurchargeResource.json"
   },
   "CarrierSurchargeResponse": {
-    "$ref": "./schemas/CarrierSurchargeResponse.json"
+    "$ref": "./schemas/carrier-surcharges/CarrierSurchargeResponse.json"
   },
   "Client": {
-    "$ref": "./schemas/Client.json"
+    "$ref": "./schemas/clients/Client.json"
   },
   "ClientResource": {
-    "$ref": "./schemas/ClientResource.json"
+    "$ref": "./schemas/clients/ClientResource.json"
   },
   "ClientResponse": {
-    "$ref": "./schemas/ClientResponse.json"
+    "$ref": "./schemas/clients/ClientResponse.json"
   },
   "Collection": {
-    "$ref": "./schemas/Collection.json"
+    "$ref": "./schemas/collections/Collection.json"
   },
   "CollectionIncludes": {
-    "$ref": "./schemas/CollectionIncludes.json"
+    "$ref": "./schemas/collections/CollectionIncludes.json"
   },
   "CollectionRelationship": {
-    "$ref": "./schemas/CollectionRelationship.json"
+    "$ref": "./schemas/collections/CollectionRelationship.json"
   },
   "CollectionResource": {
-    "$ref": "./schemas/CollectionResource.json"
+    "$ref": "./schemas/collections/CollectionResource.json"
   },
   "CollectionResponse": {
-    "$ref": "./schemas/CollectionResponse.json"
+    "$ref": "./schemas/collections/CollectionResponse.json"
   },
   "CollectionSchedule": {
-    "$ref": "./schemas/CollectionSchedule.json"
+    "$ref": "./schemas/collections/CollectionSchedule.json"
   },
   "CollectionScheduleResource": {
-    "$ref": "./schemas/CollectionScheduleResource.json"
+    "$ref": "./schemas/collections/CollectionScheduleResource.json"
   },
   "CollectionScheduleTime": {
-    "$ref": "./schemas/CollectionScheduleTime.json"
+    "$ref": "./schemas/collections/CollectionScheduleTime.json"
   },
   "CollectionTime": {
-    "$ref": "./schemas/CollectionTime.json"
+    "$ref": "./schemas/collections/CollectionTime.json"
   },
   "CollectionTimeSlot": {
-    "$ref": "./schemas/CollectionTimeSlot.json"
+    "$ref": "./schemas/collections/CollectionTimeSlot.json"
   },
   "CollectionTimeSlotResource": {
-    "$ref": "./schemas/CollectionTimeSlotResource.json"
+    "$ref": "./schemas/collections/CollectionTimeSlotResource.json"
   },
   "ColloNumber": {
-    "$ref": "./schemas/ColloNumber.json"
+    "$ref": "./schemas/shipments/ColloNumber.json"
   },
   "CombinedFile": {
-    "$ref": "./schemas/CombinedFile.json"
+    "$ref": "./schemas/files/CombinedFile.json"
   },
   "CombinedFileResource": {
-    "$ref": "./schemas/CombinedFileResource.json"
+    "$ref": "./schemas/files/CombinedFileResource.json"
   },
   "CombinedFileResponse": {
-    "$ref": "./schemas/CombinedFileResponse.json"
+    "$ref": "./schemas/files/CombinedFileResponse.json"
   },
   "Contract": {
-    "$ref": "./schemas/Contract.json"
+    "$ref": "./schemas/contracts/Contract.json"
   },
   "ContractIncludes": {
-    "$ref": "./schemas/ContractIncludes.json"
+    "$ref": "./schemas/contracts/ContractIncludes.json"
   },
   "ContractRelationship": {
-    "$ref": "./schemas/ContractRelationship.json"
+    "$ref": "./schemas/contracts/ContractRelationship.json"
   },
   "ContractResource": {
-    "$ref": "./schemas/ContractResource.json"
+    "$ref": "./schemas/contracts/ContractResource.json"
   },
   "ContractResponse": {
-    "$ref": "./schemas/ContractResponse.json"
+    "$ref": "./schemas/contracts/ContractResponse.json"
   },
   "ContractsRelationship": {
-    "$ref": "./schemas/ContractsRelationship.json"
+    "$ref": "./schemas/contracts/ContractsRelationship.json"
   },
   "CountryCode": {
-    "$ref": "./schemas/CountryCode.json"
+    "$ref": "./schemas/addresses/CountryCode.json"
   },
   "Currency": {
     "$ref": "./schemas/Currency.json"
   },
-  "Day": {
-    "$ref": "./schemas/Day.json"
-  },
   "DocumentType": {
-    "$ref": "./schemas/DocumentType.json"
+    "$ref": "./schemas/files/DocumentType.json"
   },
   "Email": {
-    "$ref": "./schemas/Email.json"
+    "$ref": "./schemas/addresses/Email.json"
   },
   "Enterprise": {
-    "$ref": "./schemas/Enterprise.json"
+    "$ref": "./schemas/enterprises/Enterprise.json"
   },
   "EnterpriseRelationship": {
-    "$ref": "./schemas/EnterpriseRelationship.json"
+    "$ref": "./schemas/enterprises/EnterpriseRelationship.json"
   },
   "EnterpriseResource": {
-    "$ref": "./schemas/EnterpriseResource.json"
+    "$ref": "./schemas/enterprises/EnterpriseResource.json"
   },
   "EnterpriseResponse": {
-    "$ref": "./schemas/EnterpriseResponse.json"
+    "$ref": "./schemas/enterprises/EnterpriseResponse.json"
   },
   "Error": {
     "$ref": "./schemas/Error.json"
   },
   "File": {
-    "$ref": "./schemas/File.json"
+    "$ref": "./schemas/files/File.json"
   },
   "FileFormat": {
-    "$ref": "./schemas/FileFormat.json"
+    "$ref": "./schemas/files/FileFormat.json"
   },
   "FileRelationship": {
-    "$ref": "./schemas/FileRelationship.json"
+    "$ref": "./schemas/files/FileRelationship.json"
   },
   "FileResource": {
-    "$ref": "./schemas/FileResource.json"
+    "$ref": "./schemas/files/FileResource.json"
   },
   "FileResponse": {
-    "$ref": "./schemas/FileResponse.json"
+    "$ref": "./schemas/files/FileResponse.json"
   },
   "FilesRelationship": {
-    "$ref": "./schemas/FilesRelationship.json"
-  },
-  "FinalMileCarrier": {
-    "$ref": "./schemas/FinalMileCarrier.json"
+    "$ref": "./schemas/files/FilesRelationship.json"
   },
   "Hook": {
-    "$ref": "./schemas/Hook.json"
+    "$ref": "./schemas/hooks/Hook.json"
   },
   "HookAction": {
-    "$ref": "./schemas/HookAction.json"
+    "$ref": "./schemas/hooks/HookAction.json"
   },
   "HookActionSendResource": {
-    "$ref": "./schemas/HookActionSendResource.json"
+    "$ref": "./schemas/hooks/HookActionSendResource.json"
   },
   "HookActionUpdateResource": {
-    "$ref": "./schemas/HookActionUpdateResource.json"
+    "$ref": "./schemas/hooks/HookActionUpdateResource.json"
   },
   "HookActionApproveReturn": {
-    "$ref": "./schemas/HookActionApproveReturn.json"
+    "$ref": "./schemas/hooks/HookActionApproveReturn.json"
   },
   "HookActionRejectReturn": {
-    "$ref": "./schemas/HookActionRejectReturn.json"
+    "$ref": "./schemas/hooks/HookActionRejectReturn.json"
   },
   "HookActionRequestPayment": {
-    "$ref": "./schemas/HookActionRequestPayment.json"
+    "$ref": "./schemas/hooks/HookActionRequestPayment.json"
   },
   "HookLog": {
-    "$ref": "./schemas/HookLog.json"
+    "$ref": "./schemas/hooks/HookLog.json"
   },
   "HookLogsRelationship": {
-    "$ref": "./schemas/HookLogsRelationship.json"
+    "$ref": "./schemas/hooks/HookLogsRelationship.json"
   },
   "HookRelationship": {
-    "$ref": "./schemas/HookRelationship.json"
+    "$ref": "./schemas/hooks/HookRelationship.json"
   },
   "HookResource": {
-    "$ref": "./schemas/HookResource.json"
+    "$ref": "./schemas/hooks/HookResource.json"
   },
   "HookResponse": {
-    "$ref": "./schemas/HookResponse.json"
+    "$ref": "./schemas/hooks/HookResponse.json"
   },
   "HookTrigger": {
-    "$ref": "./schemas/HookTrigger.json"
+    "$ref": "./schemas/hooks/HookTrigger.json"
   },
   "Integration": {
-    "$ref": "./schemas/Integration.json"
+    "$ref": "./schemas/integrations/Integration.json"
   },
   "IntegrationResource": {
-    "$ref": "./schemas/IntegrationResource.json"
+    "$ref": "./schemas/integrations/IntegrationResource.json"
   },
   "IntegrationResponse": {
-    "$ref": "./schemas/IntegrationResponse.json"
+    "$ref": "./schemas/integrations/IntegrationResponse.json"
   },
   "IntegrationsRelationship": {
-    "$ref": "./schemas/IntegrationsRelationship.json"
+    "$ref": "./schemas/integrations/IntegrationsRelationship.json"
   },
   "Invoice": {
-    "$ref": "./schemas/Invoice.json"
+    "$ref": "./schemas/invoices/Invoice.json"
   },
   "InvoiceRelationship": {
-    "$ref": "./schemas/InvoiceRelationship.json"
+    "$ref": "./schemas/invoices/InvoiceRelationship.json"
   },
   "InvoiceResource": {
-    "$ref": "./schemas/InvoiceResource.json"
+    "$ref": "./schemas/invoices/InvoiceResource.json"
   },
   "InvoiceResponse": {
-    "$ref": "./schemas/InvoiceResponse.json"
+    "$ref": "./schemas/invoices/InvoiceResponse.json"
   },
   "ItemFeature": {
-    "$ref": "./schemas/ItemFeature.json"
-  },
-  "Language": {
-    "$ref": "./schemas/Language.json"
+    "$ref": "./schemas/return-orders/ItemFeature.json"
   },
   "LiabilityCoverage": {
-    "$ref": "./schemas/LiabilityCoverage.json"
+    "$ref": "./schemas/liability-coverages/LiabilityCoverage.json"
   },
   "LiabilityCoverageRelationship": {
-    "$ref": "./schemas/LiabilityCoverageRelationship.json"
+    "$ref": "./schemas/liability-coverages/LiabilityCoverageRelationship.json"
   },
   "LiabilityCoverageResource": {
-    "$ref": "./schemas/LiabilityCoverageResource.json"
+    "$ref": "./schemas/liability-coverages/LiabilityCoverageResource.json"
   },
   "LiabilityCoverageResponse": {
-    "$ref": "./schemas/LiabilityCoverageResponse.json"
+    "$ref": "./schemas/liability-coverages/LiabilityCoverageResponse.json"
   },
   "LiabilityCoveragesRelationship": {
-    "$ref": "./schemas/LiabilityCoveragesRelationship.json"
+    "$ref": "./schemas/liability-coverages/LiabilityCoveragesRelationship.json"
   },
   "Locale": {
     "$ref": "./schemas/Locale.json"
@@ -285,64 +276,64 @@
     "$ref": "./schemas/LogoUrl.json"
   },
   "Manifest": {
-    "$ref": "./schemas/Manifest.json"
+    "$ref": "./schemas/manifests/Manifest.json"
   },
   "ManifestIncludes": {
-    "$ref": "./schemas/ManifestIncludes.json"
+    "$ref": "./schemas/manifests/ManifestIncludes.json"
   },
   "ManifestRelationship": {
-    "$ref": "./schemas/ManifestRelationship.json"
+    "$ref": "./schemas/manifests/ManifestRelationship.json"
   },
   "ManifestResource": {
-    "$ref": "./schemas/ManifestResource.json"
+    "$ref": "./schemas/manifests/ManifestResource.json"
   },
   "ManifestResponse": {
-    "$ref": "./schemas/ManifestResponse.json"
+    "$ref": "./schemas/manifests/ManifestResponse.json"
   },
   "Order": {
-    "$ref": "./schemas/Order.json"
+    "$ref": "./schemas/return-orders/Order.json"
   },
   "OrderItem": {
-    "$ref": "./schemas/OrderItem.json"
+    "$ref": "./schemas/return-orders/OrderItem.json"
   },
   "OrderResource": {
-    "$ref": "./schemas/OrderResource.json"
+    "$ref": "./schemas/return-orders/OrderResource.json"
   },
   "OrderResponse": {
-    "$ref": "./schemas/OrderResponse.json"
+    "$ref": "./schemas/return-orders/OrderResponse.json"
   },
   "Organization": {
-    "$ref": "./schemas/Organization.json"
+    "$ref": "./schemas/organizations/Organization.json"
   },
   "OrganizationMeta": {
-    "$ref": "./schemas/OrganizationMeta.json"
+    "$ref": "./schemas/organizations/OrganizationMeta.json"
   },
   "OrganizationRelationship": {
-    "$ref": "./schemas/OrganizationRelationship.json"
+    "$ref": "./schemas/organizations/OrganizationRelationship.json"
   },
   "OrganizationResource": {
-    "$ref": "./schemas/OrganizationResource.json"
+    "$ref": "./schemas/organizations/OrganizationResource.json"
   },
   "OrganizationResponse": {
-    "$ref": "./schemas/OrganizationResponse.json"
+    "$ref": "./schemas/organizations/OrganizationResponse.json"
   },
   "PaginationMeta": {
     "$ref": "./schemas/PaginationMeta.json"
   },
   "PasswordResetResource": {
-    "$ref": "./schemas/PasswordResetResource.json"
+    "$ref": "./schemas/password-resets/PasswordResetResource.json"
   },
   "PhysicalProperties": {
-    "$ref": "./schemas/PhysicalProperties.json"
+    "$ref": "./schemas/shipments/PhysicalProperties.json"
   },
   "PickupDropoffLocation": {
-    "$ref": "./schemas/PickupDropoffLocation.json"
+    "$ref": "./schemas/pickup-dropoff-locations/PickupDropoffLocation.json"
   },
   "PickupDropoffLocationResource": {
-    "$ref": "./schemas/PickupDropoffLocationResource.json"
+    "$ref": "./schemas/pickup-dropoff-locations/PickupDropoffLocationResource.json"
   },
   "PickupDropoffLocationResponse": {
-    "$ref": "./schemas/PickupDropoffLocationResponse.json"
+    "$ref": "./schemas/pickup-dropoff-locations/PickupDropoffLocationResponse.json"
   },
   "Price": {
     "$ref": "./schemas/Price.json"
@@ -351,259 +342,259 @@
     "$ref": "./schemas/PriceAmount.json"
   },
   "RateImport": {
-    "$ref": "./schemas/RateImport.json"
+    "$ref": "./schemas/rate-imports/RateImport.json"
   },
   "RateImportIncludes": {
-    "$ref": "./schemas/RateImportIncludes.json"
+    "$ref": "./schemas/rate-imports/RateImportIncludes.json"
   },
   "RateImportResponse": {
-    "$ref": "./schemas/RateImportResponse.json"
+    "$ref": "./schemas/rate-imports/RateImportResponse.json"
   },
   "Region": {
-    "$ref": "./schemas/Region.json"
+    "$ref": "./schemas/regions/Region.json"
   },
   "RegionCode": {
-    "$ref": "./schemas/RegionCode.json"
+    "$ref": "./schemas/regions/RegionCode.json"
   },
   "RegionRelationship": {
-    "$ref": "./schemas/RegionRelationship.json"
+    "$ref": "./schemas/regions/RegionRelationship.json"
   },
   "RegionResource": {
-    "$ref": "./schemas/RegionResource.json"
+    "$ref": "./schemas/regions/RegionResource.json"
   },
   "RegionResponse": {
-    "$ref": "./schemas/RegionResponse.json"
+    "$ref": "./schemas/regions/RegionResponse.json"
   },
   "Report": {
-    "$ref": "./schemas/Report.json"
+    "$ref": "./schemas/reports/Report.json"
   },
   "ReportIncludes": {
-    "$ref": "./schemas/ReportIncludes.json"
+    "$ref": "./schemas/reports/ReportIncludes.json"
   },
   "ReportResource": {
-    "$ref": "./schemas/ReportResource.json"
+    "$ref": "./schemas/reports/ReportResource.json"
   },
   "ReportResponse": {
-    "$ref": "./schemas/ReportResponse.json"
+    "$ref": "./schemas/reports/ReportResponse.json"
   },
   "Return": {
-    "$ref": "./schemas/Return.json"
+    "$ref": "./schemas/returns/Return.json"
   },
   "ReturnIncludes": {
-    "$ref": "./schemas/ReturnIncludes.json"
+    "$ref": "./schemas/returns/ReturnIncludes.json"
   },
   "ReturnItem": {
-    "$ref": "./schemas/ReturnItem.json"
+    "$ref": "./schemas/returns/ReturnItem.json"
   },
   "ReturnResource": {
-    "$ref": "./schemas/ReturnResource.json"
+    "$ref": "./schemas/returns/ReturnResource.json"
   },
   "ReturnResponse": {
-    "$ref": "./schemas/ReturnResponse.json"
+    "$ref": "./schemas/returns/ReturnResponse.json"
   },
   "ReturnMethod": {
-    "$ref": "./schemas/ReturnMethod.json"
+    "$ref": "./schemas/return-methods/ReturnMethod.json"
   },
   "ReturnMethodIncludes": {
-    "$ref": "./schemas/ReturnMethodIncludes.json"
+    "$ref": "./schemas/return-methods/ReturnMethodIncludes.json"
   },
   "ReturnMethodMeta": {
-    "$ref": "./schemas/ReturnMethodMeta.json"
+    "$ref": "./schemas/return-methods/ReturnMethodMeta.json"
   },
   "ReturnMethodResource": {
-    "$ref": "./schemas/ReturnMethodResource.json"
+    "$ref": "./schemas/return-methods/ReturnMethodResource.json"
   },
   "ReturnMethodResponse": {
-    "$ref": "./schemas/ReturnMethodResponse.json"
+    "$ref": "./schemas/return-methods/ReturnMethodResponse.json"
   },
   "ReturnMethodRelationship": {
-    "$ref": "./schemas/ReturnMethodRelationship.json"
+    "$ref": "./schemas/return-methods/ReturnMethodRelationship.json"
   },
   "ReturnReason": {
-    "$ref": "./schemas/ReturnReason.json"
+    "$ref": "./schemas/return-reasons/ReturnReason.json"
   },
   "ReturnReasonResource": {
-    "$ref": "./schemas/ReturnReasonResource.json"
+    "$ref": "./schemas/return-reasons/ReturnReasonResource.json"
   },
   "ReturnReasonResponse": {
-    "$ref": "./schemas/ReturnReasonResponse.json"
+    "$ref": "./schemas/return-reasons/ReturnReasonResponse.json"
   },
   "ReturnReasonRelationship": {
-    "$ref": "./schemas/ReturnReasonRelationship.json"
+    "$ref": "./schemas/return-reasons/ReturnReasonRelationship.json"
   },
   "ReturnAnalytics": {
-    "$ref": "./schemas/ReturnAnalytics.json"
+    "$ref": "./schemas/returns/ReturnAnalytics.json"
   },
   "Scope": {
-    "$ref": "./schemas/Scope.json"
+    "$ref": "./schemas/scopes/Scope.json"
   },
   "ScopeResource": {
-    "$ref": "./schemas/ScopeResource.json"
+    "$ref": "./schemas/scopes/ScopeResource.json"
   },
   "ScopeResponse": {
-    "$ref": "./schemas/ScopeResponse.json"
+    "$ref": "./schemas/scopes/ScopeResponse.json"
   },
   "ScopesRelationship": {
-    "$ref": "./schemas/ScopesRelationship.json"
+    "$ref": "./schemas/scopes/ScopesRelationship.json"
   },
   "Service": {
-    "$ref": "./schemas/Service.json"
+    "$ref": "./schemas/services/Service.json"
   },
   "ServiceIncludes": {
-    "$ref": "./schemas/ServiceIncludes.json"
+    "$ref": "./schemas/services/ServiceIncludes.json"
   },
   "ServiceOption": {
-    "$ref": "./schemas/ServiceOption.json"
+    "$ref": "./schemas/service-options/ServiceOption.json"
   },
   "ServiceOptionResource": {
-    "$ref": "./schemas/ServiceOptionResource.json"
+    "$ref": "./schemas/service-options/ServiceOptionResource.json"
   },
   "ServiceOptionResponse": {
-    "$ref": "./schemas/ServiceOptionResponse.json"
+    "$ref": "./schemas/service-options/ServiceOptionResponse.json"
   },
   "ServiceOptionsRelationship": {
-    "$ref": "./schemas/ServiceOptionsRelationship.json"
+    "$ref": "./schemas/service-options/ServiceOptionsRelationship.json"
   },
   "ServiceResource": {
-    "$ref": "./schemas/ServiceResource.json"
+    "$ref": "./schemas/services/ServiceResource.json"
   },
   "ServiceResponse": {
-    "$ref": "./schemas/ServiceResponse.json"
+    "$ref": "./schemas/services/ServiceResponse.json"
   },
   "ServiceRate": {
-    "$ref": "./schemas/ServiceRate.json"
+    "$ref": "./schemas/service-rates/ServiceRate.json"
   },
   "ServiceRateIncludes": {
-    "$ref": "./schemas/ServiceRateIncludes.json"
+    "$ref": "./schemas/service-rates/ServiceRateIncludes.json"
   },
   "ServiceRateResource": {
-    "$ref": "./schemas/ServiceRateResource.json"
+    "$ref": "./schemas/service-rates/ServiceRateResource.json"
   },
   "ServiceRateResponse": {
-    "$ref": "./schemas/ServiceRateResponse.json"
+    "$ref": "./schemas/service-rates/ServiceRateResponse.json"
   },
   "ServiceRegion": {
-    "$ref": "./schemas/ServiceRegion.json"
+    "$ref": "./schemas/services/ServiceRegion.json"
   },
   "ServiceRelationship": {
-    "$ref": "./schemas/ServiceRelationship.json"
+    "$ref": "./schemas/services/ServiceRelationship.json"
   },
   "Shipment": {
-    "$ref": "./schemas/Shipment.json"
+    "$ref": "./schemas/shipments/Shipment.json"
   },
   "ShipmentColliRelationship": {
-    "$ref": "./schemas/ShipmentColliRelationship.json"
+    "$ref": "./schemas/shipments/ShipmentColliRelationship.json"
   },
   "ShipmentFilesRelationship": {
-    "$ref": "./schemas/ShipmentFilesRelationship.json"
+    "$ref": "./schemas/shipments/ShipmentFilesRelationship.json"
   },
   "ShipmentIncludes": {
-    "$ref": "./schemas/ShipmentIncludes.json"
+    "$ref": "./schemas/shipments/ShipmentIncludes.json"
   },
   "ShipmentRelationship": {
-    "$ref": "./schemas/ShipmentRelationship.json"
+    "$ref": "./schemas/shipments/ShipmentRelationship.json"
   },
   "ShipmentsRelationship": {
-    "$ref": "./schemas/ShipmentsRelationship.json"
+    "$ref": "./schemas/shipments/ShipmentsRelationship.json"
   },
   "ShipmentResource": {
-    "$ref": "./schemas/ShipmentResource.json"
+    "$ref": "./schemas/shipments/ShipmentResource.json"
   },
   "ShipmentResponse": {
-    "$ref": "./schemas/ShipmentResponse.json"
+    "$ref": "./schemas/shipments/ShipmentResponse.json"
   },
   "ShipmentStatus": {
-    "$ref": "./schemas/ShipmentStatus.json"
+    "$ref": "./schemas/shipment-statuses/ShipmentStatus.json"
   },
   "ShipmentStatusRelationship": {
-    "$ref": "./schemas/ShipmentStatusRelationship.json"
+    "$ref": "./schemas/shipment-statuses/ShipmentStatusRelationship.json"
   },
   "ShipmentStatusResource": {
-    "$ref": "./schemas/ShipmentStatusResource.json"
+    "$ref": "./schemas/shipment-statuses/ShipmentStatusResource.json"
   },
   "ShipmentStatusResponse": {
-    "$ref": "./schemas/ShipmentStatusResponse.json"
+    "$ref": "./schemas/shipment-statuses/ShipmentStatusResponse.json"
   },
   "ShipmentSurchargesRelationship": {
-    "$ref": "./schemas/ShipmentSurchargesRelationship.json"
+    "$ref": "./schemas/shipment-surcharges/ShipmentSurchargesRelationship.json"
   },
   "ShipmentSurcharge": {
-    "$ref": "./schemas/ShipmentSurcharge.json"
+    "$ref": "./schemas/shipment-surcharges/ShipmentSurcharge.json"
   },
   "ShipmentSurchargeResource": {
-    "$ref": "./schemas/ShipmentSurchargeResource.json"
+    "$ref": "./schemas/shipment-surcharges/ShipmentSurchargeResource.json"
   },
   "ShipmentSurchargeResponse": {
-    "$ref": "./schemas/ShipmentSurchargeResponse.json"
+    "$ref": "./schemas/shipment-surcharges/ShipmentSurchargeResponse.json"
   },
   "Shop": {
-    "$ref": "./schemas/Shop.json"
+    "$ref": "./schemas/shops/Shop.json"
   },
   "ShopIncludes": {
-    "$ref": "./schemas/ShopIncludes.json"
+    "$ref": "./schemas/shops/ShopIncludes.json"
   },
   "ShopMeta": {
-    "$ref": "./schemas/ShopMeta.json"
+    "$ref": "./schemas/shops/ShopMeta.json"
   },
   "ShopRelationship": {
-    "$ref": "./schemas/ShopRelationship.json"
+    "$ref": "./schemas/shops/ShopRelationship.json"
   },
   "ShopResource": {
-    "$ref": "./schemas/ShopResource.json"
+    "$ref": "./schemas/shops/ShopResource.json"
   },
   "ShopResponse": {
-    "$ref": "./schemas/ShopResponse.json"
+    "$ref": "./schemas/shops/ShopResponse.json"
   },
   "StateCode": {
-    "$ref": "./schemas/StateCode.json"
+    "$ref": "./schemas/addresses/StateCode.json"
   },
   "Status": {
-    "$ref": "./schemas/Status.json"
+    "$ref": "./schemas/statuses/Status.json"
   },
   "StatusRelationship": {
-    "$ref": "./schemas/StatusRelationship.json"
+    "$ref": "./schemas/statuses/StatusRelationship.json"
   },
   "StatusResource": {
-    "$ref": "./schemas/StatusResource.json"
+    "$ref": "./schemas/statuses/StatusResource.json"
   },
   "StatusResponse": {
-    "$ref": "./schemas/StatusResponse.json"
+    "$ref": "./schemas/statuses/StatusResponse.json"
   },
   "Style": {
     "$ref": "./schemas/Style.json"
   },
   "SystemMessage": {
-    "$ref": "./schemas/SystemMessage.json"
+    "$ref": "./schemas/system-messages/SystemMessage.json"
   },
   "SystemMessageResource": {
-    "$ref": "./schemas/SystemMessageResource.json"
+    "$ref": "./schemas/system-messages/SystemMessageResource.json"
   },
   "SystemMessageResponse": {
-    "$ref": "./schemas/SystemMessageResponse.json"
+    "$ref": "./schemas/system-messages/SystemMessageResponse.json"
   },
   "Time": {
-    "$ref": "./schemas/Time.json"
+    "$ref": "./schemas/pickup-dropoff-locations/Time.json"
   },
   "Timestamp": {
     "$ref": "./schemas/Timestamp.json"
   },
   "TrackingCode": {
-    "$ref": "./schemas/TrackingCode.json"
+    "$ref": "./schemas/shipments/TrackingCode.json"
   },
   "TrackingUrl": {
-    "$ref": "./schemas/TrackingUrl.json"
+    "$ref": "./schemas/shipments/TrackingUrl.json"
   },
   "User": {
-    "$ref": "./schemas/User.json"
+    "$ref": "./schemas/users/User.json"
   },
   "UserRelationship": {
-    "$ref": "./schemas/UserRelationship.json"
+    "$ref": "./schemas/users/UserRelationship.json"
   },
   "UserResource": {
-    "$ref": "./schemas/UserResource.json"
+    "$ref": "./schemas/users/UserResource.json"
   },
   "UserResponse": {
-    "$ref": "./schemas/UserResponse.json"
+    "$ref": "./schemas/users/UserResponse.json"
   },
   "Uuid": {
     "$ref": "./schemas/Uuid.json"
@@ -615,15 +606,15 @@
     "$ref": "./schemas/Analytics.json"
   },
   "TaxIdentificationNumber": {
-    "$ref": "./schemas/TaxIdentificationNumber.json"
+    "$ref": "./schemas/organizations/TaxIdentificationNumber.json"
   },
   "Zone": {
-    "$ref": "./schemas/Zone.json"
+    "$ref": "./schemas/zones/Zone.json"
   },
   "ZoneResource": {
-    "$ref": "./schemas/ZoneResource.json"
+    "$ref": "./schemas/zones/ZoneResource.json"
   },
   "ZoneResponse": {
-    "$ref": "./schemas/ZoneResponse.json"
+    "$ref": "./schemas/zones/ZoneResponse.json"
   }
 }
