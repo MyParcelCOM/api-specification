@@ -224,6 +224,12 @@
   "HookTrigger": {
     "$ref": "./schemas/hooks/HookTrigger.json"
   },
+  "ImageMeta": {
+    "$ref": "./schemas/ImageMeta.json"
+  },
+  "ImageUrl": {
+    "$ref": "./schemas/ImageUrl.json"
+  },
   "Integration": {
     "$ref": "./schemas/integrations/Integration.json"
   },
@@ -268,12 +274,6 @@
   },
   "Locale": {
     "$ref": "./schemas/Locale.json"
-  },
-  "LogoMeta": {
-    "$ref": "./schemas/LogoMeta.json"
-  },
-  "LogoUrl": {
-    "$ref": "./schemas/LogoUrl.json"
   },
   "Manifest": {
     "$ref": "./schemas/manifests/Manifest.json"

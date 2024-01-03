@@ -48,7 +48,7 @@
               "$ref": "#/components/schemas/BaseAddress"
             },
             "logo_url": {
-              "$ref": "#/components/schemas/LogoUrl"
+              "$ref": "#/components/schemas/ImageUrl"
             },
             "style": {
               "allOf": [
