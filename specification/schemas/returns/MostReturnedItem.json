@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sku",
+        "name",
+        "amount",
+        "return_reasons"
+      ],
+      "properties": {
+        "sku": {
+          "type": "string",
+          "example": "ABC-123"
+        },
+        "name": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "number"
+        },
+        "return_reasons": {
+          "type": "array",
+          "required": [
+            "code",
+            "name",
+            "amount"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "example": "wrong_size"
+              },
+              "name": {
+                "type": "string",
+                "example": "Wrong Size"
+              },
+              "amount": {
+                "type": "number",
+                "example": 10
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
