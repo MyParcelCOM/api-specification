@@ -11,7 +11,7 @@
       }
     ],
     "summary": "Get the most returned items.",
-    "description": "This endpoint retrieves the amount of approved returns per date.",
+    "description": "This endpoint retrieves the most returned items and their return reasons.",
     "parameters": [
       {
         "$ref": "#/components/parameters/query-filter-shop"
