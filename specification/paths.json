@@ -266,11 +266,14 @@
   "/multi-colli-shipments": {
     "$ref": "./paths/MultiColliShipments.json"
   },
-  "/payments/v1/providers/mollie/authorization": {
-    "$ref": "./paths/Payments-v1-providers-mollie-authorization.json"
+  "/payments/v1/providers/{code}/connect": {
+    "$ref": "./paths/Payments-v1-providers-code-connect.json"
   },
-  "/payments/v1/providers/mollie/disconnect": {
-    "$ref": "./paths/Payments-v1-providers-mollie-disconnect.json"
+  "/payments/v1/providers/{code}/disconnect": {
+    "$ref": "./paths/Payments-v1-providers-code-disconnect.json"
+  },
+  "/payments/v1/providers": {
+    "$ref": "./paths/Payments-v1-providers.json"
   },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"

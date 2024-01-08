@@ -1,7 +1,7 @@
 {
   "post": {
     "tags": [
-      "Payments"
+      "PaymentProviders"
     ],
     "security": [
       {
@@ -10,10 +10,10 @@
         ]
       }
     ],
-    "summary": "Request an authorization url from Mollie.",
-    "description": "This endpoint returns an authorization url to connect Mollie to your shop.",
+    "summary": "Connect to a payment provider.",
+    "description": "This endpoint connects a payment provider to your shop.",
     "requestBody": {
-      "description": "The shop ID to connect with.",
+      "description": "The shop ID and other settings to use for the connection.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -36,6 +36,16 @@
                     "format": "uuid",
                     "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
                     "example": "4067e35b-09cc-42b9-8553-6eaf1788df35"
+                  },
+                  "settings": {
+                    "type": "object",
+                    "description": "The settings to use for the connection. See the payment provider's settings_format for details."
+                  },
+                  "redirect_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The URL to redirect to after the user has authorized the connection. Required only for payment providers that authorize through OAuth2.",
+                    "example": "https://example.com/mollie/oauth/callback"
                   }
                 }
               }
@@ -45,8 +55,11 @@
       }
     },
     "responses": {
+      "204": {
+        "description": "The payment provider was connected successfully."
+      },
       "201": {
-        "description": "The Mollie authorization url.",
+        "description": "The payment provider requires authorization through OAuth2. The authorization URL is returned in the response body.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
