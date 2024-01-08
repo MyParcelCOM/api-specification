@@ -230,6 +230,9 @@
   "/returns/v1/analytics/approved": {
     "$ref": "./paths/Returns-v1-analytics-approved.json"
   },
+  "/returns/v1/analytics/most-returned-items": {
+    "$ref": "./paths/Returns-v1-analytics-most_returned_items.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },

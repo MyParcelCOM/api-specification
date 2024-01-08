@@ -1,0 +1,44 @@
+{
+  "get": {
+    "tags": [
+      "ReturnAnalytics"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get the most returned items.",
+    "description": "This endpoint retrieves the most returned items and their return reasons.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/query-filter-shop"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the most returned items.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MostReturnedItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

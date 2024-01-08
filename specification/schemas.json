@@ -290,6 +290,9 @@
   "ManifestResponse": {
     "$ref": "./schemas/manifests/ManifestResponse.json"
   },
+  "MostReturnedItem": {
+    "$ref": "./schemas/returns/MostReturnedItem.json"
+  },
   "Order": {
     "$ref": "./schemas/return-orders/Order.json"
   },
