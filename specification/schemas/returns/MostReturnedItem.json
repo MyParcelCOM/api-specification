@@ -24,12 +24,12 @@
         },
         "return_reasons": {
           "type": "array",
-          "required": [
-            "code",
-            "name",
-            "amount"
-          ],
           "items": {
+            "required": [
+              "code",
+              "name",
+              "amount"
+            ],
             "type": "object",
             "properties": {
               "code": {
