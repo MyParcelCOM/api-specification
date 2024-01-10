@@ -47,16 +47,11 @@
                 "links": {
                   "type": "object",
                   "required": [
-                    "self",
                     "first",
                     "last"
                   ],
                   "additionalProperties": false,
                   "properties": {
-                    "self": {
-                      "type": "string",
-                      "example": "$API_HOST/payments/v1/providers?page[number]=3&page[size]=30"
-                    },
                     "first": {
                       "type": "string",
                       "example": "$API_HOST/payments/v1/providers?page[number]=1&page[size]=30"
