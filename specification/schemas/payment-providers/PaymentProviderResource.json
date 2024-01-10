@@ -6,8 +6,8 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^returns$",
-      "example": "returns"
+      "pattern": "^payment-providers$",
+      "example": "payment-providers"
     },
     "id": {
       "type": "string",
