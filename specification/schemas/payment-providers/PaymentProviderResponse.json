@@ -18,7 +18,6 @@
             "readme_url",
             "logo_url",
             "connects_through_oauth2",
-            "settings_format",
             "created_at"
           ]
         }
