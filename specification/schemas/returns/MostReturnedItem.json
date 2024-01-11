@@ -1,6 +1,10 @@
 {
   "type": "object",
   "additionalProperties": false,
+  "required": [
+    "item",
+    "return_reasons"
+  ],
   "properties": {
     "item": {
       "type": "object",
@@ -8,8 +12,7 @@
       "required": [
         "sku",
         "name",
-        "amount",
-        "return_reasons"
+        "amount"
       ],
       "properties": {
         "sku": {
@@ -21,30 +24,30 @@
         },
         "amount": {
           "type": "number"
-        },
-        "return_reasons": {
-          "type": "array",
-          "items": {
-            "required": [
-              "code",
-              "name",
-              "amount"
-            ],
-            "type": "object",
-            "properties": {
-              "code": {
-                "type": "string",
-                "example": "wrong_size"
-              },
-              "name": {
-                "type": "string",
-                "example": "Wrong Size"
-              },
-              "amount": {
-                "type": "number",
-                "example": 10
-              }
-            }
+        }
+      }
+    },
+    "return_reasons": {
+      "type": "array",
+      "items": {
+        "required": [
+          "code",
+          "name",
+          "amount"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "example": "wrong_size"
+          },
+          "name": {
+            "type": "string",
+            "example": "Wrong Size"
+          },
+          "amount": {
+            "type": "number",
+            "example": 10
           }
         }
       }
