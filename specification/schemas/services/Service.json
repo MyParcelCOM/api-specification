@@ -44,7 +44,16 @@
             "delivery_days": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Day"
+                "type": "string",
+                "enum": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ]
               },
               "example": [
                 "Monday",

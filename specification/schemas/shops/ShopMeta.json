@@ -8,7 +8,7 @@
           "description": "<strong>Deprecated</strong> use `branding` instead."
         },
         {
-          "$ref": "#/components/schemas/LogoMeta"
+          "$ref": "#/components/schemas/ImageMeta"
         }
       ]
     },
@@ -19,7 +19,10 @@
           "type": "object",
           "properties": {
             "logo": {
-              "$ref": "#/components/schemas/LogoMeta"
+              "$ref": "#/components/schemas/ImageMeta"
+            },
+            "banner": {
+              "$ref": "#/components/schemas/ImageMeta"
             }
           }
         },
@@ -27,7 +30,7 @@
           "type": "object",
           "properties": {
             "logo": {
-              "$ref": "#/components/schemas/LogoMeta"
+              "$ref": "#/components/schemas/ImageMeta"
             }
           }
         }
