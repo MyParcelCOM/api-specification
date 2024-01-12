@@ -1,0 +1,27 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/PaymentProvider"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "code",
+            "description",
+            "website_url",
+            "readme_url",
+            "logo_url",
+            "connects_through_oauth2",
+            "created_at"
+          ]
+        }
+      }
+    }
+  ]
+}
