@@ -1,6 +1,11 @@
 {
   "type": "object",
   "additionalProperties": false,
+  "required": [
+    "unit_type",
+    "labels",
+    "datasets"
+  ],
   "properties": {
     "unit_type": {
       "type": "string",
