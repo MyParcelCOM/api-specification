@@ -26,6 +26,10 @@
       "type": "array",
       "items": {
         "type": "object",
+        "required": [
+          "label",
+          "data"
+        ],
         "properties": {
           "label": {
             "type": "string",
