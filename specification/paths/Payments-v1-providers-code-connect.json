@@ -39,7 +39,11 @@
                   },
                   "settings": {
                     "type": "object",
-                    "description": "The settings to use for the connection. See the payment provider's settings_format for details."
+                    "description": "The settings to use for the connection. See the payment provider's settings_format for details.",
+                    "example": {
+                      "api_key": "90249f97832080b6654ae51c4113d0995df324d20eb1281774cdf62e7761",
+                      "profile_number": 34
+                    }
                   },
                   "redirect_url": {
                     "type": "string",
