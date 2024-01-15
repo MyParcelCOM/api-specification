@@ -16,7 +16,7 @@
       {
         "name": "shop_id",
         "in": "query",
-        "description": "When specified only payment providers connected to the given shop are returned.",
+        "description": "When specified, payment providers which are connected to the given shop will include a `\"connected\": true` meta field.",
         "schema": {
           "type": "string"
         }

@@ -20,6 +20,15 @@
             "connects_through_oauth2",
             "created_at"
           ]
+        },
+        "meta": {
+          "properties": {
+            "connected": {
+              "type": "boolean",
+              "example": false,
+              "description": "Indicates if the payment provider is connected to the shop (when shop_id query parameter is provided)"
+            }
+          }
         }
       }
     }
