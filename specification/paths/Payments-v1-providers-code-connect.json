@@ -91,6 +91,12 @@
             }
           }
         }
+      },
+      "404": {
+        "description": "When the shop is not found."
+      },
+      "422": {
+        "description": "When the settings are incorrect against the format specified by the payment provider or when shop is already connected to another payment provider."
       }
     }
   }
