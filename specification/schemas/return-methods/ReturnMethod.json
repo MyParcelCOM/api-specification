@@ -42,6 +42,12 @@
             "contract": {
               "$ref": "#/components/schemas/ContractRelationship"
             },
+            "recovery_contract": {
+              "$ref": "#/components/schemas/ContractRelationship"
+            },
+            "recovery_service": {
+              "$ref": "#/components/schemas/ServiceRelationship"
+            },
             "service": {
               "$ref": "#/components/schemas/ServiceRelationship"
             },
