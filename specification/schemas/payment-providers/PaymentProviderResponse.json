@@ -19,7 +19,9 @@
             "logo_url",
             "connects_through_oauth2",
             "created_at"
-          ],
+          ]
+        },
+        "meta": {
           "properties": {
             "connected": {
               "type": "boolean",
