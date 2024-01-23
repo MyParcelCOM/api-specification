@@ -333,16 +333,6 @@
                 }
               ]
             },
-            "parent": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/ShipmentRelationship"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
             "service": {
               "oneOf": [
                 {
