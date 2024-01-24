@@ -23,7 +23,15 @@
             "return_method",
             "shop",
             "status"
-          ]
+          ],
+          "properties": {
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            },
+            "shipment": {
+              "$ref": "#/components/schemas/ShipmentRelationship"
+            }
+          }
         },
         "links": {
           "readOnly": true,

@@ -401,6 +401,9 @@
   "ReturnResource": {
     "$ref": "./schemas/returns/ReturnResource.json"
   },
+  "ReturnRequest": {
+    "$ref": "./schemas/returns/ReturnRequest.json"
+  },
   "ReturnResponse": {
     "$ref": "./schemas/returns/ReturnResponse.json"
   },
