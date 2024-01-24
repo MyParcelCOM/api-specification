@@ -31,18 +31,19 @@
             "scopes": {
               "addresses.suggest": "Retrieve address suggestions.",
               "broker.member": "Retrieve broker related resources and create organizations for that broker.",
+              "collections.manage": "Manage collection resources.",
+              "collections.view": "Retrieve collection resources.",
               "contracts.manage": "Manage contract resources.",
               "enterprises.manage": "Manage enterprise related resources.",
-              "organizations.manage": "Manage organization related resources on behalf of a single organization or all organizations belonging to a broker.",
+              "finance.manage": "Manage all finance related resources.",
+              "logs.view": "Retrieve audit logs on behalf of a broker.",
+              "organizations.manage": "Manage organization related resources on behalf of a single organization or all organizations belonging to a broker.",,
+              "returns.manage": "Manage all return related resources.",
               "shipments.manage": "Manage shipments on behalf of all shops belonging to an organization or broker.",
               "shipments.view": "Retrieve shipments on behalf of all shops belonging to an organization or broker.",
-              "logs.view": "Retrieve audit logs on behalf of a broker.",
               "system.manage": "Manage all system related resources.",
               "users.manage": "Manage user resources.",
-              "finance.manage": "Manage all finance related resources.",
-              "experimental": "Access to experimental endpoints.",
-              "zones.manage": "Manage zone resources.",
-              "returns.manage": "Manage all return related resources."
+              "zones.manage": "Manage zone resources."
             }
           }
         }

@@ -200,6 +200,9 @@
   "/returns/v1/returns/{return_id}/request-payment": {
     "$ref": "./paths/Returns-v1-returns-return_id-request-payment.json"
   },
+  "/returns/v1/returns/{return_id}/request-recovery-shipment": {
+    "$ref": "./paths/Returns-v1-returns-return_id-request-recovery-shipment.json"
+  },
   "/returns/v1/returns/{return_id}/payment-checkout-url/{payment_id}?hmac={hmac}": {
     "$ref": "./paths/Returns-v1-returns-return_id-payment-checkout-url-payment_id.json"
   },
@@ -266,11 +269,14 @@
   "/multi-colli-shipments": {
     "$ref": "./paths/MultiColliShipments.json"
   },
-  "/payments/v1/providers/mollie/authorization": {
-    "$ref": "./paths/Payments-v1-providers-mollie-authorization.json"
+  "/payments/v1/providers/{code}/connect": {
+    "$ref": "./paths/Payments-v1-providers-code-connect.json"
   },
-  "/payments/v1/providers/mollie/disconnect": {
-    "$ref": "./paths/Payments-v1-providers-mollie-disconnect.json"
+  "/payments/v1/providers/{code}/disconnect": {
+    "$ref": "./paths/Payments-v1-providers-code-disconnect.json"
+  },
+  "/payments/v1/providers": {
+    "$ref": "./paths/Payments-v1-providers.json"
   },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
