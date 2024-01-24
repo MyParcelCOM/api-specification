@@ -326,6 +326,15 @@
   "PasswordResetResource": {
     "$ref": "./schemas/password-resets/PasswordResetResource.json"
   },
+  "PaymentProvider": {
+    "$ref": "./schemas/payment-providers/PaymentProvider.json"
+  },
+  "PaymentProviderResource": {
+    "$ref": "./schemas/payment-providers/PaymentProviderResource.json"
+  },
+  "PaymentProviderResponse": {
+    "$ref": "./schemas/payment-providers/PaymentProviderResponse.json"
+  },
   "PhysicalProperties": {
     "$ref": "./schemas/shipments/PhysicalProperties.json"
   },
@@ -394,6 +403,9 @@
   },
   "ReturnResponse": {
     "$ref": "./schemas/returns/ReturnResponse.json"
+  },
+  "ReturnSimpleResponse": {
+    "$ref": "./schemas/returns/ReturnSimpleResponse.json"
   },
   "ReturnMethod": {
     "$ref": "./schemas/return-methods/ReturnMethod.json"

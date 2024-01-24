@@ -66,7 +66,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReturnResponse"
+                    "$ref": "#/components/schemas/ReturnSimpleResponse"
                   }
                 },
                 "meta": {

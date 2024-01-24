@@ -1,0 +1,40 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Request a recovery shipment for a return.",
+    "description": "This endpoint generates a recovery shipment for a return. This serves as a fallback for when the shipment label of the primary return method cannot be used, for example due to a damaged or missing label that was in the parcel.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/query-hmac"
+      }
+    ],
+    "responses": {
+      "204": {
+        "description": "The recovery shipment is created."
+      },
+      "403": {
+        "description": "The provided HMAC signature is not valid for this return."
+      },
+      "404": {
+        "description": "The provided return was not found."
+      },
+      "422": {
+        "description": "The return method does not support recovery shipments."
+      }
+    }
+  }
+}

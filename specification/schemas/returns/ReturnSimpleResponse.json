@@ -1,0 +1,46 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Return"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "order_reference",
+            "consumer_address",
+            "created_at"
+          ]
+        },
+        "relationships": {
+          "required": [
+            "return_method",
+            "shop",
+            "status"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/returns/v1/returns/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
