@@ -92,40 +92,63 @@
             "registration_retry_after": {
               "$ref": "#/components/schemas/Timestamp"
             },
-            "payments": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "created_at",
-                  "amount",
-                  "currency",
-                  "checkout_url"
-                ],
-                "properties": {
-                  "created_at": {
-                    "$ref": "#/components/schemas/Timestamp"
-                  },
-                  "paid_at": {
-                    "$ref": "#/components/schemas/Timestamp"
-                  },
-                  "amount": {
-                    "$ref": "#/components/schemas/PriceAmount"
-                  },
-                  "currency": {
-                    "$ref": "#/components/schemas/Currency"
-                  },
-                  "external_payment_id": {
-                    "type": "string",
-                    "format": "uuid",
-                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
-                    "description": "The UUID of the Payment in Mollie"
-                  },
-                  "checkout_url": {
-                    "type": "string",
-                    "format": "url",
-                    "description": "The URL to the payment checkout page",
-                    "example": "https://return.myparcel.com/My+Shop/11cc569c-4c4f-4a79-a52e-e4674b57b38e/payment/8ddfb83f-d600-49c7-b10e-66dd4dc7686a?hmac=0c504364df9d812f40b577c340bd66302a0062a52329d87372f0a32a73ab5658"
+            "payment": {
+              "type": "object",
+              "required": [
+                "created_at",
+                "amount",
+                "currency",
+                "checkout_url"
+              ],
+              "properties": {
+                "created_at": {
+                  "$ref": "#/components/schemas/Timestamp"
+                },
+                "paid_at": {
+                  "$ref": "#/components/schemas/Timestamp"
+                },
+                "amount": {
+                  "$ref": "#/components/schemas/PriceAmount"
+                },
+                "currency": {
+                  "$ref": "#/components/schemas/Currency"
+                },
+                "external_payment_id": {
+                  "type": "string",
+                  "format": "uuid",
+                  "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                  "description": "The UUID of the Payment in Mollie"
+                },
+                "checkout_url": {
+                  "type": "string",
+                  "format": "url",
+                  "description": "The URL to the payment checkout page",
+                  "example": "https://return.myparcel.com/My+Shop/11cc569c-4c4f-4a79-a52e-e4674b57b38e/payment/8ddfb83f-d600-49c7-b10e-66dd4dc7686a?hmac=0c504364df9d812f40b577c340bd66302a0062a52329d87372f0a32a73ab5658"
+                },
+                "failures": {
+                  "type": "array",
+                  "description": "A list of payment failures",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "created_at",
+                      "code"
+                    ],
+                    "properties": {
+                      "code": {
+                        "type": "string",
+                        "enum": ["failed", "cancelled", "expired"],
+                        "example": "failed"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "The reason why the payment failed",
+                        "example": "Payment failed due to insufficient funds"
+                      },
+                      "created_at": {
+                        "$ref": "#/components/schemas/Timestamp"
+                      }
+                    }
                   }
                 }
               }
