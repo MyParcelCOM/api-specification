@@ -7,7 +7,6 @@
       "properties": {
         "attributes": {
           "type": "object",
-          "additionalProperties": false,
           "properties": {
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
@@ -32,30 +31,17 @@
                   ]
                 }
               ]
-            },
-            "items": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReturnItem"
-              }
             }
           }
         },
         "relationships": {
           "type": "object",
-          "additionalProperties": false,
           "properties": {
             "return_method": {
               "$ref": "#/components/schemas/ReturnMethodRelationship"
             },
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
-            },
-            "status": {
-              "$ref": "#/components/schemas/StatusRelationship"
-            },
-            "shipment": {
-              "$ref": "#/components/schemas/ShipmentRelationship"
             }
           }
         }

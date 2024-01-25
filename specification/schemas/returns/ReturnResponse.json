@@ -20,25 +20,33 @@
           ],
           "properties": {
             "items": {
+              "type": "array",
               "items": {
-                "type": "object",
-                "properties": {
-                  "reason": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReturnItem"
+                  },
+                  {
+                    "type": "object",
                     "properties": {
-                      "attachments": {
-                        "items": {
-                          "properties": {
-                            "url": {
-                              "type": "string",
-                              "description": "A URL to the location where the image is saved",
-                              "example": "https://cdn.myparcel.com/images/my-broken-return-item.jpg"
+                      "reason": {
+                        "properties": {
+                          "attachments": {
+                            "items": {
+                              "properties": {
+                                "url": {
+                                  "type": "string",
+                                  "description": "A URL to the location where the image is saved",
+                                  "example": "https://cdn.myparcel.com/images/my-broken-return-item.jpg"
+                                }
+                              }
                             }
                           }
                         }
                       }
                     }
                   }
-                }
+                ]
               }
             },
             "shipment_registrations": {
@@ -129,7 +137,15 @@
             "return_method",
             "shop",
             "status"
-          ]
+          ],
+          "properties": {
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            },
+            "shipment": {
+              "$ref": "#/components/schemas/ShipmentRelationship"
+            }
+          }
         },
         "links": {
           "readOnly": true,

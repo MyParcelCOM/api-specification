@@ -401,8 +401,14 @@
   "ReturnResource": {
     "$ref": "./schemas/returns/ReturnResource.json"
   },
+  "ReturnRequest": {
+    "$ref": "./schemas/returns/ReturnRequest.json"
+  },
   "ReturnResponse": {
     "$ref": "./schemas/returns/ReturnResponse.json"
+  },
+  "ReturnSimpleResponse": {
+    "$ref": "./schemas/returns/ReturnSimpleResponse.json"
   },
   "ReturnMethod": {
     "$ref": "./schemas/return-methods/ReturnMethod.json"
