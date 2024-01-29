@@ -53,47 +53,39 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "shipment": {
-              "type": "object",
-              "additionalProperties": false,
-              "required": [
-                "status"
+            "shipment_tracking_code": {
+              "type": "string",
+              "description": "Tracking code of the shipment",
+              "example": "3SABCD0123456789"
+            },
+            "shipment_status_code": {
+              "type": "string",
+              "enum": [
+                "shipment-at-parcel-shop",
+                "shipment-at-sorting",
+                "shipment-concept",
+                "shipment-created-without-label",
+                "shipment-created-without-tracking",
+                "shipment-delivered",
+                "shipment-failed",
+                "shipment-on-the-way-to-hub",
+                "shipment-processing",
+                "shipment-received-by-carrier",
+                "shipment-registered",
+                "shipment-registration-failed",
+                "shipment-returned-to-sender",
+                "shipment-voided",
+                "shipment-with-courier"
               ],
-              "properties": {
-                "tracking_code": {
-                  "type": "string",
-                  "description": "Tracking code of the shipment",
-                  "example": "3SDFGDFGDFGDFG"
-                },
-                "status": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "code": {
-                      "type": "string",
-                      "enum": [
-                        "shipment-at-parcel-shop",
-                        "shipment-at-sorting",
-                        "shipment-concept",
-                        "shipment-created-without-label",
-                        "shipment-created-without-tracking",
-                        "shipment-delivered",
-                        "shipment-failed",
-                        "shipment-on-the-way-to-hub",
-                        "shipment-processing",
-                        "shipment-received-by-carrier",
-                        "shipment-registered",
-                        "shipment-registration-failed",
-                        "shipment-returned-to-sender",
-                        "shipment-voided",
-                        "shipment-with-courier"
-                      ],
-                      "description": "Status code of the shipment",
-                      "example": "shipment-registered"
-                    }
-                  }
-                }
-              }
+              "description": "Status code of the shipment",
+              "example": "shipment-registered"
+            },
+            "shipment_status_level": {
+              "$ref": "#/components/schemas/StatusLevel"
+            },
+            "shipment_status_name": {
+              "type": "string",
+              "example": "Delivered"
             }
           }
         }
