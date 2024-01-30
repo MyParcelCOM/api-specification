@@ -54,9 +54,7 @@
           "additionalProperties": false,
           "properties": {
             "shipment_tracking_code": {
-              "type": "string",
-              "description": "Tracking code of the shipment",
-              "example": "3SABCD0123456789"
+              "$ref": "#/components/schemas/TrackingCode"
             },
             "shipment_status_code": {
               "type": "string",
