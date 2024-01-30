@@ -62,15 +62,7 @@
               "description": "Resource type this status can be applied to."
             },
             "level": {
-              "type": "string",
-              "enum": [
-                "cancelled",
-                "failed",
-                "in-progress",
-                "pending",
-                "success"
-              ],
-              "example": "success"
+              "$ref": "#/components/schemas/StatusLevel"
             },
             "name": {
               "type": "string",

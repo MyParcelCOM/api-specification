@@ -47,6 +47,45 @@
               "example": "$API_HOST/returns/v1/returns/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
             }
           }
+        },
+        "meta": {
+          "readOnly": true,
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "shipment_tracking_code": {
+              "$ref": "#/components/schemas/TrackingCode"
+            },
+            "shipment_status_code": {
+              "type": "string",
+              "enum": [
+                "shipment-at-parcel-shop",
+                "shipment-at-sorting",
+                "shipment-concept",
+                "shipment-created-without-label",
+                "shipment-created-without-tracking",
+                "shipment-delivered",
+                "shipment-failed",
+                "shipment-on-the-way-to-hub",
+                "shipment-processing",
+                "shipment-received-by-carrier",
+                "shipment-registered",
+                "shipment-registration-failed",
+                "shipment-returned-to-sender",
+                "shipment-voided",
+                "shipment-with-courier"
+              ],
+              "description": "Status code of the shipment",
+              "example": "shipment-registered"
+            },
+            "shipment_status_level": {
+              "$ref": "#/components/schemas/StatusLevel"
+            },
+            "shipment_status_name": {
+              "type": "string",
+              "example": "Delivered"
+            }
+          }
         }
       }
     }
