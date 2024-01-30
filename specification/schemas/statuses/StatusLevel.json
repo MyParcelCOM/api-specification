@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "enum": [
+    "cancelled",
+    "failed",
+    "in-progress",
+    "pending",
+    "success"
+  ],
+  "example": "success"
+}

@@ -569,6 +569,9 @@
   "Status": {
     "$ref": "./schemas/statuses/Status.json"
   },
+  "StatusLevel": {
+    "$ref": "./schemas/statuses/StatusLevel.json"
+  },
   "StatusRelationship": {
     "$ref": "./schemas/statuses/StatusRelationship.json"
   },
