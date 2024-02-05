@@ -428,6 +428,9 @@
   "ReturnMethodRelationship": {
     "$ref": "./schemas/return-methods/ReturnMethodRelationship.json"
   },
+  "UpdateReturnReason": {
+    "$ref": "./schemas/return-reasons/UpdateReturnReason.json"
+  },
   "ReturnReason": {
     "$ref": "./schemas/return-reasons/ReturnReason.json"
   },
