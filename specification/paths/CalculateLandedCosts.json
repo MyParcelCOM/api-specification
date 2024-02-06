@@ -54,7 +54,14 @@
                     "description": "Weight in grams."
                   },
                   "shipping_value": {
-                    "$ref": "#/components/schemas/Price"
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Price"
+                      },
+                      {
+                        "description": "The `total_tax` and `total_duty` are calculated from all `items` passed. This `shipping_value` is for any value that is not covered by the items, such as the packaging or postage fees."
+                      }
+                    ]
                   },
                   "items": {
                     "type": "array",
