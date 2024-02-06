@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "unit_type",
+    "labels",
+    "datasets"
+  ],
+  "properties": {
+    "unit_type": {
+      "type": "string",
+      "example": "amount",
+      "enum": [
+        "amount"
+      ]
+    },
+    "labels": {
+      "type": "array",
+      "description": "List of all chart labels on the X axis",
+      "items": {
+        "type": "string",
+        "example": "2024-01-03"
+      }
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "data"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Name of the marketplace",
+            "example": "Magento 2"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "int",
+              "description": "Order count for the selected date interval",
+              "example": 102
+            }
+          }
+        }
+      }
+    }
+  }
+}
