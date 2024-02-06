@@ -75,7 +75,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnReason"
+                    "$ref": "#/components/schemas/UpdateReturnReason"
                   },
                   {
                     "required": [
