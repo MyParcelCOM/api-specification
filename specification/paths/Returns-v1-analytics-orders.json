@@ -1,0 +1,59 @@
+{
+  "get": {
+    "tags": [
+      "ReturnAnalytics"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get histogram of marketplace orders count.",
+    "description": "This endpoint retrieves the number of orders per date interval (day or month).",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/query-filter-shop"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-date_from"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-date_to"
+      },
+      {
+        "name": "group_by",
+        "in": "query",
+        "description": "Indicates whether to group orders count by date or month.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "day",
+            "month"
+          ]
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the analytics data in timeseries.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/OrderAnalytics"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

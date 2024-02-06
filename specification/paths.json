@@ -236,6 +236,9 @@
   "/returns/v1/analytics/most-returned-items": {
     "$ref": "./paths/Returns-v1-analytics-most_returned_items.json"
   },
+  "/returns/v1/analytics/orders": {
+    "$ref": "./paths/Returns-v1-analytics-orders.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },
