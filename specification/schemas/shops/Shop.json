@@ -55,6 +55,11 @@
                 "returns": {
                   "type": "object",
                   "properties": {
+                    "domain": {
+                      "type": "string",
+                      "example": "my-return-domain.com",
+                      "description": "The domain where the return portal for this shop is hosted."
+                    },
                     "logo_url": {
                       "$ref": "#/components/schemas/ImageUrl"
                     },
