@@ -296,6 +296,9 @@
   "Order": {
     "$ref": "./schemas/return-orders/Order.json"
   },
+  "OrderAnalytics": {
+    "$ref": "./schemas/integrations/OrderAnalytics.json"
+  },
   "OrderItem": {
     "$ref": "./schemas/return-orders/OrderItem.json"
   },
@@ -427,6 +430,9 @@
   },
   "ReturnMethodRelationship": {
     "$ref": "./schemas/return-methods/ReturnMethodRelationship.json"
+  },
+  "UpdateReturnReason": {
+    "$ref": "./schemas/return-reasons/UpdateReturnReason.json"
   },
   "ReturnReason": {
     "$ref": "./schemas/return-reasons/ReturnReason.json"
