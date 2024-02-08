@@ -22,6 +22,10 @@
         "name": {
           "type": "string"
         },
+        "image_url": {
+          "type": "string",
+          "format": "uri"
+        },
         "amount": {
           "type": "number"
         }
