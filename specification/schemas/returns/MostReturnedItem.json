@@ -12,7 +12,6 @@
       "required": [
         "sku",
         "name",
-        "image_url",
         "amount"
       ],
       "properties": {
