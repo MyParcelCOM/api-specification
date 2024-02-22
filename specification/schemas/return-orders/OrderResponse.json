@@ -7,7 +7,8 @@
       "required": [
         "id",
         "attributes",
-        "relationships"
+        "relationships",
+        "meta"
       ],
       "properties": {
         "attributes": {
@@ -48,6 +49,11 @@
         "meta": {
           "type": "object",
           "additionalProperties": false,
+          "description": "Properties indicating whether the order was sent with a shipping method that supports returning the shipment with a previously provided label",
+          "required": [
+            "shipping_and_return",
+            "label_in_the_box"
+          ],
           "properties": {
             "shipping_and_return": {
               "type": "boolean"
