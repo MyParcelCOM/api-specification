@@ -52,6 +52,14 @@
         }
       },
       {
+        "name": "filter[returns_domain]",
+        "in": "query",
+        "description": "Find shop by exact returns domain match",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "name": "include",
         "in": "query",
         "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`organization`</li></ul>",
