@@ -1,0 +1,51 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-collection_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-file_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Collections"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "collections.manage"
+        ]
+      }
+    ],
+    "summary": "Get a file related to a collection.",
+    "description": "This endpoint retrieves a file of the supplied collection.",
+    "parameters": [
+      {
+        "name": "Accept",
+        "in": "header",
+        "description": "You must set the accept header to retrieve the file in the given format. Possible options are: <ul><li>`application/pdf`</li></ul>",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "application/pdf"
+          ]
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the file.",
+        "content": {
+          "application/pdf": {
+            "schema": {
+              "type": "string",
+              "description": "Raw contents of the PDF file."
+            }
+          }
+        }
+      }
+    }
+  }
+}
