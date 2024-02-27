@@ -62,6 +62,9 @@
   "/collections/{collection_id}": {
     "$ref": "./paths/Collections-collection_id.json"
   },
+  "/collections/{collection_id}/files/{file_id}": {
+    "$ref": "./paths/Collections-collection_id-Files-file_id.json"
+  },
   "/collection-schedules": {
     "$ref": "./paths/CollectionSchedules.json"
   },
