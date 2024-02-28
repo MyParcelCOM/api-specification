@@ -43,6 +43,12 @@
               "example": "mailto:info@myparcel.com",
               "description": "URL to create a new support ticket or mailto: link with email address"
             },
+            "return_portal_domain": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "https://return.myparcel.com",
+              "description": "Personal domain that will redirect requests to MyParcel.com's Return portal"
+            },
             "style": {
               "$ref": "#/components/schemas/Style"
             }
