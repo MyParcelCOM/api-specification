@@ -16,6 +16,11 @@
         "OAuth2": [
           "collections.manage"
         ]
+      },
+      {
+        "OAuth2": [
+          "collections.view"
+        ]
       }
     ],
     "summary": "Get a file related to a collection.",
