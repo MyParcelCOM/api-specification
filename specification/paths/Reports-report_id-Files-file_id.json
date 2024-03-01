@@ -46,7 +46,7 @@
           "text/csv": {
             "schema": {
               "type": "string",
-              "description": "Base64 encoded contents of the CSV file."
+              "description": "Raw contents of the CSV file."
             }
           }
         }
