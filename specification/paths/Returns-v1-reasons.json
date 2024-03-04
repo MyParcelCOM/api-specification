@@ -20,6 +20,15 @@
     "parameters": [
       {
         "$ref": "#/components/parameters/query-filter-tags"
+      },
+      {
+        "in": "header",
+        "name": "Accept-Language",
+        "schema": {
+          "type": "string"
+        },
+        "description": "Description of your optional header",
+        "required": false
       }
     ],
     "responses": {
@@ -110,7 +119,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnReason"
+                    "$ref": "#/components/schemas/CreateReturnReason"
                   },
                   {
                     "required": [
@@ -122,6 +131,7 @@
                       },
                       "attributes": {
                         "required": [
+                          "code",
                           "description",
                           "accepts_attachments",
                           "requires_attachments",

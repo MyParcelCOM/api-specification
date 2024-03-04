@@ -33,7 +33,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReturnReasonResponse"
+                    "$ref": "#/components/schemas/ShopReturnReasonResponse"
                   }
                 },
                 "meta": {
