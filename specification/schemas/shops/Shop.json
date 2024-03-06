@@ -79,6 +79,24 @@
                       "maxLength": 7,
                       "example": "#fdb915",
                       "description": "RGB color code in #-hexadecimal notation."
+                    },
+                    "hide_product_details": {
+                      "type": "boolean",
+                      "example": false,
+                      "default": false,
+                      "description": "Whether to hide the details of an order's products on the return portal."
+                    },
+                    "hide_product_description": {
+                      "type": "boolean",
+                      "example": false,
+                      "default": false,
+                      "description": "Whether to hide the description of an order's products on the return portal."
+                    },
+                    "hide_product_price": {
+                      "type": "boolean",
+                      "example": false,
+                      "default": false,
+                      "description": "Whether to hide the price of an order's products on the return portal."
                     }
                   },
                   "description": "Custom branding for your MyParcel.com return portal."
