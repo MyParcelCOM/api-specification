@@ -530,6 +530,9 @@
   "ShipmentStatus": {
     "$ref": "./schemas/shipment-statuses/ShipmentStatus.json"
   },
+  "ShipmentStatusIncludes": {
+    "$ref": "./schemas/shipment-statuses/ShipmentStatusIncludes.json"
+  },
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/shipment-statuses/ShipmentStatusRelationship.json"
   },
