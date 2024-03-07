@@ -17,6 +17,25 @@
     ],
     "summary": "Get all return reasons for the given shop.",
     "description": "This endpoint retrieves return reasons for the given shop.",
+    "parameters": [
+      {
+        "in": "header",
+        "name": "Accept-Language",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "de-DE",
+            "en-GB",
+            "it-IT",
+            "nl-NL",
+            "*"
+          ]
+        },
+        "description": "Determines the language in which the ``description`` is returned. Value must be <a href=\"https://en.wikipedia.org/wiki/Language_localisation#Language_tags_and_codes\" target=\"_blank\">ISO 3166-1 alpha-2 compliant</a> (for example: ``en-GB``, ``nl-NL``)",
+        "example": "en-GB",
+        "required": false
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the return reasons for the given shop.",

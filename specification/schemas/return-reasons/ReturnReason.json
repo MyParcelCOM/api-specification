@@ -25,7 +25,7 @@
                   "$ref": "#/components/schemas/ReturnReasonManagementDescription"
                 }
               ],
-              "description": "The value of the Accept-Language header determines the language in which the description is returned. If the Accept-Language header is missing, we default to 'en-GB'. If the User has the 'return_reasons.manage' scope and the Accept-Language header is missing, all localized descriptions will be returned in a key/value object."
+              "description": "The value of the ``Accept-Language`` header determines the language in which the description is returned. If the ``Accept-Language`` header is missing, we default to ``en-GB``. If the User has the ``return_reasons.manage`` scope and the ``Accept-Language`` header is set to ``*``, all descriptions will be returned in a key/value object."
             },
             "tags": {
               "type": "array",

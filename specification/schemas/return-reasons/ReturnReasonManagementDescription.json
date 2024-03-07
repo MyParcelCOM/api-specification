@@ -4,7 +4,7 @@
   "patternProperties": {
     "^[a-z]{2}-[A-Z]{2}$": {
       "type": "string",
-      "description": "Translation key/value pairs. Keys are <a href=\"https://en.wikipedia.org/wiki/Language_localisation#Language_tags_and_codes\" target=\"_blank\">ISO 3166-1 alpha-2 compliant language tags</a> (for example: 'en-GB', 'nl-NL'). Values are the localized descriptions of the return reason."
+      "description": "Translation key/value pairs. Keys are [ISO 3166-1 alpha-2 compliant language tags](https://en.wikipedia.org/wiki/Language_localisation#Language_tags_and_codes) (for example: ``en-GB``, ``nl-NL``). Values are the localized descriptions of the return reason."
     }
   },
   "additionalProperties": false,
