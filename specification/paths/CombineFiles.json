@@ -77,7 +77,7 @@
           "text/plain": {
             "schema": {
               "type": "string",
-              "description": "Base64 encoded contents of the combined file."
+              "description": "Raw contents of the combined file."
             }
           }
         }

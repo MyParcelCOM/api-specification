@@ -1,7 +1,7 @@
 {
   "parameters": [
     {
-      "$ref": "#/components/parameters/path-report_id"
+      "$ref": "#/components/parameters/path-collection_id"
     },
     {
       "$ref": "#/components/parameters/path-file_id"
@@ -9,32 +9,32 @@
   ],
   "get": {
     "tags": [
-      "Reports"
+      "Collections"
     ],
     "security": [
       {
         "OAuth2": [
-          "shipments.manage"
+          "collections.manage"
         ]
       },
       {
         "OAuth2": [
-          "shipments.view"
+          "collections.view"
         ]
       }
     ],
-    "summary": "Get a file related to a report.",
-    "description": "This endpoint retrieves the file of the supplied report. All successfully completed reports will have an attached CSV file.",
+    "summary": "Get a file related to a collection.",
+    "description": "This endpoint retrieves a file of the supplied collection.",
     "parameters": [
       {
         "name": "Accept",
         "in": "header",
-        "description": "You must set the accept header to retrieve the file in the given format. Possible options are: <ul><li>`text/csv`</li></ul>",
+        "description": "You must set the accept header to retrieve the file in the given format. Possible options are: <ul><li>`application/pdf`</li></ul>",
         "required": true,
         "schema": {
           "type": "string",
           "enum": [
-            "text/csv"
+            "application/pdf"
           ]
         }
       }
@@ -43,10 +43,10 @@
       "200": {
         "description": "Retrieved the file.",
         "content": {
-          "text/csv": {
+          "application/pdf": {
             "schema": {
               "type": "string",
-              "description": "Raw contents of the CSV file."
+              "description": "Raw contents of the PDF file."
             }
           }
         }
