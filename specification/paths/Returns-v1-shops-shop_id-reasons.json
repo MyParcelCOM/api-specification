@@ -17,6 +17,11 @@
     ],
     "summary": "Get all return reasons for the given shop.",
     "description": "This endpoint retrieves return reasons for the given shop.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-accept-language"
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the return reasons for the given shop.",
@@ -33,7 +38,7 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ReturnReasonResponse"
+                    "$ref": "#/components/schemas/ShopReturnReasonResponse"
                   }
                 },
                 "meta": {

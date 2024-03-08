@@ -1,0 +1,41 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ShopReturnReason"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "code",
+            "description",
+            "accepts_attachments",
+            "requires_attachments",
+            "accepts_comment",
+            "requires_comment"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/returns/v1/reasons/090b1a04-8f22-440e-930c-e72e6ce36b56"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

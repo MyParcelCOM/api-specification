@@ -1,4 +1,7 @@
 {
+  "header-accept-language": {
+    "$ref": "./parameters/header-accept-language.json"
+  },
   "header-files": {
     "$ref": "./parameters/header-files.json"
   },

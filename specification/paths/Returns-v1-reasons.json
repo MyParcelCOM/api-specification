@@ -20,6 +20,9 @@
     "parameters": [
       {
         "$ref": "#/components/parameters/query-filter-tags"
+      },
+      {
+        "$ref": "#/components/parameters/header-accept-language"
       }
     ],
     "responses": {
@@ -110,7 +113,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnReason"
+                    "$ref": "#/components/schemas/CreateReturnReason"
                   },
                   {
                     "required": [
@@ -122,6 +125,7 @@
                       },
                       "attributes": {
                         "required": [
+                          "code",
                           "description",
                           "accepts_attachments",
                           "requires_attachments",
