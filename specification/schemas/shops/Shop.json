@@ -80,11 +80,11 @@
                       "example": "#fdb915",
                       "description": "RGB color code in #-hexadecimal notation."
                     },
-                    "hide_product_details": {
+                    "hide_product_features": {
                       "type": "boolean",
                       "example": false,
                       "default": false,
-                      "description": "Whether to hide the details of an order's products on the return portal."
+                      "description": "Whether to hide the features of an order's products on the return portal."
                     },
                     "hide_product_description": {
                       "type": "boolean",
