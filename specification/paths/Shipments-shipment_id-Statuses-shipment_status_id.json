@@ -53,6 +53,9 @@
               "properties": {
                 "data": {
                   "$ref": "#/components/schemas/ShipmentStatusResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ShipmentStatusIncludes"
                 }
               }
             }
