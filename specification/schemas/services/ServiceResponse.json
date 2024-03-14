@@ -21,7 +21,9 @@
             "regions_from",
             "regions_to",
             "uses_volumetric_weight",
-            "strict_consolidation"
+            "strict_consolidation",
+            "is_label_in_the_box",
+            "is_shipping_and_return"
           ]
         },
         "relationships": {
