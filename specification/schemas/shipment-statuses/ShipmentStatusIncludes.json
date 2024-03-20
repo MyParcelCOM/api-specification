@@ -1,0 +1,13 @@
+{
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "$ref": "#/components/schemas/ShipmentResponse"
+      },
+      {
+        "$ref": "#/components/schemas/StatusResponse"
+      }
+    ]
+  }
+}

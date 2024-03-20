@@ -59,6 +59,9 @@
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
                 },
+                "included": {
+                  "$ref": "#/components/schemas/ShipmentStatusIncludes"
+                },
                 "links": {
                   "type": "object",
                   "required": [

@@ -116,6 +116,18 @@
               "type": "boolean",
               "example": true,
               "description": "Indicates whether the service is only used for consolidation purposes."
+            },
+            "is_label_in_the_box": {
+              "type": "boolean",
+              "example": false,
+              "default": false,
+              "description": "Indicates whether the service uses an implementation of label in the box, where the return label of a shipment is provided in the shipping box."
+            },
+            "is_shipping_and_return": {
+              "type": "boolean",
+              "example": false,
+              "default": false,
+              "description": "Indicates whether the service uses an implementation of shipping and return, where the shipping label can be reused for returns."
             }
           }
         },

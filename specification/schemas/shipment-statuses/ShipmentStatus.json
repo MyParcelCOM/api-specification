@@ -32,11 +32,11 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "status": {
-              "$ref": "#/components/schemas/StatusRelationship"
-            },
             "shipment": {
               "$ref": "#/components/schemas/ShipmentRelationship"
+            },
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
             }
           }
         }

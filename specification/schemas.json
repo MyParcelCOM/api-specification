@@ -431,11 +431,17 @@
   "ReturnMethodRelationship": {
     "$ref": "./schemas/return-methods/ReturnMethodRelationship.json"
   },
+  "CreateReturnReason": {
+    "$ref": "./schemas/return-reasons/CreateReturnReason.json"
+  },
   "UpdateReturnReason": {
     "$ref": "./schemas/return-reasons/UpdateReturnReason.json"
   },
   "ReturnReason": {
     "$ref": "./schemas/return-reasons/ReturnReason.json"
+  },
+  "ReturnReasonManagementDescription": {
+    "$ref": "./schemas/return-reasons/ReturnReasonManagementDescription.json"
   },
   "ReturnReasonResource": {
     "$ref": "./schemas/return-reasons/ReturnReasonResource.json"
@@ -445,6 +451,12 @@
   },
   "ReturnReasonRelationship": {
     "$ref": "./schemas/return-reasons/ReturnReasonRelationship.json"
+  },
+  "ShopReturnReason": {
+    "$ref": "./schemas/return-reasons/ShopReturnReason.json"
+  },
+  "ShopReturnReasonResponse": {
+    "$ref": "./schemas/return-reasons/ShopReturnReasonResponse.json"
   },
   "ReturnAnalytics": {
     "$ref": "./schemas/returns/ReturnAnalytics.json"
@@ -529,6 +541,9 @@
   },
   "ShipmentStatus": {
     "$ref": "./schemas/shipment-statuses/ShipmentStatus.json"
+  },
+  "ShipmentStatusIncludes": {
+    "$ref": "./schemas/shipment-statuses/ShipmentStatusIncludes.json"
   },
   "ShipmentStatusRelationship": {
     "$ref": "./schemas/shipment-statuses/ShipmentStatusRelationship.json"
