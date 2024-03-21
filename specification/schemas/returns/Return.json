@@ -31,6 +31,17 @@
                   ]
                 }
               ]
+            },
+            "locale": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Locale"
+                },
+                {
+                  "example": "nl-NL",
+                  "description": "The language that is used for emails for this return. Defaults to the shop's locale."
+                }
+              ]
             }
           }
         },
