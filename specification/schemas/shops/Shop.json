@@ -140,6 +140,14 @@
                   "description": "The default language that is used for emails and webpages for this shop."
                 }
               ]
+            },
+            "return_portal_locales": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Locale"
+              },
+              "example": "nl-NL",
+              "description": "The languages that are available to your consumer when they visit the Return portal. Defaults to your shop's locale. The selected locale is used for emails related to returns."
             }
           }
         },
