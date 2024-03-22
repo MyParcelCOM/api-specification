@@ -149,6 +149,12 @@
   "/manifests/{manifest_id}/files/{file_id}": {
     "$ref": "./paths/Manifests-manifest_id-Files-file_id.json"
   },
+  "/onboarding/v1/invitations": {
+    "$ref": "./paths/Onboarding-v1-invitations.json"
+  },
+  "/onboarding/v1/invitations/{invitation_id}": {
+    "$ref": "./paths/Onboarding-v1-invitations-invitation_id.json"
+  },
   "/organizations": {
     "$ref": "./paths/Organizations.json"
   },

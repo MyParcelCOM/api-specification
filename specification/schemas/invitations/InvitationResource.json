@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "pattern": "^invitations$",
+      "example": "invitations"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+      "example": "7c19fd47-9bdb-4d1d-97ba-1e39ee81f1d8"
+    }
+  }
+}
