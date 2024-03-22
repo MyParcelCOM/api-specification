@@ -35,7 +35,7 @@
             "locale": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/Locale"
+                  "$ref": "#/components/schemas/LocaleEnum"
                 },
                 {
                   "example": "nl-NL",

@@ -1,0 +1,101 @@
+{
+  "get": {
+    "tags": [
+      "Locales"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Get all locales.",
+    "description": "This endpoint retrieves all locales.",
+    "parameters": [
+      {
+        "name": "filter[available_in_back_office]",
+        "in": "query",
+        "description": "When set to true, only return languages that are supported by the back office.",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      {
+        "name": "filter[available_in_return_portal]",
+        "in": "query",
+        "description": "When set to true, only return languages that are supported by the return portal.",
+        "schema": {
+          "type": "boolean"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the locales.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LocaleResponse"
+                  },
+                  "properties": {
+                    "attributes": {
+                      "required": [
+                        "code",
+                        "name",
+                        "created_at"
+                      ]
+                    }
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/locales/v1/locales?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/locales/v1/locales?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/locales/v1/locales?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/locales/v1/locales?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/locales/v1/locales?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

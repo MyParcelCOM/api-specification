@@ -140,6 +140,9 @@
   "/liability-coverages/{liability_coverage_id}": {
     "$ref": "./paths/LiabilityCoverage-liability_coverage_id.json"
   },
+  "/locales/v1/locales": {
+    "$ref": "./paths/Locales-v1-locales.json"
+  },
   "/manifests": {
     "$ref": "./paths/Manifests.json"
   },

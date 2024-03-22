@@ -92,6 +92,11 @@
     }
   },
   {
+    "name": "Locales",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "Manifests",
     "externalDocs": {
     }
