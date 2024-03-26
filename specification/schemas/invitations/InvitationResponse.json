@@ -14,24 +14,7 @@
         "attributes": {
           "required": [
             "email"
-          ],
-          "expires_at": {
-            "readOnly": true
-          },
-          "properties": {
-            "first_name": {
-              "type": "string",
-              "example": "Sherlock"
-            },
-            "last_name": {
-              "type": "string",
-              "example": "Holmes"
-            },
-            "email": {
-              "$ref": "#/components/schemas/Email",
-              "example": "s.holmes@holmesinvestigations.com"
-            }
-          }
+          ]
         },
         "relationships": {
           "required": [
