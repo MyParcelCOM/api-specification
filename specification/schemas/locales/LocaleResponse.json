@@ -1,0 +1,21 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Locale"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "code",
+            "name"
+          ]
+        }
+      }
+    }
+  ]
+}

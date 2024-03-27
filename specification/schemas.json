@@ -273,7 +273,16 @@
     "$ref": "./schemas/liability-coverages/LiabilityCoveragesRelationship.json"
   },
   "Locale": {
-    "$ref": "./schemas/Locale.json"
+    "$ref": "./schemas/locales/Locale.json"
+  },
+  "LocaleEnum": {
+    "$ref": "./schemas/locales/LocaleEnum.json"
+  },
+  "LocaleResource": {
+    "$ref": "./schemas/locales/LocaleResource.json"
+  },
+  "LocaleResponse": {
+    "$ref": "./schemas/locales/LocaleResponse.json"
   },
   "Manifest": {
     "$ref": "./schemas/manifests/Manifest.json"
