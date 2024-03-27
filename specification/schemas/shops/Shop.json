@@ -146,7 +146,7 @@
               "items": {
                 "$ref": "#/components/schemas/LocaleEnum"
               },
-              "example": "nl-NL",
+              "example": ["nl-NL"],
               "description": "The languages that are available to your consumer when they visit the Return portal. Defaults to your shop's locale. The selected locale is used for emails related to returns."
             }
           }

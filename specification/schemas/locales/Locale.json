@@ -14,9 +14,6 @@
             "name": {
               "type": "string",
               "example": "English"
-            },
-            "created_at": {
-              "$ref": "#/components/schemas/Timestamp"
             }
           }
         }
