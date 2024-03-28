@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+a[href^="https://docs.myparcel.com"]:before {
+  content: "🔗 ";
+}
+
 img[alt=logo] {
   width: 200px;
 }
