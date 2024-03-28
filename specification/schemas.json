@@ -242,6 +242,18 @@
   "IntegrationsRelationship": {
     "$ref": "./schemas/integrations/IntegrationsRelationship.json"
   },
+  "Invitation": {
+    "$ref": "./schemas/invitations/Invitation.json"
+  },
+  "InvitationResource": {
+    "$ref": "./schemas/invitations/InvitationResource.json"
+  },
+  "InvitationIncludes": {
+    "$ref": "./schemas/invitations/InvitationIncludes.json"
+  },
+  "InvitationResponse": {
+    "$ref": "./schemas/invitations/InvitationResponse.json"
+  },
   "Invoice": {
     "$ref": "./schemas/invoices/Invoice.json"
   },

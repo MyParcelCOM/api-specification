@@ -80,6 +80,11 @@
     }
   },
   {
+    "name": "Invitations",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "Invoices",
     "externalDocs": {
     }

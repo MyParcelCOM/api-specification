@@ -1,0 +1,58 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-invitation_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Invitations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "brokers.manage"
+        ]
+      }
+    ],
+    "summary": "Get an invitation resource.",
+    "description": "This endpoint retrieves a invitation resource by the specified ID.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`broker`</li><li>`user`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the invitation.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/InvitationResponse"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/InvitationIncludes"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No invitation was found for the given ID."
+      }
+    }
+  }
+}
