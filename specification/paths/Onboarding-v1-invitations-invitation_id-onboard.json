@@ -1,0 +1,40 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-invitation_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "RPC"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "brokers.manage"
+        ]
+      }
+    ],
+    "summary": "Start onboarding process.",
+    "description": "This endpoint creates a user based on an invitation.",
+    "requestBody": {
+      "description": "The onboarding request.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/InvitationRequest"
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The user has been onboarded."
+      },
+      "404": {
+        "description": "No invitation was found for the given ID."
+      }
+    }
+  }
+}
