@@ -23,7 +23,72 @@
       "content": {
         "application/vnd.api+json": {
           "schema": {
-            "$ref": "#/components/schemas/InvitationRequest"
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "required": [
+                  "username",
+                  "password",
+                  "first_name",
+                  "last_name",
+                  "email",
+                  "shop_name",
+                  "address"
+                ],
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "example": "Sherlock"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "The best passwords are long, so use a sentence!"
+                  },
+                  "first_name": {
+                    "type": "string",
+                    "example": "Sherlock"
+                  },
+                  "last_name": {
+                    "type": "string",
+                    "example": "Holmes"
+                  },
+                  "email": {
+                    "$ref": "#/components/schemas/Email",
+                    "example": "s.holmes@holmesinvestigations.com"
+                  },
+                  "company": {
+                    "type": "string",
+                    "example": "Holmes Investigations"
+                  },
+                  "phone_number": {
+                    "type": "string",
+                    "example": "+44 20 7946 0958"
+                  },
+                  "shop_name": {
+                    "type": "string",
+                    "example": "Holmes Investigations"
+                  },
+                  "address": {
+                    "required": [
+                      "street_1",
+                      "city",
+                      "country_code"
+                    ]
+                  },
+                  "return_address": {
+                    "required": [
+                      "street_1",
+                      "city",
+                      "country_code"
+                    ]
+                  }
+                }
+              }
+            }
           }
         }
       }
