@@ -73,18 +73,10 @@
                     "example": "Holmes Investigations"
                   },
                   "address": {
-                    "required": [
-                      "street_1",
-                      "city",
-                      "country_code"
-                    ]
+                    "$ref": "#/components/schemas/BaseAddress"
                   },
                   "return_address": {
-                    "required": [
-                      "street_1",
-                      "city",
-                      "country_code"
-                    ]
+                    "$ref": "#/components/schemas/BaseAddress"
                   }
                 }
               }
