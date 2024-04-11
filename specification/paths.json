@@ -374,6 +374,9 @@
   "/update-shipment-status": {
     "$ref": "./paths/UpdateShipmentStatus.json"
   },
+  "/validate-contract": {
+    "$ref": "./paths/ValidateContract.json"
+  },
   "/void-shipment": {
     "$ref": "./paths/VoidShipment.json"
   },
