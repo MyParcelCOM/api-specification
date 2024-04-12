@@ -1,0 +1,55 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-contract_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "Contracts"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "broker.member",
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Validate a contract.",
+    "description": "This `RPC` endpoint allows a user to re-validate a contract without changing its credentials.",
+    "responses": {
+      "200": {
+        "description": "The credential validation has been completed.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "valid"
+                  ],
+                  "properties": {
+                    "valid": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Response from the carrier why the credentials are invalid"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

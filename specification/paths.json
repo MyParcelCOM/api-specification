@@ -80,6 +80,9 @@
   "/contracts/{contract_id}": {
     "$ref": "./paths/Contracts-contract_id.json"
   },
+  "/contracts/{contract_id}/validate": {
+    "$ref": "./paths/Contracts-contract_id-Validate.json"
+  },
   "/combine-files": {
     "$ref": "./paths/CombineFiles.json"
   },
