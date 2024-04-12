@@ -6,7 +6,7 @@
   ],
   "post": {
     "tags": [
-      "RPC"
+      "Invitations"
     ],
     "security": [
       {
@@ -16,12 +16,12 @@
       }
     ],
     "summary": "Start onboarding process.",
-    "description": "This endpoint creates a user based on an invitation.",
+    "description": "This `RPC` endpoint creates a user based on an invitation.",
     "requestBody": {
       "description": "The onboarding request.",
       "required": true,
       "content": {
-        "application/vnd.api+json": {
+        "application/json": {
           "schema": {
             "type": "object",
             "required": [
