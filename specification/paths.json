@@ -161,6 +161,9 @@
   "/onboarding/v1/invitations/{invitation_id}": {
     "$ref": "./paths/Onboarding-v1-invitations-invitation_id.json"
   },
+  "/onboarding/v1/invitations/{invitation_id}/onboard": {
+    "$ref": "./paths/Onboarding-v1-invitations-invitation_id-onboard.json"
+  },
   "/organizations": {
     "$ref": "./paths/Organizations.json"
   },
