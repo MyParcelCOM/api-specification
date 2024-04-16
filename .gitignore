@@ -2,3 +2,4 @@
 /.idea
 /dist/*.json
 .DS_Store
+/yaml
