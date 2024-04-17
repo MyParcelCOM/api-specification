@@ -5,6 +5,11 @@
     "printcode",
     "combined-label",
     "customs-declaration-form",
-    "commercial-invoice"
+    "commercial-invoice",
+    "manifest-itemized",
+    "manifest-summarized",
+    "manifest-csv",
+    "rates-import",
+    "report"
   ]
 }
