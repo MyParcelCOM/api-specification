@@ -1,0 +1,42 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Invitation"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "email"
+          ]
+        },
+        "relationships": {
+          "required": [
+            "broker"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/onboarding/v1/invitations/7c19fd47-9bdb-4d1d-97ba-1e39ee81f1d8"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

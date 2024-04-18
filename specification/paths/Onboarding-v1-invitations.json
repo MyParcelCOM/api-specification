@@ -1,0 +1,142 @@
+{
+  "get": {
+    "tags": [
+      "Invitations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "brokers.manage"
+        ]
+      }
+    ],
+    "summary": "Get all available invitations.",
+    "description": "This endpoint retrieves invitations available to your API client.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`broker`</li><li>`user`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "filter[email]",
+        "in": "query",
+        "description": "Email address of the invitee.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the invitations.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InvitationResponse"
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/InvitationIncludes"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/invitations/v1/invitations?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/invitations/v1/invitations?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/invitations/v1/invitations?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/invitations/v1/invitations?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/invitations/v1/invitations?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Invitations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "brokers.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new invitation.",
+    "description": "This endpoint creates a new invitation with the posted data.",
+    "requestBody": {
+      "description": "The invitation object to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "$ref": "#/components/schemas/InvitationRequest"
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The invitation has been created.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/InvitationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

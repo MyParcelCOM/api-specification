@@ -57,6 +57,9 @@
       },
       "404": {
         "description": "No order was found for the given reference and email address."
+      },
+      "409": {
+        "description": "One or more of the orders resource is handled by a 3rd party."
       }
     }
   }

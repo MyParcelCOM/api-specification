@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "required": [
+        "attributes",
+        "relationships"
+      ],
+      "properties": {
+        "id": {
+          "readOnly": true
+        },
+        "attributes": {
+          "required": [
+            "email"
+          ],
+          "properties": {
+            "first_name": {
+              "type": "string",
+              "example": "Sherlock"
+            },
+            "last_name": {
+              "type": "string",
+              "example": "Holmes"
+            },
+            "email": {
+              "$ref": "#/components/schemas/Email",
+              "example": "s.holmes@holmesinvestigations.com"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": [
+            "broker"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "broker": {
+              "$ref": "#/components/schemas/BrokerRelationship"
+            }
+          }
+        }
+      }
+    }
+  }
+}

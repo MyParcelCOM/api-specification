@@ -8,6 +8,11 @@
         "OAuth2": [
           "contracts.manage"
         ]
+      },
+      {
+        "OAuth2": [
+          "zones.manage"
+        ]
       }
     ],
     "summary": "Get all the zones.",

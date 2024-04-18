@@ -242,6 +242,21 @@
   "IntegrationsRelationship": {
     "$ref": "./schemas/integrations/IntegrationsRelationship.json"
   },
+  "Invitation": {
+    "$ref": "./schemas/invitations/Invitation.json"
+  },
+  "InvitationResource": {
+    "$ref": "./schemas/invitations/InvitationResource.json"
+  },
+  "InvitationRequest": {
+    "$ref": "./schemas/invitations/InvitationRequest.json"
+  },
+  "InvitationIncludes": {
+    "$ref": "./schemas/invitations/InvitationIncludes.json"
+  },
+  "InvitationResponse": {
+    "$ref": "./schemas/invitations/InvitationResponse.json"
+  },
   "Invoice": {
     "$ref": "./schemas/invoices/Invoice.json"
   },
@@ -273,7 +288,16 @@
     "$ref": "./schemas/liability-coverages/LiabilityCoveragesRelationship.json"
   },
   "Locale": {
-    "$ref": "./schemas/Locale.json"
+    "$ref": "./schemas/locales/Locale.json"
+  },
+  "LocaleEnum": {
+    "$ref": "./schemas/locales/LocaleEnum.json"
+  },
+  "LocaleResource": {
+    "$ref": "./schemas/locales/LocaleResource.json"
+  },
+  "LocaleResponse": {
+    "$ref": "./schemas/locales/LocaleResponse.json"
   },
   "Manifest": {
     "$ref": "./schemas/manifests/Manifest.json"

@@ -80,6 +80,9 @@
   "/contracts/{contract_id}": {
     "$ref": "./paths/Contracts-contract_id.json"
   },
+  "/contracts/{contract_id}/validate": {
+    "$ref": "./paths/Contracts-contract_id-Validate.json"
+  },
   "/combine-files": {
     "$ref": "./paths/CombineFiles.json"
   },
@@ -140,6 +143,9 @@
   "/liability-coverages/{liability_coverage_id}": {
     "$ref": "./paths/LiabilityCoverage-liability_coverage_id.json"
   },
+  "/locales/v1/locales": {
+    "$ref": "./paths/Locales-v1-locales.json"
+  },
   "/manifests": {
     "$ref": "./paths/Manifests.json"
   },
@@ -148,6 +154,15 @@
   },
   "/manifests/{manifest_id}/files/{file_id}": {
     "$ref": "./paths/Manifests-manifest_id-Files-file_id.json"
+  },
+  "/onboarding/v1/invitations": {
+    "$ref": "./paths/Onboarding-v1-invitations.json"
+  },
+  "/onboarding/v1/invitations/{invitation_id}": {
+    "$ref": "./paths/Onboarding-v1-invitations-invitation_id.json"
+  },
+  "/onboarding/v1/invitations/{invitation_id}/onboard": {
+    "$ref": "./paths/Onboarding-v1-invitations-invitation_id-onboard.json"
   },
   "/organizations": {
     "$ref": "./paths/Organizations.json"

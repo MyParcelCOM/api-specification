@@ -1,0 +1,23 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/LocaleResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "$ref": "#/components/schemas/LocaleEnum"
+            },
+            "name": {
+              "type": "string",
+              "example": "English"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
