@@ -56,7 +56,10 @@
                   "type": "object",
                   "properties": {
                     "domain": {
-                      "type": "string",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
                       "example": "my-return-domain.com",
                       "description": "The domain where the return portal for this shop is hosted."
                     },
