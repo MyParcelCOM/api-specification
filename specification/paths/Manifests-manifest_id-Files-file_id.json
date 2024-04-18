@@ -29,8 +29,9 @@
       {
         "name": "Accept",
         "in": "header",
+        "deprecated": true,
         "description": "You must set the accept header to retrieve the file in the given format. Possible options are: <ul><li>`application/pdf`</li><li>`text/csv`</li></ul>",
-        "required": true,
+        "required": false,
         "schema": {
           "type": "string",
           "enum": [
