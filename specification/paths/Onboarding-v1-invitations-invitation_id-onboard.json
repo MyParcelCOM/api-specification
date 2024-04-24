@@ -31,18 +31,17 @@
             "properties": {
               "data": {
                 "required": [
-                  "username",
+                  "email",
                   "password",
                   "first_name",
                   "last_name",
-                  "email",
                   "shop_name",
                   "address"
                 ],
                 "properties": {
-                  "username": {
-                    "type": "string",
-                    "example": "Sherlock"
+                  "email": {
+                    "$ref": "#/components/schemas/Email",
+                    "example": "s.holmes@holmesinvestigations.com"
                   },
                   "password": {
                     "type": "string",
@@ -55,10 +54,6 @@
                   "last_name": {
                     "type": "string",
                     "example": "Holmes"
-                  },
-                  "email": {
-                    "$ref": "#/components/schemas/Email",
-                    "example": "s.holmes@holmesinvestigations.com"
                   },
                   "company": {
                     "type": "string",
