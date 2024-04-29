@@ -33,6 +33,23 @@
                 "city",
                 "country_code"
               ]
+            },
+            "branding": {
+              "properties": {
+                "returns": {
+                  "required": [
+                    "hide_product_features",
+                    "hide_product_description",
+                    "hide_product_price"
+                  ]
+                },
+                "tracking": {
+                  "required": [
+                    "hide_customer_reference",
+                    "hide_sender_address"
+                  ]
+                }
+              }
             }
           }
         },
