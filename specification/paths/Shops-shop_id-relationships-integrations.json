@@ -145,9 +145,6 @@
               "properties": {
                 "data": {
                   "type": "array",
-                  "required": [
-                    "authorization_url"
-                  ],
                   "items": {
                     "type": "object",
                     "required": [
