@@ -103,6 +103,12 @@
                               },
                               "description": "The settings required to communicate with the integration platform as defined by the `settings_format` of the integration."
                             },
+                            "redirect_url": {
+                              "type": "string",
+                              "format": "url",
+                              "example": "https://your_shop.com/authorize",
+                              "description": "Redirect URL for marketplaces that authorize through OAuth2."
+                            },
                             "client_id": {
                               "type": "string",
                               "format": "uuid",
@@ -125,6 +131,48 @@
     "responses": {
       "204": {
         "description": "The integration relationships have been added."
+      },
+      "200": {
+        "description": "The integration relationship is set, but it includes authorization_url for some of the integrations, which should be used for authorization at the marketplace.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "required": [
+                    "authorization_url"
+                  ],
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "integration_id",
+                      "authorization_url"
+                    ],
+                    "properties": {
+                      "integration_id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                        "example": "6a4baca2-7b94-4987-9e4e-2283c22bac1d"
+                      },
+                      "authorization_url": {
+                        "type": "string",
+                        "format": "url",
+                        "example": "https://marketplace.com/authorize?client_id=6a4baca2-7b94-4987-9e4e-2283c22bac1d&redirect_uri=https://your_shop.com/authorize&response_type=code"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
