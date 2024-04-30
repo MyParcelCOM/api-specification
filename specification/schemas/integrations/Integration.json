@@ -27,7 +27,8 @@
             "connect_url": {
               "type": "string",
               "example": "https://api.myparcel.com/integrations/marketplace/init-auth",
-              "description": "A link to perform OAuth 2.0 authentication with the integration platform."
+              "description": "A link to perform OAuth 2.0 authentication with the integration platform.",
+              "deprecated": true
             },
             "readme_url": {
               "type": "string",
