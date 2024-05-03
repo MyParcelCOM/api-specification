@@ -3,8 +3,11 @@
   "enum": [
     "de-DE",
     "en-GB",
+    "es-ES",
+    "fr-FR",
     "it-IT",
-    "nl-NL"
+    "nl-NL",
+    "pl-PL"
   ],
   "example": "en-GB"
 }

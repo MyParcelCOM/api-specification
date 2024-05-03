@@ -107,15 +107,27 @@
                 "tracking": {
                   "allOf": [
                     {
+                      "$ref": "#/components/schemas/Style"
+                    },
+                    {
                       "properties": {
                         "logo_url": {
                           "$ref": "#/components/schemas/ImageUrl"
+                        },
+                        "hide_customer_reference": {
+                          "type": "boolean",
+                          "example": false,
+                          "default": false,
+                          "description": "Whether to hide the customer reference from the shipment's tracking page."
+                        },
+                        "hide_sender_address": {
+                          "type": "boolean",
+                          "example": false,
+                          "default": false,
+                          "description": "Whether to hide the sender address from the shipment's tracking page."
                         }
                       },
                       "description": "Custom branding for your MyParcel.com tracking page and emails."
-                    },
-                    {
-                      "$ref": "#/components/schemas/Style"
                     }
                   ]
                 }
