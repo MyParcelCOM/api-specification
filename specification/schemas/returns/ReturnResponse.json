@@ -184,6 +184,18 @@
               "example": "$API_HOST/returns/v1/returns/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
             }
           }
+        },
+        "meta": {
+          "readOnly": true,
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "outbound_shipment_delivered_at": {
+              "type": "string",
+              "format": "date-time",
+              "example": "2020-01-01T00:00:00Z"
+            }
+          }
         }
       }
     }
