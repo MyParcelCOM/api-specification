@@ -137,7 +137,11 @@
                     "properties": {
                       "code": {
                         "type": "string",
-                        "enum": ["failed", "cancelled", "expired"],
+                        "enum": [
+                          "failed",
+                          "cancelled",
+                          "expired"
+                        ],
                         "example": "failed"
                       },
                       "description": {
@@ -191,9 +195,7 @@
           "additionalProperties": false,
           "properties": {
             "outbound_shipment_delivered_at": {
-              "type": "string",
-              "format": "date-time",
-              "example": "2020-01-01T00:00:00Z"
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         }

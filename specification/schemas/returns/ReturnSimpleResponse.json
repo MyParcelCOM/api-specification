@@ -86,9 +86,7 @@
               "example": "Delivered"
             },
             "outbound_shipment_delivered_at": {
-              "type": "string",
-              "format": "date-time",
-              "example": "2020-01-01T00:00:00Z"
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         }
