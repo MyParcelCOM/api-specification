@@ -1,0 +1,8 @@
+{
+  "name": "filter[search.name]",
+  "in": "query",
+  "description": "String of characters you want to look for in a resource's `name` attribute.",
+  "schema": {
+    "type": "string"
+  }
+}

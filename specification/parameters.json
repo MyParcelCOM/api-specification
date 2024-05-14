@@ -182,6 +182,9 @@
   "query-filter-service": {
     "$ref": "./parameters/query-filter-service.json"
   },
+  "query-filter-search-name": {
+    "$ref": "./parameters/query-filter-search-name.json"
+  },
   "query-filter-shop": {
     "$ref": "./parameters/query-filter-shop.json"
   },
