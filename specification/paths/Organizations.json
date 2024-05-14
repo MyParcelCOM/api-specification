@@ -31,7 +31,7 @@
       {
         "name": "filter[search.name]",
         "in": "query",
-        "description": "String of characters you want to look for in a organization's name. Similar to the `filter[search]` parameter, but searches only in the `name` attribute.",
+        "description": "String of characters you want to look for in an organization's name. Similar to the `filter[search]` parameter, but searches only in the `name` attribute.",
         "schema": {
           "type": "string"
         }
