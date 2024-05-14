@@ -84,6 +84,9 @@
             "shipment_status_name": {
               "type": "string",
               "example": "Delivered"
+            },
+            "outbound_shipment_delivered_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         }

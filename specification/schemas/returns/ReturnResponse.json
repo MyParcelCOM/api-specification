@@ -137,7 +137,11 @@
                     "properties": {
                       "code": {
                         "type": "string",
-                        "enum": ["failed", "cancelled", "expired"],
+                        "enum": [
+                          "failed",
+                          "cancelled",
+                          "expired"
+                        ],
                         "example": "failed"
                       },
                       "description": {
@@ -182,6 +186,16 @@
               "type": "string",
               "format": "url",
               "example": "$API_HOST/returns/v1/returns/8ddfb83f-d600-49c7-b10e-66dd4dc7686a"
+            }
+          }
+        },
+        "meta": {
+          "readOnly": true,
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "outbound_shipment_delivered_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         }
