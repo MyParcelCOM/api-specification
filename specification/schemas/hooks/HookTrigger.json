@@ -39,7 +39,9 @@
               ">=",
               "<=",
               "contains",
-              "in"
+              "in",
+              "older_than",
+              "newer_than"
             ]
           },
           "pointer": {
