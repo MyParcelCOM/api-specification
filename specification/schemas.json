@@ -206,6 +206,9 @@
   "HookActionRequestPayment": {
     "$ref": "./schemas/hooks/HookActionRequestPayment.json"
   },
+  "HookActionSetReturnDeadlinePassed": {
+    "$ref": "./schemas/hooks/HookActionSetReturnDeadlinePassed.json"
+  },
   "HookLog": {
     "$ref": "./schemas/hooks/HookLog.json"
   },
