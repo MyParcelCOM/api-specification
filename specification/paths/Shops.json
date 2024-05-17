@@ -41,6 +41,9 @@
         }
       },
       {
+        "$ref": "#/components/parameters/query-filter-search-name"
+      },
+      {
         "$ref": "#/components/parameters/query-filter-organization"
       },
       {

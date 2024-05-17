@@ -2,6 +2,7 @@
   "type": "string",
   "enum": [
     "de-DE",
+    "el-GR",
     "en-GB",
     "es-ES",
     "fr-FR",

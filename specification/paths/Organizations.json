@@ -27,6 +27,9 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-search-name"
       }
     ],
     "responses": {
