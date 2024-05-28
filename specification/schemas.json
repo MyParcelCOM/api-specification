@@ -188,14 +188,32 @@
   "Hook": {
     "$ref": "./schemas/hooks/Hook.json"
   },
+  "PatchHook": {
+    "$ref": "./schemas/hooks/patch/Hook.json"
+  },
+  "PostHook": {
+    "$ref": "./schemas/hooks/post/Hook.json"
+  },
   "HookAction": {
     "$ref": "./schemas/hooks/HookAction.json"
+  },
+  "PatchHookAction": {
+    "$ref": "./schemas/hooks/patch/HookAction.json"
+  },
+  "PostHookAction": {
+    "$ref": "./schemas/hooks/post/HookAction.json"
   },
   "HookActionSendResource": {
     "$ref": "./schemas/hooks/HookActionSendResource.json"
   },
   "HookActionUpdateResource": {
     "$ref": "./schemas/hooks/HookActionUpdateResource.json"
+  },
+  "PatchHookActionUpdateResource": {
+    "$ref": "./schemas/hooks/patch/HookActionUpdateResource.json"
+  },
+  "PostHookActionUpdateResource": {
+    "$ref": "./schemas/hooks/post/HookActionUpdateResource.json"
   },
   "HookActionApproveReturn": {
     "$ref": "./schemas/hooks/HookActionApproveReturn.json"
@@ -226,6 +244,12 @@
   },
   "HookTrigger": {
     "$ref": "./schemas/hooks/HookTrigger.json"
+  },
+  "PatchHookTrigger": {
+    "$ref": "./schemas/hooks/patch/HookTrigger.json"
+  },
+  "PostHookTrigger": {
+    "$ref": "./schemas/hooks/post/HookTrigger.json"
   },
   "ImageMeta": {
     "$ref": "./schemas/ImageMeta.json"
