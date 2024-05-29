@@ -23,10 +23,10 @@
               "example": true
             },
             "trigger": {
-              "$ref": "#/components/schemas/PatchHookTrigger"
+              "$ref": "#/components/schemas/HookTrigger"
             },
             "action": {
-              "$ref": "#/components/schemas/PatchHookAction"
+              "$ref": "#/components/schemas/HookAction"
             }
           }
         },

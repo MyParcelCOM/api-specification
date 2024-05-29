@@ -1,9 +1,5 @@
 {
   "type": "object",
-  "required": [
-    "resource_type",
-    "resource_action"
-  ],
   "additionalProperties": false,
   "properties": {
     "resource_type": {

@@ -23,10 +23,30 @@
               "example": true
             },
             "trigger": {
-              "$ref": "#/components/schemas/PostHookTrigger"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/HookTrigger"
+                },
+                {
+                  "required": [
+                    "resource_type",
+                    "resource_action"
+                  ]
+                }
+              ]
             },
             "action": {
-              "$ref": "#/components/schemas/PostHookAction"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/HookAction"
+                },
+                {
+                  "required": [
+                    "action_type",
+                    "values"
+                  ]
+                }
+              ]
             }
           }
         },
