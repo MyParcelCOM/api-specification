@@ -36,17 +36,7 @@
               ]
             },
             "action": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/HookAction"
-                },
-                {
-                  "required": [
-                    "action_type",
-                    "values"
-                  ]
-                }
-              ]
+              "$ref": "#/components/schemas/PostHookAction"
             }
           }
         },

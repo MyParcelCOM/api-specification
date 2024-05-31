@@ -1,0 +1,25 @@
+{
+  "oneOf": [
+    {
+      "$ref": "#/components/schemas/PostHookActionSendResource"
+    },
+    {
+      "$ref": "#/components/schemas/PostHookActionUpdateResource"
+    },
+    {
+      "$ref": "#/components/schemas/HookActionApproveReturn"
+    },
+    {
+      "$ref": "#/components/schemas/HookActionRejectReturn"
+    },
+    {
+      "$ref": "#/components/schemas/PostHookActionRequestPayment"
+    },
+    {
+      "$ref": "#/components/schemas/HookActionSetReturnDeadlinePassed"
+    }
+  ],
+  "required": [
+    "action_type"
+  ]
+}
