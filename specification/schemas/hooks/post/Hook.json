@@ -1,62 +1,21 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/HookResource"
+      "$ref": "#/components/schemas/Hook"
     },
     {
       "properties": {
         "attributes": {
-          "type": "object",
-          "additionalProperties": false,
           "properties": {
-            "name": {
-              "type": "string",
-              "example": "DPD Next Day for medium packages"
-            },
-            "order": {
-              "type": "integer",
-              "example": 3,
-              "description": "Priority of this hook, lower value means it is triggered first."
-            },
-            "active": {
-              "type": "boolean",
-              "example": true
-            },
             "trigger": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/HookTrigger"
-                },
-                {
-                  "required": [
-                    "resource_type",
-                    "resource_action"
-                  ]
-                }
+              "required": [
+                "resource_type",
+                "resource_action"
               ]
             },
             "action": {
-              "$ref": "#/components/schemas/PostHookAction"
-            }
-          }
-        },
-        "relationships": {
-          "type": "object",
-          "required": [
-            "owner"
-          ],
-          "properties": {
-            "owner": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/ShopRelationship"
-                },
-                {
-                  "$ref": "#/components/schemas/OrganizationRelationship"
-                },
-                {
-                  "$ref": "#/components/schemas/BrokerRelationship"
-                }
+              "required": [
+                "action_type"
               ]
             }
           }

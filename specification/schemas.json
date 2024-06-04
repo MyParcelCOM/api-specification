@@ -188,29 +188,17 @@
   "Hook": {
     "$ref": "./schemas/hooks/Hook.json"
   },
-  "PatchHook": {
-    "$ref": "./schemas/hooks/patch/Hook.json"
-  },
   "PostHook": {
     "$ref": "./schemas/hooks/post/Hook.json"
   },
   "HookAction": {
     "$ref": "./schemas/hooks/HookAction.json"
   },
-  "PostHookAction": {
-    "$ref": "./schemas/hooks/post/HookAction.json"
-  },
   "HookActionSendResource": {
     "$ref": "./schemas/hooks/HookActionSendResource.json"
   },
-  "PostHookActionSendResource": {
-    "$ref": "./schemas/hooks/post/HookActionSendResource.json"
-  },
   "HookActionUpdateResource": {
     "$ref": "./schemas/hooks/HookActionUpdateResource.json"
-  },
-  "PostHookActionUpdateResource": {
-    "$ref": "./schemas/hooks/post/HookActionUpdateResource.json"
   },
   "HookActionApproveReturn": {
     "$ref": "./schemas/hooks/HookActionApproveReturn.json"
@@ -220,9 +208,6 @@
   },
   "HookActionRequestPayment": {
     "$ref": "./schemas/hooks/HookActionRequestPayment.json"
-  },
-  "PostHookActionRequestPayment": {
-    "$ref": "./schemas/hooks/post/HookActionRequestPayment.json"
   },
   "HookActionSetReturnDeadlinePassed": {
     "$ref": "./schemas/hooks/HookActionSetReturnDeadlinePassed.json"

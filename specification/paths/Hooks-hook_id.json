@@ -82,7 +82,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/PatchHook"
+                    "$ref": "#/components/schemas/Hook"
                   },
                   {
                     "required": [
