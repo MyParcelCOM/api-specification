@@ -178,7 +178,7 @@
                 },
                 "exchange": {
                   "type": "boolean",
-                  "example": "true",
+                  "example": "false",
                   "description": "The shop offers exchange as a return outcome."
                 }
               }
