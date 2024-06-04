@@ -18,7 +18,20 @@
             "active",
             "trigger",
             "action"
-          ]
+          ],
+          "properties": {
+            "trigger": {
+              "required": [
+                "resource_type",
+                "resource_action"
+              ]
+            },
+            "action": {
+              "required": [
+                "action_type"
+              ]
+            }
+          }
         },
         "links": {
           "readOnly": true,
