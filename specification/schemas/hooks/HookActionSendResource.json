@@ -1,9 +1,9 @@
 {
   "type": "object",
-  "additionalProperties": false,
   "required": [
     "values"
   ],
+  "additionalProperties": false,
   "properties": {
     "action_type": {
       "type": "string",

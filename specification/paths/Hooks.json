@@ -160,7 +160,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/PostHook"
+                    "$ref": "#/components/schemas/Hook"
                   },
                   {
                     "required": [
@@ -178,7 +178,20 @@
                           "active",
                           "trigger",
                           "action"
-                        ]
+                        ],
+                        "properties": {
+                          "trigger": {
+                            "required": [
+                              "resource_type",
+                              "resource_action"
+                            ]
+                          },
+                          "action": {
+                            "required": [
+                              "action_type"
+                            ]
+                          }
+                        }
                       }
                     }
                   }

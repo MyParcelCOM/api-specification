@@ -188,9 +188,6 @@
   "Hook": {
     "$ref": "./schemas/hooks/Hook.json"
   },
-  "PostHook": {
-    "$ref": "./schemas/hooks/post/Hook.json"
-  },
   "HookAction": {
     "$ref": "./schemas/hooks/HookAction.json"
   },
