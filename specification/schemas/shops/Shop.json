@@ -161,8 +161,27 @@
               "items": {
                 "$ref": "#/components/schemas/LocaleEnum"
               },
-              "example": ["nl-NL"],
+              "example": [
+                "nl-NL"
+              ],
               "description": "The languages that are available to your consumer when they visit the Return portal. Defaults to your shop's locale. The selected locale is used for emails related to returns."
+            },
+            "return_outcomes": {
+              "type": "object",
+              "properties": {
+                "refund": {
+                  "type": "boolean",
+                  "default": "true",
+                  "example": "true",
+                  "readOnly": true,
+                  "description": "The shop offers refund as a return outcome, this property cannot be changed."
+                },
+                "exchange": {
+                  "type": "boolean",
+                  "example": "true",
+                  "description": "The shop offers exchange as a return outcome."
+                }
+              }
             }
           }
         },
