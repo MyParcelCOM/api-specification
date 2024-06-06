@@ -134,11 +134,11 @@
           }
         }
       }
-    }
-  },
-  "responses": {
-    "204": {
-      "description": "The return reasons have been added to the shop."
+    },
+    "responses": {
+      "204": {
+        "description": "The return reasons have been added to the shop."
+      }
     }
   }
 }
