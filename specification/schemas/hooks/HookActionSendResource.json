@@ -1,7 +1,6 @@
 {
   "type": "object",
   "required": [
-    "action_type",
     "values"
   ],
   "additionalProperties": false,

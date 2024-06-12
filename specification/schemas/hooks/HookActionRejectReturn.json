@@ -1,8 +1,5 @@
 {
   "type": "object",
-  "required": [
-    "action_type"
-  ],
   "additionalProperties": false,
   "properties": {
     "action_type": {

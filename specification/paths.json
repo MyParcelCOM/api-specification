@@ -368,9 +368,6 @@
   "/export-login-attempts": {
     "$ref": "./paths/ExportLoginAttempts.json"
   },
-  "/import-service-rates": {
-    "$ref": "./paths/ImportServiceRates.json"
-  },
   "/track-external-shipment": {
     "$ref": "./paths/TrackExternalShipment.json"
   },
