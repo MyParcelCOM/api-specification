@@ -15,6 +15,8 @@
           "required": [
             "order_reference",
             "consumer_address",
+            "has_preferred_outcome_refund",
+            "has_preferred_outcome_exchange",
             "created_at"
           ],
           "properties": {

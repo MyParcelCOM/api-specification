@@ -5,7 +5,8 @@
     "id",
     "quantity",
     "description",
-    "item_price"
+    "item_price",
+    "preferred_outcome"
   ],
   "properties": {
     "id": {

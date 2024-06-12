@@ -15,10 +15,20 @@
           "required": [
             "order_reference",
             "consumer_address",
+            "has_preferred_outcome_refund",
+            "has_preferred_outcome_exchange",
             "items",
             "created_at"
           ],
           "properties": {
+            "has_preferred_outcome_refund": {
+              "type": "boolean",
+              "example": true
+            },
+            "has_preferred_outcome_exchange": {
+              "type": "boolean",
+              "example": false
+            },
             "items": {
               "type": "array",
               "items": {
@@ -156,14 +166,6 @@
                   }
                 }
               }
-            },
-            "has_preferred_outcome_refund": {
-              "type": "boolean",
-              "example": true
-            },
-            "has_preferred_outcome_exchange": {
-              "type": "boolean",
-              "example": false
             }
           }
         },
