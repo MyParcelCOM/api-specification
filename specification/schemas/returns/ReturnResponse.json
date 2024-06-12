@@ -37,7 +37,9 @@
                     "$ref": "#/components/schemas/ReturnItem"
                   },
                   {
-                    "type": "object",
+                    "required": [
+                      "preferred_outcome"
+                    ],
                     "properties": {
                       "reason": {
                         "properties": {

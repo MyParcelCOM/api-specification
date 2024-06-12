@@ -5,8 +5,7 @@
     "id",
     "quantity",
     "description",
-    "item_price",
-    "preferred_outcome"
+    "item_price"
   ],
   "properties": {
     "id": {
@@ -90,7 +89,7 @@
     },
     "preferred_outcome": {
       "type": "string",
-      "example": "refund",
+      "default": "refund",
       "enum": [
         "refund",
         "exchange"
