@@ -16,7 +16,17 @@
             "order_reference",
             "consumer_address",
             "created_at"
-          ]
+          ],
+          "properties": {
+            "has_preferred_outcome_refund": {
+              "type": "boolean",
+              "example": true
+            },
+            "has_preferred_outcome_exchange": {
+              "type": "boolean",
+              "example": false
+            }
+          }
         },
         "relationships": {
           "required": [
