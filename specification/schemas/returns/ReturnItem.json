@@ -86,6 +86,14 @@
           "description": "Additional information regarding the reason for the return."
         }
       }
+    },
+    "preferred_outcome": {
+      "type": "string",
+      "default": "refund",
+      "enum": [
+        "refund",
+        "exchange"
+      ]
     }
   }
 }
