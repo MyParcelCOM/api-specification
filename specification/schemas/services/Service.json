@@ -36,6 +36,7 @@
               "enum": [
                 "letter",
                 "letterbox",
+                "multi-colli",
                 "parcel",
                 "unstamped"
               ],
