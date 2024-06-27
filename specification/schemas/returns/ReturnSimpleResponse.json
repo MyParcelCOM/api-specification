@@ -64,6 +64,9 @@
           "readOnly": true,
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "package_type"
+          ],
           "properties": {
             "shipment_tracking_code": {
               "$ref": "#/components/schemas/TrackingCode"
@@ -99,6 +102,9 @@
             },
             "outbound_shipment_delivered_at": {
               "$ref": "#/components/schemas/Timestamp"
+            },
+            "package_type": {
+              "$ref": "#/components/schemas/PackageType"
             }
           }
         }
