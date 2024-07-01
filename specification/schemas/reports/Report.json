@@ -108,6 +108,16 @@
                     "example": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
                   }
                 },
+                "brokers": {
+                  "type": "array",
+                  "description": "Array of broker IDs to filter included shipments by.",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "a294ee55-bc94-4890-b734-afd56c158f95"
+                  }
+                },
                 "carriers": {
                   "type": "array",
                   "description": "Array of carrier IDs to filter included shipments by.",
