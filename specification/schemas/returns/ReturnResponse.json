@@ -8,7 +8,8 @@
         "id",
         "attributes",
         "relationships",
-        "links"
+        "links",
+        "meta"
       ],
       "properties": {
         "attributes": {
@@ -205,9 +206,15 @@
           "readOnly": true,
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "package_type"
+          ],
           "properties": {
             "outbound_shipment_delivered_at": {
               "$ref": "#/components/schemas/Timestamp"
+            },
+            "package_type": {
+              "$ref": "#/components/schemas/PackageType"
             }
           }
         }

@@ -146,6 +146,9 @@
   "Currency": {
     "$ref": "./schemas/Currency.json"
   },
+  "PackageType": {
+    "$ref": "./schemas/PackageType.json"
+  },
   "DocumentType": {
     "$ref": "./schemas/files/DocumentType.json"
   },
