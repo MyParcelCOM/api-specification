@@ -5,6 +5,7 @@
     "damaged",
     "default",
     "delay",
+    "dropped-at-pudo-by-sender",
     "failed-cash-on-delivery",
     "failed-collection",
     "failed-collection-attempt",
@@ -29,7 +30,8 @@
     "partial-delivery",
     "relabelling",
     "require-delivery-instructions",
-    "security-alert"
+    "security-alert",
+    "successful-collection"
   ],
   "example": "failed-delivery-attempt",
   "default": "default",
