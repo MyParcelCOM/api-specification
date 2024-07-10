@@ -1,0 +1,11 @@
+{
+  "type": "string",
+  "enum": [
+    "letter",
+    "letterbox",
+    "multi-colli",
+    "parcel",
+    "unstamped"
+  ],
+  "example": "parcel"
+}
