@@ -15,7 +15,10 @@
               "example": "MyParcel.com"
             },
             "domain": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "maxLength": 255,
               "example": "app.sendmyparcel.com"
             },
@@ -32,13 +35,19 @@
               "description": "Favicon image URL"
             },
             "support_url": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "maxLength": 255,
               "example": "https://help.myparcel.com",
               "description": "URL to knowledge base or FAQ"
             },
             "contact_url": {
-              "type": "string",
+              "type": [
+                "string",
+                "null"
+              ],
               "maxLength": 255,
               "example": "mailto:info@myparcel.com",
               "description": "URL to create a new support ticket or mailto: link with email address"
