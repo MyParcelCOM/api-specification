@@ -20,7 +20,7 @@
                 "null"
               ],
               "maxLength": 255,
-              "example": "app.sendmyparcel.com"
+              "example": "app.myparcel.com"
             },
             "logo_url": {
               "type": "string",
