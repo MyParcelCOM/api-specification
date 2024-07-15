@@ -120,7 +120,6 @@
                       "attributes": {
                         "required": [
                           "name",
-                          "domain",
                           "logo_url",
                           "favicon_url",
                           "style"
