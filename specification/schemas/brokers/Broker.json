@@ -20,7 +20,8 @@
                 "null"
               ],
               "maxLength": 255,
-              "example": "app.myparcel.com"
+              "example": "app.example.com",
+              "description": "If you want to use [our portal](https://app.myparcel.com) on a domain that you already own, or a *.sendmyparcel.com subdomain."
             },
             "logo_url": {
               "type": "string",
