@@ -152,6 +152,12 @@
   "DocumentType": {
     "$ref": "./schemas/files/DocumentType.json"
   },
+  "DemoOrder": {
+    "$ref": "./schemas/return-orders/DemoOrder.json"
+  },
+  "DemoOrderResponse": {
+    "$ref": "./schemas/return-orders/DemoOrderResponse.json"
+  },
   "Email": {
     "$ref": "./schemas/addresses/Email.json"
   },

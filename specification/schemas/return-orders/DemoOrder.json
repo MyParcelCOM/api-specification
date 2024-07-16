@@ -1,0 +1,35 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/Order"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "^demo-orders$",
+          "example": "demo-orders"
+        },
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "outbound_shipment_identifier": {
+              "$ref": "#/components/schemas/Uuid"
+            },
+            "is_3rd_party": {
+              "type": "boolean",
+              "description": "Indicates whether the demo order should be handled by a third party",
+              "default": false
+            },
+            "recipient_address": {
+              "required": [
+                "email"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
