@@ -24,7 +24,8 @@
               "type": "array",
               "items": {
                 "$ref": "#/components/schemas/OrderItem"
-              }
+              },
+              "minItems": 1
             },
             "outbound_shipment_identifier": {
               "type": "string",
