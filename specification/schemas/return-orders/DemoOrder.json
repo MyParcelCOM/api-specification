@@ -28,9 +28,16 @@
               "minItems": 1
             },
             "outbound_shipment_identifier": {
-              "type": "string",
-              "description": "Shipment identifier of the outbound shipment",
-              "example": "93011952"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "Shipment identifier of the outbound shipment",
+                  "example": "93011952"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "is_third_party": {
               "type": "boolean",
