@@ -58,7 +58,7 @@
       "minimum": 1,
       "maximum": 2147483647,
       "example": 4500,
-      "description": "Volumetric weight in grams. Calculated by the API by multiplying shipment dimensions (if present) and dividing them by 4000: (height in mm * length in mm * width in mm) / 4000."
+      "description": "Volumetric weight in grams. Calculated by our API by multiplying shipment dimensions (if present) and dividing them by the volumetric_weight_divisor of the service. See <a href=\"https://docs.myparcel.com/api/resources/shipments/physical-properties/volumetric-weight.html\"/>the documentation</a> for more information."
     }
   }
 }
