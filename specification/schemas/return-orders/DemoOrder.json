@@ -5,11 +5,6 @@
     },
     {
       "properties": {
-        "type": {
-          "type": "string",
-          "pattern": "^demo-orders$",
-          "example": "demo-orders"
-        },
         "attributes": {
           "type": "object",
           "additionalProperties": false,
@@ -43,6 +38,14 @@
               "type": "boolean",
               "description": "Indicates whether the demo order should be handled by a third party",
               "default": false
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "properties": {
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
             }
           }
         }
