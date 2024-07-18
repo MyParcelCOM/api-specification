@@ -45,27 +45,6 @@
           "required": [
             "shop"
           ]
-        },
-        "meta": {
-          "type": "object",
-          "additionalProperties": false,
-          "description": "Properties indicating whether the order was sent with a shipping method that supports returning the shipment with a previously provided label",
-          "required": [
-            "shipping_and_return",
-            "label_in_the_box",
-            "package_type"
-          ],
-          "properties": {
-            "shipping_and_return": {
-              "type": "boolean"
-            },
-            "label_in_the_box": {
-              "type": "boolean"
-            },
-            "package_type": {
-              "$ref": "#/components/schemas/PackageType"
-            }
-          }
         }
       }
     }

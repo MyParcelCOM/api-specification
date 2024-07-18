@@ -155,6 +155,9 @@
   "DemoOrder": {
     "$ref": "./schemas/return-orders/DemoOrder.json"
   },
+  "DemoOrderResource": {
+    "$ref": "./schemas/return-orders/DemoOrderResource.json"
+  },
   "DemoOrderResponse": {
     "$ref": "./schemas/return-orders/DemoOrderResponse.json"
   },

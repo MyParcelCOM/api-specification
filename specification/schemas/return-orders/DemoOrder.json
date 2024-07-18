@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/Order"
+      "$ref": "#/components/schemas/DemoOrderResource"
     },
     {
       "properties": {
@@ -14,18 +14,27 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "outbound_shipment_identifier": {
-              "$ref": "#/components/schemas/Uuid"
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
             },
-            "is_3rd_party": {
+            "recipient_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/OrderItem"
+              }
+            },
+            "outbound_shipment_identifier": {
+              "type": "string",
+              "description": "Shipment identifier of the outbound shipment",
+              "example": "93011952"
+            },
+            "is_third_party": {
               "type": "boolean",
               "description": "Indicates whether the demo order should be handled by a third party",
               "default": false
-            },
-            "recipient_address": {
-              "required": [
-                "email"
-              ]
             }
           }
         }

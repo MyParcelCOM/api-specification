@@ -34,7 +34,6 @@
               "type": "object",
               "required": [
                 "data",
-                "meta",
                 "links"
               ],
               "properties": {
