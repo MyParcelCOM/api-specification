@@ -4,6 +4,7 @@
   "description": "Id of the demo order.",
   "required": true,
   "schema": {
-    "$ref": "#/components/schemas/Uuid"
+    "type": "integer",
+    "example": "12345"
   }
 }
