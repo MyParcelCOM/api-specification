@@ -18,7 +18,20 @@
             "items": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/OrderItem"
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/OrderItemBase"
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "sku": {
+                        "description": "Demo orders with SKU will enter return order statistics once issued."
+                      }
+                    }
+                  }
+                ]
               },
               "minItems": 1
             },
