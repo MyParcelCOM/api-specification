@@ -1,9 +1,0 @@
-{
-  "name": "demo_order_id",
-  "in": "path",
-  "description": "Id of the demo order.",
-  "required": true,
-  "schema": {
-    "$ref": "#/components/schemas/Uuid"
-  }
-}
