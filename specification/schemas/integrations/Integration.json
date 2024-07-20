@@ -25,10 +25,10 @@
               "description": "A description of what the integration is used for."
             },
             "connect_url": {
+              "deprecated": true,
               "type": "string",
               "example": "https://api.myparcel.com/integrations/marketplace/init-auth",
-              "description": "A link to perform OAuth 2.0 authentication with the integration platform.",
-              "deprecated": true
+              "description": "A link to perform OAuth 2.0 authentication with the integration platform."
             },
             "readme_url": {
               "type": "string",
