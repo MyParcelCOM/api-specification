@@ -338,6 +338,9 @@
   "OrderAnalytics": {
     "$ref": "./schemas/integrations/OrderAnalytics.json"
   },
+  "BaseOrderItem": {
+    "$ref": "./schemas/return-orders/BaseOrderItem.json"
+  },
   "OrderItem": {
     "$ref": "./schemas/return-orders/OrderItem.json"
   },

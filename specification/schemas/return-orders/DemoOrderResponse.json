@@ -35,7 +35,12 @@
                   "description",
                   "quantity",
                   "item_price"
-                ]
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
