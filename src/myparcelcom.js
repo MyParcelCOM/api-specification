@@ -102,9 +102,6 @@
           'ShipmentSurcharges',
           'SystemMessages',
           'ExportLoginAttempts',
-          "Returns",
-          "ReturnMethods",
-          "ReturnReasons",
           "ReturnReasonsManagement",
         ]
         for (var i = 0; i < internal.length; i++) {
