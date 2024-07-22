@@ -1,11 +1,10 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/OrderItemBase"
+      "$ref": "#/components/schemas/BaseOrderItem"
     },
     {
       "type": "object",
-      "additionalProperties": false,
       "properties": {
         "id": {
           "type": "string",

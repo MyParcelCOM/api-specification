@@ -20,7 +20,7 @@
               "items": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/OrderItemBase"
+                    "$ref": "#/components/schemas/BaseOrderItem"
                   },
                   {
                     "type": "object",
