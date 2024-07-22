@@ -145,7 +145,6 @@
                           "items": {
                             "items": {
                               "required": [
-                                "id",
                                 "name",
                                 "description",
                                 "quantity",
