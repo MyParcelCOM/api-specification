@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "sku": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "123456789"
+    },
+    "name": {
+      "type": "string",
+      "example": "OnePlus X"
+    },
+    "description": {
+      "type": "string",
+      "example": "Latest OnePlus X model for making the best phone calls imaginable!"
+    },
+    "image_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "example": "https://myparcel.com/product.png",
+      "description": "A link to an image of the item."
+    },
+    "quantity": {
+      "type": "integer",
+      "example": 2
+    },
+    "item_price": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Price"
+        },
+        {
+          "description": "Price of a single item. Should be multiplied by quantity to get total price."
+        }
+      ]
+    },
+    "item_weight": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Weight"
+        },
+        {
+          "description": "Weight of a single item. Should be multiplied by quantity to get total weight."
+        }
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ItemFeature"
+      },
+      "description": "List of features of this item, such as the color or size."
+    }
+  }
+}

@@ -63,8 +63,8 @@
               }
             },
             "label_mime_types": {
-              "type": "array",
               "deprecated": true,
+              "type": "array",
               "items": {
                 "type": "string",
                 "example": "application/pdf"

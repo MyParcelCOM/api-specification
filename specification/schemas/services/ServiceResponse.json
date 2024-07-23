@@ -28,9 +28,7 @@
         },
         "relationships": {
           "required": [
-            "carrier",
-            "region_from",
-            "region_to"
+            "carrier"
           ]
         },
         "links": {

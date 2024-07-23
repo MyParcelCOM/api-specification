@@ -1,0 +1,67 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/DemoOrderResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "recipient_address": {
+              "$ref": "#/components/schemas/BaseAddress"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/BaseOrderItem"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "sku": {
+                        "description": "Demo orders with SKU will enter return order statistics once issued."
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            },
+            "outbound_shipment_identifier": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "Shipment identifier of the outbound shipment",
+                  "example": "93011952"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "is_third_party": {
+              "type": "boolean",
+              "description": "Indicates whether the demo order should be handled by a third party",
+              "default": false
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "properties": {
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

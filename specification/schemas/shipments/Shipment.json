@@ -19,12 +19,12 @@
               }
             },
             "recipient_tax_number": {
+              "deprecated": true,
               "type": [
                 "string",
                 "null"
               ],
-              "description": "Use `recipient_tax_identification_numbers` instead.",
-              "deprecated": true
+              "description": "Use `recipient_tax_identification_numbers` instead."
             },
             "return_address": {
               "$ref": "#/components/schemas/BaseAddress"
@@ -40,12 +40,12 @@
               }
             },
             "sender_tax_number": {
+              "deprecated": true,
               "type": [
                 "string",
                 "null"
               ],
-              "description": "Use `sender_tax_identification_numbers` instead.",
-              "deprecated": true
+              "description": "Use `sender_tax_identification_numbers` instead."
             },
             "pickup_location": {
               "oneOf": [

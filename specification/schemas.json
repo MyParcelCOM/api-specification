@@ -152,6 +152,15 @@
   "DocumentType": {
     "$ref": "./schemas/files/DocumentType.json"
   },
+  "DemoOrder": {
+    "$ref": "./schemas/return-orders/DemoOrder.json"
+  },
+  "DemoOrderResource": {
+    "$ref": "./schemas/return-orders/DemoOrderResource.json"
+  },
+  "DemoOrderResponse": {
+    "$ref": "./schemas/return-orders/DemoOrderResponse.json"
+  },
   "Email": {
     "$ref": "./schemas/addresses/Email.json"
   },
@@ -328,6 +337,9 @@
   },
   "OrderAnalytics": {
     "$ref": "./schemas/integrations/OrderAnalytics.json"
+  },
+  "BaseOrderItem": {
+    "$ref": "./schemas/return-orders/BaseOrderItem.json"
   },
   "OrderItem": {
     "$ref": "./schemas/return-orders/OrderItem.json"

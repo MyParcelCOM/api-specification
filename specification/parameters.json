@@ -38,6 +38,9 @@
   "path-country_code": {
     "$ref": "./parameters/path-country_code.json"
   },
+  "path-demo_order_id": {
+    "$ref": "./parameters/path-demo_order_id.json"
+  },
   "path-enterprise_id": {
     "$ref": "./parameters/path-enterprise_id.json"
   },
