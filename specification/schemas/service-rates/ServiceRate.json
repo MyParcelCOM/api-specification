@@ -83,6 +83,19 @@
             },
             "fuel_surcharge": {
               "$ref": "#/components/schemas/Price"
+            },
+            "oversize_surcharge": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Price"
+                },
+                {
+                  "description": "The oversize surcharge is an additional fee that is charged when the length of a shipment (longest dimension) exceeds the `length_max` field of the service rate."
+                }
+              ]
+            },
+            "oversize_purchase_price": {
+              "$ref": "#/components/schemas/Price"
             }
           }
         },
