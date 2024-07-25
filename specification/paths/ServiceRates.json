@@ -38,7 +38,7 @@
         "in": "query",
         "description": "<strike>Volumetric weight value in grams to filter by. <br>Service rates for services that use volumetric weight will be filtered on the highest value between gross weight and volumetric weight. Use in conjunction with the filter[weight] filter above.</strike> Deprecated in favor of `filter[volume]`",
         "schema": {
-          "type": "string"
+          "type": "integer"
         }
       },
       {
@@ -46,7 +46,7 @@
         "in": "query",
         "description": "This filter expects shipment volume in liters (dm3). This is used to calculate the volumetric weight, using the `volumetric_weight_divisor` of the related service. Service rates are then filtered based on their weight range. It is recommended to use this filter in conjunction with the `filter[weight]` filter to get the most accurate results.",
         "schema": {
-          "type": "string"
+          "type": "number"
         }
       },
       {
