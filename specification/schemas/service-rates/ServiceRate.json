@@ -96,6 +96,11 @@
             },
             "oversize_purchase_price": {
               "$ref": "#/components/schemas/Price"
+            },
+            "includes_vat": {
+              "type": "boolean",
+              "default": "false",
+              "description": "Indicates whether VAT is included in the price returned by the API."
             }
           }
         },
