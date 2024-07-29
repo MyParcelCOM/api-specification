@@ -50,7 +50,7 @@
             "DAP",
             "DDP"
           ],
-          "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid)."
+          "description": "DAP (Delivered At Place) or DDP (Delivered Duty Paid). Required when `content_type` is either `merchandise`, `sample_merchandise` or `returned_merchandise`."
         },
         {
           "type": "null"
