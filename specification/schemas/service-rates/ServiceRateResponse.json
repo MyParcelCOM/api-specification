@@ -14,7 +14,9 @@
         "attributes": {
           "required": [
             "weight_min",
-            "weight_max"
+            "weight_max",
+            "is_dynamic",
+            "includes_vat"
           ]
         },
         "relationships": {
