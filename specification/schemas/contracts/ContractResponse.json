@@ -13,9 +13,10 @@
       "properties": {
         "attributes": {
           "required": [
-            "currency",
             "name",
             "status",
+            "currency",
+            "volumetric_weight_divisor_factor",
             "created_at",
             "updated_at"
           ],
