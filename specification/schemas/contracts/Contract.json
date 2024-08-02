@@ -22,7 +22,8 @@
             "volumetric_weight_divisor_factor": {
               "type": "number",
               "format": "float",
-              "default": 1.0
+              "default": 1.0,
+              "description": "If your contractual agreements with the carrier contain a <a href=\"https://docs.myparcel.com/api/resources/shipments/physical-properties/volumetric-weight.html\"/>volumetric weight formula</a> that uses a different divisor than the `volumetric_weight_divisor` on our Service resource, you can use this factor to increase or decrease the divisor. For example a factor of 1.25 would change a divisor of 4000 to 5000."
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
