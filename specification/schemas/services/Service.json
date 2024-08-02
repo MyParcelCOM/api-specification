@@ -106,7 +106,7 @@
               "description": "Whether the volumetric weight of a shipment is taken into account when determining the price for a service."
             },
             "volumetric_weight_divisor": {
-              "type": "number",
+              "type": "integer",
               "example": 4000,
               "description": "The volumetric weight divisor is used to calculate the volumetric weight of a shipment. Multiplying the length (mm) x width (mm) x height (mm) of a shipment and dividing it by this number will result in the volumetric weight (g). See <a href=\"https://docs.myparcel.com/api/resources/shipments/physical-properties/volumetric-weight.html\"/>the documentation</a> for more information."
             },

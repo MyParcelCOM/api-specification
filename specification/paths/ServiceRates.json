@@ -46,7 +46,8 @@
         "in": "query",
         "description": "This filter expects shipment volume in liters (dm3). This is used to calculate the volumetric weight, using the `volumetric_weight_divisor` of the related service. Service rates are then filtered based on their weight range. It is recommended to use this filter in conjunction with the `filter[weight]` filter to get the most accurate results.",
         "schema": {
-          "type": "number"
+          "type": "number",
+          "format": "float"
         }
       },
       {

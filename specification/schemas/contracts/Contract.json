@@ -20,8 +20,9 @@
               "$ref": "#/components/schemas/Currency"
             },
             "volumetric_weight_divisor_factor": {
-              "type": "integer",
-              "default": 1
+              "type": "number",
+              "format": "float",
+              "default": 1.0
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
