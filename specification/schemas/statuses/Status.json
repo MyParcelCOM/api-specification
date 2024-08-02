@@ -45,6 +45,7 @@
                 "shipment-registered",
                 "shipment-registration-failed",
                 "shipment-returned-to-sender",
+                "shipment-returning-to-sender",
                 "shipment-voided",
                 "shipment-with-courier"
               ],
