@@ -67,6 +67,7 @@
             },
             "volume_max": {
               "type": "number",
+              "format": "float",
               "example": 12.5,
               "description": "Volume in liters. (dm3)"
             },

@@ -27,7 +27,7 @@
           "format": "uri"
         },
         "amount": {
-          "type": "number"
+          "type": "integer"
         }
       }
     },
@@ -50,7 +50,7 @@
             "example": "Wrong Size"
           },
           "amount": {
-            "type": "number",
+            "type": "integer",
             "example": 10
           }
         }

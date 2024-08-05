@@ -78,7 +78,8 @@
                         "example": "6115210000"
                       },
                       "vector_weight": {
-                        "type": "float",
+                        "type": "number",
+                        "format": "float",
                         "example": 83.45
                       },
                       "product_description": {
