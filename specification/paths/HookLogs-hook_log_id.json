@@ -27,6 +27,16 @@
     ],
     "summary": "Get a hook log by ID.",
     "description": "This endpoint retrieves the hook log with the supplied ID.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`hook`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the hook log.",
