@@ -51,6 +51,12 @@
               "properties": {
                 "data": {
                   "$ref": "#/components/schemas/HookLog"
+                },
+                "included": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/HookResponse"
+                  }
                 }
               }
             }
