@@ -437,6 +437,18 @@
   "ReportResponse": {
     "$ref": "./schemas/reports/ReportResponse.json"
   },
+  "ReturnReport": {
+    "$ref": "./schemas/returns/reports/Report.json"
+  },
+  "ReturnReportIncludes": {
+    "$ref": "./schemas/returns/reports/ReportIncludes.json"
+  },
+  "ReturnReportResource": {
+    "$ref": "./schemas/returns/reports/ReportResource.json"
+  },
+  "ReturnReportResponse": {
+    "$ref": "./schemas/returns/reports/ReportResponse.json"
+  },
   "Return": {
     "$ref": "./schemas/returns/Return.json"
   },

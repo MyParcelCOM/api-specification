@@ -1,0 +1,163 @@
+{
+  "get": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get all return reports available to you.",
+    "description": "This endpoint retrieves all return reports available to you.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`file`</li><li>`status`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the reports.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data",
+                "meta",
+                "links"
+              ],
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReturnReportResponse"
+                  }
+                },
+                "meta": {
+                  "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ReturnReportIncludes"
+                },
+                "links": {
+                  "type": "object",
+                  "required": [
+                    "self",
+                    "first",
+                    "last"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "self": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/reports?page[number]=3&page[size]=30"
+                    },
+                    "first": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/reports?page[number]=1&page[size]=30"
+                    },
+                    "prev": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/reports?page[number]=2&page[size]=30"
+                    },
+                    "next": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/reports?page[number]=4&page[size]=30"
+                    },
+                    "last": {
+                      "type": "string",
+                      "example": "$API_HOST/returns/v1/reports?page[number]=13&page[size]=30"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Create a new return report.",
+    "description": "This endpoint creates a new return report based on the posted filters.",
+    "requestBody": {
+      "description": "The report filters.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReturnReport"
+                  },
+                  {
+                    "required": [
+                      "attributes"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name",
+                          "filters"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The report is created and the file will be available for download shortly.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReturnReportResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
