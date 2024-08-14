@@ -503,6 +503,21 @@
   "ReturnAnalytics": {
     "$ref": "./schemas/returns/ReturnAnalytics.json"
   },
+  "ReturnQuestion": {
+    "$ref": "./schemas/return-questions/ReturnQuestion.json"
+  },
+  "ReturnQuestionDescription": {
+    "$ref": "./schemas/return-questions/ReturnQuestionDescription.json"
+  },
+  "ReturnQuestionResource": {
+    "$ref": "./schemas/return-questions/ReturnQuestionResource.json"
+  },
+  "ReturnQuestionResponse": {
+    "$ref": "./schemas/return-questions/ReturnQuestionResponse.json"
+  },
+  "ReturnQuestionRequest": {
+    "$ref": "./schemas/return-questions/ReturnQuestionRequest.json"
+  },
   "Scope": {
     "$ref": "./schemas/scopes/Scope.json"
   },

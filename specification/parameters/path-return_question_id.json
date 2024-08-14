@@ -1,0 +1,9 @@
+{
+  "name": "return_question_id",
+  "in": "path",
+  "description": "Id of the return question.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}

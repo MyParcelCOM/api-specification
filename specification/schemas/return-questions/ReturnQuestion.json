@@ -1,0 +1,42 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnQuestionResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string",
+              "example": "what-size",
+              "description": "What size would you like in return?"
+            },
+            "description": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "description": "A localized return question description",
+                  "example": "TWhat size would you like in return?"
+                },
+                {
+                  "$ref": "#/components/schemas/ReturnQuestionDescription"
+                }
+              ],
+              "description": "The value of the ``Accept-Language`` header determines the language in which the description is returned. If the ``Accept-Language`` header is missing, we default to ``en-GB``. If the User has the ``return_questions.manage`` scope and the ``Accept-Language`` header is set to ``*``, all descriptions will be returned in a key/value object."
+            },
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "text",
+                "boolean"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnQuestionResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": "string",
+              "example": "wrong-item",
+              "description": "A unique code for the return question."
+            },
+            "description": {
+              "$ref": "#/components/schemas/ReturnQuestionDescription"
+            },
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "text",
+                "boolean"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
