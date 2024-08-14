@@ -21,6 +21,33 @@
         "code"
       ],
       "properties": {
+        "attachments": {
+          "type": "array",
+          "description": "List of objects containing base64 encoded image data and extension",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": [
+              "data",
+              "extension"
+            ],
+            "properties": {
+              "data": {
+                "type": "string",
+                "description": "Base64 encoded contents of the uploaded image (jpg, png)."
+              },
+              "extension": {
+                "type": "string",
+                "enum": [
+                  "jpg",
+                  "jpeg",
+                  "png"
+                ],
+                "example": "jpg"
+              }
+            }
+          }
+        },
         "code": {
           "type": "string",
           "example": "item-damaged",
