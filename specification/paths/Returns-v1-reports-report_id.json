@@ -6,7 +6,7 @@
   ],
   "get": {
     "tags": [
-      "Returns"
+      "ReturnReports"
     ],
     "security": [
       {
@@ -53,7 +53,7 @@
   },
   "delete": {
     "tags": [
-      "Returns"
+      "ReturnReports"
     ],
     "security": [
       {

@@ -78,6 +78,11 @@
                   "description": "Filter entries by return order item's reference code in the origin marketplace.",
                   "example": "#123456"
                 },
+                "item_sku": {
+                  "type": "string",
+                  "description": "Filter entries by return order item's SKU (exact match).",
+                  "example": "SKU123"
+                },
                 "shops": {
                   "type": "array",
                   "description": "Array of shop IDs to filter included returns by.",
@@ -158,36 +163,41 @@
                     }
                   }
                 },
-                // TODO continue from here
-                "service_code": {
+                "return_reasons": {
                   "type": "array",
-                  "description": "Comma separated string of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the report.",
+                  "description": "Comma separated string of return reason codes to filter by. Only entries that correspond with one of the return reason codes will be in the report.",
                   "items": {
                     "type": "string",
-                    "example": "dpd-next-day"
+                    "example": "product-damaged,product-is-defect"
                   }
                 },
-                "recipient_address": {
-                  "type": "object",
-                  "required": [
-                    "country_code"
-                  ],
-                  "properties": {
-                    "country_code": {
-                      "$ref": "#/components/schemas/CountryCode"
-                    }
+                "return_statuses": {
+                  "type": "array",
+                  "description": "Comma separated string of return status codes to filter by. Only entries that correspond with one of the return status codes will be in the report.",
+                  "items": {
+                    "type": "string",
+                    "example": "return-pending,return-approved"
                   }
                 },
-                "sender_address": {
-                  "type": "object",
-                  "required": [
-                    "country_code"
-                  ],
-                  "properties": {
-                    "country_code": {
+                "consumer_country_code": {
+                  "allOf": [
+                    {
                       "$ref": "#/components/schemas/CountryCode"
+                    },
+                    {
+                      "description": "Filter entries by return's consumer country code."
                     }
-                  }
+                  ]
+                },
+                "consumer_email": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Email"
+                    },
+                    {
+                      "description": "Filter entries by return's consumer email address (exact match)."
+                    }
+                  ]
                 }
               }
             },
