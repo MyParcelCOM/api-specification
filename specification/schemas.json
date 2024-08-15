@@ -438,16 +438,16 @@
     "$ref": "./schemas/reports/ReportResponse.json"
   },
   "ReturnReport": {
-    "$ref": "./schemas/returns/ReturnReport.json"
+    "$ref": "./schemas/return-reports/ReturnReport.json"
   },
   "ReturnReportIncludes": {
-    "$ref": "./schemas/returns/ReturnReportIncludes.json"
+    "$ref": "./schemas/return-reports/ReturnReportIncludes.json"
   },
   "ReturnReportResource": {
-    "$ref": "./schemas/returns/ReturnReportResource.json"
+    "$ref": "./schemas/return-reports/ReturnReportResource.json"
   },
   "ReturnReportResponse": {
-    "$ref": "./schemas/returns/ReturnReportResponse.json"
+    "$ref": "./schemas/return-reports/ReturnReportResponse.json"
   },
   "Return": {
     "$ref": "./schemas/returns/Return.json"
