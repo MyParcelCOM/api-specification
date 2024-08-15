@@ -35,6 +35,12 @@
                   "description": "Number of entries processed in the report."
                 }
               }
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "updated_at": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },

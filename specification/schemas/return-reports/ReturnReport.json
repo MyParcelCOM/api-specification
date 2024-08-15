@@ -200,9 +200,6 @@
                   ]
                 }
               }
-            },
-            "created_at": {
-              "$ref": "#/components/schemas/Timestamp"
             }
           }
         },
