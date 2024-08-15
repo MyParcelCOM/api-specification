@@ -440,8 +440,11 @@
   "ReturnIncludes": {
     "$ref": "./schemas/returns/ReturnIncludes.json"
   },
-  "ReturnItem": {
-    "$ref": "./schemas/returns/ReturnItem.json"
+  "GetReturnItem": {
+    "$ref": "./schemas/returns/GetReturnItem.json"
+  },
+  "PostReturnItem": {
+    "$ref": "./schemas/returns/PostReturnItem.json"
   },
   "ReturnResource": {
     "$ref": "./schemas/returns/ReturnResource.json"
