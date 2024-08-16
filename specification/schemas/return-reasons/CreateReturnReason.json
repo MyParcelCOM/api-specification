@@ -15,7 +15,16 @@
               "description": "A unique code for the return reason."
             },
             "description": {
-              "$ref": "#/components/schemas/ReturnReasonManagementDescription"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/LocalizedField"
+                },
+                {
+                  "example": {
+                    "en-GB": "The item isn't what I expected it to be."
+                  }
+                }
+              ]
             },
             "tags": {
               "type": "array",
