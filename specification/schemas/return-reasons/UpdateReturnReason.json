@@ -10,16 +10,7 @@
           "additionalProperties": false,
           "properties": {
             "description": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/LocalizedField"
-                },
-                {
-                  "example": {
-                    "en-GB": "The item isn't what I expected it to be."
-                  }
-                }
-              ]
+              "$ref": "#/components/schemas/ReturnReasonManagementDescription"
             },
             "tags": {
               "type": "array",
