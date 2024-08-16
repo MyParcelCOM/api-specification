@@ -314,6 +314,9 @@
   "LocaleResponse": {
     "$ref": "./schemas/locales/LocaleResponse.json"
   },
+  "LocalizedField": {
+    "$ref": "./schemas/locales/LocalizedField.json"
+  },
   "Manifest": {
     "$ref": "./schemas/manifests/Manifest.json"
   },
@@ -485,9 +488,6 @@
   "ReturnReason": {
     "$ref": "./schemas/return-reasons/ReturnReason.json"
   },
-  "ReturnReasonManagementDescription": {
-    "$ref": "./schemas/return-reasons/ReturnReasonManagementDescription.json"
-  },
   "ReturnReasonResource": {
     "$ref": "./schemas/return-reasons/ReturnReasonResource.json"
   },
@@ -505,6 +505,18 @@
   },
   "ReturnAnalytics": {
     "$ref": "./schemas/returns/ReturnAnalytics.json"
+  },
+  "ReturnQuestion": {
+    "$ref": "./schemas/return-questions/ReturnQuestion.json"
+  },
+  "ReturnQuestionResource": {
+    "$ref": "./schemas/return-questions/ReturnQuestionResource.json"
+  },
+  "ReturnQuestionResponse": {
+    "$ref": "./schemas/return-questions/ReturnQuestionResponse.json"
+  },
+  "ReturnQuestionRequest": {
+    "$ref": "./schemas/return-questions/ReturnQuestionRequest.json"
   },
   "Scope": {
     "$ref": "./schemas/scopes/Scope.json"
