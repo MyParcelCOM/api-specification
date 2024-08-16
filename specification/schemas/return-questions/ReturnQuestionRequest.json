@@ -15,7 +15,16 @@
               "description": "A unique code for the return question."
             },
             "description": {
-              "$ref": "#/components/schemas/ReturnQuestionDescription"
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/LocalizedField"
+                },
+                {
+                  "example": {
+                    "en-GB": "What size would you like in return?"
+                  }
+                }
+              ]
             },
             "answer_type": {
               "type": "string",

@@ -314,6 +314,9 @@
   "LocaleResponse": {
     "$ref": "./schemas/locales/LocaleResponse.json"
   },
+  "LocalizedField": {
+    "$ref": "./schemas/locales/LocalizedField.json"
+  },
   "Manifest": {
     "$ref": "./schemas/manifests/Manifest.json"
   },
@@ -505,9 +508,6 @@
   },
   "ReturnQuestion": {
     "$ref": "./schemas/return-questions/ReturnQuestion.json"
-  },
-  "ReturnQuestionDescription": {
-    "$ref": "./schemas/return-questions/ReturnQuestionDescription.json"
   },
   "ReturnQuestionResource": {
     "$ref": "./schemas/return-questions/ReturnQuestionResource.json"

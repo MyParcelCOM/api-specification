@@ -19,7 +19,7 @@
       },
       {
         "OAuth2": [
-          "returns.manage"
+          "return_questions.manage"
         ]
       }
     ],
