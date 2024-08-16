@@ -78,7 +78,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnQuestionRequest"
+                    "$ref": "#/components/schemas/PatchReturnQuestionRequest"
                   },
                   {
                     "required": [

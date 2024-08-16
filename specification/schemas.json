@@ -512,8 +512,11 @@
   "ReturnQuestionResponse": {
     "$ref": "./schemas/return-questions/ReturnQuestionResponse.json"
   },
-  "ReturnQuestionRequest": {
-    "$ref": "./schemas/return-questions/ReturnQuestionRequest.json"
+  "CreateReturnQuestionRequest": {
+    "$ref": "./schemas/return-questions/CreateReturnQuestionRequest.json"
+  },
+  "PatchReturnQuestionRequest": {
+    "$ref": "./schemas/return-questions/PatchReturnQuestionRequest.json"
   },
   "Scope": {
     "$ref": "./schemas/scopes/Scope.json"

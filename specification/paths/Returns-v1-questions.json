@@ -110,7 +110,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnQuestionRequest"
+                    "$ref": "#/components/schemas/CreateReturnQuestionRequest"
                   },
                   {
                     "required": [
