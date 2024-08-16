@@ -485,9 +485,6 @@
   "ReturnReason": {
     "$ref": "./schemas/return-reasons/ReturnReason.json"
   },
-  "ReturnReasonManagementDescription": {
-    "$ref": "./schemas/return-reasons/ReturnReasonManagementDescription.json"
-  },
   "ReturnReasonResource": {
     "$ref": "./schemas/return-reasons/ReturnReasonResource.json"
   },
