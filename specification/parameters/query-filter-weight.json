@@ -3,6 +3,6 @@
   "in": "query",
   "description": "Weight value in grams to filter by.",
   "schema": {
-    "type": "integer"
+    "type": "number"
   }
 }
