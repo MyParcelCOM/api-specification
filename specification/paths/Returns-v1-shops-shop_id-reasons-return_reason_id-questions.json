@@ -41,6 +41,7 @@
                   "return_question_ids": {
                     "description": "Array of objects with a return question code and a boolean indicating if the question is required.",
                     "type": "array",
+                    "minItems": 1,
                     "items": {
                       "required": [
                         "code",
