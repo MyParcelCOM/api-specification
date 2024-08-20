@@ -72,31 +72,34 @@
       "type": "array",
       "description": "Array of shop IDs to filter included returns by.",
       "items": {
-        "type": "string",
-        "format": "uuid",
-        "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
-        "example": "35eddf50-1d84-47a3-8479-6bfda729cd99"
-      }
+        "$ref": "#/components/schemas/Uuid"
+      },
+      "example": [
+        "35eddf50-1d84-47a3-8479-6bfda729cd99",
+        "a294ee55-bc94-4890-b734-afd56c158f95"
+      ]
     },
     "organizations": {
       "type": "array",
       "description": "Array of organization IDs to filter included returns by.",
       "items": {
-        "type": "string",
-        "format": "uuid",
-        "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
-        "example": "9cdf86e8-333f-4ed9-bb31-4935c780c947"
-      }
+        "$ref": "#/components/schemas/Uuid"
+      },
+      "example": [
+        "35eddf50-1d84-47a3-8479-6bfda729cd99",
+        "a294ee55-bc94-4890-b734-afd56c158f95"
+      ]
     },
     "brokers": {
       "type": "array",
       "description": "Array of broker IDs to filter included returns by.",
       "items": {
-        "type": "string",
-        "format": "uuid",
-        "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
-        "example": "a294ee55-bc94-4890-b734-afd56c158f95"
-      }
+        "$ref": "#/components/schemas/Uuid"
+      },
+      "example": [
+        "35eddf50-1d84-47a3-8479-6bfda729cd99",
+        "a294ee55-bc94-4890-b734-afd56c158f95"
+      ]
     },
     "outbound_shipment_identifier": {
       "type": "string",
@@ -118,9 +121,12 @@
       "items": {
         "type": "string",
         "format": "uuid",
-        "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
-        "example": "92c69e9b-49b8-4cc4-bd9f-4297fd1937b4,1781c231-e12f-4f18-8ba7-2028e85f1eb3"
-      }
+        "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$"
+      },
+      "example": [
+        "a294ee55-bc94-4890-b734-afd56c158f95",
+        "c8ac2fc8-2e75-4614-9e56-aa270d4338b0"
+      ]
     },
     "paid_at": {
       "type": "object",
