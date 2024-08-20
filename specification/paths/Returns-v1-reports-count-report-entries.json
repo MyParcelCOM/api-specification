@@ -44,7 +44,7 @@
       }
     },
     "responses": {
-      "201": {
+      "200": {
         "description": "The amount of entries for a report.",
         "content": {
           "application/vnd.api+json": {
