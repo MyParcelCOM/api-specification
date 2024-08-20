@@ -437,6 +437,9 @@
   "ReportResponse": {
     "$ref": "./schemas/reports/ReportResponse.json"
   },
+  "ReturnReportFilters": {
+    "$ref": "./schemas/return-reports/ReturnReportFilters.json"
+  },
   "ReturnReport": {
     "$ref": "./schemas/return-reports/ReturnReport.json"
   },
