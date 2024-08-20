@@ -136,19 +136,25 @@
     },
     "return_reasons": {
       "type": "array",
-      "description": "Comma separated string of return reason codes to filter by. Only entries that correspond with one of the return reason codes will be in the report.",
+      "description": "Array of return reason codes to filter by. Only entries that correspond with one of the return reason codes will be in the report.",
       "items": {
         "type": "string"
       },
-      "example": "product-damaged,product-is-defect"
+      "example": [
+        "product-damaged",
+        "product-is-defect"
+      ]
     },
     "return_statuses": {
       "type": "array",
-      "description": "Comma separated string of return status codes to filter by. Only entries that correspond with one of the return status codes will be in the report.",
+      "description": "Array of return status codes to filter by. Only entries that correspond with one of the return status codes will be in the report.",
       "items": {
         "type": "string"
       },
-      "example": "return-pending,return-approved"
+      "example": [
+        "return-pending",
+        "return-approved"
+      ]
     },
     "consumer_country_code": {
       "allOf": [
