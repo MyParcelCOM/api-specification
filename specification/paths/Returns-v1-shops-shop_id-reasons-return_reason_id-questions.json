@@ -34,11 +34,11 @@
               "data": {
                 "type": "object",
                 "required": [
-                  "return_question_ids"
+                  "return_questions"
                 ],
                 "additionalProperties": false,
                 "properties": {
-                  "return_question_ids": {
+                  "return_questions": {
                     "description": "Array of objects with a return question code and a boolean indicating if the question is required.",
                     "type": "array",
                     "minItems": 1,
