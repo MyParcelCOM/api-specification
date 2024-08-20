@@ -1,0 +1,83 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-shop_id"
+    },
+    {
+      "$ref": "#/components/parameters/path-return_reason_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "ReturnQuestions"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Link return questions to the given return reason.",
+    "description": "This endpoint links return questions to the specified return reason.",
+    "requestBody": {
+      "description": "The return question ID's to link to the return reason",
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "return_questions"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "return_questions": {
+                    "description": "Array of objects with a return question code and a boolean indicating if the question is required.",
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "required": [
+                        "code",
+                        "is_required"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "is_required": {
+                          "type": "boolean"
+                        }
+                      }
+                    },
+                    "example": [
+                      {
+                        "code": "what-size",
+                        "is_required": true
+                      },
+                      {
+                        "code": "unexpected-quality",
+                        "is_required": false
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The return questions have been added to the return reason."
+      }
+    }
+  }
+}
