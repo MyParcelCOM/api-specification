@@ -25,6 +25,9 @@
           ],
           "additionalProperties": false,
           "properties": {
+            "user": {
+              "$ref": "#/components/schemas/UserRelationship"
+            },
             "file": {
               "$ref": "#/components/schemas/FileRelationship"
             },
