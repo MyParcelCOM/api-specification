@@ -44,6 +44,25 @@
             }
           }
         },
+        "relationships": {
+          "type": "object",
+          "readOnly": true,
+          "required": [
+            "status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "user": {
+              "$ref": "#/components/schemas/UserRelationship"
+            },
+            "file": {
+              "$ref": "#/components/schemas/FileRelationship"
+            },
+            "status": {
+              "$ref": "#/components/schemas/StatusRelationship"
+            }
+          }
+        },
         "links": {
           "readOnly": true,
           "type": "object",
