@@ -1,0 +1,23 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnReportResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "02/2024 returns"
+            },
+            "filters": {
+              "$ref": "#/components/schemas/ReturnReportFilters"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

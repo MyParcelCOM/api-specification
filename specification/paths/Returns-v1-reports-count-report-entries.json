@@ -1,0 +1,73 @@
+{
+  "post": {
+    "tags": [
+      "ReturnReports"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get projected return report entries count.",
+    "description": "This endpoint retrieves the number of return report entries that would be included in a report with the supplied filters.",
+    "requestBody": {
+      "description": "The report filters.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "additionalProperties": false,
+                "properties": {
+                  "attributes": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "filters": {
+                        "$ref": "#/components/schemas/ReturnReportFilters"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The amount of entries for a report.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "example": 42
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -275,6 +275,15 @@
   "/returns/v1/questions/{return_question_id}": {
     "$ref": "./paths/Returns-v1-questions-return_question_id.json"
   },
+  "/returns/v1/reports": {
+    "$ref": "./paths/Returns-v1-reports.json"
+  },
+  "/returns/v1/reports/count-report-entries": {
+    "$ref": "./paths/Returns-v1-reports-count-report-entries.json"
+  },
+  "/returns/v1/reports/{report_id}": {
+    "$ref": "./paths/Returns-v1-reports-report_id.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },

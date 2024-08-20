@@ -437,6 +437,21 @@
   "ReportResponse": {
     "$ref": "./schemas/reports/ReportResponse.json"
   },
+  "ReturnReportFilters": {
+    "$ref": "./schemas/return-reports/ReturnReportFilters.json"
+  },
+  "ReturnReport": {
+    "$ref": "./schemas/return-reports/ReturnReport.json"
+  },
+  "ReturnReportIncludes": {
+    "$ref": "./schemas/return-reports/ReturnReportIncludes.json"
+  },
+  "ReturnReportResource": {
+    "$ref": "./schemas/return-reports/ReturnReportResource.json"
+  },
+  "ReturnReportResponse": {
+    "$ref": "./schemas/return-reports/ReturnReportResponse.json"
+  },
   "Return": {
     "$ref": "./schemas/returns/Return.json"
   },
