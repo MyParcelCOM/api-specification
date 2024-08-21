@@ -284,6 +284,9 @@
   "/returns/v1/reports/{report_id}": {
     "$ref": "./paths/Returns-v1-reports-report_id.json"
   },
+  "/returns/v1/reports/{report_id}/files/{file_id}": {
+    "$ref": "./paths/Returns-v1-reports-report_id-Files-file_id.json"
+  },
   "/scopes": {
     "$ref": "./paths/Scopes.json"
   },
