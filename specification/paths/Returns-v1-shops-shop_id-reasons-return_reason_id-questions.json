@@ -19,7 +19,7 @@
       }
     ],
     "summary": "Link return questions to the given return reason.",
-    "description": "This endpoint links return questions to the specified return reason.",
+    "description": "This endpoint links return questions to the specified return reason. It overrides previously linked return questions.",
     "requestBody": {
       "description": "The return question ID's to link to the return reason",
       "content": {
@@ -41,7 +41,6 @@
                   "return_questions": {
                     "description": "Array of objects with a return question code and a boolean indicating if the question is required.",
                     "type": "array",
-                    "minItems": 1,
                     "items": {
                       "required": [
                         "code",
