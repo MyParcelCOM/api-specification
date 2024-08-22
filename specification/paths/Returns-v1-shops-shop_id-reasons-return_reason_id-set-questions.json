@@ -18,10 +18,10 @@
         ]
       }
     ],
-    "summary": "Link return questions to the given return reason.",
-    "description": "This endpoint links return questions to the specified return reason. It overrides previously linked return questions.",
+    "summary": "Link return questions to a shop's return reason.",
+    "description": "This endpoint links return questions to the specified shop's return reason. It overrides previously linked return questions.",
     "requestBody": {
-      "description": "The return question ID's to link to the return reason",
+      "description": "The return question ID's to link to the shop's return reason",
       "content": {
         "application/vnd.api+json": {
           "schema": {
@@ -75,7 +75,7 @@
     },
     "responses": {
       "204": {
-        "description": "The return questions have been added to the return reason."
+        "description": "The return questions have been added to the shop's return reason."
       }
     }
   }
