@@ -254,6 +254,9 @@
   "/returns/v1/shops/{shop_id}/reasons/{return_reason_id}": {
     "$ref": "./paths/Returns-v1-shops-shop_id-reasons-return_reason_id.json"
   },
+  "/returns/v1/shops/{shop_id}/reasons/{return_reason_id}/questions": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-reasons-return_reason_id-questions.json"
+  },
   "/returns/v1/analytics/approved": {
     "$ref": "./paths/Returns-v1-analytics-approved.json"
   },
@@ -262,6 +265,24 @@
   },
   "/returns/v1/analytics/orders": {
     "$ref": "./paths/Returns-v1-analytics-orders.json"
+  },
+  "/returns/v1/questions": {
+    "$ref": "./paths/Returns-v1-questions.json"
+  },
+  "/returns/v1/questions/{return_question_id}": {
+    "$ref": "./paths/Returns-v1-questions-return_question_id.json"
+  },
+  "/returns/v1/reports": {
+    "$ref": "./paths/Returns-v1-reports.json"
+  },
+  "/returns/v1/reports/count-report-entries": {
+    "$ref": "./paths/Returns-v1-reports-count-report-entries.json"
+  },
+  "/returns/v1/reports/{report_id}": {
+    "$ref": "./paths/Returns-v1-reports-report_id.json"
+  },
+  "/returns/v1/reports/{report_id}/files/{file_id}": {
+    "$ref": "./paths/Returns-v1-reports-report_id-Files-file_id.json"
   },
   "/scopes": {
     "$ref": "./paths/Scopes.json"

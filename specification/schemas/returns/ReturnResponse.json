@@ -32,32 +32,16 @@
             },
             "items": {
               "type": "array",
+              "minItems": 1,
               "items": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnItem"
+                    "$ref": "#/components/schemas/GetReturnItem"
                   },
                   {
                     "required": [
                       "preferred_outcome"
-                    ],
-                    "properties": {
-                      "reason": {
-                        "properties": {
-                          "attachments": {
-                            "items": {
-                              "properties": {
-                                "url": {
-                                  "type": "string",
-                                  "description": "A URL to the location where the image is saved",
-                                  "example": "https://cdn.myparcel.com/images/my-broken-return-item.jpg"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
+                    ]
                   }
                 ]
               }

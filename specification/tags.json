@@ -157,7 +157,15 @@
     "externalDocs": {}
   },
   {
+    "name": "ReturnQuestions",
+    "externalDocs": {}
+  },
+  {
     "name": "ReturnAnalytics",
+    "externalDocs": {}
+  },
+  {
+    "name": "ReturnReports",
     "externalDocs": {}
   },
   {

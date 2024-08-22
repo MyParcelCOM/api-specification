@@ -314,6 +314,9 @@
   "LocaleResponse": {
     "$ref": "./schemas/locales/LocaleResponse.json"
   },
+  "LocalizedField": {
+    "$ref": "./schemas/locales/LocalizedField.json"
+  },
   "Manifest": {
     "$ref": "./schemas/manifests/Manifest.json"
   },
@@ -434,14 +437,32 @@
   "ReportResponse": {
     "$ref": "./schemas/reports/ReportResponse.json"
   },
+  "ReturnReportFilters": {
+    "$ref": "./schemas/return-reports/ReturnReportFilters.json"
+  },
+  "ReturnReport": {
+    "$ref": "./schemas/return-reports/ReturnReport.json"
+  },
+  "ReturnReportIncludes": {
+    "$ref": "./schemas/return-reports/ReturnReportIncludes.json"
+  },
+  "ReturnReportResource": {
+    "$ref": "./schemas/return-reports/ReturnReportResource.json"
+  },
+  "ReturnReportResponse": {
+    "$ref": "./schemas/return-reports/ReturnReportResponse.json"
+  },
   "Return": {
     "$ref": "./schemas/returns/Return.json"
   },
   "ReturnIncludes": {
     "$ref": "./schemas/returns/ReturnIncludes.json"
   },
-  "ReturnItem": {
-    "$ref": "./schemas/returns/ReturnItem.json"
+  "GetReturnItem": {
+    "$ref": "./schemas/returns/GetReturnItem.json"
+  },
+  "PostReturnItem": {
+    "$ref": "./schemas/returns/PostReturnItem.json"
   },
   "ReturnResource": {
     "$ref": "./schemas/returns/ReturnResource.json"
@@ -482,9 +503,6 @@
   "ReturnReason": {
     "$ref": "./schemas/return-reasons/ReturnReason.json"
   },
-  "ReturnReasonManagementDescription": {
-    "$ref": "./schemas/return-reasons/ReturnReasonManagementDescription.json"
-  },
   "ReturnReasonResource": {
     "$ref": "./schemas/return-reasons/ReturnReasonResource.json"
   },
@@ -502,6 +520,21 @@
   },
   "ReturnAnalytics": {
     "$ref": "./schemas/returns/ReturnAnalytics.json"
+  },
+  "ReturnQuestion": {
+    "$ref": "./schemas/return-questions/ReturnQuestion.json"
+  },
+  "ReturnQuestionResource": {
+    "$ref": "./schemas/return-questions/ReturnQuestionResource.json"
+  },
+  "ReturnQuestionResponse": {
+    "$ref": "./schemas/return-questions/ReturnQuestionResponse.json"
+  },
+  "CreateReturnQuestionRequest": {
+    "$ref": "./schemas/return-questions/CreateReturnQuestionRequest.json"
+  },
+  "PatchReturnQuestionRequest": {
+    "$ref": "./schemas/return-questions/PatchReturnQuestionRequest.json"
   },
   "Scope": {
     "$ref": "./schemas/scopes/Scope.json"

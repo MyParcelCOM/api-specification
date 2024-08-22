@@ -1,0 +1,36 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnQuestionResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/LocalizedField"
+                },
+                {
+                  "example": {
+                    "en-GB": "What size would you like in return?"
+                  }
+                }
+              ]
+            },
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "text",
+                "boolean"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
