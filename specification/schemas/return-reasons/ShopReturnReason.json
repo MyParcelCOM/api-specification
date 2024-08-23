@@ -45,11 +45,11 @@
               "type": "array",
               "items": {
                 "required": [
-                  "return_question_code",
+                  "code",
                   "is_required"
                 ],
                 "properties": {
-                  "return_question_code": {
+                  "code": {
                     "type": "string"
                   },
                   "is_required": {
@@ -58,7 +58,7 @@
                 },
                 "example": [
                   {
-                    "return_question_code": "what-size",
+                    "code": "what-size",
                     "is_required": true
                   }
                 ]
