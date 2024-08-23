@@ -123,8 +123,7 @@
                       "attributes": {
                         "required": [
                           "code",
-                          "description",
-                          "answer_type"
+                          "description"
                         ]
                       }
                     }

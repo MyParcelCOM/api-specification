@@ -20,13 +20,6 @@
                   }
                 }
               ]
-            },
-            "answer_type": {
-              "type": "string",
-              "enum": [
-                "text",
-                "boolean"
-              ]
             }
           }
         }
