@@ -35,13 +35,6 @@
                 }
               ],
               "description": "The value of the ``Accept-Language`` header determines the language in which the description is returned. If the ``Accept-Language`` header is missing, we default to ``en-GB``. If the User has the ``return_questions.manage`` scope and the ``Accept-Language`` header is set to ``*``, all descriptions will be returned in a key/value object."
-            },
-            "answer_type": {
-              "type": "string",
-              "enum": [
-                "text",
-                "boolean"
-              ]
             }
           }
         }
