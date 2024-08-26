@@ -59,6 +59,12 @@
             "null"
           ],
           "description": "Additional information regarding the reason for the return."
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/ItemReasonQuestion"
+          }
         }
       }
     },

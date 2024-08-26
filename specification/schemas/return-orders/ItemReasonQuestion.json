@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "code",
+    "answer"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "code": {
+      "type": "string",
+      "example": "what-size",
+      "description": "A code that identifies the question for the return of this item. See the <a href=\"/#tag/ReturnQuestions/paths/~1returns~1v1~1questions/get\">return-question</a> `code` attribute."
+    },
+    "answer": {
+      "type": "string",
+      "description": "The answer to the question referenced by the code attribute."
+    }
+  }
+}
