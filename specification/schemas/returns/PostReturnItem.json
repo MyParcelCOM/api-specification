@@ -62,6 +62,7 @@
         },
         "questions": {
           "type": "array",
+          "description": "The questions and answers related to this reason.",
           "items": {
             "$ref": "#/components/schemas/ItemReasonQuestion"
           }
