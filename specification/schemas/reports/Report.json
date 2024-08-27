@@ -151,7 +151,8 @@
                   ],
                   "properties": {
                     "country_code": {
-                      "$ref": "#/components/schemas/CountryCode"
+                      "type": "string",
+                      "pattern": "^([A-Z]{2},?)+$"
                     }
                   }
                 },
@@ -162,7 +163,8 @@
                   ],
                   "properties": {
                     "country_code": {
-                      "$ref": "#/components/schemas/CountryCode"
+                      "type": "string",
+                      "pattern": "^([A-Z]{2},?)+$"
                     }
                   }
                 }
