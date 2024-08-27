@@ -70,7 +70,8 @@
       "type": "object",
       "description": "Reason for returning the item. Required if the shop has any <a href=\"/#tag/ReturnReasons/paths/~1returns~1v1~1shops~1%7Bshop_id%7D~1reasons/post\">return reasons set up</a>.",
       "required": [
-        "code"
+        "code",
+        "description"
       ],
       "properties": {
         "attachments": {
