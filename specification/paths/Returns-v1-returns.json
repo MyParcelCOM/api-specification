@@ -140,6 +140,11 @@
         ]
       }
     ],
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/header-accept-language"
+      }
+    ],
     "summary": "Create a new return.",
     "description": "This endpoint creates a new return with the posted data.",
     "requestBody": {
