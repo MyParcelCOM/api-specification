@@ -12,6 +12,7 @@
     },
     "number": {
       "type": "string",
+      "minLength": 1,
       "example": "XI123456789"
     },
     "description": {

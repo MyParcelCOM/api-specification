@@ -9,10 +9,12 @@
   "properties": {
     "mime_type": {
       "type": "string",
+      "minLength": 1,
       "example": "image/png"
     },
     "contents": {
       "type": "string",
+      "minLength": 1,
       "description": "Base64 encoded image data."
     }
   }

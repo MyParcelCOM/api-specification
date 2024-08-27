@@ -10,6 +10,7 @@
           "properties": {
             "name": {
               "type": "string",
+              "minLength": 1,
               "example": "Holmes investigation inc."
             },
             "company_registration_number": {
