@@ -130,7 +130,7 @@
                 },
                 "current_status_code": {
                   "type": "array",
-                  "description": "Comma separated string of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the report.",
+                  "description": "Array of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the report.",
                   "items": {
                     "type": "string",
                     "example": "shipment-delivered"
@@ -138,7 +138,7 @@
                 },
                 "service_code": {
                   "type": "array",
-                  "description": "Comma separated string of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the report.",
+                  "description": "Array of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the report.",
                   "items": {
                     "type": "string",
                     "example": "dpd-next-day"
@@ -151,7 +151,10 @@
                   ],
                   "properties": {
                     "country_code": {
-                      "$ref": "#/components/schemas/CountryCode"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/CountryCode"
+                      }
                     }
                   }
                 },
@@ -162,7 +165,10 @@
                   ],
                   "properties": {
                     "country_code": {
-                      "$ref": "#/components/schemas/CountryCode"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/CountryCode"
+                      }
                     }
                   }
                 }
