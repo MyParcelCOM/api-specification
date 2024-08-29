@@ -20,9 +20,17 @@
         "$ref": "#/components/parameters/query-filter-weight"
       },
       {
-        "name": "include",
+        "name": "filter[address_from][country_code]",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`shop`</li><li>`service`</li><li>`service_options`</li><li>`contract`</li></ul>",
+        "description": "Country code of origin location. Combine with `filter[address_from][postal_code]` for more accurate results.",
+        "schema": {
+          "$ref": "#/components/schemas/CountryCode"
+        }
+      },
+      {
+        "name": "filter[address_from][postal_code]",
+        "in": "query",
+        "description": "Postal code of origin location. Combine with `filter[address_from][country_code]` for more accurate results.",
         "schema": {
           "type": "string"
         }
@@ -41,6 +49,14 @@
         "description": "When set to true, the endpoint will return only return methods that offer label in the box service. However, in case that there is no label in the box return method available, the endpoint will respond with all return methods, except shipping and return, unless specified as a filter. When set to false, the endpoint will exclude all label in the box return methods.",
         "schema": {
           "type": "boolean"
+        }
+      },
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`shop`</li><li>`service`</li><li>`service_options`</li><li>`contract`</li></ul>",
+        "schema": {
+          "type": "string"
         }
       }
     ],
