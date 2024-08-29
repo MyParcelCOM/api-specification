@@ -10,13 +10,19 @@
       ],
       "properties": {
         "date_from": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns created at >= this date will be in the report.",
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns created at >= this date will be in the report.",
           "example": "2024-02-01"
         },
         "date_to": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns created at <= this date will be in the response.",
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns created at <= this date will be in the response.",
           "example": "2024-03-01"
         }
       }
@@ -30,13 +36,19 @@
       ],
       "properties": {
         "date_from": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns approved at >= this date will be in the report.",
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns approved at >= this date will be in the report.",
           "example": "2024-02-01"
         },
         "date_to": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format.Only returns approved at <= this date will be in the response.",
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp.Only returns approved at <= this date will be in the response.",
           "example": "2024-03-01"
         }
       }
@@ -123,13 +135,19 @@
       ],
       "properties": {
         "date_from": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns paid at >= this date will be in the report.",
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns paid at >= this date will be in the report.",
           "example": "2024-02-01"
         },
         "date_to": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns paid at <= this date will be in the response.",
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns paid at <= this date will be in the response.",
           "example": "2024-03-01"
         }
       }
