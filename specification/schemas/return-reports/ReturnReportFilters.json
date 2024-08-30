@@ -12,7 +12,7 @@
         "date_from": {
           "type": [
             "string",
-            "number"
+            "integer"
           ],
           "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns created at >= this date will be in the report.",
           "example": "2024-02-01"
@@ -20,7 +20,7 @@
         "date_to": {
           "type": [
             "string",
-            "number"
+            "integer"
           ],
           "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns created at <= this date will be in the response.",
           "example": "2024-03-01"
@@ -38,7 +38,7 @@
         "date_from": {
           "type": [
             "string",
-            "number"
+            "integer"
           ],
           "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns approved at >= this date will be in the report.",
           "example": "2024-02-01"
@@ -46,7 +46,7 @@
         "date_to": {
           "type": [
             "string",
-            "number"
+            "integer"
           ],
           "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp.Only returns approved at <= this date will be in the response.",
           "example": "2024-03-01"
@@ -137,7 +137,7 @@
         "date_from": {
           "type": [
             "string",
-            "number"
+            "integer"
           ],
           "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns paid at >= this date will be in the report.",
           "example": "2024-02-01"
@@ -145,7 +145,7 @@
         "date_to": {
           "type": [
             "string",
-            "number"
+            "integer"
           ],
           "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns paid at <= this date will be in the response.",
           "example": "2024-03-01"

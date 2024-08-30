@@ -25,18 +25,26 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "additionalProperties": false,
-                "properties": {
-                  "attributes": {
-                    "type": "object",
-                    "additionalProperties": false,
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReturnReport"
+                  },
+                  {
+                    "required": [
+                      "attributes"
+                    ],
                     "properties": {
-                      "filters": {
-                        "$ref": "#/components/schemas/ReturnReportFilters"
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "filters"
+                        ]
                       }
                     }
                   }
-                }
+                ]
               }
             }
           }
@@ -56,8 +64,11 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
+                  "required": [
+                    "total_entries"
+                  ],
                   "properties": {
-                    "count": {
+                    "total_entries": {
                       "type": "integer",
                       "example": 42
                     }
