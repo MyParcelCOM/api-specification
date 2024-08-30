@@ -161,6 +161,9 @@
                         "properties": {
                           "default_weight": {
                             "description": "Required if the `return_type` is set to `shipment`."
+                          },
+                          "country_codes": {
+                            "description": "Country codes to which the return method applies. Codes are in ISO 3166-1 alpha-2 format. <b>It can be specified for store-drop-off and self-shipment return methods only.</b> Shipment return methods automatically set country code lists based on MyParcel.com shipping services configuration."
                           }
                         }
                       },
