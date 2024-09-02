@@ -30,7 +30,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments created at >= this date will be in the report.",
-                      "example": "2020-01-01"
+                      "example": "2020-01-01T00:00:00+02:00"
                     },
                     "date_to": {
                       "type": [
@@ -38,7 +38,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments created at <= this date will be in the response.",
-                      "example": "2020-03-31"
+                      "example": "1585691999"
                     }
                   }
                 },
@@ -56,7 +56,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments registered at >= this date will be in the report.",
-                      "example": "2020-01-01"
+                      "example": "2020-01-01T00:00:00+02:00"
                     },
                     "date_to": {
                       "type": [
@@ -64,7 +64,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments registered at <= this date will be in the response.",
-                      "example": "2020-03-31"
+                      "example": "1585691999"
                     }
                   }
                 },

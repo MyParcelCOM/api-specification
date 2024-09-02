@@ -14,16 +14,16 @@
             "string",
             "integer"
           ],
-          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns created at >= this date will be in the report.",
-          "example": "2024-02-01"
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at >= this date will be in the report.",
+          "example": "2024-02-01T00:00:00+02:00"
         },
         "date_to": {
           "type": [
             "string",
             "integer"
           ],
-          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns created at <= this date will be in the response.",
-          "example": "2024-03-01"
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at <= this date will be in the response.",
+          "example": "1709333999"
         }
       }
     },
@@ -40,16 +40,16 @@
             "string",
             "integer"
           ],
-          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns approved at >= this date will be in the report.",
-          "example": "2024-02-01"
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at >= this date will be in the report.",
+          "example": "2024-02-01T00:00:00+02:00"
         },
         "date_to": {
           "type": [
             "string",
             "integer"
           ],
-          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp.Only returns approved at <= this date will be in the response.",
-          "example": "2024-03-01"
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at <= this date will be in the response.",
+          "example": "1709333999"
         }
       }
     },
@@ -139,16 +139,16 @@
             "string",
             "integer"
           ],
-          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns paid at >= this date will be in the report.",
-          "example": "2024-02-01"
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at >= this date will be in the report.",
+          "example": "2024-02-01T00:00:00+02:00"
         },
         "date_to": {
           "type": [
             "string",
             "integer"
           ],
-          "description": "Date string in YYYY-MM-DD format (UTC) or unix timestamp. Only returns paid at <= this date will be in the response.",
-          "example": "2024-03-01"
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at <= this date will be in the response.",
+          "example": "1709333999"
         }
       }
     },
