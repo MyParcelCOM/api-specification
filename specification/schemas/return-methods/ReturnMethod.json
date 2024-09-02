@@ -24,6 +24,13 @@
               "type": "string",
               "description": "Required if the return_type attribute is `shipment`."
             },
+            "country_codes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "NL"
+              }
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }
