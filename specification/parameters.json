@@ -215,6 +215,9 @@
   "query-shipments-filter-customer_reference": {
     "$ref": "./parameters/query-shipments-filter-customer_reference.json"
   },
+  "query-shipments-filter-tracking_code": {
+    "$ref": "./parameters/query-shipments-filter-tracking_code.json"
+  },
   "query-shipments-filter-date_from": {
     "$ref": "./parameters/query-shipments-filter-date_from.json"
   },

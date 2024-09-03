@@ -42,6 +42,9 @@
         "$ref": "#/components/parameters/query-shipments-filter-customer_reference"
       },
       {
+        "$ref": "#/components/parameters/query-shipments-filter-tracking_code"
+      },
+      {
         "$ref": "#/components/parameters/query-shipments-filter-date_from"
       },
       {
