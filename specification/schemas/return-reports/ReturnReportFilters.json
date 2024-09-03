@@ -175,14 +175,17 @@
       ]
     },
     "consumer_country_code": {
-      "allOf": [
-        {
-          "$ref": "#/components/schemas/CountryCode"
-        },
-        {
-          "description": "Filter entries by return's consumer country code."
-        }
-      ]
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/CountryCode"
+          },
+          {
+            "description": "Filter entries by return's consumer country code."
+          }
+        ]
+      }
     },
     "consumer_email": {
       "allOf": [
