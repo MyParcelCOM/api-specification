@@ -1,0 +1,8 @@
+{
+  "name": "filter[tracking_code]",
+  "in": "query",
+  "description": "Search for a shipment by its tracking code attribute. This is a strict search, meaning that only if the search string matches the `tracking_code` attribute of a shipment completely, will the shipment be returned.",
+  "schema": {
+    "type": "string"
+  }
+}
