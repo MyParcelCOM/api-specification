@@ -10,14 +10,20 @@
       ],
       "properties": {
         "date_from": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns created at >= this date will be in the report.",
-          "example": "2024-02-01"
+          "type": [
+            "string",
+            "integer"
+          ],
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at >= this date will be in the report.",
+          "example": "2024-02-01T00:00:00+02:00"
         },
         "date_to": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns created at <= this date will be in the response.",
-          "example": "2024-03-01"
+          "type": [
+            "string",
+            "integer"
+          ],
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at <= this date will be in the response.",
+          "example": "1709333999"
         }
       }
     },
@@ -30,14 +36,20 @@
       ],
       "properties": {
         "date_from": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns approved at >= this date will be in the report.",
-          "example": "2024-02-01"
+          "type": [
+            "string",
+            "integer"
+          ],
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at >= this date will be in the report.",
+          "example": "2024-02-01T00:00:00+02:00"
         },
         "date_to": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format.Only returns approved at <= this date will be in the response.",
-          "example": "2024-03-01"
+          "type": [
+            "string",
+            "integer"
+          ],
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at <= this date will be in the response.",
+          "example": "1709333999"
         }
       }
     },
@@ -123,14 +135,20 @@
       ],
       "properties": {
         "date_from": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns paid at >= this date will be in the report.",
-          "example": "2024-02-01"
+          "type": [
+            "string",
+            "integer"
+          ],
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at >= this date will be in the report.",
+          "example": "2024-02-01T00:00:00+02:00"
         },
         "date_to": {
-          "type": "string",
-          "description": "Date string in YYYY-MM-DD format. Only returns paid at <= this date will be in the response.",
-          "example": "2024-03-01"
+          "type": [
+            "string",
+            "integer"
+          ],
+          "description": "Date string in ISO 8601 format or unix timestamp. Only returns paid at <= this date will be in the response.",
+          "example": "1709333999"
         }
       }
     },
@@ -157,14 +175,17 @@
       ]
     },
     "consumer_country_code": {
-      "allOf": [
-        {
-          "$ref": "#/components/schemas/CountryCode"
-        },
-        {
-          "description": "Filter entries by return's consumer country code."
-        }
-      ]
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/CountryCode"
+          },
+          {
+            "description": "Filter entries by return's consumer country code."
+          }
+        ]
+      }
     },
     "consumer_email": {
       "allOf": [

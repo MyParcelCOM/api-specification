@@ -40,6 +40,29 @@
             "requires_comment": {
               "type": "boolean",
               "example": false
+            },
+            "questions": {
+              "type": "array",
+              "items": {
+                "required": [
+                  "code",
+                  "is_required"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "is_required": {
+                    "type": "boolean"
+                  }
+                },
+                "example": [
+                  {
+                    "code": "what-size",
+                    "is_required": true
+                  }
+                ]
+              }
             }
           }
         }

@@ -70,7 +70,8 @@
       "type": "object",
       "description": "Reason for returning the item. Required if the shop has any <a href=\"/#tag/ReturnReasons/paths/~1returns~1v1~1shops~1%7Bshop_id%7D~1reasons/post\">return reasons set up</a>.",
       "required": [
-        "code"
+        "code",
+        "description"
       ],
       "properties": {
         "attachments": {
@@ -95,6 +96,68 @@
             "null"
           ],
           "description": "Additional information regarding the reason for the return."
+        },
+        "description": {
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "A localized return reason description",
+              "example": "The item isn't what I expected it to be."
+            },
+            {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/LocalizedField"
+                },
+                {
+                  "example": {
+                    "en-GB": "The item isn't what I expected it to be."
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "The value of the ``Accept-Language`` header determines the language in which the description is returned. If the ``Accept-Language`` header is missing, we default to ``en-GB``. If the User has the ``return_reasons.manage`` scope and the ``Accept-Language`` header is set to ``*``, all descriptions will be returned in a key/value object."
+        },
+        "questions": {
+          "type": "array",
+          "description": "The questions and answers related to this reason.",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ItemReasonQuestion"
+              },
+              {
+                "required": [
+                  "description"
+                ],
+                "properties": {
+                  "description": {
+                    "oneOf": [
+                      {
+                        "type": "string",
+                        "description": "A localized return question description",
+                        "example": "What size would you like in return?"
+                      },
+                      {
+                        "allOf": [
+                          {
+                            "$ref": "#/components/schemas/LocalizedField"
+                          },
+                          {
+                            "example": {
+                              "en-GB": "What size would you like in return?"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "description": "The value of the ``Accept-Language`` header determines the language in which the description is returned. If the ``Accept-Language`` header is missing, we default to ``en-GB``. If the User has the ``return_questions.manage`` scope and the ``Accept-Language`` header is set to ``*``, all descriptions will be returned in a key/value object."
+                  }
+                }
+              }
+            ]
+          }
         }
       }
     },

@@ -15,7 +15,12 @@
           "required": [
             "return_type",
             "created_at"
-          ]
+          ],
+          "properties": {
+            "country_codes": {
+              "description": "Country codes to which the return method applies. Codes are in ISO 3166-1 alpha-2 format."
+            }
+          }
         },
         "links": {
           "readOnly": true,

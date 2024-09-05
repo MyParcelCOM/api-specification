@@ -30,7 +30,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments created at >= this date will be in the report.",
-                      "example": "2020-01-01"
+                      "example": "2020-01-01T00:00:00+02:00"
                     },
                     "date_to": {
                       "type": [
@@ -38,7 +38,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments created at <= this date will be in the response.",
-                      "example": "2020-03-31"
+                      "example": "1585691999"
                     }
                   }
                 },
@@ -56,7 +56,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments registered at >= this date will be in the report.",
-                      "example": "2020-01-01"
+                      "example": "2020-01-01T00:00:00+02:00"
                     },
                     "date_to": {
                       "type": [
@@ -64,7 +64,7 @@
                         "number"
                       ],
                       "description": "Date string in ISO 8601 format or unix timestamp. Only shipments registered at <= this date will be in the response.",
-                      "example": "2020-03-31"
+                      "example": "1585691999"
                     }
                   }
                 },
@@ -130,7 +130,7 @@
                 },
                 "current_status_code": {
                   "type": "array",
-                  "description": "Comma separated string of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the report.",
+                  "description": "Array of status codes to filter by. Only shipments with the a current status that corresponds with one of the status codes will be in the report.",
                   "items": {
                     "type": "string",
                     "example": "shipment-delivered"
@@ -138,7 +138,7 @@
                 },
                 "service_code": {
                   "type": "array",
-                  "description": "Comma separated string of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the report.",
+                  "description": "Array of service codes to filter by. Only shipments with a service that corresponds with one of the service codes will be in the report.",
                   "items": {
                     "type": "string",
                     "example": "dpd-next-day"
@@ -151,7 +151,10 @@
                   ],
                   "properties": {
                     "country_code": {
-                      "$ref": "#/components/schemas/CountryCode"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/CountryCode"
+                      }
                     }
                   }
                 },
@@ -162,7 +165,10 @@
                   ],
                   "properties": {
                     "country_code": {
-                      "$ref": "#/components/schemas/CountryCode"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/CountryCode"
+                      }
                     }
                   }
                 }

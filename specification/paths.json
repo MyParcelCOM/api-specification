@@ -254,8 +254,8 @@
   "/returns/v1/shops/{shop_id}/reasons/{return_reason_id}": {
     "$ref": "./paths/Returns-v1-shops-shop_id-reasons-return_reason_id.json"
   },
-  "/returns/v1/shops/{shop_id}/reasons/{return_reason_id}/questions": {
-    "$ref": "./paths/Returns-v1-shops-shop_id-reasons-return_reason_id-questions.json"
+  "/returns/v1/shops/{shop_id}/reasons/{return_reason_id}/set-questions": {
+    "$ref": "./paths/Returns-v1-shops-shop_id-reasons-return_reason_id-set-questions.json"
   },
   "/returns/v1/analytics/approved": {
     "$ref": "./paths/Returns-v1-analytics-approved.json"

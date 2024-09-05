@@ -287,6 +287,9 @@
   "ItemFeature": {
     "$ref": "./schemas/return-orders/ItemFeature.json"
   },
+  "ItemReasonQuestion": {
+    "$ref": "./schemas/return-orders/ItemReasonQuestion.json"
+  },
   "LiabilityCoverage": {
     "$ref": "./schemas/liability-coverages/LiabilityCoverage.json"
   },
