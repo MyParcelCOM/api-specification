@@ -95,14 +95,13 @@
 
         // Hide internal endpoints on production (mark as experimental on other environments).
         var internal = [
-          'CombinedFiles',
           'Invoices',
           'PasswordResets',
           'Payments',
           'ShipmentSurcharges',
           'SystemMessages',
           'ExportLoginAttempts',
-          "ReturnReasonsManagement",
+          'ReturnReasonsManagement',
         ]
         for (var i = 0; i < internal.length; i++) {
           var sections = document.querySelectorAll([

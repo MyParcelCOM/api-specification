@@ -37,11 +37,6 @@
     }
   },
   {
-    "name": "CombinedFiles",
-    "externalDocs": {
-    }
-  },
-  {
     "name": "Contracts",
     "externalDocs": {
       "url": "https://docs.myparcel.com/api/resources/contracts.html",
