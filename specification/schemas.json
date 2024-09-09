@@ -113,15 +113,6 @@
   "ColloNumber": {
     "$ref": "./schemas/shipments/ColloNumber.json"
   },
-  "CombinedFile": {
-    "$ref": "./schemas/files/CombinedFile.json"
-  },
-  "CombinedFileResource": {
-    "$ref": "./schemas/files/CombinedFileResource.json"
-  },
-  "CombinedFileResponse": {
-    "$ref": "./schemas/files/CombinedFileResponse.json"
-  },
   "ConfigurationSchema": {
     "$ref": "./schemas/integrations/ConfigurationSchema.json"
   },
