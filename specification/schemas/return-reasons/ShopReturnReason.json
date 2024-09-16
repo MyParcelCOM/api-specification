@@ -46,10 +46,14 @@
               "items": {
                 "required": [
                   "code",
+                  "description",
                   "is_required"
                 ],
                 "properties": {
                   "code": {
+                    "type": "string"
+                  },
+                  "description": {
                     "type": "string"
                   },
                   "is_required": {
@@ -59,6 +63,7 @@
                 "example": [
                   {
                     "code": "what-size",
+                    "description": "What size would you like instead?",
                     "is_required": true
                   }
                 ]
