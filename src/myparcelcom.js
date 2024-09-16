@@ -99,7 +99,6 @@
           'Invoices',
           'PasswordResets',
           'Payments',
-          'ShipmentSurcharges',
           'SystemMessages',
           'ExportLoginAttempts',
           "ReturnReasonsManagement",
