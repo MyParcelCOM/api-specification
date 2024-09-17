@@ -1,9 +1,0 @@
-{
-  "name": "combined_file_id",
-  "in": "path",
-  "description": "Id of the combined file resource.",
-  "required": true,
-  "schema": {
-    "$ref": "#/components/schemas/Uuid"
-  }
-}

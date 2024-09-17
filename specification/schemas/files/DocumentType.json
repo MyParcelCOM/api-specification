@@ -3,7 +3,6 @@
   "enum": [
     "label",
     "printcode",
-    "combined-label",
     "customs-declaration-form",
     "commercial-invoice",
     "manifest-itemized",
