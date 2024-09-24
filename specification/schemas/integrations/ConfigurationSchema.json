@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "additionalProperties",
+    "required",
+    "properties"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "enum": ["http://json-schema.org/draft-04/schema#"]
+    },
+    "additionalProperties": {
+      "type": "boolean",
+      "enum": [
+        false
+      ]
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "example": "orderPrefix"
+      }
+    },
+    "properties": {
+      "type": "object",
+      "example": {
+        "orderPrefix": {
+          "type": "string",
+          "description": "Order prefix",
+          "enum": [
+            "shopify_",
+            "magento2_"
+          ],
+          "meta": {
+            "hint": "prefix for your orders that are handled by our system"
+          }
+        },
+        "anotherConfigurableProperty": {
+          "type": "number",
+          "description": "Another configurable property"
+        }
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "type",
+          "description"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "string",
+            "enum": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "example": "Order prefix"
+          },
+          "enum": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "example": "shopify_"
+                },
+                {
+                  "type": "number",
+                  "example": "1000_"
+                }
+              ]
+            }
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "hint": {
+                "type": "string",
+                "example": "A prefix that will be applied to all your orders"
+              },
+              "password": {
+                "type": "boolean",
+                "example": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
