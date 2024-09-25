@@ -140,6 +140,18 @@
   "ContractsRelationship": {
     "$ref": "./schemas/contracts/ContractsRelationship.json"
   },
+  "ContractTemplate": {
+    "$ref": "./schemas/contract-templates/ContractTemplate.json"
+  },
+  "ContractTemplateIncludes": {
+    "$ref": "./schemas/contract-templates/ContractTemplateIncludes.json"
+  },
+  "ContractTemplateResource": {
+    "$ref": "./schemas/contract-templates/ContractTemplateResource.json"
+  },
+  "ContractTemplateResponse": {
+    "$ref": "./schemas/contract-templates/ContractTemplateResponse.json"
+  },
   "CountryCode": {
     "$ref": "./schemas/addresses/CountryCode.json"
   },

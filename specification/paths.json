@@ -83,6 +83,12 @@
   "/contracts/{contract_id}/validate": {
     "$ref": "./paths/Contracts-contract_id-Validate.json"
   },
+  "/contracts/v1/templates": {
+    "$ref": "./paths/Contracts-v1-templates.json"
+  },
+  "/contracts/v1/templates/{contract_template_id}": {
+    "$ref": "./paths/Contracts-v1-templates-contract_template_id.json"
+  },
   "/combine-files": {
     "$ref": "./paths/CombineFiles.json"
   },

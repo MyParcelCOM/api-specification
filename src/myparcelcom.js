@@ -96,6 +96,7 @@
         // Hide internal endpoints on production (mark as experimental on other environments).
         var internal = [
           'CombinedFiles',
+          'ContractTemplates',
           'Invoices',
           'PasswordResets',
           'Payments',
