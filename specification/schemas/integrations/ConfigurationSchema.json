@@ -48,7 +48,6 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "name",
           "type",
           "description"
         ],
