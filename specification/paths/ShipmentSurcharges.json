@@ -123,6 +123,7 @@
                       },
                       "attributes": {
                         "required": [
+                          "name",
                           "fee"
                         ]
                       }
