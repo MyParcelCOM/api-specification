@@ -35,6 +35,9 @@
   "path-contract_id": {
     "$ref": "./parameters/path-contract_id.json"
   },
+  "path-contract_template_id": {
+    "$ref": "./parameters/path-contract_template_id.json"
+  },
   "path-country_code": {
     "$ref": "./parameters/path-country_code.json"
   },

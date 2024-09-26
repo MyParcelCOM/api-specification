@@ -1,0 +1,9 @@
+{
+  "name": "contract_template_id",
+  "in": "path",
+  "description": "Id of the contract template.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ContractTemplateResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "My Custom Template"
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "Template for onboarding customers for some carrier"
+            },
+            "currency": {
+              "$ref": "#/components/schemas/Currency"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "updated_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "broker": {
+              "$ref": "#/components/schemas/BrokerRelationship"
+            },
+            "carrier": {
+              "$ref": "#/components/schemas/CarrierRelationship"
+            },
+            "services": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/ServiceResource"
+                      },
+                      {
+                        "required": [
+                          "id"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

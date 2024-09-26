@@ -49,6 +49,11 @@
     }
   },
   {
+    "name": "ContractTemplates",
+    "externalDocs": {
+    }
+  },
+  {
     "name": "Enterprises",
     "externalDocs": {
     }

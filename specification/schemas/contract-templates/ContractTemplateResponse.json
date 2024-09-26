@@ -1,0 +1,47 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ContractTemplate"
+    },
+    {
+      "required": [
+        "id",
+        "attributes",
+        "relationships",
+        "links"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "currency",
+            "created_at",
+            "updated_at"
+          ]
+        },
+        "relationships": {
+          "required": [
+            "broker",
+            "carrier",
+            "services"
+          ]
+        },
+        "links": {
+          "readOnly": true,
+          "type": "object",
+          "required": [
+            "self"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "url",
+              "example": "$API_HOST/contracts/v1/templates/6d5747af-2648-44be-a882-a1be156d7e0d"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
