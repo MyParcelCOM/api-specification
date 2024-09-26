@@ -75,6 +75,9 @@
     "responses": {
       "204": {
         "description": "The integration configuration settings have been saved."
+      },
+      "422": {
+        "description": "Invalid integration configuration settings."
       }
     }
   }
