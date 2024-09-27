@@ -122,6 +122,9 @@
   "CombinedFileResponse": {
     "$ref": "./schemas/files/CombinedFileResponse.json"
   },
+  "ConfigurationSchema": {
+    "$ref": "./schemas/integrations/ConfigurationSchema.json"
+  },
   "Contract": {
     "$ref": "./schemas/contracts/Contract.json"
   },

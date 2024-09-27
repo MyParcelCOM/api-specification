@@ -368,6 +368,12 @@
   "/shops/{shop_id}/integrations/{integration_id}/shipments": {
     "$ref": "./paths/Shops-shop_id-integrations-integration_id-shipments.json"
   },
+  "/shops/{shop_id}/integrations/{integration_id}/configuration": {
+    "$ref": "./paths/Shops-shop_id-integrations-integration_id-configuration.json"
+  },
+  "/shops/{shop_id}/integrations/{integration_id}/configure": {
+    "$ref": "./paths/Shops-shop_id-integrations-integration_id-configure.json"
+  },
   "/shops/{shop_id}/relationships/integrations": {
     "$ref": "./paths/Shops-shop_id-relationships-integrations.json"
   },

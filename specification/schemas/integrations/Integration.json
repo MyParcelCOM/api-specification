@@ -55,6 +55,11 @@
               "example": true,
               "description": "Whether or not it is required to supply a meta.client_id when connecting integration to shop."
             },
+            "supports_configuration": {
+              "type": "boolean",
+              "example": true,
+              "description": "Determines whether the integration supports configuring settings for a shop."
+            },
             "settings_format": {
               "type": "object",
               "example": {

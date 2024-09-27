@@ -1,0 +1,84 @@
+{
+  "post": {
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-integration_id"
+      },
+      {
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "tags": [
+      "Integrations"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Configure integration settings for a specified Shop.",
+    "description": "This endpoint saves configurable integration settings for a shop.",
+    "requestBody": {
+      "description": "The integration setting properties and their respective values",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "properties"
+                ],
+                "properties": {
+                  "properties": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "name",
+                        "value"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "example": "orderPrefix"
+                        },
+                        "value": {
+                          "type": "string",
+                          "example": "shopify_"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The integration configuration settings have been saved."
+      },
+      "422": {
+        "description": "Invalid integration configuration settings."
+      }
+    }
+  }
+}
