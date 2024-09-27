@@ -362,8 +362,8 @@
   "/shops/{shop_id}/integrations/{integration_id}/shipments": {
     "$ref": "./paths/Shops-shop_id-integrations-integration_id-shipments.json"
   },
-  "/shops/{shop_id}/integrations/{integration_id}/configuration-schema": {
-    "$ref": "./paths/Shops-shop_id-integrations-integration_id-configuration-schema.json"
+  "/shops/{shop_id}/integrations/{integration_id}/configuration": {
+    "$ref": "./paths/Shops-shop_id-integrations-integration_id-configuration.json"
   },
   "/shops/{shop_id}/integrations/{integration_id}/configure": {
     "$ref": "./paths/Shops-shop_id-integrations-integration_id-configure.json"

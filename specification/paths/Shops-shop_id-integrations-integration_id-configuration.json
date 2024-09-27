@@ -46,6 +46,26 @@
                     "configuration_schema": {
                       "type": "object",
                       "$ref": "#/components/schemas/ConfigurationSchema"
+                    },
+                    "values": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "name",
+                          "value"
+                        ],
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "orderPrefix"
+                          },
+                          "value": {
+                            "type": "string",
+                            "example": "myparcelcom_"
+                          }
+                        }
+                      }
                     }
                   }
                 }

@@ -33,7 +33,8 @@
           "description": "Order prefix",
           "enum": [
             "shopify_",
-            "magento2_"
+            "magento2_",
+            "myparcelcom_"
           ],
           "meta": {
             "hint": "prefix for your orders that are handled by our system"
