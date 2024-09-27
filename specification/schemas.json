@@ -611,12 +611,6 @@
   "Shipment": {
     "$ref": "./schemas/shipments/Shipment.json"
   },
-  "ShipmentColliRelationship": {
-    "$ref": "./schemas/shipments/ShipmentColliRelationship.json"
-  },
-  "ShipmentFilesRelationship": {
-    "$ref": "./schemas/shipments/ShipmentFilesRelationship.json"
-  },
   "ShipmentIncludes": {
     "$ref": "./schemas/shipments/ShipmentIncludes.json"
   },
