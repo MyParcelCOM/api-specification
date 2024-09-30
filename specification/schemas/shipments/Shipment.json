@@ -255,7 +255,7 @@
             "colli": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/ShipmentColliRelationship"
+                  "$ref": "#/components/schemas/ShipmentsRelationship"
                 },
                 {
                   "readOnly": true
@@ -285,7 +285,7 @@
             "files": {
               "allOf": [
                 {
-                  "$ref": "#/components/schemas/ShipmentFilesRelationship"
+                  "$ref": "#/components/schemas/FilesRelationship"
                 },
                 {
                   "readOnly": true
