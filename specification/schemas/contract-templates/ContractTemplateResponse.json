@@ -15,8 +15,7 @@
           "required": [
             "name",
             "currency",
-            "created_at",
-            "updated_at"
+            "created_at"
           ]
         },
         "relationships": {
