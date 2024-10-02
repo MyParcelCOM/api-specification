@@ -1,22 +1,22 @@
 {
   "get": {
     "tags": [
-      "ShipmentSurcharges"
+      "ContractTemplates"
     ],
     "security": [
       {
         "OAuth2": [
-          "finance.manage"
+          "contract_templates.manage"
         ]
       }
     ],
-    "summary": "Get all surcharges across all shipments.",
-    "description": "This endpoint retrieves all surcharges for all shipments.",
+    "summary": "Get all contract templates.",
+    "description": "This endpoint retrieves all contract templates available to you.",
     "parameters": [
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`shipment`</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`broker`</li><li>`carrier`</li><li>`services`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -24,7 +24,7 @@
     ],
     "responses": {
       "200": {
-        "description": "Retrieved all of the shipment surcharges.",
+        "description": "Retrieved the contract templates.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -38,11 +38,14 @@
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ShipmentSurchargeResponse"
+                    "$ref": "#/components/schemas/ContractTemplateResponse"
                   }
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "$ref": "#/components/schemas/ContractTemplateIncludes"
                 },
                 "links": {
                   "type": "object",
@@ -55,23 +58,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/shipment-surcharges?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/contracts/v1/templates?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/shipment-surcharges?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/contracts/v1/templates?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/shipment-surcharges?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/contracts/v1/templates?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/shipment-surcharges?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/contracts/v1/templates?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/shipment-surcharges?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/contracts/v1/templates?page[number]=13&page[size]=30"
                     }
                   }
                 }
@@ -84,19 +87,19 @@
   },
   "post": {
     "tags": [
-      "ShipmentSurcharges"
+      "ContractTemplates"
     ],
     "security": [
       {
         "OAuth2": [
-          "finance.manage"
+          "contract_templates.manage"
         ]
       }
     ],
-    "summary": "Create a new shipment surcharge.",
-    "description": "This endpoint creates a new shipment surcharge with the posted data. It is required that a shipment relationship is always provided when creating a shipment surcharge.",
+    "summary": "Create a new contract template.",
+    "description": "This endpoint creates a new contract template with the posted data.",
     "requestBody": {
-      "description": "The shipment surcharge object to be created.",
+      "description": "The contract template object to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -110,7 +113,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ShipmentSurcharge"
+                    "$ref": "#/components/schemas/ContractTemplate"
                   },
                   {
                     "required": [
@@ -124,7 +127,14 @@
                       "attributes": {
                         "required": [
                           "name",
-                          "fee"
+                          "currency"
+                        ]
+                      },
+                      "relationships": {
+                        "required": [
+                          "broker",
+                          "carrier",
+                          "services"
                         ]
                       }
                     }
@@ -138,7 +148,7 @@
     },
     "responses": {
       "201": {
-        "description": "The shipment surcharge is created.",
+        "description": "The contract template has been created.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -149,12 +159,18 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/ShipmentSurchargeResponse"
+                  "$ref": "#/components/schemas/ContractTemplateResponse"
                 }
               }
             }
           }
         }
+      },
+      "400": {
+        "description": "The supplied data is invalid."
+      },
+      "404": {
+        "description": "No resource was found for the given relationship ID."
       }
     }
   }

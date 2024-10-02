@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/ShipmentSurcharge"
+      "$ref": "#/components/schemas/ContractTemplate"
     },
     {
       "required": [
@@ -14,9 +14,15 @@
         "attributes": {
           "required": [
             "name",
-            "fee",
-            "created_at",
-            "updated_at"
+            "currency",
+            "created_at"
+          ]
+        },
+        "relationships": {
+          "required": [
+            "broker",
+            "carrier",
+            "services"
           ]
         },
         "links": {
@@ -30,7 +36,7 @@
             "self": {
               "type": "string",
               "format": "url",
-              "example": "$API_HOST/shipment-surcharges/385446dg-34e1-42a1-n832-bcc209450ea9"
+              "example": "$API_HOST/contracts/v1/templates/6d5747af-2648-44be-a882-a1be156d7e0d"
             }
           }
         }
