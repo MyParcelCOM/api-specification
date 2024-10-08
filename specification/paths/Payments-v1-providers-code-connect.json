@@ -12,6 +12,11 @@
     ],
     "summary": "Connect to a payment provider.",
     "description": "This endpoint connects a payment provider to your shop.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-payment_provider_code"
+      }
+    ],
     "requestBody": {
       "description": "The shop ID and other settings to use for the connection.",
       "required": true,
