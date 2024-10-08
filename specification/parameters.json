@@ -83,6 +83,9 @@
   "path-password_reset_id": {
     "$ref": "./parameters/path-password_reset_id.json"
   },
+  "path-payment_provider_code": {
+    "$ref": "./parameters/path-payment_provider_code.json"
+  },
   "path-postal_code": {
     "$ref": "./parameters/path-postal_code.json"
   },

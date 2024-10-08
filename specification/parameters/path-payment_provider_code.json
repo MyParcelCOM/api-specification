@@ -1,0 +1,9 @@
+{
+  "name": "code",
+  "in": "path",
+  "description": "Code of the payment provider.",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

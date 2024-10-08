@@ -12,6 +12,11 @@
     ],
     "summary": "Disconnect your shop from a payment provider.",
     "description": "This endpoint revokes access to from your shop to a payment provider.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-payment_provider_code"
+      }
+    ],
     "requestBody": {
       "description": "The shop ID to disconnect.",
       "required": true,
