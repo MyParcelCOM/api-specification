@@ -92,8 +92,8 @@
   "path-pudo_id": {
     "$ref": "./parameters/path-pudo_id.json"
   },
-  "path-rates_import_id": {
-    "$ref": "./parameters/path-rates_import_id.json"
+  "path-rate_import_id": {
+    "$ref": "./parameters/path-rate_import_id.json"
   },
   "path-region_id": {
     "$ref": "./parameters/path-region_id.json"
