@@ -7,6 +7,113 @@
       "$ref": "#/components/parameters/path-return_reason_id"
     }
   ],
+  "patch": {
+    "tags": [
+      "ReturnReasons"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Update a shop's return reason by ID.",
+    "description": "This endpoint updates a shop's return reason, allowing a shop to override some of the default attributes of a return reason and to attach (optional) questions to be answered when a consumer creates a return",
+    "requestBody": {
+      "description": "The shop return reason object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "attachments": {
+                    "description": "Determines whether a consumer is allowed, required or forbidden to upload attachments related to the selected return reason",
+                    "example": "optional",
+                    "type": [
+                      "boolean",
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      false,
+                      "optional",
+                      "required"
+                    ]
+                  },
+                  "comment": {
+                    "description": "Determines whether a consumer is allowed, required or forbidden to add a comment related to the selected return reason",
+                    "example": "required",
+                    "type": [
+                      "boolean",
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      false,
+                      "optional",
+                      "required"
+                    ]
+                  },
+                  "questions": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "description": "Array of objects with a return question code and a boolean indicating if the question is required. When an array is provided, it overrides the previously attached questions",
+                    "example": [
+                      {
+                        "code": "what-size",
+                        "is_required": true
+                      },
+                      {
+                        "code": "unexpected-quality",
+                        "is_required": false
+                      }
+                    ],
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "code",
+                        "is_required"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "string",
+                          "description": "The code of the shop return reason"
+                        },
+                        "is_required": {
+                          "type": "boolean",
+                          "description": "Indication whether a consumer is required to answer this question related to the selected return reason"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The shop's return reason has been updated"
+      },
+      "404": {
+        "description": "No return reason was found with the given shop."
+      }
+    }
+  },
   "delete": {
     "tags": [
       "ReturnReasons"
