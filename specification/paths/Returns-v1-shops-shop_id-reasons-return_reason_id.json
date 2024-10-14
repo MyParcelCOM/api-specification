@@ -39,7 +39,6 @@
                     "description": "Determines whether a consumer is allowed, required or forbidden to upload attachments related to the selected return reason",
                     "example": "optional",
                     "type": [
-                      "boolean",
                       "string",
                       "null"
                     ],
@@ -53,7 +52,6 @@
                     "description": "Determines whether a consumer is allowed, required or forbidden to add a comment related to the selected return reason",
                     "example": "required",
                     "type": [
-                      "boolean",
                       "string",
                       "null"
                     ],
