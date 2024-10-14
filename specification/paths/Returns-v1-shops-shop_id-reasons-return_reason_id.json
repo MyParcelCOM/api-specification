@@ -44,7 +44,7 @@
                       "null"
                     ],
                     "enum": [
-                      false,
+                      "disabled",
                       "optional",
                       "required"
                     ]
@@ -58,7 +58,7 @@
                       "null"
                     ],
                     "enum": [
-                      false,
+                      "disabled",
                       "optional",
                       "required"
                     ]
