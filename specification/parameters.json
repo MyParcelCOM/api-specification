@@ -83,14 +83,17 @@
   "path-password_reset_id": {
     "$ref": "./parameters/path-password_reset_id.json"
   },
+  "path-payment_provider_code": {
+    "$ref": "./parameters/path-payment_provider_code.json"
+  },
   "path-postal_code": {
     "$ref": "./parameters/path-postal_code.json"
   },
   "path-pudo_id": {
     "$ref": "./parameters/path-pudo_id.json"
   },
-  "path-rates_import_id": {
-    "$ref": "./parameters/path-rates_import_id.json"
+  "path-rate_import_id": {
+    "$ref": "./parameters/path-rate_import_id.json"
   },
   "path-region_id": {
     "$ref": "./parameters/path-region_id.json"

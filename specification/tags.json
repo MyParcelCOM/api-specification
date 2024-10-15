@@ -1,12 +1,12 @@
 [
   {
-    "name": "Addresses",
-    "externalDocs": {
-    }
+    "name": "Addresses"
   },
   {
     "name": "Brokers",
     "externalDocs": {
+      "url": "https://docs.myparcel.com/api/resources/brokers.html",
+      "description": "API documentation"
     }
   },
   {
@@ -17,29 +17,23 @@
     }
   },
   {
-    "name": "CarrierSurcharges",
-    "externalDocs": {
-    }
+    "name": "CarrierSurcharges"
   },
   {
-    "name": "Clients",
-    "externalDocs": {
-    }
+    "name": "Clients"
   },
   {
     "name": "Collections",
     "externalDocs": {
+      "url": "https://docs.myparcel.com/api/resources/collections.html",
+      "description": "API documentation"
     }
   },
   {
-    "name": "CollectionSchedules",
-    "externalDocs": {
-    }
+    "name": "CollectionSchedules"
   },
   {
-    "name": "CombinedFiles",
-    "externalDocs": {
-    }
+    "name": "CombinedFiles"
   },
   {
     "name": "Contracts",
@@ -49,14 +43,10 @@
     }
   },
   {
-    "name": "ContractTemplates",
-    "externalDocs": {
-    }
+    "name": "ContractTemplates"
   },
   {
-    "name": "Enterprises",
-    "externalDocs": {
-    }
+    "name": "Enterprises"
   },
   {
     "name": "Files",
@@ -80,19 +70,13 @@
     }
   },
   {
-    "name": "Integrations",
-    "externalDocs": {
-    }
+    "name": "Integrations"
   },
   {
-    "name": "Invitations",
-    "externalDocs": {
-    }
+    "name": "Invitations"
   },
   {
-    "name": "Invoices",
-    "externalDocs": {
-    }
+    "name": "Invoices"
   },
   {
     "name": "LiabilityCoverages",
@@ -102,34 +86,30 @@
     }
   },
   {
-    "name": "Locales",
-    "externalDocs": {
-    }
+    "name": "Locales"
   },
   {
     "name": "Manifests",
     "externalDocs": {
+      "url": "https://docs.myparcel.com/api/resources/manifests.html",
+      "description": "API documentation"
     }
   },
   {
     "name": "Organizations",
     "externalDocs": {
+      "url": "https://docs.myparcel.com/api/resources/organizations.html",
+      "description": "API documentation"
     }
   },
   {
-    "name": "PasswordResets",
-    "externalDocs": {
-    }
+    "name": "PasswordResets"
   },
   {
-    "name": "PaymentProviders",
-    "externalDocs": {
-    }
+    "name": "PaymentProviders"
   },
   {
-    "name": "RateImports",
-    "externalDocs": {
-    }
+    "name": "RateImports"
   },
   {
     "name": "Regions",
@@ -146,37 +126,28 @@
     }
   },
   {
-    "name": "Returns",
-    "externalDocs": {}
+    "name": "Returns"
   },
   {
-    "name": "ReturnMethods",
-    "externalDocs": {}
+    "name": "ReturnMethods"
   },
   {
-    "name": "ReturnReasons",
-    "externalDocs": {}
+    "name": "ReturnReasons"
   },
   {
-    "name": "ReturnReasonsManagement",
-    "externalDocs": {}
+    "name": "ReturnReasonsManagement"
   },
   {
-    "name": "ReturnQuestions",
-    "externalDocs": {}
+    "name": "ReturnQuestions"
   },
   {
-    "name": "ReturnAnalytics",
-    "externalDocs": {}
+    "name": "ReturnAnalytics"
   },
   {
-    "name": "ReturnReports",
-    "externalDocs": {}
+    "name": "ReturnReports"
   },
   {
-    "name": "Scopes",
-    "externalDocs": {
-    }
+    "name": "Scopes"
   },
   {
     "name": "Services",
@@ -207,9 +178,7 @@
     }
   },
   {
-    "name": "ShipmentSurcharges",
-    "externalDocs": {
-    }
+    "name": "ShipmentSurcharges"
   },
   {
     "name": "Shops",
@@ -226,19 +195,13 @@
     }
   },
   {
-    "name": "SystemMessages",
-    "externalDocs": {
-    }
+    "name": "SystemMessages"
   },
   {
-    "name": "Users",
-    "externalDocs": {
-    }
+    "name": "Users"
   },
   {
-    "name": "Zones",
-    "externalDocs": {
-    }
+    "name": "Zones"
   },
   {
     "name": "RPC",
@@ -248,8 +211,6 @@
     }
   },
   {
-    "name": "Analytics",
-    "externalDocs": {
-    }
+    "name": "Analytics"
   }
 ]
