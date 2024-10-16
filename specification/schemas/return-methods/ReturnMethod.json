@@ -22,11 +22,13 @@
             },
             "title": {
               "type": "string",
+              "maxLength": 255,
               "description": "Title to display to the consumer in the return portal.",
               "example": "Super simple return method"
             },
             "description": {
               "type": "string",
+              "maxLength": 255,
               "description": "Description to display to the consumer in the return portal.",
               "example": "The super simple return method is the easiest method to return your shipment to our store"
             },
