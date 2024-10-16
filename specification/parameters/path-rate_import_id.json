@@ -1,5 +1,5 @@
 {
-  "name": "rates_import_id",
+  "name": "rate_import_id",
   "in": "path",
   "description": "Id of the rate import.",
   "required": true,
