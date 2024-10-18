@@ -7,8 +7,7 @@ set -o allexport
   ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
   ${ROOT_DIR}/mp/helpers/check-env
   export $(cat ${ROOT_DIR}/.env | xargs)
-  COMPOSE="docker compose --project-name ${PROJECT_NAME}"
-  RUNNING=$(${COMPOSE} ps -q)
+  RUNNING=$(docker compose ps -q)
 }
 set +o allexport
 
@@ -25,8 +24,8 @@ if [ $# -gt 0 ]; then
     shift 1
     ${ROOT_DIR}/mp/${SCRIPT} "$@"
   else
-    ${COMPOSE} "$@"
+    docker compose "$@"
   fi
 else
-  ${COMPOSE} ps
+  docker compose ps
 fi
