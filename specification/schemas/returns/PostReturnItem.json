@@ -58,6 +58,7 @@
             "string",
             "null"
           ],
+          "maxLength": 255,
           "description": "Additional information regarding the reason for the return."
         },
         "questions": {
