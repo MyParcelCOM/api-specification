@@ -20,9 +20,23 @@
             "default_weight": {
               "$ref": "#/components/schemas/Weight"
             },
-            "name": {
-              "type": "string",
-              "description": "Required if the return_type attribute is `shipment`."
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 255,
+              "description": "Title to display to the consumer in the return portal.",
+              "example": "Super simple return method"
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 255,
+              "description": "Description to display to the consumer in the return portal.",
+              "example": "The super simple return method is the easiest method to return your shipment to our store"
             },
             "country_codes": {
               "type": "array",

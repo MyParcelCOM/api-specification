@@ -12,7 +12,7 @@ services:
     build:
       context: .
       dockerfile: docker/build/Dockerfile
-    image: myparcelcom/api-specification:v8-dev
+    image: myparcelcom/api-specification:v9-dev
     volumes:
       - ./dist:/usr/share/nginx/html/dist/
       - ./src/index.html:/usr/share/nginx/html/index.html

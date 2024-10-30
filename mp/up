@@ -2,7 +2,7 @@
 
 echo -e "\033[0;30;47m Starting containers \033[0m"
 
-${COMPOSE} up -d api-specification
+docker compose up -d api-specification
 ./mp.sh bundle
 
 echo -e "\033[0;30;47m Redoc running on \033[0m https://api-specification.localhost.private"

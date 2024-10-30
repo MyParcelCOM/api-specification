@@ -33,9 +33,6 @@
     "name": "CollectionSchedules"
   },
   {
-    "name": "CombinedFiles"
-  },
-  {
     "name": "Contracts",
     "externalDocs": {
       "url": "https://docs.myparcel.com/api/resources/contracts.html",
