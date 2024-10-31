@@ -21,6 +21,7 @@
             },
             "code": {
               "type": "string",
+              "maxLength": 255,
               "example": "205604"
             },
             "address": {

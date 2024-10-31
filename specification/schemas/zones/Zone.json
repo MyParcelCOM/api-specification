@@ -11,11 +11,13 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "EU territory 1A",
               "description": "The name of the resource."
             },
             "code": {
               "type": "string",
+              "maxLength": 255,
               "example": "1A",
               "description": "The code used by the system to identify the resource."
             },

@@ -10,10 +10,12 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "My Magento client"
             },
             "label": {
               "type": "string",
+              "maxLength": 255,
               "example": "Magento"
             },
             "created_at": {

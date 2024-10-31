@@ -13,6 +13,7 @@
             },
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "English"
             }
           }

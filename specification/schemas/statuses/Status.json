@@ -68,6 +68,7 @@
             },
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "Delivered"
             },
             "description": {

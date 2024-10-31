@@ -11,6 +11,7 @@
           "properties": {
             "username": {
               "type": "string",
+              "maxLength": 255,
               "example": "s.holmes@holmesinvestigations.com",
               "description": "Must be unique."
             },
