@@ -11,10 +11,12 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "Re-labeling surcharge"
             },
             "description": {
               "type": "string",
+              "maxLength": 255,
               "example": "A carrier-specific (carrier_code) re-labeling surcharge"
             },
             "fee": {

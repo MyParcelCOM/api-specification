@@ -22,6 +22,7 @@
         "properties": {
           "pointer": {
             "type": "string",
+            "maxLength": 255,
             "example": "/relationships/service/data/id"
           },
           "value": {

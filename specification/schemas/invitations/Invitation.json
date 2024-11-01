@@ -17,15 +17,16 @@
             },
             "first_name": {
               "type": "string",
+              "maxLength": 255,
               "example": "Sherlock"
             },
             "last_name": {
               "type": "string",
+              "maxLength": 255,
               "example": "Holmes"
             },
             "email": {
-              "$ref": "#/components/schemas/Email",
-              "example": "s.holmes@holmesinvestigations.com"
+              "$ref": "#/components/schemas/Email"
             }
           }
         },

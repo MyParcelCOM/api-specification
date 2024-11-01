@@ -10,6 +10,7 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "Liability coverage up to GBP 250 value."
             },
             "price": {

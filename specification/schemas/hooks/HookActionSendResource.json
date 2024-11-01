@@ -21,6 +21,7 @@
         "properties": {
           "url": {
             "type": "string",
+            "maxLength": 255,
             "example": "https://foo.bar"
           },
           "secret": {

@@ -42,6 +42,7 @@
           },
           "pointer": {
             "type": "string",
+            "maxLength": 255,
             "example": "/attributes/physical_properties/weight"
           },
           "value": {

@@ -13,6 +13,7 @@
             },
             "order_reference": {
               "type": "string",
+              "maxLength": 255,
               "example": "#0001-my-order-reference"
             },
             "consumer_address": {

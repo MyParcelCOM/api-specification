@@ -11,10 +11,12 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "MyParcel.com"
             },
             "code": {
               "type": "string",
+              "maxLength": 255,
               "example": "my-parcel-com",
               "description": "Unique slugified version of the carrier name to identify a carrier."
             },
