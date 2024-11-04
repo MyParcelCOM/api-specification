@@ -188,11 +188,15 @@
               }
             },
             "pending_return_email_subscription": {
-              "type": [
-                "string",
-                "null"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Email"
+                },
+                {
+                  "type": "null"
+                }
               ],
-              "example": "info@myparcel.com"
+              "example": "s.holmes@holmesinvestigations.com"
             }
           }
         },
