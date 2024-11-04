@@ -186,6 +186,13 @@
                   "description": "The shop offers exchange as a return outcome."
                 }
               }
+            },
+            "pending_return_email_subscription": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "example": "info@myparcel.com"
             }
           }
         },
