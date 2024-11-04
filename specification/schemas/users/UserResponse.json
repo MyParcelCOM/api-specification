@@ -17,6 +17,7 @@
             "email",
             "locale",
             "status",
+            "has_mfa_enabled",
             "created_at"
           ]
         },
