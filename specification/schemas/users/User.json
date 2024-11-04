@@ -51,6 +51,11 @@
                 "pending"
               ]
             },
+            "has_mfa_enabled": {
+              "type": "boolean",
+              "example": true,
+              "readOnly": true
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }
