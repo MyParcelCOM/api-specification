@@ -187,16 +187,22 @@
                 }
               }
             },
-            "pending_return_email_subscription": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/Email"
-                },
-                {
-                  "type": "null"
+            "email_subscriptions": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "pending_returns": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Email"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "example": "s.holmes@holmesinvestigations.com"
                 }
-              ],
-              "example": "s.holmes@holmesinvestigations.com"
+              }
             }
           }
         },
