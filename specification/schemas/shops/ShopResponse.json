@@ -33,6 +33,21 @@
                 "city",
                 "country_code"
               ]
+            },
+            "branding": {
+              "properties": {
+                "returns": {
+                  "properties": {
+                    "email_content": {
+                      "properties": {
+                        "footer_image_url": {
+                          "$ref": "#/components/schemas/ImageUrl"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
