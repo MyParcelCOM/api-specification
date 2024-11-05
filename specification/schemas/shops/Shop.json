@@ -132,7 +132,8 @@
                             "null"
                           ],
                           "description": "Call to action to encourage customers to contact your store",
-                          "example": "Feel free to get in touch"
+                          "example": "Feel free to get in touch",
+                          "maxLength": 100
                         },
                         "footer_url": {
                           "type": [
