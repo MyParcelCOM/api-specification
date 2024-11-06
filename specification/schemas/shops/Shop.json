@@ -186,6 +186,23 @@
                   "description": "The shop offers exchange as a return outcome."
                 }
               }
+            },
+            "email_subscriptions": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "pending_returns": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/Email"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "example": "s.holmes@holmesinvestigations.com"
+                }
+              }
             }
           }
         },
