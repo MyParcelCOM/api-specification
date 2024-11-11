@@ -106,7 +106,6 @@
                     },
                     "email_content": {
                       "type": "object",
-                      "additionalProperties": false,
                       "properties": {
                         "marketing_title": {
                           "type": [
