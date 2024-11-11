@@ -23,6 +23,9 @@
             },
             "banner": {
               "$ref": "#/components/schemas/ImageMeta"
+            },
+            "email_footer_image": {
+              "$ref": "#/components/schemas/ImageMeta"
             }
           }
         },

@@ -103,6 +103,46 @@
                       "example": false,
                       "default": false,
                       "description": "Whether to hide the price of an order's products on the return portal."
+                    },
+                    "email_content": {
+                      "type": "object",
+                      "properties": {
+                        "marketing_title": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Title of the free input text section of (approved) return emails",
+                          "example": "Seasonal sample sale",
+                          "maxLength": 100
+                        },
+                        "marketing_content": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Rich text content of the free input text section of (approved) return emails",
+                          "example": "We have an <b>awesome seasonal sample</b> sale in store next month! <a>Click here</a> to take a sneak peek.",
+                          "maxLength": 250
+                        },
+                        "customer_service_text": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Call to action to encourage customers to contact your store",
+                          "example": "Feel free to get in touch",
+                          "maxLength": 100
+                        },
+                        "footer_url": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "example": "https://myparcel.com/seasonal-sample-sale",
+                          "description": "An external link that can be accessed by clicking the footer image"
+                        }
+                      }
                     }
                   },
                   "description": "Custom branding for your MyParcel.com return portal."
