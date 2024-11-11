@@ -109,55 +109,7 @@
                 ],
                 "properties": {
                   "colli": {
-                    "type": "array",
-                    "items": {
-                      "required": [
-                        "physical_properties"
-                      ],
-                      "properties": {
-                        "physical_properties": {
-                          "allOf": [
-                            {
-                              "$ref": "#/components/schemas/BasePhysicalProperties"
-                            },
-                            {
-                              "required": [
-                                "weight"
-                              ]
-                            }
-                          ]
-                        },
-                        "items": {
-                          "type": "array",
-                          "items": {
-                            "allOf": [
-                              {
-                                "$ref": "#/components/schemas/BaseShipmentItem"
-                              },
-                              {
-                                "required": [
-                                  "description",
-                                  "quantity"
-                                ]
-                              }
-                            ]
-                          }
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Fidget spinners",
-                          "description": "Description of the shipment (contents). This field is communicated to the carrier and may be put on the shipment's label."
-                        },
-                        "customer_reference": {
-                          "type": "string",
-                          "example": "#8008135",
-                          "description": "Reference for the customer to recognize the shipment by."
-                        },
-                        "total_value": {
-                          "$ref": "#/components/schemas/Price"
-                        }
-                      }
-                    }
+                    "$ref": "#/components/schemas/ColliMeta"
                   },
                   "label": {
                     "type": "object",
