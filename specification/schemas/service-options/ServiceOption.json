@@ -27,6 +27,25 @@
               "type": "string",
               "maxLength": 255,
               "example": "delivery-window:sunday"
+            },
+            "values_format": {
+              "type": "object",
+              "example": {
+                "required": [
+                  "amount",
+                  "currency"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "amount": {
+                    "type": "integer"
+                  },
+                  "currency": {
+                    "type": "string"
+                  }
+                }
+              },
+              "description": "JSON Schema specification of the optional `values` property in the meta of this service option, when posted as a relationship of a shipment. See `data.relationships.service_options.data.*.meta` in POST `/shipments` request body."
             }
           }
         }
