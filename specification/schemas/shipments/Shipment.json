@@ -24,6 +24,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "description": "Use `recipient_tax_identification_numbers` instead."
             },
             "return_address": {
@@ -45,6 +46,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "description": "Use `sender_tax_identification_numbers` instead."
             },
             "pickup_location": {
@@ -73,6 +75,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "example": "Fidget spinners",
               "description": "Description of the shipment (contents). This field is communicated to the carrier and may be put on the shipment's label."
             },
@@ -81,6 +84,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "example": "#8008135",
               "description": "Reference for the customer to recognize the shipment by."
             },
@@ -89,6 +93,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "example": "Your integration name",
               "description": "Name of the application used to create the shipment."
             },
@@ -367,7 +372,7 @@
                                 "properties": {
                                   "values": {
                                     "type": "object",
-                                    "description": "Optional meta values specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `values_format` meta property for specific requirements per service option.",
+                                    "description": "Optional meta values specifically for this service option. Some service options require extra input, like `amount` and `currency` for cash-on-delivery options. See the service option's `values_format` attribute for specific requirements per service option.",
                                     "example": {
                                       "amount": 1200,
                                       "currency": "EUR"

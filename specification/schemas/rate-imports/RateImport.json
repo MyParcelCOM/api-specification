@@ -20,6 +20,7 @@
       "properties": {
         "sheet_url": {
           "type": "string",
+          "maxLength": 255,
           "description": "URL of the CSV file with service rates to be imported."
         },
         "keep_existing_rates": {

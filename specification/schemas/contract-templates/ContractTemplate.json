@@ -10,6 +10,7 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "My Custom Template"
             },
             "description": {
@@ -17,6 +18,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "example": "Template for onboarding customers for some carrier"
             },
             "currency": {

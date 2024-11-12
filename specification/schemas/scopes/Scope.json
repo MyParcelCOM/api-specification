@@ -11,10 +11,12 @@
           "properties": {
             "slug": {
               "type": "string",
+              "maxLength": 255,
               "example": "broker.member"
             },
             "title": {
               "type": "string",
+              "maxLength": 255,
               "example": "Member of broker"
             },
             "description": {

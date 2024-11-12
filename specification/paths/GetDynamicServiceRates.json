@@ -81,6 +81,17 @@
                     }
                   }
                 ]
+              },
+              "meta": {
+                "type": "object",
+                "required": [
+                  "colli"
+                ],
+                "properties": {
+                  "colli": {
+                    "$ref": "#/components/schemas/ColliMeta"
+                  }
+                }
               }
             }
           }

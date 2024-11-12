@@ -24,6 +24,7 @@
         "null",
         "string"
       ],
+      "maxLength": 255,
       "description": "Required when `content_type` is either `merchandise`, `sample_merchandise` or `returned_merchandise`.",
       "example": "9000"
     },
@@ -74,6 +75,7 @@
         "null",
         "string"
       ],
+      "maxLength": 255,
       "example": "512842382"
     },
     "certificate_number": {
@@ -81,6 +83,7 @@
         "null",
         "string"
       ],
+      "maxLength": 255,
       "example": "2112211"
     },
     "total_tax": {

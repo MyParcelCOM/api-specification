@@ -11,10 +11,12 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "Parcel to Parcelshop"
             },
             "code": {
               "type": "string",
+              "maxLength": 255,
               "example": "carrier-parcel-next-day",
               "description": "Slug of the service"
             },

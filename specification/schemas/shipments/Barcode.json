@@ -1,6 +1,7 @@
 {
   "readOnly": true,
   "type": "string",
+  "maxLength": 255,
   "example": "3SABCD0123456789",
   "description": "Textual representation of the barcode present on the label."
 }

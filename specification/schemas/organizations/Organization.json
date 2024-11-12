@@ -11,6 +11,7 @@
             "name": {
               "type": "string",
               "minLength": 1,
+              "maxLength": 255,
               "example": "Holmes investigation inc."
             },
             "company_registration_number": {
@@ -18,6 +19,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "example": "63190133",
               "description": "Chamber of Commerce number."
             },
@@ -27,6 +29,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "eori_number": {
@@ -35,6 +38,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead."
             },
             "voec_number": {
@@ -43,6 +47,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "description": "<strong>Deprecated</strong> use `tax_identification_numbers` instead (use `vat` + `NO`)."
             },
             "billing_address": {
@@ -83,6 +88,7 @@
                 "string",
                 "null"
               ],
+              "maxLength": 255,
               "example": "674864928466",
               "description": "Any reference to identify the organization."
             }

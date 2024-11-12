@@ -11,6 +11,7 @@
           "properties": {
             "username": {
               "type": "string",
+              "maxLength": 255,
               "example": "s.holmes@holmesinvestigations.com",
               "description": "Must be unique."
             },
@@ -49,6 +50,11 @@
                 "blocked",
                 "pending"
               ]
+            },
+            "has_mfa_enabled": {
+              "type": "boolean",
+              "example": true,
+              "readOnly": true
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"

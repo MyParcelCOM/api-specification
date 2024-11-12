@@ -10,10 +10,12 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "My Custom Contract"
             },
             "status": {
               "type": "string",
+              "maxLength": 255,
               "example": "active"
             },
             "currency": {

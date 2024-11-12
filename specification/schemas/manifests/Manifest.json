@@ -11,6 +11,7 @@
           "properties": {
             "name": {
               "type": "string",
+              "maxLength": 255,
               "example": "Batch week 1"
             },
             "address": {

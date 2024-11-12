@@ -110,6 +110,9 @@
   "CollectionTimeSlotResource": {
     "$ref": "./schemas/collections/CollectionTimeSlotResource.json"
   },
+  "ColliMeta": {
+    "$ref": "./schemas/shipments/ColliMeta.json"
+  },
   "ColloNumber": {
     "$ref": "./schemas/shipments/ColloNumber.json"
   },
