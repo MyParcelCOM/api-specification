@@ -55,6 +55,96 @@
       }
     }
   },
+  "patch": {
+    "tags": [
+      "ReturnMethods"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Update a return method by ID.",
+    "description": "This endpoint updates the return method with the supplied ID.",
+    "requestBody": {
+      "description": "The address object with attributes to be updated.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReturnMethodResource"
+                  },
+                  {
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "attributes": {
+                        "additionalProperties": false,
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "maxLength": 255,
+                            "description": "Title to display to the consumer in the return portal.",
+                            "example": "Super simple return method"
+                          },
+                          "description": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "maxLength": 255,
+                            "description": "Description to display to the consumer in the return portal.",
+                            "example": "The super simple return method is the easiest method to return your shipment to our store"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "The return method is updated.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReturnMethodResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "delete": {
     "tags": [
       "ReturnMethods"
