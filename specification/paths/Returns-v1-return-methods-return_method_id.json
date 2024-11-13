@@ -76,7 +76,8 @@
           "schema": {
             "type": "object",
             "required": [
-              "data"
+              "data",
+              "relationships"
             ],
             "additionalProperties": false,
             "properties": {
@@ -117,6 +118,17 @@
                     }
                   }
                 ]
+              },
+              "relationships": {
+                "type": "object",
+                "required": [
+                  "shop"
+                ],
+                "properties": {
+                  "shop": {
+                    "$ref": "#/components/schemas/ShopRelationship"
+                  }
+                }
               }
             }
           }
