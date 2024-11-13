@@ -75,11 +75,10 @@
         "application/vnd.api+json": {
           "schema": {
             "type": "object",
-            "required": [
-              "data",
-              "relationships"
-            ],
             "additionalProperties": false,
+            "required": [
+              "data"
+            ],
             "properties": {
               "data": {
                 "allOf": [
@@ -118,17 +117,6 @@
                     }
                   }
                 ]
-              },
-              "relationships": {
-                "type": "object",
-                "required": [
-                  "shop"
-                ],
-                "properties": {
-                  "shop": {
-                    "$ref": "#/components/schemas/ShopRelationship"
-                  }
-                }
               }
             }
           }
