@@ -69,7 +69,7 @@
     "summary": "Update a return method by ID.",
     "description": "This endpoint updates the return method with the supplied ID.",
     "requestBody": {
-      "description": "The address object with attributes to be updated.",
+      "description": "The return method object with attributes to be updated.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
