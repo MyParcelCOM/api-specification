@@ -149,6 +149,9 @@
   "ContractTemplateResponse": {
     "$ref": "./schemas/contract-templates/ContractTemplateResponse.json"
   },
+  "ContractTemplateRelationship": {
+    "$ref": "./schemas/contracts/ContractsRelationship.json"
+  },
   "CountryCode": {
     "$ref": "./schemas/addresses/CountryCode.json"
   },

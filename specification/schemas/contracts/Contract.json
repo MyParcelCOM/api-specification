@@ -55,8 +55,8 @@
             "liability_coverages": {
               "$ref": "#/components/schemas/LiabilityCoveragesRelationship"
             },
-            "template": {
-              "$ref": "#/components/schemas/ContractRelationship"
+            "contract_template": {
+              "$ref": "#/components/schemas/ContractTemplateRelationship"
             }
           }
         }
