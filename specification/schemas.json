@@ -150,7 +150,7 @@
     "$ref": "./schemas/contract-templates/ContractTemplateResponse.json"
   },
   "ContractTemplateRelationship": {
-    "$ref": "./schemas/contracts/ContractsRelationship.json"
+    "$ref": "./schemas/contract-templates/ContractTemplateRelationship.json"
   },
   "CountryCode": {
     "$ref": "./schemas/addresses/CountryCode.json"
