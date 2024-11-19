@@ -28,7 +28,7 @@
         "related": {
           "type": "string",
           "format": "url",
-          "example": "$API_HOST/contracts/v1/templates/2cb32706-5762-4b96-9212-327e6afaeeff"
+          "example": "$API_HOST/contracts/v1/templates/6d5747af-2648-44be-a882-a1be156d7e0d"
         }
       }
     }
