@@ -1,7 +1,4 @@
 {
-  "/add-shipments-to-collection": {
-    "$ref": "./paths/AddShipmentsToCollection.json"
-  },
   "/addresses": {
     "$ref": "./paths/Addresses.json"
   },
@@ -19,9 +16,6 @@
   },
   "/brokers/{broker_id}/relationships/carriers": {
     "$ref": "./paths/Brokers-broker_id-relationships-carriers.json"
-  },
-  "/calculate-landed-costs": {
-    "$ref": "./paths/CalculateLandedCosts.json"
   },
   "/carriers": {
     "$ref": "./paths/Carriers.json"
@@ -71,9 +65,6 @@
   "/collection-schedules/{collection_schedule_id}": {
     "$ref": "./paths/CollectionSchedules-collection_schedule_id.json"
   },
-  "/consolidate-shipments": {
-    "$ref": "./paths/ConsolidateShipments.json"
-  },
   "/contracts": {
     "$ref": "./paths/Contracts.json"
   },
@@ -89,32 +80,14 @@
   "/contracts/v1/templates/{contract_template_id}": {
     "$ref": "./paths/Contracts-v1-templates-contract_template_id.json"
   },
-  "/combine-files": {
-    "$ref": "./paths/CombineFiles.json"
-  },
-  "/create-manifest-for-collection": {
-    "$ref": "./paths/CreateManifestForCollection.json"
-  },
   "/enterprises": {
     "$ref": "./paths/Enterprises.json"
   },
   "/enterprises/{enterprise_id}": {
     "$ref": "./paths/Enterprises-enterprise_id.json"
   },
-  "/request-rates-template": {
-    "$ref": "./paths/RequestRatesTemplate.json"
-  },
-  "/download-rates-template": {
-    "$ref": "./paths/DownloadRatesTemplate.json"
-  },
   "/files/{file_id}": {
     "$ref": "./paths/Files-file_id.json"
-  },
-  "/get-carrier-status-categories": {
-    "$ref": "./paths/GetCarrierStatusCategories.json"
-  },
-  "/get-dynamic-service-rates": {
-    "$ref": "./paths/GetDynamicServiceRates.json"
   },
   "/hooks": {
     "$ref": "./paths/Hooks.json"
@@ -374,9 +347,6 @@
   "/statuses/{status_id}": {
     "$ref": "./paths/Statuses-status_id.json"
   },
-  "/suggest-hscode": {
-    "$ref": "./paths/Suggest-hscode.json"
-  },
   "/system-messages": {
     "$ref": "./paths/SystemMessages.json"
   },
@@ -392,23 +362,11 @@
   "/users/{user_id}/relationships/scopes": {
     "$ref": "./paths/Users-user_id-relationships-scopes.json"
   },
-  "/count-report-entries": {
-    "$ref": "./paths/CountReportEntries.json"
+  "/zones": {
+    "$ref": "./paths/Zones.json"
   },
-  "/export-login-attempts": {
-    "$ref": "./paths/ExportLoginAttempts.json"
-  },
-  "/track-external-shipment": {
-    "$ref": "./paths/TrackExternalShipment.json"
-  },
-  "/suggest-address": {
-    "$ref": "./paths/SuggestAddress.json"
-  },
-  "/update-shipment-status": {
-    "$ref": "./paths/UpdateShipmentStatus.json"
-  },
-  "/void-shipment": {
-    "$ref": "./paths/VoidShipment.json"
+  "/zones/{zone_id}": {
+    "$ref": "./paths/Zones-zone_id.json"
   },
   "/analytics/on-time-delivery/{interval}": {
     "$ref": "./paths/Analytics-on-time-delivery.json"
@@ -416,10 +374,52 @@
   "/analytics/volume/{group_by}/{interval}": {
     "$ref": "./paths/Analytics-volume.json"
   },
-  "/zones": {
-    "$ref": "./paths/Zones.json"
+  "/add-shipments-to-collection": {
+    "$ref": "./paths/AddShipmentsToCollection.json"
   },
-  "/zones/{zone_id}": {
-    "$ref": "./paths/Zones-zone_id.json"
+  "/calculate-landed-costs": {
+    "$ref": "./paths/CalculateLandedCosts.json"
+  },
+  "/combine-files": {
+    "$ref": "./paths/CombineFiles.json"
+  },
+  "/consolidate-shipments": {
+    "$ref": "./paths/ConsolidateShipments.json"
+  },
+  "/count-report-entries": {
+    "$ref": "./paths/CountReportEntries.json"
+  },
+  "/create-manifest-for-collection": {
+    "$ref": "./paths/CreateManifestForCollection.json"
+  },
+  "/download-rates-template": {
+    "$ref": "./paths/DownloadRatesTemplate.json"
+  },
+  "/export-login-attempts": {
+    "$ref": "./paths/ExportLoginAttempts.json"
+  },
+  "/get-carrier-status-categories": {
+    "$ref": "./paths/GetCarrierStatusCategories.json"
+  },
+  "/get-dynamic-service-rates": {
+    "$ref": "./paths/GetDynamicServiceRates.json"
+  },
+  "/request-rates-template": {
+    "$ref": "./paths/RequestRatesTemplate.json"
+  },
+  "/suggest-address": {
+    "$ref": "./paths/SuggestAddress.json"
+  },
+  "/suggest-hscode": {
+    "$ref": "./paths/Suggest-hscode.json"
+  },
+  "/track-external-shipment": {
+    "$ref": "./paths/TrackExternalShipment.json"
+  },
+  "/update-shipment-status": {
+    "$ref": "./paths/UpdateShipmentStatus.json"
+  },
+  "/void-shipment": {
+    "$ref": "./paths/VoidShipment.json"
   }
 }
