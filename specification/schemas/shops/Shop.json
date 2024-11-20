@@ -125,6 +125,25 @@
                           "example": "We have an <b>awesome seasonal sample</b> sale in store next month! <a>Click here</a> to take a sneak peek.",
                           "maxLength": 250
                         },
+                        "customer_service_phone": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Phone number for customer service",
+                          "example": "+31 20 123 4567",
+                          "maxLength": 20
+                        },
+                        "customer_service_email": {
+                          "oneOf": [
+                            {
+                              "$ref": "#/components/schemas/Email"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
                         "customer_service_text": {
                           "type": [
                             "string",
