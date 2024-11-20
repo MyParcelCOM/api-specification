@@ -135,7 +135,14 @@
                           "maxLength": 20
                         },
                         "customer_service_email": {
-                          "$ref": "#/components/schemas/Email"
+                          "oneOf": [
+                            {
+                              "$ref": "#/components/schemas/Email"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "customer_service_text": {
                           "type": [
