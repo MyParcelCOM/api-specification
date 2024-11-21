@@ -37,7 +37,7 @@
             "myparcelcom_"
           ],
           "meta": {
-            "hint": "prefix for your orders that are handled by our system"
+            "help": "prefix for your orders that are handled by our system"
           }
         },
         "anotherConfigurableProperty": {
@@ -84,7 +84,7 @@
           "meta": {
             "type": "object",
             "properties": {
-              "hint": {
+              "help": {
                 "type": "string",
                 "example": "A prefix that will be applied to all your orders"
               },

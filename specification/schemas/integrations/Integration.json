@@ -74,7 +74,7 @@
                   "api_key": {
                     "type": "string",
                     "meta": {
-                      "type": "password"
+                      "password": true
                     }
                   }
                 }
