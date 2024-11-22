@@ -21,7 +21,7 @@
         },
         "logo_url": {
           "type": "string",
-          "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
+          "example": "https://cdn.myparcel.com/carriers/PostNL.svg",
           "description": "Logo image URL"
         }
       }
