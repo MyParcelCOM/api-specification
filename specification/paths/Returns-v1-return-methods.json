@@ -17,14 +17,13 @@
         "$ref": "#/components/parameters/query-filter-shop"
       },
       {
-        "allOf": [
-          {
-            "$ref": "#/components/parameters/query-filter-weight"
-          },
-          {
-            "deprecated": true
-          }
-        ]
+        "name": "filter[weight]",
+        "in": "query",
+        "deprecated": true,
+        "description": "Weight value in grams to filter by.",
+        "schema": {
+          "type": "number"
+        }
       },
       {
         "name": "filter[address_from][country_code]",
