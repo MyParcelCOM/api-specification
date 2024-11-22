@@ -14,14 +14,29 @@
     "description": "This endpoint retrieves return methods available to your API client.",
     "parameters": [
       {
-        "$ref": "#/components/parameters/query-filter-shop"
+        "allOf": [
+          {
+            "$ref": "#/components/parameters/query-filter-shop"
+          },
+          {
+            "deprecated": true
+          }
+        ]
       },
       {
-        "$ref": "#/components/parameters/query-filter-weight"
+        "allOf": [
+          {
+            "$ref": "#/components/parameters/query-filter-weight"
+          },
+          {
+            "deprecated": true
+          }
+        ]
       },
       {
         "name": "filter[address_from][country_code]",
         "in": "query",
+        "deprecated": true,
         "description": "Country code of origin location. Combine with `filter[address_from][postal_code]` for more accurate results.",
         "schema": {
           "$ref": "#/components/schemas/CountryCode"
@@ -29,6 +44,7 @@
       },
       {
         "name": "filter[shipping_and_return]",
+        "deprecated": true,
         "in": "query",
         "description": "When set to true, the endpoint will return only shipping return methods that offer shipping and return service. However, in case that there is no shipping return method available, the endpoint will respond with all return methods, except label in the box, unless specified as a filter. When set to false, the endpoint will exclude all shipping and return return methods.",
         "schema": {
@@ -37,6 +53,7 @@
       },
       {
         "name": "filter[label_in_the_box]",
+        "deprecated": true,
         "in": "query",
         "description": "When set to true, the endpoint will return only return methods that offer label in the box service. However, in case that there is no label in the box return method available, the endpoint will respond with all return methods, except shipping and return, unless specified as a filter. When set to false, the endpoint will exclude all label in the box return methods.",
         "schema": {
