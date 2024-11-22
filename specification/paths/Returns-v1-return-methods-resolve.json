@@ -86,9 +86,6 @@
                   "items": {
                     "$ref": "#/components/schemas/ReturnMethodResponse"
                   }
-                },
-                "included": {
-                  "$ref": "#/components/schemas/ReturnMethodIncludes"
                 }
               }
             }
