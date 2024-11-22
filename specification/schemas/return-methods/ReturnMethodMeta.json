@@ -29,7 +29,9 @@
     "service": {
       "required": [
         "name",
-        "code"
+        "code",
+        "is_label_in_the_box",
+        "is_shipping_and_return"
       ],
       "properties": {
         "name": {
