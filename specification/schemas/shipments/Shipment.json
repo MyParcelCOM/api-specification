@@ -77,7 +77,7 @@
               ],
               "maxLength": 255,
               "example": "Fidget spinners",
-              "description": "Description of the shipment (contents). This field is communicated to the carrier and may be put on the shipment's label."
+              "description": "Description of the shipment (contents)."
             },
             "customer_reference": {
               "type": [
