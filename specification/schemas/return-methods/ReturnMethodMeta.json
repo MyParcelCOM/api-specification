@@ -3,6 +3,59 @@
   "properties": {
     "price": {
       "$ref": "#/components/schemas/Price"
+    },
+    "carrier": {
+      "required": [
+        "name",
+        "code",
+        "logo_url"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "PostNL"
+        },
+        "code": {
+          "type": "string",
+          "example": "postnl"
+        },
+        "logo_url": {
+          "type": "string",
+          "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
+          "description": "Logo image URL"
+        }
+      }
+    },
+    "service": {
+      "required": [
+        "name",
+        "code"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "example": "PostNL Heen en Terug"
+        },
+        "code": {
+          "type": "string",
+          "maxLength": 255,
+          "example": "postnl-heen-en-terug",
+          "description": "Slug of the service"
+        },
+        "is_label_in_the_box": {
+          "type": "boolean",
+          "example": true,
+          "default": false,
+          "description": "Indicates whether the service uses an implementation of label in the box, where the return label of a shipment is provided in the shipping box."
+        },
+        "is_shipping_and_return": {
+          "type": "boolean",
+          "example": false,
+          "default": false,
+          "description": "Indicates whether the service uses an implementation of shipping and return, where the shipping label can be reused for returns."
+        }
+      }
     }
   }
 }
