@@ -24,7 +24,9 @@
         "null"
       ],
       "enum": [
-        "color"
+        "color",
+        "brand",
+        "size"
       ]
     }
   }

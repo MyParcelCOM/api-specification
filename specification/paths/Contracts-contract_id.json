@@ -124,7 +124,7 @@
                           "carrier": {
                             "readOnly": true
                           },
-                          "template": {
+                          "contract_template": {
                             "readOnly": true
                           }
                         }
@@ -157,6 +157,9 @@
             }
           }
         }
+      },
+      "422": {
+        "description": "The provided contract credentials could not be verified."
       }
     }
   },

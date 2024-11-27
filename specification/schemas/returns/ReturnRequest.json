@@ -12,11 +12,7 @@
               "type": "array",
               "minItems": 1,
               "items": {
-                "allOf": [
-                  {
-                    "$ref": "#/components/schemas/PostReturnItem"
-                  }
-                ]
+                "$ref": "#/components/schemas/PostReturnItem"
               }
             }
           }
