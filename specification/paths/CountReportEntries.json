@@ -1,7 +1,7 @@
 {
   "post": {
     "tags": [
-      "RPC"
+      "Reports"
     ],
     "security": [
       {
@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get report size",
-    "description": "This endpoint retrieves the total number of entries that will be included in a report.",
+    "summary": "Get projected report entries count.",
+    "description": "This endpoint retrieves the number of report entries that would be included in a report with the supplied filters.",
     "requestBody": {
       "description": "The reports object with corresponding filters.",
       "required": true,
