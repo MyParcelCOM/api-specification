@@ -83,6 +83,9 @@
     }
   },
   {
+    "name": "LandedCost"
+  },
+  {
     "name": "Locales"
   },
   {
@@ -123,22 +126,22 @@
     }
   },
   {
+    "name": "ReturnAnalytics"
+  },
+  {
     "name": "Returns"
   },
   {
     "name": "ReturnMethods"
   },
   {
+    "name": "ReturnQuestions"
+  },
+  {
     "name": "ReturnReasons"
   },
   {
     "name": "ReturnReasonsManagement"
-  },
-  {
-    "name": "ReturnQuestions"
-  },
-  {
-    "name": "ReturnAnalytics"
   },
   {
     "name": "ReturnReports"
@@ -199,13 +202,6 @@
   },
   {
     "name": "Zones"
-  },
-  {
-    "name": "RPC",
-    "externalDocs": {
-      "url": "https://docs.myparcel.com/api/rpc-endpoints.html",
-      "description": "API documentation"
-    }
   },
   {
     "name": "Analytics"
