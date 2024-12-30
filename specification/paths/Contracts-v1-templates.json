@@ -6,7 +6,7 @@
     "security": [
       {
         "OAuth2": [
-          "contract_templates.manage"
+          "broker.member"
         ]
       }
     ],
@@ -20,6 +20,12 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-broker"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-carrier"
       }
     ],
     "responses": {

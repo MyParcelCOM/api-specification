@@ -11,7 +11,7 @@
     "security": [
       {
         "OAuth2": [
-          "contract_templates.manage"
+          "broker.member"
         ]
       }
     ],
