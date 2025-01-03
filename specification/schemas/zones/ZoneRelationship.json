@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ZoneResource"
+        },
+        {
+          "required": [
+            "id"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "readOnly": true,
+      "type": "object",
+      "required": [
+        "related"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "related": {
+          "type": "string",
+          "format": "url",
+          "example": "$API_HOST/zones/4afe55b9-f93a-49c1-8006-624e3bd0882a"
+        }
+      }
+    }
+  }
+}
