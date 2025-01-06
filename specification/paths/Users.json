@@ -24,6 +24,14 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "name": "filter[last_login_before]",
+        "in": "query",
+        "description": "Retrieve users who last logged in before the specified time.",
+        "schema": {
+          "$ref": "#/components/schemas/Timestamp"
+        }
       }
     ],
     "responses": {
