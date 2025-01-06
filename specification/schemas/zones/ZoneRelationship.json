@@ -28,7 +28,7 @@
         "related": {
           "type": "string",
           "format": "url",
-          "example": "$API_HOST/zones/4afe55b9-f93a-49c1-8006-624e3bd0882a"
+          "example": "$API_HOST/zones/57d04744-1eef-4347-a462-708319b11417"
         }
       }
     }
