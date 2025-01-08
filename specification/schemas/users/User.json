@@ -58,6 +58,9 @@
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
+            },
+            "last_login": {
+              "$ref": "#/components/schemas/Timestamp"
             }
           }
         }
