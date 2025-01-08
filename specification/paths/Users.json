@@ -24,23 +24,6 @@
         "schema": {
           "type": "string"
         }
-      },
-      {
-        "$ref": "#/components/parameters/query-filter-created_at-date_from"
-      },
-      {
-        "$ref": "#/components/parameters/query-filter-created_at-date_to"
-      },
-      {
-        "name": "filter[last_login_before]",
-        "in": "query",
-        "description": "Date string in ISO 8601 format or unix timestamp. Only resources created at >= this date will be in the response.",
-        "schema": {
-          "type": [
-            "string",
-            "number"
-          ]
-        }
       }
     ],
     "responses": {
