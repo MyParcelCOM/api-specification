@@ -740,6 +740,9 @@
   "ZoneResource": {
     "$ref": "./schemas/zones/ZoneResource.json"
   },
+  "ZoneRelationship": {
+    "$ref": "./schemas/zones/ZoneRelationship.json"
+  },
   "ZoneResponse": {
     "$ref": "./schemas/zones/ZoneResponse.json"
   }

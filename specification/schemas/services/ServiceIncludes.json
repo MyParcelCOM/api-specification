@@ -7,6 +7,9 @@
       },
       {
         "$ref": "#/components/schemas/ServiceOptionResponse"
+      },
+      {
+        "$ref": "#/components/schemas/ZoneResponse"
       }
     ]
   }

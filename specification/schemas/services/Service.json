@@ -146,6 +146,12 @@
             },
             "service_options": {
               "$ref": "#/components/schemas/ServiceOptionsRelationship"
+            },
+            "zone_from": {
+              "$ref": "#/components/schemas/ZoneRelationship"
+            },
+            "zone_to": {
+              "$ref": "#/components/schemas/ZoneRelationship"
             }
           }
         }
