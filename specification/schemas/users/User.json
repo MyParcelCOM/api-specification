@@ -59,7 +59,7 @@
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             },
-            "last_login": {
+            "last_active": {
               "$ref": "#/components/schemas/Timestamp"
             }
           }

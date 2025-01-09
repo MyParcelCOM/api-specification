@@ -19,7 +19,7 @@
             "status",
             "has_mfa_enabled",
             "created_at",
-            "last_login"
+            "last_active"
           ]
         },
         "links": {
