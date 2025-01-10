@@ -18,8 +18,7 @@
             "locale",
             "status",
             "has_mfa_enabled",
-            "created_at",
-            "last_active"
+            "created_at"
           ]
         },
         "links": {
