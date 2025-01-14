@@ -5,6 +5,7 @@
     "printcode",
     "customs-declaration-form",
     "commercial-invoice",
+    "manifest",
     "manifest-itemized",
     "manifest-summarized",
     "manifest-csv",
