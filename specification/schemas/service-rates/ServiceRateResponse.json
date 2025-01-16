@@ -17,7 +17,21 @@
             "weight_max",
             "is_dynamic",
             "includes_vat"
-          ]
+          ],
+          "properties": {
+            "price": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "purchase_price": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "fuel_surcharge": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "oversize_surcharge": {
+              "$ref": "#/components/schemas/Price"
+            }
+          }
         },
         "relationships": {
           "required": [
