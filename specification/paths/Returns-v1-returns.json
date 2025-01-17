@@ -178,16 +178,7 @@
                           "order_reference",
                           "items",
                           "consumer_address"
-                        ],
-                        "properties": {
-                          "consumer_address": {
-                            "required": [
-                              "street_1",
-                              "city",
-                              "country_code"
-                            ]
-                          }
-                        }
+                        ]
                       },
                       "relationships": {
                         "required": [
