@@ -57,7 +57,8 @@
                     "street_1",
                     "city",
                     "country_code"
-                  ]
+                  ],
+                  "description": "The destination address for the return order. By default, this will be the shop's return address."
                 }
               ]
             },
