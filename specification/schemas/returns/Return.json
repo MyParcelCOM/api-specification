@@ -16,7 +16,7 @@
               "maxLength": 255,
               "example": "#0001-my-order-reference"
             },
-            "address": {
+            "return_address": {
               "allOf": [
                 {
                   "$ref": "#/components/schemas/BaseAddress"
