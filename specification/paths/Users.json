@@ -24,6 +24,36 @@
         "schema": {
           "type": "string"
         }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_from"
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-created_at-date_to"
+      },
+      {
+        "name": "filter[last_active_before]",
+        "in": "query",
+        "description": "Date string in ISO 8601 format or unix timestamp. Only resources created before this date will be in the response.",
+        "schema": {
+          "type": [
+            "string",
+            "number"
+          ]
+        }
+      },
+      {
+        "name": "filter[status]",
+        "in": "query",
+        "description": "The status of the user.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "active",
+            "blocked",
+            "pending"
+          ]
+        }
       }
     ],
     "responses": {
