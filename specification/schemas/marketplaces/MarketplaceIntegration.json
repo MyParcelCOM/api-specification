@@ -1,0 +1,108 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MarketplaceIntegrationResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "Amazon UK",
+              "description": "The name of the marketplace integration."
+            },
+            "code": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "amazon-uk",
+              "description": "A unique lowercase code for the marketplace integration."
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "Amazon UK marketplace integration with MyParcel.com.",
+              "description": "A description about the marketplace integration."
+            },
+            "website_url": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "https://amazon.co.uk/",
+              "description": "Marketplace homepage."
+            },
+            "readme_url": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "https://help.myparcel.com/home/integrations-1",
+              "description": "A link to get more more information on the marketplace integration."
+            },
+            "logo_url": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "https://myparcel.com/logo.png",
+              "description": "A link to a logo of the integration platform."
+            },
+            "provides_outbound_shipments": {
+              "type": "boolean",
+              "example": true,
+              "description": "A flag to determine if a marketplace integration provides fetching of shipments."
+            },
+            "provides_single_order_fetch": {
+              "type": "boolean",
+              "example": false,
+              "description": "A flag to determine if a marketplace integration provides fetching of single orders."
+            },
+            "supports_configuration": {
+              "type": "boolean",
+              "example": true,
+              "description": "Determines whether the marketplace integration supports configuration that can be updated after initial connection."
+            },
+            "settings_format": {
+              "type": "object",
+              "example": {
+                "required": [
+                  "webshop_url",
+                  "api_key"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "webshop_url": {
+                    "type": "string"
+                  },
+                  "api_key": {
+                    "type": "string",
+                    "meta": {
+                      "password": true
+                    }
+                  }
+                }
+              },
+              "description": "JSON Schema specification of the settings required to communicate with the marketplace upon connection."
+            },
+            "tags": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Any custom tag. Used to indicate meta-data about the marketplace integration.",
+                    "example": ["shipping", "returns"]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

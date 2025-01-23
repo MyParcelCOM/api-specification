@@ -67,7 +67,11 @@
     }
   },
   {
-    "name": "Integrations"
+    "name": "Integrations",
+    "deprecated": true
+  },
+  {
+    "name": "Marketplaces"
   },
   {
     "name": "Invitations"

@@ -398,6 +398,15 @@
   "PaymentProviderResponse": {
     "$ref": "./schemas/payment-providers/PaymentProviderResponse.json"
   },
+  "MarketplaceIntegration": {
+    "$ref": "./schemas/marketplaces/MarketplaceIntegration.json"
+  },
+  "MarketplaceIntegrationResource": {
+    "$ref": "./schemas/marketplaces/MarketplaceIntegrationResource.json"
+  },
+  "MarketplaceIntegrationResponse": {
+    "$ref": "./schemas/marketplaces/MarketplaceResponse.json"
+  },
   "PhysicalProperties": {
     "$ref": "./schemas/shipments/PhysicalProperties.json"
   },
