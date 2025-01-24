@@ -15,8 +15,19 @@
           "required": [
             "name",
             "currency",
+            "countries_from",
             "created_at"
-          ]
+          ],
+          "properties": {
+            "countries_from": {
+              "readOnly": true,
+              "type": "array",
+              "description": "Indicates the origin countries of the services related to this contract template.",
+              "items": {
+                "$ref": "#/components/schemas/CountryCode"
+              }
+            }
+          }
         },
         "relationships": {
           "required": [
