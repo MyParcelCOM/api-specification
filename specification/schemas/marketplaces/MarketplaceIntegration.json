@@ -27,12 +27,6 @@
               "example": "Amazon UK marketplace integration with MyParcel.com.",
               "description": "A description about the marketplace integration."
             },
-            "website_url": {
-              "type": "string",
-              "maxLength": 255,
-              "example": "https://amazon.co.uk/",
-              "description": "Marketplace homepage."
-            },
             "readme_url": {
               "type": "string",
               "maxLength": 255,
