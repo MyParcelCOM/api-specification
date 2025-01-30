@@ -311,6 +311,12 @@
   "/marketplaces/v1/integrations/{code}/shipments/{shop_id}": {
     "$ref": "./paths/Marketplaces-v1-marketplaces-code-shipments-shop-id.json"
   },
+  "/marketplaces/v1/integrations/{code}/configuration/{shop_id}": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-configuration-shop-id.json"
+  },
+  "/marketplaces/v1/integrations/{code}/configure/{shop_id}": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-configure-shop-id.json"
+  },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
   },

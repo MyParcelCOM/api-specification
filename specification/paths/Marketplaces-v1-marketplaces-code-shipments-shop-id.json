@@ -1,7 +1,7 @@
 {
   "parameters": [
     {
-      "$ref": "#/components/parameters/path-integration_id"
+      "$ref": "#/components/parameters/path-marketplace_integration_code"
     },
     {
       "$ref": "#/components/parameters/path-shop_id"
