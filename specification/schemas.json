@@ -405,7 +405,7 @@
     "$ref": "./schemas/marketplaces/MarketplaceIntegrationResource.json"
   },
   "MarketplaceIntegrationResponse": {
-    "$ref": "./schemas/marketplaces/MarketplaceResponse.json"
+    "$ref": "./schemas/marketplaces/MarketplaceIntegrationResponse.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/shipments/PhysicalProperties.json"

@@ -308,8 +308,8 @@
   "/marketplaces/v1/integrations/{code}/disconnect": {
     "$ref": "./paths/Marketplaces-v1-marketplaces-code-disconnect.json"
   },
-  "/marketplaces/v1/integrations/{code}/shipments": {
-    "$ref": "./paths/Marketplaces-v1-marketplaces-code-shipments.json"
+  "/marketplaces/v1/integrations/{code}/shipments/{shop_id}": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-shipments-shop-id.json"
   },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
