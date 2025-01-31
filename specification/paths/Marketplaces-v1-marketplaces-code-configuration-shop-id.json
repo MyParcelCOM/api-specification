@@ -2,14 +2,14 @@
   "get": {
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-integration_id"
+        "$ref": "#/components/parameters/path-marketplace_integration_code"
       },
       {
         "$ref": "#/components/parameters/path-shop_id"
       }
     ],
     "tags": [
-      "Integrations"
+      "Marketplaces"
     ],
     "security": [
       {
@@ -23,12 +23,11 @@
         ]
       }
     ],
-    "deprecated": true,
-    "summary": "Get a configuration schema for a specified Shop.",
-    "description": "This endpoint returns a JSON Schema with configurable integration settings for a shop.",
+    "summary": "Get a marketplace integration configuration schema for a specified Shop.",
+    "description": "This endpoint returns a JSON Schema with configurable marketplace integration settings for a shop.",
     "responses": {
       "200": {
-        "description": "Retrieved the JSON Schema with configurable integration settings.",
+        "description": "Retrieved the JSON Schema with configurable marketplace integration settings.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -45,7 +44,6 @@
                   ],
                   "properties": {
                     "configuration_schema": {
-                      "type": "object",
                       "$ref": "#/components/schemas/ConfigurationSchema"
                     },
                     "values": {

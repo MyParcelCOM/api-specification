@@ -1,0 +1,36 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MarketplaceIntegration"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "code",
+            "description",
+            "provides_single_order_fetch",
+            "provides_outbound_shipments",
+            "supports_configuration",
+            "tags",
+            "created_at"
+          ]
+        },
+        "meta": {
+          "properties": {
+            "connected": {
+              "type": "boolean",
+              "example": false,
+              "description": "Indicates if the marketplace integration is connected to the shop (when shop_id query parameter is provided)"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

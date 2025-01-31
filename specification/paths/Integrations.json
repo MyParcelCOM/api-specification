@@ -15,6 +15,7 @@
         ]
       }
     ],
+    "deprecated": true,
     "summary": "Get all the integrations.",
     "description": "This endpoint retrieves the available integrations in the MyParcel.com API.",
     "parameters": [

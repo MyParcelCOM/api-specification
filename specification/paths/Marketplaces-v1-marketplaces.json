@@ -1,17 +1,12 @@
 {
-  "parameters": [
-    {
-      "$ref": "#/components/parameters/path-shop_id"
-    }
-  ],
   "get": {
     "tags": [
-      "Shops"
+      "Marketplaces"
     ],
     "security": [
       {
         "OAuth2": [
-          "organizations.manage"
+          "returns.manage"
         ]
       },
       {
@@ -20,17 +15,24 @@
         ]
       }
     ],
-    "deprecated": true,
-    "summary": "Get the integration resources related to this shop.",
-    "description": "This endpoint retrieves the integration resources related to the shop with the supplied ID.",
+    "summary": "Get all marketplace integrations.",
+    "description": "This endpoint retrieves marketplace integrations available to your API client.",
     "parameters": [
+      {
+        "name": "shop_id",
+        "in": "query",
+        "description": "When specified, marketplace integrations which are connected to the given shop will include a `\"connected\": true` meta field.",
+        "schema": {
+          "type": "string"
+        }
+      },
       {
         "$ref": "#/components/parameters/query-filter-tags"
       }
     ],
     "responses": {
       "200": {
-        "description": "Retrieved the integrations.",
+        "description": "Retrieved the marketplace integrations.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -40,12 +42,11 @@
                 "meta",
                 "links"
               ],
-              "additionalProperties": false,
               "properties": {
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/IntegrationResponse"
+                    "$ref": "#/components/schemas/MarketplaceIntegrationResponse"
                   }
                 },
                 "meta": {
@@ -54,7 +55,6 @@
                 "links": {
                   "type": "object",
                   "required": [
-                    "self",
                     "first",
                     "last"
                   ],
@@ -62,23 +62,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/integrations?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/marketplaces/v1/integrations?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/integrations?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/marketplaces/v1/integrations?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/integrations?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/marketplaces/v1/integrations?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/integrations?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/marketplaces/v1/integrations?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/integrations?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/marketplaces/v1/integrations?page[number]=13&page[size]=30"
                     }
                   }
                 }
