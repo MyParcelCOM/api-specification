@@ -20,6 +20,7 @@
         ]
       }
     ],
+    "deprecated": true,
     "summary": "Get the integration resources related to this shop.",
     "description": "This endpoint retrieves the integration resources related to the shop with the supplied ID.",
     "parameters": [

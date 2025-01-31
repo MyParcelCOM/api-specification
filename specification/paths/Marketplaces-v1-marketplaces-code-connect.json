@@ -123,7 +123,7 @@
         "description": "When the shop is not found."
       },
       "422": {
-        "description": "When the settings are incorrect against the format specified by the marketplace or when shop is already connected to another marketplace."
+        "description": "When the settings are incorrect against the format specified by the marketplace or when shop is already connected to this marketplace."
       }
     }
   }

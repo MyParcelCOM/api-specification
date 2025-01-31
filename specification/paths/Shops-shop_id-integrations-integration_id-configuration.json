@@ -23,6 +23,7 @@
         ]
       }
     ],
+    "deprecated": true,
     "summary": "Get a configuration schema for a specified Shop.",
     "description": "This endpoint returns a JSON Schema with configurable integration settings for a shop.",
     "responses": {

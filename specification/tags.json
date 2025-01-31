@@ -67,8 +67,7 @@
     }
   },
   {
-    "name": "Integrations",
-    "deprecated": true
+    "name": "Integrations"
   },
   {
     "name": "Marketplaces"

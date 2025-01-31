@@ -31,6 +31,7 @@
         ]
       }
     ],
+    "deprecated": true,
     "summary": "Get shipments from integration",
     "description": "This endpoint connects to an external integration and requests shipment data for a specified time period.",
     "responses": {

@@ -23,6 +23,7 @@
         ]
       }
     ],
+    "deprecated": true,
     "summary": "Configure integration settings for a specified Shop.",
     "description": "This endpoint saves configurable integration settings for a shop.",
     "requestBody": {
