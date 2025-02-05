@@ -83,6 +83,9 @@
   "path-payment_provider_code": {
     "$ref": "./parameters/path-payment_provider_code.json"
   },
+  "path-marketplace_integration_code": {
+    "$ref": "./parameters/path-marketplace_integration_code.json"
+  },
   "path-postal_code": {
     "$ref": "./parameters/path-postal_code.json"
   },

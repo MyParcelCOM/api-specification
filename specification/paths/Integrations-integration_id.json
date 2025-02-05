@@ -15,6 +15,7 @@
         ]
       }
     ],
+    "deprecated": true,
     "summary": "Get an integration by ID.",
     "description": "This endpoint retrieves the integration with the supplied ID.",
     "responses": {

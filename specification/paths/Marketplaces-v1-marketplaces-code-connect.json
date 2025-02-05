@@ -1,0 +1,130 @@
+{
+  "post": {
+    "tags": [
+      "Marketplaces"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "Connect to a marketplace integration.",
+    "description": "This endpoint connects a marketplace integration to your shop.",
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-marketplace_integration_code"
+      }
+    ],
+    "requestBody": {
+      "description": "The shop ID and other settings to use for the connection.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "shop_id"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "shop_id": {
+                    "type": "string",
+                    "format": "uuid",
+                    "pattern": "^[a-f\\d]{8}(-[a-f\\d]{4}){3}-[a-f\\d]{12}$",
+                    "example": "4067e35b-09cc-42b9-8553-6eaf1788df35"
+                  },
+                  "settings": {
+                    "type": "object",
+                    "description": "The settings to use for the connection. See the marketplace integration's settings_format for details.",
+                    "example": {
+                      "api_key": "90249f97832080b6654ae51c4113d0995df324d20eb1281774cdf62e7761",
+                      "profile_number": 34
+                    }
+                  },
+                  "redirect_url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The URL to redirect to after the user has authorized the connection. Required only for payment providers that authorize through OAuth2.",
+                    "example": "https://example.com/amazon-uk/oauth/callback"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The marketplace was connected successfully."
+      },
+      "201": {
+        "description": "The marketplace requires authorization through OAuth2. The authorization URL is returned in the response body.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "authorization_url": {
+                      "type": "string",
+                      "format": "uri",
+                      "example": "https://marketplace.com/authorize?client_id=6a4baca2-7b94-4987-9e4e-2283c22bac1d&redirect_uri=https://your_shop.com/authorize&response_type=code",
+                      "description": "The URL to redirect the user to authorize the connection as part of a OAuth2 authorization code grant flow."
+                    },
+                    "client": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "description": "Returned when the user has to manually enter MyParcel.com API client credentials in the marketplace account settings.",
+                      "required": [
+                        "id",
+                        "secret"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "6a4baca2-7b94-4987-9e4e-2283c22bac1d"
+                        },
+                        "secret": {
+                          "type": "string",
+                          "example": "624678b02e552591af094a141f5b4c40dedb8752d8da97fd22add951fa92"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "When the shop is not found."
+      },
+      "422": {
+        "description": "When the settings are incorrect against the format specified by the marketplace or when shop is already connected to this marketplace."
+      }
+    }
+  }
+}

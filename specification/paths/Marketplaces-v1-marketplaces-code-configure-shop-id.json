@@ -2,14 +2,14 @@
   "post": {
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-integration_id"
+        "$ref": "#/components/parameters/path-marketplace_integration_code"
       },
       {
         "$ref": "#/components/parameters/path-shop_id"
       }
     ],
     "tags": [
-      "Integrations"
+      "Marketplaces"
     ],
     "security": [
       {
@@ -23,11 +23,10 @@
         ]
       }
     ],
-    "deprecated": true,
-    "summary": "Configure integration settings for a specified Shop.",
-    "description": "This endpoint saves configurable integration settings for a shop.",
+    "summary": "Configure marketplace integration settings for a specified Shop.",
+    "description": "This endpoint saves configurable marketplace integration settings for a shop.",
     "requestBody": {
-      "description": "The integration setting properties and their respective values",
+      "description": "The marketplace integration setting properties and their respective values",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -75,10 +74,10 @@
     },
     "responses": {
       "204": {
-        "description": "The integration configuration settings have been saved."
+        "description": "The marketplace integration configuration settings have been saved."
       },
       "422": {
-        "description": "Invalid integration configuration settings."
+        "description": "Invalid marketplace integration configuration settings."
       }
     }
   }

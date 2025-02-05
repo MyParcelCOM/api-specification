@@ -299,6 +299,24 @@
   "/payments/v1/providers": {
     "$ref": "./paths/Payments-v1-providers.json"
   },
+  "/marketplaces/v1/integrations": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces.json"
+  },
+  "/marketplaces/v1/integrations/{code}/connect": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-connect.json"
+  },
+  "/marketplaces/v1/integrations/{code}/disconnect": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-disconnect.json"
+  },
+  "/marketplaces/v1/integrations/{code}/shipments/{shop_id}": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-shipments-shop-id.json"
+  },
+  "/marketplaces/v1/integrations/{code}/configuration/{shop_id}": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-configuration-shop-id.json"
+  },
+  "/marketplaces/v1/integrations/{code}/configure/{shop_id}": {
+    "$ref": "./paths/Marketplaces-v1-marketplaces-code-configure-shop-id.json"
+  },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
   },

@@ -26,6 +26,14 @@
       },
       {
         "$ref": "#/components/parameters/query-filter-carrier"
+      },
+      {
+        "name": "filter[countries_from]",
+        "in": "query",
+        "description": "Comma separated string of country codes to filter by.",
+        "schema": {
+          "type": "string"
+        }
       }
     ],
     "responses": {
