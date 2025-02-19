@@ -60,7 +60,11 @@
                           "example": "orderPrefix"
                         },
                         "value": {
-                          "type": "string",
+                          "type": [
+                            "string",
+                            "number",
+                            "boolean"
+                          ],
                           "example": "shopify_"
                         }
                       }
