@@ -101,12 +101,6 @@
   "/hook-logs/{hook_log_id}": {
     "$ref": "./paths/HookLogs-hook_log_id.json"
   },
-  "/integrations": {
-    "$ref": "./paths/Integrations.json"
-  },
-  "/integrations/{integration_id}": {
-    "$ref": "./paths/Integrations-integration_id.json"
-  },
   "/invoices": {
     "$ref": "./paths/Invoices.json"
   },
@@ -346,21 +340,6 @@
   },
   "/shops/{shop_id}": {
     "$ref": "./paths/Shops-shop_id.json"
-  },
-  "/shops/{shop_id}/integrations": {
-    "$ref": "./paths/Shops-shop_id-integrations.json"
-  },
-  "/shops/{shop_id}/integrations/{integration_id}/shipments": {
-    "$ref": "./paths/Shops-shop_id-integrations-integration_id-shipments.json"
-  },
-  "/shops/{shop_id}/integrations/{integration_id}/configuration": {
-    "$ref": "./paths/Shops-shop_id-integrations-integration_id-configuration.json"
-  },
-  "/shops/{shop_id}/integrations/{integration_id}/configure": {
-    "$ref": "./paths/Shops-shop_id-integrations-integration_id-configure.json"
-  },
-  "/shops/{shop_id}/relationships/integrations": {
-    "$ref": "./paths/Shops-shop_id-relationships-integrations.json"
   },
   "/statuses": {
     "$ref": "./paths/Statuses.json"
