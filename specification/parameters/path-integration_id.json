@@ -1,9 +1,0 @@
-{
-  "name": "integration_id",
-  "in": "path",
-  "description": "Id of the integration.",
-  "required": true,
-  "schema": {
-    "$ref": "#/components/schemas/Uuid"
-  }
-}
