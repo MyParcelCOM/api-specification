@@ -23,7 +23,7 @@
               "example": "app.example.com",
               "description": "If you want to use [our portal](https://app.myparcel.com) on a domain that you already own, or a *.sendmyparcel.com subdomain."
             },
-            "email": {
+            "reply_to_email": {
               "type": [
                 "string",
                 "null"
