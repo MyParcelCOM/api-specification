@@ -23,6 +23,16 @@
               "example": "app.example.com",
               "description": "If you want to use [our portal](https://app.myparcel.com) on a domain that you already own, or a *.sendmyparcel.com subdomain."
             },
+            "reply_to_email": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 255,
+              "format": "email",
+              "example": "reply-to@myparcel.com",
+              "description": "Email to be used as `reply-to` for invitations"
+            },
             "logo_url": {
               "type": "string",
               "maxLength": 255,
