@@ -44,7 +44,7 @@
                   ],
                   "properties": {
                     "configuration_schema": {
-                      "$ref": "#/components/schemas/ConfigurationSchema"
+                      "$ref": "#/components/schemas/MarketplaceConfigurationSchema"
                     },
                     "values": {
                       "type": "array",

@@ -116,8 +116,8 @@
   "ColloNumber": {
     "$ref": "./schemas/shipments/ColloNumber.json"
   },
-  "ConfigurationSchema": {
-    "$ref": "./schemas/integrations/ConfigurationSchema.json"
+  "MarketplaceConfigurationSchema": {
+    "$ref": "./schemas/marketplaces/ConfigurationSchema.json"
   },
   "Contract": {
     "$ref": "./schemas/contracts/Contract.json"
@@ -257,18 +257,6 @@
   "ImageUrl": {
     "$ref": "./schemas/ImageUrl.json"
   },
-  "Integration": {
-    "$ref": "./schemas/integrations/Integration.json"
-  },
-  "IntegrationResource": {
-    "$ref": "./schemas/integrations/IntegrationResource.json"
-  },
-  "IntegrationResponse": {
-    "$ref": "./schemas/integrations/IntegrationResponse.json"
-  },
-  "IntegrationsRelationship": {
-    "$ref": "./schemas/integrations/IntegrationsRelationship.json"
-  },
   "Invitation": {
     "$ref": "./schemas/invitations/Invitation.json"
   },
@@ -354,7 +342,7 @@
     "$ref": "./schemas/return-orders/Order.json"
   },
   "OrderAnalytics": {
-    "$ref": "./schemas/integrations/OrderAnalytics.json"
+    "$ref": "./schemas/marketplaces/OrderAnalytics.json"
   },
   "BaseOrderItem": {
     "$ref": "./schemas/return-orders/BaseOrderItem.json"
