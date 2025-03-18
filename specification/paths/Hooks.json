@@ -24,6 +24,14 @@
     "description": "This endpoint retrieves hooks available to your API client.",
     "parameters": [
       {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`owner`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
         "$ref": "#/components/parameters/query-filter-owner"
       },
       {
@@ -83,6 +91,22 @@
                 },
                 "meta": {
                   "$ref": "#/components/schemas/PaginationMeta"
+                },
+                "included": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "$ref": "#/components/schemas/ShopResponse"
+                      },
+                      {
+                        "$ref": "#/components/schemas/OrganizationResponse"
+                      },
+                      {
+                        "$ref": "#/components/schemas/BrokerResponse"
+                      }
+                    ]
+                  }
                 },
                 "links": {
                   "type": "object",
