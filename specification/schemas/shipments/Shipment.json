@@ -155,6 +155,19 @@
                 }
               }
             },
+            "first_mile_carrier": {
+              "readOnly": true,
+              "type": "object",
+              "required": [
+                "name"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the first mile carrier"
+                }
+              }
+            },
             "sync_active": {
               "readOnly": true,
               "type": "boolean",
