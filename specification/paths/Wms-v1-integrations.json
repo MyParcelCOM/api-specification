@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "Warehouse Management Systems"
+      "WMS"
     ],
     "security": [
       {

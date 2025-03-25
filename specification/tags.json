@@ -109,6 +109,9 @@
     "name": "PaymentProviders"
   },
   {
+    "name": "WMS"
+  },
+  {
     "name": "RateImports"
   },
   {

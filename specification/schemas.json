@@ -395,6 +395,9 @@
   "MarketplaceIntegrationResponse": {
     "$ref": "./schemas/marketplaces/MarketplaceIntegrationResponse.json"
   },
+  "WmsConfigurationSchema": {
+    "$ref": "./schemas/warehouse-management-systems/ConfigurationSchema.json"
+  },
   "WmsIntegration": {
     "$ref": "./schemas/warehouse-management-systems/WmsIntegration.json"
   },

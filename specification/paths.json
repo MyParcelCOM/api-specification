@@ -308,8 +308,20 @@
   "/marketplaces/v1/integrations/{code}/configuration/{shop_id}": {
     "$ref": "./paths/Marketplaces-v1-integrations-code-configuration-shop-id.json"
   },
-  "/marketplaces/v1/integrations/{code}/configure/{shop_id}": {
-    "$ref": "./paths/Marketplaces-v1-integrations-code-configure-shop-id.json"
+  "/wms/v1/integrations": {
+    "$ref": "./paths/Wms-v1-integrations.json"
+  },
+  "/wms/v1/integrations/{code}/connect": {
+    "$ref": "./paths/Wms-v1-integrations-code-connect.json"
+  },
+  "/wms/v1/integrations/{code}/disconnect": {
+    "$ref": "./paths/Wms-v1-integrations-code-disconnect.json"
+  },
+  "/wms/v1/integrations/{code}/configuration/{shop_id}": {
+    "$ref": "./paths/Wms-v1-integrations-code-configuration-shop-id.json"
+  },
+  "/wms/v1/integrations/{code}/configure/{shop_id}": {
+    "$ref": "./paths/Wms-v1-integrations-code-configure-shop-id.json"
   },
   "/shipments/{shipment_id}": {
     "$ref": "./paths/Shipments-shipment_id.json"
