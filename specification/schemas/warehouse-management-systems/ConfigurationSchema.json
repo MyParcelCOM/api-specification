@@ -72,7 +72,7 @@
               "oneOf": [
                 {
                   "type": "string",
-                  "example": "shopify_"
+                  "example": "sherpaan_"
                 },
                 {
                   "type": "number",
