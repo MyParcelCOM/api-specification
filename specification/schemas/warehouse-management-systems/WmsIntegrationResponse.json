@@ -1,0 +1,35 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/WmsIntegration"
+    },
+    {
+      "required": [
+        "id",
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "required": [
+            "name",
+            "code",
+            "description",
+            "website_url",
+            "readme_url",
+            "logo_url",
+            "created_at"
+          ]
+        },
+        "meta": {
+          "properties": {
+            "connected": {
+              "type": "boolean",
+              "example": false,
+              "description": "Indicates if the warehouse management system is connected to the shop (when shop_id query parameter is provided)"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

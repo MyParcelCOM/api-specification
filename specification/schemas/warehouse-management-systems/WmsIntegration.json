@@ -1,0 +1,74 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/WmsResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "My WMS",
+              "description": "The name of the warehouse management system."
+            },
+            "code": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "my-wms",
+              "description": "A unique lowercase code for the warehouse management system."
+            },
+            "description": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "My WMS integration with MyParcel.com.",
+              "description": "A description about the warehouse management system."
+            },
+            "website_url": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "https://my-wms.com/",
+              "description": "WMS homepage."
+            },
+            "readme_url": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "https://help.myparcel.com/home/wms",
+              "description": "A link to get more more information on the warehouse management system."
+            },
+            "logo_url": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "https://myparcel.com/logo.png",
+              "description": "A link to a logo of the integration platform."
+            },
+            "settings_format": {
+              "type": "object",
+              "example": {
+                "required": [
+                  "api_key"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "api_key": {
+                    "type": "string",
+                    "meta": {
+                      "type": "password"
+                    }
+                  }
+                }
+              },
+              "description": "JSON Schema specification of the settings required to communicate with the integration platform."
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
