@@ -294,7 +294,7 @@
     "$ref": "./paths/Payments-v1-providers.json"
   },
   "/marketplaces/v1/integrations": {
-    "$ref": "./paths/Marketplaces-v1-marketplaces.json"
+    "$ref": "./paths/Marketplaces-v1-integrations.json"
   },
   "/marketplaces/v1/integrations/{code}/connect": {
     "$ref": "./paths/Marketplaces-v1-marketplaces-code-connect.json"
