@@ -57,11 +57,11 @@
                         "properties": {
                           "name": {
                             "type": "string",
-                            "example": "orderPrefix"
+                            "example": "myProperty"
                           },
                           "value": {
                             "type": "string",
-                            "example": "myparcelcom_"
+                            "example": "myValueForMyProperty"
                           }
                         }
                       }

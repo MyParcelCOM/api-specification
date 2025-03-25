@@ -22,78 +22,15 @@
       "type": "array",
       "items": {
         "type": "string",
-        "example": "orderPrefix"
+        "example": "configurableProperty"
       }
     },
     "properties": {
       "type": "object",
       "example": {
-        "orderPrefix": {
-          "type": "string",
-          "description": "Order prefix",
-          "enum": [
-            "sherpaan_",
-            "picqer_",
-            "myparcelcom_"
-          ],
-          "meta": {
-            "help": "prefix for returns that are handled by our system"
-          }
-        },
-        "anotherConfigurableProperty": {
+        "configurableProperty": {
           "type": "number",
-          "description": "Another configurable property"
-        }
-      },
-      "additionalProperties": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "type",
-          "description"
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "example": "string",
-            "enum": [
-              "string",
-              "number",
-              "boolean"
-            ]
-          },
-          "description": {
-            "type": "string",
-            "example": "Order prefix"
-          },
-          "enum": {
-            "type": "array",
-            "items": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "example": "sherpaan_"
-                },
-                {
-                  "type": "number",
-                  "example": "1000_"
-                }
-              ]
-            }
-          },
-          "meta": {
-            "type": "object",
-            "properties": {
-              "help": {
-                "type": "string",
-                "example": "A prefix that will be applied to all your orders"
-              },
-              "password": {
-                "type": "boolean",
-                "example": false
-              }
-            }
-          }
+          "description": "Description of configurable property"
         }
       }
     }
