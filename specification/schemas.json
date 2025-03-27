@@ -116,9 +116,6 @@
   "ColloNumber": {
     "$ref": "./schemas/shipments/ColloNumber.json"
   },
-  "MarketplaceConfigurationSchema": {
-    "$ref": "./schemas/marketplaces/ConfigurationSchema.json"
-  },
   "Contract": {
     "$ref": "./schemas/contracts/Contract.json"
   },
@@ -157,6 +154,9 @@
   },
   "Currency": {
     "$ref": "./schemas/Currency.json"
+  },
+  "Configuration": {
+    "$ref": "./schemas/Configuration.json"
   },
   "PackageType": {
     "$ref": "./schemas/PackageType.json"
@@ -394,9 +394,6 @@
   },
   "MarketplaceIntegrationResponse": {
     "$ref": "./schemas/marketplaces/MarketplaceIntegrationResponse.json"
-  },
-  "WmsConfigurationSchema": {
-    "$ref": "./schemas/warehouse-management-systems/ConfigurationSchema.json"
   },
   "WmsIntegration": {
     "$ref": "./schemas/warehouse-management-systems/WmsIntegration.json"

@@ -39,7 +39,7 @@
                   ],
                   "properties": {
                     "configuration_schema": {
-                      "$ref": "#/components/schemas/WmsConfigurationSchema"
+                      "$ref": "#/components/schemas/Configuration"
                     },
                     "values": {
                       "type": "array",
@@ -52,11 +52,11 @@
                         "properties": {
                           "name": {
                             "type": "string",
-                            "example": "myProperty"
+                            "example": "anotherConfigurableProperty"
                           },
                           "value": {
                             "type": "string",
-                            "example": "myValueForMyProperty"
+                            "example": "yetAnotherValue"
                           }
                         }
                       }
