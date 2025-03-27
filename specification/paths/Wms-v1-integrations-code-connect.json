@@ -8,11 +8,6 @@
         "OAuth2": [
           "returns.manage"
         ]
-      },
-      {
-        "OAuth2": [
-          "shipments.manage"
-        ]
       }
     ],
     "summary": "Connect to a warehouse management system integration.",
