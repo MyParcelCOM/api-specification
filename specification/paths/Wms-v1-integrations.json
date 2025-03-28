@@ -20,9 +20,6 @@
         "schema": {
           "type": "string"
         }
-      },
-      {
-        "$ref": "#/components/parameters/query-filter-tags"
       }
     ],
     "responses": {
