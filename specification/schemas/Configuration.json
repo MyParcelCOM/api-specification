@@ -1,0 +1,101 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "additionalProperties",
+    "required",
+    "properties"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "enum": ["http://json-schema.org/draft-04/schema#"]
+    },
+    "additionalProperties": {
+      "type": "boolean",
+      "enum": [
+        false
+      ]
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "example": "examplePrefix"
+      }
+    },
+    "properties": {
+      "type": "object",
+      "example": {
+        "examplePrefix": {
+          "type": "string",
+          "description": "Example prefix",
+          "enum": [
+            "myIntegrations_",
+            "yetAnotherIntegration_",
+            "myparcelcom_"
+          ],
+          "meta": {
+            "help": "An example prefix for resources handled by our system"
+          }
+        },
+        "anotherConfigurableProperty": {
+          "type": "number",
+          "description": "Another configurable property"
+        }
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "description"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "string",
+            "enum": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "example": "Example prefix"
+          },
+          "enum": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "example": "myPrefix_"
+                },
+                {
+                  "type": "number",
+                  "example": "1000_"
+                }
+              ]
+            }
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "help": {
+                "type": "string",
+                "example": "A prefix that will be applied to resources handled by our system"
+              },
+              "password": {
+                "type": "boolean",
+                "example": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

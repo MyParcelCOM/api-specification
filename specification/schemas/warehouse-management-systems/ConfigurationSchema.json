@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "additionalProperties",
+    "required",
+    "properties"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "enum": ["http://json-schema.org/draft-04/schema#"]
+    },
+    "additionalProperties": {
+      "type": "boolean",
+      "enum": [
+        false
+      ]
+    },
+    "required": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "example": "configurableProperty"
+      }
+    },
+    "properties": {
+      "type": "object",
+      "example": {
+        "configurableProperty": {
+          "type": "number",
+          "description": "Description of configurable property"
+        }
+      }
+    }
+  }
+}
