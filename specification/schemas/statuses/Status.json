@@ -52,7 +52,6 @@
               "type": "string",
               "enum": [
                 "invoices",
-                "payments",
                 "reports",
                 "returns",
                 "shipments"
