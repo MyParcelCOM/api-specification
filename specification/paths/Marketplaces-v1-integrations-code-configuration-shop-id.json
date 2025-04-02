@@ -1,0 +1,78 @@
+{
+  "get": {
+    "parameters": [
+      {
+        "$ref": "#/components/parameters/path-marketplace_integration_code"
+      },
+      {
+        "$ref": "#/components/parameters/path-shop_id"
+      }
+    ],
+    "tags": [
+      "Marketplaces"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get a marketplace integration configuration schema for a specified Shop.",
+    "description": "This endpoint returns a JSON Schema with configurable marketplace integration settings for a shop.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the JSON Schema with configurable marketplace integration settings.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "required": [
+                    "configuration_schema"
+                  ],
+                  "properties": {
+                    "configuration_schema": {
+                      "$ref": "#/components/schemas/Configuration"
+                    },
+                    "values": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "name",
+                          "value"
+                        ],
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "orderPrefix"
+                          },
+                          "value": {
+                            "type": "string",
+                            "example": "myparcelcom_"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
