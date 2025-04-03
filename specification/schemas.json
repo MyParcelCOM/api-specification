@@ -284,6 +284,9 @@
   "InvoiceResponse": {
     "$ref": "./schemas/invoices/InvoiceResponse.json"
   },
+  "ISO8601DateTime": {
+    "$ref": "./schemas/ISO8601DateTime.json"
+  },
   "ItemFeature": {
     "$ref": "./schemas/return-orders/ItemFeature.json"
   },
