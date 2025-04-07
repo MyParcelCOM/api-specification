@@ -335,7 +335,7 @@
   "/shipment-surcharges/{shipment_surcharge_id}": {
     "$ref": "./paths/ShipmentSurcharges-shipment_surcharge_id.json"
   },
-  "shipping/v2/available-delivery-dates": {
+  "/shipping/v2/available-delivery-dates": {
     "$ref": "./paths/Shipping-v2-available-delivery-dates.json"
   },
   "/shops": {
