@@ -83,6 +83,7 @@
               "properties": {
                 "offers_collections": {
                   "type": "boolean",
+                  "description": "Whether the carrier supports making collections.",
                   "default": false
                 },
                 "voids_registered_collections": {
@@ -105,6 +106,20 @@
               "properties": {
                 "can_get_pudo_by_id": {
                   "type": "boolean",
+                  "description": "Whether the carrier supports fetching pick-up drop-off locations by ID.",
+                  "default": false
+                }
+              }
+            },
+            "delivery_dates": {
+              "type": "object",
+              "required": [
+                "can_get_delivery_dates"
+              ],
+              "properties": {
+                "can_get_delivery_dates": {
+                  "type": "boolean",
+                  "description": "Whether the carrier supports fetching carrier delivery date time windows.",
                   "default": false
                 }
               }
