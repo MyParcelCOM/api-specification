@@ -18,6 +18,11 @@
         "OAuth2": [
           "enterprise.manage"
         ]
+      },
+      {
+        "OAuth2": [
+          "brokers.manage"
+        ]
       }
     ],
     "summary": "Get the available carriers for a specific broker.",
