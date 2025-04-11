@@ -18,6 +18,11 @@
         "OAuth2": [
           "enterprises.manage"
         ]
+      },
+      {
+        "OAuth2": [
+          "brokers.manage"
+        ]
       }
     ],
     "summary": "Get a broker by ID.",
@@ -52,6 +57,11 @@
       {
         "OAuth2": [
           "enterprises.manage"
+        ]
+      },
+      {
+        "OAuth2": [
+          "brokers.manage"
         ]
       }
     ],
