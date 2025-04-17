@@ -13,6 +13,11 @@
         "OAuth2": [
           "enterprises.manage"
         ]
+      },
+      {
+        "OAuth2": [
+          "brokers.manage"
+        ]
       }
     ],
     "summary": "Get all available brokers.",

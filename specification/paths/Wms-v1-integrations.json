@@ -1,48 +1,47 @@
 {
-  "parameters": [
-    {
-      "$ref": "#/components/parameters/path-broker_id"
-    }
-  ],
   "get": {
     "tags": [
-      "Brokers"
+      "WMS"
     ],
     "security": [
       {
         "OAuth2": [
-          "broker.member"
-        ]
-      },
-      {
-        "OAuth2": [
-          "enterprise.manage"
-        ]
-      },
-      {
-        "OAuth2": [
-          "brokers.manage"
+          "returns.manage"
         ]
       }
     ],
-    "summary": "Get the available carriers for a specific broker.",
-    "description": "This endpoint retrieves available carriers for a broker with the supplied ID.",
+    "summary": "Get all warehouse management system integrations.",
+    "description": "This endpoint retrieves warehouse management system integrations available to your API client.",
+    "parameters": [
+      {
+        "name": "shop_id",
+        "in": "query",
+        "description": "When specified, warehouse management system integrations which are connected to the given shop will include a `\"connected\": true` meta field.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-tags"
+      }
+    ],
     "responses": {
       "200": {
-        "description": "Retrieved the available carriers for the broker.",
+        "description": "Retrieved the warehouse management system integrations.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
               "type": "object",
               "required": [
-                "data"
+                "data",
+                "meta",
+                "links"
               ],
-              "additionalProperties": false,
               "properties": {
                 "data": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CarrierResponse"
+                    "$ref": "#/components/schemas/WmsIntegrationResponse"
                   }
                 },
                 "meta": {
@@ -51,30 +50,30 @@
                 "links": {
                   "type": "object",
                   "required": [
-                    "self",
                     "first",
                     "last"
                   ],
+                  "additionalProperties": false,
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/wms/v1/integrations?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/wms/v1/integrations?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/wms/v1/integrations?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/wms/v1/integrations?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/brokers/a294ee55-bc94-4890-b734-afd56c158f95/carriers?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/wms/v1/integrations?page[number]=13&page[size]=30"
                     }
                   }
                 }

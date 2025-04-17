@@ -1,0 +1,124 @@
+{
+  "post": {
+    "tags": [
+      "DeliveryDates"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "shipments.manage"
+        ]
+      }
+    ],
+    "summary": "List carrier delivery date time windows.",
+    "description": "This endpoint lists delivery date time windows of a carrier for a selected date range.",
+    "requestBody": {
+      "description": "The service, delivery address and start and end date for the delivery date time windows.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "service_code",
+                  "address",
+                  "start_date",
+                  "end_date"
+                ],
+                "properties": {
+                  "service_code": {
+                    "type": "string",
+                    "description": "The service code for which to fetch the available delivery date time windows.",
+                    "example": "carrier-parcel-next-day"
+                  },
+                  "service_option_codes": {
+                    "type": "array",
+                    "description": "The service option codes that should be applied on the service. Only service options that start with \"delivery-window\" are considered valid.",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^delivery-window:.*$",
+                      "example": "delivery-window:before-08-30"
+                    }
+                  },
+                  "address": {
+                    "type": "object",
+                    "description": "Delivery address",
+                    "required": [
+                      "country_code",
+                      "postal_code",
+                      "street_number"
+                    ],
+                    "properties": {
+                      "country_code": {
+                        "$ref": "#/components/schemas/CountryCode"
+                      },
+                      "postal_code": {
+                        "type": "string",
+                        "example": "NW1 6XE",
+                        "description": "Delivery address postal code"
+                      },
+                      "street_number": {
+                        "type": "integer",
+                        "example": 221,
+                        "description": "Delivery address house number"
+                      }
+                    }
+                  },
+                  "start_date": {
+                    "$ref": "#/components/schemas/ISO8601DateTime"
+                  },
+                  "end_date": {
+                    "$ref": "#/components/schemas/ISO8601DateTime"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "List of delivery date time windows.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "date_from",
+                      "date_to"
+                    ],
+                    "properties": {
+                      "date_from": {
+                        "$ref": "#/components/schemas/ISO8601DateTime"
+                      },
+                      "date_to": {
+                        "$ref": "#/components/schemas/ISO8601DateTime"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

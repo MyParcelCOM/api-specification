@@ -116,9 +116,6 @@
   "ColloNumber": {
     "$ref": "./schemas/shipments/ColloNumber.json"
   },
-  "MarketplaceConfigurationSchema": {
-    "$ref": "./schemas/marketplaces/ConfigurationSchema.json"
-  },
   "Contract": {
     "$ref": "./schemas/contracts/Contract.json"
   },
@@ -157,6 +154,9 @@
   },
   "Currency": {
     "$ref": "./schemas/Currency.json"
+  },
+  "Configuration": {
+    "$ref": "./schemas/Configuration.json"
   },
   "PackageType": {
     "$ref": "./schemas/PackageType.json"
@@ -284,6 +284,9 @@
   "InvoiceResponse": {
     "$ref": "./schemas/invoices/InvoiceResponse.json"
   },
+  "ISO8601DateTime": {
+    "$ref": "./schemas/ISO8601DateTime.json"
+  },
   "ItemFeature": {
     "$ref": "./schemas/return-orders/ItemFeature.json"
   },
@@ -394,6 +397,15 @@
   },
   "MarketplaceIntegrationResponse": {
     "$ref": "./schemas/marketplaces/MarketplaceIntegrationResponse.json"
+  },
+  "WmsIntegration": {
+    "$ref": "./schemas/warehouse-management-systems/WmsIntegration.json"
+  },
+  "WmsIntegrationResource": {
+    "$ref": "./schemas/warehouse-management-systems/WmsIntegrationResource.json"
+  },
+  "WmsIntegrationResponse": {
+    "$ref": "./schemas/warehouse-management-systems/WmsIntegrationResponse.json"
   },
   "PhysicalProperties": {
     "$ref": "./schemas/shipments/PhysicalProperties.json"

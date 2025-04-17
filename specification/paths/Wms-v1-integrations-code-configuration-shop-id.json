@@ -2,32 +2,27 @@
   "get": {
     "parameters": [
       {
-        "$ref": "#/components/parameters/path-marketplace_integration_code"
+        "$ref": "#/components/parameters/path-wms_integration_code"
       },
       {
         "$ref": "#/components/parameters/path-shop_id"
       }
     ],
     "tags": [
-      "Marketplaces"
+      "WMS"
     ],
     "security": [
-      {
-        "OAuth2": [
-          "shipments.manage"
-        ]
-      },
       {
         "OAuth2": [
           "returns.manage"
         ]
       }
     ],
-    "summary": "Get a marketplace integration configuration schema for a specified Shop.",
-    "description": "This endpoint returns a JSON Schema with configurable marketplace integration settings for a shop.",
+    "summary": "Get a warehouse management system integration configuration schema for a specified Shop.",
+    "description": "This endpoint returns a JSON Schema with configurable warehouse management system integration settings for a shop.",
     "responses": {
       "200": {
-        "description": "Retrieved the JSON Schema with configurable marketplace integration settings.",
+        "description": "Retrieved the JSON Schema with configurable warehouse management system integration settings.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -44,7 +39,7 @@
                   ],
                   "properties": {
                     "configuration_schema": {
-                      "$ref": "#/components/schemas/MarketplaceConfigurationSchema"
+                      "$ref": "#/components/schemas/Configuration"
                     },
                     "values": {
                       "type": "array",
@@ -57,11 +52,11 @@
                         "properties": {
                           "name": {
                             "type": "string",
-                            "example": "orderPrefix"
+                            "example": "anotherConfigurableProperty"
                           },
                           "value": {
                             "type": "string",
-                            "example": "myparcelcom_"
+                            "example": "yetAnotherValue"
                           }
                         }
                       }

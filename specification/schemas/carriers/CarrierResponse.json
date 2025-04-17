@@ -18,7 +18,9 @@
             "credentials_format",
             "label_mime_types",
             "label_formats",
-            "collections"
+            "collections",
+            "pudo",
+            "delivery_dates"
           ]
         },
         "links": {

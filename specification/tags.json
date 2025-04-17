@@ -43,6 +43,9 @@
     "name": "ContractTemplates"
   },
   {
+    "name": "DeliveryDates"
+  },
+  {
     "name": "Enterprises"
   },
   {
@@ -107,6 +110,9 @@
   },
   {
     "name": "PaymentProviders"
+  },
+  {
+    "name": "WMS"
   },
   {
     "name": "RateImports"
