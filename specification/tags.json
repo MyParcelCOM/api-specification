@@ -70,13 +70,13 @@
     }
   },
   {
-    "name": "Marketplaces"
-  },
-  {
     "name": "Invitations"
   },
   {
     "name": "Invoices"
+  },
+  {
+    "name": "LandedCost"
   },
   {
     "name": "LiabilityCoverages",
@@ -84,9 +84,6 @@
       "url": "https://docs.myparcel.com/api/resources/liability-coverages.html",
       "description": "API documentation"
     }
-  },
-  {
-    "name": "LandedCost"
   },
   {
     "name": "Locales"
@@ -97,6 +94,9 @@
       "url": "https://docs.myparcel.com/api/resources/manifests.html",
       "description": "API documentation"
     }
+  },
+  {
+    "name": "Marketplaces"
   },
   {
     "name": "Organizations",
@@ -132,10 +132,10 @@
     }
   },
   {
-    "name": "ReturnAnalytics"
+    "name": "Returns"
   },
   {
-    "name": "Returns"
+    "name": "ReturnAnalytics"
   },
   {
     "name": "ReturnMethods"
