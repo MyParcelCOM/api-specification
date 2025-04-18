@@ -28,6 +28,7 @@
                 "type": "object",
                 "required": [
                   "service_code",
+                  "carrier_code",
                   "address",
                   "start_date",
                   "end_date"
@@ -37,6 +38,12 @@
                     "type": "string",
                     "description": "The service code for which to fetch the available delivery date time windows.",
                     "example": "carrier-parcel-next-day"
+                  },
+                  "carrier_code": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "example": "my-parcel-com",
+                    "description": "Unique slugified version of the carrier name to identify a carrier."
                   },
                   "service_option_codes": {
                     "type": "array",
