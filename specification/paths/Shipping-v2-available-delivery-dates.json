@@ -28,11 +28,18 @@
                 "type": "object",
                 "required": [
                   "service_code",
+                  "carrier_code",
                   "address",
                   "start_date",
                   "end_date"
                 ],
                 "properties": {
+                  "carrier_code": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "example": "my-parcel-com",
+                    "description": "Unique slugified version of the carrier name to identify a carrier."
+                  },
                   "service_code": {
                     "type": "string",
                     "description": "The service code for which to fetch the available delivery date time windows.",
