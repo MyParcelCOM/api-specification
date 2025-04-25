@@ -67,7 +67,7 @@
       "204": {
         "description": "The payment provider was connected successfully."
       },
-      "202": {
+      "200": {
         "description": "The payment provider requires authorization through OAuth2. The authorization URL is returned in the response body.",
         "content": {
           "application/vnd.api+json": {
