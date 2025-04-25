@@ -66,7 +66,7 @@
       "204": {
         "description": "The warehouse management system was connected successfully."
       },
-      "202": {
+      "200": {
         "description": "The warehouse management system requires authorization through OAuth2. The authorization URL is returned in the response body.",
         "content": {
           "application/vnd.api+json": {
