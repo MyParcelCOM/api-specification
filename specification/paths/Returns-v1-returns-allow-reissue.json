@@ -1,0 +1,72 @@
+{
+  "post": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Allow an order reference to be reissued as a return.",
+    "description": "This endpoint allows a return to be reissued for an existing order reference.",
+    "requestBody": {
+      "description": "The shop ID and the order reference.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "type": "object",
+                "required": [
+                  "shop_id",
+                  "order_reference"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "shop_id": {
+                    "allOf": [
+                      {
+                        "$ref": "#/components/schemas/Uuid"
+                      },
+                      {
+                        "example": "4067e35b-09cc-42b9-8553-6eaf1788df35"
+                      }
+                    ]
+                  },
+                  "order_reference": {
+                    "type": "string",
+                    "description": "The order reference to allow reissue for.",
+                    "example": "ABC-12345"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The order reference can be issued again one more time."
+      },
+      "404": {
+        "description": "Shop not found."
+      },
+      "422": {
+        "description": "There is no existing return with that order reference - no need to allow reissue."
+      },
+      "409": {
+        "description": "There is a pending unclaimed reissue for this order reference and shop."
+      }
+    }
+  }
+}
