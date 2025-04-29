@@ -29,7 +29,7 @@
                 "return-payment-failed",
                 "return-pending",
                 "return-rejected",
-                "return-rejected-for-reissue",
+                "return-reissued",
                 "shipment-at-parcel-shop",
                 "shipment-at-sorting",
                 "shipment-concept",
