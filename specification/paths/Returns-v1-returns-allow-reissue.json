@@ -55,7 +55,7 @@
       }
     },
     "responses": {
-      "204": {
+      "201": {
         "description": "The order reference can be issued again one more time."
       },
       "404": {
