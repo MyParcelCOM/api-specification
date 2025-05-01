@@ -27,6 +27,16 @@
             },
             "email": {
               "$ref": "#/components/schemas/Email"
+            },
+            "user_types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "returns",
+                  "shipping"
+                ]
+              }
             }
           }
         },

@@ -13,7 +13,8 @@
       "properties": {
         "attributes": {
           "required": [
-            "email"
+            "email",
+            "user_types"
           ]
         },
         "relationships": {
