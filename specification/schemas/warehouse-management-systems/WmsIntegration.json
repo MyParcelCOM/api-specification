@@ -63,6 +63,21 @@
               },
               "description": "JSON Schema specification of the settings required to communicate with the integration platform."
             },
+            "tags": {
+              "oneOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Any custom tag. Used to indicate meta-data about the WMS integration.",
+                    "example": ["inventory-tracking", "returns"]
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
             }
