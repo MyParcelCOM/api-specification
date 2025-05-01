@@ -53,7 +53,8 @@
           "required": [
             "shipping_and_return",
             "label_in_the_box",
-            "package_type"
+            "package_type",
+            "return_exists"
           ],
           "properties": {
             "shipping_and_return": {
@@ -64,6 +65,14 @@
             },
             "package_type": {
               "$ref": "#/components/schemas/PackageType"
+            },
+            "return_exists": {
+              "type": "boolean",
+              "description": "Indicates whether a return exists for the order."
+            },
+            "reissue_allowed": {
+              "type": "boolean",
+              "description": "Indicates whether a reissue is allowed for the order in case `meta.return_exists` is `true`."
             }
           }
         }
