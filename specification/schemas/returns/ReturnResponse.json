@@ -192,7 +192,8 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "package_type"
+            "package_type",
+            "allows_reissue"
           ],
           "properties": {
             "outbound_shipment_delivered_at": {
@@ -200,6 +201,11 @@
             },
             "package_type": {
               "$ref": "#/components/schemas/PackageType"
+            },
+            "allows_reissue": {
+              "type": "boolean",
+              "description": "Whether the return can be reissued",
+              "example": true
             }
           }
         }

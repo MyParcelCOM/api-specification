@@ -66,7 +66,7 @@
       "204": {
         "description": "The warehouse management system was connected successfully."
       },
-      "201": {
+      "200": {
         "description": "The warehouse management system requires authorization through OAuth2. The authorization URL is returned in the response body.",
         "content": {
           "application/vnd.api+json": {
@@ -86,25 +86,6 @@
                       "format": "uri",
                       "example": "https://wms.com/authorize?client_id=6a4baca2-7b94-4987-9e4e-2283c22bac1d&redirect_uri=https://your_shop.com/authorize&response_type=code",
                       "description": "The URL to redirect the user to authorize the connection as part of a OAuth2 authorization code grant flow."
-                    },
-                    "client": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "description": "Returned when the user has to manually enter MyParcel.com API client credentials in the warehouse management system account settings.",
-                      "required": [
-                        "id",
-                        "secret"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "string",
-                          "example": "6a4baca2-7b94-4987-9e4e-2283c22bac1d"
-                        },
-                        "secret": {
-                          "type": "string",
-                          "example": "624678b02e552591af094a141f5b4c40dedb8752d8da97fd22add951fa92"
-                        }
-                      }
                     }
                   }
                 }
