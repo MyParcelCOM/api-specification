@@ -16,7 +16,8 @@
         },
         "attributes": {
           "required": [
-            "email"
+            "email",
+            "user_types"
           ],
           "properties": {
             "first_name": {
@@ -36,6 +37,16 @@
             "email": {
               "$ref": "#/components/schemas/Email",
               "example": "s.holmes@holmesinvestigations.com"
+            },
+            "user_types": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "shipping",
+                  "returns"
+                ]
+              }
             }
           }
         },
