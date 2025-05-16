@@ -14,11 +14,14 @@
     "description": "This endpoint retrieves system messages. These are informative messages about our system or a specific type of resource.",
     "parameters": [
       {
-        "name": "filter[country]",
+        "$ref": "#/components/parameters/query-filter-broker"
+      },
+      {
+        "name": "include",
         "in": "query",
-        "description": "Country code of system messages to filter by. Using this filter will also include system-wide messages.",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`broker`</li>",
         "schema": {
-          "$ref": "#/components/schemas/CountryCode"
+          "type": "string"
         }
       }
     ],

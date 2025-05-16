@@ -146,6 +146,9 @@
   "path-user_id": {
     "$ref": "./parameters/path-user_id.json"
   },
+  "path-wms_integration_code": {
+    "$ref": "./parameters/path-wms_integration_code.json"
+  },
   "path-zone_id": {
     "$ref": "./parameters/path-zone_id.json"
   },
