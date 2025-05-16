@@ -14,16 +14,6 @@
               "maxLength": 255,
               "example": "Houston, we've had a problem."
             },
-            "country_code": {
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/CountryCode"
-                },
-                {
-                  "type": "null"
-                }
-              ]
-            },
             "level": {
               "type": "string",
               "enum": [
