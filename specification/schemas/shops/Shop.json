@@ -114,7 +114,7 @@
                           ],
                           "description": "Title of the free input text section of (approved) return emails",
                           "example": "Seasonal sample sale",
-                          "maxLength": 100
+                          "maxLength": 120
                         },
                         "marketing_content": {
                           "type": [
@@ -123,7 +123,7 @@
                           ],
                           "description": "Rich text content of the free input text section of (approved) return emails",
                           "example": "We have an <b>awesome seasonal sample</b> sale in store next month! <a>Click here</a> to take a sneak peek.",
-                          "maxLength": 250
+                          "maxLength": 500
                         },
                         "customer_service_phone": {
                           "type": [
