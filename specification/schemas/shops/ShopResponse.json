@@ -17,6 +17,7 @@
             "return_address",
             "sender_address",
             "created_at",
+            "return_portal_url",
             "locale"
           ],
           "properties": {
