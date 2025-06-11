@@ -6,7 +6,8 @@
     "security": [
       {
         "OAuth2": [
-          "landed_cost"
+          "landed_cost",
+          "broker.member"
         ]
       }
     ],
