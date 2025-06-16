@@ -40,14 +40,6 @@
                 }
               ]
             },
-            "return_portal_url": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "example": "https://my-return-portal-domain.com",
-              "description": "The domain used as the return portal for this shop. If not set, defaults to the return portal domain set on the organization followed by the shop's name. E.g. `https://return.myparcel.com/my-shop`"
-            },
             "style": {
               "allOf": [
                 {
