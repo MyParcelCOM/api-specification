@@ -7,6 +7,7 @@
       "properties": {
         "attributes": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "name": {
               "type": "string",
@@ -217,6 +218,12 @@
                   "description": "The default language that is used for emails and webpages for this shop."
                 }
               ]
+            },
+            "return_portal_url": {
+              "type": "string",
+              "readOnly": true,
+              "example": "https://my-return-portal-domain.com",
+              "description": "The domain used as the return portal for this shop. If not set, defaults to the return portal domain of the broker followed by the shop's name. E.g. `https://return.myparcel.com/my-shop`"
             },
             "return_portal_locales": {
               "type": "array",
