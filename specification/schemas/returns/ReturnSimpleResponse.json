@@ -102,6 +102,9 @@
               "type": "string",
               "example": "Delivered"
             },
+            "order_created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
             "outbound_shipment_delivered_at": {
               "$ref": "#/components/schemas/Timestamp"
             },
