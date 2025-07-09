@@ -35,7 +35,8 @@
                   "name",
                   "description",
                   "quantity",
-                  "item_price"
+                  "item_price",
+                  "non_returnable"
                 ]
               }
             }
