@@ -58,7 +58,8 @@
     "non_returnable": {
       "type": "boolean",
       "example": true,
-      "default": false
+      "default": false,
+      "description": "Flag indicating if an order item can be returned"
     }
   }
 }
