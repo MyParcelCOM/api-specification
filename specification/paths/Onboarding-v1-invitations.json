@@ -1,7 +1,7 @@
 {
   "get": {
     "tags": [
-      "Invitations"
+      "Onboarding"
     ],
     "security": [
       {
@@ -95,7 +95,7 @@
   },
   "post": {
     "tags": [
-      "Invitations"
+      "Onboarding"
     ],
     "security": [
       {
