@@ -70,9 +70,6 @@
     }
   },
   {
-    "name": "Invitations"
-  },
-  {
     "name": "Invoices"
   },
   {
@@ -97,6 +94,9 @@
   },
   {
     "name": "Marketplaces"
+  },
+  {
+    "name": "Onboarding"
   },
   {
     "name": "Organizations",

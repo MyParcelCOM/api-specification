@@ -6,7 +6,7 @@
   ],
   "get": {
     "tags": [
-      "Invitations"
+      "Onboarding"
     ],
     "security": [
       {
