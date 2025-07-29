@@ -22,7 +22,6 @@
               "required": [
                 "company",
                 "street_1",
-                "street_number",
                 "city",
                 "country_code"
               ]
