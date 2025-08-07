@@ -62,6 +62,30 @@
                     "type": "boolean",
                     "example": true,
                     "description": "When set to `true`, the endpoint will return only shipping return methods that offer label in the box service. However, in case that there is no label in the box method available, the endpoint will respond with all return methods, except shipping and return (unless `shipping_and_return` field is set to `true`). When `label_in_the_box` is set to `false` (or omitted), the endpoint will exclude all label in the box return methods."
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "reason"
+                      ],
+                      "properties": {
+                        "reason": {
+                          "type": "object",
+                          "required": [
+                            "code"
+                          ],
+                          "properties": {
+                            "code": {
+                              "type": "string",
+                              "example": "item-damaged",
+                              "description": "A code that identifies the reason for the return of this item. See the <a href=\"/#tag/ReturnReasons/paths/~1returns~1v1~1reasons/get\">return-reason</a> `code` attribute."
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }

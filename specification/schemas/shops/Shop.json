@@ -66,12 +66,6 @@
                       "example": "my-return-domain.com",
                       "description": "The domain where the return portal for this shop is hosted."
                     },
-                    "logo_url": {
-                      "$ref": "#/components/schemas/ImageUrl"
-                    },
-                    "banner_url": {
-                      "$ref": "#/components/schemas/ImageUrl"
-                    },
                     "primary_color": {
                       "type": "string",
                       "minLength": 4,
@@ -173,9 +167,6 @@
                     },
                     {
                       "properties": {
-                        "logo_url": {
-                          "$ref": "#/components/schemas/ImageUrl"
-                        },
                         "hide_customer_reference": {
                           "type": "boolean",
                           "example": false,

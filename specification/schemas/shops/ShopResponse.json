@@ -39,12 +39,25 @@
               "properties": {
                 "returns": {
                   "properties": {
+                    "logo_url": {
+                      "$ref": "#/components/schemas/ImageUrl"
+                    },
+                    "banner_url": {
+                      "$ref": "#/components/schemas/ImageUrl"
+                    },
                     "email_content": {
                       "properties": {
                         "footer_image_url": {
                           "$ref": "#/components/schemas/ImageUrl"
                         }
                       }
+                    }
+                  }
+                },
+                "tracking": {
+                  "properties": {
+                    "logo_url": {
+                      "$ref": "#/components/schemas/ImageUrl"
                     }
                   }
                 }
