@@ -120,7 +120,7 @@
             "checkout_url": {
               "type": "string",
               "description": "Endpoint that generates a payment checkout URL.",
-              "example": "https://api.myparcel.com/shipping/v2/shipments/{sihpmentId}/payment-checkout-url/{paymentId}"
+              "example": "https://api.myparcel.com/shipping/v2/shipments/{shipmentId}/payment-checkout-url/{paymentId}"
             },
             "paid_at": {
               "$ref": "#/components/schemas/Timestamp"
