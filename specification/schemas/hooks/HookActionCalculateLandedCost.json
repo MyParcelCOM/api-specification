@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "pattern": "^calculate-landed-cost$",
+      "example": "calculate-landed-cost"
+    }
+  }
+}
