@@ -17,6 +17,9 @@
     },
     {
       "$ref": "#/components/schemas/HookActionSetReturnDeadlinePassed"
+    },
+    {
+      "$ref": "#/components/schemas/HookActionCalculateLandedCost"
     }
   ]
 }
