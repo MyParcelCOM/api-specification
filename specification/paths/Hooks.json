@@ -50,8 +50,11 @@
           "type": "string",
           "enum": [
             "create",
+            "read",
             "update",
-            "import"
+            "delete",
+            "import",
+            "register"
           ]
         }
       },

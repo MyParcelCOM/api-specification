@@ -90,11 +90,11 @@
       "readOnly": true,
       "oneOf": [
         {
-          "readOnly": true,
-          "type": "null"
+          "$ref": "#/components/schemas/Price"
         },
         {
-          "$ref": "#/components/schemas/Price"
+          "readOnly": true,
+          "type": "null"
         }
       ]
     },
@@ -102,11 +102,37 @@
       "readOnly": true,
       "oneOf": [
         {
-          "readOnly": true,
-          "type": "null"
+          "$ref": "#/components/schemas/Price"
         },
         {
-          "$ref": "#/components/schemas/Price"
+          "readOnly": true,
+          "type": "null"
+        }
+      ]
+    },
+    "payment": {
+      "readOnly": true,
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "checkout_url": {
+              "type": "string",
+              "description": "Endpoint that generates a payment checkout URL.",
+              "example": "https://api.myparcel.com/shipping/v2/shipments/{shipmentId}/payment-checkout-url/{paymentId}"
+            },
+            "paid_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            },
+            "price": {
+              "$ref": "#/components/schemas/Price"
+            }
+          }
+        },
+        {
+          "readOnly": true,
+          "type": "null"
         }
       ]
     }
