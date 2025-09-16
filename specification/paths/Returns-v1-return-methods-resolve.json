@@ -26,10 +26,16 @@
             "properties": {
               "data": {
                 "required": [
+                  "order_reference",
                   "shop_id",
                   "consumer_address"
                 ],
                 "properties": {
+                  "order_reference": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "example": "#0001-my-order-reference"
+                  },
                   "shop_id": {
                     "type": "string",
                     "format": "uuid",
