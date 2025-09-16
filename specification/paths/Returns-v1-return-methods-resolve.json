@@ -44,11 +44,16 @@
                   },
                   "consumer_address": {
                     "required": [
-                      "country_code"
+                      "country_code",
+                      "email"
                     ],
                     "properties": {
                       "country_code": {
                         "$ref": "#/components/schemas/CountryCode"
+                      },
+                      "email": {
+                        "$ref": "#/components/schemas/Email",
+                        "example": "s.holmes@holmesinvestigations.com"
                       }
                     }
                   },
