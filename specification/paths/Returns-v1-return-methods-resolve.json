@@ -26,10 +26,16 @@
             "properties": {
               "data": {
                 "required": [
+                  "order_reference",
                   "shop_id",
                   "consumer_address"
                 ],
                 "properties": {
+                  "order_reference": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "example": "#0001-my-order-reference"
+                  },
                   "shop_id": {
                     "type": "string",
                     "format": "uuid",
@@ -38,11 +44,16 @@
                   },
                   "consumer_address": {
                     "required": [
-                      "country_code"
+                      "country_code",
+                      "email"
                     ],
                     "properties": {
                       "country_code": {
                         "$ref": "#/components/schemas/CountryCode"
+                      },
+                      "email": {
+                        "$ref": "#/components/schemas/Email",
+                        "example": "s.holmes@holmesinvestigations.com"
                       }
                     }
                   },
