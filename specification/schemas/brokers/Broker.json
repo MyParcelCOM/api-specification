@@ -37,7 +37,11 @@
               "type": "string",
               "maxLength": 255,
               "example": "https://cdn.myparcel.com/images/myparcelcom-black.svg",
-              "description": "Logo image URL"
+              "description": "Logo image URL",
+              "deprecated": true
+            },
+            "logo": {
+              "$ref": "#/components/schemas/ImageMeta"
             },
             "favicon_url": {
               "type": "string",
