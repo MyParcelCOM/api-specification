@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: docker/json-bundler/Dockerfile
-    image: myparcelcom/json-bundler:v6-dev
+    image: myparcelcom/json-bundler:v7-dev
     working_dir: /opt/spec
     volumes:
       - .:/opt/spec
@@ -12,7 +12,7 @@ services:
     build:
       context: .
       dockerfile: docker/build/Dockerfile
-    image: myparcelcom/api-specification:v9-dev
+    image: myparcelcom/api-specification:v10-dev
     volumes:
       - ./dist:/usr/share/nginx/html/dist/
       - ./src/index.html:/usr/share/nginx/html/index.html
