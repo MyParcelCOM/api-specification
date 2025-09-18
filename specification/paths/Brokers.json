@@ -123,9 +123,12 @@
                         "readOnly": true
                       },
                       "attributes": {
+                        "anyOf": [
+                          { "required": ["logo"] },
+                          { "required": ["logo_url"] }
+                        ],
                         "required": [
                           "name",
-                          "logo_url",
                           "favicon_url",
                           "style"
                         ],
