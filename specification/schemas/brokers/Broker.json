@@ -41,7 +41,7 @@
               "deprecated": true
             },
             "logo": {
-              "$ref": "#/components/schemas/ImageMeta"
+              "$ref": "#/components/schemas/Image"
             },
             "favicon_url": {
               "type": "string",
