@@ -8,10 +8,10 @@ jobs:
     if: github.ref_name == 'develop' || github.ref_name == 'master' || github.ref_type == 'tag'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-access-key-id: ${{ secrets.AWS_PUBLIC_REPO_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_PUBLIC_REPO_SECRET_ACCESS_KEY }}
