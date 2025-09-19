@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "logo": {
-      "$ref": "#/components/schemas/ImageMeta"
+      "$ref": "#/components/schemas/Image"
     }
   }
 }

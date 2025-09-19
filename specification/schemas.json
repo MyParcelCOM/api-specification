@@ -254,8 +254,8 @@
   "HookTrigger": {
     "$ref": "./schemas/hooks/HookTrigger.json"
   },
-  "ImageMeta": {
-    "$ref": "./schemas/ImageMeta.json"
+  "Image": {
+    "$ref": "./schemas/Image.json"
   },
   "ImageUrl": {
     "$ref": "./schemas/ImageUrl.json"

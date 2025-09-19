@@ -8,7 +8,7 @@
           "description": "<strong>Deprecated</strong> use `branding` instead."
         },
         {
-          "$ref": "#/components/schemas/ImageMeta"
+          "$ref": "#/components/schemas/Image"
         }
       ]
     },
@@ -19,13 +19,13 @@
           "type": "object",
           "properties": {
             "logo": {
-              "$ref": "#/components/schemas/ImageMeta"
+              "$ref": "#/components/schemas/Image"
             },
             "banner": {
-              "$ref": "#/components/schemas/ImageMeta"
+              "$ref": "#/components/schemas/Image"
             },
             "email_footer_image": {
-              "$ref": "#/components/schemas/ImageMeta"
+              "$ref": "#/components/schemas/Image"
             }
           }
         },
@@ -33,7 +33,7 @@
           "type": "object",
           "properties": {
             "logo": {
-              "$ref": "#/components/schemas/ImageMeta"
+              "$ref": "#/components/schemas/Image"
             }
           }
         }
