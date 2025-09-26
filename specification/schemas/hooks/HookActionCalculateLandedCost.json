@@ -14,7 +14,7 @@
         "additionalProperties": false,
         "properties": {
           "surcharge_price": {
-            "$ref": "#/components/schemas/BasePrice"
+            "$ref": "#/components/schemas/Price"
           }
         }
       }
