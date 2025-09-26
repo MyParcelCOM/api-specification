@@ -6,6 +6,18 @@
       "type": "string",
       "pattern": "^calculate-landed-cost$",
       "example": "calculate-landed-cost"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "surcharge_price": {
+            "$ref": "#/components/schemas/Price"
+          }
+        }
+      }
     }
   }
 }
