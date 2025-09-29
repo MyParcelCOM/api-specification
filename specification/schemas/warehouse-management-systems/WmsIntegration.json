@@ -63,6 +63,11 @@
               },
               "description": "JSON Schema specification of the settings required to communicate with the integration platform."
             },
+            "supports_configuration": {
+              "type": "boolean",
+              "example": true,
+              "description": "Determines whether the WMS integration supports configuration that can be updated after initial connection."
+            },
             "tags": {
               "oneOf": [
                 {
