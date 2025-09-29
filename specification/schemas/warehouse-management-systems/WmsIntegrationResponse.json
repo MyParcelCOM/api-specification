@@ -17,6 +17,7 @@
             "website_url",
             "readme_url",
             "logo_url",
+            "supports_configuration",
             "tags",
             "created_at"
           ]
