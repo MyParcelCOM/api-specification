@@ -71,6 +71,9 @@
   "path-manifest_id": {
     "$ref": "./parameters/path-manifest_id.json"
   },
+  "path-merchant_status_id": {
+    "$ref": "./parameters/path-merchant_status_id.json"
+  },
   "path-organization_id": {
     "$ref": "./parameters/path-organization_id.json"
   },

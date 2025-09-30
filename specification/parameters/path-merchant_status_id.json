@@ -1,0 +1,9 @@
+{
+  "name": "merchant_status_id",
+  "in": "path",
+  "description": "Id of the merchant status.",
+  "required": true,
+  "schema": {
+    "$ref": "#/components/schemas/Uuid"
+  }
+}

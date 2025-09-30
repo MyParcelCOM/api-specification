@@ -1,0 +1,51 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MerchantStatusResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "Approved in store"
+            },
+            "code": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "approved-in-store"
+            },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 255,
+              "description": "Description for this merchant status.",
+              "example": "This status indicates that the return has been approved in the physical store."
+            },
+            "status_level": {
+              "$ref": "#/components/schemas/StatusLevel"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "shop": {
+              "$ref": "#/components/schemas/ShopRelationship"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
