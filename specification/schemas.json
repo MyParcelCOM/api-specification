@@ -347,6 +347,18 @@
   "ManifestResponse": {
     "$ref": "./schemas/manifests/ManifestResponse.json"
   },
+  "MerchantStatus": {
+    "$ref": "./schemas/merchant-statuses/MerchantStatus.json"
+  },
+  "MerchantStatusRelationship": {
+    "$ref": "./schemas/merchant-statuses/MerchantStatusRelationship.json"
+  },
+  "MerchantStatusResource": {
+    "$ref": "./schemas/merchant-statuses/MerchantStatusResource.json"
+  },
+  "MerchantStatusResponse": {
+    "$ref": "./schemas/merchant-statuses/MerchantStatusResponse.json"
+  },
   "MostReturnedItem": {
     "$ref": "./schemas/returns/MostReturnedItem.json"
   },
