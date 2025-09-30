@@ -188,6 +188,9 @@
   "query-filter-location_type": {
     "$ref": "./parameters/query-filter-location_type.json"
   },
+  "query-filter-merchant_status": {
+    "$ref": "./parameters/query-filter-merchant_status.json"
+  },
   "query-filter-organization": {
     "$ref": "./parameters/query-filter-organization.json"
   },
