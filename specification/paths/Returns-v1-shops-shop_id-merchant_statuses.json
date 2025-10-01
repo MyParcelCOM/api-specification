@@ -81,7 +81,7 @@
         }
       },
       "404": {
-        "description": "No return reason was found with the given shop."
+        "description": "No merchant statuses were found with the given shop."
       }
     }
   },
@@ -96,10 +96,10 @@
         ]
       }
     ],
-    "summary": "Add a merchant status to the given shop.",
-    "description": "This endpoint adds a merchant status to the specified shop.",
+    "summary": "Create a merchant status for the given shop.",
+    "description": "This endpoint creates a merchant status for the specified shop.",
     "requestBody": {
-      "description": "The merchan status to be created.",
+      "description": "The merchant status to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
