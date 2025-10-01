@@ -15,16 +15,11 @@
         ]
       }
     ],
-    "summary": "Get all merchant statuses for the given shop.",
-    "description": "This endpoint retrieves merchant statuses for the given shop.",
-    "parameters": [
-      {
-        "$ref": "#/components/parameters/header-accept-language"
-      }
-    ],
+    "summary": "Get all return merchant statuses for the given shop.",
+    "description": "This endpoint retrieves return merchant statuses for the given shop.",
     "responses": {
       "200": {
-        "description": "Retrieved the merchant statuses for the given shop.",
+        "description": "Retrieved the return merchant statuses for the given shop.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -81,7 +76,7 @@
         }
       },
       "404": {
-        "description": "No merchant statuses were found with the given shop."
+        "description": "No return merchant statuses were found with the given shop."
       }
     }
   },
@@ -96,10 +91,10 @@
         ]
       }
     ],
-    "summary": "Create a merchant status for the given shop.",
-    "description": "This endpoint creates a merchant status for the specified shop.",
+    "summary": "Create a return merchant status for the given shop.",
+    "description": "This endpoint creates a return merchant status for the specified shop.",
     "requestBody": {
-      "description": "The merchant status to be created.",
+      "description": "The return merchant status to be created.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -147,7 +142,7 @@
     },
     "responses": {
       "201": {
-        "description": "The merchant status has been created for the specified shop.",
+        "description": "The return merchant status has been created for the specified shop.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
