@@ -1,0 +1,157 @@
+{
+  "description": "A JSON Schema property",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "description"
+  ],
+  "properties": {
+    "type": {
+      "description": "The data type of the schema property",
+      "type": "string",
+      "example": "string",
+      "enum": [
+        "string",
+        "number",
+        "boolean",
+        "object",
+        "array"
+      ]
+    },
+    "description": {
+      "description": "The description of the schema property",
+      "type": "string",
+      "example": "Example schema property"
+    },
+    "required": {
+      "description": "Array of required schema properties. Used when the `properties` attribute contains nested schema",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "example": "exampleSchemaPropertyName"
+      }
+    },
+    "items": {
+      "type": "object",
+      "description": "Item type and enum values for `array` type properties",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Data type of the enum values",
+          "enum": [
+            "string"
+          ],
+          "example": "string"
+        },
+        "enum": {
+          "type": "array",
+          "description": "Enum values for schema type properties",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "value-1",
+            "value-2"
+          ]
+        }
+      }
+    },
+    "enum": {
+      "type": "array",
+      "description": "Enum values for schema properties",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "enum-value-1",
+        "enum-value-2"
+      ]
+    },
+    "properties": {
+      "description": "Nested JSON schema properties that follow the same specification",
+      "example": {
+        "nested": {
+          "schema": {
+            "property": {}
+          }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "description": "Properties that fall outside the JSON schema specification, which can be used to inform the UI about how to render the schema property as a form input",
+      "properties": {
+        "help": {
+          "type": "string",
+          "description": "A help message that describes the schema property",
+          "example": "This is a help message for the schema property"
+        },
+        "password": {
+          "type": "boolean",
+          "description": "Indicates whether the value of the schema property should be hidden",
+          "example": false
+        },
+        "field_type": {
+          "type": "string",
+          "description": "Indicates the type of (input) UI that is expected to render this schema property. Used to differentiate between properties that have the same schema format",
+          "enum": [
+            "select",
+            "radio"
+          ],
+          "example": "radio"
+        },
+        "label_translations": {
+          "type": "object",
+          "description": "Key/value pair where the key is a locale code, e.g. \"en-GB\", and the value is the translated `description` of the schema property",
+          "patternProperties": {
+            "[az]{2}-[AZ]{2}": {
+              "type": "string",
+              "description": "The translated description of the schema property"
+            }
+          },
+          "example": {
+            "de-DE": "The description of the schema property in German",
+            "fr-FR": "The description of the schema property in French"
+          }
+        },
+        "enum_labels": {
+          "type": "object",
+          "description": "Key/value pair where the key is a schema property enum value and the value is a human readable label",
+          "additionalProperties": {
+            "description": "Human readable label",
+            "type": "string"
+          },
+          "example": {
+            "enum-value-1": "Enum value 1",
+            "enum-value-2": "Enum value 2"
+          }
+        },
+        "enum_label_translations": {
+          "type": "object",
+          "description": "Key/value pair where the key is a schema property enum value and the value is an object with translated human readable labels",
+          "additionalProperties": {
+            "type": "object",
+            "description": "Key/value pair where the key is a locale code, e.g. \"en-GB\", and the value is a translated human readable label",
+            "patternProperties": {
+              "[az]{2}-[AZ]{2}": {
+                "description": "Translated human readable label",
+                "type": "string"
+              }
+            }
+          },
+          "example": {
+            "enum-value-1": {
+              "de-DE": "Enum value 1 in German",
+              "fr-FR": "Enum value 1 in French"
+            },
+            "enum-value-2": {
+              "de-DE": "Enum value 2 in German",
+              "fr-FR": "Enum value 2 in French"
+            }
+          }
+        }
+      }
+    }
+  }
+}
