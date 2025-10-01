@@ -6,7 +6,7 @@
   ],
   "get": {
     "tags": [
-      "MerchantStatuses"
+      "Returns"
     ],
     "security": [
       {
@@ -87,7 +87,7 @@
   },
   "post": {
     "tags": [
-      "MerchantStatuses"
+      "Returns"
     ],
     "security": [
       {

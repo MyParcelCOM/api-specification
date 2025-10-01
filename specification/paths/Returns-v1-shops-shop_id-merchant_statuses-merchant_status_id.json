@@ -9,7 +9,7 @@
   ],
   "patch": {
     "tags": [
-      "MerchantStatuses"
+      "Returns"
     ],
     "security": [
       {
@@ -65,7 +65,7 @@
   },
   "delete": {
     "tags": [
-      "MerchantStatuses"
+      "Returns"
     ],
     "security": [
       {
