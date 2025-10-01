@@ -158,6 +158,9 @@
   "Configuration": {
     "$ref": "./schemas/Configuration.json"
   },
+  "ConfigurationSchemaProperty": {
+    "$ref": "./schemas/ConfigurationSchemaProperty.json"
+  },
   "PackageType": {
     "$ref": "./schemas/PackageType.json"
   },
