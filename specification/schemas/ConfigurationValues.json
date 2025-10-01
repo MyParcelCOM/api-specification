@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "description": "Key/value pairs with the schema property names as keys and their respective values. Nested schema property groups are respected",
+  "additionalProperties": {
+    "description": "The schema property value"
+  },
+  "example": {
+    "minimal_text_property": "previously-set-value",
+    "select_property": "option_2_key",
+    "nested_group": {
+      "text_group_child": "some_value",
+      "number_group_child": 0,
+      "boolean_group_child": false
+    }
+  }
+}
