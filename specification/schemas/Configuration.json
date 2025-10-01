@@ -10,7 +10,9 @@
   "properties": {
     "$schema": {
       "type": "string",
-      "enum": ["http://json-schema.org/draft-04/schema#"]
+      "enum": [
+        "http://json-schema.org/draft/2020-12/schema"
+      ]
     },
     "additionalProperties": {
       "type": "boolean",
@@ -19,79 +21,69 @@
       ]
     },
     "required": {
+      "description": "Array of required schema properties",
       "type": "array",
       "items": {
         "type": "string",
-        "example": "examplePrefix"
+        "example": "schema-property"
       }
     },
     "properties": {
+      "description": "<a href=\"https://json-schema.org/learn/getting-started-step-by-step#define-properties\" target=\"_blank\">JSON schema properties</a>. They key is the name of the property and the value is an object that describes its attributes.",
       "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/ConfigurationSchemaProperty"
+      },
       "example": {
-        "examplePrefix": {
+        "minimal_text_property": {
           "type": "string",
-          "description": "Example prefix",
+          "description": "Example Text Field"
+        },
+        "select_property": {
+          "type": "string",
+          "description": "Example Select Field",
           "enum": [
-            "myIntegrations_",
-            "yetAnotherIntegration_",
-            "myparcelcom_"
+            "option_1_key",
+            "option_2_key"
           ],
           "meta": {
-            "help": "An example prefix for resources handled by our system"
+            "help": "Please select an option.",
+            "field_type": "select",
+            "label_translations": {
+              "de-DE": "Beispiel Selectfeld",
+              "en-GB": "Example Select Field"
+            },
+            "enum_labels": {
+              "option_1_key": "Option 1 Label",
+              "option_2_key": "Option 2 Label"
+            },
+            "enum_label_translations": {
+              "option_1_key": {
+                "de-DE": "Option 1 Beschriftung",
+                "en-GB": "Option 1 Label"
+              },
+              "option_2_key": {
+                "de-DE": "Option 2 Beschriftung",
+                "en-GB": "Option 2 Label"
+              }
+            }
           }
         },
-        "anotherConfigurableProperty": {
-          "type": "number",
-          "description": "Another configurable property"
-        }
-      },
-      "additionalProperties": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "type",
-          "description"
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "example": "string",
-            "enum": [
-              "string",
-              "number",
-              "boolean"
-            ]
-          },
-          "description": {
-            "type": "string",
-            "example": "Example prefix"
-          },
-          "enum": {
-            "type": "array",
-            "items": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "example": "myPrefix_"
-                },
-                {
-                  "type": "number",
-                  "example": "1000_"
-                }
-              ]
-            }
-          },
-          "meta": {
-            "type": "object",
-            "properties": {
-              "help": {
-                "type": "string",
-                "example": "A prefix that will be applied to resources handled by our system"
-              },
-              "password": {
-                "type": "boolean",
-                "example": false
-              }
+        "nested_group": {
+          "type": "object",
+          "description": "Nested group",
+          "properties": {
+            "text_group_child": {
+              "type": "string",
+              "description": "Text group Child"
+            },
+            "number_group_child": {
+              "type": "number",
+              "description": "Number group Child"
+            },
+            "boolean_group_child": {
+              "type": "boolean",
+              "description": "Boolean group Child"
             }
           }
         }
