@@ -34,38 +34,7 @@
             "additionalProperties": false,
             "properties": {
               "data": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": [
-                  "properties"
-                ],
-                "properties": {
-                  "properties": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "required": [
-                        "name",
-                        "value"
-                      ],
-                      "properties": {
-                        "name": {
-                          "type": "string",
-                          "example": "orderPrefix"
-                        },
-                        "value": {
-                          "type": [
-                            "string",
-                            "number",
-                            "boolean"
-                          ],
-                          "example": "shopify_"
-                        }
-                      }
-                    }
-                  }
-                }
+                "$ref": "#/components/schemas/ConfigurationValues"
               }
             }
           }

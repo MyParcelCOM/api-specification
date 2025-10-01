@@ -43,24 +43,7 @@
                       "$ref": "#/components/schemas/Configuration"
                     },
                     "values": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "name",
-                          "value"
-                        ],
-                        "properties": {
-                          "name": {
-                            "type": "string",
-                            "example": "anotherConfigurableProperty"
-                          },
-                          "value": {
-                            "type": "string",
-                            "example": "yetAnotherValue"
-                          }
-                        }
-                      }
+                      "$ref": "#/components/schemas/ConfigurationValues"
                     }
                   }
                 }
