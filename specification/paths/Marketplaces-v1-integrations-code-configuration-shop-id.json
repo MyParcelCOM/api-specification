@@ -47,24 +47,7 @@
                       "$ref": "#/components/schemas/Configuration"
                     },
                     "values": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "name",
-                          "value"
-                        ],
-                        "properties": {
-                          "name": {
-                            "type": "string",
-                            "example": "orderPrefix"
-                          },
-                          "value": {
-                            "type": "string",
-                            "example": "myparcelcom_"
-                          }
-                        }
-                      }
+                      "$ref": "#/components/schemas/ConfigurationValues"
                     }
                   }
                 }
