@@ -64,9 +64,6 @@
       }
     },
     "responses": {
-      "204": {
-        "description": "The warehouse management system was connected successfully."
-      },
       "200": {
         "description": "The warehouse management system requires authorization through OAuth2. The authorization URL is returned in the response body.",
         "content": {
@@ -79,6 +76,9 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
+                  "required": [
+                    "show_configuration"
+                  ],
                   "type": "object",
                   "additionalProperties": false,
                   "properties": {
@@ -87,6 +87,12 @@
                       "format": "uri",
                       "example": "https://wms.com/authorize?client_id=6a4baca2-7b94-4987-9e4e-2283c22bac1d&redirect_uri=https://your_shop.com/authorize&response_type=code",
                       "description": "The URL to redirect the user to authorize the connection as part of a OAuth2 authorization code grant flow."
+                    },
+                    "show_configuration": {
+                      "type": "boolean",
+                      "default": false,
+                      "example": true,
+                      "description": "Flag that indicates to the requesting client to follow up with a request to <a href=\"/#tag/WMS/paths/~1wms~1v1~1integrations~1%7Bcode%7D~1configuration~1%7Bshop_id%7D/get\">get the configuration settings schema for a shop</a>."
                     }
                   }
                 }
@@ -96,10 +102,10 @@
         }
       },
       "404": {
-        "description": "When the shop is not found."
+        "description": "The shop is not found."
       },
       "422": {
-        "description": "When the settings are incorrect against the format specified by the warehouse management system settings_format or when shop is already connected to this warehouse management system."
+        "description": "The settings are incorrect against the format specified by the warehouse management system settings_format or when shop is already connected to this warehouse management system."
       }
     }
   }

@@ -37,6 +37,11 @@
                   "shipping"
                 ]
               }
+            },
+            "locale": {
+              "$ref": "#/components/schemas/LocaleEnum",
+              "default": "en-GB",
+              "description": "Specifies the language for the invitation email."
             }
           }
         },
