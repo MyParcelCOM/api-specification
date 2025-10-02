@@ -7,10 +7,12 @@
   "example": {
     "minimal_text_property": "previously-set-value",
     "select_property": "option_2_key",
-    "nested_group": {
-      "text_group_child": "some_value",
-      "number_group_child": 0,
-      "boolean_group_child": false
+    "group": {
+      "nested_group": {
+        "text_group_child": "some_value",
+        "number_group_child": 0,
+        "boolean_group_child": false
+      }
     }
   }
 }

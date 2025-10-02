@@ -34,12 +34,12 @@
     },
     "items": {
       "type": "object",
-      "description": "Item type and enum values for `array` type properties",
+      "description": "<a href=\"https://json-schema.org/understanding-json-schema/reference/array#items\">JSON schema array items</a>. Only used when the schema property type is `array`",
       "additionalProperties": false,
       "properties": {
         "type": {
           "type": "string",
-          "description": "Data type of the enum values",
+          "description": "Data type of the enum values. Only valid value is \"string\"",
           "enum": [
             "string"
           ],
@@ -47,7 +47,7 @@
         },
         "enum": {
           "type": "array",
-          "description": "Enum values for schema type properties",
+          "description": "Enum values for schema type properties. Only `string` values are supported",
           "items": {
             "type": "string"
           },
@@ -70,7 +70,10 @@
       ]
     },
     "properties": {
-      "description": "Nested JSON schema properties that follow the same specification",
+      "description": "Nested schema properties of type `object`, following the <a href=\"https://json-schema.org/understanding-json-schema/reference/object#properties\">object specification</a>. Object schemas can be nested indefinitely under the `properties` key",
+      "additionalProperties": {
+        "type": "object"
+      },
       "example": {
         "nested": {
           "schema": {
@@ -81,7 +84,7 @@
     },
     "meta": {
       "type": "object",
-      "description": "Properties that fall outside the JSON schema specification, which can be used to inform the UI about how to render the schema property as a form input",
+      "description": "Properties beyond the JSON Schema specification that help determine how a schema property should be rendered in a form",
       "additionalProperties": false,
       "properties": {
         "help": {
@@ -91,7 +94,7 @@
         },
         "password": {
           "type": "boolean",
-          "description": "Indicates whether the value of the schema property should be hidden",
+          "description": "Indicates whether the value of the schema property should be masked. Only used when the schema property type is `string`",
           "example": false
         },
         "field_type": {
@@ -120,7 +123,7 @@
         },
         "enum_labels": {
           "type": "object",
-          "description": "Key/value pair where the key is a schema property enum value and the value is a human readable label",
+          "description": "Key/value pair using enum values as keys and human-readable labels as values",
           "additionalProperties": {
             "description": "Human readable label",
             "type": "string"
@@ -132,10 +135,10 @@
         },
         "enum_label_translations": {
           "type": "object",
-          "description": "Key/value pair where the key is a schema property enum value and the value is an object with translated human readable labels",
+          "description": "Key/value pair using enum values as keys and objects containing translated human-readable labels as values",
           "additionalProperties": {
             "type": "object",
-            "description": "Key/value pair where the key is a locale code, e.g. \"en-GB\", and the value is a translated human readable label",
+            "description": "Key/value pair using locale codes as keys (e.g. \"en-GB\"), and translated human readable labels as values",
             "additionalProperties": false,
             "patternProperties": {
               "^[a-z]{2}-[A-Z]{2}$": {
