@@ -108,7 +108,7 @@
           "description": "Key/value pair where the key is a locale code, e.g. \"en-GB\", and the value is the translated `description` of the schema property",
           "additionalProperties": false,
           "patternProperties": {
-            "[az]{2}-[AZ]{2}": {
+            "^[a-z]{2}-[A-Z]{2}$": {
               "type": "string",
               "description": "The translated description of the schema property"
             }
@@ -136,8 +136,9 @@
           "additionalProperties": {
             "type": "object",
             "description": "Key/value pair where the key is a locale code, e.g. \"en-GB\", and the value is a translated human readable label",
+            "additionalProperties": false,
             "patternProperties": {
-              "[az]{2}-[AZ]{2}": {
+              "^[a-z]{2}-[A-Z]{2}$": {
                 "description": "Translated human readable label",
                 "type": "string"
               }
