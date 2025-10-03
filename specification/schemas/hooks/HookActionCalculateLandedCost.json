@@ -13,7 +13,7 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "surcharge_price": {
+          "surcharge": {
             "$ref": "#/components/schemas/Price"
           }
         }
