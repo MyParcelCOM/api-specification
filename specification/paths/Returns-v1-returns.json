@@ -50,6 +50,9 @@
         "$ref": "#/components/parameters/query-filter-created_at-date_to"
       },
       {
+        "$ref": "#/components/parameters/query-filter-merchant_status"
+      },
+      {
         "name": "filter[has_preferred_outcome_refund]",
         "in": "query",
         "description": "Boolean value.<ul><li>`true` Only returns which have an item with `preferred_outcome` set to `refund`.</li><li>`false` Only returns which do not have an item with `preferred_outcome` set to `refund`.</li></ul>",

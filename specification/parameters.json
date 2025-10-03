@@ -71,6 +71,9 @@
   "path-manifest_id": {
     "$ref": "./parameters/path-manifest_id.json"
   },
+  "path-merchant_status_id": {
+    "$ref": "./parameters/path-merchant_status_id.json"
+  },
   "path-organization_id": {
     "$ref": "./parameters/path-organization_id.json"
   },
@@ -184,6 +187,9 @@
   },
   "query-filter-location_type": {
     "$ref": "./parameters/query-filter-location_type.json"
+  },
+  "query-filter-merchant_status": {
+    "$ref": "./parameters/query-filter-merchant_status.json"
   },
   "query-filter-organization": {
     "$ref": "./parameters/query-filter-organization.json"
