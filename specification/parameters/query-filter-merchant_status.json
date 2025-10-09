@@ -1,7 +1,7 @@
 {
   "name": "filter[merchant_status]",
   "in": "query",
-  "description": "Comma separated string of merchant status IDs to filter by.",
+  "description": "Comma separated string of merchant status codes to filter by.",
   "schema": {
     "type": "string"
   }
