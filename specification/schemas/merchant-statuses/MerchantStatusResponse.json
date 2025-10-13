@@ -15,6 +15,7 @@
           "required": [
             "name",
             "code",
+            "status_level",
             "created_at"
           ]
         },
