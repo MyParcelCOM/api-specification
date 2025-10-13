@@ -159,6 +159,9 @@
             }
           }
         }
+      },
+      "404": {
+        "description": "No shop was found for the given shop ID."
       }
     }
   }
