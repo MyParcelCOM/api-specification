@@ -134,8 +134,8 @@
       "204": {
         "description": "The return merchant status is deleted."
       },
-      "403": {
-        "description": "The requesting access token does not have the correct permissions to delete this merchant status."
+      "404": {
+        "description": "No merchant return status was found."
       }
     }
   }
