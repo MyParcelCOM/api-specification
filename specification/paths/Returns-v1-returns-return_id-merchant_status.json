@@ -1,0 +1,57 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    }
+  ],
+  "post": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Add a merchant-status to the return.",
+    "description": "This endpoint adds a merchant-status to the return.",
+    "requestBody": {
+      "description": "The merchant status id to be set on the return.",
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "required": [
+                  "merchant_status_id"
+                ],
+                "properties": {
+                  "merchant_status_id": {
+                    "$ref": "#/components/schemas/Uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "204": {
+        "description": "The return is approved."
+      },
+      "404": {
+        "description": "No return or return merchant status was found for the given ID."
+      },
+      "422": {
+        "description": "This modification is not allowed on this return."
+      }
+    }
+  }
+}
