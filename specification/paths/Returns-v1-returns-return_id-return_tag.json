@@ -15,10 +15,10 @@
         ]
       }
     ],
-    "summary": "Add a merchant-status to the return.",
-    "description": "This endpoint adds a merchant-status to the return.",
+    "summary": "Add tags to the return.",
+    "description": "This endpoint adds return tags to the return.",
     "requestBody": {
-      "description": "The merchant status id to be set on the return.",
+      "description": "The return tag ids to be set on the return.",
       "content": {
         "application/vnd.api+json": {
           "schema": {
@@ -28,12 +28,17 @@
             ],
             "properties": {
               "data": {
+                "type": "object",
                 "required": [
-                  "merchant_status_id"
+                  "return_tag_ids"
                 ],
                 "properties": {
-                  "merchant_status_id": {
-                    "$ref": "#/components/schemas/Uuid"
+                  "return_tag_ids": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Uuid",
+                      "example": "35eddf50-1d84-47a3-8479-6bfda729cd99"
+                    }
                   }
                 }
               }
@@ -44,10 +49,10 @@
     },
     "responses": {
       "204": {
-        "description": "The return is approved."
+        "description": "The tags are attached to the return."
       },
       "404": {
-        "description": "No return or return merchant status was found for the given ID."
+        "description": "No return or return tag was found for the given ID."
       },
       "422": {
         "description": "This modification is not allowed on this return."

@@ -73,8 +73,8 @@
             "shop": {
               "$ref": "#/components/schemas/ShopRelationship"
             },
-            "merchant_status": {
-              "$ref": "#/components/schemas/MerchantStatusRelationship"
+            "tags": {
+              "$ref": "#/components/schemas/ReturnTagRelationship"
             }
           }
         }

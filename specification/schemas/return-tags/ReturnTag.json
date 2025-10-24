@@ -1,7 +1,7 @@
 {
   "allOf": [
     {
-      "$ref": "#/components/schemas/MerchantStatusResource"
+      "$ref": "#/components/schemas/ReturnTagResource"
     },
     {
       "properties": {
@@ -14,21 +14,7 @@
               "maxLength": 255,
               "example": "Approved in store"
             },
-            "code": {
-              "type": "string",
-              "maxLength": 255,
-              "example": "approved-in-store"
-            },
-            "description": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "maxLength": 255,
-              "description": "Description for this merchant status.",
-              "example": "This status indicates that the return has been approved in the physical store."
-            },
-            "status_level": {
+            "level": {
               "$ref": "#/components/schemas/StatusLevel"
             },
             "created_at": {

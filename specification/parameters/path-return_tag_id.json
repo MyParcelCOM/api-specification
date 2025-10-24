@@ -1,7 +1,7 @@
 {
-  "name": "merchant_status_id",
+  "name": "return_tag_id",
   "in": "path",
-  "description": "Id of the merchant status.",
+  "description": "Id of the return tag.",
   "required": true,
   "schema": {
     "$ref": "#/components/schemas/Uuid"

@@ -1,0 +1,8 @@
+{
+  "name": "filter[return_tag]",
+  "in": "query",
+  "description": "Comma separated string of return tag IDs to filter by.",
+  "schema": {
+    "type": "string"
+  }
+}
