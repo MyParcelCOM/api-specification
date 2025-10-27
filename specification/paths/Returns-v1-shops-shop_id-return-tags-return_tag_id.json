@@ -4,12 +4,12 @@
       "$ref": "#/components/parameters/path-shop_id"
     },
     {
-      "$ref": "#/components/parameters/path-merchant_status_id"
+      "$ref": "#/components/parameters/path-return_tag_id"
     }
   ],
   "get": {
     "tags": [
-      "Returns"
+      "ReturnTags"
     ],
     "security": [
       {
@@ -18,11 +18,11 @@
         ]
       }
     ],
-    "summary": "Get a return merchant status.",
-    "description": "This endpoint retrieves a return merchant status by id.",
+    "summary": "Get a return tag.",
+    "description": "This endpoint retrieves a return tag by id.",
     "responses": {
       "200": {
-        "description": "Retrieved the return merchant status.",
+        "description": "Retrieved the return tag.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -33,7 +33,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/MerchantStatusResponse"
+                  "$ref": "#/components/schemas/ReturnTagResponse"
                 }
               }
             }
@@ -41,13 +41,13 @@
         }
       },
       "404": {
-        "description": "No return merchant status was found for the given ID."
+        "description": "No return tag was found for the given ID."
       }
     }
   },
   "patch": {
     "tags": [
-      "Returns"
+      "ReturnTags"
     ],
     "security": [
       {
@@ -56,10 +56,10 @@
         ]
       }
     ],
-    "summary": "Update a shop's return merchant status by ID.",
-    "description": "This endpoint updates a shop's return merchant status.",
+    "summary": "Update a shop's return tag by ID.",
+    "description": "This endpoint updates a shop's return tag.",
     "requestBody": {
-      "description": "The shop return merchant status object with attributes to be updated.",
+      "description": "The shop return tag object with attributes to be updated.",
       "required": true,
       "content": {
         "application/vnd.api+json": {
@@ -73,7 +73,7 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/MerchantStatus"
+                    "$ref": "#/components/schemas/ReturnTag"
                   },
                   {
                     "required": [
@@ -94,7 +94,7 @@
     },
     "responses": {
       "200": {
-        "description": "The return merchant status has been updated for the specified shop.",
+        "description": "The return tag has been updated for the specified shop.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -105,7 +105,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "$ref": "#/components/schemas/MerchantStatusResponse"
+                  "$ref": "#/components/schemas/ReturnTagResponse"
                 }
               }
             }
@@ -113,13 +113,13 @@
         }
       },
       "404": {
-        "description": "No merchant return status was found with the given shop."
+        "description": "No return tag was found with the given shop."
       }
     }
   },
   "delete": {
     "tags": [
-      "Returns"
+      "ReturnTags"
     ],
     "security": [
       {
@@ -128,14 +128,14 @@
         ]
       }
     ],
-    "summary": "Delete return merchant status.",
-    "description": "This endpoint deletes a return merchant status.",
+    "summary": "Delete return tag.",
+    "description": "This endpoint deletes a return tag.",
     "responses": {
       "204": {
-        "description": "The return merchant status is deleted."
+        "description": "The return tag is deleted."
       },
       "404": {
-        "description": "No merchant return status was found."
+        "description": "No return tag was found."
       }
     }
   }
