@@ -87,7 +87,8 @@
     "security": [
       {
         "OAuth2": [
-          "returns.manage"
+          "returns.manage",
+          "organizations.manage"
         ]
       }
     ],
@@ -108,12 +109,11 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnTag"
+                    "$ref": "#/components/schemas/ReturnTagRequest"
                   },
                   {
                     "required": [
-                      "attributes",
-                      "relationships"
+                      "attributes"
                     ],
                     "properties": {
                       "id": {
@@ -123,11 +123,6 @@
                         "required": [
                           "name",
                           "level"
-                        ]
-                      },
-                      "relationships": {
-                        "required": [
-                          "shop"
                         ]
                       }
                     }

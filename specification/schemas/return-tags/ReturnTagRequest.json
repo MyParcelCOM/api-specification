@@ -1,0 +1,28 @@
+{
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/ReturnTagResource"
+    },
+    {
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string",
+              "maxLength": 255,
+              "example": "Approved in store"
+            },
+            "level": {
+              "$ref": "#/components/schemas/StatusLevel"
+            },
+            "created_at": {
+              "$ref": "#/components/schemas/Timestamp"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
