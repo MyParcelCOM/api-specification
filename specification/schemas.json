@@ -353,6 +353,9 @@
   "ReturnTagRelationship": {
     "$ref": "./schemas/return-tags/ReturnTagRelationship.json"
   },
+  "ReturnTagRequest": {
+    "$ref": "./schemas/return-tags/ReturnTagRequest.json"
+  },
   "ReturnTagResource": {
     "$ref": "./schemas/return-tags/ReturnTagResource.json"
   },

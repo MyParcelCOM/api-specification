@@ -73,17 +73,12 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnTag"
+                    "$ref": "#/components/schemas/ReturnTagRequest"
                   },
                   {
                     "required": [
                       "id"
-                    ],
-                    "properties": {
-                      "relationships": {
-                        "readOnly": true
-                      }
-                    }
+                    ]
                   }
                 ]
               }
