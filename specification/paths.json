@@ -218,6 +218,9 @@
   "/returns/v1/reasons/{return_reason_id}": {
     "$ref": "./paths/Returns-v1-reasons-return_reason_id.json"
   },
+  "/returns/v1/tags": {
+    "$ref": "./paths/Returns-v1-tags.json"
+  },
   "/returns/v1/shops/{shop_id}/return-tags": {
     "$ref": "./paths/Returns-v1-shops-shop_id-return-tags.json"
   },

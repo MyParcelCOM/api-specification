@@ -1,0 +1,87 @@
+{
+  "post": {
+    "tags": [
+      "ReturnTags"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage",
+          "organizations.manage"
+        ]
+      }
+    ],
+    "summary": "Create a return tag for the given shop.",
+    "description": "This endpoint creates a return tag for the specified shop.",
+    "requestBody": {
+      "description": "The return tag to be created.",
+      "required": true,
+      "content": {
+        "application/vnd.api+json": {
+          "schema": {
+            "type": "object",
+            "required": [
+              "data"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "data": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ReturnTag"
+                  },
+                  {
+                    "required": [
+                      "attributes",
+                      "relationships"
+                    ],
+                    "properties": {
+                      "id": {
+                        "readOnly": true
+                      },
+                      "attributes": {
+                        "required": [
+                          "name",
+                          "level"
+                        ]
+                      },
+                      "relationships": {
+                        "required": [
+                          "shop"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "201": {
+        "description": "The return tag has been created for the specified shop.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/ReturnTagResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No shop was found for the given shop ID."
+      }
+    }
+  }
+}
