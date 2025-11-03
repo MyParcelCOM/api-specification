@@ -224,9 +224,6 @@
   "/returns/v1/tags/{return_tag_id}": {
     "$ref": "./paths/Returns-v1-tags-return_tag_id.json"
   },
-  "/returns/v1/shops/{shop_id}/return-tags": {
-    "$ref": "./paths/Returns-v1-shops-shop_id-return-tags.json"
-  },
   "/returns/v1/shops/{shop_id}/orders/{reference}/{email}": {
     "$ref": "./paths/Returns-v1-shops-shop_id-orders-reference-email.json"
   },
