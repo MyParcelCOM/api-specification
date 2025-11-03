@@ -67,18 +67,10 @@
                       "description": "The domain where the return portal for this shop is hosted."
                     },
                     "primary_color": {
-                      "type": "string",
-                      "minLength": 4,
-                      "maxLength": 7,
-                      "example": "#3a2efe",
-                      "description": "RGB color code in #-hexadecimal notation."
+                      "$ref": "#/components/schemas/ColorHex"
                     },
                     "accent_color": {
-                      "type": "string",
-                      "minLength": 4,
-                      "maxLength": 7,
-                      "example": "#fdb915",
-                      "description": "RGB color code in #-hexadecimal notation."
+                      "$ref": "#/components/schemas/ColorHex"
                     },
                     "hide_product_features": {
                       "type": "boolean",
