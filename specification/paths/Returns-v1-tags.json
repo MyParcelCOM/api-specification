@@ -1,9 +1,4 @@
 {
-  "parameters": [
-    {
-      "$ref": "#/components/parameters/path-shop_id"
-    }
-  ],
   "get": {
     "tags": [
       "ReturnTags"
@@ -15,11 +10,24 @@
         ]
       }
     ],
-    "summary": "Get all return tags for the given shop.",
-    "description": "This endpoint retrieves return tags for the given shop.",
+    "parameters": [
+      {
+        "name": "include",
+        "in": "query",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`shop`</li></ul>",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "$ref": "#/components/parameters/query-filter-shop"
+      }
+    ],
+    "summary": "Get all return tags for a user.",
+    "description": "This endpoint retrieves return tags for a user.",
     "responses": {
       "200": {
-        "description": "Retrieved the return tags for the given shop.",
+        "description": "Retrieved the return tags for a user.",
         "content": {
           "application/vnd.api+json": {
             "schema": {
@@ -50,23 +58,23 @@
                   "properties": {
                     "self": {
                       "type": "string",
-                      "example": "$API_HOST/returns/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/return-tags?page[number]=3&page[size]=30"
+                      "example": "$API_HOST/returns/v1/tags?page[number]=3&page[size]=30"
                     },
                     "first": {
                       "type": "string",
-                      "example": "$API_HOST/returns/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/return-tags?page[number]=1&page[size]=30"
+                      "example": "$API_HOST/returns/v1/tags?page[number]=1&page[size]=30"
                     },
                     "prev": {
                       "type": "string",
-                      "example": "$API_HOST/returns/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/return-tags?page[number]=2&page[size]=30"
+                      "example": "$API_HOST/returns/v1/tags?page[number]=2&page[size]=30"
                     },
                     "next": {
                       "type": "string",
-                      "example": "$API_HOST/returns/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/return-tags?page[number]=4&page[size]=30"
+                      "example": "$API_HOST/returns/v1/tags?page[number]=4&page[size]=30"
                     },
                     "last": {
                       "type": "string",
-                      "example": "$API_HOST/returns/v1/shops/35eddf50-1d84-47a3-8479-6bfda729cd99/return-tags?page[number]=13&page[size]=30"
+                      "example": "$API_HOST/returns/v1/tags?page[number]=13&page[size]=30"
                     }
                   }
                 }
@@ -76,7 +84,7 @@
         }
       },
       "404": {
-        "description": "No return tags were found with the given shop."
+        "description": "No return tags were found."
       }
     }
   },
@@ -109,11 +117,12 @@
               "data": {
                 "allOf": [
                   {
-                    "$ref": "#/components/schemas/ReturnTagRequest"
+                    "$ref": "#/components/schemas/ReturnTag"
                   },
                   {
                     "required": [
-                      "attributes"
+                      "attributes",
+                      "relationships"
                     ],
                     "properties": {
                       "id": {
@@ -123,6 +132,11 @@
                         "required": [
                           "name",
                           "level"
+                        ]
+                      },
+                      "relationships": {
+                        "required": [
+                          "shop"
                         ]
                       }
                     }
