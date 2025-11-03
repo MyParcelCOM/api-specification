@@ -131,7 +131,7 @@
                       "attributes": {
                         "required": [
                           "name",
-                          "level"
+                          "color"
                         ]
                       },
                       "relationships": {

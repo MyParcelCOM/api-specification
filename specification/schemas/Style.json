@@ -1,40 +1,27 @@
 {
   "type": "object",
+  "example": {
+    "background_color": "#fafafa",
+    "foreground_color": "#fff",
+    "primary_color": "#3a2efe",
+    "secondary_color": "#192832",
+    "accent_color": "#fdb915"
+  },
   "properties": {
     "background_color": {
-      "type": "string",
-      "minLength": 4,
-      "maxLength": 7,
-      "example": "#fafafa",
-      "description": "RGB color code in #-hexadecimal notation."
+      "$ref": "#/components/schemas/ColorHex"
     },
     "foreground_color": {
-      "type": "string",
-      "minLength": 4,
-      "maxLength": 7,
-      "example": "#fff",
-      "description": "RGB color code in #-hexadecimal notation."
+      "$ref": "#/components/schemas/ColorHex"
     },
     "primary_color": {
-      "type": "string",
-      "minLength": 4,
-      "maxLength": 7,
-      "example": "#3a2efe",
-      "description": "RGB color code in #-hexadecimal notation."
+      "$ref": "#/components/schemas/ColorHex"
     },
     "secondary_color": {
-      "type": "string",
-      "minLength": 4,
-      "maxLength": 7,
-      "example": "#192832",
-      "description": "RGB color code in #-hexadecimal notation."
+      "$ref": "#/components/schemas/ColorHex"
     },
     "accent_color": {
-      "type": "string",
-      "minLength": 4,
-      "maxLength": 7,
-      "example": "#fdb915",
-      "description": "RGB color code in #-hexadecimal notation."
+      "$ref": "#/components/schemas/ColorHex"
     }
   }
 }
