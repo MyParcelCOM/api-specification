@@ -6,8 +6,8 @@
   "properties": {
     "type": {
       "type": "string",
-      "pattern": "^merchant-statuses$",
-      "example": "merchant-statuses"
+      "pattern": "^return-tags$",
+      "example": "return-tags"
     },
     "id": {
       "type": "string",

@@ -16,7 +16,7 @@
       {
         "name": "include",
         "in": "query",
-        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`return_method`</li><li>`shop`</li><li>`status`</li></ul>",
+        "description": "Comma separated string of the relationship names you want to include the data of.<br>The relationships that can be included are:<ul><li>`return_method`</li><li>`shop`</li><li>`status`</li><li>`tags`</li></ul>",
         "schema": {
           "type": "string"
         }
@@ -50,7 +50,7 @@
         "$ref": "#/components/parameters/query-filter-created_at-date_to"
       },
       {
-        "$ref": "#/components/parameters/query-filter-merchant_status"
+        "$ref": "#/components/parameters/query-filter-return_tag"
       },
       {
         "name": "filter[has_preferred_outcome_refund]",

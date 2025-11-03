@@ -347,17 +347,20 @@
   "ManifestResponse": {
     "$ref": "./schemas/manifests/ManifestResponse.json"
   },
-  "MerchantStatus": {
-    "$ref": "./schemas/merchant-statuses/MerchantStatus.json"
+  "ReturnTag": {
+    "$ref": "./schemas/return-tags/ReturnTag.json"
   },
-  "MerchantStatusRelationship": {
-    "$ref": "./schemas/merchant-statuses/MerchantStatusRelationship.json"
+  "ReturnTagRelationship": {
+    "$ref": "./schemas/return-tags/ReturnTagRelationship.json"
   },
-  "MerchantStatusResource": {
-    "$ref": "./schemas/merchant-statuses/MerchantStatusResource.json"
+  "ReturnTagRequest": {
+    "$ref": "./schemas/return-tags/ReturnTagRequest.json"
   },
-  "MerchantStatusResponse": {
-    "$ref": "./schemas/merchant-statuses/MerchantStatusResponse.json"
+  "ReturnTagResource": {
+    "$ref": "./schemas/return-tags/ReturnTagResource.json"
+  },
+  "ReturnTagResponse": {
+    "$ref": "./schemas/return-tags/ReturnTagResponse.json"
   },
   "MostReturnedItem": {
     "$ref": "./schemas/returns/MostReturnedItem.json"
