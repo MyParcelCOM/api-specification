@@ -215,6 +215,9 @@
   "FilesRelationship": {
     "$ref": "./schemas/files/FilesRelationship.json"
   },
+  "ColorHex": {
+    "$ref": "./schemas/ColorHex.json"
+  },
   "Hook": {
     "$ref": "./schemas/hooks/Hook.json"
   },

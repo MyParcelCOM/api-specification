@@ -14,7 +14,7 @@
         "attributes": {
           "required": [
             "name",
-            "level",
+            "color",
             "created_at"
           ]
         },

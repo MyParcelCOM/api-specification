@@ -15,8 +15,8 @@
               "example": "Approved in store",
               "description": "The display name of the tag"
             },
-            "level": {
-              "$ref": "#/components/schemas/StatusLevel"
+            "color": {
+              "$ref": "#/components/schemas/ColorHex"
             },
             "created_at": {
               "$ref": "#/components/schemas/Timestamp"
