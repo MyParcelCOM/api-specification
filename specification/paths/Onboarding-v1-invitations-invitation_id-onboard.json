@@ -94,6 +94,10 @@
                         ]
                       }
                     ]
+                  },
+                  "locale": {
+                    "$ref": "#/components/schemas/LocaleEnum",
+                    "default": "en-GB"
                   }
                 }
               }
