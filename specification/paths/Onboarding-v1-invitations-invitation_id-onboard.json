@@ -96,8 +96,7 @@
                     ]
                   },
                   "locale": {
-                    "$ref": "#/components/schemas/LocaleEnum",
-                    "default": "en-GB"
+                    "$ref": "#/components/schemas/LocaleEnum"
                   }
                 }
               }
