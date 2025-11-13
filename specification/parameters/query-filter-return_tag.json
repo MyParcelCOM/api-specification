@@ -1,5 +1,5 @@
 {
-  "name": "filter[return_tag]",
+  "name": "filter[tags]",
   "in": "query",
   "description": "Comma separated string of return tag IDs to filter by.",
   "schema": {

@@ -94,6 +94,9 @@
                         ]
                       }
                     ]
+                  },
+                  "locale": {
+                    "$ref": "#/components/schemas/LocaleEnum"
                   }
                 }
               }
