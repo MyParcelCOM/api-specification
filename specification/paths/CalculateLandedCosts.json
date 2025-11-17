@@ -114,6 +114,16 @@
                     "description": "Shipment items containing `description`, `item_value` and `hs_code`. If the `hs_code` is not supplied, the `sku` is required and an HS code suggestion request will be triggered on your behalf, to determine the best matching HS code."
                   }
                 }
+              },
+              "meta": {
+                "type": "object",
+                "properties": {
+                  "convert_to_destination_currency": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If `false` the values are returned in the currency of the sender country. If `true` the values are returned in the currency of the recipient country."
+                  }
+                }
               }
             }
           }
