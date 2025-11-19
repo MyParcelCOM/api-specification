@@ -120,7 +120,7 @@
                 "properties": {
                   "convert_to_destination_currency": {
                     "type": "boolean",
-                    "default": false,
+                    "default": true,
                     "description": "If `false` the values are returned in the currency of the sender country. If `true` the values are returned in the currency of the recipient country."
                   }
                 }
