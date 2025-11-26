@@ -6,6 +6,19 @@
       "type": "string",
       "pattern": "^reject-return$",
       "example": "reject-return"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Message explaining the reason for rejection."
+          }
+        }
+      }
     }
   }
 }
