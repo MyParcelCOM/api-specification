@@ -17,6 +17,31 @@
     ],
     "summary": "Reject a return.",
     "description": "This endpoint modifies the status of a return resource to `return-rejected`",
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "description": "Message explaining the reason for rejection."
+                  }
+                }
+              }
+            }
+          },
+          "example": {
+            "data": {
+              "message": "string (optional)"
+            }
+          }
+        }
+      }
+    },
     "responses": {
       "204": {
         "description": "The return is rejected."
