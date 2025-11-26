@@ -61,6 +61,12 @@
                   "description": "The language that is used for emails for this return. Defaults to the shop's locale."
                 }
               ]
+            },
+            "rejection_message": {
+              "type": "string",
+              "nullable": true,
+              "example": "The items you've selected are not eligible to be returned because...",
+              "description": "Message explaining the reason the return was rejected (if at all)."
             }
           }
         },
