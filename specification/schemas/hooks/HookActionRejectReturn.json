@@ -15,6 +15,7 @@
         "properties": {
           "message": {
             "type": "string",
+            "maxLength": 255,
             "description": "Message explaining the reason for rejection.",
             "example": "The items you've selected are not eligible to be returned because..."
           }

@@ -64,6 +64,7 @@
             },
             "rejection_message": {
               "type": "string",
+              "maxLength": 255,
               "example": "The items you've selected are not eligible to be returned because...",
               "description": "Message explaining the reason the return was rejected (if at all)."
             }
