@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "required": ["action_type"],
   "additionalProperties": false,
   "properties": {
     "action_type": {
@@ -15,8 +16,7 @@
         "properties": {
           "message": {
             "type": [
-              "string",
-              "null"
+              "string"
             ],
             "maxLength": 255,
             "description": "Message explaining the reason for rejection.",
