@@ -1,6 +1,5 @@
 {
   "type": "object",
-  "required": ["action_type"],
   "additionalProperties": false,
   "properties": {
     "action_type": {
@@ -11,7 +10,7 @@
     "values": {
       "type": "array",
       "items": {
-        "type": "object",
+        "type": ["object", "null"],
         "additionalProperties": false,
         "properties": {
           "message": {
