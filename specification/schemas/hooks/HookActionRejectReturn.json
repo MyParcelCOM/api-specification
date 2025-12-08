@@ -10,11 +10,10 @@
     "values": {
       "type": "array",
       "items": {
-        "type": ["object", "null"],
         "additionalProperties": false,
         "properties": {
           "message": {
-            "type": "string",
+            "type": ["string", "null"],
             "maxLength": 255,
             "description": "Message explaining the reason for rejection.",
             "example": "The items you've selected are not eligible to be returned because..."
