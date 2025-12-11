@@ -6,6 +6,24 @@
       "type": "string",
       "pattern": "^reject-return$",
       "example": "reject-return"
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "message": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 255,
+            "description": "Message explaining the reason for rejection.",
+            "example": "The items you've selected are not eligible to be returned because..."
+          }
+        }
+      }
     }
   }
 }
