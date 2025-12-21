@@ -28,11 +28,12 @@
           "value": {
             "type": [
               "string",
+              "number",
               "object",
               "array"
             ],
             "example": "175a235f-aff5-4e44-87b5-3657b75c1deb",
-            "description": "In this specific case this could be a DPD Next Day service ID."
+            "description": "The value to set in the field targeted by the pointer."
           },
           "converter": {
             "type": "string",
