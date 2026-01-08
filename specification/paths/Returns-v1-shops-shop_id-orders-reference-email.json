@@ -33,6 +33,7 @@
         ]
       }
     ],
+    "deprecated": true,
     "summary": "Get an order resource.",
     "description": "This endpoint retrieves an order resource by the specified reference and email address.",
     "responses": {
