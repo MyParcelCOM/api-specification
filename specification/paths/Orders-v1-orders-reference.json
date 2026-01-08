@@ -1,0 +1,80 @@
+{
+  "parameters": [
+    {
+      "name": "reference",
+      "in": "path",
+      "description": "Order reference to retrieve the order by.",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "shop_id",
+      "in": "query",
+      "required": true,
+      "description": "Id of the shop to retrieve the order for.",
+      "schema": {
+        "$ref": "#/components/schemas/Uuid"
+      }
+    },
+    {
+      "name": "email",
+      "in": "query",
+      "description": "Email address of the receiver of the order. This query parameter is mutually exclusive with postal code query parameter. Either one is required.",
+      "schema": {
+        "$ref": "#/components/schemas/Email"
+      }
+    },
+    {
+      "name": "postal_code",
+      "in": "query",
+      "description": "Postal code of the receiver of the order. This query parameter is mutually exclusive with email query parameter. Either one is required.",
+      "schema": {
+        "type": "string",
+        "example": "1111AA"
+      }
+    }
+  ],
+  "get": {
+    "tags": [
+      "Orders"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get an order resource by reference and email or postal code.",
+    "description": "This endpoint retrieves an order resource by the specified reference and either email address or postal code.",
+    "responses": {
+      "200": {
+        "description": "Retrieved the order.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "$ref": "#/components/schemas/OrderResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No order was found with the provided input."
+      },
+      "409": {
+        "description": "One or more of the orders resource is handled by a 3rd party."
+      }
+    }
+  }
+}
