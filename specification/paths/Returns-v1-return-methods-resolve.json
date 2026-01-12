@@ -43,19 +43,39 @@
                     "example": "35eddf50-1d84-47a3-8479-6bfda729cd99"
                   },
                   "consumer_address": {
-                    "required": [
-                      "country_code",
-                      "email"
-                    ],
-                    "properties": {
-                      "country_code": {
-                        "$ref": "#/components/schemas/CountryCode"
+                    "oneOf": [
+                      {
+                        "title": "Resolve order by email",
+                        "required": [
+                          "country_code",
+                          "email"
+                        ],
+                        "properties": {
+                          "country_code": {
+                            "$ref": "#/components/schemas/CountryCode"
+                          },
+                          "email": {
+                            "$ref": "#/components/schemas/Email"
+                          }
+                        }
                       },
-                      "email": {
-                        "$ref": "#/components/schemas/Email",
-                        "example": "s.holmes@holmesinvestigations.com"
+                      {
+                        "title": "Resolve order by postal code",
+                        "required": [
+                          "country_code",
+                          "postal_code"
+                        ],
+                        "properties": {
+                          "country_code": {
+                            "$ref": "#/components/schemas/CountryCode"
+                          },
+                          "postal_code": {
+                            "type": "string",
+                            "example": "1111AA"
+                          }
+                        }
                       }
-                    }
+                    ]
                   },
                   "weight": {
                     "type": "integer",
