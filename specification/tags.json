@@ -99,6 +99,9 @@
     "name": "Onboarding"
   },
   {
+    "name": "Orders"
+  },
+  {
     "name": "Organizations",
     "externalDocs": {
       "url": "https://docs.myparcel.com/api/resources/organizations.html",
