@@ -401,12 +401,6 @@
   "/zones/{zone_id}": {
     "$ref": "./paths/Zones-zone_id.json"
   },
-  "/analytics/on-time-delivery/{interval}": {
-    "$ref": "./paths/Analytics-on-time-delivery.json"
-  },
-  "/analytics/volume/{group_by}/{interval}": {
-    "$ref": "./paths/Analytics-volume.json"
-  },
   "/add-shipments-to-collection": {
     "$ref": "./paths/AddShipmentsToCollection.json"
   },

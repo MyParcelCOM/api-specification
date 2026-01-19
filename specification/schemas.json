@@ -764,9 +764,6 @@
   "Weight": {
     "$ref": "./schemas/Weight.json"
   },
-  "Analytics": {
-    "$ref": "./schemas/Analytics.json"
-  },
   "TaxIdentificationNumber": {
     "$ref": "./schemas/organizations/TaxIdentificationNumber.json"
   },
