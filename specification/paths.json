@@ -131,6 +131,9 @@
   "/onboarding/v1/invitations/{invitation_id}/onboard": {
     "$ref": "./paths/Onboarding-v1-invitations-invitation_id-onboard.json"
   },
+  "/orders/v1/orders/{reference}": {
+    "$ref": "./paths/Orders-v1-orders-reference.json"
+  },
   "/organizations": {
     "$ref": "./paths/Organizations.json"
   },
@@ -397,12 +400,6 @@
   },
   "/zones/{zone_id}": {
     "$ref": "./paths/Zones-zone_id.json"
-  },
-  "/analytics/on-time-delivery/{interval}": {
-    "$ref": "./paths/Analytics-on-time-delivery.json"
-  },
-  "/analytics/volume/{group_by}/{interval}": {
-    "$ref": "./paths/Analytics-volume.json"
   },
   "/add-shipments-to-collection": {
     "$ref": "./paths/AddShipmentsToCollection.json"
