@@ -1,0 +1,26 @@
+{
+  "name": "@myparcelcom/api-specification",
+  "version": "1.0.0",
+  "description": "MyParcel.com API specification based on the OpenAPI Specification",
+  "main": "dist/swagger.json",
+  "files": [
+    "dist/swagger.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MyParcelCOM/api-specification.git"
+  },
+  "keywords": [
+    "specification",
+    "myparcel"
+  ],
+  "author": "MyParcel.com",
+  "license": "ISC",
+  "homepage": "https://api-specification.myparcel.com",
+  "bugs": {
+    "url": "https://github.com/MyParcelCOM/api-specification/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
