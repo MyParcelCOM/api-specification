@@ -73,8 +73,9 @@
                         "is_required": true
                       },
                       {
-                        "code": "unexpected-quality",
-                        "is_required": false
+                        "code": "still-sealed",
+                        "is_required": false,
+                        "no_note": "This product cannot be returned after it was unsealed. Proceeding will lead to a rejected return request."
                       }
                     ],
                     "items": {
@@ -92,6 +93,14 @@
                         "is_required": {
                           "type": "boolean",
                           "description": "Indication whether a consumer is required to answer this question related to the selected return reason"
+                        },
+                        "no_note": {
+                          "type": "string",
+                          "description": "A note to show the user when they answer this `boolean` type question with `false`. Will be shown in the return portal."
+                        },
+                        "yes_note": {
+                          "type": "string",
+                          "description": "A note to show the user when they answer this `boolean` type question with `true`. Will be shown in the return portal."
                         }
                       }
                     }

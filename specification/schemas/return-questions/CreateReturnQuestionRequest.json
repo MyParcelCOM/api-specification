@@ -25,6 +25,15 @@
                   }
                 }
               ]
+            },
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "string",
+                "boolean"
+              ],
+              "example": "string",
+              "description": "The type of answer expected for this question."
             }
           }
         }
