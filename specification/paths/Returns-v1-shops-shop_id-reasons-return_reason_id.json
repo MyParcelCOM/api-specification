@@ -79,30 +79,7 @@
                       }
                     ],
                     "items": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "required": [
-                        "code",
-                        "is_required"
-                      ],
-                      "properties": {
-                        "code": {
-                          "type": "string",
-                          "description": "The code of the shop return reason"
-                        },
-                        "is_required": {
-                          "type": "boolean",
-                          "description": "Indication whether a consumer is required to answer this question related to the selected return reason"
-                        },
-                        "no_note": {
-                          "type": "string",
-                          "description": "A note to show the user when they answer this `boolean` type question with `false`. Will be shown in the return portal."
-                        },
-                        "yes_note": {
-                          "type": "string",
-                          "description": "A note to show the user when they answer this `boolean` type question with `true`. Will be shown in the return portal."
-                        }
-                      }
+                      "$ref": "#/components/schemas/ReturnReasonQuestionAttachment"
                     }
                   }
                 }
