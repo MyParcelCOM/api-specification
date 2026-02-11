@@ -79,7 +79,7 @@
                       }
                     ],
                     "items": {
-                      "$ref": "#/components/schemas/ReturnReasonQuestionAttachment"
+                      "$ref": "#/components/schemas/ShopReturnReasonQuestion"
                     }
                   }
                 }

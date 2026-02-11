@@ -563,11 +563,11 @@
   "ReturnReasonRelationship": {
     "$ref": "./schemas/return-reasons/ReturnReasonRelationship.json"
   },
-  "ReturnReasonQuestionAttachment": {
-    "$ref": "./schemas/return-reasons/ReturnReasonQuestionAttachment.json"
-  },
   "ShopReturnReason": {
     "$ref": "./schemas/return-reasons/ShopReturnReason.json"
+  },
+  "ShopReturnReasonQuestion": {
+    "$ref": "./schemas/return-reasons/ShopReturnReasonQuestion.json"
   },
   "ShopReturnReasonResponse": {
     "$ref": "./schemas/return-reasons/ShopReturnReasonResponse.json"
