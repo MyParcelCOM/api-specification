@@ -18,11 +18,13 @@
     },
     "no_note": {
       "type": "string",
+      "maxLength": 255,
       "description": "A note to show the user when they answer this `boolean` type question with `false`. Will be shown in the return portal.",
       "example": "This product cannot be returned after it was unsealed. Proceeding will lead to a rejected return request."
     },
     "yes_note": {
       "type": "string",
+      "maxLength": 255,
       "description": "A note to show the user when they answer this `boolean` type question with `true`. Will be shown in the return portal.",
       "example": "Thank you for confirming."
     }
