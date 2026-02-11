@@ -578,6 +578,9 @@
   "ReturnQuestion": {
     "$ref": "./schemas/return-questions/ReturnQuestion.json"
   },
+  "ReturnQuestionAnswerType": {
+    "$ref": "./schemas/return-questions/ReturnQuestionAnswerType.json"
+  },
   "ReturnQuestionResource": {
     "$ref": "./schemas/return-questions/ReturnQuestionResource.json"
   },

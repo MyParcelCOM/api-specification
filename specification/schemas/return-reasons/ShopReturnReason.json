@@ -57,11 +57,7 @@
                     "type": "string"
                   },
                   "answer_type": {
-                    "type": "string",
-                    "enum": [
-                      "string",
-                      "boolean"
-                    ]
+                    "$ref": "#/components/schemas/ReturnQuestionAnswerType"
                   },
                   "is_required": {
                     "type": "boolean"
