@@ -8,6 +8,9 @@
         "attributes": {
           "type": "object",
           "additionalProperties": false,
+          "required": [
+            "answer_type"
+          ],
           "properties": {
             "code": {
               "type": "string",
