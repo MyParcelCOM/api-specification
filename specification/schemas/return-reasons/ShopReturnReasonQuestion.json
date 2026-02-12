@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "is_required"
+  ],
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "The code of the shop return question",
+      "example": "what-size"
+    },
+    "is_required": {
+      "type": "boolean",
+      "description": "Indication whether a consumer is required to answer this question related to the selected return reason",
+      "example": true
+    },
+    "answer_type": {
+      "$ref": "#/components/schemas/ShopReturnReasonQuestionAnswerType"
+    },
+    "yes_note": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "A note to show the user when they answer a `boolean` type question with `true`. Will be shown in the return portal.",
+      "example": "This product can't be returned after its been used. Proceeding will lead to a rejected return request."
+    },
+    "no_note": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "A note to show the user when they answer a `boolean` type question with `false`. Will be shown in the return portal.",
+      "example": "This product cannot be returned after it was unsealed. Proceeding will lead to a rejected return request."
+    }
+  }
+}

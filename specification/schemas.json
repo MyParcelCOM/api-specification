@@ -566,6 +566,9 @@
   "ShopReturnReason": {
     "$ref": "./schemas/return-reasons/ShopReturnReason.json"
   },
+  "ShopReturnReasonQuestion": {
+    "$ref": "./schemas/return-reasons/ShopReturnReasonQuestion.json"
+  },
   "ShopReturnReasonResponse": {
     "$ref": "./schemas/return-reasons/ShopReturnReasonResponse.json"
   },
@@ -574,6 +577,9 @@
   },
   "ReturnQuestion": {
     "$ref": "./schemas/return-questions/ReturnQuestion.json"
+  },
+  "ReturnQuestionAnswerType": {
+    "$ref": "./schemas/return-questions/ReturnQuestionAnswerType.json"
   },
   "ReturnQuestionResource": {
     "$ref": "./schemas/return-questions/ReturnQuestionResource.json"

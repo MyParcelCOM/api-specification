@@ -56,6 +56,9 @@
                   "description": {
                     "type": "string"
                   },
+                  "answer_type": {
+                    "$ref": "#/components/schemas/ReturnQuestionAnswerType"
+                  },
                   "is_required": {
                     "type": "boolean"
                   }
