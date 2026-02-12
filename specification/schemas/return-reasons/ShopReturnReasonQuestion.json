@@ -17,7 +17,7 @@
       "example": true
     },
     "answer_type": {
-      "$ref": "#/components/schemas/ShopReturnReasonQuestionAnswerType"
+      "$ref": "#/components/schemas/ReturnQuestionAnswerType"
     },
     "yes_note": {
       "type": "string",
