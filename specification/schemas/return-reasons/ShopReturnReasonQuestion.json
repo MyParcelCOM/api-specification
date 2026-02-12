@@ -3,7 +3,8 @@
   "additionalProperties": false,
   "required": [
     "code",
-    "is_required"
+    "is_required",
+    "answer_type"
   ],
   "properties": {
     "code": {
