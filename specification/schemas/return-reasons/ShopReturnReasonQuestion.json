@@ -9,11 +9,13 @@
     "code": {
       "type": "string",
       "description": "The code of the shop return question",
-      "example": "what-size"
+      "example": "was-the-item-used"
     },
     "description": {
       "type": "string",
-      "readOnly": true
+      "readOnly": true,
+      "description": "The description of the shop return question. This is shown to the consumer in the return portal when they select a return reason with this question attached.",
+      "example": "Was the item used?"
     },
     "is_required": {
       "type": "boolean",
@@ -22,7 +24,8 @@
     },
     "answer_type": {
       "$ref": "#/components/schemas/ReturnQuestionAnswerType",
-      "readOnly": true
+      "readOnly": true,
+      "example": "boolean"
     },
     "yes_note": {
       "type": "string",
