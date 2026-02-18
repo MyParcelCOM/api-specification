@@ -44,46 +44,7 @@
             "questions": {
               "type": "array",
               "items": {
-                "required": [
-                  "code",
-                  "description",
-                  "answer_type",
-                  "is_required"
-                ],
-                "properties": {
-                  "code": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "is_required": {
-                    "type": "boolean"
-                  },
-                  "answer_type": {
-                    "$ref": "#/components/schemas/ReturnQuestionAnswerType"
-                  },
-                  "yes_note": {
-                    "type": "string",
-                    "maxLength": 255,
-                    "description": "A note to show the user when they answer a `boolean` type question with `true`. Will be shown in the return portal."
-                  },
-                  "no_note": {
-                    "type": "string",
-                    "maxLength": 255,
-                    "description": "A note to show the user when they answer a `boolean` type question with `false`. Will be shown in the return portal."
-                  }
-                },
-                "example": [
-                  {
-                    "code": "what-size",
-                    "description": "What size would you like instead?",
-                    "is_required": true,
-                    "answer_type": "boolean",
-                    "yes_note": "This product can't be returned after its been used. Proceeding will lead to a rejected return request.",
-                    "no_note": "This product cannot be returned after it was unsealed. Proceeding will lead to a rejected return request."
-                  }
-                ]
+                "$ref": "#/components/schemas/ShopReturnReasonQuestion"
               }
             }
           }

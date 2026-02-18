@@ -11,10 +11,18 @@
       "description": "The code of the shop return question",
       "example": "what-size"
     },
+    "description": {
+      "type": "string",
+      "readOnly": true
+    },
     "is_required": {
       "type": "boolean",
       "description": "Indication whether a consumer is required to answer this question related to the selected return reason",
       "example": true
+    },
+    "answer_type": {
+      "$ref": "#/components/schemas/ReturnQuestionAnswerType",
+      "readOnly": true
     },
     "yes_note": {
       "type": "string",
