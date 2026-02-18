@@ -16,9 +16,6 @@
       "description": "Indication whether a consumer is required to answer this question related to the selected return reason",
       "example": true
     },
-    "answer_type": {
-      "$ref": "#/components/schemas/ReturnQuestionAnswerType"
-    },
     "yes_note": {
       "type": "string",
       "maxLength": 255,
