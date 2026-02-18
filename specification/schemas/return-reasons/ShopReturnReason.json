@@ -45,7 +45,23 @@
               "type": "array",
               "items": {
                 "$ref": "#/components/schemas/ShopReturnReasonQuestion"
-              }
+              },
+              "example": [
+                {
+                  "code": "product-used",
+                  "description": "Has the product been used or worn?",
+                  "is_required": true,
+                  "answer_type": "boolean",
+                  "yes_note": "Used products may not be eligible for a full refund.",
+                  "no_note": "Thank you for confirming the product is unused."
+                },
+                {
+                  "code": "preferred-size",
+                  "description": "What size would you like instead?",
+                  "is_required": false,
+                  "answer_type": "string"
+                }
+              ]
             }
           }
         }
