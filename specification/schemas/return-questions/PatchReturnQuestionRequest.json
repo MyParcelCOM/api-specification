@@ -20,6 +20,9 @@
                   }
                 }
               ]
+            },
+            "answer_type": {
+              "$ref": "#/components/schemas/ReturnQuestionAnswerType"
             }
           }
         }

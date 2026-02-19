@@ -52,7 +52,8 @@
             "type": [
               "string",
               "number",
-              "array"
+              "array",
+              "object"
             ],
             "example": 1000
           }
