@@ -17,7 +17,9 @@
         "integer",
         "null"
       ],
-      "example": 221
+      "example": 221,
+      "maximum": 2147483647,
+      "minimum": 1
     },
     "street_number_suffix": {
       "type": [
