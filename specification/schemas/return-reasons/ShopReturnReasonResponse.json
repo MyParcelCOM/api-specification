@@ -18,7 +18,17 @@
             "requires_attachments",
             "accepts_comment",
             "requires_comment"
-          ]
+          ],
+          "properties": {
+            "questions": {
+              "items": {
+                "required": [
+                  "answer_type",
+                  "description"
+                ]
+              }
+            }
+          }
         },
         "links": {
           "readOnly": true,

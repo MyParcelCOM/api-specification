@@ -9,7 +9,13 @@
     "code": {
       "type": "string",
       "description": "The code of the shop return question",
-      "example": "what-size"
+      "example": "product-condition"
+    },
+    "description": {
+      "type": "string",
+      "readOnly": true,
+      "description": "The description of the shop return question. This is shown to the consumer in the return portal when they select a return reason with this question attached.",
+      "example": "Is the product still in its original packaging?"
     },
     "is_required": {
       "type": "boolean",
@@ -17,19 +23,21 @@
       "example": true
     },
     "answer_type": {
-      "$ref": "#/components/schemas/ReturnQuestionAnswerType"
+      "$ref": "#/components/schemas/ReturnQuestionAnswerType",
+      "readOnly": true,
+      "example": "boolean"
     },
     "yes_note": {
       "type": "string",
       "maxLength": 255,
       "description": "A note to show the user when they answer a `boolean` type question with `true`. Will be shown in the return portal.",
-      "example": "This product can't be returned after its been used. Proceeding will lead to a rejected return request."
+      "example": "Great! Please ensure all tags and packaging materials are included."
     },
     "no_note": {
       "type": "string",
       "maxLength": 255,
       "description": "A note to show the user when they answer a `boolean` type question with `false`. Will be shown in the return portal.",
-      "example": "This product cannot be returned after it was unsealed. Proceeding will lead to a rejected return request."
+      "example": "Products must be returned in original packaging. Proceeding may lead to a rejected return request."
     }
   }
 }
