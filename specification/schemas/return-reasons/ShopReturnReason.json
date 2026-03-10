@@ -44,34 +44,24 @@
             "questions": {
               "type": "array",
               "items": {
-                "required": [
-                  "code",
-                  "description",
-                  "answer_type",
-                  "is_required"
-                ],
-                "properties": {
-                  "code": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
-                  "answer_type": {
-                    "$ref": "#/components/schemas/ReturnQuestionAnswerType"
-                  },
-                  "is_required": {
-                    "type": "boolean"
-                  }
+                "$ref": "#/components/schemas/ShopReturnReasonQuestion"
+              },
+              "example": [
+                {
+                  "code": "product-used",
+                  "description": "Has the product been used or worn?",
+                  "is_required": true,
+                  "answer_type": "boolean",
+                  "yes_note": "Used products may not be eligible for a full refund.",
+                  "no_note": "Thank you for confirming the product is unused."
                 },
-                "example": [
-                  {
-                    "code": "what-size",
-                    "description": "What size would you like instead?",
-                    "is_required": true
-                  }
-                ]
-              }
+                {
+                  "code": "preferred-size",
+                  "description": "What size would you like instead?",
+                  "is_required": false,
+                  "answer_type": "string"
+                }
+              ]
             }
           }
         }

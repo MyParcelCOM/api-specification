@@ -137,7 +137,7 @@
                       {
                         "type": "string",
                         "description": "A localized return question description",
-                        "example": "What size would you like in return?"
+                        "example": "Has the product been used or worn?"
                       },
                       {
                         "allOf": [
@@ -146,7 +146,7 @@
                           },
                           {
                             "example": {
-                              "en-GB": "What size would you like in return?"
+                              "en-GB": "Has the product been used or worn?"
                             }
                           }
                         ]
