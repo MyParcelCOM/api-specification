@@ -52,18 +52,17 @@
             "pickup_location": {
               "oneOf": [
                 {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "code": {
-                      "type": "string",
-                      "example": "205604"
-                    },
-                    "address": {
-                      "$ref": "#/components/schemas/BaseAddress"
-                    }
-                  },
-                  "description": "Required if the service delivery method is `pick-up`."
+                  "$ref": "#/components/schemas/PickupLocation"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "drop_off_location": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/DropOffLocation"
                 },
                 {
                   "type": "null"

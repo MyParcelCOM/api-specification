@@ -237,6 +237,12 @@
                               "address"
                             ]
                           },
+                          "drop_off_location": {
+                            "required": [
+                              "code",
+                              "address"
+                            ]
+                          },
                           "tracking_code": {
                             "readOnly": true
                           },
