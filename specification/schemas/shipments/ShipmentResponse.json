@@ -51,6 +51,12 @@
                 "address"
               ]
             },
+            "drop_off_location": {
+              "required": [
+                "code",
+                "address"
+              ]
+            },
             "physical_properties": {
               "required": [
                 "weight"

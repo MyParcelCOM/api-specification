@@ -170,6 +170,12 @@
   "DocumentType": {
     "$ref": "./schemas/files/DocumentType.json"
   },
+  "PickupLocation": {
+    "$ref": "./schemas/shipments/PickupLocation.json"
+  },
+  "DropOffLocation": {
+    "$ref": "./schemas/shipments/DropOffLocation.json"
+  },
   "DemoOrder": {
     "$ref": "./schemas/return-orders/DemoOrder.json"
   },
