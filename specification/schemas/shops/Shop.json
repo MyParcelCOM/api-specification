@@ -27,7 +27,7 @@
                 "null"
               ],
               "maxLength": 255,
-              "example": "https://www.myparcel.com"
+              "example": "https://solutions.myparcel.com"
             },
             "logo_url": {
               "allOf": [
