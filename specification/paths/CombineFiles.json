@@ -47,16 +47,15 @@
                   },
                   "page_size": {
                     "type": "string",
-                    "description": "One of the available page sizes, `A6`, `A4` or `original` depending on your printer. `original` will combine all files in their original size into a single document. `A4` will allow combining four A6 files onto one A4 paper. Note that the provided `file_ids` should have A6 formats when combining onto A4.",
+                    "description": "One of the available page sizes, `A6` or `A4` depending on your printer.",
                     "enum": [
                       "A6",
-                      "A4",
-                      "original"
+                      "A4"
                     ]
                   },
                   "starting_position": {
                     "type": "string",
-                    "description": "This property determines the position on the first page when combining A6 labels onto an A4 paper. All positions before this one will be left empty. Only usable when `page_size` is `A4`.",
+                    "description": "Position on the first page to start printing labels. All positions before this one will be left empty.",
                     "enum": [
                       "top-left",
                       "top-right",
