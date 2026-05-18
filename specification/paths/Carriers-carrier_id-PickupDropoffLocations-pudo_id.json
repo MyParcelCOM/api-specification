@@ -19,6 +19,16 @@
     ],
     "summary": "Get a location from a carrier by ID.",
     "description": "This endpoint retrieves the pick-up and drop-off location with the supplied ID.",
+    "parameters": [
+      {
+        "name": "contract",
+        "in": "query",
+        "description": "Specific contract (id) to use for authentication with the carrier. If none is specified then the first active contract will be used.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
     "responses": {
       "200": {
         "description": "Retrieved the location.",
