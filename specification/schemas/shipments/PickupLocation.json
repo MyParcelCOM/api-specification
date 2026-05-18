@@ -4,11 +4,11 @@
   "properties": {
     "code": {
       "type": "string",
-      "example": "205604"
+      "example": "205604",
+      "description": "Code of the carrier location where the parcel is to be picked up by the **recipient**, retrieved from the `pickup-dropoff-locations` endpoint."
     },
     "address": {
       "$ref": "#/components/schemas/BaseAddress"
     }
-  },
-  "description": "Required if the service delivery method is `pick-up`."
+  }
 }

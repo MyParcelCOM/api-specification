@@ -5,11 +5,10 @@
     "code": {
       "type": "string",
       "example": "205604",
-      "description": "Code of the drop-off location, retrieved from the `pickup-dropoff-locations` endpoint."
+      "description": "Code of the carrier location where the **sender** must drop off the parcel, retrieved from the `pickup-dropoff-locations` endpoint."
     },
     "address": {
       "$ref": "#/components/schemas/BaseAddress"
     }
-  },
-  "description": "Required if the service handover method is `drop-off`."
+  }
 }

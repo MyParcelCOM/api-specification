@@ -34,16 +34,7 @@
               "additionalProperties": false,
               "properties": {
                 "data": {
-                  "allOf": [
-                    {
-                      "$ref": "#/components/schemas/PickupDropoffLocation"
-                    },
-                    {
-                      "required": [
-                        "id"
-                      ]
-                    }
-                  ]
+                  "$ref": "#/components/schemas/PickupDropoffLocationResponse"
                 }
               }
             }
