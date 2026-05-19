@@ -15,8 +15,8 @@
         ]
       }
     ],
-    "summary": "Get all files for a return.",
-    "description": "Retrieves the files associated with the shipment belonging to the given return.",
+    "summary": "Get all the files from a return.",
+    "description": "This endpoint retrieves files belonging to the shipment associated with the return.",
     "parameters": [
       {
         "name": "filter[document_type]",
