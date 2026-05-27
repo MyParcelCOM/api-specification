@@ -1,0 +1,58 @@
+{
+  "parameters": [
+    {
+      "$ref": "#/components/parameters/path-return_id"
+    }
+  ],
+  "get": {
+    "tags": [
+      "Returns"
+    ],
+    "security": [
+      {
+        "OAuth2": [
+          "returns.manage"
+        ]
+      }
+    ],
+    "summary": "Get all the files from a return.",
+    "description": "This endpoint retrieves files belonging to the shipment associated with the return.",
+    "parameters": [
+      {
+        "name": "filter[document_type]",
+        "in": "query",
+        "description": "Filter files based on document type. Multiple types can be passed comma separated.",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "Retrieved the files.",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "required": [
+                "data"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FileResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "No return was found for the given ID."
+      }
+    }
+  }
+}
