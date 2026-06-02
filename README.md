@@ -83,7 +83,7 @@ Parameter file names are prefixed with the corresponding parameter type. A path 
 specification/parameters/path-carrier_id.json
 ```
 
-Unique parameters can just remain in the path file and do not need to be extracted to their own files.
+Unique parameters can just remain in the path file and do not need to be extracted to their own files. 
 
 ## License
 All software by MyParcel.com is licensed under the [MyParcel.com general terms and conditions](https://solutions.myparcel.com/legal).
