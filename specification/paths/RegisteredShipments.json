@@ -78,13 +78,31 @@
                             "required": [
                               "code",
                               "address"
-                            ]
+                            ],
+                            "properties": {
+                              "address": {
+                                "required": [
+                                  "street_1",
+                                  "city",
+                                  "country_code"
+                                ]
+                              }
+                            }
                           },
                           "drop_off_location": {
                             "required": [
                               "code",
                               "address"
-                            ]
+                            ],
+                            "properties": {
+                              "address": {
+                                "required": [
+                                  "street_1",
+                                  "city",
+                                  "country_code"
+                                ]
+                              }
+                            }
                           },
                           "tracking_code": {
                             "readOnly": true
