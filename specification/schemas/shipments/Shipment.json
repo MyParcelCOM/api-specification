@@ -126,6 +126,17 @@
             "tracking_url": {
               "$ref": "#/components/schemas/TrackingUrl"
             },
+            "sender_tracking_url": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/TrackingUrl"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "URL used by the sender to view tracking status updates."
+            },
             "tracking_page_url": {
               "readOnly": true,
               "type": [
