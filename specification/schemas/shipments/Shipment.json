@@ -127,6 +127,11 @@
               "$ref": "#/components/schemas/TrackingUrl",
               "description": "URL used by the recipient to view tracking status updates."
             },
+            "tracking_url": {
+              "deprecated": true,
+              "$ref": "#/components/schemas/TrackingUrl",
+              "description": "Use `recipient_tracking_url` instead."
+            },
             "sender_tracking_url": {
               "readOnly": true,
               "oneOf": [
