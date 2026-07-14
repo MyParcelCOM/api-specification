@@ -128,6 +128,7 @@
               "description": "URL used by the recipient to view tracking status updates."
             },
             "sender_tracking_url": {
+              "readOnly": true,
               "oneOf": [
                 {
                   "$ref": "#/components/schemas/TrackingUrl"
