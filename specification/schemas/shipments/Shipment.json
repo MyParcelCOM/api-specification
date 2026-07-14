@@ -124,7 +124,8 @@
               "$ref": "#/components/schemas/TrackingCode"
             },
             "recipient_tracking_url": {
-              "$ref": "#/components/schemas/TrackingUrl"
+              "$ref": "#/components/schemas/TrackingUrl",
+              "description": "URL used by the recipient to view tracking status updates."
             },
             "sender_tracking_url": {
               "oneOf": [
