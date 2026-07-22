@@ -152,6 +152,9 @@
   "CountryCode": {
     "$ref": "./schemas/addresses/CountryCode.json"
   },
+  "CountryCodeUserInput": {
+    "$ref": "./schemas/addresses/CountryCodeUserInput.json"
+  },
   "Currency": {
     "$ref": "./schemas/Currency.json"
   },
