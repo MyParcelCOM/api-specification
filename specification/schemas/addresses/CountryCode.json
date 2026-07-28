@@ -28,5 +28,5 @@
     "VN", "VU", "WF", "WS", "XK", "YE", "YT", "ZA", "ZM", "ZW"
   ],
   "example": "GB",
-  "description": "Country code in ISO 3166-1 alpha-2 format (uppercase or lowercase)."
+  "description": "Country code in ISO 3166-1 alpha-2 format."
 }
