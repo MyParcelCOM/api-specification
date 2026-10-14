@@ -56,17 +56,6 @@
             "logo_url": {
               "$ref": "#/components/schemas/ImageUrl"
             },
-            "style": {
-              "allOf": [
-                {
-                  "$ref": "#/components/schemas/Style"
-                },
-                {
-                  "deprecated": true,
-                  "description": "<strong>Deprecated</strong> use the `branding` from the <a href=\"/#tag/Shops/paths/~1shops~1{shop_id}/get\">shop</a> resource instead."
-                }
-              ]
-            },
             "tax_identification_numbers": {
               "oneOf": [
                 {
