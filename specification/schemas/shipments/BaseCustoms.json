@@ -135,6 +135,14 @@
           "type": "null"
         }
       ]
+    },
+    "zonos_organization_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Zonos Organization ID (see <a href=\"https://zonos.com/blog/october-22-us-postal-data-requirements\">Zonos US postal data requirements</a>)",
+      "example": "organization_0msgtbwwaehkq"
     }
   }
 }

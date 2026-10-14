@@ -123,6 +123,23 @@
       "example": false,
       "description": "Whether the item is from a preferential origin country. (see http://ptadb.wto.org/)",
       "default": false
+    },
+    "us_customs": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "United States customs information that may be required to clear customs (see <a href=\"https://zonos.com/blog/october-22-us-postal-data-requirements\">Zonos US postal data requirements</a>)",
+      "properties": {
+        "zonos_product_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Zonos Product ID",
+          "example": "zonos-product-id"
+        }
+      }
     }
   }
 }
