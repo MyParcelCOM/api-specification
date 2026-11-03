@@ -130,9 +130,11 @@
         "null"
       ],
       "description": "United States customs information that may be required to clear customs (see <a href=\"https://zonos.com/blog/october-22-us-postal-data-requirements\">Zonos US postal data requirements</a>)",
+      "required": [
+        "zonos_product_id"
+      ],
       "properties": {
         "zonos_product_id": {
-          "required": true,
           "type": "string",
           "description": "Zonos Product ID",
           "example": "zonos-product-id"
@@ -145,15 +147,17 @@
         "null"
       ],
       "description": "European Union customs information for B2C shipments entering from outside the EU. Required for shipments with value not exceeding 150 EUR (see <a href=\"https://taxation-customs.ec.europa.eu/document/download/053e5b4e-f0be-4f20-9a23-3e3b659a6676_en\">EU customs reform guidance</a>)",
+      "required": [
+        "merchant_id",
+        "manufacturer_id"
+      ],
       "properties": {
         "merchant_id": {
-          "required": true,
           "type": "string",
           "description": "A unique product identifier assigned by the online seller, marketplace or platform. Always required.",
           "example": "SKU-ABC001"
         },
         "manufacturer_id": {
-          "required": true,
           "type": "string",
           "description": "A product identifier assigned by a manufacturer, producer or product supplier. Always required.",
           "example": "MODEL-1234"
